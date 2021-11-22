@@ -1,0 +1,75 @@
+---
+title: "Chain with large separation"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 3
+    fig_width: 7
+    fig_height: 6
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Chain with large separation}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE}
+library(knitr)
+library(terms)
+options(cli.num_colors = 1)
+theme_set(egg::theme_article())
+opts_chunk$set(echo = FALSE, warning=FALSE,
+               message=FALSE, comment='', 
+               tidy=FALSE, cache = FALSE)
+do.call(read_chunk, list(path = "_run.R"))
+```
+
+## Objective
+
+This example compares the calculation of cross-sections based on a common origin (Scheme 3) vs Stout's particle-centred scheme (2). The structure consists of a small chain of 4 gold spheres in water, with a variable (large) separation.
+
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+library(terms)
+cat('  <style>
+.x3d_scene {
+float:right;
+margin:0em;
+ }
+  </style>')
+
+ge <- get_geometry('input_200_0_1')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,300), width = "200px", height = "150px") 
+```
+
+
+```{r load, cache=FALSE}
+```
+
+This simulation uses the following `input` file
+```{r tpl}
+```
+
+where `{comment_centred}` comments out (`#`) or not the keyword `ScattererCentredCrossSections` in each separate run, `{scheme}` is in `0,1,2,3`, and `{separation}` is replaced by `200, 500, 1000` nm. The results are stored in separate output folders and collated for comparison. 
+
+```{r read}
+```
+
+## Fixed-orientation results
+
+We compare the fixed-orientation cross-sections, with the results of `Scheme = 0, ScattererCentred` replotted in every panel for comparison (pale thick lines, assumed here to be "ground truth").
+
+```{r fo, fig.height=7, fig.width=10}
+```
+
+We observe that Mackowski's scheme (3) produces incorrect results at large inter-particle separations. For Stout's schemes (1 and 2) the use of `ScattererCentredCrossSections` is required for correct results in these conditions.
+
+-----
+
+```{r cleanup}
+```
+_Last run: `r format(Sys.time(), '%d %B, %Y')`_

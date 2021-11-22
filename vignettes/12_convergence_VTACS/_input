@@ -1,0 +1,16 @@
+ModeAndScheme 2 3
+
+MultipoleCutoff {{n1}} {{n2}}
+
+MultipoleSelections 1
+EE1:4_EM1:4_ME1:4_MM1:4 blocks
+ 
+Wavelength 300 900 300
+
+Medium 1.7689 # epsilon of water
+
+Scatterers 4
+Au_S1 200 0 -75 25
+Au_S1 161.803398874989 117.557050458495 -25 25
+Au_S1 61.8033988749895 190.211303259031 25 25
+Au_S1 -61.8033988749895 190.211303259031 75 25

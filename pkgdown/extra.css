@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+html, body {
+  font-size: 18px;
+  line-height: 1.6em;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  color: rgb(7, 85, 90);
+  font-family: 'Work Sans', sans-serif;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: .1em;
+}
+
+h3 {
+   font-size: 1.2em;
+    font-weight: 100;
+}
+
+h4 {
+  font-size: 1.0em;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: .1em;
+}
+.contents h1, .contents h2, .contents h3, .contents h4 {
+    margin-bottom: 1.3em;
+    margin-top: -30px;
+}
+
+pre {
+  max-height: 300px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+pre[class] {
+  max-height: 100px;
+}
+
+pre, code {
+  background-color: #fffbfb;
+  font-size: 1em;
+  font-family: 'Source Code Pro', monospace;
+  color: #000000;
+}
+
+
+pre, pre code {
+  background-color: #fffbfb;
+  font-size: 0.9em;
+  font-family: 'Source Code Pro', monospace;
+  color: #000000;
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+
+footer .pkgdown {
+  text-align: right;
+}
+
+
+#pkgdown-sidebar h2 {
+  font-size: 1em;
+  margin-bottom: 0.85em;
+  text-transform: uppercase;
+  /* font-weight: 700; */
+  color: rgb(7, 85, 90);
+  letter-spacing: 1.5pt;
+  padding-left: 0px;
+}
+
+#pkgdown-sidebar h3 {
+  font-size: 1em;
+  margin-bottom: 0.85em;
+  text-transform: uppercase;
+  font-weight: 200; 
+  color: rgb(7, 85, 90);
+  letter-spacing: 1.0pt;
+  padding-left: 0px;
+}
+
+#pkgdown-sidebar small.roles {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #00000094;
+}
+
+
+nav[data-toggle='toc'] .nav > li > a {
+  padding: 4px 20px 4px 6px;
+  font-size: 1.0rem;
+  font-weight: 400;
+  color: inherit;
+}
+
+nav[data-toggle='toc'] .nav > li > a:hover,
+nav[data-toggle='toc'] .nav > li > a:focus {
+  padding-left: 5px;
+  color: inherit;
+  border-left: 1px solid rgb(7, 85, 90);
+}
+
+nav[data-toggle='toc'] .nav > .active > a,
+nav[data-toggle='toc'] .nav > .active:hover > a,
+nav[data-toggle='toc'] .nav > .active:focus > a {
+  padding-left: 5px;
+  font-size: 1.0rem;
+  font-weight: 400;
+  color: inherit;
+  border-left: 2px solid rgb(7, 85, 90);
+}
+
+/* Nav: second level (shown on .active) */
+
+nav[data-toggle='toc'] .nav .nav {
+  display: none; /* Hide by default, but at >768px, show it */
+  padding-bottom: 10px;
+}
+
+nav[data-toggle='toc'] .nav .nav > li > a {
+  padding-left: 16px;
+  font-size: 1.0rem;
+}
+
+nav[data-toggle='toc'] .nav .nav > li > a:hover,
+nav[data-toggle='toc'] .nav .nav > li > a:focus {
+  padding-left: 15px;
+}
+
+nav[data-toggle='toc'] .nav .nav > .active > a,
+nav[data-toggle='toc'] .nav .nav > .active:hover > a,
+nav[data-toggle='toc'] .nav .nav > .active:focus > a {
+  padding-left: 15px;
+  font-weight: 500;
+  font-size: 1.0rem;
+}
+

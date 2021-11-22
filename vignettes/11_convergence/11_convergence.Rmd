@@ -1,0 +1,81 @@
+---
+title: "Convergence with respect to maximum multipole order of individual scatterers"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 3
+    fig_width: 7
+    fig_height: 6
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Convergence with respect to maximum multipole order of individual scatterers}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE}
+library(knitr)
+library(terms)
+options(cli.num_colors = 1)
+theme_set(egg::theme_article())
+opts_chunk$set(echo = FALSE, warning =FALSE,
+               message=FALSE, comment='', 
+               tidy=FALSE, cache = FALSE)
+do.call(read_chunk, list(path = "_run.R"))
+```
+
+## Objective
+
+This example checks the convergence of orientation-averaged cross-sections with respect the maximum multipolar order describing individual scatterers. The structure consists of four gold spheres in water arranged in a helix.
+
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+library(terms)
+cat('  <style>
+.x3d_scene {
+float:right;
+margin:0em;
+ }
+  </style>')
+
+ge <- get_geometry('input_1')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,200), width = "200px", height = "150px", default_material='gold')
+```
+
+This simulation uses the following `input` file
+```{R tpl}
+```
+
+where `{nmax}` is replaced by `1,2,3,...` in each separate run. 
+
+```{r read, cache=FALSE}
+```
+
+The output consists of a number of files, storing the far-field cross-sections for each order from 1 to $n_{1}$.
+
+```{r fun}
+```
+
+## Convergence with Nmax
+
+We see that in this example the cross-sections converge after only a few multipoles, and that the dipole term gives already a reasonable approximation of the spectral lineshape,
+
+```{r oa}
+```
+
+## Convergence with "MultipoleOrder"
+
+The study above used masking of individual T-matrices to restrict the maximum Nmax, keeping `MultipoleOrder = 6` constant in all simulations. This is more meaningful, since the `MultipoleOrder` keyword refers to the order of expansions in the multiple scattering calculation, which typically requires a larger cutoff to accurately translate spherical waves from one origin to another. If we were to look at the individual contributions of the multipoles appearing in the cluster's expansion as a whole, the convergence looks very different (and arguably has a less physical interpretation).
+
+```{r naive}
+```
+
+-----
+
+```{r cleanup}
+```
+_Last run: `r format(Sys.time(), '%d %B, %Y')`_

@@ -1,0 +1,77 @@
+readInputFile> Parsing file input_nf
+
+readInputFile> Detected keyword ModeAndScheme
+               mode=1 => mapNF at diff. lambda and diff. Inc. and Sca_angles
+               scheme=2 => Seek T^(ji) using Stout's iterative scheme
+readInputFile> Detected keyword MultipoleCutoff
+               Supplied ncut(1)= 12
+               Setting ncut(2)= ncut(1)
+               Setting ncut(3)=  -8
+readInputFile> Detected keyword Wavelength
+               Wavelength (nm):   680.0000
+readInputFile> Detected keyword Incidence
+               Incidence filename= incidence
+               Expected incidence count=      2
+readInputFile> X-linear polarization
+               Incident Euler angles and weights:
+                  alpha        beta        gamma        weight
+               0.00000000   0.00000000   0.00000000   0.50000000
+               0.00000000   0.00000000   1.57079600   0.50000000
+readInputFile> Detected keyword Medium
+               Constant host epsilon=  1.7689E+0
+readInputFile> Detected keyword Verbosity
+               verbosity=     1 (Low)
+readInputFile> Detected keyword OutputFormat
+               OutputFormat=HDF5
+               All output files are stored in file "map.h5                                                          "
+readInputFile> Detected keyword MapQuantity
+               Map enhancement |E|**p with p=   2
+readInputFile> Detected keyword SpacePoints
+               i,lb_i,ub_i,npts_i= 1 -1.00000000000000000E+02  1.00000000000000000E+02  400
+               i,lb_i,ub_i,npts_i= 2 -7.50000000000000000E+01  7.50000000000000000E+01  300
+               i,lb_i,ub_i,npts_i= 3  0.00000000000000000E+00  0.00000000000000000E+00    1
+               nGridPoints=    241402
+
+readInputFile> Detected keyword Scatterers
+ with nscat=    2
+
+readInputFile> Descriptor(s) and circumscribing sphere(s):
+
+ scatID String                  x          y          z         R_0
+    1   Au@Ag              -3.0500E+1  0.0000E+0  0.0000E+0  3.0000E+1
+    2   Au@Ag               3.0500E+1  0.0000E+0  0.0000E+0  3.0000E+1
+
+readInputFile> Individual geometry characteristic(s):
+
+ scatID Details
+    1   Mie with ncoats= 1 R_{-k}:  2.9000E+1
+    2   Mie with ncoats= 1 R_{-k}:  2.9000E+1
+
+readInputFile> Dielectric functions for (coated) Mie scatterer(s):
+
+ scatID volID Label
+    1     0     Ag
+    1    -1     Au
+    2     0     Ag
+    2    -1     Au
+
+readInputFile> Finished parsing 10 keywords
+
+
+mapNF> ===== Wavelength:   680.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcSphBessels> WARNING: ZBESJ set NZ components to zero. NZ=      3
+calcSphBessels> WARNING: ZBESJ set NZ components to zero. NZ=      3
+calcSphBessels> WARNING: ZBESJ set NZ components to zero. NZ=      3
+calcSphBessels> WARNING: ZBESJ set NZ components to zero. NZ=      3
+calcSphBessels> WARNING: ZBESJ set NZ components to zero. NZ=      3
+calcSphBessels> WARNING: ZBESJ set NZ components to zero. NZ=      3
+calcSphBessels> WARNING: ZBESJ set NZ components to zero. NZ=      3
+calcSphBessels> WARNING: ZBESJ set NZ components to zero. NZ=      3
+mapNF> Done!
+
+termsProgram> Program run time (CPU & real in s):  1.566E+01  1.557E+01

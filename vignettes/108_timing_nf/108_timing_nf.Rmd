@@ -1,0 +1,128 @@
+---
+title: "Timings, near-field calculations"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 2
+    fig_width: 7
+    fig_height: 4
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Timings, near-field calculations}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE}
+library(knitr)
+library(terms)
+options(cli.num_colors = 1)
+theme_set(egg::theme_article())
+opts_chunk$set(echo = FALSE, warning=FALSE,
+               message=FALSE, comment='', 
+               tidy=FALSE, cache = FALSE)
+do.call(read_chunk, list(path = "_run.R"))
+```
+
+## Objective
+
+This example considers the scaling of computational time with respect to key parameters:
+
+- number of particles
+- number of multipoles
+- number of incidence angles
+- solution scheme
+
+The number of wavelengths simply scales the computation time for all other parameters, as everything needs to be re-calculated for each wavelength (assuming negligible input-output time, compared to the calculations).
+
+## Parameters
+
+```{r params}
+```
+
+The structure consists of a helix of gold spheres, with varying number of particles.
+
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+library(terms)
+cat('  <style>
+.x3d_scene {
+float:right;
+margin:0em;
+ }
+  </style>')
+
+ge <- get_geometry('runs/input_20_1_16_1')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,300), width = "200px", height = "150px") 
+```
+
+```{r tpl}
+```
+
+```{r read}
+```
+
+## Total timings
+
+We first look at the total run time summaries, as a function of number of particles $Npart$, multipolar order $Nmax$, and number of incidence directions $Ninc$.
+
+```{r fulltimings, fig.height=5, fig.width=10}
+```
+
+
+## Detailed timings (subroutines)
+
+At `Verbosity > 0` we can also access the timings within subroutines, to break down the calculation and identify time-consuming steps.
+
+```{r info1}
+str(combined)
+unique(combined$routine)
+```
+
+Some subroutines are broken down in more detail,
+```{r info2}
+unique(combined$detail)
+```
+
+### Varying number of particles
+
+```{r detailedtimings_Npart, fig.height=6, fig.width=10}
+```
+
+Details of the `solve` subroutine are shown below
+
+```{r detailedtimings_Npart_2, fig.height=6, fig.width=10}
+```
+
+
+### Varying maximum multipole order
+
+```{r detailedtimings_Nmax, fig.height=6, fig.width=10}
+```
+
+Details of the `solve` subroutine are shown below
+
+```{r detailedtimings_Nmax_2, fig.height=6, fig.width=10}
+```
+
+
+### Varying number of incidence directions
+
+```{r detailedtimings_Ninc, fig.height=6, fig.width=10}
+```
+
+Details of the `solve` subroutine are shown below
+
+```{r detailedtimings_Ninc_2, fig.height=6, fig.width=15}
+```
+
+
+-----
+
+```{r cleanup}
+```
+_Last run: `r format(Sys.time(), '%d %B, %Y')`_

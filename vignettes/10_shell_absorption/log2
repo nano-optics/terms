@@ -1,0 +1,90 @@
+readInputFile> Parsing file input_AuAu
+
+readInputFile> Detected keyword ModeAndScheme
+               mode=2 => spectrum_FF for far-field quantities
+               scheme=2 => Seek T^(ji) using Stout's iterative scheme
+readInputFile> Detected keyword MultipoleCutoff
+               Supplied ncut(1)=  8
+               Setting ncut(2)= ncut(1)
+               Setting ncut(3)=  -8
+readInputFile> Detected keyword Wavelength
+               Wavelength LB (nm):   300.000000
+               Wavelength UB (nm):   800.000000
+               nsteps, step:       100    5.0000
+readInputFile> Detected keyword Incidence
+               Incidence filename= incidence
+               Expected incidence count=     38
+               Incident Euler angles and weights:
+                  alpha        beta        gamma        weight
+               0.00000000   1.57079633   0.00000000   0.00952381
+               3.14159265   1.57079633   0.00000000   0.00952381
+               1.57079633   1.57079633   0.00000000   0.00952381
+              -1.57079633   1.57079633   0.00000000   0.00952381
+               1.57079633   0.00000000   0.00000000   0.00952381
+               1.57079633   3.14159265   0.00000000   0.00952381
+               0.78539816   0.95531662   0.00000000   0.03214286
+               0.78539816   2.18627604   0.00000000   0.03214286
+              -0.78539816   0.95531662   0.00000000   0.03214286
+              -0.78539816   2.18627604   0.00000000   0.03214286
+               2.35619449   0.95531662   0.00000000   0.03214286
+               2.35619449   2.18627604   0.00000000   0.03214286
+              -2.35619449   0.95531662   0.00000000   0.03214286
+              -2.35619449   2.18627604   0.00000000   0.03214286
+               1.09313802   1.57079633   0.00000000   0.02857143
+              -1.09313802   1.57079633   0.00000000   0.02857143
+               2.04845464   1.57079633   0.00000000   0.02857143
+              -2.04845464   1.57079633   0.00000000   0.02857143
+               0.47765831   1.57079633   0.00000000   0.02857143
+              -0.47765831   1.57079633   0.00000000   0.02857143
+               2.66393434   1.57079633   0.00000000   0.02857143
+              -2.66393434   1.57079633   0.00000000   0.02857143
+               0.00000000   0.47765831   0.00000000   0.02857143
+               0.00000000   2.66393434   0.00000000   0.02857143
+               3.14159265   0.47765831   0.00000000   0.02857143
+               3.14159265   2.66393434   0.00000000   0.02857143
+               0.00000000   1.09313802   0.00000000   0.02857143
+               0.00000000   2.04845464   0.00000000   0.02857143
+               3.14159265   1.09313802   0.00000000   0.02857143
+               3.14159265   2.04845464   0.00000000   0.02857143
+               1.57079633   0.47765831   0.00000000   0.02857143
+               1.57079633   2.66393434   0.00000000   0.02857143
+              -1.57079633   0.47765831   0.00000000   0.02857143
+              -1.57079633   2.66393434   0.00000000   0.02857143
+               1.57079633   1.09313802   0.00000000   0.02857143
+               1.57079633   2.04845464   0.00000000   0.02857143
+              -1.57079633   1.09313802   0.00000000   0.02857143
+              -1.57079633   2.04845464   0.00000000   0.02857143
+readInputFile> Detected keyword Medium
+               Constant host epsilon=  1.7689E+0
+readInputFile> Detected keyword Verbosity
+               verbosity=     0 (Silent)
+readInputFile> Detected keyword OutputFormat
+               OutputFormat=HDF5
+               All output files are stored in file "cross_sections_AuAu.h5                                          "
+
+readInputFile> Detected keyword Scatterers
+ with nscat=    2
+
+readInputFile> Descriptor(s) and circumscribing sphere(s):
+
+ scatID String                  x          y          z         R_0
+    1   Au@Au              -3.0500E+1  0.0000E+0  0.0000E+0  3.0000E+1
+    2   Au@Au               3.0500E+1  0.0000E+0  0.0000E+0  3.0000E+1
+
+readInputFile> Individual geometry characteristic(s):
+
+ scatID Details
+    1   Mie with ncoats= 1 R_{-k}:  2.9000E+1
+    2   Mie with ncoats= 1 R_{-k}:  2.9000E+1
+
+readInputFile> Dielectric functions for (coated) Mie scatterer(s):
+
+ scatID volID Label
+    1     0     Au
+    1    -1     Au
+    2     0     Au
+    2    -1     Au
+
+readInputFile> Finished parsing  8 keywords
+
+termsProgram> Program run time (CPU & real in s):  1.492E+01  1.289E+01

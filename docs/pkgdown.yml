@@ -1,0 +1,39 @@
+pandoc: 2.11.4
+pkgdown: 1.9000.9000.9000
+pkgdown_sha: 8a0332494bfd1edd015dbea701de4d2bc8c5d7b7
+articles:
+  00_logo: 00_logo/00_logo.html
+  00_mantis: 00_mantis/00_mantis.html
+  00_singlesphere_sphere: 00_singlesphere/00_singlesphere_sphere.html
+  01_dimer_spheres: 01_dimer_spheres/01_dimer_spheres.html
+  02_angular_dispersion: 02_angular_dispersion/02_angular_dispersion.html
+  03_nearfield_coreshells: 03_nearfield_coreshells/03_nearfield_coreshells.html
+  04_chiral_dimer_spheroids: 04_chiral_dimer_spheroids/04_chiral_dimer_spheroids.html
+  05_quadrature_averaging: 05_quadrature_averaging/05_quadrature_averaging.html
+  06_dielectric_function: 06_dielectric_function/06_dielectric_function.html
+  07_ldoc: 07_ldoc/07_ldoc.html
+  08_polarimetry: 08_polarimetry/08_polarimetry.html
+  09_spectrum_near_field: 09_spectrum_near_field/09_spectrum_near_field.html
+  101_timing: 101_timing/101_timing.html
+  102_comparison_schemes: 102_comparison_schemes/102_comparison_schemes.html
+  104_large_separation: 104_large_separation/104_large_separation.html
+  105_factorised_RTR: 105_factorised_RTR/105_factorised_RTR.html
+  106_balancing: 106_balancing/106_balancing.html
+  107_WGM: 107_WGM/107_WGM.html
+  108_timing_nf: 108_timing_nf/108_timing_nf.html
+  109_individual_absorption: 109_individual_absorption/109_individual_absorption.html
+  10_shell_absorption: 10_shell_absorption/10_shell_absorption.html
+  11_convergence: 11_convergence/11_convergence.html
+  12_convergence_VTACS: 12_convergence_VTACS/12_convergence_VTACS.html
+  13_masking: 13_masking/13_masking.html
+  14_diffractive_chain: 14_diffractive_chain/14_diffractive_chain.html
+  15_quadrimer: 15_quadrimer/15_quadrimer.html
+  Indexing: Indexing.html
+  Keywords: Keywords.html
+  Theory: Theory.html
+  Todo: Todo.html
+last_built: 2021-11-22T12:33Z
+urls:
+  reference: http://nano-optics.ac.nz/terms/reference
+  article: http://nano-optics.ac.nz/terms/articles
+

@@ -1,0 +1,515 @@
+---
+title: Brief theory
+---
+
+```{bash macros, echo=FALSE, results='asis'}
+cat _macros.tex
+```
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+We are interested in solving direct (as opposed to inverse) electromagnetic (EM) scattering problems with multiple spheroidal scatterers. Denoting the EM filed by $\bE(\br,t) \in \mathbb{C}^{3}$, where $\br$ is a point in $\mathbb{R}^{3}$ and $t$ is time, we assume \emph{harmonic} time dependence so that $e^{-i\omega t}$ factors out and the time dimension can be treated completely independently. We also make certain assumptions about the medium and the scatterer material properties, for which the relevant equation to be satisfied is the homogeneous Helmholtz equation, as well as the appropriate boundary conditions (BCs).
+
+### Homogeneous Helmholtz equation
+
+All contributions to the total EM field ("radiation"), including the incident and the scattered fields, are represented by solutions of the vector Helmholtz equation
+\begin{equation}\label{eqn:vectorHelmholtz}
+\nabla^{2}\bE + k^{2}\bE = 0,
+\end{equation}
+where $\nabla^{2}$ is the vector Laplacian, $\bE(\br):\mathbb{R}^{3} \mapsto \mathbb{C}^{3}$ must be divergence-free (i.e.~$\nabla\cdot\bE = 0$), and $k \in \mathbb{C}$ is the \emph{wave number} or \emph{wave vector amplitude}, related to the \emph{wave vector} $\mathbf{k} \in \mathbb{C}^3$ \emph{via} 
+\begin{equation}
+k^{2}=\mathbf{k}\cdot\mathbf{k} = \frac{\omega^2}{c^2}\epsilon(\omega) = \frac{4\pi^2}{\lambda^2}\epsilon(\lambda),
+\end{equation} 
+where $\omega = 2\pi c / \lambda$ is the angular frequency, $c$ is the speed of light, $\lambda$ is the wavelength, and $\epsilon$ is the frequency-/wavelength-dependent dielectric function. It is often convenient to write $\mathbf{k} = k\mathbf{n}$, where $\mathbf{n} \in \mathbb{C}^3$ satisfies $\mathbf{n} \cdot \mathbf{n} = 1$, but is not necessarily a unit vector. In Cartesian coordinates $(x,y,z)$ it is relatively straightforward to verify that a stationary \emph{plane wave} of the form $\bE_{0}\exp{(i\mathbf{\mathbf{k}\cdot\br})}$ is a solution of (\ref{eqn:vectorHelmholtz}) for any constant \emph{amplitude} $\bE_{0} \in \mathbb{C}^{3}$ satisfying $\bE_{0} \cdot \mathbf{k} = 0$, since EM waves are transverse.
+
+The solution must also satisfy the appropriate BCs at interfaces and/or infinity. Given the geometry of problems we address, the BCs are better expressed in spherical polar coordinates $(r,\theta,\phi)$, with the general solution to (\ref{eqn:vectorHelmholtz}) being a linear combination of \emph{vector spherical} waves. To build up the relevant formulae, it is useful to first consider the \emph{scalar} Helmholtz equation
+\begin{equation}\label{eqn:scalarHelmholtz}
+\nabla^{2}E + k^{2}E = 0,
+\end{equation}
+where $E(\br):\mathbb{R}^{3} \mapsto \mathbb{C}$ and $\nabla^{2}$ is the scalar Laplacian.  
+
+### Scalar and vector spherical waves
+
+In spherical polar coordinates, (\ref{eqn:scalarHelmholtz}) is satisfied by linear combinations of
+\begin{equation}
+\psi_{nm}^{(\zeta)}(k\br) = z_{n}^{(\zeta)}(kr) Y_{nm}(\theta,\phi),
+\end{equation}
+where $z_{n}^{(\zeta)}$ are \emph{spherical} Bessel functions of kind $\zeta\in\{1,2,3,4\}$ and order $n=0\dots\infty$, and $Y_{nm}$ are the spherical harmonics with $|m| \leq n$, defined using the Condon-Shortley phase. Hence, a general solution to (\ref{eqn:scalarHelmholtz}) can be expressed as
+\begin{equation} \label{eqn:ScalGenSol}
+E^{(\zeta)}(\br; k) = \sum_{p} a_{p} \psi_{p}^{(\zeta)}(k\br) \equiv \ba\cdot \pmb{\psi}^{(\zeta)},
+\end{equation}
+where $\pmb{\psi}^{(\zeta)}$ is a \emph{basis-set} vector, $\ba \in \mathbb{C}$ is a vector of coefficients ($a_{p} \in \mathbb{C}$), and
+\begin{equation}
+p(n,m)=n(n+1)+m
+\end{equation}
+is a composite index introduced for convenience, such that 
+\begin{eqnarray}
+n & = & \mathrm{Int}(\sqrt{p}) \\ 
+m & = & p-n(n+1).
+\end{eqnarray}
+Note that, while in principle $p$ can run from $0$ up to $\infty$, in practice the series in (\ref{eqn:ScalGenSol}) is made finite by truncating at some maximum multipole order $n_{\rm max}$, so that the column vectors $\mathbf{a} \in \mathbb{C}^{p_{\rm max}}$ and $\pmb{\psi}^{(\zeta)} \in \mathbb{C}^{p_{\rm max}}$ are of finite length $p_{\rm max} = n_{\rm max}^{2} + 2n_{\rm max}$. 
+
+For our purposes we only require $\zeta = 1$ ($z_{n}^{(1)} = j_{n}$, spherical Bessel functions of the first kind) and $\zeta = 3$ ($z_{n}^{(3)} = h_{n}$, spherical Hankel functions of the first kind), referred to as the \emph{regular} and the \emph{irregular} functions, respectively, which are linearly independent. Hence, for brevity and notational convenience we may refer to $\psi_{nm}^{(3)}$ as simply $\psi_{nm}$, and $\psi_{nm}^{(1)}$ as $\widetilde{\psi}_{nm}$. Furthermore, the tilde will also be placed over the coefficients (e.g.~$\rba$) to explicitly indicate the regular basis-set flavour. Note that the existence of two linearly independent basis-sets stems from the fact that the underlying (Helmholtz) partial differential equation is of second order and is homogeneous.
+
+Now, solving (\ref{eqn:vectorHelmholtz}) in spherical polar coordinates leads to two sets of vector-valued functions\cite{MishchenkoTL02} 
+\begin{eqnarray}
+\bM_{nm}^{(\zeta)}(k\br) & = & \frac{1}{\sqrt{n(n+1)}} \nabla \times (\psi_{nm}^{(\zeta)} (k\br)\br), \\
+\bN_{nm}^{(\zeta)}(k\br) & = & \frac{1}{k} \nabla \times \bM_{nm}^{(\zeta)}(k\br). 
+\end{eqnarray}
+$\bM_{nm}^{(\zeta)}$ and $\bN_{nm}^{(\zeta)}$ for $n=0\dots\infty$ and $|m| \leq n$ form a complete set of mutually orthogonal angular-dependent functions, independent of $\zeta$. That is, 
+\begin{equation} \label{eqn:orthogonality}
+\int_{\phi=0}^{2\pi} \int_{\theta=0}^{\pi} \mathbf{A}_{nm}^{(\zeta)*}\mathbf{B}_{n'm'}^{(\zeta')} \sin\theta \mathrm{d}\theta \mathrm{d}\phi =   \delta_{nn'} \delta_{mm'} \delta_{\mathbf{AB}} f_{n}^{(\mathbf{A},\zeta,\zeta')} (kr),
+\end{equation}
+where $\mathbf{A}$ and $\mathbf{B}$ are placeholders for $\bM$ and $\bN$, $\mathbf{A}_{nm}^{(\zeta)*}$ denotes the complex conjugate of $\mathbf{A}_{nm}^{(\zeta)}$, and $\delta_{ij}$ is the Kronecker delta. The radial function $f_{n}^{(\mathbf{A}, \zeta,\zeta')}(kr)$ is actually a functional of $j_{n}(kr)$ and/or $h_{n}(kr)$, depending on $\zeta$ and $\zeta'$, and its exact form also depends on whether $\mathbf{A}$ is $\bM$ or $\bN$.
+
+A general \emph{regular} solution to (\ref{eqn:vectorHelmholtz}), up to a maximum multipole index $n_{\rm max}$, can be expressed as
+\begin{eqnarray}
+\rbE({\bf r}; k) & = & \sum\limits_{n=1}^{n_{\rm max}} \sum\limits_{m=-n}^{n} [\widetilde{c}_{1,nm}\widetilde{\bf M}_{nm}(k{\bf r}) + \widetilde{c}_{2,nm}\widetilde{\bf N}_{nm}(k{\bf r})] \nonumber \\
+&=& \sum_{q=1}^{2}\sum_{p=1}^{p_{\rm max}} \rbw_{qp}(k\br) \widetilde{c}_{qp}  \nonumber \\
+&=& \sum_{l=1}^{l_{\rm max}} \rbw_{l}(k\br) \widetilde{c}_{l} ~ \equiv ~ \rbW(k\br) \rbc, \label{eqn:VectorGenSol}
+\end{eqnarray}
+where $\rbc \in \mathbb{C}^{l_{\rm max}}$ is a column vector of coefficients, $\rbW$ is a \emph{basis-set matrix} of dimension $3\times l_{\rm max}$ (i.e. a row vector composed of column vectors $\rbw_{l(q=1,n,m)} = \rbM_{nm}$ and $\rbw_{l(q=2,n,m)} = \rbN_{nm}$), and $l_{\rm max}$ is the maximal value of another, more convenient, composite index 
+\begin{eqnarray}
+l(q,n,m; n_{\rm max}) & = & (q-1)p_{\rm max} + p(n,m) \nonumber \\
+& = & (q-1)n_{\rm max}(n_{\rm max} + 2) + n(n+1) + m \label{eqn:defLindex} \\
+& \leq & l_{\rm max} ~=~2n_{\rm max}(n_{\rm max} + 2), \label{eqn:defLmax}
+\end{eqnarray} 
+where $q \in \{1,2\}$ is sometimes referred to as the \emph{parity} or \emph{mode} index, which is used to distinguish between the $\mathbf{M}$ and $\mathbf{N}$ functions.
+
+The irregular variant of (\ref{eqn:VectorGenSol}) is obtained by simply removing the overhead tildes (e.g.~$\rbW \to \bW$), which corresponds to switching the radial dependence from $j_{n}(kr)$ to $h_{n}(kr)$ throughout. Also, the most general solution to (\ref{eqn:vectorHelmholtz}) is actually given by the superposition of regular and irregular solutions:
+\begin{equation}
+\bE + \rbE = \bW \bc + \rbW\rbc.
+\end{equation}
+
+### Linear superposition approach and the T-matrix ansatz
+
+Outside a given scatterer, the total field $\bE_{\rm tot}(\bf r) = \rbE_{\rm inc}({\bf r}) + \bE_{\rm sca}({\bf r})$ is partitioned into a known incident contribution $\rbE_{\rm inc}({\bf r})$ and unknown scattered contribution $\bE_{\rm sca}({\bf r})$. Both partitions are expanded in terms of VSWs up to some multipole order $n_{\rm max}$,
+\begin{eqnarray}
+\rbE_{\rm inc}({\bf r}) & = & E \rbW(\br) \rbc_{\rm inc}, \\
+\bE_{\rm sca}({\bf r}) & = & E \bW(\br) \bc_{\rm sca},
+\end{eqnarray}
+where $E$ is a parameter determining the field amplitude (usually $E = |\rbE_{\rm inc} |$), and $\rbc_{\rm inc}\in \mathbb{C}^{l_{\rm max}}$ with $\bc_{\rm sca} \in \mathbb{C}^{l_{\rm max}}$ are the incident and scattered coefficients, respectively. The association of $\rbE_{\rm inc}$ with regular (or \emph{incoming}) and $\bE_{\rm sca}$ with irregular (or \emph{outgoing}) VSWs is a choice motivated by physical reasoning: (i) $\rbE_{\rm inc}(\br)$ ought to be well defined everywhere within a finite distance from the origin, which rules out irregular VSWs due to their singular behaviour at $\br = 0$; and (ii) $\bE_{\rm sca}(\br)$ ought to satisfy the outgoing (Sommerfeld?) BCs, requiring that $|\bE_{\rm sca}(\br)| \to 0$ at a particular (?) rate as $|\br| \to \infty$, which rules out regular VSWs due to their divergence in the far field (?). Given the linearity of the governing (Helmholtz) equations, imposition of particular BCs at the scatterer's surface introduces a linear dependence among $\rbc_{\rm inc}$ and $\bc_{\rm sca}$, causing them to satisfy a relation of the form
+\begin{equation} \label{eqn:genTmatrix}
+\bc_{\rm sca} = \bT\, \rbc_{\rm inc},
+\end{equation}
+where $\bT$ is the so-called "transition"\cite{MishchenkoTL02} or "transfer"\cite{StoutAL02} matrix ($T$-matrix for short), which depends on the scatterer characteristics and is independent of $\rbc_{\rm inc}$. The $T$-matrix elements are (?) determined by matching the BCs over the scatterer's surface in a particular way, which is generally a non-trivial task. However, for a spherically symmetric, homogeneous scatterer centred at the origin, $\bT$ is a diagonal matrix with the diagonal elements determined analytically by Mie theory. $T$-matrices can be calculated numerically for spheroids,\cite{} as well as more general, axially symmetric scatterers,\cite{} and... For multiple scatterers, the collective $T$-matrix can be built up iteratively from the individual one-body T-matrices.\cite{StoutAL02, StoutAD08}
+
+```{r echo=FALSE, fig.cap='Pictorial representation of a .'}
+# do.call(knitr::include_graphics('figure1.png'))
+```
+
+## Transformation under rotation/translation of coordinates
+
+In multiple scattering problems it is often either necessary or simply more convenient to express the same (partial) field in terms of different basis-sets, mutually related by a translation and/or rotation of the coordinate system. This section is concerned with relations between VSW basis-sets or coefficients defined in different reference frames.
+
+### Rotation
+
+Let $(\theta_{1},\phi_{1})$ and $(\theta_{2},\phi_{2})$ be the spherical angles of the same vector $\br$ in coordinate systems $1$ and $2$, respectively, sharing the same origin. If coordinate system $2$ is obtained by rotating coordinate system $1$ through Euler angles $(\alpha,\beta,\gamma)$, here defined in the "$zyz$" convention\cite{MishchenkoTL02} with $0 \leq \alpha < 2\pi$, $0 \leq \beta \leq \pi$, and $0 \leq \gamma < 2\pi$, then
+\begin{eqnarray} \label{eqn:rotTrans}
+\psi_{nm}(kr,\theta_{2},\phi_{2}) & = & \sum_{\mu=-n}^{n} \psi_{n\mu}(kr,\theta_{1},\phi_{1}) D_{\mu m}^{n}(\alpha,\beta,\gamma), \\
+\psi_{nm}(kr,\theta_{1},\phi_{1}) & = & \sum_{\mu=-n}^{n} \psi_{n\mu}(kr,\theta_{2},\phi_{2}) D_{\mu m}^{n}(-\gamma,-\beta,-\alpha),
+\end{eqnarray}
+where $D_{\mu m}^{n} = e^{-i\mu\alpha}d_{\mu m}^{n}(\beta) e^{-im\gamma}$ and $d_{\mu m}^{n}$ are the Wigner $D$- and $d$-functions.\cite{MishchenkoTL02} Conveniently, $\widetilde{\psi}_{nm}$, $\rbM_{nm}$, $\rbN_{nm}$, $\bM_{nm}$ and $\bN_{nm}$ transform in exactly the same manner under rotation, so substituting $\psi_{nm}$ by a desired basis function in (\ref{eqn:rotTrans}) will give the appropriate expression. See equations (5.23)-(5.24) of Ref.\cite{MishchenkoTL02} for details. In our nomenclature, a basis set $\bW^{(2)} \equiv \bW(k\br_{2})$ in coordinate system $2$ is related to $\bW^{(1)} \equiv \bW(k\br_{1})$ in coordinate system $1$ via
+\begin{equation} \label{eqn:basisRot}
+\bW^{(2)} = \bW^{(1)} \bR(\alpha,\beta,\gamma)
+\end{equation}
+where $\bR(\alpha,\beta,\gamma)$ is a unitary block-diagonal matrix (of size $l_{\rm max} \times l_{\rm max}$), satisfying 
+\begin{equation}
+\bR^{-1}(\alpha,\beta,\gamma) = \bR^{\dagger}(\alpha,\beta,\gamma) = \bR(-\gamma,-\beta,-\alpha)
+\end{equation}
+and the matrix elements given by
+\begin{equation}
+R_{ll'}(\alpha,\beta,\gamma) = \delta_{qq'}\delta_{nn'} D_{m'm}^{n}(\alpha,\beta,\gamma), 
+\end{equation}
+where the index $l(q,n,m)$ is defined in (\ref{eqn:defLindex}). Note that (\ref{eqn:basisRot}) also applies to regular waves $\rbW$. Now, if a (regular or irregular) spherical wave expansion is described by a vector of coefficients $\bc^{(1)}$ in coordinate system $1$, as well as $\bc^{(2)}$ in coordinate system $2$, then
+\begin{equation} \label{eqn:rotMat}
+\bc^{(2)} = \bR^{\dagger}(\alpha,\beta,\gamma) \bc^{(1)},
+\end{equation}
+which follows from equating the field expansions and using (\ref{eqn:basisRot}), i.e.
+\begin{displaymath}
+\bE(\br;k) = \bW^{(1)} \bc^{(1)} = \bW^{(2)} \bc^{(2)} = \bW^{(1)} \bR(\alpha,\beta,\gamma) \bc^{(2)}  \implies  \bc^{(1)} = \bR(\alpha,\beta,\gamma)\bc^{(2)}.
+\end{displaymath}
+
+Let us re-label coordinate system $1$ as $G$ to indicate a global, space-fixed reference frame, and coordinate system $2$ as $L$ for local, scatterer-fixed frame. A $T$-matrix $\bT^{(L)}$ expressed in the local frame is transformed into $\bT^{(G)} = \bR \bT^{(L)} \bR^{\dagger}$ in the global frame, where $\bR(\alpha,\beta,\gamma)$ depends on the Euler angles $(\alpha,\beta,\gamma)$ that rotate frame $G$ onto frame $L$ (as opposed to $L$ onto $G$). For explanation, consider
+\begin{eqnarray*}
+\bc_{\rm sca}^{(L)} & = & \bT^{(L)}\rbc_{\rm inc}^{(L)} \\
+\bR^{\dagger} \bc_{\rm sca}^{(G)} & = & \bT^{(L)}\bR^{\dagger} \rbc_{\rm inc}^{(G)} \\
+\bc_{\rm sca}^{(G)} & = & \underbrace{\bR\bT^{(L)}\bR^{\dagger}}_{\bT^{(G)}} \rbc_{\rm inc}^{(G)} \implies \bT^{(G)} = \bR \bT^{(L)} \bR^{\dagger}.
+\end{eqnarray*}
+
+If the scatterer is rotationally symmetric about the local $z$-axis, which is tilted by spherical polar angles $(\theta,\phi)$ relative to the global $z$-axis, then $\alpha = \phi$, $\beta = \theta$, and the value of $\gamma$ is irrelevant due to axial symmetry, so we can choose $\gamma = 0$ to have $\bT^{(G)}  = \bR(\phi,\theta,0) \bT^{(L)} \bR(0,-\theta,-\phi)$. See Sec.\,5.2 of Ref.~\cite{MishchenkoTL02} for more details.
+
+### Translation
+
+Consider a point $P$ with coordinates $\br_1$ in coordinate systems $1$, with the origin at $O_{1}$. If we choose another origin $O_{2}$ with coordinates $\br_{12}$ relative to $O_{1}$, then the new coordinates of $P$ relative to $O_{2}$ will be $\br_{2} = \br_{1} - \br_{12}$, as illustrated in Fig.~\ref{fig:transadd}. The translation-addition theorem for vector spherical waves states that, in the limit $n_{\rm max} \to \infty$,
+\begin{eqnarray}
+\bW(k\br_1) & = & \left\{
+\begin{array}{lcl}
+\bW(k\br_2) \rbO(k\br_{12}), & {\rm if} & r_{2} > r_{12},  \\
+\rbW(k\br_2) \bO(k\br_{12}), & {\rm if} & r_2 < r_{12},
+\end{array} \right. \label{eqn:iVTACS1} \\
+\rbW(k\br_1) & = & \quad ~\rbW(k\br_2) \rbO(k\br_{12}), \label{eqn:rVTACS1}
+\end{eqnarray}
+where $\rbO(k\br_{12})$ and $\bO(k\br_{12})$ are ($l_{\rm max} \times l_{\rm max}$) matrices of regular and irregular translation-addition coefficients (TACs), respectively.\cite{StoutAL02} Note the conditional statement for irregular waves: the transformation depends on the relative length of $\br_{2}$ and $\br_{12}$. In Fig.~\ref{fig:transadd}, an irregular basis centred at $O_{1}$ is mapped onto a regular basis centred at $O_{2}$ via the irregular TACs. However, if $O_{2}$ were to the left of the bisector, so that $r_{2} > r_{12}$, then the irregular basis centred at $O_{1}$ would be mapped onto an irregular basis centred at $O_{2}$ via the regular TACs. [What exactly happens when $r_{12} = r_{2}$, near the bisector, or if one simply uses the wrong expression?] Perhaps a more helpful interpretation is that, if the origin is translated by $\br_{12}$ (from $O_{1}$ to $O_{2}$), then at points with the new coordinates $\br_{2}$ satisfying $r_{2} < r_{12}$ (i.e.~within a ball of radius $r_{12}$) the irregular waves are transformed into regular waves, and at all other points the irregular waves remain irregular. Why? To better handle the singularity in the irregular waves, I suppose...
+
+Note that $O_{1}$ and $O_{2}$ are themselves points with coordinates $\bx_{1}$ and $\bx_{2}$, respectively, in some designated global "laboratory" frame with a fixed origin $\bx_{0}$. If we denote the lab-frame coordinates of $P$ by $\br$, then $\br_{1} = \br - \bx_{1}$, $\br_{2} = \br - \bx_{2}$, and $\br_{12} = \br_{1} - \br_{2} = \bx_{2} - \bx_{1} \equiv \bx_{21}$. Hence, we follow Stout_et al_\cite{StoutAL02,StoutAD08} and adopt the shorthand notation $\rbO^{(i,j)} \equiv \rbO(k\bx_{ij}) = \rbO(k\br_{ji})$, and likewise for $\bO^{(i,j)}$, yielding
+\begin{eqnarray}
+\bW^{(i)} & = & \left\{
+\begin{array}{lcl}
+\bW^{(j)} \rbO^{(j,i)}, & {\rm if} & r_{j} > r_{ij},  \\
+\rbW^{(j)} \bO^{(j,i)}, & {\rm if} & r_j < r_{ij},
+\end{array} \right. \label{eqn:iVTACS2} \\
+\rbW^{(i)} & = & \quad ~\rbW^{(j)} \rbO^{(j,i)}. \label{eqn:rVTACS2}
+\end{eqnarray}
+Note the reversal of indices $i$ and $j$ in $\bx_{ij} = \br_{ji}$, which has caused some confusion in the past. 
+
+To express the translation-addition theorem in terms of the coefficients ($\bc$) of a VSW expansion, multiply (from the right) both sides of equations (\ref{eqn:iVTACS2}) and (\ref{eqn:rVTACS2}) by column vector $\bc^{(i)}$, where the superscript ($i$) indicates where the VSW expansion is centred. From inspection of the right-hand side we find that
+\begin{eqnarray}
+\bc^{(j)} & = & \rbO^{(j,i)} \bc^{(i)}, \quad {\rm if} \quad r_{j} > r_{ij}, \label{eqn:iVTACS3a}  \\
+\rbc^{(j)} & = & \bO^{(j,i)} \bc^{(i)}, \quad {\rm if} \quad r_{j} < r_{ij}, \label{eqn:iVTACS3b} \\
+\rbc^{(j)} & = & \rbO^{(j,i)}\rbc^{(i)}. \label{eqn:rVTACS3}
+\end{eqnarray}
+Note that (\ref{eqn:iVTACS3a}), (\ref{eqn:iVTACS3b}) and (\ref{eqn:rVTACS3}) are in a similar form to the rotation equation (\ref{eqn:rotMat}). Also, it is worth reiterating that the above equations hold exactly only in the limit of $n_{\rm max} \to \infty$.
+
+```{r echo=FALSE, fig.cap='Illustration of how the coordinate vector of point.'}
+# do.call(knitr::include_graphics('figure1.png'))
+```
+
+### Factorized translation (involving rotation)
+
+A general translation, from $\bx_{i}$ to $\bx_{j}$ by $\bx_{ji} = \br_{ij} = (r_{ij},\theta_{ij},\phi_{ij})$, can be separated into three steps:
+
+1. Rotation of the local frame to align the $z$-axis with the $\br_{ij}$ vector. In the $zyz$ convention, the appropriate Euler angles are $\alpha= \phi_{ij}$, $\beta = \theta_{ij}$, and $\gamma = 0$.
+2. Axial translation along the rotated local $z$-axis by $r_{ij}$.
+3. Rotation of the local frame to realign the $z$-axis with the original orientation. The appropriate Euler angles are $\alpha' = -\gamma = 0$, $\beta' = -\beta = -\theta_{ij}$, and $\gamma' = -\alpha = - \phi_{ij}$.
+
+This factorisation can be expressed in matrix form as 
+\begin{equation}\label{eqn:rot-tranz-rot}
+\bO^{(j,i)} = \bR(\phi_{ij},\theta_{ij},0) \bO^{(z)}(r_{ij}) \bR(0,-\theta_{ij}, - \phi_{ij})
+\end{equation}
+for the irregular case, where $\bO^{(z)}(r_{ij})$ represents the matrix of axial translation coefficients, many (how many?) of which are zero due to the special case of axial translation along $z$. Note that the three aforementioned steps correspond to stepwise movement of the local axis, from the perspective of the initial point $i$, and the transformation corresponds to reading the matrix multiplication in (\ref{eqn:rot-tranz-rot}) from left to right; but the sequence of steps and the direction of movement is actually reversed from the perspective of the scatterer at the destination point. More importnantly, since all three matrix-factors on the right-hand side of (\ref{eqn:rot-tranz-rot}) will contain many (how many?) zeroes, operating on a vector of VSW coefficients in a sequence of three steps can actually reduce the scaling of the net computational cost from $\sim n_{\rm max}^{4}$ to $\sim n_{\rm max}^{3}$, when the na\"ive matrix multiplication on each step is replaced by a custom operation that sums just over the relevant (non-zero) components. See Appendix~\ref{app:transadd} for more details.
+
+Another potential advantage of using (\ref{eqn:rot-tranz-rot}) is that, after obtaining the three factors for $\bO^{(j,i)}$, they can be recycled when computing the reverse translation $\bO^{(i,j)}$ to reduce the overall computational cost. First, beware that $\bO^{(z)}(-r_{ij})$ is \emph{not} the inverse of $\bO^{(z)}(r_{ij})$, and note that $\bO^{z}(r_{ij})$ is invariant to interchanging $i$ and $j$ ($r_{ij} = r_{ji} \geq 0$). Actually, $[\bO^{(z)}(r_{ij})]^{-1} = \bR(0,\pi,0) \bO^{(z)}(r_{ij}) \bR(0,-\pi,0)$, where $\bR(0,\pi,0)$ is block-diagonal and each block is \emph{anti}-diagonal. Second, since $\phi_{ij} = \pi + \phi_{ji}$ and $\theta_{ij} = \pi - \theta_{ji}$, $\bR(\phi_{ji}, \theta_{ji},0)$ can be calculated from $\bR(\phi_{ij}, \theta_{ij},0)$ using the symmetry relation $d_{\mu m}^{n}(\pi - \theta) = (-1)^{n-m}d_{-\mu m}^{n}(\theta)$ (see eqn.~B.7 in ref.\cite{MishchenkoTL02}), so that $D_{\mu m}^{n}(\phi_{ji},\theta_{ji},0) = (-1)^{n-m+1}D_{-\mu m}^{n}(\phi_{ij},\theta_{ij},0)$, where the extra prefactor of $-1$ comes from multiplying by $e^{-i\pi} = -1$.    
+
+To conclude this section, we note that computing $\bO$ in general is actually more costly than the combined effort of computing $\bO^{(z)}$, $\bR$, \emph{and} $\bR^{-1}$. However, performing matrix multiplication of the three factors in the right sequence ($\bR\bO^{(z)}\bR^{-1}$) does not seem to produce the expected result ($\bO$), perhaps symptomatic of the numerical subtleties involved in the calculation of $\bO$.
+
+## Multiple scattering
+
+This section was written after first reading two papers by Stout_et al_~\cite{StoutAL02, StoutAD08} and then three earlier papers by Mackowski_et al_~\cite{Mackowski91, Mackowski94, Mackowski96}. 
+
+```{r echo=FALSE, fig.cap='Schematic of an incident field wavefronts (in red) scattered by a cluster of N spheres.'}
+# do.call(knitr::include_graphics('figure1.png'))
+```
+
+
+### Formulating the problem
+
+For a cluster of $N$ individual\footnote{"Individual" means that each particle can be isolated in a circumscribing sphere.} scatterers (each of arbitrary shape), the collectively scattered field $\bE_{\rm sca}^{\rm cl}$ can be separated into additive contributions from the individuals, i.e.: 
+\begin{equation}
+\bE_{\rm sca}^{\rm cl} (\br) = \sum\limits_{j=1}^{N} \bE_{\rm sca}^{(j)}(\br) = E \sum\limits_{j=1}^{N} \bW({\bf r}_{j}) \bc_{\rm sca}^{(j)} \label{eqn:scaCoeffsJ}
+\end{equation}
+where $\br_{j} = \br - \mathbf{x}_{j}$, $\mathbf{x}_{j}$ is the position of the $j$th scatterer relative to a fixed origin $\mathbf{x}_{0}$. It is important to stress that the VSW expansion for each $\bE_{\rm sca}^{(j)}(\br)$ in (\ref{eqn:scaCoeffsJ}) is developed in terms of irregular waves centred at $\bx_{j}$, as indicated in the subscript of $\br_{j}$ and the superscript of the corresponding coefficients $\bc_{\rm sca}^{(j)}$. It is even more important to note that (\ref{eqn:scaCoeffsJ}) does not actually prescribe how exactly the collective field is partitioned among the individuals. 
+
+It is useful to define the excitation field $\rbE_{\rm exc}^{(j)}(\br)$ for each scatterer $j$, and then develop it in terms of regular VSWs centred at $\bx_{j}$, i.e.
+\begin{eqnarray}
+\rbE_{\rm exc}^{(j)} (\br) & \equiv & \rbE_\mathrm{inc}(\br) + \sum\limits_{\substack{l=1\\l \neq j}}^{N} \bE_{\rm sca}^{(l)} (\br) \nonumber \\
+& = & E \rbW(\br) \rbc_{\rm inc} + E \sum\limits_{\substack{l=1\\l\neq j}}^{N} \bW(\br_{l}) \bc_{\rm sca}^{(l)} \nonumber \\
+& = & E \rbW(\br_{j}) \left( \rbc_{\rm inc}^{(j)} + \sum\limits_{\substack{l=1\\l\neq j}}^{N} \underbrace{\bO^{(j,l)} \bc_{\rm sca}^{(l)}}_{\rbc^{(j\leftarrow l)}} \right) \quad \mathrm{for~} \|\br_{j}\| < \min\|\bx_{j} - \bx_{l}\|\label{eqn:excE} \\
+& \equiv & E \rbW (\br_{j}) \rbc_{\rm exc}^{(j)} \label{eqn:excCoeffsJ}
+\end{eqnarray}
+where $\rbc_{\rm inc}^{(j)} = \rbO^{(j,0)} \rbc_{\rm inc}$ and $\rbO^{(j,0)} \equiv \rbO (\mathbf{x}_{j} - \mathbf{x}_{0})$. In the last equality of (\ref{eqn:excE}), $\bW(\br_{l})$ is transformed into $\rbW(\br_{j})$, with the correponding coefficients given by $\rbc^{(j\leftarrow l)} = \bO^{(j,l)} \bc_{\rm sca}^{(l)}$, where the superscript $(j\leftarrow l)$ specifies the scattered field partition of scatterer $l$ developed (as a regular VSW expansion) about particle $j$. Note the application of translation-addition theorem clause that applies only inside the ball of radius $r_{jl}$ (for each $l\neq j$) centred at $\bx_{j}$). This approach is valid only if the translation ball fully contains the target scatterer's surface, where the BCs are supposed to be matched. While non-overlapping spherical scatters are always guaranteed to satisfy this condition, Fig.~\ref{fig:offsetSpheroids} shows that spheroids with aspect ratio greater than $2$ can be problematic, because the t-ball can intersect the target scatterer's surface if it is sufficiently close (yet still not overlapping). Note that Mackowski explicitly mentions this issue when discussing equations 5-8 in ref.~\cite{Mackowski94}, but only in the context of spherical scatterers. 
+
+```{r echo=FALSE, fig.cap='Illustration of the t-ball for two identical (prolate) spheroids, either touching or separated by a gap.'}
+# do.call(knitr::include_graphics('figure2.png'))
+```
+
+From linearity and imposition of appropriate boundary conditions, again, the excitation coefficients $\rbc^{(j)}_{\rm exc}$ defined in (\ref{eqn:excCoeffsJ}) must be related to the corresponding scattering coefficients $\bc^{(j)}_{\rm sca}$ via
+\begin{equation}
+\bc_{\rm sca}^{(j)} \equiv \bT_{1}^{(j)} \rbc^{(j)}_{\rm exc}, \label{eqn:Tmat1}
+\end{equation}
+where the $\bT_{1}^{(j)}$ are the one-body transfer matrices. Note that $\rbc^{(j)}_{\rm exc} = \rbc_{\rm inc}$ for an isolated ($j=N=1$) scatterer at the origin; and if the scatterer is spherically symmetric then $\bT_{1}^{(1)}$ is a diagonal matrix with Mie coefficients running along the diagonal. For non-spherical scatterers, it may also be helpful to rotate (as well as translate) the coordinates to achieve a favourable orientation. Anyway, from (\ref{eqn:excE}), (\ref{eqn:excCoeffsJ}), and (\ref{eqn:Tmat1}) we obtain an equation expressed just in terms of the field coefficients:
+\begin{equation} \label{eqn:FunMultiScat}
+\rbc^{(j)}_{\rm exc} =  \rbc^{(j)}_{\rm inc} + \sum\limits_{\substack{i=1\\i\neq j}}^{N} \underbrace{\bO^{(j,i)} \bT_{1}^{(i)}}_{\bT_{1}^{(j \leftarrow i)}} \rbc^{(i)}_{\rm exc},
+\end{equation}
+which is what Stout_et al_ regard as "the fundamental multiple scattering equation" (eqn.~9 in ref.~\cite{StoutAL02}). It is helpful to rewrite the linear system (\ref{eqn:FunMultiScat}) in block-matrix form:
+\begin{equation} \label{eqn:FunMultiScatMat}
+\begin{bmatrix}
+\bI &  -\bO^{(1,2)} \bT_{1}^{(2)} & \cdots & -\bO^{(1,N)}\bT_{1}^{(N)} \\
+-\bO^{(2,1)} \bT_{1}^{(1)} & \bI & \cdots & -\bO^{(2,N)} \bT_{1}^{(N)} \\ 
+\vdots & \vdots & \ddots & \vdots \\
+-\bO^{(N,1)} \bT_{1}^{(1)} & -\bO^{(N,2)} \bT_{1}^{(2)} & \cdots & \bI
+\end{bmatrix}
+\begin{pmatrix}
+\rbc^{(1)}_{\rm exc} \\
+\rbc^{(2)}_{\rm exc} \\
+\vdots \\
+\rbc^{(N)}_{\rm exc}
+\end{pmatrix}
+=
+\begin{pmatrix}
+\rbc^{(1)}_{\rm inc} \\
+\rbc^{(2)}_{\rm inc} \\
+\vdots \\
+\rbc^{(N)}_{\rm inc} \\
+\end{pmatrix}.
+\end{equation}
+We can use (\ref{eqn:Tmat1}) to substitute the excitation field coefficients for the scattered field coefficients and, assuming the one-body T-matrices are invertible, obtain
+\begin{equation} \label{eqn:FunMultiScat2}
+\left[\bT_{1}^{(j)}\right] ^{-1}\bc^{(j)}_{\rm sca} - \sum\limits_{\substack{i=1\\i\neq j}}^{N} \bO^{(j,i)}  \bc^{(i)}_{\rm sca}  = \rbc^{(j)}_{\rm inc},
+\end{equation}
+\begin{equation} \label{eqn:FunMultiScatMat2}
+\begin{bmatrix}
+\left[ \bT_{1}^{(1)} \right]^{-1} &  -\bO^{(1,2)} & \cdots & -\bO^{(1,N)} \\
+-\bO^{(2,1)} & \left[ \bT_{1}^{(2)}\right]^{-1} & \cdots & -\bO^{(2,N)} \\ 
+\vdots & \vdots & \ddots & \vdots \\
+-\bO^{(N,1)} & -\bO^{(N,2)} & \cdots & \left[ \bT_{1}^{(N)}\right]^{-1}
+\end{bmatrix}
+\begin{pmatrix}
+\bc^{(1)}_{\rm sca} \\
+\bc^{(2)}_{\rm sca} \\
+\vdots \\
+\bc^{(N)}_{\rm sca}
+\end{pmatrix}
+=
+\begin{pmatrix}
+\rbc^{(1)}_{\rm inc} \\
+\rbc^{(2)}_{\rm inc} \\
+\vdots \\
+\rbc^{(N)}_{\rm inc} \\
+\end{pmatrix}.
+\end{equation}
+We can also rearrange the linear system into
+\begin{equation} \label{eqn:FunMultiScat3}
+\bc^{(j)}_{\rm sca} -\bT_{1}^{(j)} \sum\limits_{\substack{i=1\\i\neq j}}^{N} \bO^{(j,i)}  \bc^{(i)}_{\rm sca}  = \bT_{1}^{(j)} \rbc^{(j)}_{\rm inc},
+\end{equation}
+\begin{equation} \label{eqn:FunMultiScatMat3}
+\begin{bmatrix}
+\bI &  -\bT_{1}^{(1)} \bO^{(1,2)} & \cdots & -\bT_{N}^{(1)}\bO^{(1,N)} \\
+-\bT_{1}^{(2)} \bO^{(2,1)} & \bI & \cdots & -\bT_{1}^{(2)}\bO^{(2,N)}  \\ 
+\vdots & \vdots & \ddots & \vdots \\
+- \bT_{1}^{(N)} \bO^{(N,1)}  & -\bT_{1}^{(N)} \bO^{(N,2)}  & \cdots & \bI
+\end{bmatrix}
+\begin{pmatrix}
+\bc^{(1)}_{\rm sca} \\
+\bc^{(2)}_{\rm sca} \\
+\vdots \\
+\bc^{(N)}_{\rm sca}
+\end{pmatrix}
+=
+\begin{pmatrix}
+\bT_{1}^{(1)}\rbc^{(1)}_{\rm inc} \\
+\bT_{1}^{(2)}\rbc^{(2)}_{\rm inc} \\
+\vdots \\
+\bT_{1}^{(3)}\rbc^{(N)}_{\rm inc} \\
+\end{pmatrix},
+\end{equation}
+which is equivalent to Mackowski's eqn.~4 in ref.~\cite{MackowskiM11}. In Mackowski's earlier papers, however, beware that the same "fundamental" equation (eqn.~13 in ref.~\cite{Mackowski94} and eqn.~3 in ref.~\cite{Mackowski96}) has a plus sign instead of the minus, which may be entirely due to a dubious minus sign featuring in the incident field expansion (see eqn.~4 in ref.~\cite{Mackowski94}). The dubious minus sign is absent in eqn.~2 of the more recent ref.~\cite{MackowskiM11}, and the subsequent eqn.~4 matches our equation (\ref{eqn:FunMultiScat3}). Phew! 
+
+Note that (\ref{eqn:FunMultiScatMat}), (\ref{eqn:FunMultiScatMat2}), and (\ref{eqn:FunMultiScatMat3}) are all in the form of a general matrix equation $\mathbf{A}\bx = \mathbf{y}$, which can be solved for the column vector $\bx$ without necessarily inverting the matrix $\mathbf{A}$. However, formal inversion facilitates definition of auxiliary $T$-matrix constructions for multiple scatterers. 
+
+### T-matrix constructions for $N$ scatterers
+
+The system of coupled matrix equations in (\ref{eqn:FunMultiScatMat2}) can be solved for $\bff^{(j)}$ by inverting the matrix to obtain
+
+\begin{equation}\label{eqn:scatCentTMat}
+\bc^{(j)}_{\rm sca} = \sum_{i=1}^{N} \bT_{N}^{(j,i)} \rbc^{(i)}_{\rm inc} = \underbrace{\left(\sum_{i=1}^{N} \bT_{N}^{(j,i)} \rbO^{(i,0)}\right)}_{\mathrm{Mackowski's}~ \bT_{N}^{(j)}} \rbc_{\rm inc} = \underbrace{\left(\sum_{i=1}^{N} \bT_{N}^{(j,i)} \rbO^{(i,j)}\right)}_{\mathrm{Stout's}~ \bT_{N}^{(j)}} \rbc^{(j)}_{\rm inc},
+\end{equation}
+where $\bT_{N}^{(j,i)}$ represents pairwise $N$-body T-matrices, arranged and defined as follows
+\begin{eqnarray}
+\left[\mathbf{T}_{N}^{(j,i)}\right] & = &
+\begin{bmatrix}
+\mathbf{T}_{N}^{(1,1)} & \mathbf{T}_{N}^{(1,2)} & \cdots & \mathbf{T}_{N}^{(1,N)} \\
+\mathbf{T}_{N}^{(2,1)} & \mathbf{T}_{N}^{(2,2)} &
+\cdots & \mathbf{T}_{N}^{(2,N)} \\
+\vdots & \vdots & \ddots & \vdots \\
+\mathbf{T}_{N}^{(N,1)} & \mathbf{T}_{N}^{(N,2)} & \cdots & \mathbf{T}_{N}^{(N,N)}
+\end{bmatrix}
+ =
+\begin{bmatrix}
+\left[\bT_{1}^{(1)}\right]^{-1} &  -\bO^{(1,2)} & \cdots & -\bO^{(1,N)} \\
+-\bO^{(2,1)} & \left[\bT_{1}^{(2)}\right]^{-1} & \cdots & -\bO^{(2,N)} \\ 
+\vdots & \vdots & \ddots & \vdots \\
+-\bO^{(N,1)} & -\bO^{(N,2)} & \cdots & \left[\bT_{1}^{(N)}\right]^{-1}
+\end{bmatrix}^{-1} \label{eqn:TjiMatrixDefinition} \\
+& = & 
+\begin{bmatrix}
+\bT_{1}^{(1)} &  0 & \cdots & 0 \\
+0 & \bT_{1}^{(2)} & \cdots & 0 \\ 
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & \bT_{1}^{(N)}
+\end{bmatrix}
+\begin{bmatrix}
+\bI &  -\bO^{(1,2)} \bT_{1}^{(2)} & \cdots & -\bO^{(1,N)} \bT_{1}^{(N)} \\
+-\bO^{(2,1)}\bT_{1}^{(1)} & \bI & \cdots & -\bO^{(2,N)} \bT_{1}^{(N)} \\ 
+\vdots & \vdots & \ddots & \vdots \\
+-\bO^{(N,1)}\bT_{1}^{(1)} & -\bO^{(N,2)} \bT_{1}^{(2)} & \cdots & \bI
+\end{bmatrix}^{-1} \\
+& = & 
+\begin{bmatrix}
+\bI &  - \bT_{1}^{(1)} \bO^{(1,2)} & \cdots & -\bT_{1}^{(1)} \bO^{(1,N)} \\
+-\bT_{1}^{(2)} \bO^{(2,1)} & \bI & \cdots & -\bT_{1}^{(2)} \bO^{(2,N)} \\ 
+\vdots & \vdots & \ddots & \vdots \\
+-\bT_{1}^{(N)} \bO^{(N,1)} & -\bT_{1}^{(N)} \bO^{(N,2)} & \cdots & \bI
+\end{bmatrix}^{-1}
+\begin{bmatrix}
+\bT_{1}^{(1)} &  0 & \cdots & 0 \\
+0 & \bT_{1}^{(2)} & \cdots & 0 \\ 
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & \bT_{1}^{(N)} \label{eqn:TjiMatrixFactored2}
+\end{bmatrix}
+\end{eqnarray}
+
+with the last two lines merely showing how the one-body T-matrices can be factored out in two different ways (left or right). [Q: How to interpret $\bO^{(i,j)}\bT_{1}^{(j)}$ and $\bT_{1}^{(i)} \bO^{(i,j)}$?]
+
+The $\bT_{N}^{(j,i)}$ matrices form a complete multiple-scattering solution of the $N$-particle system. Stout _et al_ calls these matrices "scatterer-centred tranfer matrices" (see eqn.~12 in ref.~\cite{StoutAL02}), while Mackowski refers to them as "sphere-centred" (see eqn.~16 in ref.~\cite{Mackowski94} and eqn.~4 in ref.~\cite{Mackowski96}). However, both terms seem equally applicable to $\bT_{N}^{(j)}$, which Mackowski  defines one way (see eqn.~61 in ref.~\cite{Mackowski96}) but does not give it a name, while Stout _et al_ define $\bT_{N}^{(j)}$ differently and call it "individual $N$-body transfer matrices" (see eqns.~14 and 27 in ref.~\cite{StoutAL02}). To avoid any possible confusion, we shall refer to $\bT_{N}^{(j,i)}$ and Mackowski's $\bT_{N}^{(j)}$ as "pairwise" and "individual" $N$-body T-matrices, respectively, and we stress that $\bT_{N}^{(j)}$ differs from $\bT_{1}^{(j)}$ in equation (\ref{eqn:Tmat1}).
+
+Mackowski's "contraction" of the index $i$ in $\bT_{N}^{(j,i)}$ to obtain $\bT_{N}^{(j)}$ essentially links the individually-centred scattering coefficients, $\bff^{(j)}$, with the incident field coefficients, $\rba$, for the regular VSW expansion centred at the common origin $\bx_{0}$. Mackowski also considers the collective scattering coefficients $\bff^{(0)}$ for the irregular VSW expansion about the common origin, i.e.
+
+\begin{equation}
+ \bE_{\rm sca}^{\rm cl} (\br) = E \bW(\br) \bc^{(0)}_{\rm sca} = E \bW(\br) \left(\sum\limits_{j=1}^{N} \rbO^{(0,j)}\bc^{(j)}_{\rm sca}\right),\quad \mathrm{for} \quad \|\br\| > \max\|\bx_{j}\|\label{eqn:fcl},
+\end{equation}
+
+where the second equality relies on a particular clause of the translation-addition theorem, which is valid only outside of the smallest circumscribing sphere (encompassing all $N$ scatterers) centred at $\bx_{0}$.  From (\ref{eqn:fcl}) and (\ref{eqn:scatCentTMat}) we have
+
+\begin{equation} \label{eqn:Tcl}
+\bc^{(0)}_{\rm sca} = \sum_{j=1}^{N} \rbO^{(0,j)} \sum_{i=1}^{N} \bT_{N}^{(j,i)} \rbO^{(i,0)} \rbc_{\rm inc}  = \sum_{j=1}^{N} \rbO^{(0,j)} \bT_{N}^{(j)} \rbc_{\rm inc} \equiv \bT^{(0)}_{N} \rbc_{\rm inc},
+\end{equation}
+
+which is analogous to (\ref{eqn:genTmatrix}) and provides an explicit expression for the collective $\mathbf{T}^{(0)}_{N}$ in terms of the pairwise and (Mackowski's) individual $N$-body T-matrices:
+
+\begin{equation}
+\bT^{(0)}_{N} = \sum_{j=1}^{N}\sum_{i=1}^{N} \rbO^{(0,j)} \bT_{N}^{(j,i)} \rbO^{(i,0)} = \sum_{j=1}^{N} \rbO^{(0,j)} \bT_{N}^{(j)}
+\end{equation}
+
+which is equivalent to Mackowski's "cluster-centred" T-matrix (see eqn.~19 in ref.~\cite{Mackowski94}, eqn.~64 in ref.~\cite{Mackowski96}, and eqn.~29 in ref.~\cite{MackowskiM11}). Again, it is worth reiterating that (\ref{eqn:Tcl}) is valid only outside of the cluster's smallest circumscribing sphere centred at the common origin, and Mackowski explicitly acknowledges this fact in refs.~\cite{Mackowski96, MackowskiM11}! I suspect this limitation is present in most other studies that utilise a collective T-matrix, such as ref.~\cite{Suryadharma18}
+
+### Calculation of optical cross-sections and activity
+
+The total energy transfer from an incident plane wave $\bE_{\rm inc}$ into $\bE_{\rm sca}$ and/or $\bE_{\rm int}$ as a result of scattering can be quantified by the \emph{extinction} cross-section, $\sigma_{\rm ext}$, which in the current formalism can be calculated from the scatterer-centred coefficients, here for convenience denoted by $\bff^{(j)} = \bc_{\rm sca}^{(j)}$ and $\ba^{(j)} = \rbc_{\rm inc}^{(j)}$, using
+
+\begin{equation} \label{eqn:sigExt}
+\sigma_{\rm ext} = -\frac{1}{k_{\rm med}^{2}} \Re \left\{ \sum_{j=1}^{N} \ba^{(j)\dagger}\bff^{(j)}\right\} = -\frac{1}{k_{\rm med}^{2}} \sum_{j=1}^{N}\sum_{q=1}^{2}\sum_{n=1}^{n_{\rm max}} \sum_{m=-n}^{n} \Re \left\{ a^{(j)*}_{qnm} f^{(j)}_{qnm} \right \} \equiv \sum_{j=1}^{N} \sigma_{\rm ext}^{(j)},
+\end{equation}
+
+where $\Re\{ \dots \}$ indicates taking the real part of the quantity inside the braces, $\ba^{(j)\dagger}$ is conjugate transpose of the column vector $\ba^{(j)}$, $a^{(j)*}_{qnm}$ is the conjugate of the vector component $a^{(j)}_{qnm}$, and $k_{\rm med}$ is the (real-valued) wave number for the (non-absorbing) medium. Note that (\ref{eqn:sigExt}) is from eqn.~29 of ref.~\cite{StoutAD08}, which follows from simplifying eqn.~43 of ref.~\cite{StoutAL02} and substituting into eqn.~42 (of same reference); but it apparently differs from eqn.~H.65 of ref.~\cite{LeRuE08}, where the conjugation is swapped, nonetheless producing the same result since $\Re\{ab^{*}\} = \Re\{ a^{*}b\}$ for any complex numbers $a$ and $b$. Also note that $\sigma_{\rm ext}$ is separable into additive contributions from individual scatterers, i.e. $\sigma_{\rm ext} = \sum_{j}\sigma_{\rm ext}^{(j)}$. Mackowski cites the optical theorem when stating analogous expressions for $\sigma_{\rm ext}$ in eqns.~23-26 of ref.~\cite{Mackowski94}, missing the minus sign (because of an extra minus sign in Mackowski's definition of incident field coefficients) and featuring an extra factor of $4\pi$ (due to different normalisation condition for the angular part of VSWs, which can be seen by comparing the $E_{mn}$ in eqn.~21 of ref.~\cite{Mackowski94} with the $\gamma_{mn}$ in eqn.~C.22 of ref.~\cite{MishchenkoTL02}). To spice things up, in Mackowski's earlier paper the $4\pi$ is $2\pi$ in the extinction cross-section formula (eqn.~31 of ref.~\cite{Mackowski91}), where the minus sign is also missing yet there is no extra minus sign in the definition of incident field coefficients to explain the discrepancy. In Mackowski's latest paper, the $4\pi$ again becomes $2\pi$ in the extinction cross-section formula (eqn.~24 in ref.\cite{MackowskiM11}), which also includes the minus sign, consistent with the absence of the dubious minus sign in the definition of incident field coefficients. Note that Suryadharma and Rockstuhl\cite{Suryadharma18} seem to have the same "$4\pi$ and no minus sign" convention as in ref.~\cite{Mackowski94}, and the comparison between eqns.~64-65 of ref.~\cite{StoutAL01} may offer an alternative explanation for this pervasive discrepancy.   
+
+The scattering cross-section for a given excitation, $\sigma_{\rm sca}$, can be computed using
+\begin{equation} \label{eqn:sigSca}
+\sigma_{\rm sca} = \frac{1}{k_{\rm med}^2} \Re\left\{ \sum_{j=1}^{N} \sum_{i=1}^{N} \bff^{(j)\dagger} \rbO^{(j,i)} \bff^{(i)} \right\} = \frac{1}{k_{\rm med}^2} \sum_{j=1}^{N} \sum_{i=1}^{N} \sum_{l=1}^{L} \sum_{l'=1}^{L}  \Re \left\{ f_{l}^{(j)*} \widetilde{O}_{ll'}^{(j,i)} f_{l'}^{(i)} \right\} \equiv \sum_{j=1}^{N} \sigma_{\rm sca}^{(j)},
+\end{equation}
+
+where the composite index $l$ defined in (\ref{eqn:defLmax}) has been used for brevity. Note that (\ref{eqn:sigSca}) is also from eqn.~29 of ref.~\cite{StoutAD08}, which follows from substituting eqn.~45 of ref.~\cite{StoutAL02} into eqn.~42 (of same reference). It seems to differ by a factor of $4\pi$ from eqn.~35 of ref.~\cite{Mackowski94}, but for single scatterer ($N=1$) it does reduce to eqn.~H.64 of ref.~\cite{LeRuE08}. My understanding is that (\ref{eqn:sigSca}) is derived by considering the outward radial component of the Poynting vector for the scatterer field and integrating it over the surface of a sphere enclosing all the scatterers.  
+
+The absorption cross-section, $\sigma_{\rm abs}$ can be deduced using conservation of energy:
+\begin{equation}
+\sigma_{\rm abs} = \sigma_{\rm ext} - \sigma_{\rm sca},
+\end{equation}
+or\dots
+
+Recall that $\sigma_{\rm ext}$, $\sigma_{\rm sca}$, and $\sigma_{\rm abs}$ are defined for a particular incident field direction. The corresponding orientationally averaged quantities are obtained by averaging over all possible orientations, producing $\langle \sigma_{\rm ext}\rangle$, $\langle \sigma_{\rm sca}\rangle$ and $\langle \sigma_{\rm abs}\rangle$.
+
+### Convergence, truncation, and error propagation
+
+The $T$-matrix formalism is founded on the premise that everything converges below a finite multipole order $n_{\rm max} < \infty$, i.e.~the field coefficients and $T$-matrix elements become negligible for $n > n_{\rm max}$. Hence, while the formalism (including the translation-addition theorem for VSWs) is exact only in the impractical limit of $n\to\infty$, sufficiently accurate numerical results can be obtained with finite vectors and matrices truncated above $n_{\rm max}$. The question is: what is the appropriate choice of $n_{\rm max}$ for a given system and  given numerical scheme? Should one choose just one value of $n_{\rm max}$, or multiple values, each used at a different stage of the scheme? How exactly does the truncation error propagate from stage to stage? Answering these questions requires some numerical analysis and convergence testing...
+
+
+- What is the most appropriate convergence criterion for the scatterer-centred one-body $T$-matrices $\bT_{1}^{(i)}$, and when is convergence most problematic (i.e.~for the shortest wavelength in the given range, or the most "resonant" wavelength)?
+- What is the effect of truncation on the matrix products $\bT_{1}^{(i)} \bO^{(i,j)}$, $\bO^{(j,i)} \bT_{1}^{(i)}$, $\bT_{1}^{(i)} \rbO^{(i,j)}$, and $\rbO^{(j,i)} \bT_{1}^{(i)}$? That is, if these products do converge at some $n_{\rm max}$, do we need to include higher orders ($n > n_{\rm max}$) in $\bT_{1}^{(i)}$? I suspect this may be the case for irregular VTACs ($\bO$), because their magnitude actually increases with $n$; but not for regular ones, which diminish with increasing $n$.
+- Numerical solution schemes described in the following section involve inverting large ($N$-body) matrices composed of block of the form $\bT_{1}^{(i)} \bO^{(i,j)}$, $\bO^{(j,i)} \bT_{1}^{(i)}$, $\bO^{(i,j)}$, or $[\bT_{1}^{(i)}]^{-1}$. However, there is no clear understanding of how the truncation error of each component affects the convergence of the $N$-body matrix inversion.
+
+## Solution schemes
+
+To "solve" a multiple scattering problem can mean different things. Usually it means to determine the scattering coefficients $\bc^{(j)}_{\rm sca}$ for a given individual scatterer properties (described by $\bT_{1}^{(j)}$) and an excitation field (described by $\rbc^{(j)}_{\rm inc}$) impinging from a particular direction. This kind of "solution" can be achieved by solving the linear system of equations in (\ref{eqn:FunMultiScatMat}) for $\ba^{(j)}_{\rm sca}$ \emph{without} performing matrix inversion, thus producing a complete description of the scattered field for the given excitation. The linear system would have to be solved again (entirely from scratch) for a different excitation. Performing the matrix inversion to determine the $N$-body T-matrices becomes worthwhile only when many impinging directions are to be considered, or when rotationally-averaged quantities are of primary interest.
+
+A brute force approach to solving the multiple scattering problem would be to construct the $NL \times NL$ matrix in equation (\ref{eqn:FunMultiScatMat}) and then invert it to obtain the pairwise matrices $\bT^{(i,j)}$. However, this approach is computationally demanding. To help alleviate the cost of one large matrix inversion, Stout_et al_\cite{StoutAL02,StoutAD08} proposed a recursive scheme where a smaller ($L \times L$) matrix is inverted $N-1$ times.
+
+### Stout's recursive scheme with matrix balancing
+
+In the recursive algorithm described by Stout_et al_\cite{StoutAL02}, the elements of $\bT_{N}^{(j,i)}$ are accumulated recursively from auxiliary subsystems, incrementally built up from one to $N$ particles. The recursive system is prescribed by the following four equation:
+\begin{eqnarray}
+\bT_{N}^{(N,N)} & = & \left[ \left[\bT_{1}^{(N)}\right]^{-1} - \sum_{j=1}^{N-1} \bO^{(N,j)} \left( \underline{ \sum_{i=1}^{N-1} \bT_{N-1}^{(j,i)} \bO^{(i,N)} } \right) \right]^{-1} \equiv \mathbf{S}^{-1}, \label{eqn:TNNN} \\
+\bT_{N}^{(N,i)} & = & \bT_{N}^{(N,N)} \left( \sum_{j=1}^{N-1} \bO^{(N,j)} \bT_{N-1}^{(j,i)} \right), \quad i\neq N,\\
+\bT_{N}^{(j,N)} & = & \left( \underline{ \sum_{i=1}^{N-1} \bT_{N-1}^{(j,i)} \bO^{(i,N)} } \right) \bT_{N}^{(N,N)}, \quad j\neq N,\\
+\bT_{N}^{(j,i)} & = & \bT_{N-1}^{(j,i)} + \left( \underline{ \sum_{l=1}^{N-1} \bT_{N-1}^{(j,l)} \bO^{(l,N)} } \right) \bT_{N}^{(N,i)}, \quad j,i\neq N, 
+\end{eqnarray}
+where a common matrix sum has been underlined. Note that only one $L\times L$ matrix is inverted on each of the $N-1$ iterations. The inverted matrix becomes ill-conditioned for large $n_{\rm max}$, but the associated problems can be (at least partly) circumvented by applying the recursive scheme to appropriately "balanced" matrices and coefficients:\cite{StoutAD08}
+\begin{eqnarray*}
+\left[ \widehat{\bT}_{N}^{(j,i)} \right]_{qp,q'p'} & \equiv & \left[ \bD^{(j)} \bT_{N}^{(j,i)} [\rbD^{(i)}]^{-1} \right]_{qp,q'p'} =  \frac{\xi_{n(p)}(k_{\rm M}R_{j})}{\psi_{n'(p')}(k_{\rm M}R_{i})} \left[ \bT_{N}^{(j,i)} \right]_{qp,q'p'}  \\
+\left[ \widehat{\bT}_{1}^{(j)} \right]_{qp,q'p'} & \equiv & \left[ \bD^{(j)} \bT_{1}^{(j)} [\rbD^{(j)}]^{-1} \right]_{qp,q'p'} =  \frac{\xi_{n(p)}(k_{\rm M}R_{j})}{\psi_{n'(p')}(k_{\rm M}R_{j})} \left[ \bT_{1}^{(j)} \right]_{qp,q'p'} \\
+\left[ \widehat{\bO}^{(j,i)} \right]_{qp,q'p'} & \equiv & \left[ \rbD^{(j)} \bO^{(j,i)} [\bD^{(i)}]^{-1} \right]_{qp,q'p'} = \frac{\psi_{n(p)}(k_{\rm M}R_{j})}{\xi_{n'(p')}(k_{\rm M}R_{i})} \left[ \bO^{(j,i)} \right]_{qp,q'p'},
+\end{eqnarray*}
+where $\rbD^{(j)}$ and $\bD^{(j)}$ are regular and irregular diagonal matrices with the Riccati-Bessel functions $\psi_{n}(x) = x j_{n}(x)$ or $\xi_{n}(x) = x h_{n}(x)$ on the diagonal. (Here, $j_{n}(x)$ and $h_{n}(x)$ are, respectively, the spherical Bessel and Hankel functions of the first kind). Note that, what Stout_et al_~\cite{StoutAD08} call "matrix balancing" could also be described as "left and right preconditioning", because a matrix to be inverted is essentially left- and right-multiplied (i.e.~preconditioned) by two different matrices to improve its condition number, which is supposed to make numerical inversion more robust and accurate. Instead of balancing throughout, as Stout_et al_~\cite{StoutAD08} seem to do, it may be better to localise the balancing act just at the inversion step in (\ref{eqn:TNNN}), i.e.
+\begin{eqnarray*}
+\bT_{N}^{(N,N)} = \mathbf{S}^{-1} & = & \left[ \bD^{(N)} \right]^{-1} \bD^{(N)} \mathbf{S}^{-1} \left[ \rbD^{(N)} \right] ^{-1}\rbD^{(N)} \\
+& = & \left[ \bD^{(N)} \right]^{-1} \left[ \rbD^{(N)} \mathbf{S} \left[ \bD^{(N)} \right]^{-1} \right]^{-1}\rbD^{(N)} \equiv \left[ \bD^{(N)} \right]^{-1}  \widehat{\mathbf{S}}^{-1} \rbD^{(N)} 
+\end{eqnarray*}
+where $\widehat{\mathbf{S}}$ is obtained by balancing $\mathbf{S}$ analogously to $\widehat{\bH}^{(j,i)}$.
+
+Note that equation (\ref{eqn:TNNN}) can be factored in two ways:
+\begin{eqnarray} \label{eqn:TNNN2}
+\bT_{N}^{(N,N)} & = & \bT_{1}^{(N)} \left[ \bI - \sum_{j=1}^{N-1} \bO^{(N,j)} \left( \underline{ \sum_{i=1}^{N-1} \bT_{N-1}^{(j,i)} \bO^{(i,N)} } \right) \bT_{1}^{(N)} \right]^{-1} \quad \equiv \quad \bT_{1}^{(N)} \mathbf{S}^{-1}_{R}\\
+& = & \left[ \bI - \bT_{1}^{(N)} \sum_{j=1}^{N-1} \bO^{(N,j)} \left( \underline{ \sum_{i=1}^{N-1} \bT_{N-1}^{(j,i)} \bO^{(i,N)} } \right) \right]^{-1} \bT_{1}^{(N)} \quad \equiv \quad \mathbf{S}^{-1}_{L} \bT_{1}^{(N)} ,
+\end{eqnarray}
+either of which may be preferred if $\bT_{1}^{(N)}$ is difficult to invert. To facilitate the inversion of $\mathbf{S}_{L}$ and $\mathbf{S}_{R}$, slightly different balancing (and subsequent unbalancing) should be used: 
+\begin{eqnarray}
+\bS_{L}^{-1} = \left[\bD_{N}^{(N)}\right]^{-1} \left[ \bD_{N}^{(N)} \bS_{L} \left[\bD_{N}^{(N)}\right]^{-1} \right]^{-1} \bD_{N}^{(N)} \equiv \left[\bD_{N}^{(N)}\right]^{-1} \widehat{\bS}_{L}^{-1} \bD_{N}^{(N)}, \\
+\bS_{R}^{-1} =  \widetilde{\bD}_{N}^{(N)} \left[ \left[\widetilde{\bD}_{N}^{(N)}\right]^{-1} \bS_{R} \widetilde{\bD}_{N}^{(N)} \right]^{-1} \left[\widetilde{\bD}_{N}^{(N)}\right]^{-1}  \equiv \widetilde{\bD}_{N}^{(N)}  \widehat{\bS}_{R}^{-1} \left[\widetilde{\bD}_{N}^{(N)}\right]^{-1}.
+\end{eqnarray}
+Here $\bS_{L}$ is balanced like irregular VTACs (or the inverse of a $T$-matrix) using only irregular weights, while $\bS_{R}$ is balanced like a $T$-matrix using only regular weights. In my experience, $\widehat{\bS}_{R}$ is much better conditioned for inversion than $\widehat{\bS}$, and I haven't compared with $\widehat{\bS}_{L}$.
+
+### Mackowski and Mishchenko's scheme
+
+From the equations (\ref{eqn:TjiMatrixDefinition}) and (\ref{eqn:TjiMatrixFactored2}) it follows that 
+\begin{equation}
+\begin{bmatrix}
+\bI & \cdots & - \bT_{1}^{(1)} \bO^{(1,N)} \\
+\vdots & \ddots & \vdots \\
+- \bT_{1}^{(N)} \bO^{(N,1)} & \cdots & \bI
+\end{bmatrix}
+\begin{bmatrix}
+\bT_{N}^{(1,1)} & \cdots & \bT_{N}^{(1,N)} \\
+\vdots & \ddots & \vdots \\
+\bT_{N}^{(N,1)} & \cdots & \bT_{N}^{(N,N)}
+\end{bmatrix}
+=
+\begin{bmatrix}
+\bT_{1}^{(1)} & \cdots & 0 \\
+\vdots & \ddots & \vdots \\
+0 & \cdots & \bT_{1}^{(N)}
+\end{bmatrix},
+\end{equation}
+or, equivalently,
+\begin{equation}
+\bT_{N}^{(i,i)} - \sum_{j\neq i}\bT_{1}^{(i)} \bO^{(i,j)}\bT_{N}^{(j,i)} = \bT_{1}^{(i)},
+\end{equation}
+which is a linear system of the general form $\mathbf{A}\mathbf{X} = \mathbf{B}$, where we want to find matrix $\mathbf{X}$ for a given $\mathbf{A}$ and $\mathbf{B}$, which contains multiple right hand sides. That is, each column of $\mathbf{X}$ and $\mathbf{B}$ can be treated independently, so we have to solve many linear systems of the form  $\mathbf{A}\mathbf{x}_{\nu} = \mathbf{b}_{\nu}$, where $\mathbf{x}_{\nu}$ and $\mathbf{b}_{\nu}$ are the $\nu$'th column of $\mathbf{X}$ and $\mathbf{B}$, respectively. This approach suggests that matrix inversion should be more difficult than solving a linear system, because the inversion actually requires solving many linear systems...]
+
+Mackowski and Mishchenko (M{\&}M) "contract" the second particle index of $\bT_{N}^{(j,i)}$, using $\bT_{N}^{(j)} = \sum_{i} \bT_{N}^{(j,i)} \rbO^{(i,0)}$, to rewrite the linear system in terms of \emph{individual} (as opposed to pairwise) scatterer-centred T-matrices $\bT_{N}^{(j)}$, i.e.
+\begin{equation} \label{eqn:Mackowski}
+\begin{bmatrix}
+\bI & \cdots & - \bT_{1}^{(1)} \bO^{(1,N)} \\
+\vdots & \ddots & \vdots \\
+- \bT_{1}^{(N)} \bO^{(N,1)} & \cdots & \bI
+\end{bmatrix}
+\begin{pmatrix}
+\mathbf{T}_{N}^{(1)} \\
+\vdots \\
+\mathbf{T}_{N}^{(N)}
+\end{pmatrix}
+=
+\begin{pmatrix}
+\mathbf{T}_{1}^{(1)} \rbO^{(1,0)} \\
+\vdots \\
+\mathbf{T}_{1}^{(N)} \rbO^{(N,0)}
+\end{pmatrix},
+\end{equation} 
+or, equivalently,
+\begin{equation}
+\bT_{N}^{(i)} - \sum_{j\neq i}\bT_{1}^{(i)} \bO^{(i,j)}\bT_{N}^{(j)} = \bT_{1}^{(i)} \rbO^{(i,0)},
+\end{equation}
+
+where the number of independent linear systems of the form $\mathbf{A}\mathbf{x}_{\nu} = \mathbf{b}_{\nu}$ is now reduced. [Does this index contraction affect the "optimal" choice of $n_{\rm max}$?] M{\&}M\cite{Mackowski96, MackowskiM11} claim to use (bi)conjugate gradient method to solve $\mathbf{A}\mathbf{x}_{\nu} = \mathbf{b}_{\nu}$ for each $\nu$, where the row order (i.e.~length of each column vector) is predetermined using Lorentz/Mie theory result for each (spherical) scatterer in isolation, and the truncation limit for the column order (i.e.~the maximum value of $\nu$) is determined on-the-fly from the convergence of each scatterer's contribution to the collective rotationally-veraged extinction cross-section (see eqn.~66 in ref.~\cite{Mackowski96}). 

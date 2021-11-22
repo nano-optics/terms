@@ -1,0 +1,81 @@
+readInputFile> Parsing file input_dimer_ff_400
+
+readInputFile> Detected keyword ModeAndScheme
+               mode=2 => spectrum_FF for far-field quantities
+               scheme=3 => Seek T^(j) using Mackowski's approach
+readInputFile> Detected keyword MultipoleCutoff
+               Supplied ncut(1)= 15
+               Setting ncut(2)= ncut(1)
+               Setting ncut(3)=  -8
+readInputFile> Detected keyword Wavelength
+               Wavelength (nm):   400.0000
+readInputFile> Detected keyword Medium
+               Constant host epsilon=  1.7689E+0
+readInputFile> Detected keyword OutputFormat
+               OutputFormat=HDF5
+               All output files are stored in file "ff_dimer_400.h5                                                 "
+readInputFile> Detected keyword DumpCollectiveTmatrix
+
+readInputFile> Detected keyword Scatterers
+ with nscat=    2
+
+readInputFile> Descriptor(s) and circumscribing sphere(s):
+
+ scatID String                  x          y          z         R_0
+    1   Ag                  0.0000E+0  0.0000E+0 -3.0000E+1  2.5000E+1
+    2   Ag                  0.0000E+0  0.0000E+0  3.0000E+1  2.5000E+1
+
+readInputFile> Individual geometry characteristic(s):
+
+ scatID Details
+    1   Mie with ncoats= 0
+    2   Mie with ncoats= 0
+
+readInputFile> Dielectric functions for (coated) Mie scatterer(s):
+
+ scatID volID Label
+    1     0     Ag
+    2     0     Ag
+
+readInputFile> Finished parsing  7 keywords
+
+
+spectrumFF> ===== Wavelength:   400.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.82650843E+04 nConv=  6
+             <csSca>=  2.13889553E+04 nConv=  6
+             <csAbs>=  6.87612894E+03
+
+             <cdExt>= -3.29004599E-12
+             <cdSca>= -3.26828254E-12
+             <cdAbs>= -2.17634548E-14
+
+           1
+calcCs> csExt=  2.86178502E+04 nConv=  9
+         csSca=  2.20261221E+04 nConv=  6
+         csAbs=  6.59172812E+03
+
+           2
+calcCs> csExt=  2.86178502E+04 nConv=  9
+         csSca=  2.20261221E+04 nConv=  6
+         csAbs=  6.59172812E+03
+
+           3
+calcCs> csExt=  2.86178502E+04 nConv=  9
+         csSca=  2.20261221E+04 nConv=  6
+         csAbs=  6.59172812E+03
+
+           4
+calcCs> csExt=  2.86178502E+04 nConv=  9
+         csSca=  2.20261221E+04 nConv=  6
+         csAbs=  6.59172812E+03
+
+termsProgram> Program run time (CPU & real in s):  1.439E+00  8.450E-01

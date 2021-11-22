@@ -1,0 +1,17 @@
+ModeAndScheme 2 3
+MultipoleCutoff 8
+Wavelength 300 700 100
+Medium 1.7689 # epsilon of water
+Incidence  0.0 0.0 0.0 
+# only dipoles, similar outcome
+# MultipoleSelections 1
+# EE1:1_EM2:1_ME2:1_MM2:1  blocks
+OutputFormat HDF5 xsec_200_1_3
+
+#ScattererCentredCrossSections
+
+Scatterers 4  
+Au  0 0    -300  30
+Au  0 0    -100  30
+Au  0 0    100  30
+Au  0 0    300  30

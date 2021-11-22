@@ -1,0 +1,19 @@
+ModeAndScheme 2 3
+Verbosity 3
+MultipoleCutoff 8
+Wavelength 300 700 100
+Medium 1.7689 # epsilon of water
+OutputFormat HDF5 xsec_2
+DisableRTR 
+
+Scatterers  10 
+Au 0 0 200 20
+Au 0 0 150 20
+Au 0 0 100 20
+Au 0 0 50 20
+Au 0 0 0 20
+Au 0 0 -50 20
+Au 0 0 -100 20
+Au 0 0 -150 20
+Au 0 0 -200 20
+Au 0 0 -250 20

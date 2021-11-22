@@ -1,0 +1,6 @@
+Wavelength 300 900 300
+
+Medium 1.7689 # epsilon of water
+
+Scatterers 2
+Ag 0.0 -50.0 0.0 30.0Ag 0.0  50.0 0.0 30.0

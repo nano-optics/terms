@@ -1,0 +1,1060 @@
+readInputFile> Parsing file runs/input_8_50_8_3
+
+readInputFile> Detected keyword ModeAndScheme
+               mode=1 => mapNF at diff. lambda and diff. Inc. and Sca_angles
+               scheme=3 => Seek T^(j) using Mackowski's approach
+readInputFile> Detected keyword MultipoleCutoff
+               Supplied ncut(1)=  8
+               Setting ncut(2)= ncut(1)
+               Setting ncut(3)=  -8
+readInputFile> Detected keyword ScattererCentredCrossSections
+readInputFile> Detected keyword Incidence
+readInputFile> Euler angle alpha [0,2Pi) grid-points:   50
+readInputFile> Euler angle beta  [0,Pi]  value=   0.00000000
+readInputFile> Euler angle gamma [0,2Pi) value=   0.00000000
+readInputFile> X-linear polarization
+               Incident Euler angles and weights:
+                  alpha        beta        gamma        weight
+               0.06283185   0.00000000   0.00000000   0.02000000
+               0.18849556   0.00000000   0.00000000   0.02000000
+               0.31415927   0.00000000   0.00000000   0.02000000
+               0.43982297   0.00000000   0.00000000   0.02000000
+               0.56548668   0.00000000   0.00000000   0.02000000
+               0.69115038   0.00000000   0.00000000   0.02000000
+               0.81681409   0.00000000   0.00000000   0.02000000
+               0.94247780   0.00000000   0.00000000   0.02000000
+               1.06814150   0.00000000   0.00000000   0.02000000
+               1.19380521   0.00000000   0.00000000   0.02000000
+               1.31946891   0.00000000   0.00000000   0.02000000
+               1.44513262   0.00000000   0.00000000   0.02000000
+               1.57079633   0.00000000   0.00000000   0.02000000
+               1.69646003   0.00000000   0.00000000   0.02000000
+               1.82212374   0.00000000   0.00000000   0.02000000
+               1.94778745   0.00000000   0.00000000   0.02000000
+               2.07345115   0.00000000   0.00000000   0.02000000
+               2.19911486   0.00000000   0.00000000   0.02000000
+               2.32477856   0.00000000   0.00000000   0.02000000
+               2.45044227   0.00000000   0.00000000   0.02000000
+               2.57610598   0.00000000   0.00000000   0.02000000
+               2.70176968   0.00000000   0.00000000   0.02000000
+               2.82743339   0.00000000   0.00000000   0.02000000
+               2.95309709   0.00000000   0.00000000   0.02000000
+               3.07876080   0.00000000   0.00000000   0.02000000
+               3.20442451   0.00000000   0.00000000   0.02000000
+               3.33008821   0.00000000   0.00000000   0.02000000
+               3.45575192   0.00000000   0.00000000   0.02000000
+               3.58141563   0.00000000   0.00000000   0.02000000
+               3.70707933   0.00000000   0.00000000   0.02000000
+               3.83274304   0.00000000   0.00000000   0.02000000
+               3.95840674   0.00000000   0.00000000   0.02000000
+               4.08407045   0.00000000   0.00000000   0.02000000
+               4.20973416   0.00000000   0.00000000   0.02000000
+               4.33539786   0.00000000   0.00000000   0.02000000
+               4.46106157   0.00000000   0.00000000   0.02000000
+               4.58672527   0.00000000   0.00000000   0.02000000
+               4.71238898   0.00000000   0.00000000   0.02000000
+               4.83805269   0.00000000   0.00000000   0.02000000
+               4.96371639   0.00000000   0.00000000   0.02000000
+               5.08938010   0.00000000   0.00000000   0.02000000
+               5.21504380   0.00000000   0.00000000   0.02000000
+               5.34070751   0.00000000   0.00000000   0.02000000
+               5.46637122   0.00000000   0.00000000   0.02000000
+               5.59203492   0.00000000   0.00000000   0.02000000
+               5.71769863   0.00000000   0.00000000   0.02000000
+               5.84336234   0.00000000   0.00000000   0.02000000
+               5.96902604   0.00000000   0.00000000   0.02000000
+               6.09468975   0.00000000   0.00000000   0.02000000
+               6.22035345   0.00000000   0.00000000   0.02000000
+readInputFile> Detected keyword OutputFormat
+               OutputFormat=HDF5
+               All output files are stored in file "map_tmp.h5                                                      "
+readInputFile> Detected keyword Wavelength
+               Wavelength (nm):   633.0000
+readInputFile> Detected keyword Medium
+               Constant host epsilon=  1.7689E+0
+readInputFile> Detected keyword Verbosity
+               verbosity=     2 (Medium)
+readInputFile> Detected keyword SpacePoints
+               i,lb_i,ub_i,npts_i= 1  3.20000000000000000E+01  0.00000000000000000E+00    0
+               i,lb_i,ub_i,npts_i= 2  0.00000000000000000E+00  0.00000000000000000E+00    0
+               i,lb_i,ub_i,npts_i= 3  0.00000000000000000E+00  0.00000000000000000E+00    0
+               nGridPoints=         1
+readInputFile> Detected keyword MapQuantity
+               Map enhancement |E|**p with p=   2
+
+readInputFile> Detected keyword Scatterers
+ with nscat=    8
+
+readInputFile> Descriptor(s) and circumscribing sphere(s):
+
+ scatID String                  x          y          z         R_0
+    1   Au                 -1.5000E+2 -1.5000E+2  2.1213E+2  3.0000E+1
+    2   Au                 -1.0000E+2 -1.0000E+2  1.4142E+2  3.0000E+1
+    3   Au                 -5.0000E+1 -5.0000E+1  7.0711E+1  3.0000E+1
+    4   Au                  0.0000E+0  0.0000E+0  0.0000E+0  3.0000E+1
+    5   Au                  5.0000E+1  5.0000E+1 -7.0711E+1  3.0000E+1
+    6   Au                  1.0000E+2  1.0000E+2 -1.4142E+2  3.0000E+1
+    7   Au                  1.5000E+2  1.5000E+2 -2.1213E+2  3.0000E+1
+    8   Au                  2.0000E+2  2.0000E+2 -2.8284E+2  3.0000E+1
+
+readInputFile> Individual geometry characteristic(s):
+
+ scatID Details
+    1   Mie with ncoats= 0
+    2   Mie with ncoats= 0
+    3   Mie with ncoats= 0
+    4   Mie with ncoats= 0
+    5   Mie with ncoats= 0
+    6   Mie with ncoats= 0
+    7   Mie with ncoats= 0
+    8   Mie with ncoats= 0
+
+readInputFile> Dielectric functions for (coated) Mie scatterer(s):
+
+ scatID volID Label
+    1     0     Au
+    2     0     Au
+    3     0     Au
+    4     0     Au
+    5     0     Au
+    6     0     Au
+    7     0     Au
+    8     0     Au
+
+readInputFile> Finished parsing 11 keywords
+
+
+mapNF> ===== Wavelength:   633.00 (nm) ======================
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  9.98026728E-01  0.00000000E+00
+          y:  0.00000000E+00  6.27905195E-02  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  9.82287251E-01  0.00000000E+00
+          y:  0.00000000E+00  1.87381315E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  9.51056516E-01  0.00000000E+00
+          y:  0.00000000E+00  3.09016994E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  9.04827052E-01  0.00000000E+00
+          y:  0.00000000E+00  4.25779292E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  8.44327926E-01  0.00000000E+00
+          y:  0.00000000E+00  5.35826795E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  7.70513243E-01  0.00000000E+00
+          y:  0.00000000E+00  6.37423990E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  6.84547106E-01  0.00000000E+00
+          y:  0.00000000E+00  7.28968627E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  5.87785252E-01  0.00000000E+00
+          y:  0.00000000E+00  8.09016994E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  4.81753674E-01  0.00000000E+00
+          y:  0.00000000E+00  8.76306680E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  3.68124553E-01  0.00000000E+00
+          y:  0.00000000E+00  9.29776486E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  2.48689887E-01  0.00000000E+00
+          y:  0.00000000E+00  9.68583161E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  1.25333234E-01  0.00000000E+00
+          y:  0.00000000E+00  9.92114701E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -1.60812265E-16  0.00000000E+00
+          y:  0.00000000E+00  1.00000000E+00  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -1.25333234E-01  0.00000000E+00
+          y:  0.00000000E+00  9.92114701E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -2.48689887E-01  0.00000000E+00
+          y:  0.00000000E+00  9.68583161E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -3.68124553E-01  0.00000000E+00
+          y:  0.00000000E+00  9.29776486E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -4.81753674E-01  0.00000000E+00
+          y:  0.00000000E+00  8.76306680E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -5.87785252E-01  0.00000000E+00
+          y:  0.00000000E+00  8.09016994E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -6.84547106E-01  0.00000000E+00
+          y:  0.00000000E+00  7.28968627E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -7.70513243E-01  0.00000000E+00
+          y:  0.00000000E+00  6.37423990E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -8.44327926E-01  0.00000000E+00
+          y:  0.00000000E+00  5.35826795E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -9.04827052E-01  0.00000000E+00
+          y:  0.00000000E+00  4.25779292E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -9.51056516E-01  0.00000000E+00
+          y:  0.00000000E+00  3.09016994E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -9.82287251E-01  0.00000000E+00
+          y:  0.00000000E+00  1.87381315E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -9.98026728E-01  0.00000000E+00
+          y:  0.00000000E+00  6.27905195E-02  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -9.98026728E-01  0.00000000E+00
+          y:  0.00000000E+00 -6.27905195E-02  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -9.82287251E-01  0.00000000E+00
+          y:  0.00000000E+00 -1.87381315E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -9.51056516E-01  0.00000000E+00
+          y:  0.00000000E+00 -3.09016994E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -9.04827052E-01  0.00000000E+00
+          y:  0.00000000E+00 -4.25779292E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -8.44327926E-01  0.00000000E+00
+          y:  0.00000000E+00 -5.35826795E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -7.70513243E-01  0.00000000E+00
+          y:  0.00000000E+00 -6.37423990E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -6.84547106E-01  0.00000000E+00
+          y:  0.00000000E+00 -7.28968627E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -5.87785252E-01  0.00000000E+00
+          y:  0.00000000E+00 -8.09016994E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -4.81753674E-01  0.00000000E+00
+          y:  0.00000000E+00 -8.76306680E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -3.68124553E-01  0.00000000E+00
+          y:  0.00000000E+00 -9.29776486E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -2.48689887E-01  0.00000000E+00
+          y:  0.00000000E+00 -9.68583161E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -1.25333234E-01  0.00000000E+00
+          y:  0.00000000E+00 -9.92114701E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -1.83697020E-16  0.00000000E+00
+          y:  0.00000000E+00 -1.00000000E+00  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  1.25333234E-01  0.00000000E+00
+          y:  0.00000000E+00 -9.92114701E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  2.48689887E-01  0.00000000E+00
+          y:  0.00000000E+00 -9.68583161E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  3.68124553E-01  0.00000000E+00
+          y:  0.00000000E+00 -9.29776486E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  4.81753674E-01  0.00000000E+00
+          y:  0.00000000E+00 -8.76306680E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  5.87785252E-01  0.00000000E+00
+          y:  0.00000000E+00 -8.09016994E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  6.84547106E-01  0.00000000E+00
+          y:  0.00000000E+00 -7.28968627E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  7.70513243E-01  0.00000000E+00
+          y:  0.00000000E+00 -6.37423990E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  8.44327926E-01  0.00000000E+00
+          y:  0.00000000E+00 -5.35826795E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  9.04827052E-01  0.00000000E+00
+          y:  0.00000000E+00 -4.25779292E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  9.51056516E-01  0.00000000E+00
+          y:  0.00000000E+00 -3.09016994E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  9.82287251E-01  0.00000000E+00
+          y:  0.00000000E+00 -1.87381315E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  9.98026728E-01  0.00000000E+00
+          y:  0.00000000E+00 -6.27905195E-02  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+solve> Prestaging...
+solve> Prestaged Mie T-matrix for scatterer   1 with q, nlo, nhi = 1  1  8
+solve> Prestaged Mie T-matrix for scatterer   1 with q, nlo, nhi = 2  1  8
+solve> Prestaged Mie T-matrix for scatterer   2 with q, nlo, nhi = 1  1  8
+solve> Prestaged Mie T-matrix for scatterer   2 with q, nlo, nhi = 2  1  8
+solve> Prestaged Mie T-matrix for scatterer   3 with q, nlo, nhi = 1  1  8
+solve> Prestaged Mie T-matrix for scatterer   3 with q, nlo, nhi = 2  1  8
+solve> Prestaged Mie T-matrix for scatterer   4 with q, nlo, nhi = 1  1  8
+solve> Prestaged Mie T-matrix for scatterer   4 with q, nlo, nhi = 2  1  8
+solve> Prestaged Mie T-matrix for scatterer   5 with q, nlo, nhi = 1  1  8
+solve> Prestaged Mie T-matrix for scatterer   5 with q, nlo, nhi = 2  1  8
+solve> Prestaged Mie T-matrix for scatterer   6 with q, nlo, nhi = 1  1  8
+solve> Prestaged Mie T-matrix for scatterer   6 with q, nlo, nhi = 2  1  8
+solve> Prestaged Mie T-matrix for scatterer   7 with q, nlo, nhi = 1  1  8
+solve> Prestaged Mie T-matrix for scatterer   7 with q, nlo, nhi = 2  1  8
+solve> Prestaged Mie T-matrix for scatterer   8 with q, nlo, nhi = 1  1  8
+solve> Prestaged Mie T-matrix for scatterer   8 with q, nlo, nhi = 2  1  8
+solve> Staging and solving/inverting...
+solve> Determine the T-matrix using Mackowski's solution scheme
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.9E+005 Tr(|Tmat|)= 2.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  2  1
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.1E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  3  1
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.8E+000 Tr(|Tmat|)= 6.4E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  4  1
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.0E-001 Tr(|Tmat|)= 4.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  5  1
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.5E-002 Tr(|Tmat|)= 3.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  6  1
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.9E-002 Tr(|Tmat|)= 3.2E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  7  1
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.6E-002 Tr(|Tmat|)= 2.7E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  8  1
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.9E+005 Tr(|Tmat|)= 2.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  1  2
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.9E+005 Tr(|Tmat|)= 2.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  3  2
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.1E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  4  2
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.8E+000 Tr(|Tmat|)= 6.4E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  5  2
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.0E-001 Tr(|Tmat|)= 4.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  6  2
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.5E-002 Tr(|Tmat|)= 3.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  7  2
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.9E-002 Tr(|Tmat|)= 3.2E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  8  2
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.1E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  1  3
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.9E+005 Tr(|Tmat|)= 2.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  2  3
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.9E+005 Tr(|Tmat|)= 2.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  4  3
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.1E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  5  3
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.8E+000 Tr(|Tmat|)= 6.4E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  6  3
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.0E-001 Tr(|Tmat|)= 4.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  7  3
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.5E-002 Tr(|Tmat|)= 3.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  8  3
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.8E+000 Tr(|Tmat|)= 6.4E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  1  4
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.1E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  2  4
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.9E+005 Tr(|Tmat|)= 2.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  3  4
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.9E+005 Tr(|Tmat|)= 2.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  5  4
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.1E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  6  4
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.8E+000 Tr(|Tmat|)= 6.4E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  7  4
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.0E-001 Tr(|Tmat|)= 4.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  8  4
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.0E-001 Tr(|Tmat|)= 4.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  1  5
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.8E+000 Tr(|Tmat|)= 6.4E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  2  5
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.1E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  3  5
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.9E+005 Tr(|Tmat|)= 2.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  4  5
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.9E+005 Tr(|Tmat|)= 2.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  6  5
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.1E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  7  5
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.8E+000 Tr(|Tmat|)= 6.4E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  8  5
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.5E-002 Tr(|Tmat|)= 3.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  1  6
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.0E-001 Tr(|Tmat|)= 4.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  2  6
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.8E+000 Tr(|Tmat|)= 6.4E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  3  6
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.1E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  4  6
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.9E+005 Tr(|Tmat|)= 2.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  5  6
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.9E+005 Tr(|Tmat|)= 2.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  7  6
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.1E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  8  6
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.9E-002 Tr(|Tmat|)= 3.2E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  1  7
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.5E-002 Tr(|Tmat|)= 3.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  2  7
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.0E-001 Tr(|Tmat|)= 4.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  3  7
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.8E+000 Tr(|Tmat|)= 6.4E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  4  7
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.1E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  5  7
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.9E+005 Tr(|Tmat|)= 2.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  6  7
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.9E+005 Tr(|Tmat|)= 2.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  8  7
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.6E-002 Tr(|Tmat|)= 2.7E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  1  8
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.9E-002 Tr(|Tmat|)= 3.2E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  2  8
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.5E-002 Tr(|Tmat|)= 3.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  3  8
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.0E-001 Tr(|Tmat|)= 4.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  4  8
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.8E+000 Tr(|Tmat|)= 6.4E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  5  8
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.1E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  6  8
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.9E+005 Tr(|Tmat|)= 2.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  7  8
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.7E-002 Tr(|Tmat|)= 4.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.5E-002 Tr(|Tmat|)= 4.6E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 6.2E-002 Tr(|Tmat|)= 1.9E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 6.2E-002 Tr(|Tmat|)= 1.9E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.5E-002 Tr(|Tmat|)= 4.6E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.7E-002 Tr(|Tmat|)= 4.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E-002 Tr(|Tmat|)= 4.0E-002 nconv=  4
+solLinSys> ZLANGE: Supplied matrix 1-norm=  1.9167E+000
+solLinSys> ZGECON returned RCOND=  2.5079E-001
+solLinSys> isol=  0 triggered wrapper for LAPACK's ZGESV
+solve> Done!
+
+solve> Calculation time [calcSphBessels (reg. & irreg)] (CPU & real in s):   1.019E-03  0.000E+00
+solve> Calculation time [calcMieTMat] (CPU & real in s):   9.926E-03  1.000E-03
+solve> Calculation time [calcWignerBigD] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [stageAmat] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [balanceVecJ] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [solLinSys] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [invSqrMat] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [balanceMatJI] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [calcTIJStout] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [calcTIMackowski] (CPU & real in s):   1.630E+00  2.930E-01
+solve> Calculation time [calcMieIntCoeffs] (CPU & real in s):   4.310E-03  0.000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  9.98026728E-01  0.00000000E+00
+          y:  0.00000000E+00  6.27905195E-02  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   6.310E-03  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   2.599E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  9.82287251E-01  0.00000000E+00
+          y:  0.00000000E+00  1.87381315E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   6.001E-03  1.000E-03
+
+calcLDOC> Calculation time (CPU & real in s):   1.693E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  9.51056516E-01  0.00000000E+00
+          y:  0.00000000E+00  3.09016994E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.959E-03  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   1.717E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  9.04827052E-01  0.00000000E+00
+          y:  0.00000000E+00  4.25779292E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.966E-03  1.000E-03
+
+calcLDOC> Calculation time (CPU & real in s):   1.907E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  8.44327926E-01  0.00000000E+00
+          y:  0.00000000E+00  5.35826795E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.952E-03  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   1.717E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  7.70513243E-01  0.00000000E+00
+          y:  0.00000000E+00  6.37423990E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.958E-03  1.000E-03
+
+calcLDOC> Calculation time (CPU & real in s):   1.907E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  6.84547106E-01  0.00000000E+00
+          y:  0.00000000E+00  7.28968627E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.955E-03  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   1.788E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  5.87785252E-01  0.00000000E+00
+          y:  0.00000000E+00  8.09016994E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   6.001E-03  1.000E-03
+
+calcLDOC> Calculation time (CPU & real in s):   1.717E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  4.81753674E-01  0.00000000E+00
+          y:  0.00000000E+00  8.76306680E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.936E-03  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   1.884E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  3.68124553E-01  0.00000000E+00
+          y:  0.00000000E+00  9.29776486E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.960E-03  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   1.907E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  2.48689887E-01  0.00000000E+00
+          y:  0.00000000E+00  9.68583161E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.941E-03  1.000E-03
+
+calcLDOC> Calculation time (CPU & real in s):   1.907E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  1.25333234E-01  0.00000000E+00
+          y:  0.00000000E+00  9.92114701E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.965E-03  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   1.979E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -1.60812265E-16  0.00000000E+00
+          y:  0.00000000E+00  1.00000000E+00  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.955E-03  1.000E-03
+
+calcLDOC> Calculation time (CPU & real in s):   1.812E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -1.25333234E-01  0.00000000E+00
+          y:  0.00000000E+00  9.92114701E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.913E-03  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   1.907E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -2.48689887E-01  0.00000000E+00
+          y:  0.00000000E+00  9.68583161E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   6.005E-03  1.000E-03
+
+calcLDOC> Calculation time (CPU & real in s):   1.907E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -3.68124553E-01  0.00000000E+00
+          y:  0.00000000E+00  9.29776486E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.940E-03  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   1.788E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -4.81753674E-01  0.00000000E+00
+          y:  0.00000000E+00  8.76306680E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.940E-03  1.000E-03
+
+calcLDOC> Calculation time (CPU & real in s):   1.669E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -5.87785252E-01  0.00000000E+00
+          y:  0.00000000E+00  8.09016994E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.942E-03  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   1.907E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -6.84547106E-01  0.00000000E+00
+          y:  0.00000000E+00  7.28968627E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.960E-03  1.000E-03
+
+calcLDOC> Calculation time (CPU & real in s):   1.597E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -7.70513243E-01  0.00000000E+00
+          y:  0.00000000E+00  6.37423990E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.942E-03  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   1.884E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -8.44327926E-01  0.00000000E+00
+          y:  0.00000000E+00  5.35826795E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.945E-03  1.000E-03
+
+calcLDOC> Calculation time (CPU & real in s):   2.098E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -9.04827052E-01  0.00000000E+00
+          y:  0.00000000E+00  4.25779292E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.998E-03  1.000E-03
+
+calcLDOC> Calculation time (CPU & real in s):   2.098E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -9.51056516E-01  0.00000000E+00
+          y:  0.00000000E+00  3.09016994E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.961E-03  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   1.907E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -9.82287251E-01  0.00000000E+00
+          y:  0.00000000E+00  1.87381315E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.952E-03  1.000E-03
+
+calcLDOC> Calculation time (CPU & real in s):   1.597E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -9.98026728E-01  0.00000000E+00
+          y:  0.00000000E+00  6.27905195E-02  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.942E-03  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   1.788E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -9.98026728E-01  0.00000000E+00
+          y:  0.00000000E+00 -6.27905195E-02  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.955E-03  1.000E-03
+
+calcLDOC> Calculation time (CPU & real in s):   1.788E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -9.82287251E-01  0.00000000E+00
+          y:  0.00000000E+00 -1.87381315E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.942E-03  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   1.693E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -9.51056516E-01  0.00000000E+00
+          y:  0.00000000E+00 -3.09016994E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.959E-03  1.000E-03
+
+calcLDOC> Calculation time (CPU & real in s):   1.812E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -9.04827052E-01  0.00000000E+00
+          y:  0.00000000E+00 -4.25779292E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.932E-03  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   1.907E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -8.44327926E-01  0.00000000E+00
+          y:  0.00000000E+00 -5.35826795E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   6.005E-03  1.000E-03
+
+calcLDOC> Calculation time (CPU & real in s):   2.003E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -7.70513243E-01  0.00000000E+00
+          y:  0.00000000E+00 -6.37423990E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.962E-03  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   1.907E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -6.84547106E-01  0.00000000E+00
+          y:  0.00000000E+00 -7.28968627E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   5.962E-03  1.000E-03
+
+calcLDOC> Calculation time (CPU & real in s):   1.907E-05  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -5.87785252E-01  0.00000000E+00
+          y:  0.00000000E+00 -8.09016994E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   1.044E-03  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   9.537E-07  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -4.81753674E-01  0.00000000E+00
+          y:  0.00000000E+00 -8.76306680E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   2.193E-04  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   0.000E+00  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -3.68124553E-01  0.00000000E+00
+          y:  0.00000000E+00 -9.29776486E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   1.991E-04  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   9.537E-07  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -2.48689887E-01  0.00000000E+00
+          y:  0.00000000E+00 -9.68583161E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   1.981E-04  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   9.537E-07  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -1.25333234E-01  0.00000000E+00
+          y:  0.00000000E+00 -9.92114701E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   1.991E-04  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   9.537E-07  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00 -1.83697020E-16  0.00000000E+00
+          y:  0.00000000E+00 -1.00000000E+00  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   1.979E-04  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   0.000E+00  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  1.25333234E-01  0.00000000E+00
+          y:  0.00000000E+00 -9.92114701E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   1.981E-04  1.000E-03
+
+calcLDOC> Calculation time (CPU & real in s):   0.000E+00  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  2.48689887E-01  0.00000000E+00
+          y:  0.00000000E+00 -9.68583161E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   1.981E-04  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   1.192E-06  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  3.68124553E-01  0.00000000E+00
+          y:  0.00000000E+00 -9.29776486E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   1.969E-04  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   1.192E-06  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  4.81753674E-01  0.00000000E+00
+          y:  0.00000000E+00 -8.76306680E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   1.981E-04  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   1.192E-06  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  5.87785252E-01  0.00000000E+00
+          y:  0.00000000E+00 -8.09016994E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   1.991E-04  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   1.907E-06  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  6.84547106E-01  0.00000000E+00
+          y:  0.00000000E+00 -7.28968627E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   2.038E-04  1.000E-03
+
+calcLDOC> Calculation time (CPU & real in s):   9.537E-07  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  7.70513243E-01  0.00000000E+00
+          y:  0.00000000E+00 -6.37423990E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   1.981E-04  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   0.000E+00  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  8.44327926E-01  0.00000000E+00
+          y:  0.00000000E+00 -5.35826795E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   1.981E-04  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   9.537E-07  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  9.04827052E-01  0.00000000E+00
+          y:  0.00000000E+00 -4.25779292E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   1.981E-04  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   9.537E-07  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  9.51056516E-01  0.00000000E+00
+          y:  0.00000000E+00 -3.09016994E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   1.981E-04  1.000E-03
+
+calcLDOC> Calculation time (CPU & real in s):   9.537E-07  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  9.82287251E-01  0.00000000E+00
+          y:  0.00000000E+00 -1.87381315E-01  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   1.981E-04  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   9.537E-07  0.000E+00
+calcLDOC> Done!
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  9.98026728E-01  0.00000000E+00
+          y:  0.00000000E+00 -6.27905195E-02  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   1.972E-04  0.000E+00
+
+calcLDOC> Calculation time (CPU & real in s):   9.537E-07  0.000E+00
+calcLDOC> Done!
+
+mapNF> Calculation time [NFs and LDOC for all inc.] (CPU & real in s):   2.146E-01  2.100E-02
+
+mapNF> Done!
+
+termsProgram> Dumping normalized optical chirality to file normalised_ldoc                                                 
+termsProgram> Dumping E  field map to files normalised_ldoc                                                 
+termsProgram> Program run time (CPU & real in s):  2.667E+00  3.870E-01

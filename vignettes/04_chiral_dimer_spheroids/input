@@ -1,0 +1,14 @@
+ModeAndScheme 2 3 
+MultipoleCutoff 5
+Wavelength 400 800 200
+Medium 1.7689 # careful: be consistent with external T-matrix
+
+TmatrixFiles 1
+"tmat_Au20x50_Nmax4.tmat" 
+
+OutputFormat HDF5 cross_sections
+
+# dimer, dihedral pi/4
+Scatterers 2
+TF1 0 -50 0.0 50 0.0 0.0 0.0  2.5
+TF1 0  50 0.0 50 0.0 0.7853982 0  2.5

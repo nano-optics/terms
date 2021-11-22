@@ -1,0 +1,70 @@
+---
+title: "Convergence with respect to VTACS multipolar order"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 3
+    fig_width: 7
+    fig_height: 6
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Convergence with respect to VTACS multipolar order}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE}
+library(knitr)
+library(terms)
+options(cli.num_colors = 1)
+theme_set(egg::theme_article())
+opts_chunk$set(echo = FALSE, warning=FALSE,
+               message=FALSE, comment='', 
+               tidy=FALSE, cache = FALSE)
+do.call(read_chunk, list(path = "_run.R"))
+```
+
+## Objective
+
+This example checks the convergence of orientation-averaged cross-sections with respect the maximum multipolar order describing individual scatterers and translation of vector spherical waves. The structure consists of four gold spheres in water arranged in a helix.
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+library(terms)
+cat('  <style>
+.x3d_scene {
+float:right;
+margin:0em;
+ }
+  </style>')
+
+ge <- get_geometry('input_4_4')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,400), width = "200px", height = "150px", default_material='gold')
+```
+
+This simulation uses the following `input` file
+```{R tpl}
+```
+
+
+```{r read, cache=FALSE}
+```
+
+where `{n1}, {n2}` are replaced by `4,5,...` in each separate run. 
+
+
+## Orientation-averaged results
+
+We see that in this example the cross-sections require higher than 4 multipolar orders in both $n_1$ and $n_2$ to converge, especially at shorter wavelengths. Typically, one needn't set $n_2$, as the default value $n_1=n_2$ is accurate; this optional parameter is mostly a remnant from the initial development stages.
+
+```{r oa}
+```
+
+-----
+
+```{r cleanup}
+```
+_Last run: `r format(Sys.time(), '%d %B, %Y')`_

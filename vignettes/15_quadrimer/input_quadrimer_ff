@@ -1,0 +1,12 @@
+ModeAndScheme 2 3 
+MultipoleCutoff 8
+Wavelength 300 700 200
+Medium 1.7689 # epsilon of water
+Incidence 0 1.570796 0 2 # k_x, E_y
+
+OutputFormat HDF5 cross_sections_quadrimer
+
+# 4 spheres x=0
+Scatterers 4
+Ag 0.0  -30.0 -30.0  25.0Ag 0.0   30.0 -30.0  25.0
+Ag 0.0  -30.0  30.0  25.0Ag 0.0   30.0  30.0  25.0

@@ -1,0 +1,12 @@
+ModeAndScheme 2 3 
+MultipoleCutoff 5
+Wavelength 300 700 200
+Medium 1.7689 # epsilon of water
+Incidence file incidence
+OutputFormat HDF5 cross_sections
+
+Scatterers 4
+Au 100.0000  0.00000 -30 20.0
+Au  80.9017 58.77853 -10 20.0
+Au  30.9017 95.10565  10 20.0
+Au -30.9017 95.10565  30 20.0

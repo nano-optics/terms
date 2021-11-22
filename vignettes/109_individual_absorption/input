@@ -1,0 +1,12 @@
+ModeAndScheme 2 2
+MultipoleCutoff 8
+Wavelength 300 800 100
+Incidence file incidence
+Medium 1.7689 # for water
+Verbosity 2
+OutputFormat HDF5 cross_sections
+ScattererCentredCrossSections
+
+Scatterers 2
+Au  0 0 0 21   
+Au  55 0 0 32    

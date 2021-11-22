@@ -1,0 +1,3799 @@
+readInputFile> Parsing file input_ref
+
+readInputFile> Detected keyword ModeAndScheme
+               mode=2 => spectrum_FF for far-field quantities
+               scheme=2 => Seek T^(ji) using Stout's iterative scheme
+readInputFile> Detected keyword MultipoleCutoff
+               Supplied ncut(1)=  5
+               Setting ncut(2)= ncut(1)
+               Setting ncut(3)=  -8
+readInputFile> Detected keyword MultipoleSelections
+               selection 1: EE1:1 blocks
+                            T-block | n_lo | n_hi 
+                             MM/11      0      0
+                             EM/21      0      0
+                             ME/12      0      0
+                             EE/22      1      1
+readInputFile> Detected keyword OutputFormat
+               OutputFormat=HDF5
+               All output files are stored in file "cross_sections_ref.h5                                           "
+readInputFile> Detected keyword ScattererCentredCrossSections
+readInputFile> Detected keyword Wavelength
+               Wavelength LB (nm):   300.000000
+               Wavelength UB (nm):   700.000000
+               nsteps, step:       100    4.0000
+readInputFile> Detected keyword Medium
+               Constant host epsilon=  1.7689E+0
+readInputFile> Detected keyword Incidence
+readInputFile> Euler angle alpha [0,2Pi) value=   0.00000000
+readInputFile> Euler angle beta  [0,Pi]  value=   0.00000000
+readInputFile> Euler angle gamma [0,2Pi) value=   0.00000000
+               Incident Euler angles and weights:
+                  alpha        beta        gamma        weight
+               0.00000000   0.00000000   0.00000000   1.00000000
+
+readInputFile> Detected keyword Scatterers
+ with nscat=    1
+
+readInputFile> Descriptor(s) and circumscribing sphere(s):
+
+ scatID String                  x          y          z         R_0
+    1   Au                  0.0000E+0  0.0000E+0  0.0000E+0  5.0000E+1
+
+readInputFile> Individual geometry characteristic(s):
+
+ scatID Details
+    1   Mie with ncoats= 0
+
+readInputFile> Dielectric functions for (coated) Mie scatterer(s):
+
+ scatID volID Label
+    1     0     Au
+
+readInputFile> Finished parsing  9 keywords
+
+
+spectrumFF> ===== Wavelength:   300.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.76007731E+04  9.13511493E+03
+             -------------------------------------------------------------------
+             Sum  1.76007731E+04  9.13511493E+03  8.46565817E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.76007731E+04  9.13511493E+03  8.46565817E+03  0  4
+             ---------------------------------------------------
+             Sum  1.76007731E+04  9.13511493E+03  8.46565817E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.76007731E+04  9.13511493E+03  8.46565817E+03  0  4
+             ---------------------------------------------------
+             Sum  1.76007731E+04  9.13511493E+03  8.46565817E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.76007731E+04  9.13511493E+03  8.46565817E+03  0  4
+             ---------------------------------------------------
+             Sum  1.76007731E+04  9.13511493E+03  8.46565817E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.76007731E+04  9.13511493E+03  8.46565817E+03  0  4
+             ---------------------------------------------------
+             Sum  1.76007731E+04  9.13511493E+03  8.46565817E+03
+
+
+spectrumFF> ===== Wavelength:   304.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.77837760E+04  9.13451708E+03
+             -------------------------------------------------------------------
+             Sum  1.77837760E+04  9.13451708E+03  8.64925887E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.77837760E+04  9.13451708E+03  8.64925887E+03  0  4
+             ---------------------------------------------------
+             Sum  1.77837760E+04  9.13451708E+03  8.64925887E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.77837760E+04  9.13451708E+03  8.64925887E+03  0  4
+             ---------------------------------------------------
+             Sum  1.77837760E+04  9.13451708E+03  8.64925887E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.77837760E+04  9.13451708E+03  8.64925887E+03  0  4
+             ---------------------------------------------------
+             Sum  1.77837760E+04  9.13451708E+03  8.64925887E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.77837760E+04  9.13451708E+03  8.64925887E+03  0  4
+             ---------------------------------------------------
+             Sum  1.77837760E+04  9.13451708E+03  8.64925887E+03
+
+
+spectrumFF> ===== Wavelength:   308.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.79583250E+04  9.12813927E+03
+             -------------------------------------------------------------------
+             Sum  1.79583250E+04  9.12813927E+03  8.83018576E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.79583250E+04  9.12813927E+03  8.83018576E+03  0  4
+             ---------------------------------------------------
+             Sum  1.79583250E+04  9.12813927E+03  8.83018576E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.79583250E+04  9.12813927E+03  8.83018576E+03  0  4
+             ---------------------------------------------------
+             Sum  1.79583250E+04  9.12813927E+03  8.83018576E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.79583250E+04  9.12813927E+03  8.83018576E+03  0  4
+             ---------------------------------------------------
+             Sum  1.79583250E+04  9.12813927E+03  8.83018576E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.79583250E+04  9.12813927E+03  8.83018576E+03  0  4
+             ---------------------------------------------------
+             Sum  1.79583250E+04  9.12813927E+03  8.83018576E+03
+
+
+spectrumFF> ===== Wavelength:   312.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.81252966E+04  9.11732220E+03
+             -------------------------------------------------------------------
+             Sum  1.81252966E+04  9.11732220E+03  9.00797440E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.81252966E+04  9.11732220E+03  9.00797440E+03  0  4
+             ---------------------------------------------------
+             Sum  1.81252966E+04  9.11732220E+03  9.00797440E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.81252966E+04  9.11732220E+03  9.00797440E+03  0  4
+             ---------------------------------------------------
+             Sum  1.81252966E+04  9.11732220E+03  9.00797440E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.81252966E+04  9.11732220E+03  9.00797440E+03  0  4
+             ---------------------------------------------------
+             Sum  1.81252966E+04  9.11732220E+03  9.00797440E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.81252966E+04  9.11732220E+03  9.00797440E+03  0  4
+             ---------------------------------------------------
+             Sum  1.81252966E+04  9.11732220E+03  9.00797440E+03
+
+
+spectrumFF> ===== Wavelength:   316.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.82858546E+04  9.10354354E+03
+             -------------------------------------------------------------------
+             Sum  1.82858546E+04  9.10354354E+03  9.18231106E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.82858546E+04  9.10354354E+03  9.18231106E+03  0  4
+             ---------------------------------------------------
+             Sum  1.82858546E+04  9.10354354E+03  9.18231106E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.82858546E+04  9.10354354E+03  9.18231106E+03  0  4
+             ---------------------------------------------------
+             Sum  1.82858546E+04  9.10354354E+03  9.18231106E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.82858546E+04  9.10354354E+03  9.18231106E+03  0  4
+             ---------------------------------------------------
+             Sum  1.82858546E+04  9.10354354E+03  9.18231106E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.82858546E+04  9.10354354E+03  9.18231106E+03  0  4
+             ---------------------------------------------------
+             Sum  1.82858546E+04  9.10354354E+03  9.18231106E+03
+
+
+spectrumFF> ===== Wavelength:   320.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.84414196E+04  9.08836870E+03
+             -------------------------------------------------------------------
+             Sum  1.84414196E+04  9.08836870E+03  9.35305090E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.84414196E+04  9.08836870E+03  9.35305090E+03  0  4
+             ---------------------------------------------------
+             Sum  1.84414196E+04  9.08836870E+03  9.35305090E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.84414196E+04  9.08836870E+03  9.35305090E+03  0  4
+             ---------------------------------------------------
+             Sum  1.84414196E+04  9.08836870E+03  9.35305090E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.84414196E+04  9.08836870E+03  9.35305090E+03  0  4
+             ---------------------------------------------------
+             Sum  1.84414196E+04  9.08836870E+03  9.35305090E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.84414196E+04  9.08836870E+03  9.35305090E+03  0  4
+             ---------------------------------------------------
+             Sum  1.84414196E+04  9.08836870E+03  9.35305090E+03
+
+
+spectrumFF> ===== Wavelength:   324.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.85936150E+04  9.07338882E+03
+             -------------------------------------------------------------------
+             Sum  1.85936150E+04  9.07338882E+03  9.52022618E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.85936150E+04  9.07338882E+03  9.52022618E+03  0  4
+             ---------------------------------------------------
+             Sum  1.85936150E+04  9.07338882E+03  9.52022618E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.85936150E+04  9.07338882E+03  9.52022618E+03  0  4
+             ---------------------------------------------------
+             Sum  1.85936150E+04  9.07338882E+03  9.52022618E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.85936150E+04  9.07338882E+03  9.52022618E+03  0  4
+             ---------------------------------------------------
+             Sum  1.85936150E+04  9.07338882E+03  9.52022618E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.85936150E+04  9.07338882E+03  9.52022618E+03  0  4
+             ---------------------------------------------------
+             Sum  1.85936150E+04  9.07338882E+03  9.52022618E+03
+
+
+spectrumFF> ===== Wavelength:   328.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.87441919E+04  9.06014904E+03
+             -------------------------------------------------------------------
+             Sum  1.87441919E+04  9.06014904E+03  9.68404287E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.87441919E+04  9.06014904E+03  9.68404287E+03  0  4
+             ---------------------------------------------------
+             Sum  1.87441919E+04  9.06014904E+03  9.68404287E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.87441919E+04  9.06014904E+03  9.68404287E+03  0  4
+             ---------------------------------------------------
+             Sum  1.87441919E+04  9.06014904E+03  9.68404287E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.87441919E+04  9.06014904E+03  9.68404287E+03  0  4
+             ---------------------------------------------------
+             Sum  1.87441919E+04  9.06014904E+03  9.68404287E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.87441919E+04  9.06014904E+03  9.68404287E+03  0  4
+             ---------------------------------------------------
+             Sum  1.87441919E+04  9.06014904E+03  9.68404287E+03
+
+
+spectrumFF> ===== Wavelength:   332.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.88949372E+04  9.05007172E+03
+             -------------------------------------------------------------------
+             Sum  1.88949372E+04  9.05007172E+03  9.84486551E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.88949372E+04  9.05007172E+03  9.84486551E+03  0  4
+             ---------------------------------------------------
+             Sum  1.88949372E+04  9.05007172E+03  9.84486551E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.88949372E+04  9.05007172E+03  9.84486551E+03  0  4
+             ---------------------------------------------------
+             Sum  1.88949372E+04  9.05007172E+03  9.84486551E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.88949372E+04  9.05007172E+03  9.84486551E+03  0  4
+             ---------------------------------------------------
+             Sum  1.88949372E+04  9.05007172E+03  9.84486551E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.88949372E+04  9.05007172E+03  9.84486551E+03  0  4
+             ---------------------------------------------------
+             Sum  1.88949372E+04  9.05007172E+03  9.84486551E+03
+
+
+spectrumFF> ===== Wavelength:   336.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.90475716E+04  9.04438034E+03
+             -------------------------------------------------------------------
+             Sum  1.90475716E+04  9.04438034E+03  1.00031913E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.90475716E+04  9.04438034E+03  1.00031913E+04  0  4
+             ---------------------------------------------------
+             Sum  1.90475716E+04  9.04438034E+03  1.00031913E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.90475716E+04  9.04438034E+03  1.00031913E+04  0  4
+             ---------------------------------------------------
+             Sum  1.90475716E+04  9.04438034E+03  1.00031913E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.90475716E+04  9.04438034E+03  1.00031913E+04  0  4
+             ---------------------------------------------------
+             Sum  1.90475716E+04  9.04438034E+03  1.00031913E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.90475716E+04  9.04438034E+03  1.00031913E+04  0  4
+             ---------------------------------------------------
+             Sum  1.90475716E+04  9.04438034E+03  1.00031913E+04
+
+
+spectrumFF> ===== Wavelength:   340.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.92036457E+04  9.04403003E+03
+             -------------------------------------------------------------------
+             Sum  1.92036457E+04  9.04403003E+03  1.01596156E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.92036457E+04  9.04403003E+03  1.01596156E+04  0  4
+             ---------------------------------------------------
+             Sum  1.92036457E+04  9.04403003E+03  1.01596156E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.92036457E+04  9.04403003E+03  1.01596156E+04  0  4
+             ---------------------------------------------------
+             Sum  1.92036457E+04  9.04403003E+03  1.01596156E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.92036457E+04  9.04403003E+03  1.01596156E+04  0  4
+             ---------------------------------------------------
+             Sum  1.92036457E+04  9.04403003E+03  1.01596156E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.92036457E+04  9.04403003E+03  1.01596156E+04  0  4
+             ---------------------------------------------------
+             Sum  1.92036457E+04  9.04403003E+03  1.01596156E+04
+
+
+spectrumFF> ===== Wavelength:   344.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.93644429E+04  9.04965058E+03
+             -------------------------------------------------------------------
+             Sum  1.93644429E+04  9.04965058E+03  1.03147924E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.93644429E+04  9.04965058E+03  1.03147924E+04  0  4
+             ---------------------------------------------------
+             Sum  1.93644429E+04  9.04965058E+03  1.03147924E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.93644429E+04  9.04965058E+03  1.03147924E+04  0  4
+             ---------------------------------------------------
+             Sum  1.93644429E+04  9.04965058E+03  1.03147924E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.93644429E+04  9.04965058E+03  1.03147924E+04  0  4
+             ---------------------------------------------------
+             Sum  1.93644429E+04  9.04965058E+03  1.03147924E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.93644429E+04  9.04965058E+03  1.03147924E+04  0  4
+             ---------------------------------------------------
+             Sum  1.93644429E+04  9.04965058E+03  1.03147924E+04
+
+
+spectrumFF> ===== Wavelength:   348.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.95308977E+04  9.06150621E+03
+             -------------------------------------------------------------------
+             Sum  1.95308977E+04  9.06150621E+03  1.04693915E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.95308977E+04  9.06150621E+03  1.04693915E+04  0  4
+             ---------------------------------------------------
+             Sum  1.95308977E+04  9.06150621E+03  1.04693915E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.95308977E+04  9.06150621E+03  1.04693915E+04  0  4
+             ---------------------------------------------------
+             Sum  1.95308977E+04  9.06150621E+03  1.04693915E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.95308977E+04  9.06150621E+03  1.04693915E+04  0  4
+             ---------------------------------------------------
+             Sum  1.95308977E+04  9.06150621E+03  1.04693915E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.95308977E+04  9.06150621E+03  1.04693915E+04  0  4
+             ---------------------------------------------------
+             Sum  1.95308977E+04  9.06150621E+03  1.04693915E+04
+
+
+spectrumFF> ===== Wavelength:   352.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.97035335E+04  9.07947508E+03
+             -------------------------------------------------------------------
+             Sum  1.97035335E+04  9.07947508E+03  1.06240584E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.97035335E+04  9.07947508E+03  1.06240584E+04  0  4
+             ---------------------------------------------------
+             Sum  1.97035335E+04  9.07947508E+03  1.06240584E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.97035335E+04  9.07947508E+03  1.06240584E+04  0  4
+             ---------------------------------------------------
+             Sum  1.97035335E+04  9.07947508E+03  1.06240584E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.97035335E+04  9.07947508E+03  1.06240584E+04  0  4
+             ---------------------------------------------------
+             Sum  1.97035335E+04  9.07947508E+03  1.06240584E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.97035335E+04  9.07947508E+03  1.06240584E+04  0  4
+             ---------------------------------------------------
+             Sum  1.97035335E+04  9.07947508E+03  1.06240584E+04
+
+
+spectrumFF> ===== Wavelength:   356.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.98824261E+04  9.10304944E+03
+             -------------------------------------------------------------------
+             Sum  1.98824261E+04  9.10304944E+03  1.07793767E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.98824261E+04  9.10304944E+03  1.07793767E+04  0  4
+             ---------------------------------------------------
+             Sum  1.98824261E+04  9.10304944E+03  1.07793767E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.98824261E+04  9.10304944E+03  1.07793767E+04  0  4
+             ---------------------------------------------------
+             Sum  1.98824261E+04  9.10304944E+03  1.07793767E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.98824261E+04  9.10304944E+03  1.07793767E+04  0  4
+             ---------------------------------------------------
+             Sum  1.98824261E+04  9.10304944E+03  1.07793767E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.98824261E+04  9.10304944E+03  1.07793767E+04  0  4
+             ---------------------------------------------------
+             Sum  1.98824261E+04  9.10304944E+03  1.07793767E+04
+
+
+spectrumFF> ===== Wavelength:   360.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.00671926E+04  9.13135578E+03
+             -------------------------------------------------------------------
+             Sum  2.00671926E+04  9.13135578E+03  1.09358368E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.00671926E+04  9.13135578E+03  1.09358368E+04  0  4
+             ---------------------------------------------------
+             Sum  2.00671926E+04  9.13135578E+03  1.09358368E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.00671926E+04  9.13135578E+03  1.09358368E+04  0  4
+             ---------------------------------------------------
+             Sum  2.00671926E+04  9.13135578E+03  1.09358368E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.00671926E+04  9.13135578E+03  1.09358368E+04  0  4
+             ---------------------------------------------------
+             Sum  2.00671926E+04  9.13135578E+03  1.09358368E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.00671926E+04  9.13135578E+03  1.09358368E+04  0  4
+             ---------------------------------------------------
+             Sum  2.00671926E+04  9.13135578E+03  1.09358368E+04
+
+
+spectrumFF> ===== Wavelength:   364.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.02570048E+04  9.16319278E+03
+             -------------------------------------------------------------------
+             Sum  2.02570048E+04  9.16319278E+03  1.10938120E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.02570048E+04  9.16319278E+03  1.10938120E+04  0  4
+             ---------------------------------------------------
+             Sum  2.02570048E+04  9.16319278E+03  1.10938120E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.02570048E+04  9.16319278E+03  1.10938120E+04  0  4
+             ---------------------------------------------------
+             Sum  2.02570048E+04  9.16319278E+03  1.10938120E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.02570048E+04  9.16319278E+03  1.10938120E+04  0  4
+             ---------------------------------------------------
+             Sum  2.02570048E+04  9.16319278E+03  1.10938120E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.02570048E+04  9.16319278E+03  1.10938120E+04  0  4
+             ---------------------------------------------------
+             Sum  2.02570048E+04  9.16319278E+03  1.10938120E+04
+
+
+spectrumFF> ===== Wavelength:   368.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.04506255E+04  9.19708387E+03
+             -------------------------------------------------------------------
+             Sum  2.04506255E+04  9.19708387E+03  1.12535417E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.04506255E+04  9.19708387E+03  1.12535417E+04  0  4
+             ---------------------------------------------------
+             Sum  2.04506255E+04  9.19708387E+03  1.12535417E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.04506255E+04  9.19708387E+03  1.12535417E+04  0  4
+             ---------------------------------------------------
+             Sum  2.04506255E+04  9.19708387E+03  1.12535417E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.04506255E+04  9.19708387E+03  1.12535417E+04  0  4
+             ---------------------------------------------------
+             Sum  2.04506255E+04  9.19708387E+03  1.12535417E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.04506255E+04  9.19708387E+03  1.12535417E+04  0  4
+             ---------------------------------------------------
+             Sum  2.04506255E+04  9.19708387E+03  1.12535417E+04
+
+
+spectrumFF> ===== Wavelength:   372.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.06464631E+04  9.23134084E+03
+             -------------------------------------------------------------------
+             Sum  2.06464631E+04  9.23134084E+03  1.14151223E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.06464631E+04  9.23134084E+03  1.14151223E+04  0  4
+             ---------------------------------------------------
+             Sum  2.06464631E+04  9.23134084E+03  1.14151223E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.06464631E+04  9.23134084E+03  1.14151223E+04  0  4
+             ---------------------------------------------------
+             Sum  2.06464631E+04  9.23134084E+03  1.14151223E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.06464631E+04  9.23134084E+03  1.14151223E+04  0  4
+             ---------------------------------------------------
+             Sum  2.06464631E+04  9.23134084E+03  1.14151223E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.06464631E+04  9.23134084E+03  1.14151223E+04  0  4
+             ---------------------------------------------------
+             Sum  2.06464631E+04  9.23134084E+03  1.14151223E+04
+
+
+spectrumFF> ===== Wavelength:   376.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.08426402E+04  9.26413443E+03
+             -------------------------------------------------------------------
+             Sum  2.08426402E+04  9.26413443E+03  1.15785058E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.08426402E+04  9.26413443E+03  1.15785058E+04  0  4
+             ---------------------------------------------------
+             Sum  2.08426402E+04  9.26413443E+03  1.15785058E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.08426402E+04  9.26413443E+03  1.15785058E+04  0  4
+             ---------------------------------------------------
+             Sum  2.08426402E+04  9.26413443E+03  1.15785058E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.08426402E+04  9.26413443E+03  1.15785058E+04  0  4
+             ---------------------------------------------------
+             Sum  2.08426402E+04  9.26413443E+03  1.15785058E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.08426402E+04  9.26413443E+03  1.15785058E+04  0  4
+             ---------------------------------------------------
+             Sum  2.08426402E+04  9.26413443E+03  1.15785058E+04
+
+
+spectrumFF> ===== Wavelength:   380.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.10370725E+04  9.29356865E+03
+             -------------------------------------------------------------------
+             Sum  2.10370725E+04  9.29356865E+03  1.17435039E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.10370725E+04  9.29356865E+03  1.17435039E+04  0  4
+             ---------------------------------------------------
+             Sum  2.10370725E+04  9.29356865E+03  1.17435039E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.10370725E+04  9.29356865E+03  1.17435039E+04  0  4
+             ---------------------------------------------------
+             Sum  2.10370725E+04  9.29356865E+03  1.17435039E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.10370725E+04  9.29356865E+03  1.17435039E+04  0  4
+             ---------------------------------------------------
+             Sum  2.10370725E+04  9.29356865E+03  1.17435039E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.10370725E+04  9.29356865E+03  1.17435039E+04  0  4
+             ---------------------------------------------------
+             Sum  2.10370725E+04  9.29356865E+03  1.17435039E+04
+
+
+spectrumFF> ===== Wavelength:   384.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.12275538E+04  9.31775536E+03
+             -------------------------------------------------------------------
+             Sum  2.12275538E+04  9.31775536E+03  1.19097985E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.12275538E+04  9.31775536E+03  1.19097985E+04  0  4
+             ---------------------------------------------------
+             Sum  2.12275538E+04  9.31775536E+03  1.19097985E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.12275538E+04  9.31775536E+03  1.19097985E+04  0  4
+             ---------------------------------------------------
+             Sum  2.12275538E+04  9.31775536E+03  1.19097985E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.12275538E+04  9.31775536E+03  1.19097985E+04  0  4
+             ---------------------------------------------------
+             Sum  2.12275538E+04  9.31775536E+03  1.19097985E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.12275538E+04  9.31775536E+03  1.19097985E+04  0  4
+             ---------------------------------------------------
+             Sum  2.12275538E+04  9.31775536E+03  1.19097985E+04
+
+
+spectrumFF> ===== Wavelength:   388.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.14118431E+04  9.33488652E+03
+             -------------------------------------------------------------------
+             Sum  2.14118431E+04  9.33488652E+03  1.20769566E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.14118431E+04  9.33488652E+03  1.20769566E+04  0  4
+             ---------------------------------------------------
+             Sum  2.14118431E+04  9.33488652E+03  1.20769566E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.14118431E+04  9.33488652E+03  1.20769566E+04  0  4
+             ---------------------------------------------------
+             Sum  2.14118431E+04  9.33488652E+03  1.20769566E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.14118431E+04  9.33488652E+03  1.20769566E+04  0  4
+             ---------------------------------------------------
+             Sum  2.14118431E+04  9.33488652E+03  1.20769566E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.14118431E+04  9.33488652E+03  1.20769566E+04  0  4
+             ---------------------------------------------------
+             Sum  2.14118431E+04  9.33488652E+03  1.20769566E+04
+
+
+spectrumFF> ===== Wavelength:   392.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.15877517E+04  9.34330208E+03
+             -------------------------------------------------------------------
+             Sum  2.15877517E+04  9.34330208E+03  1.22444496E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.15877517E+04  9.34330208E+03  1.22444496E+04  0  4
+             ---------------------------------------------------
+             Sum  2.15877517E+04  9.34330208E+03  1.22444496E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.15877517E+04  9.34330208E+03  1.22444496E+04  0  4
+             ---------------------------------------------------
+             Sum  2.15877517E+04  9.34330208E+03  1.22444496E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.15877517E+04  9.34330208E+03  1.22444496E+04  0  4
+             ---------------------------------------------------
+             Sum  2.15877517E+04  9.34330208E+03  1.22444496E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.15877517E+04  9.34330208E+03  1.22444496E+04  0  4
+             ---------------------------------------------------
+             Sum  2.15877517E+04  9.34330208E+03  1.22444496E+04
+
+
+spectrumFF> ===== Wavelength:   396.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.17532270E+04  9.34155176E+03
+             -------------------------------------------------------------------
+             Sum  2.17532270E+04  9.34155176E+03  1.24116752E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.17532270E+04  9.34155176E+03  1.24116752E+04  0  4
+             ---------------------------------------------------
+             Sum  2.17532270E+04  9.34155176E+03  1.24116752E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.17532270E+04  9.34155176E+03  1.24116752E+04  0  4
+             ---------------------------------------------------
+             Sum  2.17532270E+04  9.34155176E+03  1.24116752E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.17532270E+04  9.34155176E+03  1.24116752E+04  0  4
+             ---------------------------------------------------
+             Sum  2.17532270E+04  9.34155176E+03  1.24116752E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.17532270E+04  9.34155176E+03  1.24116752E+04  0  4
+             ---------------------------------------------------
+             Sum  2.17532270E+04  9.34155176E+03  1.24116752E+04
+
+
+spectrumFF> ===== Wavelength:   400.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.19064325E+04  9.32844981E+03
+             -------------------------------------------------------------------
+             Sum  2.19064325E+04  9.32844981E+03  1.25779826E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.19064325E+04  9.32844981E+03  1.25779826E+04  0  4
+             ---------------------------------------------------
+             Sum  2.19064325E+04  9.32844981E+03  1.25779826E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.19064325E+04  9.32844981E+03  1.25779826E+04  0  4
+             ---------------------------------------------------
+             Sum  2.19064325E+04  9.32844981E+03  1.25779826E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.19064325E+04  9.32844981E+03  1.25779826E+04  0  4
+             ---------------------------------------------------
+             Sum  2.19064325E+04  9.32844981E+03  1.25779826E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.19064325E+04  9.32844981E+03  1.25779826E+04  0  4
+             ---------------------------------------------------
+             Sum  2.19064325E+04  9.32844981E+03  1.25779826E+04
+
+
+spectrumFF> ===== Wavelength:   404.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.20458213E+04  9.30312180E+03
+             -------------------------------------------------------------------
+             Sum  2.20458213E+04  9.30312180E+03  1.27426995E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.20458213E+04  9.30312180E+03  1.27426995E+04  0  4
+             ---------------------------------------------------
+             Sum  2.20458213E+04  9.30312180E+03  1.27426995E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.20458213E+04  9.30312180E+03  1.27426995E+04  0  4
+             ---------------------------------------------------
+             Sum  2.20458213E+04  9.30312180E+03  1.27426995E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.20458213E+04  9.30312180E+03  1.27426995E+04  0  4
+             ---------------------------------------------------
+             Sum  2.20458213E+04  9.30312180E+03  1.27426995E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.20458213E+04  9.30312180E+03  1.27426995E+04  0  4
+             ---------------------------------------------------
+             Sum  2.20458213E+04  9.30312180E+03  1.27426995E+04
+
+
+spectrumFF> ===== Wavelength:   408.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.21702032E+04  9.26504332E+03
+             -------------------------------------------------------------------
+             Sum  2.21702032E+04  9.26504332E+03  1.29051599E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.21702032E+04  9.26504332E+03  1.29051599E+04  0  4
+             ---------------------------------------------------
+             Sum  2.21702032E+04  9.26504332E+03  1.29051599E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.21702032E+04  9.26504332E+03  1.29051599E+04  0  4
+             ---------------------------------------------------
+             Sum  2.21702032E+04  9.26504332E+03  1.29051599E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.21702032E+04  9.26504332E+03  1.29051599E+04  0  4
+             ---------------------------------------------------
+             Sum  2.21702032E+04  9.26504332E+03  1.29051599E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.21702032E+04  9.26504332E+03  1.29051599E+04  0  4
+             ---------------------------------------------------
+             Sum  2.21702032E+04  9.26504332E+03  1.29051599E+04
+
+
+spectrumFF> ===== Wavelength:   412.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.22788047E+04  9.21407042E+03
+             -------------------------------------------------------------------
+             Sum  2.22788047E+04  9.21407042E+03  1.30647343E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.22788047E+04  9.21407042E+03  1.30647343E+04  0  4
+             ---------------------------------------------------
+             Sum  2.22788047E+04  9.21407042E+03  1.30647343E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.22788047E+04  9.21407042E+03  1.30647343E+04  0  4
+             ---------------------------------------------------
+             Sum  2.22788047E+04  9.21407042E+03  1.30647343E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.22788047E+04  9.21407042E+03  1.30647343E+04  0  4
+             ---------------------------------------------------
+             Sum  2.22788047E+04  9.21407042E+03  1.30647343E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.22788047E+04  9.21407042E+03  1.30647343E+04  0  4
+             ---------------------------------------------------
+             Sum  2.22788047E+04  9.21407042E+03  1.30647343E+04
+
+
+spectrumFF> ===== Wavelength:   416.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.23713211E+04  9.15046215E+03
+             -------------------------------------------------------------------
+             Sum  2.23713211E+04  9.15046215E+03  1.32208589E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.23713211E+04  9.15046215E+03  1.32208589E+04  0  4
+             ---------------------------------------------------
+             Sum  2.23713211E+04  9.15046215E+03  1.32208589E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.23713211E+04  9.15046215E+03  1.32208589E+04  0  4
+             ---------------------------------------------------
+             Sum  2.23713211E+04  9.15046215E+03  1.32208589E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.23713211E+04  9.15046215E+03  1.32208589E+04  0  4
+             ---------------------------------------------------
+             Sum  2.23713211E+04  9.15046215E+03  1.32208589E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.23713211E+04  9.15046215E+03  1.32208589E+04  0  4
+             ---------------------------------------------------
+             Sum  2.23713211E+04  9.15046215E+03  1.32208589E+04
+
+
+spectrumFF> ===== Wavelength:   420.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.24479611E+04  9.07489555E+03
+             -------------------------------------------------------------------
+             Sum  2.24479611E+04  9.07489555E+03  1.33730656E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.24479611E+04  9.07489555E+03  1.33730656E+04  0  4
+             ---------------------------------------------------
+             Sum  2.24479611E+04  9.07489555E+03  1.33730656E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.24479611E+04  9.07489555E+03  1.33730656E+04  0  4
+             ---------------------------------------------------
+             Sum  2.24479611E+04  9.07489555E+03  1.33730656E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.24479611E+04  9.07489555E+03  1.33730656E+04  0  4
+             ---------------------------------------------------
+             Sum  2.24479611E+04  9.07489555E+03  1.33730656E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.24479611E+04  9.07489555E+03  1.33730656E+04  0  4
+             ---------------------------------------------------
+             Sum  2.24479611E+04  9.07489555E+03  1.33730656E+04
+
+
+spectrumFF> ===== Wavelength:   424.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.25094846E+04  8.98847390E+03
+             -------------------------------------------------------------------
+             Sum  2.25094846E+04  8.98847390E+03  1.35210107E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.25094846E+04  8.98847390E+03  1.35210107E+04  0  4
+             ---------------------------------------------------
+             Sum  2.25094846E+04  8.98847390E+03  1.35210107E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.25094846E+04  8.98847390E+03  1.35210107E+04  0  4
+             ---------------------------------------------------
+             Sum  2.25094846E+04  8.98847390E+03  1.35210107E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.25094846E+04  8.98847390E+03  1.35210107E+04  0  4
+             ---------------------------------------------------
+             Sum  2.25094846E+04  8.98847390E+03  1.35210107E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.25094846E+04  8.98847390E+03  1.35210107E+04  0  4
+             ---------------------------------------------------
+             Sum  2.25094846E+04  8.98847390E+03  1.35210107E+04
+
+
+spectrumFF> ===== Wavelength:   428.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.25572321E+04  8.89272906E+03
+             -------------------------------------------------------------------
+             Sum  2.25572321E+04  8.89272906E+03  1.36645031E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.25572321E+04  8.89272906E+03  1.36645031E+04  0  3
+             ---------------------------------------------------
+             Sum  2.25572321E+04  8.89272906E+03  1.36645031E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.25572321E+04  8.89272906E+03  1.36645031E+04  0  3
+             ---------------------------------------------------
+             Sum  2.25572321E+04  8.89272906E+03  1.36645031E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.25572321E+04  8.89272906E+03  1.36645031E+04  0  3
+             ---------------------------------------------------
+             Sum  2.25572321E+04  8.89272906E+03  1.36645031E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.25572321E+04  8.89272906E+03  1.36645031E+04  0  3
+             ---------------------------------------------------
+             Sum  2.25572321E+04  8.89272906E+03  1.36645031E+04
+
+
+spectrumFF> ===== Wavelength:   432.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.25931488E+04  8.78961898E+03
+             -------------------------------------------------------------------
+             Sum  2.25931488E+04  8.78961898E+03  1.38035298E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.25931488E+04  8.78961898E+03  1.38035298E+04  0  3
+             ---------------------------------------------------
+             Sum  2.25931488E+04  8.78961898E+03  1.38035298E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.25931488E+04  8.78961898E+03  1.38035298E+04  0  3
+             ---------------------------------------------------
+             Sum  2.25931488E+04  8.78961898E+03  1.38035298E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.25931488E+04  8.78961898E+03  1.38035298E+04  0  3
+             ---------------------------------------------------
+             Sum  2.25931488E+04  8.78961898E+03  1.38035298E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.25931488E+04  8.78961898E+03  1.38035298E+04  0  3
+             ---------------------------------------------------
+             Sum  2.25931488E+04  8.78961898E+03  1.38035298E+04
+
+
+spectrumFF> ===== Wavelength:   436.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.26197999E+04  8.68152143E+03
+             -------------------------------------------------------------------
+             Sum  2.26197999E+04  8.68152143E+03  1.39382785E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.26197999E+04  8.68152143E+03  1.39382785E+04  5  3
+             ---------------------------------------------------
+             Sum  2.26197999E+04  8.68152143E+03  1.39382785E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.26197999E+04  8.68152143E+03  1.39382785E+04  5  3
+             ---------------------------------------------------
+             Sum  2.26197999E+04  8.68152143E+03  1.39382785E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.26197999E+04  8.68152143E+03  1.39382785E+04  5  3
+             ---------------------------------------------------
+             Sum  2.26197999E+04  8.68152143E+03  1.39382785E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.26197999E+04  8.68152143E+03  1.39382785E+04  5  3
+             ---------------------------------------------------
+             Sum  2.26197999E+04  8.68152143E+03  1.39382785E+04
+
+
+spectrumFF> ===== Wavelength:   440.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.26403819E+04  8.57122542E+03
+             -------------------------------------------------------------------
+             Sum  2.26403819E+04  8.57122542E+03  1.40691565E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.26403819E+04  8.57122542E+03  1.40691565E+04  5  3
+             ---------------------------------------------------
+             Sum  2.26403819E+04  8.57122542E+03  1.40691565E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.26403819E+04  8.57122542E+03  1.40691565E+04  5  3
+             ---------------------------------------------------
+             Sum  2.26403819E+04  8.57122542E+03  1.40691565E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.26403819E+04  8.57122542E+03  1.40691565E+04  5  3
+             ---------------------------------------------------
+             Sum  2.26403819E+04  8.57122542E+03  1.40691565E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.26403819E+04  8.57122542E+03  1.40691565E+04  5  3
+             ---------------------------------------------------
+             Sum  2.26403819E+04  8.57122542E+03  1.40691565E+04
+
+
+spectrumFF> ===== Wavelength:   444.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.26587257E+04  8.46192146E+03
+             -------------------------------------------------------------------
+             Sum  2.26587257E+04  8.46192146E+03  1.41968042E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.26587257E+04  8.46192146E+03  1.41968042E+04  5  3
+             ---------------------------------------------------
+             Sum  2.26587257E+04  8.46192146E+03  1.41968042E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.26587257E+04  8.46192146E+03  1.41968042E+04  5  3
+             ---------------------------------------------------
+             Sum  2.26587257E+04  8.46192146E+03  1.41968042E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.26587257E+04  8.46192146E+03  1.41968042E+04  5  3
+             ---------------------------------------------------
+             Sum  2.26587257E+04  8.46192146E+03  1.41968042E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.26587257E+04  8.46192146E+03  1.41968042E+04  5  3
+             ---------------------------------------------------
+             Sum  2.26587257E+04  8.46192146E+03  1.41968042E+04
+
+
+spectrumFF> ===== Wavelength:   448.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.26792958E+04  8.35719231E+03
+             -------------------------------------------------------------------
+             Sum  2.26792958E+04  8.35719231E+03  1.43221035E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.26792958E+04  8.35719231E+03  1.43221035E+04  5  3
+             ---------------------------------------------------
+             Sum  2.26792958E+04  8.35719231E+03  1.43221035E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.26792958E+04  8.35719231E+03  1.43221035E+04  5  3
+             ---------------------------------------------------
+             Sum  2.26792958E+04  8.35719231E+03  1.43221035E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.26792958E+04  8.35719231E+03  1.43221035E+04  5  3
+             ---------------------------------------------------
+             Sum  2.26792958E+04  8.35719231E+03  1.43221035E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.26792958E+04  8.35719231E+03  1.43221035E+04  5  3
+             ---------------------------------------------------
+             Sum  2.26792958E+04  8.35719231E+03  1.43221035E+04
+
+
+spectrumFF> ===== Wavelength:   452.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.27071838E+04  8.26100563E+03
+             -------------------------------------------------------------------
+             Sum  2.27071838E+04  8.26100563E+03  1.44461782E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.27071838E+04  8.26100563E+03  1.44461782E+04  5  3
+             ---------------------------------------------------
+             Sum  2.27071838E+04  8.26100563E+03  1.44461782E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.27071838E+04  8.26100563E+03  1.44461782E+04  5  3
+             ---------------------------------------------------
+             Sum  2.27071838E+04  8.26100563E+03  1.44461782E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.27071838E+04  8.26100563E+03  1.44461782E+04  5  3
+             ---------------------------------------------------
+             Sum  2.27071838E+04  8.26100563E+03  1.44461782E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.27071838E+04  8.26100563E+03  1.44461782E+04  5  3
+             ---------------------------------------------------
+             Sum  2.27071838E+04  8.26100563E+03  1.44461782E+04
+
+
+spectrumFF> ===== Wavelength:   456.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.27480982E+04  8.17771018E+03
+             -------------------------------------------------------------------
+             Sum  2.27480982E+04  8.17771018E+03  1.45703880E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.27480982E+04  8.17771018E+03  1.45703880E+04  5  3
+             ---------------------------------------------------
+             Sum  2.27480982E+04  8.17771018E+03  1.45703880E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.27480982E+04  8.17771018E+03  1.45703880E+04  5  3
+             ---------------------------------------------------
+             Sum  2.27480982E+04  8.17771018E+03  1.45703880E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.27480982E+04  8.17771018E+03  1.45703880E+04  5  3
+             ---------------------------------------------------
+             Sum  2.27480982E+04  8.17771018E+03  1.45703880E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.27480982E+04  8.17771018E+03  1.45703880E+04  5  3
+             ---------------------------------------------------
+             Sum  2.27480982E+04  8.17771018E+03  1.45703880E+04
+
+
+spectrumFF> ===== Wavelength:   460.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.28083518E+04  8.11203706E+03
+             -------------------------------------------------------------------
+             Sum  2.28083518E+04  8.11203706E+03  1.46963148E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.28083518E+04  8.11203706E+03  1.46963148E+04  5  3
+             ---------------------------------------------------
+             Sum  2.28083518E+04  8.11203706E+03  1.46963148E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.28083518E+04  8.11203706E+03  1.46963148E+04  5  3
+             ---------------------------------------------------
+             Sum  2.28083518E+04  8.11203706E+03  1.46963148E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.28083518E+04  8.11203706E+03  1.46963148E+04  5  3
+             ---------------------------------------------------
+             Sum  2.28083518E+04  8.11203706E+03  1.46963148E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.28083518E+04  8.11203706E+03  1.46963148E+04  5  3
+             ---------------------------------------------------
+             Sum  2.28083518E+04  8.11203706E+03  1.46963148E+04
+
+
+spectrumFF> ===== Wavelength:   464.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.28948478E+04  8.06910759E+03
+             -------------------------------------------------------------------
+             Sum  2.28948478E+04  8.06910759E+03  1.48257402E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.28948478E+04  8.06910759E+03  1.48257402E+04  5  3
+             ---------------------------------------------------
+             Sum  2.28948478E+04  8.06910759E+03  1.48257402E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.28948478E+04  8.06910759E+03  1.48257402E+04  5  3
+             ---------------------------------------------------
+             Sum  2.28948478E+04  8.06910759E+03  1.48257402E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.28948478E+04  8.06910759E+03  1.48257402E+04  5  3
+             ---------------------------------------------------
+             Sum  2.28948478E+04  8.06910759E+03  1.48257402E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.28948478E+04  8.06910759E+03  1.48257402E+04  5  3
+             ---------------------------------------------------
+             Sum  2.28948478E+04  8.06910759E+03  1.48257402E+04
+
+
+spectrumFF> ===== Wavelength:   468.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.30150666E+04  8.05444908E+03
+             -------------------------------------------------------------------
+             Sum  2.30150666E+04  8.05444908E+03  1.49606176E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.30150666E+04  8.05444908E+03  1.49606176E+04  5  3
+             ---------------------------------------------------
+             Sum  2.30150666E+04  8.05444908E+03  1.49606176E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.30150666E+04  8.05444908E+03  1.49606176E+04  5  3
+             ---------------------------------------------------
+             Sum  2.30150666E+04  8.05444908E+03  1.49606176E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.30150666E+04  8.05444908E+03  1.49606176E+04  5  3
+             ---------------------------------------------------
+             Sum  2.30150666E+04  8.05444908E+03  1.49606176E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.30150666E+04  8.05444908E+03  1.49606176E+04  5  3
+             ---------------------------------------------------
+             Sum  2.30150666E+04  8.05444908E+03  1.49606176E+04
+
+
+spectrumFF> ===== Wavelength:   472.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.31770548E+04  8.07401947E+03
+             -------------------------------------------------------------------
+             Sum  2.31770548E+04  8.07401947E+03  1.51030353E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.31770548E+04  8.07401947E+03  1.51030353E+04  5  3
+             ---------------------------------------------------
+             Sum  2.31770548E+04  8.07401947E+03  1.51030353E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.31770548E+04  8.07401947E+03  1.51030353E+04  5  3
+             ---------------------------------------------------
+             Sum  2.31770548E+04  8.07401947E+03  1.51030353E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.31770548E+04  8.07401947E+03  1.51030353E+04  5  3
+             ---------------------------------------------------
+             Sum  2.31770548E+04  8.07401947E+03  1.51030353E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.31770548E+04  8.07401947E+03  1.51030353E+04  5  3
+             ---------------------------------------------------
+             Sum  2.31770548E+04  8.07401947E+03  1.51030353E+04
+
+
+spectrumFF> ===== Wavelength:   476.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.33894165E+04  8.13424119E+03
+             -------------------------------------------------------------------
+             Sum  2.33894165E+04  8.13424119E+03  1.52551753E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.33894165E+04  8.13424119E+03  1.52551753E+04  5  3
+             ---------------------------------------------------
+             Sum  2.33894165E+04  8.13424119E+03  1.52551753E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.33894165E+04  8.13424119E+03  1.52551753E+04  5  3
+             ---------------------------------------------------
+             Sum  2.33894165E+04  8.13424119E+03  1.52551753E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.33894165E+04  8.13424119E+03  1.52551753E+04  5  3
+             ---------------------------------------------------
+             Sum  2.33894165E+04  8.13424119E+03  1.52551753E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.33894165E+04  8.13424119E+03  1.52551753E+04  5  3
+             ---------------------------------------------------
+             Sum  2.33894165E+04  8.13424119E+03  1.52551753E+04
+
+
+spectrumFF> ===== Wavelength:   480.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.36613079E+04  8.24204385E+03
+             -------------------------------------------------------------------
+             Sum  2.36613079E+04  8.24204385E+03  1.54192641E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.36613079E+04  8.24204385E+03  1.54192641E+04  5  3
+             ---------------------------------------------------
+             Sum  2.36613079E+04  8.24204385E+03  1.54192641E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.36613079E+04  8.24204385E+03  1.54192641E+04  5  3
+             ---------------------------------------------------
+             Sum  2.36613079E+04  8.24204385E+03  1.54192641E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.36613079E+04  8.24204385E+03  1.54192641E+04  5  3
+             ---------------------------------------------------
+             Sum  2.36613079E+04  8.24204385E+03  1.54192641E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.36613079E+04  8.24204385E+03  1.54192641E+04  5  3
+             ---------------------------------------------------
+             Sum  2.36613079E+04  8.24204385E+03  1.54192641E+04
+
+
+spectrumFF> ===== Wavelength:   484.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.40024310E+04  8.40491394E+03
+             -------------------------------------------------------------------
+             Sum  2.40024310E+04  8.40491394E+03  1.55975171E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.40024310E+04  8.40491394E+03  1.55975171E+04  5  3
+             ---------------------------------------------------
+             Sum  2.40024310E+04  8.40491394E+03  1.55975171E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.40024310E+04  8.40491394E+03  1.55975171E+04  5  3
+             ---------------------------------------------------
+             Sum  2.40024310E+04  8.40491394E+03  1.55975171E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.40024310E+04  8.40491394E+03  1.55975171E+04  5  3
+             ---------------------------------------------------
+             Sum  2.40024310E+04  8.40491394E+03  1.55975171E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.40024310E+04  8.40491394E+03  1.55975171E+04  5  3
+             ---------------------------------------------------
+             Sum  2.40024310E+04  8.40491394E+03  1.55975171E+04
+
+
+spectrumFF> ===== Wavelength:   488.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.44230226E+04  8.63094804E+03
+             -------------------------------------------------------------------
+             Sum  2.44230226E+04  8.63094804E+03  1.57920745E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.44230226E+04  8.63094804E+03  1.57920745E+04  5  3
+             ---------------------------------------------------
+             Sum  2.44230226E+04  8.63094804E+03  1.57920745E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.44230226E+04  8.63094804E+03  1.57920745E+04  5  3
+             ---------------------------------------------------
+             Sum  2.44230226E+04  8.63094804E+03  1.57920745E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.44230226E+04  8.63094804E+03  1.57920745E+04  5  3
+             ---------------------------------------------------
+             Sum  2.44230226E+04  8.63094804E+03  1.57920745E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.44230226E+04  8.63094804E+03  1.57920745E+04  5  3
+             ---------------------------------------------------
+             Sum  2.44230226E+04  8.63094804E+03  1.57920745E+04
+
+
+spectrumFF> ===== Wavelength:   492.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.49338289E+04  8.92890377E+03
+             -------------------------------------------------------------------
+             Sum  2.49338289E+04  8.92890377E+03  1.60049252E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.49338289E+04  8.92890377E+03  1.60049252E+04  5  3
+             ---------------------------------------------------
+             Sum  2.49338289E+04  8.92890377E+03  1.60049252E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.49338289E+04  8.92890377E+03  1.60049252E+04  5  3
+             ---------------------------------------------------
+             Sum  2.49338289E+04  8.92890377E+03  1.60049252E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.49338289E+04  8.92890377E+03  1.60049252E+04  5  3
+             ---------------------------------------------------
+             Sum  2.49338289E+04  8.92890377E+03  1.60049252E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.49338289E+04  8.92890377E+03  1.60049252E+04  5  3
+             ---------------------------------------------------
+             Sum  2.49338289E+04  8.92890377E+03  1.60049252E+04
+
+
+spectrumFF> ===== Wavelength:   496.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.55460533E+04  9.30823895E+03
+             -------------------------------------------------------------------
+             Sum  2.55460533E+04  9.30823895E+03  1.62378144E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.55460533E+04  9.30823895E+03  1.62378144E+04  5  3
+             ---------------------------------------------------
+             Sum  2.55460533E+04  9.30823895E+03  1.62378144E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.55460533E+04  9.30823895E+03  1.62378144E+04  5  3
+             ---------------------------------------------------
+             Sum  2.55460533E+04  9.30823895E+03  1.62378144E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.55460533E+04  9.30823895E+03  1.62378144E+04  5  3
+             ---------------------------------------------------
+             Sum  2.55460533E+04  9.30823895E+03  1.62378144E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.55460533E+04  9.30823895E+03  1.62378144E+04  5  3
+             ---------------------------------------------------
+             Sum  2.55460533E+04  9.30823895E+03  1.62378144E+04
+
+
+spectrumFF> ===== Wavelength:   500.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.62712549E+04  9.77912531E+03
+             -------------------------------------------------------------------
+             Sum  2.62712549E+04  9.77912531E+03  1.64921296E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.62712549E+04  9.77912531E+03  1.64921296E+04  5  3
+             ---------------------------------------------------
+             Sum  2.62712549E+04  9.77912531E+03  1.64921296E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.62712549E+04  9.77912531E+03  1.64921296E+04  5  3
+             ---------------------------------------------------
+             Sum  2.62712549E+04  9.77912531E+03  1.64921296E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.62712549E+04  9.77912531E+03  1.64921296E+04  5  3
+             ---------------------------------------------------
+             Sum  2.62712549E+04  9.77912531E+03  1.64921296E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.62712549E+04  9.77912531E+03  1.64921296E+04  5  3
+             ---------------------------------------------------
+             Sum  2.62712549E+04  9.77912531E+03  1.64921296E+04
+
+
+spectrumFF> ===== Wavelength:   504.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.71211728E+04  1.03524165E+04
+             -------------------------------------------------------------------
+             Sum  2.71211728E+04  1.03524165E+04  1.67687563E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.71211728E+04  1.03524165E+04  1.67687563E+04  5  3
+             ---------------------------------------------------
+             Sum  2.71211728E+04  1.03524165E+04  1.67687563E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.71211728E+04  1.03524165E+04  1.67687563E+04  5  3
+             ---------------------------------------------------
+             Sum  2.71211728E+04  1.03524165E+04  1.67687563E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.71211728E+04  1.03524165E+04  1.67687563E+04  5  3
+             ---------------------------------------------------
+             Sum  2.71211728E+04  1.03524165E+04  1.67687563E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.71211728E+04  1.03524165E+04  1.67687563E+04  5  3
+             ---------------------------------------------------
+             Sum  2.71211728E+04  1.03524165E+04  1.67687563E+04
+
+
+spectrumFF> ===== Wavelength:   508.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.81074372E+04  1.10395428E+04
+             -------------------------------------------------------------------
+             Sum  2.81074372E+04  1.10395428E+04  1.70678944E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.81074372E+04  1.10395428E+04  1.70678944E+04  5  3
+             ---------------------------------------------------
+             Sum  2.81074372E+04  1.10395428E+04  1.70678944E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.81074372E+04  1.10395428E+04  1.70678944E+04  5  3
+             ---------------------------------------------------
+             Sum  2.81074372E+04  1.10395428E+04  1.70678944E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.81074372E+04  1.10395428E+04  1.70678944E+04  5  3
+             ---------------------------------------------------
+             Sum  2.81074372E+04  1.10395428E+04  1.70678944E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.81074372E+04  1.10395428E+04  1.70678944E+04  5  3
+             ---------------------------------------------------
+             Sum  2.81074372E+04  1.10395428E+04  1.70678944E+04
+
+
+spectrumFF> ===== Wavelength:   512.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.92411214E+04  1.18522942E+04
+             -------------------------------------------------------------------
+             Sum  2.92411214E+04  1.18522942E+04  1.73888272E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.92411214E+04  1.18522942E+04  1.73888272E+04  5  3
+             ---------------------------------------------------
+             Sum  2.92411214E+04  1.18522942E+04  1.73888272E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.92411214E+04  1.18522942E+04  1.73888272E+04  5  3
+             ---------------------------------------------------
+             Sum  2.92411214E+04  1.18522942E+04  1.73888272E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.92411214E+04  1.18522942E+04  1.73888272E+04  5  3
+             ---------------------------------------------------
+             Sum  2.92411214E+04  1.18522942E+04  1.73888272E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.92411214E+04  1.18522942E+04  1.73888272E+04  5  3
+             ---------------------------------------------------
+             Sum  2.92411214E+04  1.18522942E+04  1.73888272E+04
+
+
+spectrumFF> ===== Wavelength:   516.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  3.05320753E+04  1.28024430E+04
+             -------------------------------------------------------------------
+             Sum  3.05320753E+04  1.28024430E+04  1.77296324E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.05320753E+04  1.28024430E+04  1.77296324E+04  5  3
+             ---------------------------------------------------
+             Sum  3.05320753E+04  1.28024430E+04  1.77296324E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.05320753E+04  1.28024430E+04  1.77296324E+04  5  3
+             ---------------------------------------------------
+             Sum  3.05320753E+04  1.28024430E+04  1.77296324E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.05320753E+04  1.28024430E+04  1.77296324E+04  5  3
+             ---------------------------------------------------
+             Sum  3.05320753E+04  1.28024430E+04  1.77296324E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.05320753E+04  1.28024430E+04  1.77296324E+04  5  3
+             ---------------------------------------------------
+             Sum  3.05320753E+04  1.28024430E+04  1.77296324E+04
+
+
+spectrumFF> ===== Wavelength:   520.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  3.19879761E+04  1.39011444E+04
+             -------------------------------------------------------------------
+             Sum  3.19879761E+04  1.39011444E+04  1.80868316E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.19879761E+04  1.39011444E+04  1.80868316E+04  5  3
+             ---------------------------------------------------
+             Sum  3.19879761E+04  1.39011444E+04  1.80868316E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.19879761E+04  1.39011444E+04  1.80868316E+04  5  3
+             ---------------------------------------------------
+             Sum  3.19879761E+04  1.39011444E+04  1.80868316E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.19879761E+04  1.39011444E+04  1.80868316E+04  5  3
+             ---------------------------------------------------
+             Sum  3.19879761E+04  1.39011444E+04  1.80868316E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.19879761E+04  1.39011444E+04  1.80868316E+04  5  3
+             ---------------------------------------------------
+             Sum  3.19879761E+04  1.39011444E+04  1.80868316E+04
+
+
+spectrumFF> ===== Wavelength:   524.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  3.36130267E+04  1.51580458E+04
+             -------------------------------------------------------------------
+             Sum  3.36130267E+04  1.51580458E+04  1.84549808E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.36130267E+04  1.51580458E+04  1.84549808E+04  5  3
+             ---------------------------------------------------
+             Sum  3.36130267E+04  1.51580458E+04  1.84549808E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.36130267E+04  1.51580458E+04  1.84549808E+04  5  3
+             ---------------------------------------------------
+             Sum  3.36130267E+04  1.51580458E+04  1.84549808E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.36130267E+04  1.51580458E+04  1.84549808E+04  5  3
+             ---------------------------------------------------
+             Sum  3.36130267E+04  1.51580458E+04  1.84549808E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.36130267E+04  1.51580458E+04  1.84549808E+04  5  3
+             ---------------------------------------------------
+             Sum  3.36130267E+04  1.51580458E+04  1.84549808E+04
+
+
+spectrumFF> ===== Wavelength:   528.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  3.54062500E+04  1.65800322E+04
+             -------------------------------------------------------------------
+             Sum  3.54062500E+04  1.65800322E+04  1.88262177E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.54062500E+04  1.65800322E+04  1.88262177E+04  5  3
+             ---------------------------------------------------
+             Sum  3.54062500E+04  1.65800322E+04  1.88262177E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.54062500E+04  1.65800322E+04  1.88262177E+04  5  3
+             ---------------------------------------------------
+             Sum  3.54062500E+04  1.65800322E+04  1.88262177E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.54062500E+04  1.65800322E+04  1.88262177E+04  5  3
+             ---------------------------------------------------
+             Sum  3.54062500E+04  1.65800322E+04  1.88262177E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.54062500E+04  1.65800322E+04  1.88262177E+04  5  3
+             ---------------------------------------------------
+             Sum  3.54062500E+04  1.65800322E+04  1.88262177E+04
+
+
+spectrumFF> ===== Wavelength:   532.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  3.73593635E+04  1.81695558E+04
+             -------------------------------------------------------------------
+             Sum  3.73593635E+04  1.81695558E+04  1.91898077E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.73593635E+04  1.81695558E+04  1.91898077E+04  5  3
+             ---------------------------------------------------
+             Sum  3.73593635E+04  1.81695558E+04  1.91898077E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.73593635E+04  1.81695558E+04  1.91898077E+04  5  3
+             ---------------------------------------------------
+             Sum  3.73593635E+04  1.81695558E+04  1.91898077E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.73593635E+04  1.81695558E+04  1.91898077E+04  5  3
+             ---------------------------------------------------
+             Sum  3.73593635E+04  1.81695558E+04  1.91898077E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.73593635E+04  1.81695558E+04  1.91898077E+04  5  3
+             ---------------------------------------------------
+             Sum  3.73593635E+04  1.81695558E+04  1.91898077E+04
+
+
+spectrumFF> ===== Wavelength:   536.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  3.94542997E+04  1.99225403E+04
+             -------------------------------------------------------------------
+             Sum  3.94542997E+04  1.99225403E+04  1.95317593E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.94542997E+04  1.99225403E+04  1.95317593E+04  5  3
+             ---------------------------------------------------
+             Sum  3.94542997E+04  1.99225403E+04  1.95317593E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.94542997E+04  1.99225403E+04  1.95317593E+04  5  3
+             ---------------------------------------------------
+             Sum  3.94542997E+04  1.99225403E+04  1.95317593E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.94542997E+04  1.99225403E+04  1.95317593E+04  5  3
+             ---------------------------------------------------
+             Sum  3.94542997E+04  1.99225403E+04  1.95317593E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.94542997E+04  1.99225403E+04  1.95317593E+04  5  3
+             ---------------------------------------------------
+             Sum  3.94542997E+04  1.99225403E+04  1.95317593E+04
+
+
+spectrumFF> ===== Wavelength:   540.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  4.16605720E+04  2.18259479E+04
+             -------------------------------------------------------------------
+             Sum  4.16605720E+04  2.18259479E+04  1.98346241E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.16605720E+04  2.18259479E+04  1.98346241E+04  5  3
+             ---------------------------------------------------
+             Sum  4.16605720E+04  2.18259479E+04  1.98346241E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.16605720E+04  2.18259479E+04  1.98346241E+04  5  3
+             ---------------------------------------------------
+             Sum  4.16605720E+04  2.18259479E+04  1.98346241E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.16605720E+04  2.18259479E+04  1.98346241E+04  5  3
+             ---------------------------------------------------
+             Sum  4.16605720E+04  2.18259479E+04  1.98346241E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.16605720E+04  2.18259479E+04  1.98346241E+04  5  3
+             ---------------------------------------------------
+             Sum  4.16605720E+04  2.18259479E+04  1.98346241E+04
+
+
+spectrumFF> ===== Wavelength:   544.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  4.39328757E+04  2.38552394E+04
+             -------------------------------------------------------------------
+             Sum  4.39328757E+04  2.38552394E+04  2.00776362E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.39328757E+04  2.38552394E+04  2.00776362E+04  5  3
+             ---------------------------------------------------
+             Sum  4.39328757E+04  2.38552394E+04  2.00776362E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.39328757E+04  2.38552394E+04  2.00776362E+04  5  3
+             ---------------------------------------------------
+             Sum  4.39328757E+04  2.38552394E+04  2.00776362E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.39328757E+04  2.38552394E+04  2.00776362E+04  5  3
+             ---------------------------------------------------
+             Sum  4.39328757E+04  2.38552394E+04  2.00776362E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.39328757E+04  2.38552394E+04  2.00776362E+04  5  3
+             ---------------------------------------------------
+             Sum  4.39328757E+04  2.38552394E+04  2.00776362E+04
+
+
+spectrumFF> ===== Wavelength:   548.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  4.62095408E+04  2.59721649E+04
+             -------------------------------------------------------------------
+             Sum  4.62095408E+04  2.59721649E+04  2.02373759E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.62095408E+04  2.59721649E+04  2.02373759E+04  5  3
+             ---------------------------------------------------
+             Sum  4.62095408E+04  2.59721649E+04  2.02373759E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.62095408E+04  2.59721649E+04  2.02373759E+04  5  3
+             ---------------------------------------------------
+             Sum  4.62095408E+04  2.59721649E+04  2.02373759E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.62095408E+04  2.59721649E+04  2.02373759E+04  5  3
+             ---------------------------------------------------
+             Sum  4.62095408E+04  2.59721649E+04  2.02373759E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.62095408E+04  2.59721649E+04  2.02373759E+04  5  3
+             ---------------------------------------------------
+             Sum  4.62095408E+04  2.59721649E+04  2.02373759E+04
+
+
+spectrumFF> ===== Wavelength:   552.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  4.84126510E+04  2.81235292E+04
+             -------------------------------------------------------------------
+             Sum  4.84126510E+04  2.81235292E+04  2.02891219E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.84126510E+04  2.81235292E+04  2.02891219E+04  5  3
+             ---------------------------------------------------
+             Sum  4.84126510E+04  2.81235292E+04  2.02891219E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.84126510E+04  2.81235292E+04  2.02891219E+04  5  3
+             ---------------------------------------------------
+             Sum  4.84126510E+04  2.81235292E+04  2.02891219E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.84126510E+04  2.81235292E+04  2.02891219E+04  5  3
+             ---------------------------------------------------
+             Sum  4.84126510E+04  2.81235292E+04  2.02891219E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.84126510E+04  2.81235292E+04  2.02891219E+04  5  3
+             ---------------------------------------------------
+             Sum  4.84126510E+04  2.81235292E+04  2.02891219E+04
+
+
+spectrumFF> ===== Wavelength:   556.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  5.04506916E+04  3.02417195E+04
+             -------------------------------------------------------------------
+             Sum  5.04506916E+04  3.02417195E+04  2.02089721E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.04506916E+04  3.02417195E+04  2.02089721E+04  5  3
+             ---------------------------------------------------
+             Sum  5.04506916E+04  3.02417195E+04  2.02089721E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.04506916E+04  3.02417195E+04  2.02089721E+04  5  3
+             ---------------------------------------------------
+             Sum  5.04506916E+04  3.02417195E+04  2.02089721E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.04506916E+04  3.02417195E+04  2.02089721E+04  5  3
+             ---------------------------------------------------
+             Sum  5.04506916E+04  3.02417195E+04  2.02089721E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.04506916E+04  3.02417195E+04  2.02089721E+04  5  3
+             ---------------------------------------------------
+             Sum  5.04506916E+04  3.02417195E+04  2.02089721E+04
+
+
+spectrumFF> ===== Wavelength:   560.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  5.22243467E+04  3.22477197E+04
+             -------------------------------------------------------------------
+             Sum  5.22243467E+04  3.22477197E+04  1.99766271E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.22243467E+04  3.22477197E+04  1.99766271E+04  5  3
+             ---------------------------------------------------
+             Sum  5.22243467E+04  3.22477197E+04  1.99766271E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.22243467E+04  3.22477197E+04  1.99766271E+04  5  3
+             ---------------------------------------------------
+             Sum  5.22243467E+04  3.22477197E+04  1.99766271E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.22243467E+04  3.22477197E+04  1.99766271E+04  5  3
+             ---------------------------------------------------
+             Sum  5.22243467E+04  3.22477197E+04  1.99766271E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.22243467E+04  3.22477197E+04  1.99766271E+04  5  3
+             ---------------------------------------------------
+             Sum  5.22243467E+04  3.22477197E+04  1.99766271E+04
+
+
+spectrumFF> ===== Wavelength:   564.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  5.36354235E+04  3.40569500E+04
+             -------------------------------------------------------------------
+             Sum  5.36354235E+04  3.40569500E+04  1.95784735E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.36354235E+04  3.40569500E+04  1.95784735E+04  5  3
+             ---------------------------------------------------
+             Sum  5.36354235E+04  3.40569500E+04  1.95784735E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.36354235E+04  3.40569500E+04  1.95784735E+04  5  3
+             ---------------------------------------------------
+             Sum  5.36354235E+04  3.40569500E+04  1.95784735E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.36354235E+04  3.40569500E+04  1.95784735E+04  5  3
+             ---------------------------------------------------
+             Sum  5.36354235E+04  3.40569500E+04  1.95784735E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.36354235E+04  3.40569500E+04  1.95784735E+04  5  3
+             ---------------------------------------------------
+             Sum  5.36354235E+04  3.40569500E+04  1.95784735E+04
+
+
+spectrumFF> ===== Wavelength:   568.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  5.45979020E+04  3.55875452E+04
+             -------------------------------------------------------------------
+             Sum  5.45979020E+04  3.55875452E+04  1.90103569E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.45979020E+04  3.55875452E+04  1.90103569E+04  5  3
+             ---------------------------------------------------
+             Sum  5.45979020E+04  3.55875452E+04  1.90103569E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.45979020E+04  3.55875452E+04  1.90103569E+04  5  3
+             ---------------------------------------------------
+             Sum  5.45979020E+04  3.55875452E+04  1.90103569E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.45979020E+04  3.55875452E+04  1.90103569E+04  5  3
+             ---------------------------------------------------
+             Sum  5.45979020E+04  3.55875452E+04  1.90103569E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.45979020E+04  3.55875452E+04  1.90103569E+04  5  3
+             ---------------------------------------------------
+             Sum  5.45979020E+04  3.55875452E+04  1.90103569E+04
+
+
+spectrumFF> ===== Wavelength:   572.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  5.50491010E+04  3.67697872E+04
+             -------------------------------------------------------------------
+             Sum  5.50491010E+04  3.67697872E+04  1.82793137E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.50491010E+04  3.67697872E+04  1.82793137E+04  5  3
+             ---------------------------------------------------
+             Sum  5.50491010E+04  3.67697872E+04  1.82793137E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.50491010E+04  3.67697872E+04  1.82793137E+04  5  3
+             ---------------------------------------------------
+             Sum  5.50491010E+04  3.67697872E+04  1.82793137E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.50491010E+04  3.67697872E+04  1.82793137E+04  5  3
+             ---------------------------------------------------
+             Sum  5.50491010E+04  3.67697872E+04  1.82793137E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.50491010E+04  3.67697872E+04  1.82793137E+04  5  3
+             ---------------------------------------------------
+             Sum  5.50491010E+04  3.67697872E+04  1.82793137E+04
+
+
+spectrumFF> ===== Wavelength:   576.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  5.49583928E+04  3.75547247E+04
+             -------------------------------------------------------------------
+             Sum  5.49583928E+04  3.75547247E+04  1.74036681E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.49583928E+04  3.75547247E+04  1.74036681E+04  5  3
+             ---------------------------------------------------
+             Sum  5.49583928E+04  3.75547247E+04  1.74036681E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.49583928E+04  3.75547247E+04  1.74036681E+04  5  3
+             ---------------------------------------------------
+             Sum  5.49583928E+04  3.75547247E+04  1.74036681E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.49583928E+04  3.75547247E+04  1.74036681E+04  5  3
+             ---------------------------------------------------
+             Sum  5.49583928E+04  3.75547247E+04  1.74036681E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.49583928E+04  3.75547247E+04  1.74036681E+04  5  3
+             ---------------------------------------------------
+             Sum  5.49583928E+04  3.75547247E+04  1.74036681E+04
+
+
+spectrumFF> ===== Wavelength:   580.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  5.43312198E+04  3.79199254E+04
+             -------------------------------------------------------------------
+             Sum  5.43312198E+04  3.79199254E+04  1.64112944E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.43312198E+04  3.79199254E+04  1.64112944E+04  5  3
+             ---------------------------------------------------
+             Sum  5.43312198E+04  3.79199254E+04  1.64112944E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.43312198E+04  3.79199254E+04  1.64112944E+04  5  3
+             ---------------------------------------------------
+             Sum  5.43312198E+04  3.79199254E+04  1.64112944E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.43312198E+04  3.79199254E+04  1.64112944E+04  5  3
+             ---------------------------------------------------
+             Sum  5.43312198E+04  3.79199254E+04  1.64112944E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.43312198E+04  3.79199254E+04  1.64112944E+04  5  3
+             ---------------------------------------------------
+             Sum  5.43312198E+04  3.79199254E+04  1.64112944E+04
+
+
+spectrumFF> ===== Wavelength:   584.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  5.32073764E+04  3.78710003E+04
+             -------------------------------------------------------------------
+             Sum  5.32073764E+04  3.78710003E+04  1.53363761E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.32073764E+04  3.78710003E+04  1.53363761E+04  5  3
+             ---------------------------------------------------
+             Sum  5.32073764E+04  3.78710003E+04  1.53363761E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.32073764E+04  3.78710003E+04  1.53363761E+04  5  3
+             ---------------------------------------------------
+             Sum  5.32073764E+04  3.78710003E+04  1.53363761E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.32073764E+04  3.78710003E+04  1.53363761E+04  5  3
+             ---------------------------------------------------
+             Sum  5.32073764E+04  3.78710003E+04  1.53363761E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.32073764E+04  3.78710003E+04  1.53363761E+04  5  3
+             ---------------------------------------------------
+             Sum  5.32073764E+04  3.78710003E+04  1.53363761E+04
+
+
+spectrumFF> ===== Wavelength:   588.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  5.16541631E+04  3.74387488E+04
+             -------------------------------------------------------------------
+             Sum  5.16541631E+04  3.74387488E+04  1.42154143E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.16541631E+04  3.74387488E+04  1.42154143E+04  4  3
+             ---------------------------------------------------
+             Sum  5.16541631E+04  3.74387488E+04  1.42154143E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.16541631E+04  3.74387488E+04  1.42154143E+04  4  3
+             ---------------------------------------------------
+             Sum  5.16541631E+04  3.74387488E+04  1.42154143E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.16541631E+04  3.74387488E+04  1.42154143E+04  4  3
+             ---------------------------------------------------
+             Sum  5.16541631E+04  3.74387488E+04  1.42154143E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  5.16541631E+04  3.74387488E+04  1.42154143E+04  4  3
+             ---------------------------------------------------
+             Sum  5.16541631E+04  3.74387488E+04  1.42154143E+04
+
+
+spectrumFF> ===== Wavelength:   592.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  4.97563610E+04  3.66729782E+04
+             -------------------------------------------------------------------
+             Sum  4.97563610E+04  3.66729782E+04  1.30833828E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.97563610E+04  3.66729782E+04  1.30833828E+04  4  3
+             ---------------------------------------------------
+             Sum  4.97563610E+04  3.66729782E+04  1.30833828E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.97563610E+04  3.66729782E+04  1.30833828E+04  4  3
+             ---------------------------------------------------
+             Sum  4.97563610E+04  3.66729782E+04  1.30833828E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.97563610E+04  3.66729782E+04  1.30833828E+04  4  3
+             ---------------------------------------------------
+             Sum  4.97563610E+04  3.66729782E+04  1.30833828E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.97563610E+04  3.66729782E+04  1.30833828E+04  4  3
+             ---------------------------------------------------
+             Sum  4.97563610E+04  3.66729782E+04  1.30833828E+04
+
+
+spectrumFF> ===== Wavelength:   596.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  4.76054985E+04  3.56347497E+04
+             -------------------------------------------------------------------
+             Sum  4.76054985E+04  3.56347497E+04  1.19707489E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.76054985E+04  3.56347497E+04  1.19707489E+04  4  3
+             ---------------------------------------------------
+             Sum  4.76054985E+04  3.56347497E+04  1.19707489E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.76054985E+04  3.56347497E+04  1.19707489E+04  4  3
+             ---------------------------------------------------
+             Sum  4.76054985E+04  3.56347497E+04  1.19707489E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.76054985E+04  3.56347497E+04  1.19707489E+04  4  3
+             ---------------------------------------------------
+             Sum  4.76054985E+04  3.56347497E+04  1.19707489E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.76054985E+04  3.56347497E+04  1.19707489E+04  4  3
+             ---------------------------------------------------
+             Sum  4.76054985E+04  3.56347497E+04  1.19707489E+04
+
+
+spectrumFF> ===== Wavelength:   600.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  4.52905237E+04  3.43888079E+04
+             -------------------------------------------------------------------
+             Sum  4.52905237E+04  3.43888079E+04  1.09017158E+04  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.52905237E+04  3.43888079E+04  1.09017158E+04  4  3
+             ---------------------------------------------------
+             Sum  4.52905237E+04  3.43888079E+04  1.09017158E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.52905237E+04  3.43888079E+04  1.09017158E+04  4  3
+             ---------------------------------------------------
+             Sum  4.52905237E+04  3.43888079E+04  1.09017158E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.52905237E+04  3.43888079E+04  1.09017158E+04  4  3
+             ---------------------------------------------------
+             Sum  4.52905237E+04  3.43888079E+04  1.09017158E+04
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.52905237E+04  3.43888079E+04  1.09017158E+04  4  3
+             ---------------------------------------------------
+             Sum  4.52905237E+04  3.43888079E+04  1.09017158E+04
+
+
+spectrumFF> ===== Wavelength:   604.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  4.28911116E+04  3.29974431E+04
+             -------------------------------------------------------------------
+             Sum  4.28911116E+04  3.29974431E+04  9.89366846E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.28911116E+04  3.29974431E+04  9.89366846E+03  4  3
+             ---------------------------------------------------
+             Sum  4.28911116E+04  3.29974431E+04  9.89366846E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.28911116E+04  3.29974431E+04  9.89366846E+03  4  3
+             ---------------------------------------------------
+             Sum  4.28911116E+04  3.29974431E+04  9.89366846E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.28911116E+04  3.29974431E+04  9.89366846E+03  4  3
+             ---------------------------------------------------
+             Sum  4.28911116E+04  3.29974431E+04  9.89366846E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.28911116E+04  3.29974431E+04  9.89366846E+03  4  3
+             ---------------------------------------------------
+             Sum  4.28911116E+04  3.29974431E+04  9.89366846E+03
+
+
+spectrumFF> ===== Wavelength:   608.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  4.04738939E+04  3.15163416E+04
+             -------------------------------------------------------------------
+             Sum  4.04738939E+04  3.15163416E+04  8.95755232E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.04738939E+04  3.15163416E+04  8.95755231E+03  4  3
+             ---------------------------------------------------
+             Sum  4.04738939E+04  3.15163416E+04  8.95755231E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.04738939E+04  3.15163416E+04  8.95755231E+03  4  3
+             ---------------------------------------------------
+             Sum  4.04738939E+04  3.15163416E+04  8.95755231E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.04738939E+04  3.15163416E+04  8.95755231E+03  4  3
+             ---------------------------------------------------
+             Sum  4.04738939E+04  3.15163416E+04  8.95755231E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.04738939E+04  3.15163416E+04  8.95755231E+03  4  3
+             ---------------------------------------------------
+             Sum  4.04738939E+04  3.15163416E+04  8.95755231E+03
+
+
+spectrumFF> ===== Wavelength:   612.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  3.80912174E+04  2.99923930E+04
+             -------------------------------------------------------------------
+             Sum  3.80912174E+04  2.99923930E+04  8.09882444E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.80912174E+04  2.99923930E+04  8.09882444E+03  4  3
+             ---------------------------------------------------
+             Sum  3.80912174E+04  2.99923930E+04  8.09882444E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.80912174E+04  2.99923930E+04  8.09882444E+03  4  3
+             ---------------------------------------------------
+             Sum  3.80912174E+04  2.99923930E+04  8.09882444E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.80912174E+04  2.99923930E+04  8.09882444E+03  4  3
+             ---------------------------------------------------
+             Sum  3.80912174E+04  2.99923930E+04  8.09882444E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.80912174E+04  2.99923930E+04  8.09882444E+03  4  3
+             ---------------------------------------------------
+             Sum  3.80912174E+04  2.99923930E+04  8.09882444E+03
+
+
+spectrumFF> ===== Wavelength:   616.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  3.57817160E+04  2.84630722E+04
+             -------------------------------------------------------------------
+             Sum  3.57817160E+04  2.84630722E+04  7.31864379E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.57817160E+04  2.84630722E+04  7.31864379E+03  4  3
+             ---------------------------------------------------
+             Sum  3.57817160E+04  2.84630722E+04  7.31864379E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.57817160E+04  2.84630722E+04  7.31864379E+03  4  3
+             ---------------------------------------------------
+             Sum  3.57817160E+04  2.84630722E+04  7.31864379E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.57817160E+04  2.84630722E+04  7.31864379E+03  4  3
+             ---------------------------------------------------
+             Sum  3.57817160E+04  2.84630722E+04  7.31864379E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.57817160E+04  2.84630722E+04  7.31864379E+03  4  3
+             ---------------------------------------------------
+             Sum  3.57817160E+04  2.84630722E+04  7.31864379E+03
+
+
+spectrumFF> ===== Wavelength:   620.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  3.35719549E+04  2.69568956E+04
+             -------------------------------------------------------------------
+             Sum  3.35719549E+04  2.69568956E+04  6.61505928E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.35719549E+04  2.69568956E+04  6.61505928E+03  4  3
+             ---------------------------------------------------
+             Sum  3.35719549E+04  2.69568956E+04  6.61505928E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.35719549E+04  2.69568956E+04  6.61505928E+03  4  3
+             ---------------------------------------------------
+             Sum  3.35719549E+04  2.69568956E+04  6.61505928E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.35719549E+04  2.69568956E+04  6.61505928E+03  4  3
+             ---------------------------------------------------
+             Sum  3.35719549E+04  2.69568956E+04  6.61505928E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.35719549E+04  2.69568956E+04  6.61505928E+03  4  3
+             ---------------------------------------------------
+             Sum  3.35719549E+04  2.69568956E+04  6.61505928E+03
+
+
+spectrumFF> ===== Wavelength:   624.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  3.14785412E+04  2.54944867E+04
+             -------------------------------------------------------------------
+             Sum  3.14785412E+04  2.54944867E+04  5.98405443E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.14785412E+04  2.54944867E+04  5.98405443E+03  4  3
+             ---------------------------------------------------
+             Sum  3.14785412E+04  2.54944867E+04  5.98405443E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.14785412E+04  2.54944867E+04  5.98405443E+03  4  3
+             ---------------------------------------------------
+             Sum  3.14785412E+04  2.54944867E+04  5.98405443E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.14785412E+04  2.54944867E+04  5.98405443E+03  4  3
+             ---------------------------------------------------
+             Sum  3.14785412E+04  2.54944867E+04  5.98405443E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.14785412E+04  2.54944867E+04  5.98405443E+03  4  3
+             ---------------------------------------------------
+             Sum  3.14785412E+04  2.54944867E+04  5.98405443E+03
+
+
+spectrumFF> ===== Wavelength:   628.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.95102817E+04  2.40898930E+04
+             -------------------------------------------------------------------
+             Sum  2.95102817E+04  2.40898930E+04  5.42038874E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.95102817E+04  2.40898930E+04  5.42038873E+03  4  3
+             ---------------------------------------------------
+             Sum  2.95102817E+04  2.40898930E+04  5.42038873E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.95102817E+04  2.40898930E+04  5.42038873E+03  4  3
+             ---------------------------------------------------
+             Sum  2.95102817E+04  2.40898930E+04  5.42038873E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.95102817E+04  2.40898930E+04  5.42038873E+03  4  3
+             ---------------------------------------------------
+             Sum  2.95102817E+04  2.40898930E+04  5.42038873E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.95102817E+04  2.40898930E+04  5.42038873E+03  4  3
+             ---------------------------------------------------
+             Sum  2.95102817E+04  2.40898930E+04  5.42038873E+03
+
+
+spectrumFF> ===== Wavelength:   632.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.76701498E+04  2.27519199E+04
+             -------------------------------------------------------------------
+             Sum  2.76701498E+04  2.27519199E+04  4.91822987E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.76701498E+04  2.27519199E+04  4.91822987E+03  4  3
+             ---------------------------------------------------
+             Sum  2.76701498E+04  2.27519199E+04  4.91822987E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.76701498E+04  2.27519199E+04  4.91822987E+03  4  3
+             ---------------------------------------------------
+             Sum  2.76701498E+04  2.27519199E+04  4.91822987E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.76701498E+04  2.27519199E+04  4.91822987E+03  4  3
+             ---------------------------------------------------
+             Sum  2.76701498E+04  2.27519199E+04  4.91822987E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.76701498E+04  2.27519199E+04  4.91822987E+03  4  3
+             ---------------------------------------------------
+             Sum  2.76701498E+04  2.27519199E+04  4.91822987E+03
+
+
+spectrumFF> ===== Wavelength:   636.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.59569463E+04  2.14853460E+04
+             -------------------------------------------------------------------
+             Sum  2.59569463E+04  2.14853460E+04  4.47160032E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.59569463E+04  2.14853460E+04  4.47160032E+03  4  3
+             ---------------------------------------------------
+             Sum  2.59569463E+04  2.14853460E+04  4.47160032E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.59569463E+04  2.14853460E+04  4.47160032E+03  4  3
+             ---------------------------------------------------
+             Sum  2.59569463E+04  2.14853460E+04  4.47160032E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.59569463E+04  2.14853460E+04  4.47160032E+03  4  3
+             ---------------------------------------------------
+             Sum  2.59569463E+04  2.14853460E+04  4.47160032E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.59569463E+04  2.14853460E+04  4.47160032E+03  4  3
+             ---------------------------------------------------
+             Sum  2.59569463E+04  2.14853460E+04  4.47160032E+03
+
+
+spectrumFF> ===== Wavelength:   640.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.43666331E+04  2.02919598E+04
+             -------------------------------------------------------------------
+             Sum  2.43666331E+04  2.02919598E+04  4.07467330E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.43666331E+04  2.02919598E+04  4.07467330E+03  4  3
+             ---------------------------------------------------
+             Sum  2.43666331E+04  2.02919598E+04  4.07467330E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.43666331E+04  2.02919598E+04  4.07467330E+03  4  3
+             ---------------------------------------------------
+             Sum  2.43666331E+04  2.02919598E+04  4.07467330E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.43666331E+04  2.02919598E+04  4.07467330E+03  4  3
+             ---------------------------------------------------
+             Sum  2.43666331E+04  2.02919598E+04  4.07467330E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.43666331E+04  2.02919598E+04  4.07467330E+03  4  3
+             ---------------------------------------------------
+             Sum  2.43666331E+04  2.02919598E+04  4.07467330E+03
+
+
+spectrumFF> ===== Wavelength:   644.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.28933576E+04  1.91714032E+04
+             -------------------------------------------------------------------
+             Sum  2.28933576E+04  1.91714032E+04  3.72195433E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.28933576E+04  1.91714032E+04  3.72195433E+03  4  3
+             ---------------------------------------------------
+             Sum  2.28933576E+04  1.91714032E+04  3.72195433E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.28933576E+04  1.91714032E+04  3.72195433E+03  4  3
+             ---------------------------------------------------
+             Sum  2.28933576E+04  1.91714032E+04  3.72195433E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.28933576E+04  1.91714032E+04  3.72195433E+03  4  3
+             ---------------------------------------------------
+             Sum  2.28933576E+04  1.91714032E+04  3.72195433E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.28933576E+04  1.91714032E+04  3.72195433E+03  4  3
+             ---------------------------------------------------
+             Sum  2.28933576E+04  1.91714032E+04  3.72195433E+03
+
+
+spectrumFF> ===== Wavelength:   648.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.15302155E+04  1.81218355E+04
+             -------------------------------------------------------------------
+             Sum  2.15302155E+04  1.81218355E+04  3.40838009E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.15302155E+04  1.81218355E+04  3.40838009E+03  4  3
+             ---------------------------------------------------
+             Sum  2.15302155E+04  1.81218355E+04  3.40838009E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.15302155E+04  1.81218355E+04  3.40838009E+03  4  3
+             ---------------------------------------------------
+             Sum  2.15302155E+04  1.81218355E+04  3.40838009E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.15302155E+04  1.81218355E+04  3.40838009E+03  4  3
+             ---------------------------------------------------
+             Sum  2.15302155E+04  1.81218355E+04  3.40838009E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.15302155E+04  1.81218355E+04  3.40838009E+03  4  3
+             ---------------------------------------------------
+             Sum  2.15302155E+04  1.81218355E+04  3.40838009E+03
+
+
+spectrumFF> ===== Wavelength:   652.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  2.02697998E+04  1.71404393E+04
+             -------------------------------------------------------------------
+             Sum  2.02697998E+04  1.71404393E+04  3.12936053E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.02697998E+04  1.71404393E+04  3.12936052E+03  4  3
+             ---------------------------------------------------
+             Sum  2.02697998E+04  1.71404393E+04  3.12936052E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.02697998E+04  1.71404393E+04  3.12936052E+03  4  3
+             ---------------------------------------------------
+             Sum  2.02697998E+04  1.71404393E+04  3.12936052E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.02697998E+04  1.71404393E+04  3.12936052E+03  4  3
+             ---------------------------------------------------
+             Sum  2.02697998E+04  1.71404393E+04  3.12936052E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.02697998E+04  1.71404393E+04  3.12936052E+03  4  3
+             ---------------------------------------------------
+             Sum  2.02697998E+04  1.71404393E+04  3.12936052E+03
+
+
+spectrumFF> ===== Wavelength:   656.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.91045830E+04  1.62237993E+04
+             -------------------------------------------------------------------
+             Sum  1.91045830E+04  1.62237993E+04  2.88078364E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.91045830E+04  1.62237993E+04  2.88078364E+03  4  3
+             ---------------------------------------------------
+             Sum  1.91045830E+04  1.62237993E+04  2.88078364E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.91045830E+04  1.62237993E+04  2.88078364E+03  4  3
+             ---------------------------------------------------
+             Sum  1.91045830E+04  1.62237993E+04  2.88078364E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.91045830E+04  1.62237993E+04  2.88078364E+03  4  3
+             ---------------------------------------------------
+             Sum  1.91045830E+04  1.62237993E+04  2.88078364E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.91045830E+04  1.62237993E+04  2.88078364E+03  4  3
+             ---------------------------------------------------
+             Sum  1.91045830E+04  1.62237993E+04  2.88078364E+03
+
+
+spectrumFF> ===== Wavelength:   660.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.80271742E+04  1.53681770E+04
+             -------------------------------------------------------------------
+             Sum  1.80271742E+04  1.53681770E+04  2.65899725E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.80271742E+04  1.53681770E+04  2.65899725E+03  4  3
+             ---------------------------------------------------
+             Sum  1.80271742E+04  1.53681770E+04  2.65899725E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.80271742E+04  1.53681770E+04  2.65899725E+03  4  3
+             ---------------------------------------------------
+             Sum  1.80271742E+04  1.53681770E+04  2.65899725E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.80271742E+04  1.53681770E+04  2.65899725E+03  4  3
+             ---------------------------------------------------
+             Sum  1.80271742E+04  1.53681770E+04  2.65899725E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.80271742E+04  1.53681770E+04  2.65899725E+03  4  3
+             ---------------------------------------------------
+             Sum  1.80271742E+04  1.53681770E+04  2.65899725E+03
+
+
+spectrumFF> ===== Wavelength:   664.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.70304846E+04  1.45697070E+04
+             -------------------------------------------------------------------
+             Sum  1.70304846E+04  1.45697070E+04  2.46077759E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.70304846E+04  1.45697070E+04  2.46077759E+03  4  3
+             ---------------------------------------------------
+             Sum  1.70304846E+04  1.45697070E+04  2.46077759E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.70304846E+04  1.45697070E+04  2.46077759E+03  4  3
+             ---------------------------------------------------
+             Sum  1.70304846E+04  1.45697070E+04  2.46077759E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.70304846E+04  1.45697070E+04  2.46077759E+03  4  3
+             ---------------------------------------------------
+             Sum  1.70304846E+04  1.45697070E+04  2.46077759E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.70304846E+04  1.45697070E+04  2.46077759E+03  4  3
+             ---------------------------------------------------
+             Sum  1.70304846E+04  1.45697070E+04  2.46077759E+03
+
+
+spectrumFF> ===== Wavelength:   668.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.61078247E+04  1.38245331E+04
+             -------------------------------------------------------------------
+             Sum  1.61078247E+04  1.38245331E+04  2.28329161E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.61078247E+04  1.38245331E+04  2.28329161E+03  4  3
+             ---------------------------------------------------
+             Sum  1.61078247E+04  1.38245331E+04  2.28329161E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.61078247E+04  1.38245331E+04  2.28329161E+03  4  3
+             ---------------------------------------------------
+             Sum  1.61078247E+04  1.38245331E+04  2.28329161E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.61078247E+04  1.38245331E+04  2.28329161E+03  4  3
+             ---------------------------------------------------
+             Sum  1.61078247E+04  1.38245331E+04  2.28329161E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.61078247E+04  1.38245331E+04  2.28329161E+03  4  3
+             ---------------------------------------------------
+             Sum  1.61078247E+04  1.38245331E+04  2.28329161E+03
+
+
+spectrumFF> ===== Wavelength:   672.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.52529566E+04  1.31288995E+04
+             -------------------------------------------------------------------
+             Sum  1.52529566E+04  1.31288995E+04  2.12405706E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.52529566E+04  1.31288995E+04  2.12405706E+03  4  3
+             ---------------------------------------------------
+             Sum  1.52529566E+04  1.31288995E+04  2.12405706E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.52529566E+04  1.31288995E+04  2.12405706E+03  4  3
+             ---------------------------------------------------
+             Sum  1.52529566E+04  1.31288995E+04  2.12405706E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.52529566E+04  1.31288995E+04  2.12405706E+03  4  3
+             ---------------------------------------------------
+             Sum  1.52529566E+04  1.31288995E+04  2.12405706E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.52529566E+04  1.31288995E+04  2.12405706E+03  4  3
+             ---------------------------------------------------
+             Sum  1.52529566E+04  1.31288995E+04  2.12405706E+03
+
+
+spectrumFF> ===== Wavelength:   676.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.44601126E+04  1.24792092E+04
+             -------------------------------------------------------------------
+             Sum  1.44601126E+04  1.24792092E+04  1.98090334E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.44601126E+04  1.24792092E+04  1.98090334E+03  4  3
+             ---------------------------------------------------
+             Sum  1.44601126E+04  1.24792092E+04  1.98090334E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.44601126E+04  1.24792092E+04  1.98090334E+03  4  3
+             ---------------------------------------------------
+             Sum  1.44601126E+04  1.24792092E+04  1.98090334E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.44601126E+04  1.24792092E+04  1.98090334E+03  4  3
+             ---------------------------------------------------
+             Sum  1.44601126E+04  1.24792092E+04  1.98090334E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.44601126E+04  1.24792092E+04  1.98090334E+03  4  3
+             ---------------------------------------------------
+             Sum  1.44601126E+04  1.24792092E+04  1.98090334E+03
+
+
+spectrumFF> ===== Wavelength:   680.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.37239937E+04  1.18720592E+04
+             -------------------------------------------------------------------
+             Sum  1.37239937E+04  1.18720592E+04  1.85193455E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.37239937E+04  1.18720592E+04  1.85193455E+03  4  3
+             ---------------------------------------------------
+             Sum  1.37239937E+04  1.18720592E+04  1.85193455E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.37239937E+04  1.18720592E+04  1.85193455E+03  4  3
+             ---------------------------------------------------
+             Sum  1.37239937E+04  1.18720592E+04  1.85193455E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.37239937E+04  1.18720592E+04  1.85193455E+03  4  3
+             ---------------------------------------------------
+             Sum  1.37239937E+04  1.18720592E+04  1.85193455E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.37239937E+04  1.18720592E+04  1.85193455E+03  4  3
+             ---------------------------------------------------
+             Sum  1.37239937E+04  1.18720592E+04  1.85193455E+03
+
+
+spectrumFF> ===== Wavelength:   684.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.30397536E+04  1.13042582E+04
+             -------------------------------------------------------------------
+             Sum  1.30397536E+04  1.13042582E+04  1.73549544E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.30397536E+04  1.13042582E+04  1.73549544E+03  4  3
+             ---------------------------------------------------
+             Sum  1.30397536E+04  1.13042582E+04  1.73549544E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.30397536E+04  1.13042582E+04  1.73549544E+03  4  3
+             ---------------------------------------------------
+             Sum  1.30397536E+04  1.13042582E+04  1.73549544E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.30397536E+04  1.13042582E+04  1.73549544E+03  4  3
+             ---------------------------------------------------
+             Sum  1.30397536E+04  1.13042582E+04  1.73549544E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.30397536E+04  1.13042582E+04  1.73549544E+03  4  3
+             ---------------------------------------------------
+             Sum  1.30397536E+04  1.13042582E+04  1.73549544E+03
+
+
+spectrumFF> ===== Wavelength:   688.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.24029744E+04  1.07728335E+04
+             -------------------------------------------------------------------
+             Sum  1.24029744E+04  1.07728335E+04  1.63014091E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.24029744E+04  1.07728335E+04  1.63014091E+03  4  3
+             ---------------------------------------------------
+             Sum  1.24029744E+04  1.07728335E+04  1.63014091E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.24029744E+04  1.07728335E+04  1.63014091E+03  4  3
+             ---------------------------------------------------
+             Sum  1.24029744E+04  1.07728335E+04  1.63014091E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.24029744E+04  1.07728335E+04  1.63014091E+03  4  3
+             ---------------------------------------------------
+             Sum  1.24029744E+04  1.07728335E+04  1.63014091E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.24029744E+04  1.07728335E+04  1.63014091E+03  4  3
+             ---------------------------------------------------
+             Sum  1.24029744E+04  1.07728335E+04  1.63014091E+03
+
+
+spectrumFF> ===== Wavelength:   692.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.18096383E+04  1.02750296E+04
+             -------------------------------------------------------------------
+             Sum  1.18096383E+04  1.02750296E+04  1.53460871E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.18096383E+04  1.02750296E+04  1.53460871E+03  4  3
+             ---------------------------------------------------
+             Sum  1.18096383E+04  1.02750296E+04  1.53460871E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.18096383E+04  1.02750296E+04  1.53460871E+03  4  3
+             ---------------------------------------------------
+             Sum  1.18096383E+04  1.02750296E+04  1.53460871E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.18096383E+04  1.02750296E+04  1.53460871E+03  4  3
+             ---------------------------------------------------
+             Sum  1.18096383E+04  1.02750296E+04  1.53460871E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.18096383E+04  1.02750296E+04  1.53460871E+03  4  3
+             ---------------------------------------------------
+             Sum  1.18096383E+04  1.02750296E+04  1.53460871E+03
+
+
+spectrumFF> ===== Wavelength:   696.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.12560967E+04  9.80830115E+03
+             -------------------------------------------------------------------
+             Sum  1.12560967E+04  9.80830115E+03  1.44779553E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.12560967E+04  9.80830115E+03  1.44779553E+03  4  3
+             ---------------------------------------------------
+             Sum  1.12560967E+04  9.80830115E+03  1.44779553E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.12560967E+04  9.80830115E+03  1.44779553E+03  4  3
+             ---------------------------------------------------
+             Sum  1.12560967E+04  9.80830115E+03  1.44779553E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.12560967E+04  9.80830115E+03  1.44779553E+03  4  3
+             ---------------------------------------------------
+             Sum  1.12560967E+04  9.80830115E+03  1.44779553E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.12560967E+04  9.80830115E+03  1.44779553E+03  4  3
+             ---------------------------------------------------
+             Sum  1.12560967E+04  9.80830115E+03  1.44779553E+03
+
+
+spectrumFF> ===== Wavelength:   700.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         csExtOA
+               1  1.07390396E+04  9.37030357E+03
+             -------------------------------------------------------------------
+             Sum  1.07390396E+04  9.37030357E+03  1.36873600E+03  0.00000000E+00
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.07390396E+04  9.37030357E+03  1.36873600E+03  4  3
+             ---------------------------------------------------
+             Sum  1.07390396E+04  9.37030357E+03  1.36873600E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.07390396E+04  9.37030357E+03  1.36873600E+03  4  3
+             ---------------------------------------------------
+             Sum  1.07390396E+04  9.37030357E+03  1.36873600E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.07390396E+04  9.37030357E+03  1.36873600E+03  4  3
+             ---------------------------------------------------
+             Sum  1.07390396E+04  9.37030357E+03  1.36873600E+03
+
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.07390396E+04  9.37030357E+03  1.36873600E+03  4  3
+             ---------------------------------------------------
+             Sum  1.07390396E+04  9.37030357E+03  1.36873600E+03
+
+termsProgram> Program run time (CPU & real in s):  6.856E-02  6.900E-02

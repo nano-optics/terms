@@ -1,0 +1,6 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+src/
+logo.png
+docs/
+pkgdown/

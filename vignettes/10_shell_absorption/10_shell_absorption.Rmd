@@ -1,0 +1,101 @@
+---
+title: "Partial absorption in a core-shell dimer"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 2
+    fig_width: 7
+    fig_height: 4
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Partial absorption in a core-shell dimer}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE}
+library(knitr)
+library(terms)
+options(cli.num_colors = 1)
+theme_set(egg::theme_article())
+opts_chunk$set(echo = FALSE, warning =FALSE,
+               message=FALSE, comment='', 
+               tidy=FALSE, cache = FALSE)
+do.call(read_chunk, list(path = "_run.R"))
+```
+
+## Objective
+
+This example illustrates the calculation of absorption spectra in core-shell particles, separately for each layer. The structure consists of two core-shell spheres `Au@Ag` in water, and for comparison we also simulate a dummy `Au@Au` core-shell structure with the same dimensions.
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+library(terms)
+cat('  <style>
+.x3d_scene {
+float:right;
+margin:0em;
+ }
+  </style>')
+
+ge <- get_geometry('input_AuAu')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,150), width = "200px", height = "150px") 
+```
+
+This simulation uses the following `input` file
+```{bash input}
+cat input_AuAg
+```
+
+Note that currently the partial absorptions are not orientation-averaged (analytically); we therefore use an external incident file with quadrature nodes and weights,
+
+<details closed>
+<summary> Show incidence file (click to open) </summary>
+```{bash incidence}
+cat incidence
+```
+</details> <br />
+
+<details closed>
+<summary> Show log file (click to open) </summary>
+```{bash log}
+cat log1
+```
+</details> <br />
+
+## Total cross-sections
+
+We first retrieve the total cross-sections, as usual,
+
+<details closed>
+<summary> Show output structure (click to open) </summary>
+```{r xsec}
+```
+</details> <br />
+
+## Per-layer absorption
+
+Additional files/fields in the form `csAbs4L_scat00{i}coat{i}` are created for each layered sphere, containing partial absorption cross-sections for  particle ${i}$, up to layer ${j}$, with columns for each angle of incidence and the weighted average,
+
+To get the per-layer absorption we need to take the difference between successive coats.
+
+```{r coats}
+```
+
+In this plot the total absorption and per-particle absorption for the core-shell coincide.
+
+```{r comparison, fig.height=4}
+```
+
+The absorption in the Ag layer is maximum at the plasmon resonance of the dimer, the position of which is largely dictated by the gold cores.
+
+
+
+-----
+
+```{r cleanup}
+```
+_Last run: `r format(Sys.time(), '%d %B, %Y')`_

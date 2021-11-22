@@ -1,0 +1,18 @@
+ModeAndScheme 2 3
+MultipoleCutoff 3
+Wavelength 650
+Medium 1.7689
+
+OutputFormat HDF5 all_orders
+
+DumpPrestagedA
+DumpStagedA
+DumpCollectiveTmatrix collective_all_orders.tmat
+
+TmatrixFiles 1
+"tmat_Au10x20_Nmax4_lambda650.tmat" 
+
+# dimer, dihedral pi/4
+Scatterers 2
+TF1 0 -50 0.0 50 0.0 0.0 0.0  2.5
+TF1 0  50 0.0 50 0.0 0.7853982 0  2.5

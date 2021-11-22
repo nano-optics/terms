@@ -1,0 +1,98 @@
+---
+title: "Circular dichroism for a fingers crossed dimer of gold nanorods"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 2
+    fig_width: 7
+    fig_height: 6
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Circular dichroism for a fingers crossed dimer of gold nanorods}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE}
+library(knitr)
+library(terms)
+library(rhdf5)
+options(cli.num_colors = 1)
+theme_set(egg::theme_article())
+opts_chunk$set(echo = FALSE, warning =FALSE,
+               message=FALSE, comment='', 
+               tidy=FALSE, cache = FALSE)
+do.call(read_chunk, list(path = "_run.R"))
+```
+
+## Objective
+
+This example illustrates the calculation of far-field spectra for a dimer of particles described by external T-matrix files. The structure consists of two prolate gold spheroids in water, oriented in a chiral "fingers crossed" configuration that yields strong optical activity.
+
+```{r read, cache=FALSE}
+```
+
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+library(terms)
+cat('  <style>
+.x3d_scene {
+float:right;
+margin:0em;
+ }
+  </style>')
+
+ge <- get_geometry('input')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,200), width = "200px", height = "150px", default_material='gold')
+```
+
+This simulation uses the following `input` file
+```{bash input}
+cat input
+```
+
+The T-matrix file was previously created with [SMARTIES](https://www.wgtn.ac.nz/scps/research/research-groups/raman-lab/numerical-tools/smarties) using these parameters
+
+```{bash smarties, echo=TRUE}
+head -n14 smarties.m
+```
+
+The command to run the example is simply
+
+```
+../../build/terms input > log
+```
+
+The full log contains basic details of the calculations, and finishes with the timing.
+
+<details closed>
+<summary> Show log file (click to open) </summary>
+```{bash log}
+head -n62 log
+echo "..."
+tail -n1 log
+```
+</details> <br />
+
+The output consists of a number of files, storing the far-field cross-sections for each order from 1 to $n_{1}$.
+
+```{r fun}
+```
+
+## Orientation-averaged results
+
+```{r oa}
+```
+
+This chiral dimer produces strong circular dichroism.
+
+
+-----
+
+```{r cleanup}
+```
+_Last run: `r format(Sys.time(), '%d %B, %Y')`_

@@ -1,0 +1,16 @@
+ModeAndScheme 1 2
+MultipoleCutoff 12
+Wavelength 680
+Incidence file incidence 1 # linear polarisation
+Medium 1.7689 # for water
+Verbosity 1
+OutputFormat HDF5 map
+
+MapQuantity 2 E # map I=|E|^2"
+
+SpacePoints  -100   100   400   -75   75   300    0   0   1
+
+# 2 spheres spaced by 1nm along x
+Scatterers 2
+Au@Ag -30.5 0 0 30 29
+Au@Ag  30.5 0 0 30 29

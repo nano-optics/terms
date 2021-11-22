@@ -1,0 +1,194 @@
+readInputFile> Parsing file runs/input_3_1_5_3_1
+
+readInputFile> Detected keyword ModeAndScheme
+               mode=2 => spectrum_FF for far-field quantities
+               scheme=3 => Seek T^(j) using Mackowski's approach
+readInputFile> Detected keyword MultipoleCutoff
+               Supplied ncut(1)=  5
+               Setting ncut(2)= ncut(1)
+               Setting ncut(3)=  -8
+readInputFile> Detected keyword ScattererCentredCrossSections
+readInputFile> Detected keyword Incidence
+readInputFile> Euler angle alpha [0,2Pi) value=   0.00000000
+readInputFile> Euler angle beta  [0,Pi]  value=   0.00000000
+readInputFile> Euler angle gamma [0,2Pi) value=   0.00000000
+               Incident Euler angles and weights:
+                  alpha        beta        gamma        weight
+               0.00000000   0.00000000   0.00000000   1.00000000
+readInputFile> Detected keyword OutputFormat
+               OutputFormat=HDF5
+               All output files are stored in file "xsec_3_0_5_.h5                                                  "
+readInputFile> Detected keyword Wavelength
+               Wavelength (nm):   633.0000
+readInputFile> Detected keyword Medium
+               Constant host epsilon=  1.7689E+0
+readInputFile> Detected keyword Verbosity
+               verbosity=     3 (High)
+
+readInputFile> Detected keyword Scatterers
+ with nscat=    3
+
+readInputFile> Descriptor(s) and circumscribing sphere(s):
+
+ scatID String                  x          y          z         R_0
+    1   Au                  1.0000E+2  0.0000E+0 -2.5000E+1  3.0000E+1
+    2   Au                  7.0711E+1  7.0711E+1  0.0000E+0  3.0000E+1
+    3   Au                 **********  1.0000E+2  2.5000E+1  3.0000E+1
+
+readInputFile> Individual geometry characteristic(s):
+
+ scatID Details
+    1   Mie with ncoats= 0
+    2   Mie with ncoats= 0
+    3   Mie with ncoats= 0
+
+readInputFile> Dielectric functions for (coated) Mie scatterer(s):
+
+ scatID volID Label
+    1     0     Au
+    2     0     Au
+    3     0     Au
+
+readInputFile> Finished parsing  9 keywords
+
+
+spectrumFF> ===== Wavelength:   633.00 (nm) ======================
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  1.00000000E+00  0.00000000E+00
+          y:  0.00000000E+00  0.00000000E+00  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  0.00000000E+00  0.00000000E+00
+          y:  0.00000000E+00  1.00000000E+00  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  7.07106781E-01  0.00000000E+00
+          y:  0.00000000E+00  0.00000000E+00 -7.07106781E-01
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  7.07106781E-01  0.00000000E+00
+          y:  0.00000000E+00  0.00000000E+00  7.07106781E-01
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+solve> Prestaging...
+solve> Prestaged Mie T-matrix for scatterer   1 with q, nlo, nhi = 1  1  5
+solve> Prestaged Mie T-matrix for scatterer   1 with q, nlo, nhi = 2  1  5
+solve> Prestaged Mie T-matrix for scatterer   2 with q, nlo, nhi = 1  1  5
+solve> Prestaged Mie T-matrix for scatterer   2 with q, nlo, nhi = 2  1  5
+solve> Prestaged Mie T-matrix for scatterer   3 with q, nlo, nhi = 1  1  5
+solve> Prestaged Mie T-matrix for scatterer   3 with q, nlo, nhi = 2  1  5
+solve> Staging and solving/inverting...
+solve> Determine the T-matrix using Mackowski's solution scheme
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.8E+002 Tr(|Tmat|)= 3.5E-001 unconverged!
+stageAmat> Offset and balanced block (j,k)=  2  1
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.7E+000 Tr(|Tmat|)= 1.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  3  1
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.8E+002 Tr(|Tmat|)= 3.5E-001 unconverged!
+stageAmat> Offset and balanced block (j,k)=  1  2
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.8E+002 Tr(|Tmat|)= 3.5E-001 unconverged!
+stageAmat> Offset and balanced block (j,k)=  3  2
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.7E+000 Tr(|Tmat|)= 1.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  1  3
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.8E+002 Tr(|Tmat|)= 3.5E-001 unconverged!
+stageAmat> Offset and balanced block (j,k)=  2  3
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 6.1E-002 Tr(|Tmat|)= 1.8E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 6.2E-002 Tr(|Tmat|)= 1.9E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 6.1E-002 Tr(|Tmat|)= 1.8E-001 nconv=  4
+solLinSys> ZLANGE: Supplied matrix 1-norm=  2.0490E+000
+solLinSys> ZGECON returned RCOND=  2.1854E-001
+solLinSys> isol=  0 triggered wrapper for LAPACK's ZGESV
+solve> Done!
+
+solve> Calculation time [calcSphBessels (reg. & irreg)] (CPU & real in s):   4.420E-04  0.000E+00
+solve> Calculation time [calcMieTMat] (CPU & real in s):   1.032E-03  0.000E+00
+solve> Calculation time [calcWignerBigD] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [stageAmat] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [balanceVecJ] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [solLinSys] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [invSqrMat] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [balanceMatJI] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [calcTIJStout] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [calcTIMackowski] (CPU & real in s):   2.021E-01  1.700E-02
+solve> Calculation time [calcMieIntCoeffs] (CPU & real in s):   0.000E+00  0.000E+00
+spectrumFF> Calculation time [Solve: diff. incs] (CPU & real in s):   2.105E-01  1.800E-02
+offsetTmat> Initial Max(|Tmat|)= 6.9E-002 Tr(|Tmat|)= 1.9E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.1E-002 Tr(|Tmat|)= 2.6E-001 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 7.7E-002 Tr(|Tmat|)= 2.1E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.8E-002 Tr(|Tmat|)= 2.8E-001 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 6.9E-002 Tr(|Tmat|)= 1.9E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.1E-002 Tr(|Tmat|)= 2.6E-001 nconv=  5
+diagnoseTmat> Ave&Max(|Tmat|)= 8.94E-004 1.57192E-01 MaxLoc=      36      36
+diagnoseTmat> For i=1:3, |Tmat(i,i)|=  3.73779E-02  1.09716E-01  3.73779E-02
+diagnoseTmat> For i=pmax+1:pmax+3, ~=  1.57192E-01  1.04016E-01  1.57192E-01
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  5
+
+diagnoseTmat> Max(|RelSymErr(Tmat)|)= 4.398E-12 for n,n'=   3  5
+diagnoseTmat> Max(|SymErr(Tmat)|)/Max(|Tmat|)= 9.749E-16 for n,n'=   1  2
+contractTmat> Calculation time [offsetTmat] (CPU & real in s):   4.358E-02  4.000E-03
+contractTmat> Calculation time [calcWignerBigD] (CPU & real in s):   0.000E+00  0.000E+00
+contractTmat> Calculation time [calcVTACsAxial] (CPU & real in s):   0.000E+00  0.000E+00
+contractTmat> Calculation time [calcVTACs] (CPU & real in s):   0.000E+00  0.000E+00
+
+spectrumFF> Calculation time [contractTmat] (CPU & real in s):   5.641E-02  4.000E-03
+calcOAprops> <csExt>=  8.97014139E+03 nConv=  0
+             <csSca>=  6.26474942E+03 nConv=  0
+             <csAbs>=  2.70539197E+03
+
+             <cdExt>= -4.49256196E-12
+             <cdSca>= -9.81233968E-13
+             <cdAbs>= -3.51132799E-12
+
+spectrumFF> Calculation time [calcOAprops] (CPU & real in s):   3.265E-03  1.000E-03
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.22573327E+03  1.73964261E+03  4.86090660E+02  0  5
+                2  4.89896639E+03  3.10390016E+03  1.79506624E+03  0  5
+                3  3.75803804E+03  2.96143993E+03  7.96598109E+02  0  5
+             ---------------------------------------------------
+             Sum  1.08827377E+04  7.80498270E+03  3.07775500E+03
+
+calcCsStout> Calculation time [calcVTACs] (CPU & real in s):   3.499E-02  3.000E-03
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  4.36481608E+03  2.60910214E+03  1.75571394E+03  0  5
+                2  3.68901745E+03  3.12926155E+03  5.59755892E+02  5  5
+                3  2.81755965E+03  2.13515940E+03  6.82400249E+02  5  5
+             ---------------------------------------------------
+             Sum  1.08713932E+04  7.87352310E+03  2.99787008E+03
+
+calcCsStout> Calculation time [calcVTACs] (CPU & real in s):   3.477E-02  3.000E-03
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.23015852E+03  2.35761004E+03  8.72548475E+02  0  5
+                2  4.38960949E+03  3.24976864E+03  1.13984085E+03  0  5
+                3  3.71044721E+03  2.55539324E+03  1.15505398E+03  5  5
+             ---------------------------------------------------
+             Sum  1.13302152E+04  8.16277192E+03  3.16744330E+03
+
+calcCsStout> Calculation time [calcVTACs] (CPU & real in s):   3.474E-02  3.000E-03
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.36039084E+03  1.99113471E+03  1.36925613E+03  0  5
+                2  4.19837435E+03  2.98339307E+03  1.21498128E+03  0  5
+                3  2.86515048E+03  2.54120609E+03  3.23944382E+02  5  5
+             ---------------------------------------------------
+             Sum  1.04239157E+04  7.51573388E+03  2.90818179E+03
+
+calcCsStout> Calculation time [calcVTACs] (CPU & real in s):   3.473E-02  3.000E-03
+spectrumFF> Calculation time [calcCsStout] (CPU & real in s):   1.430E-01  1.200E-02
+spectrumFF> Calculation time [partial abs. for Mie scatterer] (CPU & real in s):   4.832E-03  0.000E+00
+spectrumFF> Calculation time (CPU & real in s):   4.230E-01  3.500E-02
+termsProgram> Program run time (CPU & real in s):  7.452E-01  6.200E-02

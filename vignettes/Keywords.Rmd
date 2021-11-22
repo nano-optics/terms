@@ -1,0 +1,230 @@
+---
+title: keywords
+keep_tex: true
+header-includes:
+   - \usepackage{mathrsfs}
+output:
+  pdf_document:
+    keep_tex: true
+---
+
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\ldoc}{\mathscr{C}}
+\newcommand{\ldocbar}{\overline{\mathscr{C}}}
+\newcommand{\ldocoa}{\langle\mathscr{C}\rangle}
+\newcommand{\ldocoabar}{\langle\overline{\mathscr{C}}\rangle}
+
+
+List of (case sensitive!) keywords and corresponding arguments supported by **TERMS**. Optional arguments are enclosed in square brackets (nested in some cases).
+
+## Main input parameters
+
+### ModeAndScheme _M_ _S_ 
+
+If present, this keyword must appear first in the input file. It takes two arguments: positive integer _M_ specifying the desired calculation mode; and non-negative integer _S_ specifying the solution scheme to be used. The default values are _M_ = 2 and _S_ = 3. 
+
+**Mode of calculation**
+
+- _M = 1_ triggers a single- or multi-wavelength calculation of near fields $\bE$, $\bB$ and optical chirality $\ldoc$, at fixed incidence directions and/or orientation-averaged
+- _M = 2_ triggers a single- or multi-wavelength calculation of far-field properties (e.g. spectra of optical cross-sections), at fixed incidence directions and/or orientation-averaged
+- _M = 3_ triggers a single- or multi-wavelength calculation of polarimetric properties, such as Stokes scattering vectors, phase matrix, and differential scattering cross sections for multiple incidence and/or scattering angles
+
+**Scheme of solution**
+
+- _S = 0_ will seek solutions for the given angles of incidence, without
+  seeking the collective _T_-matrix
+- _S > 0_ will calculate the collective _T_-matrix either (_S = 1_) by direct inversion of the complete linear system to obtain $T^{(i,j)}$, or (_S = 2_) by using Stout's iterative scheme for $T^{(i,j)}$, or (_S = 3_) by using Mackowski's scheme for $T^{(i)}$. Note that fixed-orientation cross-sections are also calculated when $S > 0$.  
+
+### Scatterers _N_
+
+This keyword must appear last in the `inputfile`, with a single positive integer argument _N_ specifying the number of scatterers. The following _N_ lines specify all the required parameters per scatterer, and each line must contain five or more space-separated fields, i.e.
+```
+Tag x y z R [ a b c [ d ] ]     ( if Tag(1:2)  = "TF" )   
+            [ a [ b [ c ] ] ]   ( if Tag(1:2) != "TF" )
+```
+
+where _Tag_ is a contiguous string, which may contain one underscore to separate the root from the suffix; _x_, _y_, _z_ are the Cartesian coordinates (in the lab frame) for the scatterer, whose smallest circumscribing sphere has radius _R_. All other subsequent parameters (inside square brackets) depend on the root of _Tag_ .  
+
+Before the root of _Tag_ is parsed, the code first looks for a suffix of the form _\_S?_ and associates it with a multipole selection predefined using the [`MultipoleSelections`](#MultipoleSelections) keyword. 
+
+If the root of _Tag_ is either "TF1", "TF2", ... , or "TF9", which correspond to a 1-body _T_-matrix file listed under the [`TmatrixFiles`](#TmatrixFiles) keyword, floats _a_, _b_, and _c_ can be supplied to specify the Euler angles describing the scatterer orientation (default angle values are all zero). Another float _d_ may be included to specify the aspect ratio for spheroids, which is currently only used for mapping local field intensity and visualising the geometry. Note that _d_ is interpreted as the ratio of polar (along z) to equatorial (along x or y) length, so that _d > 1_ for prolate spheroids, _d < 1_ for oblate spheroids, and _d = 1_ for spheres (default). Note that for nonspherical particles the circumscribing sphere radius _R_ is used to check for potential geometrical overlap between particles, but also in the balancing scheme.
+
+If the root of _Tag_ is not "TF?", the 1-body _T_-matrix is computed using Mie theory, which is applicable to coated spheres. The expected _Tag_ format is `L0@L1@L2@L3`, with the character "@" delimiting substrings that specify the material dielectric function of each concentric region inside the scatterer, starting from the core (_L0_) and going *outward*. The number of coats is inferred from the number of instances of "@" and is currently capped at 3. _Tag_ of a homogeneous sphere (without layers) should not contain any "@", i.e. _Tag = L0_. Currently accepted values for _L?_ are: "Au", "Ag", "Al", "Cr", "Pt", "Pd", "Si", and "Water" which trigger internal calculation of the wavelength-dependent dielectric functions for the required material, or "DF1", "DF2", ..., "DF9" to impose a custom dielectric function listed under the [`DielectricFunctions`](#dielectricfunctions-nfuns-1) keyword. For coated spheres, the outer radius of each region must be specified by floats _R_, _a_, _b_, _c_ in the order of decreasing size (i.e. going radially *inward*). 
+
+
+### TmatrixFiles _N<sub>files</sub>_
+
+Specifies the number of external _T_-matrix files (default: _N<sub>files</sub> = 0_). The subsequent _N<sub>files</sub>_ lines are each read as a string and then interpreted as a filename. Wrap the string in quotation marks if it contains the relative path or special characters, e.g. `"../../tmatrix_Au_spheroid_50x20_water.tmat"`. Note that the wavelengths in each file must _exactly_ correspond to the values specified by the [`Wavelength`](#wavelength-l1-l2-n-) keyword.
+
+The _T_-matrix file format is as follows:
+
+-  First line is a comment (starts with a `#`) describing the format `# s sp n np m mp Tr Ti`
+-  Second line is also a comment and starts with `# lambda= N1 nelements= N2` where N1 is the wavelength in nanometres, and N2 is the number of _T_-matrix elements to be read below
+-  Subsequent lines contain the indices and _T_-matrix values for this particular wavelength, 
+1. `s`, `sp` are the row (resp. column) index of the multipole mode (1: magnetic, or 2: electric)
+1. `n`, `np` index the multipole degree
+1. `m`, `mp` index the multipole order
+1. `Tr`, `Ti` give the real and imaginary part of the _T_-matrix element
+-  If the file contains multiple wavelengths each wavelength-block is appended below the others, starting with a line `# lambda= N1 nelements= N2`
+
+An example is show below,
+
+```
+# s sp n np m mp Tr Ti | prolate Au spheroid in water, a = 10 c = 20
+# lambda= 400 nelements= 136 epsIn= -1.649657+5.771763j
+  1   1   1   1  -1  -1 -1.189109253832815e-04 -2.161746691903687e-05
+  1   1   1   1   0   0 -5.597968829951113e-05 -3.444956295771378e-05
+... [truncated]
+  2   2   4   4   3   3 -3.794740062663782e-11 5.636725538124517e-11
+  2   2   4   4   4   4 -1.113090425618089e-11 1.707927691863483e-11
+# lambda= 402 nelements= 136 epsIn= -1.661947+5.778032j
+  1   1   1   1  -1  -1 -1.160926707256971e-04 -2.119092055798298e-05
+  1   1   1   1   0   0 -5.467319805259745e-05 -3.371696756234449e-05
+... [truncated]
+  2   2   4   4   3   3 -1.279170882307354e-15 1.378894188143029e-13
+  2   2   4   4   4   4 -3.752182192799965e-16 4.101975575297762e-14
+... [truncated]
+# lambda= 800 nelements= 136 epsIn= -24.236565+1.458652j
+  1   1   1   1  -1  -1 -7.146139984375531e-07 -1.120611667309835e-05
+  1   1   1   1   0   0 -4.379156367712547e-07 -7.955074171282911e-06
+... [truncated]
+  2   2   4   4   3   3 -1.240958755455683e-15 1.346747233206165e-13
+  2   2   4   4   4   4 -3.640885008022631e-16 4.006450678480949e-14
+... [truncated]
+```
+
+### DielectricFunctions _N<sub>funs</sub>_
+
+Specifies the number of custom dielectric functions (default: _N<sub>funs</sub> = 0_). The subsequent _N<sub>funs</sub>_ lines are each read as a string and then interpreted as either (i) a filename with a relative path or (ii) real and imaginary parts of a constant (i.e. wavelength independent) value. Wrap each string in quotation marks, e.g. `"../../epsAg.dat"` or `"2.25d0 0.0d0"`. The files should be in three-column format: the wavelength in nm followed by the real and imaginary parts of the relative dielectric function on each line. The wavelength range in the file must fully contain the range specified by the [`Wavelength`](#wavelength-l1-l2-n-) keyword, but the values need not correspond exactly as they will be linearly interpolated.
+
+### Medium _X_
+
+Sets the real-valued dielectric constant of the host medium (default value is _1.0_). If _X < 0_ then its magnitude is interpreted as a refractive index (_s_), from which the dielectric constant is calculated as $X=s^2$.
+
+### Wavelength _L_<sub>1</sub> [ _L<sub>2</sub>_  _n_ ]
+
+Without the optional arguments, this keyword changes the default wavelength of 666.0 nm to a new value _L_<sub>1</sub>. Including the optional arguments will specify a closed interval [ _L_<sub>1</sub>, _L_<sub>2</sub> ] divided into _n_ regular grid spacings, thus producing _n+1_ wavelengths. 
+
+### Incidence _a_ _b_ _c_ [ _p_ ] / [ _n<sub>a</sub>_ _n<sub>b</sub>_ _n<sub>c</sub>_ ] 
+
+or
+
+`Incidence file filename [p]`
+
+This keyword modifies the incident plane-wave. The default travel direction (along _z_ in lab-frame) can be changed by the Euler angles _a_ in the range $[0,2\pi)$ and _b_ in the range $[0,\pi]$, coinciding with the azimuthal and the polar angles, respectively, of the spherical polar coordinates in the lab frame. In addition, the amplitude vector can then be rotated about the new travel direction by the third Euler angle _c_ in the range $[0,2\pi)$. All three Euler angles are defined in accordance with the right-hand rule, and the sequence of rotation angles _a_,_b_,_c_ corresponds to the intrinsic ZY'Z' convention. That is: rotate by _a_ about the current _z_-axis, then by _b_ about the new _y_-axis, and finally by _c_ about the new _z_-axis.
+
+Near-field and polarimetric calculations, i.e. in modes _M = 1_ and _M = 3_, require the polarisation of incident light to be specified. The polarisation is set by integer _p_, with _|p| = 1_ setting linear polarisation, _|p| = 2_ setting circular polarisation, and the sign selecting one of the two Jones vectors in each case (positive: _x_-linear-polarised or _R_-circular-polarised; negative: _y_-linear polarised or _L_-circular-polarised). Note: for a circularly polarised wave travelling along _z_, right-circular (_R_) polarisation means that the amplitude vector is rotating clockwise in the _xy_-plane from the receiver's viewpoint (looking in the negative _z_ direction). 
+
+The integer _p_ can be omitted in mode _M = 2_, because its output is always calculated for all four polarisations.
+
+A negative value of argument _a_, _b_, and/or _c_ will trigger discretisation of the corresponding angle range to produce $-a$ grid points (resp. $-b$ or $-c$). The grid points are uniformly spaced for the first and the third Euler angles, but for the second (i.e. polar) angle the discretisation is such that the cosine is uniformly spaced. The range maximum of each angle can be divided by an (optional) integer _n<sub>a</sub>_, _n<sub>b</sub>_, and _n<sub>c</sub>_, to help avoid evaluating redundant grid points in the presence of symmetry. Note that the discretisation is constructed so that orientational averages are computed as a uniformly weighted Riemann sum with the midpoint rule. The weight _w<sub>i</sub>_ of each grid-point _i_ is simply $w_i = 1/n_\text{gps}$, where _n<sub>gps</sub>_ is the total number of grid points. 
+
+Multiple incidences can also be read from a file, in which case the argument _a_ must be a string starting with 'f' or 'F', and _b_ must specify the filename. The file's first line must contain the total incidence count, _n<sub>inc</sub>_, and the subsequent _n<sub>inc</sub>_ lines each must contain four space-separated values: the three Euler angles (_a<sub>i</sub>_, _b<sub>i</sub>_, _c<sub>i</sub>_) and the weight _w<sub>i</sub>_ of each incidence. The weights are only used to compute rotational
+averages for convenience, which is a common use-case.
+
+In `Mode = 1` (near-field calculations), if `p` is set to `p=1` (default value, linear polarisaiton), the orientation average of the local degree of optical chirality $\ldocoa$ will be calculated for both RCP and LCP (noting that linear polarisation would give 0 everywhere, when orientation-averaged). Since the calculation can be time-consuming, setting `p=+/-2` triggers the calculation for only that specific circular
+polarisation.
+
+
+### MultipoleCutoff _n<sub>1</sub>_ [ _n<sub>2</sub>_ [ _t_ ] ]
+
+Change the primary multipole cutoff (used for irregular offsetting when staging the linear system) from the default value of 8 to _n<sub>1</sub>_. Another cutoff (used for regular offsetting when "contracting" the collective _T_-matrix) can be set to _n<sub>2</sub>_ >= _n<sub>1</sub>_ (equality by default). A relative tolerance $10^t$ (with $t<0$
+and $t = -8$ by default) is used in the test for convergence of cross-sections with
+respect to multipole order $n=1\dots n_2$ (the summation can terminate below $n_2$ if the relative tolerance is reached).
+
+### MultipoleSelections _N<sub>s</sub>_
+
+This keyword defines optional multipole selections for individual _T_-matrices, and it must be followed by _N<sub>s</sub>_ lines with two fields: (i) a string _range_ specifying the selection range; and (ii) a string _type_ specifying the selection type. For example:
+
+```
+MultipoleSelections 3
+MM1:4_EM1:4_ME1:4_EE1:4  blocks
+MM1:0_EM1:15_ME1:8_EE1:0  rows
+EM1:1_ME1:1  columns
+```
+
+The _range_ string must be of the form MM?:?_EM?:?_ME?:?_EE?:?, with the underscores separating the ranges for each _T_-matrix block (e.g. MM or ME), and each range specified by a closed multipole interval ?:? (e.g. _n_<sub>lo</sub>:_n_<sub>hi</sub> = 1:4). No selection will be applied to blocks not included in _range_, so these "missing" blocks will remain unmasked (left "as is" in the original _T_-matrix). On the other hand, a whole block can be masked (zeroed out) by setting _n_<sub>lo</sub> > _n_<sub>hi</sub> (e.g. `MM1:0` will set the whole `MM` block of the _T_-matrix to 0).
+
+The _type_ string must either start from "c", "r", or "b", to indicated that the selection is either applied to _T_-matrix columns, rows, or both (producing non-zero blocks). To clarify, if _type(1:1) = "c"_, then all _T_-matrix columns corresponding to multipole orders _n < n_<sub>lo</sub> and _n > n_<sub>hi</sub> will be set to zero. For _type(1:1) = "b"_, columns **and** rows for _n < n_<sub>lo</sub> and _n > n_<sub>hi</sub> will be set to zero.
+
+
+## Output control
+
+### OutputFormat _F_ [ _filename_ ]
+
+If present, the output file format _F_ can be switched between plain text ("TXT", default) and HDF5 ("HDF5"). With "HDF5", the results will be stored in a file with name "results.h5", or a user-specified filename (extension _.h5_ added automatically).
+
+### Verbosity _L_
+
+Keyword specifying integer-valued verbosity level _L_. Silent mode (_L = 0_) prints only error statements and warnings. Physical quantities and some status indicators are printed at low verbosity (_L = 1_, default value), with various timings and convergence indicators released at medium verbosity (_L = 2_). The highest level (_L = 3_) is intended for debugging, releasing all print statements throughout the code.
+
+## Near-field specific keywords
+
+### SpacePoints _filename_ 
+
+or 
+
+`SpacePoints` _x<sub>lo</sub>_ _x<sub>hi</sub>_ _n<sub>x</sub>_ _y<sub>lo</sub>_ _y<sub>hi</sub>_ _n<sub>y</sub>_ _z<sub>lo</sub>_ _z<sub>hi</sub>_ _n<sub>z</sub>_
+
+Read (from a file) or calculate (on a regular grid) the Cartesian coordinates of points in space, where the local field quantities are to be evaluated. The file's first line should contain the total number of space-points, and the subsequent lines must contain the _x_, _y_, and _z_ coordinates of each point. A regular grid is specified by a closed interval, e.g. _[ x<sub>lo</sub>,  x<sub>hi</sub> ]_, and the number of bins (_n<sub>x</sub>_) the interval is to be divided into (thus producing _n<sub>x</sub>+1_ grid points along that dimension).
+
+### MapQuantity [_p_] [_E_] [_B_] [_C_]
+
+Specify the near-field quantities of interest, in `Mode = 1`. Integer argument _p_ selects the raising power applied to the field amplitude $|\mathbf{E}|^p$ or $|\mathbf{B}|^p$. The default is _p = 2_ to produce the field intensity, _p = 1_ is for the field amplitude |E|,  _p = 4_ for the (approximate) Raman enhancement factor _~|E|<sup>4</sup>_. Setting _p = 0_ will output the real and imaginary parts of the (vector!) field components at each space-point. 
+
+The optional letters [_E_] [_B_] [_C_] (default: _E_ only) determine which of the near-field properties (electric and magnetic fields and normalised value of local degree of optical chirality) will be calculated.
+
+### MapOaQuantity [_E_] [_B_] [_C_]
+
+This is a keyword applicable in `Mode = 1`, to request the calculation of analytical orientation-averaged near-field quantities \(\langle|\mathbf{E}|^2\rangle\), \(\langle|\mathbf{B}|^2\rangle\), or \(\langle\overline{\mathscr{C}}\rangle\). If this keyword is not included in the input file, by default none will be calculated. Note that the [`Incidence`](#incidence-a-b-c-p-na-nb-nc-) keyword is used to select LCP and RCP (or both).
+
+
+## Polarimetry keywords
+
+### ScatteringAngles _a_ _b_ _c_ / [ _n<sub>a</sub>_ _n<sub>b</sub>_ _n<sub>c</sub>_ ] 
+
+This keyword specifies the scattering angles in `Mode = 3` (polarimetry), for the calculation of Stokes scattering vectors at different scattering angles. The parameters have the same interpretation as for [`Incidence`](#incidence-a-b-c-p-na-nb-nc-).
+
+Multiple scattering angles can also be read from a file, in which case the argument `a` must be a string starting with ‘f’ or ‘F’, and `b` must specify the filename. The file’s first line must contain the number of scattering angles, _nsca_, and the subsequent _nsca_ lines each must contain three space-separated values: the three Euler angles (_ai_, _bi_, _ci_) for each scattering angle. 
+
+-----
+
+## Advanced use / development
+
+### ScattererCentredCrossSections
+
+Applicable in Scheme 1 and 2.
+
+Triggers Stout’s formulae for fixed and orientation-averaged cross-sections based on scatterer-centred matrices; otherwise, the default behaviour is to collapse the coefficients to a common origin. Note that this does not affect the calculation of fixed-orientation partial shell absorptions for layered spheres, as they are calculated separately.
+
+
+### DumpCollectiveTmatrix [ _filename_ ]
+
+If the collective _T_-matrix is computed, this keyword will dump it to a file "tmat_col.txt" or a user-specified _filename_. The [file format](#tmatrixfiles-nfiles-1) is self-consistent, so that the generated _T_-matrix can be fed back into **TERMS** for subsequent calculations.
+
+
+### DumpPrestagedA
+
+If present, dumps a sparse-format representation of the full matrix comprising the individual _T_-matrices after potential masking followed by rotation in their respective frame. 
+
+
+### DumpStagedA
+
+If present, dumps a sparse-format representation of the full matrix comprising the individual _T_-matrices along the diagonal blocks, and translation matrices in the off-diagonal blocks. The exact form of this matrix is scheme-dependent.
+
+### DumpScaCoeff
+
+If present, dumps the scattering coefficients in to a file "Sca_coeff" for different incidence angles.
+
+### DumpIncCoeff
+
+If present, dumps the incident coefficients in to a file "Inc_coeff" for different incidencd angles.
+
+### DisableStoutBalancing
+
+If present, switches off the balancing.
+
+### DisableRTR
+
+Switches off the three-step translation of _T_-matrices, where a general translation is decomposed into a rotation, _z_-axial translation, and then the inverse rotation. Instead, a one-step transformation is performed by pre- or post-multiplying by a single matrix containing the general translation-addition coefficients.

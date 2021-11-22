@@ -1,0 +1,13 @@
+ModeAndScheme 2 3 
+MultipoleCutoff 8
+Wavelength 300 700 200
+Medium 1.7689 # epsilon of water
+Incidence 0 1.570796 0 2 # k_x, E_y
+
+OutputFormat HDF5 cross_sections_dimer
+
+DumpCollectiveTmatrix collective_dimer.tmat
+
+# 2 spheres along z, at x=y=0
+Scatterers 2
+Ag 0.0 0.0 -30.0 25.0Ag 0.0 0.0  30.0 25.0

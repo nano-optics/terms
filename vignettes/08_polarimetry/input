@@ -1,0 +1,24 @@
+ModeAndScheme 3 3
+MultipoleCutoff 8
+Wavelength 200 1000 800
+Medium 1.7689 
+Incidence 0 0 0 1
+ScatteringAngles 0 -180 0 1 0 0 0 
+
+OutputFormat HDF5 farfield
+
+TmatrixFiles 1
+"tmat_Au60100_step1.tmat"
+
+Scatterers 5
+TF1   100    0       -175    50.0  1.57   0.73   0  1.67
+TF1   70.71  70.71   -87.5   50.0  2.36   0.73   0  1.67
+TF1   0.0    100.0    0.0    50.0  3.14   0.73   0  1.67
+TF1   -70.71  70.71   87.5   50.0  -2.36  0.73   0  1.67
+TF1   -100    0.0     175    50.0  -1.57  0.73   0  1.67
+
+
+
+
+
+

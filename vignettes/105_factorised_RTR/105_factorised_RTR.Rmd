@@ -1,0 +1,71 @@
+---
+title: "RTR factorisation"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 3
+    fig_width: 7
+    fig_height: 3
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{RTR factorisation}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE}
+library(knitr)
+library(terms)
+options(cli.num_colors = 1)
+theme_set(egg::theme_article())
+opts_chunk$set(echo = FALSE, warning =FALSE,
+               message=FALSE, comment='', 
+               tidy=FALSE, cache = FALSE)
+do.call(read_chunk, list(path = "_run.R"))
+```
+
+## Objective
+
+This example illustrates the two ways to calculate VTACS. We compare the far-field spectra for a linear chain of gold spheres, with and without the `DisableRTR` keyword. 
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+library(terms)
+cat('  <style>
+.x3d_scene {
+float:right;
+margin:0em;
+ }
+  </style>')
+
+ge <- get_geometry('input2')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,300), width = "200px", height = "150px") 
+```
+
+This simulation uses the following `input` file 
+
+```{r tpl}
+```
+
+(with and without the keyword).
+
+```{r read, cache=FALSE}
+```
+
+
+## Orientation-averaged results
+
+The far-field cross-sections are the same, and timing comparison doesn't reveal a meaningful difference on this example.
+
+```{r oa}
+```
+
+
+-----
+
+```{r cleanup}
+```
+_Last run: `r format(Sys.time(), '%d %B, %Y')`_

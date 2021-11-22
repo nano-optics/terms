@@ -1,0 +1,18 @@
+ModeAndScheme 2 0 
+MultipoleCutoff 8
+ScattererCentredCrossSections
+Incidence -100 0.0 0.0 1
+OutputFormat HDF5 xsec_8_-100_8_
+Wavelength 633
+Medium 1.7689 # epsilon of water
+Verbosity 3 # show timings
+
+Scatterers  8 
+Au                    100                   0                     -87.5                 30                   
+Au                    70.7106781186548      70.7106781186547      -62.5                 30                   
+Au                    6.12323399573677e-15  100                   -37.5                 30                   
+Au                    -70.7106781186547     70.7106781186548      -12.5                 30                   
+Au                    -100                  1.22464679914735e-14  12.5                  30                   
+Au                    -70.7106781186548     -70.7106781186547     37.5                  30                   
+Au                    -1.83697019872103e-14 -100                  62.5                  30                   
+Au                    70.7106781186547      -70.7106781186548     87.5                  30                   

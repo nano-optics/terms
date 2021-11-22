@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "TERMS"
+abstract: TERMS stands for T-matrix for Electromagnetic Radiation with Multiple Scatterers — it is a Fortran program to simulate the near-field and far-field optical properties of collections of particles. TERMS solves rigorously the Maxwell equations via the superposition T-matrix method, where incident and scattered fields are decomposed into a basis of multipolar electric and magnetic spherical waves.
+authors:
+- family-names: "Schebarchov"
+  given-names: "Dmitri"
+  orcid: "https://orcid.org/0000-0002-8385-7186"
+- family-names: "Fazel-Najafabadi"
+  given-names: "Atefeh"
+  orcid: "https://orcid.org/0000-0001-9040-2596"
+- family-names: "Le Ru"
+  given-names: "Eric"
+  orcid: "https://orcid.org/0000-0002-3052-9947"
+- family-names: "Auguié"
+  given-names: "Baptiste"
+  orcid: "https://orcid.org/0000-0002-2749-5715"
+version: 1.0.0
+doi: 10.5281/zenodo.1234
+date-released: 2021-11-15
+url: "http://nano-optics.ac.nz/terms"
+license: MPL-2.0
+repository-code: "https://github.com/nano-optics/terms/"

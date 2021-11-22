@@ -1,0 +1,10 @@
+ModeAndScheme 2 3 
+MultipoleCutoff 5
+Wavelength 300 700 200
+Medium 1.7689 # epsilon of water
+OutputFormat HDF5 results
+
+Incidence  -7 0.0 0.0 4 1 1 # 7 incidences along phi in [0, pi/2]
+
+Scatterers 2
+Ag -40.0 0.0 0.0 30.0Ag  40.0 0.0 0.0 30.0

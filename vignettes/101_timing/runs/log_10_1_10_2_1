@@ -1,0 +1,1701 @@
+readInputFile> Parsing file runs/input_10_1_10_2_1
+
+readInputFile> Detected keyword ModeAndScheme
+               mode=2 => spectrum_FF for far-field quantities
+               scheme=2 => Seek T^(ji) using Stout's iterative scheme
+readInputFile> Detected keyword MultipoleCutoff
+               Supplied ncut(1)= 10
+               Setting ncut(2)= ncut(1)
+               Setting ncut(3)=  -8
+readInputFile> Detected keyword ScattererCentredCrossSections
+readInputFile> Detected keyword Incidence
+readInputFile> Euler angle alpha [0,2Pi) value=   0.00000000
+readInputFile> Euler angle beta  [0,Pi]  value=   0.00000000
+readInputFile> Euler angle gamma [0,2Pi) value=   0.00000000
+               Incident Euler angles and weights:
+                  alpha        beta        gamma        weight
+               0.00000000   0.00000000   0.00000000   1.00000000
+readInputFile> Detected keyword OutputFormat
+               OutputFormat=HDF5
+               All output files are stored in file "xsec_10_0_10_.h5                                                "
+readInputFile> Detected keyword Wavelength
+               Wavelength (nm):   633.0000
+readInputFile> Detected keyword Medium
+               Constant host epsilon=  1.7689E+0
+readInputFile> Detected keyword Verbosity
+               verbosity=     3 (High)
+
+readInputFile> Detected keyword Scatterers
+ with nscat=   10
+
+readInputFile> Descriptor(s) and circumscribing sphere(s):
+
+ scatID String                  x          y          z         R_0
+    1   Au                  1.0000E+2  0.0000E+0 -1.1250E+2  3.0000E+1
+    2   Au                  7.0711E+1  7.0711E+1 -8.7500E+1  3.0000E+1
+    3   Au                 **********  1.0000E+2 -6.2500E+1  3.0000E+1
+    4   Au                 -7.0711E+1  7.0711E+1 -3.7500E+1  3.0000E+1
+    5   Au                 -1.0000E+2 ********** -1.2500E+1  3.0000E+1
+    6   Au                 -7.0711E+1 -7.0711E+1  1.2500E+1  3.0000E+1
+    7   Au                 ********** -1.0000E+2  3.7500E+1  3.0000E+1
+    8   Au                  7.0711E+1 -7.0711E+1  6.2500E+1  3.0000E+1
+    9   Au                  1.0000E+2 **********  8.7500E+1  3.0000E+1
+   10   Au                  7.0711E+1  7.0711E+1  1.1250E+2  3.0000E+1
+
+readInputFile> Individual geometry characteristic(s):
+
+ scatID Details
+    1   Mie with ncoats= 0
+    2   Mie with ncoats= 0
+    3   Mie with ncoats= 0
+    4   Mie with ncoats= 0
+    5   Mie with ncoats= 0
+    6   Mie with ncoats= 0
+    7   Mie with ncoats= 0
+    8   Mie with ncoats= 0
+    9   Mie with ncoats= 0
+   10   Mie with ncoats= 0
+
+readInputFile> Dielectric functions for (coated) Mie scatterer(s):
+
+ scatID volID Label
+    1     0     Au
+    2     0     Au
+    3     0     Au
+    4     0     Au
+    5     0     Au
+    6     0     Au
+    7     0     Au
+    8     0     Au
+    9     0     Au
+   10     0     Au
+
+readInputFile> Finished parsing  9 keywords
+
+
+spectrumFF> ===== Wavelength:   633.00 (nm) ======================
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  1.00000000E+00  0.00000000E+00
+          y:  0.00000000E+00  0.00000000E+00  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  0.00000000E+00  0.00000000E+00
+          y:  0.00000000E+00  1.00000000E+00  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  7.07106781E-01  0.00000000E+00
+          y:  0.00000000E+00  0.00000000E+00 -7.07106781E-01
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  7.07106781E-01  0.00000000E+00
+          y:  0.00000000E+00  0.00000000E+00  7.07106781E-01
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+solve> Prestaging...
+solve> Prestaged Mie T-matrix for scatterer   1 with q, nlo, nhi = 1  1 10
+solve> Prestaged Mie T-matrix for scatterer   1 with q, nlo, nhi = 2  1 10
+solve> Prestaged Mie T-matrix for scatterer   2 with q, nlo, nhi = 1  1 10
+solve> Prestaged Mie T-matrix for scatterer   2 with q, nlo, nhi = 2  1 10
+solve> Prestaged Mie T-matrix for scatterer   3 with q, nlo, nhi = 1  1 10
+solve> Prestaged Mie T-matrix for scatterer   3 with q, nlo, nhi = 2  1 10
+solve> Prestaged Mie T-matrix for scatterer   4 with q, nlo, nhi = 1  1 10
+solve> Prestaged Mie T-matrix for scatterer   4 with q, nlo, nhi = 2  1 10
+solve> Prestaged Mie T-matrix for scatterer   5 with q, nlo, nhi = 1  1 10
+solve> Prestaged Mie T-matrix for scatterer   5 with q, nlo, nhi = 2  1 10
+solve> Prestaged Mie T-matrix for scatterer   6 with q, nlo, nhi = 1  1 10
+solve> Prestaged Mie T-matrix for scatterer   6 with q, nlo, nhi = 2  1 10
+solve> Prestaged Mie T-matrix for scatterer   7 with q, nlo, nhi = 1  1 10
+solve> Prestaged Mie T-matrix for scatterer   7 with q, nlo, nhi = 2  1 10
+solve> Prestaged Mie T-matrix for scatterer   8 with q, nlo, nhi = 1  1 10
+solve> Prestaged Mie T-matrix for scatterer   8 with q, nlo, nhi = 2  1 10
+solve> Prestaged Mie T-matrix for scatterer   9 with q, nlo, nhi = 1  1 10
+solve> Prestaged Mie T-matrix for scatterer   9 with q, nlo, nhi = 2  1 10
+solve> Prestaged Mie T-matrix for scatterer  10 with q, nlo, nhi = 1  1 10
+solve> Prestaged Mie T-matrix for scatterer  10 with q, nlo, nhi = 2  1 10
+solve> Staging and solving/inverting...
+solve> Determine the T-matrix using Stout's solution scheme
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.4E+008 Tr(|Tmat|)= 3.5E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 7.4E+008 Tr(|Tmat|)= 3.5E-001 nconv=  6
+offsetTmat>   Final Max(|Tmat|)= 1.1E+021 Tr(|Tmat|)= 1.1E+022 unconverged!
+invSqrMat> ZLANGE: Supplied matrix 1-norm=  1.2059E+000
+invSqrMat> ZGECON returned RCOND=  6.3371E-001
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.4E+008 Tr(|Tmat|)= 3.5E-001 nconv=  6
+calcTIJStout> Calculation time [post-inversion] (CPU & real in s):   1.762E-01  1.500E-02
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.9E+005 Tr(|Tmat|)= 1.4E-001 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.5E-002 Tr(|Tmat|)= 2.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.2E+007 Tr(|Tmat|)= 9.2E-002 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 9.2E+007 Tr(|Tmat|)= 1.8E-001 nconv=  5
+offsetTmat>   Final Max(|Tmat|)= 7.9E+014 Tr(|Tmat|)= 4.6E+015 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 1.5E-002 Tr(|Tmat|)= 2.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.7E+005 Tr(|Tmat|)= 2.6E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 3.6E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 3.8E-001 nconv=  6
+offsetTmat>   Final Max(|Tmat|)= 1.1E+021 Tr(|Tmat|)= 1.1E+022 unconverged!
+invSqrMat> ZLANGE: Supplied matrix 1-norm=  1.2489E+000
+invSqrMat> ZGECON returned RCOND=  6.1307E-001
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.9E+005 Tr(|Tmat|)= 1.4E-001 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.5E-002 Tr(|Tmat|)= 2.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.2E+007 Tr(|Tmat|)= 9.2E-002 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.5E-002 Tr(|Tmat|)= 2.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.7E+005 Tr(|Tmat|)= 2.6E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 3.6E-001 nconv=  6
+calcTIJStout> Calculation time [post-inversion] (CPU & real in s):   6.730E-01  5.600E-02
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.6E+004 Tr(|Tmat|)= 1.0E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.4E+004 Tr(|Tmat|)= 2.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-003 Tr(|Tmat|)= 1.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.0E+007 Tr(|Tmat|)= 4.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.0E+007 Tr(|Tmat|)= 1.4E-001 nconv=  5
+offsetTmat>   Final Max(|Tmat|)= 1.5E+013 Tr(|Tmat|)= 6.5E+013 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+003 Tr(|Tmat|)= 1.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.1E+005 Tr(|Tmat|)= 1.5E-001 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E+008 Tr(|Tmat|)= 9.6E-002 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.0E+008 Tr(|Tmat|)= 1.9E-001 nconv=  5
+offsetTmat>   Final Max(|Tmat|)= 8.7E+014 Tr(|Tmat|)= 4.9E+015 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 8.2E-003 Tr(|Tmat|)= 1.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.9E+003 Tr(|Tmat|)= 5.6E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.6E+005 Tr(|Tmat|)= 2.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 3.7E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 3.8E-001 nconv=  6
+offsetTmat>   Final Max(|Tmat|)= 1.1E+021 Tr(|Tmat|)= 1.1E+022 unconverged!
+invSqrMat> ZLANGE: Supplied matrix 1-norm=  1.2587E+000
+invSqrMat> ZGECON returned RCOND=  5.8309E-001
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.6E+004 Tr(|Tmat|)= 1.0E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.4E+004 Tr(|Tmat|)= 2.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-003 Tr(|Tmat|)= 1.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.0E+007 Tr(|Tmat|)= 4.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+003 Tr(|Tmat|)= 1.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.1E+005 Tr(|Tmat|)= 1.5E-001 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E+008 Tr(|Tmat|)= 9.6E-002 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 8.2E-003 Tr(|Tmat|)= 1.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.9E+003 Tr(|Tmat|)= 5.6E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.6E+005 Tr(|Tmat|)= 2.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 3.7E-001 nconv=  6
+calcTIJStout> Calculation time [post-inversion] (CPU & real in s):   1.490E+00  1.240E-01
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.1E+003 Tr(|Tmat|)= 8.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.0E+003 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-003 Tr(|Tmat|)= 1.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.8E+004 Tr(|Tmat|)= 1.5E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.3E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.6E+007 Tr(|Tmat|)= 3.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.6E+007 Tr(|Tmat|)= 1.3E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.6E+012 Tr(|Tmat|)= 9.0E+012 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E+003 Tr(|Tmat|)= 1.8E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.7E+004 Tr(|Tmat|)= 1.0E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.6E-002 Tr(|Tmat|)= 3.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.8E+004 Tr(|Tmat|)= 2.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-003 Tr(|Tmat|)= 1.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.7E+007 Tr(|Tmat|)= 4.6E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.7E+007 Tr(|Tmat|)= 1.5E-001 nconv=  5
+offsetTmat>   Final Max(|Tmat|)= 1.7E+013 Tr(|Tmat|)= 6.8E+013 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 8.9E-003 Tr(|Tmat|)= 1.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.5E+002 Tr(|Tmat|)= 7.6E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.6E-002 Tr(|Tmat|)= 3.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+003 Tr(|Tmat|)= 2.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.1E+005 Tr(|Tmat|)= 1.5E-001 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.1E+008 Tr(|Tmat|)= 9.7E-002 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.1E+008 Tr(|Tmat|)= 1.9E-001 nconv=  5
+offsetTmat>   Final Max(|Tmat|)= 9.0E+014 Tr(|Tmat|)= 4.9E+015 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 6.3E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.1E+002 Tr(|Tmat|)= 3.9E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.9E-003 Tr(|Tmat|)= 1.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E+003 Tr(|Tmat|)= 6.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.6E+005 Tr(|Tmat|)= 2.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 3.7E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 3.8E-001 nconv=  6
+offsetTmat>   Final Max(|Tmat|)= 1.1E+021 Tr(|Tmat|)= 1.1E+022 unconverged!
+invSqrMat> ZLANGE: Supplied matrix 1-norm=  1.2635E+000
+invSqrMat> ZGECON returned RCOND=  5.7781E-001
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.1E+003 Tr(|Tmat|)= 8.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.0E+003 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-003 Tr(|Tmat|)= 1.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.8E+004 Tr(|Tmat|)= 1.5E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.3E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.6E+007 Tr(|Tmat|)= 3.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E+003 Tr(|Tmat|)= 1.8E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.7E+004 Tr(|Tmat|)= 1.0E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.6E-002 Tr(|Tmat|)= 3.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.8E+004 Tr(|Tmat|)= 2.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-003 Tr(|Tmat|)= 1.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.7E+007 Tr(|Tmat|)= 4.6E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-003 Tr(|Tmat|)= 1.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.5E+002 Tr(|Tmat|)= 7.6E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.6E-002 Tr(|Tmat|)= 3.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+003 Tr(|Tmat|)= 2.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.1E+005 Tr(|Tmat|)= 1.5E-001 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.1E+008 Tr(|Tmat|)= 9.7E-002 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 6.3E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.1E+002 Tr(|Tmat|)= 3.9E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.9E-003 Tr(|Tmat|)= 1.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E+003 Tr(|Tmat|)= 6.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.6E+005 Tr(|Tmat|)= 2.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 3.7E-001 nconv=  6
+calcTIJStout> Calculation time [post-inversion] (CPU & real in s):   2.623E+00  2.190E-01
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.8E+003 Tr(|Tmat|)= 8.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.6E+002 Tr(|Tmat|)= 1.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-003 Tr(|Tmat|)= 1.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.9E+003 Tr(|Tmat|)= 1.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.1E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.6E+004 Tr(|Tmat|)= 1.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.3E+007 Tr(|Tmat|)= 2.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.3E+007 Tr(|Tmat|)= 1.2E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.8E+012 Tr(|Tmat|)= 9.3E+012 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.1E+002 Tr(|Tmat|)= 1.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.3E+003 Tr(|Tmat|)= 9.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.2E+003 Tr(|Tmat|)= 2.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.4E+004 Tr(|Tmat|)= 1.6E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.1E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.3E+007 Tr(|Tmat|)= 3.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.3E+007 Tr(|Tmat|)= 1.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.0E+012 Tr(|Tmat|)= 9.9E+012 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 8.9E-003 Tr(|Tmat|)= 1.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.3E+002 Tr(|Tmat|)= 8.8E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E+003 Tr(|Tmat|)= 2.0E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.7E+004 Tr(|Tmat|)= 1.0E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.1E+004 Tr(|Tmat|)= 2.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-003 Tr(|Tmat|)= 1.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.8E+007 Tr(|Tmat|)= 4.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.8E+007 Tr(|Tmat|)= 1.4E-001 nconv=  5
+offsetTmat>   Final Max(|Tmat|)= 1.7E+013 Tr(|Tmat|)= 7.1E+013 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 7.1E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.3E+002 Tr(|Tmat|)= 4.9E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+002 Tr(|Tmat|)= 8.6E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+003 Tr(|Tmat|)= 2.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.1E+005 Tr(|Tmat|)= 1.5E-001 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.1E+008 Tr(|Tmat|)= 9.7E-002 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.1E+008 Tr(|Tmat|)= 1.9E-001 nconv=  5
+offsetTmat>   Final Max(|Tmat|)= 9.1E+014 Tr(|Tmat|)= 5.0E+015 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.2E+002 Tr(|Tmat|)= 4.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.1E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.5E+002 Tr(|Tmat|)= 4.8E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.9E-003 Tr(|Tmat|)= 1.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E+003 Tr(|Tmat|)= 6.7E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.6E+005 Tr(|Tmat|)= 2.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 3.7E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 3.9E-001 nconv=  6
+offsetTmat>   Final Max(|Tmat|)= 1.1E+021 Tr(|Tmat|)= 1.1E+022 unconverged!
+invSqrMat> ZLANGE: Supplied matrix 1-norm=  1.2695E+000
+invSqrMat> ZGECON returned RCOND=  5.7246E-001
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.8E+003 Tr(|Tmat|)= 8.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.6E+002 Tr(|Tmat|)= 1.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-003 Tr(|Tmat|)= 1.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.9E+003 Tr(|Tmat|)= 1.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.1E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.6E+004 Tr(|Tmat|)= 1.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.3E+007 Tr(|Tmat|)= 2.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.1E+002 Tr(|Tmat|)= 1.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.3E+003 Tr(|Tmat|)= 9.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.2E+003 Tr(|Tmat|)= 2.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.4E+004 Tr(|Tmat|)= 1.6E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.1E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.3E+007 Tr(|Tmat|)= 3.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-003 Tr(|Tmat|)= 1.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.3E+002 Tr(|Tmat|)= 8.8E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E+003 Tr(|Tmat|)= 2.0E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.7E+004 Tr(|Tmat|)= 1.0E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.1E+004 Tr(|Tmat|)= 2.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-003 Tr(|Tmat|)= 1.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.8E+007 Tr(|Tmat|)= 4.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.1E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.3E+002 Tr(|Tmat|)= 4.9E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+002 Tr(|Tmat|)= 8.6E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+003 Tr(|Tmat|)= 2.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.1E+005 Tr(|Tmat|)= 1.5E-001 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.1E+008 Tr(|Tmat|)= 9.7E-002 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.2E+002 Tr(|Tmat|)= 4.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.1E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.5E+002 Tr(|Tmat|)= 4.8E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.9E-003 Tr(|Tmat|)= 1.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E+003 Tr(|Tmat|)= 6.7E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.6E+005 Tr(|Tmat|)= 2.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 3.7E-001 nconv=  6
+calcTIJStout> Calculation time [post-inversion] (CPU & real in s):   4.084E+00  3.400E-01
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 9.2E+003 Tr(|Tmat|)= 9.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.3E+002 Tr(|Tmat|)= 1.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.1E-003 Tr(|Tmat|)= 1.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.4E+002 Tr(|Tmat|)= 9.1E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 7.3E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.5E+003 Tr(|Tmat|)= 7.0E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.7E+004 Tr(|Tmat|)= 9.0E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 3.9E-003 Tr(|Tmat|)= 9.5E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.1E+007 Tr(|Tmat|)= 2.4E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 3.1E+007 Tr(|Tmat|)= 9.5E-002 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.5E+012 Tr(|Tmat|)= 1.5E+013 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.0E+003 Tr(|Tmat|)= 1.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.0E+003 Tr(|Tmat|)= 9.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.3E+002 Tr(|Tmat|)= 2.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E+003 Tr(|Tmat|)= 1.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.1E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.2E+004 Tr(|Tmat|)= 1.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.0E+007 Tr(|Tmat|)= 3.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.0E+007 Tr(|Tmat|)= 1.3E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.1E+012 Tr(|Tmat|)= 1.1E+013 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 9.1E-003 Tr(|Tmat|)= 1.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E+003 Tr(|Tmat|)= 9.7E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.1E+002 Tr(|Tmat|)= 2.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 8.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.3E+003 Tr(|Tmat|)= 2.3E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.5E+004 Tr(|Tmat|)= 1.6E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.3E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.5E+007 Tr(|Tmat|)= 3.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.5E+007 Tr(|Tmat|)= 1.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.1E+012 Tr(|Tmat|)= 1.0E+013 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 7.3E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.7E+002 Tr(|Tmat|)= 5.6E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.6E+002 Tr(|Tmat|)= 9.8E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E+003 Tr(|Tmat|)= 2.0E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.7E+004 Tr(|Tmat|)= 1.0E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.4E+004 Tr(|Tmat|)= 2.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.1E-003 Tr(|Tmat|)= 1.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.9E+007 Tr(|Tmat|)= 4.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.9E+007 Tr(|Tmat|)= 1.4E-001 nconv=  5
+offsetTmat>   Final Max(|Tmat|)= 1.8E+013 Tr(|Tmat|)= 7.4E+013 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.3E+002 Tr(|Tmat|)= 5.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.1E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.7E+002 Tr(|Tmat|)= 6.0E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+002 Tr(|Tmat|)= 9.0E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+003 Tr(|Tmat|)= 2.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.1E+005 Tr(|Tmat|)= 1.5E-001 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.1E+008 Tr(|Tmat|)= 9.7E-002 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.1E+008 Tr(|Tmat|)= 2.0E-001 nconv=  5
+offsetTmat>   Final Max(|Tmat|)= 9.3E+014 Tr(|Tmat|)= 5.1E+015 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 3.9E-003 Tr(|Tmat|)= 9.5E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.1E+002 Tr(|Tmat|)= 4.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.6E+002 Tr(|Tmat|)= 5.0E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.3E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.6E+002 Tr(|Tmat|)= 5.2E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 9.1E-003 Tr(|Tmat|)= 1.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E+003 Tr(|Tmat|)= 7.0E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.6E+005 Tr(|Tmat|)= 2.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 3.7E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 3.9E-001 nconv=  6
+offsetTmat>   Final Max(|Tmat|)= 1.1E+021 Tr(|Tmat|)= 1.1E+022 unconverged!
+invSqrMat> ZLANGE: Supplied matrix 1-norm=  1.2741E+000
+invSqrMat> ZGECON returned RCOND=  5.9541E-001
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 9.2E+003 Tr(|Tmat|)= 9.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.3E+002 Tr(|Tmat|)= 1.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.1E-003 Tr(|Tmat|)= 1.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.4E+002 Tr(|Tmat|)= 9.1E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 7.3E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.5E+003 Tr(|Tmat|)= 7.0E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.7E+004 Tr(|Tmat|)= 9.0E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 3.9E-003 Tr(|Tmat|)= 9.5E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.1E+007 Tr(|Tmat|)= 2.4E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.0E+003 Tr(|Tmat|)= 1.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.0E+003 Tr(|Tmat|)= 9.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.3E+002 Tr(|Tmat|)= 2.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E+003 Tr(|Tmat|)= 1.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.1E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.2E+004 Tr(|Tmat|)= 1.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.0E+007 Tr(|Tmat|)= 3.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.1E-003 Tr(|Tmat|)= 1.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E+003 Tr(|Tmat|)= 9.7E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.1E+002 Tr(|Tmat|)= 2.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 8.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.3E+003 Tr(|Tmat|)= 2.3E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.5E+004 Tr(|Tmat|)= 1.6E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.3E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.5E+007 Tr(|Tmat|)= 3.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.3E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.7E+002 Tr(|Tmat|)= 5.6E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.6E+002 Tr(|Tmat|)= 9.8E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E+003 Tr(|Tmat|)= 2.0E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.7E+004 Tr(|Tmat|)= 1.0E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.4E+004 Tr(|Tmat|)= 2.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.1E-003 Tr(|Tmat|)= 1.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.9E+007 Tr(|Tmat|)= 4.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.3E+002 Tr(|Tmat|)= 5.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.1E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.7E+002 Tr(|Tmat|)= 6.0E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+002 Tr(|Tmat|)= 9.0E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+003 Tr(|Tmat|)= 2.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.1E+005 Tr(|Tmat|)= 1.5E-001 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.1E+008 Tr(|Tmat|)= 9.7E-002 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 3.9E-003 Tr(|Tmat|)= 9.5E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.1E+002 Tr(|Tmat|)= 4.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.6E+002 Tr(|Tmat|)= 5.0E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.3E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.6E+002 Tr(|Tmat|)= 5.2E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 9.1E-003 Tr(|Tmat|)= 1.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E+003 Tr(|Tmat|)= 7.0E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.6E+005 Tr(|Tmat|)= 2.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 3.7E-001 nconv=  6
+calcTIJStout> Calculation time [post-inversion] (CPU & real in s):   5.870E+00  4.890E-01
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.3E+004 Tr(|Tmat|)= 1.3E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.8E+003 Tr(|Tmat|)= 1.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.2E+002 Tr(|Tmat|)= 7.9E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.4E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.5E+002 Tr(|Tmat|)= 5.8E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 6.1E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.2E+003 Tr(|Tmat|)= 5.6E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.9E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.1E+004 Tr(|Tmat|)= 6.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.5E-003 Tr(|Tmat|)= 7.6E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.7E+007 Tr(|Tmat|)= 1.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 3.7E+007 Tr(|Tmat|)= 1.1E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.1E+013 Tr(|Tmat|)= 2.7E+013 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.3E+003 Tr(|Tmat|)= 2.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 9.6E+003 Tr(|Tmat|)= 1.0E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.4E+002 Tr(|Tmat|)= 1.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 1.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.8E+002 Tr(|Tmat|)= 1.0E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.2E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.7E+003 Tr(|Tmat|)= 7.7E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.8E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.2E+004 Tr(|Tmat|)= 9.5E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.9E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.7E+007 Tr(|Tmat|)= 2.4E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 3.7E+007 Tr(|Tmat|)= 1.1E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.5E+012 Tr(|Tmat|)= 1.6E+013 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.7E+003 Tr(|Tmat|)= 1.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.9E+003 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.0E+003 Tr(|Tmat|)= 8.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.5E+002 Tr(|Tmat|)= 2.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.7E-003 Tr(|Tmat|)= 1.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E+003 Tr(|Tmat|)= 1.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.3E+004 Tr(|Tmat|)= 1.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.1E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.1E+007 Tr(|Tmat|)= 3.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.1E+007 Tr(|Tmat|)= 1.4E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.2E+012 Tr(|Tmat|)= 1.1E+013 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 7.4E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E+003 Tr(|Tmat|)= 6.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 1.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E+003 Tr(|Tmat|)= 1.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.1E+002 Tr(|Tmat|)= 2.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 8.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.4E+003 Tr(|Tmat|)= 2.3E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 1.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.6E+004 Tr(|Tmat|)= 1.6E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.4E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.5E+007 Tr(|Tmat|)= 3.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.5E+007 Tr(|Tmat|)= 1.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.1E+012 Tr(|Tmat|)= 9.8E+012 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 6.1E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.7E+003 Tr(|Tmat|)= 6.5E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.4E+002 Tr(|Tmat|)= 6.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.7E-003 Tr(|Tmat|)= 1.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.7E+002 Tr(|Tmat|)= 1.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E+003 Tr(|Tmat|)= 2.0E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.7E+004 Tr(|Tmat|)= 1.0E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.5E+004 Tr(|Tmat|)= 2.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.0E+007 Tr(|Tmat|)= 4.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.0E+007 Tr(|Tmat|)= 1.3E-001 nconv=  5
+offsetTmat>   Final Max(|Tmat|)= 1.8E+013 Tr(|Tmat|)= 7.6E+013 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 4.9E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.5E+003 Tr(|Tmat|)= 5.6E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.8E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.9E+002 Tr(|Tmat|)= 6.0E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.8E+002 Tr(|Tmat|)= 6.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 1.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.0E+002 Tr(|Tmat|)= 9.3E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+003 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.1E+005 Tr(|Tmat|)= 1.5E-001 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.2E+008 Tr(|Tmat|)= 9.7E-002 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.2E+008 Tr(|Tmat|)= 2.0E-001 nconv=  5
+offsetTmat>   Final Max(|Tmat|)= 9.3E+014 Tr(|Tmat|)= 5.2E+015 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 4.5E-003 Tr(|Tmat|)= 7.6E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.3E+003 Tr(|Tmat|)= 3.8E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.9E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.5E+002 Tr(|Tmat|)= 5.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.1E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.7E+002 Tr(|Tmat|)= 5.3E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.4E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.6E+002 Tr(|Tmat|)= 5.4E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.2E+003 Tr(|Tmat|)= 7.2E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.6E+005 Tr(|Tmat|)= 2.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 3.7E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 4.0E-001 nconv=  6
+offsetTmat>   Final Max(|Tmat|)= 1.1E+021 Tr(|Tmat|)= 1.1E+022 unconverged!
+invSqrMat> ZLANGE: Supplied matrix 1-norm=  1.2755E+000
+invSqrMat> ZGECON returned RCOND=  5.6610E-001
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.3E+004 Tr(|Tmat|)= 1.3E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.8E+003 Tr(|Tmat|)= 1.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.2E+002 Tr(|Tmat|)= 7.9E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.4E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.5E+002 Tr(|Tmat|)= 5.8E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 6.1E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.2E+003 Tr(|Tmat|)= 5.6E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.9E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.1E+004 Tr(|Tmat|)= 6.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.5E-003 Tr(|Tmat|)= 7.6E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.7E+007 Tr(|Tmat|)= 1.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.3E+003 Tr(|Tmat|)= 2.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 9.6E+003 Tr(|Tmat|)= 1.0E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.4E+002 Tr(|Tmat|)= 1.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 1.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.8E+002 Tr(|Tmat|)= 1.0E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.2E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.7E+003 Tr(|Tmat|)= 7.7E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.8E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.2E+004 Tr(|Tmat|)= 9.5E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.9E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.7E+007 Tr(|Tmat|)= 2.4E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.7E+003 Tr(|Tmat|)= 1.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.9E+003 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.0E+003 Tr(|Tmat|)= 8.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.5E+002 Tr(|Tmat|)= 2.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.7E-003 Tr(|Tmat|)= 1.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E+003 Tr(|Tmat|)= 1.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.3E+004 Tr(|Tmat|)= 1.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.1E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.1E+007 Tr(|Tmat|)= 3.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.4E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E+003 Tr(|Tmat|)= 6.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 1.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E+003 Tr(|Tmat|)= 1.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.1E+002 Tr(|Tmat|)= 2.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 8.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.4E+003 Tr(|Tmat|)= 2.3E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 1.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.6E+004 Tr(|Tmat|)= 1.6E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.4E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.5E+007 Tr(|Tmat|)= 3.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.1E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.7E+003 Tr(|Tmat|)= 6.5E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.4E+002 Tr(|Tmat|)= 6.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.7E-003 Tr(|Tmat|)= 1.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.7E+002 Tr(|Tmat|)= 1.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E+003 Tr(|Tmat|)= 2.0E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.7E+004 Tr(|Tmat|)= 1.0E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.5E+004 Tr(|Tmat|)= 2.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.0E+007 Tr(|Tmat|)= 4.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.9E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.5E+003 Tr(|Tmat|)= 5.6E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.8E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.9E+002 Tr(|Tmat|)= 6.0E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.8E+002 Tr(|Tmat|)= 6.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 1.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.0E+002 Tr(|Tmat|)= 9.3E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+003 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.1E+005 Tr(|Tmat|)= 1.5E-001 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.2E+008 Tr(|Tmat|)= 9.7E-002 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 4.5E-003 Tr(|Tmat|)= 7.6E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.3E+003 Tr(|Tmat|)= 3.8E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.9E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.5E+002 Tr(|Tmat|)= 5.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.1E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.7E+002 Tr(|Tmat|)= 5.3E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.4E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.6E+002 Tr(|Tmat|)= 5.4E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.2E+003 Tr(|Tmat|)= 7.2E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.6E+005 Tr(|Tmat|)= 2.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 3.7E-001 nconv=  6
+calcTIJStout> Calculation time [post-inversion] (CPU & real in s):   7.252E+00  6.270E-01
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.4E+004 Tr(|Tmat|)= 1.4E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.7E+003 Tr(|Tmat|)= 2.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.8E+002 Tr(|Tmat|)= 7.9E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.4E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.2E+002 Tr(|Tmat|)= 5.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.1E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.8E+002 Tr(|Tmat|)= 5.3E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.1E+003 Tr(|Tmat|)= 4.9E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.2E-003 Tr(|Tmat|)= 8.6E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.3E+004 Tr(|Tmat|)= 4.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.9E-003 Tr(|Tmat|)= 9.0E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.4E+007 Tr(|Tmat|)= 1.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.4E+007 Tr(|Tmat|)= 1.3E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.2E+013 Tr(|Tmat|)= 6.5E+004 nconv=  7
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.7E+003 Tr(|Tmat|)= 1.8E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.3E+004 Tr(|Tmat|)= 1.3E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.0E+003 Tr(|Tmat|)= 1.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.6E+002 Tr(|Tmat|)= 9.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.3E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.9E+002 Tr(|Tmat|)= 6.8E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 6.9E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.4E+003 Tr(|Tmat|)= 6.5E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.6E+004 Tr(|Tmat|)= 6.6E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.2E-003 Tr(|Tmat|)= 8.6E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.3E+007 Tr(|Tmat|)= 1.6E-002 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 4.3E+007 Tr(|Tmat|)= 1.2E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.0E+013 Tr(|Tmat|)= 2.7E+013 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.7E+003 Tr(|Tmat|)= 9.1E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.7E+003 Tr(|Tmat|)= 2.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 9.6E+003 Tr(|Tmat|)= 9.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.6E+002 Tr(|Tmat|)= 1.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.8E+002 Tr(|Tmat|)= 1.1E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.3E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.7E+003 Tr(|Tmat|)= 8.0E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.9E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.2E+004 Tr(|Tmat|)= 9.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.7E+007 Tr(|Tmat|)= 2.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 3.7E+007 Tr(|Tmat|)= 1.1E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.3E+012 Tr(|Tmat|)= 1.5E+013 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 7.4E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E+003 Tr(|Tmat|)= 5.8E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.0E+003 Tr(|Tmat|)= 1.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.9E+003 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.0E+003 Tr(|Tmat|)= 8.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.6E+002 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E+003 Tr(|Tmat|)= 1.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.3E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.3E+004 Tr(|Tmat|)= 1.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.1E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.0E+007 Tr(|Tmat|)= 3.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.0E+007 Tr(|Tmat|)= 1.3E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.1E+012 Tr(|Tmat|)= 1.0E+013 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 6.1E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.7E+003 Tr(|Tmat|)= 6.5E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.3E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.3E+003 Tr(|Tmat|)= 7.3E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.1E+003 Tr(|Tmat|)= 1.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.2E+002 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 8.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.4E+003 Tr(|Tmat|)= 2.3E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.6E+004 Tr(|Tmat|)= 1.6E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.4E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.4E+007 Tr(|Tmat|)= 3.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.4E+007 Tr(|Tmat|)= 1.4E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.1E+012 Tr(|Tmat|)= 9.4E+012 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.4E+003 Tr(|Tmat|)= 6.1E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 6.9E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.9E+003 Tr(|Tmat|)= 7.5E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.3E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.5E+002 Tr(|Tmat|)= 6.8E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.7E+002 Tr(|Tmat|)= 1.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E+003 Tr(|Tmat|)= 2.1E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.7E+004 Tr(|Tmat|)= 1.0E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.6E+004 Tr(|Tmat|)= 2.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.9E+007 Tr(|Tmat|)= 4.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.9E+007 Tr(|Tmat|)= 1.3E-001 nconv=  5
+offsetTmat>   Final Max(|Tmat|)= 1.8E+013 Tr(|Tmat|)= 7.7E+013 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 5.2E-003 Tr(|Tmat|)= 8.6E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.4E+003 Tr(|Tmat|)= 4.6E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.7E+003 Tr(|Tmat|)= 6.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.9E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.9E+002 Tr(|Tmat|)= 6.3E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.3E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.9E+002 Tr(|Tmat|)= 6.6E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.1E+002 Tr(|Tmat|)= 9.5E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+003 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.1E+005 Tr(|Tmat|)= 1.5E-001 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.2E+008 Tr(|Tmat|)= 9.6E-002 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.2E+008 Tr(|Tmat|)= 2.0E-001 nconv=  5
+offsetTmat>   Final Max(|Tmat|)= 9.4E+014 Tr(|Tmat|)= 5.2E+015 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 4.9E-003 Tr(|Tmat|)= 9.0E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.4E+003 Tr(|Tmat|)= 4.9E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.2E-003 Tr(|Tmat|)= 8.6E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.3E+003 Tr(|Tmat|)= 4.3E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.3E+002 Tr(|Tmat|)= 5.2E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.1E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.6E+002 Tr(|Tmat|)= 5.3E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.4E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.6E+002 Tr(|Tmat|)= 5.4E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.2E+003 Tr(|Tmat|)= 7.2E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.6E+005 Tr(|Tmat|)= 2.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 3.7E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 4.0E-001 nconv=  6
+offsetTmat>   Final Max(|Tmat|)= 1.1E+021 Tr(|Tmat|)= 1.1E+022 unconverged!
+invSqrMat> ZLANGE: Supplied matrix 1-norm=  1.2777E+000
+invSqrMat> ZGECON returned RCOND=  5.6152E-001
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.4E+004 Tr(|Tmat|)= 1.4E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.7E+003 Tr(|Tmat|)= 2.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.8E+002 Tr(|Tmat|)= 7.9E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.4E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.2E+002 Tr(|Tmat|)= 5.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.1E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.8E+002 Tr(|Tmat|)= 5.3E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.1E+003 Tr(|Tmat|)= 4.9E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.2E-003 Tr(|Tmat|)= 8.6E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.3E+004 Tr(|Tmat|)= 4.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.9E-003 Tr(|Tmat|)= 9.0E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.4E+007 Tr(|Tmat|)= 1.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.7E+003 Tr(|Tmat|)= 1.8E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.3E+004 Tr(|Tmat|)= 1.3E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.0E+003 Tr(|Tmat|)= 1.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.6E+002 Tr(|Tmat|)= 9.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.3E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.9E+002 Tr(|Tmat|)= 6.8E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 6.9E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.4E+003 Tr(|Tmat|)= 6.5E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.6E+004 Tr(|Tmat|)= 6.6E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.2E-003 Tr(|Tmat|)= 8.6E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.3E+007 Tr(|Tmat|)= 1.6E-002 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.7E+003 Tr(|Tmat|)= 9.1E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.7E+003 Tr(|Tmat|)= 2.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 9.6E+003 Tr(|Tmat|)= 9.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.6E+002 Tr(|Tmat|)= 1.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.8E+002 Tr(|Tmat|)= 1.1E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.3E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.7E+003 Tr(|Tmat|)= 8.0E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.9E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.2E+004 Tr(|Tmat|)= 9.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.7E+007 Tr(|Tmat|)= 2.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.4E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E+003 Tr(|Tmat|)= 5.8E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.0E+003 Tr(|Tmat|)= 1.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.9E+003 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.0E+003 Tr(|Tmat|)= 8.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.6E+002 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E+003 Tr(|Tmat|)= 1.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.3E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.3E+004 Tr(|Tmat|)= 1.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.1E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.0E+007 Tr(|Tmat|)= 3.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.1E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.7E+003 Tr(|Tmat|)= 6.5E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.3E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.3E+003 Tr(|Tmat|)= 7.3E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.1E+003 Tr(|Tmat|)= 1.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.2E+002 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 8.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.4E+003 Tr(|Tmat|)= 2.3E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.6E+004 Tr(|Tmat|)= 1.6E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.4E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.4E+007 Tr(|Tmat|)= 3.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.4E+003 Tr(|Tmat|)= 6.1E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 6.9E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.9E+003 Tr(|Tmat|)= 7.5E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.3E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.5E+002 Tr(|Tmat|)= 6.8E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.7E+002 Tr(|Tmat|)= 1.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E+003 Tr(|Tmat|)= 2.1E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.7E+004 Tr(|Tmat|)= 1.0E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.6E+004 Tr(|Tmat|)= 2.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.9E+007 Tr(|Tmat|)= 4.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.2E-003 Tr(|Tmat|)= 8.6E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.4E+003 Tr(|Tmat|)= 4.6E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.7E+003 Tr(|Tmat|)= 6.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.9E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.9E+002 Tr(|Tmat|)= 6.3E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.3E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.9E+002 Tr(|Tmat|)= 6.6E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.8E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.1E+002 Tr(|Tmat|)= 9.5E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+003 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.1E+005 Tr(|Tmat|)= 1.5E-001 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.2E+008 Tr(|Tmat|)= 9.6E-002 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 4.9E-003 Tr(|Tmat|)= 9.0E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.4E+003 Tr(|Tmat|)= 4.9E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.2E-003 Tr(|Tmat|)= 8.6E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.3E+003 Tr(|Tmat|)= 4.3E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.3E+002 Tr(|Tmat|)= 5.2E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.1E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.6E+002 Tr(|Tmat|)= 5.3E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.4E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.6E+002 Tr(|Tmat|)= 5.4E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.2E+003 Tr(|Tmat|)= 7.2E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.6E+005 Tr(|Tmat|)= 2.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.5E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 3.7E-001 nconv=  6
+calcTIJStout> Calculation time [post-inversion] (CPU & real in s):   8.415E+00  7.680E-01
+offsetTmat> Initial Max(|Tmat|)= 8.6E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E+003 Tr(|Tmat|)= 1.0E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.0E+003 Tr(|Tmat|)= 1.7E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.8E+003 Tr(|Tmat|)= 1.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.2E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.3E+002 Tr(|Tmat|)= 4.8E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.6E+002 Tr(|Tmat|)= 4.8E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.5E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.3E+002 Tr(|Tmat|)= 4.3E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 8.5E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.1E+003 Tr(|Tmat|)= 3.0E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.4E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.5E+004 Tr(|Tmat|)= 6.5E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.2E+007 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.2E+007 Tr(|Tmat|)= 1.2E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.1E+012 Tr(|Tmat|)= 2.2E+012 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.9E+002 Tr(|Tmat|)= 9.6E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.4E+004 Tr(|Tmat|)= 1.4E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.3E+003 Tr(|Tmat|)= 2.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E+003 Tr(|Tmat|)= 8.9E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.6E+002 Tr(|Tmat|)= 6.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.8E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.2E+002 Tr(|Tmat|)= 6.1E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.2E+003 Tr(|Tmat|)= 5.3E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 9.8E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.7E+004 Tr(|Tmat|)= 4.2E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.4E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+007 Tr(|Tmat|)= 2.3E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.9E+007 Tr(|Tmat|)= 1.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.3E+013 Tr(|Tmat|)= 7.5E+004 nconv=  7
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.0E+002 Tr(|Tmat|)= 5.7E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.4E+003 Tr(|Tmat|)= 1.9E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.3E+004 Tr(|Tmat|)= 1.3E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E+003 Tr(|Tmat|)= 1.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.6E+002 Tr(|Tmat|)= 9.5E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.4E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.0E+002 Tr(|Tmat|)= 7.2E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 7.0E-003 Tr(|Tmat|)= 1.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.4E+003 Tr(|Tmat|)= 6.7E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.5E+004 Tr(|Tmat|)= 6.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 8.5E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.1E+007 Tr(|Tmat|)= 1.5E-002 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 4.1E+007 Tr(|Tmat|)= 1.2E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.0E+013 Tr(|Tmat|)= 2.5E+013 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 7.2E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.2E+002 Tr(|Tmat|)= 3.8E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.7E+003 Tr(|Tmat|)= 1.0E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.7E+003 Tr(|Tmat|)= 2.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 9.6E+003 Tr(|Tmat|)= 9.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.7E+002 Tr(|Tmat|)= 1.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+002 Tr(|Tmat|)= 1.1E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.4E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.7E+003 Tr(|Tmat|)= 8.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.8E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.1E+004 Tr(|Tmat|)= 8.6E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.5E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.3E+007 Tr(|Tmat|)= 2.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 3.3E+007 Tr(|Tmat|)= 1.0E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.1E+012 Tr(|Tmat|)= 1.3E+013 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.8E+002 Tr(|Tmat|)= 4.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.2E+003 Tr(|Tmat|)= 6.8E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.0E+003 Tr(|Tmat|)= 1.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.9E+003 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.0E+003 Tr(|Tmat|)= 8.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.6E+002 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E+003 Tr(|Tmat|)= 1.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.1E+004 Tr(|Tmat|)= 1.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+007 Tr(|Tmat|)= 2.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.9E+007 Tr(|Tmat|)= 1.2E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E+012 Tr(|Tmat|)= 9.5E+012 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 4.5E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.5E+002 Tr(|Tmat|)= 4.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.8E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.8E+003 Tr(|Tmat|)= 7.4E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.4E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.4E+003 Tr(|Tmat|)= 7.6E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.1E+003 Tr(|Tmat|)= 1.1E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.2E+002 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 8.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.4E+003 Tr(|Tmat|)= 2.3E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.5E+004 Tr(|Tmat|)= 1.6E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.2E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.3E+007 Tr(|Tmat|)= 3.5E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.3E+007 Tr(|Tmat|)= 1.3E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.0E+012 Tr(|Tmat|)= 9.2E+012 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 8.5E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.4E+002 Tr(|Tmat|)= 3.8E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.5E+003 Tr(|Tmat|)= 6.8E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 7.0E-003 Tr(|Tmat|)= 1.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.9E+003 Tr(|Tmat|)= 7.6E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.4E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.5E+002 Tr(|Tmat|)= 6.9E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.8E+002 Tr(|Tmat|)= 1.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E+003 Tr(|Tmat|)= 2.1E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.7E+004 Tr(|Tmat|)= 1.0E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.6E+004 Tr(|Tmat|)= 2.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.9E+007 Tr(|Tmat|)= 4.6E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.9E+007 Tr(|Tmat|)= 1.3E-001 nconv=  5
+offsetTmat>   Final Max(|Tmat|)= 1.8E+013 Tr(|Tmat|)= 7.8E+013 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 5.4E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.3E+002 Tr(|Tmat|)= 4.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 9.8E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.6E+003 Tr(|Tmat|)= 5.3E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.6E+003 Tr(|Tmat|)= 6.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.8E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.8E+002 Tr(|Tmat|)= 6.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.8E+002 Tr(|Tmat|)= 6.5E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.1E+002 Tr(|Tmat|)= 9.4E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+003 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.1E+005 Tr(|Tmat|)= 1.5E-001 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.2E+008 Tr(|Tmat|)= 9.7E-002 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.2E+008 Tr(|Tmat|)= 2.1E-001 nconv=  5
+offsetTmat>   Final Max(|Tmat|)= 9.4E+014 Tr(|Tmat|)= 5.3E+015 unconverged!
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.2E+002 Tr(|Tmat|)= 4.7E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.4E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.4E+003 Tr(|Tmat|)= 5.4E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 8.5E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.2E+003 Tr(|Tmat|)= 4.3E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.5E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.0E+002 Tr(|Tmat|)= 5.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.5E+002 Tr(|Tmat|)= 5.0E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.2E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.5E+002 Tr(|Tmat|)= 5.2E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.2E+003 Tr(|Tmat|)= 7.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.6E+005 Tr(|Tmat|)= 2.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.6E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 3.7E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 4.0E-001 nconv=  6
+offsetTmat>   Final Max(|Tmat|)= 1.1E+021 Tr(|Tmat|)= 1.1E+022 unconverged!
+invSqrMat> ZLANGE: Supplied matrix 1-norm=  1.2822E+000
+invSqrMat> ZGECON returned RCOND=  5.8363E-001
+offsetTmat> Initial Max(|Tmat|)= 8.6E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E+003 Tr(|Tmat|)= 1.0E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.0E+003 Tr(|Tmat|)= 1.7E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.8E+003 Tr(|Tmat|)= 1.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.2E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.3E+002 Tr(|Tmat|)= 4.8E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.6E+002 Tr(|Tmat|)= 4.8E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.5E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.3E+002 Tr(|Tmat|)= 4.3E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 8.5E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.1E+003 Tr(|Tmat|)= 3.0E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.4E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.5E+004 Tr(|Tmat|)= 6.5E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.2E+007 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.9E+002 Tr(|Tmat|)= 9.6E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.4E+004 Tr(|Tmat|)= 1.4E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.3E+003 Tr(|Tmat|)= 2.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E+003 Tr(|Tmat|)= 8.9E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.6E+002 Tr(|Tmat|)= 6.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.8E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.2E+002 Tr(|Tmat|)= 6.1E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.2E+003 Tr(|Tmat|)= 5.3E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 9.8E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.7E+004 Tr(|Tmat|)= 4.2E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.4E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+007 Tr(|Tmat|)= 2.3E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.0E+002 Tr(|Tmat|)= 5.7E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.4E+003 Tr(|Tmat|)= 1.9E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.3E+004 Tr(|Tmat|)= 1.3E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E+003 Tr(|Tmat|)= 1.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.6E+002 Tr(|Tmat|)= 9.5E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.4E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.0E+002 Tr(|Tmat|)= 7.2E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 7.0E-003 Tr(|Tmat|)= 1.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.4E+003 Tr(|Tmat|)= 6.7E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.5E+004 Tr(|Tmat|)= 6.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 8.5E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.1E+007 Tr(|Tmat|)= 1.5E-002 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 7.2E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.2E+002 Tr(|Tmat|)= 3.8E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.7E+003 Tr(|Tmat|)= 1.0E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.7E+003 Tr(|Tmat|)= 2.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 9.6E+003 Tr(|Tmat|)= 9.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.7E+002 Tr(|Tmat|)= 1.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+002 Tr(|Tmat|)= 1.1E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.4E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.7E+003 Tr(|Tmat|)= 8.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.8E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.1E+004 Tr(|Tmat|)= 8.6E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.5E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.3E+007 Tr(|Tmat|)= 2.0E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.8E+002 Tr(|Tmat|)= 4.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.2E+003 Tr(|Tmat|)= 6.8E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.0E+003 Tr(|Tmat|)= 1.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.9E+003 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.0E+003 Tr(|Tmat|)= 8.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.6E+002 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E+003 Tr(|Tmat|)= 1.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.1E+004 Tr(|Tmat|)= 1.2E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+007 Tr(|Tmat|)= 2.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.5E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.5E+002 Tr(|Tmat|)= 4.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.8E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.8E+003 Tr(|Tmat|)= 7.4E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.4E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.4E+003 Tr(|Tmat|)= 7.6E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.8E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.1E+003 Tr(|Tmat|)= 1.1E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.2E+002 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 8.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.4E+003 Tr(|Tmat|)= 2.3E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.5E+004 Tr(|Tmat|)= 1.6E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.2E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.3E+007 Tr(|Tmat|)= 3.5E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 8.5E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.4E+002 Tr(|Tmat|)= 3.8E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.5E+003 Tr(|Tmat|)= 6.8E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 7.0E-003 Tr(|Tmat|)= 1.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.9E+003 Tr(|Tmat|)= 7.6E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.4E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.5E+002 Tr(|Tmat|)= 6.9E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.8E+002 Tr(|Tmat|)= 1.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E+003 Tr(|Tmat|)= 2.1E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.7E+004 Tr(|Tmat|)= 1.0E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 9.6E+004 Tr(|Tmat|)= 2.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.9E+007 Tr(|Tmat|)= 4.6E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.4E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.3E+002 Tr(|Tmat|)= 4.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 9.8E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.6E+003 Tr(|Tmat|)= 5.3E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.6E+003 Tr(|Tmat|)= 6.4E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.8E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.8E+002 Tr(|Tmat|)= 6.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.8E+002 Tr(|Tmat|)= 6.5E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.1E+002 Tr(|Tmat|)= 9.4E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.5E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E+003 Tr(|Tmat|)= 2.1E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.1E+005 Tr(|Tmat|)= 1.5E-001 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.2E+008 Tr(|Tmat|)= 9.7E-002 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.2E+002 Tr(|Tmat|)= 4.7E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.4E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.4E+003 Tr(|Tmat|)= 5.4E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.0E-003 Tr(|Tmat|)= 8.5E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.2E+003 Tr(|Tmat|)= 4.3E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.5E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.0E+002 Tr(|Tmat|)= 5.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.5E+002 Tr(|Tmat|)= 5.0E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.2E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.5E+002 Tr(|Tmat|)= 5.2E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.2E+003 Tr(|Tmat|)= 7.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.8E-002 Tr(|Tmat|)= 3.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.6E+005 Tr(|Tmat|)= 2.8E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.6E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 7.6E+008 Tr(|Tmat|)= 3.7E-001 nconv=  6
+calcTIJStout> Calculation time [post-inversion] (CPU & real in s):   9.677E+00  9.140E-01
+solve> Done!
+
+solve> Calculation time [calcSphBessels (reg. & irreg)] (CPU & real in s):   1.309E-03  2.000E-03
+solve> Calculation time [calcMieTMat] (CPU & real in s):   2.465E-02  1.000E-03
+solve> Calculation time [calcWignerBigD] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [stageAmat] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [balanceVecJ] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [solLinSys] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [invSqrMat] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [balanceMatJI] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [calcTIJStout] (CPU & real in s):   4.972E+01  5.559E+00
+solve> Calculation time [calcTIMackowski] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [calcMieIntCoeffs] (CPU & real in s):   0.000E+00  0.000E+00
+spectrumFF> Calculation time [Solve: diff. incs] (CPU & real in s):   5.069E+01  5.684E+00
+offsetTmat> Initial Max(|Tmat|)= 8.6E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.4E-002 Tr(|Tmat|)= 1.2E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.9E-002 Tr(|Tmat|)= 3.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.7E-003 Tr(|Tmat|)= 1.1E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 7.1E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.8E-003 Tr(|Tmat|)= 6.9E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.6E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.0E-003 Tr(|Tmat|)= 8.0E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 4.2E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.0E-003 Tr(|Tmat|)= 7.3E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 4.5E-003 Tr(|Tmat|)= 8.1E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.1E-003 Tr(|Tmat|)= 5.6E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.1E-003 Tr(|Tmat|)= 9.8E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.2E-003 Tr(|Tmat|)= 6.3E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.4E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.8E-003 Tr(|Tmat|)= 6.6E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 4.3E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E-003 Tr(|Tmat|)= 4.5E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.7E-002 Tr(|Tmat|)= 8.5E-002 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.6E-002 Tr(|Tmat|)= 2.7E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 1.9E-002 Tr(|Tmat|)= 3.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.8E-003 Tr(|Tmat|)= 1.5E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.0E-002 Tr(|Tmat|)= 1.5E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.1E-002 Tr(|Tmat|)= 2.2E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.3E-003 Tr(|Tmat|)= 1.3E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.0E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.7E-003 Tr(|Tmat|)= 8.4E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 6.6E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.7E-003 Tr(|Tmat|)= 9.3E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.4E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.6E-003 Tr(|Tmat|)= 8.2E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.7E-003 Tr(|Tmat|)= 9.9E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.5E-003 Tr(|Tmat|)= 6.2E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 6.1E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.2E-003 Tr(|Tmat|)= 6.1E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.4E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.7E-003 Tr(|Tmat|)= 5.3E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 6.4E-002 Tr(|Tmat|)= 1.2E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.8E-002 Tr(|Tmat|)= 2.9E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E-003 Tr(|Tmat|)= 8.2E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.7E-002 Tr(|Tmat|)= 1.7E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.1E-002 Tr(|Tmat|)= 2.4E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.5E-003 Tr(|Tmat|)= 1.4E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.3E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 9.1E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 7.0E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.7E-003 Tr(|Tmat|)= 9.5E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.5E-003 Tr(|Tmat|)= 7.9E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.7E-003 Tr(|Tmat|)= 9.9E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.1E-003 Tr(|Tmat|)= 5.2E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.1E-003 Tr(|Tmat|)= 9.8E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.9E-003 Tr(|Tmat|)= 4.3E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 7.1E-002 Tr(|Tmat|)= 1.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.9E-002 Tr(|Tmat|)= 2.9E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 7.1E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.6E-003 Tr(|Tmat|)= 4.7E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.1E-003 Tr(|Tmat|)= 1.0E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.1E-002 Tr(|Tmat|)= 2.2E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 6.3E-002 Tr(|Tmat|)= 1.9E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.2E-002 Tr(|Tmat|)= 2.5E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 2.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.5E-003 Tr(|Tmat|)= 1.4E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.4E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.8E-003 Tr(|Tmat|)= 9.0E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 7.0E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.3E-003 Tr(|Tmat|)= 8.6E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.4E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.1E-003 Tr(|Tmat|)= 6.2E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 4.5E-003 Tr(|Tmat|)= 8.1E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.8E-003 Tr(|Tmat|)= 3.3E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.6E-002 Tr(|Tmat|)= 1.8E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.6E-002 Tr(|Tmat|)= 2.9E-001 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 5.6E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.9E-003 Tr(|Tmat|)= 4.5E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.0E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.6E-003 Tr(|Tmat|)= 6.2E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.8E-003 Tr(|Tmat|)= 1.2E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.2E-002 Tr(|Tmat|)= 2.4E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 6.6E-002 Tr(|Tmat|)= 1.9E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.3E-002 Tr(|Tmat|)= 2.6E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 2.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.3E-003 Tr(|Tmat|)= 1.3E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.3E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.4E-003 Tr(|Tmat|)= 7.9E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 6.6E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.7E-003 Tr(|Tmat|)= 6.8E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 4.2E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.5E-003 Tr(|Tmat|)= 4.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.8E-002 Tr(|Tmat|)= 1.8E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 6.0E-002 Tr(|Tmat|)= 2.9E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 4.2E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.5E-003 Tr(|Tmat|)= 4.1E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.6E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.7E-003 Tr(|Tmat|)= 6.8E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.3E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.4E-003 Tr(|Tmat|)= 7.9E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 2.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.3E-003 Tr(|Tmat|)= 1.3E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.3E-002 Tr(|Tmat|)= 2.6E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 6.6E-002 Tr(|Tmat|)= 1.9E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.2E-002 Tr(|Tmat|)= 2.4E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.8E-003 Tr(|Tmat|)= 1.2E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.0E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.6E-003 Tr(|Tmat|)= 6.2E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.6E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.9E-003 Tr(|Tmat|)= 4.5E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 7.8E-002 Tr(|Tmat|)= 1.8E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 6.0E-002 Tr(|Tmat|)= 2.9E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 4.5E-003 Tr(|Tmat|)= 8.1E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.8E-003 Tr(|Tmat|)= 3.3E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.4E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.1E-003 Tr(|Tmat|)= 6.2E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.0E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.3E-003 Tr(|Tmat|)= 8.6E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.4E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.8E-003 Tr(|Tmat|)= 9.0E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 2.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.5E-003 Tr(|Tmat|)= 1.4E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.2E-002 Tr(|Tmat|)= 2.5E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 6.3E-002 Tr(|Tmat|)= 1.9E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.1E-002 Tr(|Tmat|)= 2.2E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.1E-003 Tr(|Tmat|)= 1.0E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 7.1E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.6E-003 Tr(|Tmat|)= 4.7E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 7.6E-002 Tr(|Tmat|)= 1.8E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.6E-002 Tr(|Tmat|)= 2.9E-001 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 5.1E-003 Tr(|Tmat|)= 9.8E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.9E-003 Tr(|Tmat|)= 4.3E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.7E-003 Tr(|Tmat|)= 9.9E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.1E-003 Tr(|Tmat|)= 5.2E-003 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.5E-003 Tr(|Tmat|)= 7.9E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 7.0E-003 Tr(|Tmat|)= 1.4E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.7E-003 Tr(|Tmat|)= 9.5E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.3E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.9E-003 Tr(|Tmat|)= 9.1E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 9.9E-003 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.5E-003 Tr(|Tmat|)= 1.4E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.1E-002 Tr(|Tmat|)= 2.4E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.8E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.7E-002 Tr(|Tmat|)= 1.7E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.9E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.9E-003 Tr(|Tmat|)= 8.2E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 7.1E-002 Tr(|Tmat|)= 1.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.9E-002 Tr(|Tmat|)= 2.9E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 5.4E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.7E-003 Tr(|Tmat|)= 5.3E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 6.1E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.2E-003 Tr(|Tmat|)= 6.1E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.7E-003 Tr(|Tmat|)= 9.9E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.5E-003 Tr(|Tmat|)= 6.2E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.4E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.6E-003 Tr(|Tmat|)= 8.2E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 6.6E-003 Tr(|Tmat|)= 1.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.7E-003 Tr(|Tmat|)= 9.3E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.0E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 5.7E-003 Tr(|Tmat|)= 8.4E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.9E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 7.3E-003 Tr(|Tmat|)= 1.3E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.7E-002 Tr(|Tmat|)= 3.6E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.1E-002 Tr(|Tmat|)= 2.2E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 8.9E-002 Tr(|Tmat|)= 2.7E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.0E-002 Tr(|Tmat|)= 1.5E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 1.9E-002 Tr(|Tmat|)= 3.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 8.8E-003 Tr(|Tmat|)= 1.5E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 6.4E-002 Tr(|Tmat|)= 1.2E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.8E-002 Tr(|Tmat|)= 2.9E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 4.3E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.1E-003 Tr(|Tmat|)= 4.5E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.4E-003 Tr(|Tmat|)= 1.2E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 2.8E-003 Tr(|Tmat|)= 6.6E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.1E-003 Tr(|Tmat|)= 9.8E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.2E-003 Tr(|Tmat|)= 6.3E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 4.5E-003 Tr(|Tmat|)= 8.1E-003 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.1E-003 Tr(|Tmat|)= 5.6E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 4.2E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 3.0E-003 Tr(|Tmat|)= 7.3E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 5.6E-003 Tr(|Tmat|)= 1.1E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.0E-003 Tr(|Tmat|)= 8.0E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 7.1E-003 Tr(|Tmat|)= 1.0E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 4.8E-003 Tr(|Tmat|)= 6.9E-003 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 9.3E-003 Tr(|Tmat|)= 1.7E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 6.7E-003 Tr(|Tmat|)= 1.1E-002 nconv=  3
+offsetTmat> Initial Max(|Tmat|)= 1.9E-002 Tr(|Tmat|)= 3.3E-002 nconv=  2
+offsetTmat>   Final Max(|Tmat|)= 1.0E-002 Tr(|Tmat|)= 1.7E-002 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.6E-002 Tr(|Tmat|)= 2.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.4E-002 Tr(|Tmat|)= 1.2E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 5.7E-002 Tr(|Tmat|)= 8.5E-002 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.6E-002 Tr(|Tmat|)= 2.7E-001 nconv=  6
+diagnoseTmat> Ave&Max(|Tmat|)= 1.87E-004 4.54781E-01 MaxLoc=       2       2
+diagnoseTmat> For i=1:3, |Tmat(i,i)|=  2.44315E-01  4.54781E-01  2.44315E-01
+diagnoseTmat> For i=pmax+1:pmax+3, ~=  3.31430E-01  2.52759E-01  3.31430E-01
+diagnoseTmat> Tr(Tmat) converged to 1.0E-08 for n=  8
+diagnoseTmat> Max(|RelSymErr(Tmat)|)= 6.362E-13 for n,n'=   6  4
+diagnoseTmat> Max(|SymErr(Tmat)|)/Max(|Tmat|)= 3.757E-16 for n,n'=   1  1
+contractTmat> Calculation time [offsetTmat] (CPU & real in s):   4.394E-01  4.470E-01
+contractTmat> Calculation time [calcWignerBigD] (CPU & real in s):   1.346E-03  0.000E+00
+contractTmat> Calculation time [calcVTACsAxial] (CPU & real in s):   5.385E-03  6.000E-03
+contractTmat> Calculation time [calcVTACs] (CPU & real in s):   0.000E+00  0.000E+00
+
+spectrumFF> Calculation time [contractTmat] (CPU & real in s):   4.917E-01  4.910E-01
+calcOaStout> J     csExtOA         csScaOA         csAbsOA         cdExtOA
+               1  3.21343808E+03  1.69443608E+03  9.16266443E+02
+               2  4.49329708E+03  2.69916941E+03  1.14654617E+03
+               3  4.94335954E+03  3.09535421E+03  1.18737131E+03
+               4  4.99598145E+03  2.94041726E+03  1.19317298E+03
+               5  5.01069642E+03  2.63937027E+03  1.20114422E+03
+               6  5.01069642E+03  2.82180397E+03  1.20114422E+03
+               7  4.99598145E+03  3.04718083E+03  1.19317298E+03
+               8  4.94335954E+03  3.02874461E+03  1.18737131E+03
+               9  4.49329708E+03  2.63530244E+03  1.14654617E+03
+              10  3.21343808E+03  1.92260271E+03  9.16266443E+02
+             -------------------------------------------------------------------
+             Sum  4.53135451E+04  2.65243818E+04  1.87891634E+04 -1.95284430E+03
+
+calcOaStout> Calculation time [calcVTACs] (CPU & real in s):   1.332E-01  1.340E-01
+calcOaStout> Calculation time [calcAbsMat] (CPU & real in s):   2.030E-04  0.000E+00
+
+spectrumFF> Calculation time [calcOaStout] (CPU & real in s):   3.707E+02  3.106E+01
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.95624992E+03  2.35004783E+03 -3.93797911E+02  6  5
+                2  6.43380511E+03  5.52175732E+03  9.12047793E+02  6  5
+                3  7.05608604E+03  7.48476164E+03 -4.28675604E+02  6  5
+                4  3.97726276E+03  6.21251202E+03 -2.23524925E+03  5  5
+                5  3.31382670E+03  3.68398395E+03 -3.70157251E+02  5  5
+                6  6.34207330E+03  3.05238414E+03  3.28968916E+03  6  5
+                7  8.07747981E+03  4.01130382E+03  4.06617600E+03  6  5
+                8  6.45296704E+03  4.04825039E+03  2.40471665E+03  6  5
+                9  5.00538196E+03  2.79692648E+03  2.20845548E+03  5  5
+               10  4.18795923E+03  1.46167426E+03  2.72628497E+03  5  5
+             ---------------------------------------------------
+             Sum  5.28030919E+04  4.06236019E+04  1.21794900E+04
+
+calcCsStout> Calculation time [calcVTACs] (CPU & real in s):   8.975E-01  2.380E-01
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.60511927E+03  3.92968643E+03 -3.24567160E+02  6  5
+                2  1.70589301E+03  4.17011863E+03 -2.46422562E+03  6  5
+                3  2.64368211E+03  3.50010534E+03 -8.56423227E+02  5  5
+                4  6.55652643E+03  4.32016487E+03  2.23636156E+03  6  5
+                5  7.40733224E+03  5.55340290E+03  1.85392934E+03  6  5
+                6  4.71202764E+03  4.87218133E+03 -1.60153686E+02  5  5
+                7  4.22998640E+03  3.34686303E+03  8.83123371E+02  5  5
+                8  7.77689270E+03  3.53734010E+03  4.23955261E+03  6  5
+                9  9.67663691E+03  4.61763278E+03  5.05900412E+03  6  5
+               10  7.50354260E+03  4.18039955E+03  3.32314306E+03  5  5
+             ---------------------------------------------------
+             Sum  5.58176393E+04  4.20278949E+04  1.37897444E+04
+
+calcCsStout> Calculation time [calcVTACs] (CPU & real in s):   2.046E-01  2.050E-01
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.22736413E+03  4.19641840E+03 -9.69054270E+02  6  5
+                2  4.92481829E+03  6.45358446E+03 -1.52876618E+03  6  5
+                3  6.35040057E+03  7.15344139E+03 -8.03040826E+02  6  5
+                4  7.16239788E+03  6.71888484E+03  4.43513033E+02  6  5
+                5  7.47974048E+03  5.92881186E+03  1.55092862E+03  6  5
+                6  7.56646238E+03  5.16737147E+03  2.39909091E+03  6  5
+                7  7.70088251E+03  4.64942459E+03  3.05145791E+03  6  5
+                8  7.98947924E+03  4.33855705E+03  3.65092219E+03  6  5
+                9  7.92241381E+03  3.76468709E+03  4.15772672E+03  6  5
+               10  6.33372561E+03  2.70739886E+03  3.62632675E+03  5  5
+             ---------------------------------------------------
+             Sum  6.66576849E+04  5.10785800E+04  1.55791049E+04
+
+calcCsStout> Calculation time [calcVTACs] (CPU & real in s):   2.046E-01  2.050E-01
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.33400506E+03  2.08331586E+03  2.50689199E+02  6  5
+                2  3.21487983E+03  3.23829148E+03 -2.34116470E+01  6  5
+                3  3.34936759E+03  3.83142559E+03 -4.82058002E+02  6  5
+                4  3.37139133E+03  3.81379205E+03 -4.42400717E+02  6  5
+                5  3.24141846E+03  3.30857499E+03 -6.71565278E+01  6  5
+                6  3.48763858E+03  2.75719399E+03  7.30444582E+02  6  5
+                7  4.60658371E+03  2.70874225E+03  1.89784146E+03  6  5
+                8  6.24038050E+03  3.24703344E+03  2.99334707E+03  6  5
+                9  6.75960506E+03  3.64987217E+03  3.10973289E+03  6  5
+               10  5.35777622E+03  2.93467495E+03  2.42310127E+03  5  5
+             ---------------------------------------------------
+             Sum  4.19630463E+04  3.15729168E+04  1.03901296E+04
+
+calcCsStout> Calculation time [calcVTACs] (CPU & real in s):   2.046E-01  2.050E-01
+spectrumFF> Calculation time [calcCsStout] (CPU & real in s):   1.513E+00  8.540E-01
+spectrumFF> Calculation time [partial abs. for Mie scatterer] (CPU & real in s):   7.935E-04  0.000E+00
+spectrumFF> Calculation time (CPU & real in s):   4.241E+02  3.814E+01
+termsProgram> Program run time (CPU & real in s):  4.241E+02  3.817E+01

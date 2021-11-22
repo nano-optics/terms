@@ -1,0 +1,61 @@
+---
+title: "Diffractive chain of spheres"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 3
+    fig_width: 7
+    fig_height: 6
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Diffractive chain of spheres}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE}
+library(knitr)
+library(terms)
+options(cli.num_colors = 1)
+theme_set(egg::theme_article())
+opts_chunk$set(echo = FALSE, warning =FALSE,
+               message=FALSE, comment='', 
+               tidy=FALSE, cache = FALSE)
+do.call(read_chunk, list(path = "_run.R"))
+```
+
+## Objective
+
+This example considers a chain of 20 Au spheres with relatively large inter-particle separation, commensurate with the wavelength. A strong multiple scattering effect is predicted despite the large distances between scatterers, due to diffractive coupling. The particle-centred scheme (Stout) is required in this calculation, as expanding about a single origin would require prohibitively large multipolar orders for accurate translations (the cluster as a whole has a large size parameter).
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+library(terms)
+cat('  <style>
+.x3d_scene {
+float:right;
+margin:0em;
+ }
+  </style>')
+
+ge <- get_geometry('input_chain')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,2000), width = "200px", height = "150px", default_material='gold')
+```
+
+This simulation uses the following `input` file
+```{bash input}
+cat input_chain
+```
+
+```{r read, cache=FALSE}
+```
+
+## Fixed-orientation results
+
+We compare the fixed-orientation cross-sections to the single-sphere reference (scaled by the particle number),
+
+```{r fo, fig.height=3}
+```

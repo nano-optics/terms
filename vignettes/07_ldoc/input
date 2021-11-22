@@ -1,0 +1,13 @@
+ModeAndScheme 1 0
+MultipoleCutoff 8
+Wavelength 540
+Medium 1.7689 # water
+
+OutputFormat HDF5 ldoc
+Incidence file incidence 1  # linear polarisation, 45 & 135
+SpacePoints -15 15 90 -25 25 150 0 0 0
+MapQuantity C
+
+Scatterers 2
+Au 0 12.5 0 10
+Au 0 -12.5 0 10

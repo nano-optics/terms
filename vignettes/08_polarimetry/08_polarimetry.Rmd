@@ -1,0 +1,81 @@
+---
+title: "Polarimetry: Stokes vectors, phase matrix"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 2
+    fig_width: 7
+    fig_height: 4
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Polarimetry: Stokes vectors, phase matrix}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE}
+library(knitr)
+library(terms)
+options(cli.num_colors = 1)
+theme_set(egg::theme_article())
+opts_chunk$set(echo = FALSE, warning=FALSE,
+               message=FALSE, comment='', 
+               tidy=FALSE, cache = FALSE)
+do.call(read_chunk, list(path = "_run.R"))
+```
+
+## Objective
+
+This example illustrates the degree of circular polarization at different wavelengths and scattering angles ($\theta$). The structure consists of a helix of   five prolate gold spheroids inside the water with semi-axes a = b = 30 nm and c = 50 nm. The helix axis is z, radius 100 nm, pitch 700 nm, and the angular-step $\delta = \pi / 4$. The structure is illuminated with a linear polarised plane wave along the x direction, and the wavevector along the z direction. 
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+library(terms)
+cat('  <style>
+.x3d_scene {
+float:right;
+margin:0em;
+ }
+  </style>')
+
+ge <- get_geometry('input')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,500), width = "200px", height = "150px", default_material='gold') 
+```
+
+This simulation uses the following `input` file
+```{bash input}
+cat input
+```
+
+Mode 3 triggers the calculation of polarimetric quantities, with output listed below.
+
+```{r read}
+```
+
+## Results
+
+The output consist of files ``Stokes\_phase\_Mat.dat" and ``Stokes\_Sca\_Vec.dat" include data of stokes phase matrix and stokes scattering vector for the specified illumination direction. The structure is chiral and therefore converts linear polarization to circular polarization which is calculated as the ratio between $V$ and $I$ ($V/I$) or for $x$-polarized plane wave as $(Z_{41}+Z_{42})/(Z_{11}+Z_{12})$. Fig. \ref{degreeCP} shows the calculated results versus wavelength and different scattering angle.
+
+## Differential scattering cross-section
+
+```{r dsca}
+```
+
+## Phase matrix
+
+```{r phasematrix}
+```
+
+## Stokes scattering vector
+
+```{r stokes}
+```
+
+-----
+
+```{r cleanup}
+```
+_Last run: `r format(Sys.time(), '%d %B, %Y')`_

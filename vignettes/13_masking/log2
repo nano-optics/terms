@@ -1,0 +1,90 @@
+readInputFile> Parsing file input_EE1
+
+readInputFile> Detected keyword ModeAndScheme
+               mode=2 => spectrum_FF for far-field quantities
+               scheme=3 => Seek T^(j) using Mackowski's approach
+readInputFile> Detected keyword MultipoleCutoff
+               Supplied ncut(1)=  4
+               Setting ncut(2)= ncut(1)
+               Setting ncut(3)=  -8
+readInputFile> Detected keyword Medium
+               Constant host epsilon=  1.7689E+0
+readInputFile> Detected keyword OutputFormat
+               OutputFormat=HDF5
+               All output files are stored in file "EE1.h5                                                          "
+readInputFile> Detected keyword DumpPrestagedA
+readInputFile> Detected keyword DumpStagedA
+readInputFile> Detected keyword DumpCollectiveTmatrix
+readInputFile> Detected keyword MultipoleSelections
+               selection 1: EE1:1_MM2:1_ME2:1_EM2:1 blocks
+                            T-block | n_lo | n_hi 
+                             MM/11      2      1
+                             EM/21      2      1
+                             ME/12      2      1
+                             EE/22      1      1
+readInputFile> Detected keyword Wavelength
+               Wavelength (nm):   650.0000
+readInputFile> Detected keyword Medium
+               Constant host epsilon=  1.7689E+0
+readInputFile> Detected keyword TmatrixFiles
+
+readInputFile> Detected keyword Scatterers
+ with nscat=    2
+
+readInputFile> Descriptor(s) and circumscribing sphere(s):
+
+ scatID String                  x          y          z         R_0
+    1   TF1                 0.0000E+0 -5.0000E+1  0.0000E+0  5.0000E+1
+    2   TF1                 0.0000E+0  5.0000E+1  0.0000E+0  5.0000E+1
+
+readInputFile> Individual geometry characteristic(s):
+
+ scatID Details
+    1   Euler angles:  0.0000000  0.0000000  0.0000000 asp. ratio:  2.5000000
+    2   Euler angles:  0.0000000  0.7853982  0.0000000 asp. ratio:  2.5000000
+
+readInputFile> Finished parsing 12 keywords
+
+
+spectrumFF> ===== Wavelength:   650.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  4
+
+calcOAprops> <csExt>=  3.83888853E+02 nConv=  0
+             <csSca>=  4.40955706E+01 nConv=  0
+             <csAbs>=  3.39793282E+02
+
+             <cdExt>=  2.74976933E+00
+             <cdSca>=  8.17272336E+00
+             <cdAbs>= -5.42295403E+00
+
+           1
+calcCs> csExt=  2.94856098E+02 nConv=  0
+         csSca=  3.17626873E+01 nConv=  0
+         csAbs=  2.63093411E+02
+
+           2
+calcCs> csExt=  3.00260207E+01 nConv=  0
+         csSca=  4.59789466E+00 nConv=  2
+         csAbs=  2.54281260E+01
+
+           3
+calcCs> csExt=  1.62437021E+02 nConv=  0
+         csSca=  1.81847591E+01 nConv=  0
+         csAbs=  1.44252262E+02
+
+           4
+calcCs> csExt=  1.62445098E+02 nConv=  0
+         csSca=  1.81851346E+01 nConv=  0
+         csAbs=  1.44259964E+02
+
+termsProgram> Program run time (CPU & real in s):  2.402E-02  2.400E-02

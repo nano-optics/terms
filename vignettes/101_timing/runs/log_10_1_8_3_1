@@ -1,0 +1,619 @@
+readInputFile> Parsing file runs/input_10_1_8_3_1
+
+readInputFile> Detected keyword ModeAndScheme
+               mode=2 => spectrum_FF for far-field quantities
+               scheme=3 => Seek T^(j) using Mackowski's approach
+readInputFile> Detected keyword MultipoleCutoff
+               Supplied ncut(1)=  8
+               Setting ncut(2)= ncut(1)
+               Setting ncut(3)=  -8
+readInputFile> Detected keyword ScattererCentredCrossSections
+readInputFile> Detected keyword Incidence
+readInputFile> Euler angle alpha [0,2Pi) value=   0.00000000
+readInputFile> Euler angle beta  [0,Pi]  value=   0.00000000
+readInputFile> Euler angle gamma [0,2Pi) value=   0.00000000
+               Incident Euler angles and weights:
+                  alpha        beta        gamma        weight
+               0.00000000   0.00000000   0.00000000   1.00000000
+readInputFile> Detected keyword OutputFormat
+               OutputFormat=HDF5
+               All output files are stored in file "xsec_10_0_8_.h5                                                 "
+readInputFile> Detected keyword Wavelength
+               Wavelength (nm):   633.0000
+readInputFile> Detected keyword Medium
+               Constant host epsilon=  1.7689E+0
+readInputFile> Detected keyword Verbosity
+               verbosity=     3 (High)
+
+readInputFile> Detected keyword Scatterers
+ with nscat=   10
+
+readInputFile> Descriptor(s) and circumscribing sphere(s):
+
+ scatID String                  x          y          z         R_0
+    1   Au                  1.0000E+2  0.0000E+0 -1.1250E+2  3.0000E+1
+    2   Au                  7.0711E+1  7.0711E+1 -8.7500E+1  3.0000E+1
+    3   Au                 **********  1.0000E+2 -6.2500E+1  3.0000E+1
+    4   Au                 -7.0711E+1  7.0711E+1 -3.7500E+1  3.0000E+1
+    5   Au                 -1.0000E+2 ********** -1.2500E+1  3.0000E+1
+    6   Au                 -7.0711E+1 -7.0711E+1  1.2500E+1  3.0000E+1
+    7   Au                 ********** -1.0000E+2  3.7500E+1  3.0000E+1
+    8   Au                  7.0711E+1 -7.0711E+1  6.2500E+1  3.0000E+1
+    9   Au                  1.0000E+2 **********  8.7500E+1  3.0000E+1
+   10   Au                  7.0711E+1  7.0711E+1  1.1250E+2  3.0000E+1
+
+readInputFile> Individual geometry characteristic(s):
+
+ scatID Details
+    1   Mie with ncoats= 0
+    2   Mie with ncoats= 0
+    3   Mie with ncoats= 0
+    4   Mie with ncoats= 0
+    5   Mie with ncoats= 0
+    6   Mie with ncoats= 0
+    7   Mie with ncoats= 0
+    8   Mie with ncoats= 0
+    9   Mie with ncoats= 0
+   10   Mie with ncoats= 0
+
+readInputFile> Dielectric functions for (coated) Mie scatterer(s):
+
+ scatID volID Label
+    1     0     Au
+    2     0     Au
+    3     0     Au
+    4     0     Au
+    5     0     Au
+    6     0     Au
+    7     0     Au
+    8     0     Au
+    9     0     Au
+   10     0     Au
+
+readInputFile> Finished parsing  9 keywords
+
+
+spectrumFF> ===== Wavelength:   633.00 (nm) ======================
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  1.00000000E+00  0.00000000E+00
+          y:  0.00000000E+00  0.00000000E+00  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  0.00000000E+00  0.00000000E+00
+          y:  0.00000000E+00  1.00000000E+00  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  7.07106781E-01  0.00000000E+00
+          y:  0.00000000E+00  0.00000000E+00 -7.07106781E-01
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  7.07106781E-01  0.00000000E+00
+          y:  0.00000000E+00  0.00000000E+00  7.07106781E-01
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+solve> Prestaging...
+solve> Prestaged Mie T-matrix for scatterer   1 with q, nlo, nhi = 1  1  8
+solve> Prestaged Mie T-matrix for scatterer   1 with q, nlo, nhi = 2  1  8
+solve> Prestaged Mie T-matrix for scatterer   2 with q, nlo, nhi = 1  1  8
+solve> Prestaged Mie T-matrix for scatterer   2 with q, nlo, nhi = 2  1  8
+solve> Prestaged Mie T-matrix for scatterer   3 with q, nlo, nhi = 1  1  8
+solve> Prestaged Mie T-matrix for scatterer   3 with q, nlo, nhi = 2  1  8
+solve> Prestaged Mie T-matrix for scatterer   4 with q, nlo, nhi = 1  1  8
+solve> Prestaged Mie T-matrix for scatterer   4 with q, nlo, nhi = 2  1  8
+solve> Prestaged Mie T-matrix for scatterer   5 with q, nlo, nhi = 1  1  8
+solve> Prestaged Mie T-matrix for scatterer   5 with q, nlo, nhi = 2  1  8
+solve> Prestaged Mie T-matrix for scatterer   6 with q, nlo, nhi = 1  1  8
+solve> Prestaged Mie T-matrix for scatterer   6 with q, nlo, nhi = 2  1  8
+solve> Prestaged Mie T-matrix for scatterer   7 with q, nlo, nhi = 1  1  8
+solve> Prestaged Mie T-matrix for scatterer   7 with q, nlo, nhi = 2  1  8
+solve> Prestaged Mie T-matrix for scatterer   8 with q, nlo, nhi = 1  1  8
+solve> Prestaged Mie T-matrix for scatterer   8 with q, nlo, nhi = 2  1  8
+solve> Prestaged Mie T-matrix for scatterer   9 with q, nlo, nhi = 1  1  8
+solve> Prestaged Mie T-matrix for scatterer   9 with q, nlo, nhi = 2  1  8
+solve> Prestaged Mie T-matrix for scatterer  10 with q, nlo, nhi = 1  1  8
+solve> Prestaged Mie T-matrix for scatterer  10 with q, nlo, nhi = 2  1  8
+solve> Staging and solving/inverting...
+solve> Determine the T-matrix using Mackowski's solution scheme
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E+006 Tr(|Tmat|)= 3.5E-001 nconv=  6
+stageAmat> Offset and balanced block (j,k)=  2  1
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 1.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  3  1
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.6E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  4  1
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.0E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  5  1
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.3E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  6  1
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.6E+002 Tr(|Tmat|)= 9.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  7  1
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.4E+002 Tr(|Tmat|)= 1.2E-001 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  8  1
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.5E+002 Tr(|Tmat|)= 1.3E-001 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  9  1
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.1E+001 Tr(|Tmat|)= 9.7E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)= 10  1
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E+006 Tr(|Tmat|)= 3.5E-001 nconv=  6
+stageAmat> Offset and balanced block (j,k)=  1  2
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E+006 Tr(|Tmat|)= 3.5E-001 nconv=  6
+stageAmat> Offset and balanced block (j,k)=  3  2
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 1.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  4  2
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.6E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  5  2
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.0E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  6  2
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.3E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  7  2
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.6E+002 Tr(|Tmat|)= 9.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  8  2
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.4E+002 Tr(|Tmat|)= 1.2E-001 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  9  2
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.5E+002 Tr(|Tmat|)= 1.3E-001 nconv=  4
+stageAmat> Offset and balanced block (j,k)= 10  2
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 1.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  1  3
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E+006 Tr(|Tmat|)= 3.5E-001 nconv=  6
+stageAmat> Offset and balanced block (j,k)=  2  3
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E+006 Tr(|Tmat|)= 3.5E-001 nconv=  6
+stageAmat> Offset and balanced block (j,k)=  4  3
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 1.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  5  3
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.6E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  6  3
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.0E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  7  3
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.3E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  8  3
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.6E+002 Tr(|Tmat|)= 9.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  9  3
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.4E+002 Tr(|Tmat|)= 1.2E-001 nconv=  4
+stageAmat> Offset and balanced block (j,k)= 10  3
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.6E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  1  4
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 1.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  2  4
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E+006 Tr(|Tmat|)= 3.5E-001 nconv=  6
+stageAmat> Offset and balanced block (j,k)=  3  4
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E+006 Tr(|Tmat|)= 3.5E-001 nconv=  6
+stageAmat> Offset and balanced block (j,k)=  5  4
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 1.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  6  4
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.6E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  7  4
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.0E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  8  4
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.3E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  9  4
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.6E+002 Tr(|Tmat|)= 9.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)= 10  4
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.0E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  1  5
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.6E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  2  5
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 1.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  3  5
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E+006 Tr(|Tmat|)= 3.5E-001 nconv=  6
+stageAmat> Offset and balanced block (j,k)=  4  5
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E+006 Tr(|Tmat|)= 3.5E-001 nconv=  6
+stageAmat> Offset and balanced block (j,k)=  6  5
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 1.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  7  5
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.6E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  8  5
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.0E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  9  5
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.3E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)= 10  5
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.3E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  1  6
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.0E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  2  6
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.6E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  3  6
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 1.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  4  6
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E+006 Tr(|Tmat|)= 3.5E-001 nconv=  6
+stageAmat> Offset and balanced block (j,k)=  5  6
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E+006 Tr(|Tmat|)= 3.5E-001 nconv=  6
+stageAmat> Offset and balanced block (j,k)=  7  6
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 1.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  8  6
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.6E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  9  6
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.0E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)= 10  6
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.6E+002 Tr(|Tmat|)= 9.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  1  7
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.3E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  2  7
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.0E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  3  7
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.6E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  4  7
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 1.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  5  7
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E+006 Tr(|Tmat|)= 3.5E-001 nconv=  6
+stageAmat> Offset and balanced block (j,k)=  6  7
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E+006 Tr(|Tmat|)= 3.5E-001 nconv=  6
+stageAmat> Offset and balanced block (j,k)=  8  7
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 1.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  9  7
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.6E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)= 10  7
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.4E+002 Tr(|Tmat|)= 1.2E-001 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  1  8
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.6E+002 Tr(|Tmat|)= 9.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  2  8
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.3E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  3  8
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.0E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  4  8
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.6E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  5  8
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 1.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  6  8
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E+006 Tr(|Tmat|)= 3.5E-001 nconv=  6
+stageAmat> Offset and balanced block (j,k)=  7  8
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E+006 Tr(|Tmat|)= 3.5E-001 nconv=  6
+stageAmat> Offset and balanced block (j,k)=  9  8
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 1.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)= 10  8
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.5E+002 Tr(|Tmat|)= 1.3E-001 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  1  9
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.4E+002 Tr(|Tmat|)= 1.2E-001 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  2  9
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.6E+002 Tr(|Tmat|)= 9.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  3  9
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.3E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  4  9
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.0E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  5  9
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.6E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  6  9
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 1.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  7  9
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E+006 Tr(|Tmat|)= 3.5E-001 nconv=  6
+stageAmat> Offset and balanced block (j,k)=  8  9
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E+006 Tr(|Tmat|)= 3.5E-001 nconv=  6
+stageAmat> Offset and balanced block (j,k)= 10  9
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.1E+001 Tr(|Tmat|)= 9.7E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  1 10
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.5E+002 Tr(|Tmat|)= 1.3E-001 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  2 10
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.4E+002 Tr(|Tmat|)= 1.2E-001 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  3 10
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 1.6E+002 Tr(|Tmat|)= 9.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  4 10
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.3E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  5 10
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 8.0E+001 Tr(|Tmat|)= 8.6E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  6 10
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.6E+002 Tr(|Tmat|)= 9.8E-002 nconv=  4
+stageAmat> Offset and balanced block (j,k)=  7 10
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.2E+003 Tr(|Tmat|)= 1.4E-001 nconv=  5
+stageAmat> Offset and balanced block (j,k)=  8 10
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 2.0E+006 Tr(|Tmat|)= 3.5E-001 nconv=  6
+stageAmat> Offset and balanced block (j,k)=  9 10
+
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.3E-002 Tr(|Tmat|)= 1.2E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.8E-002 Tr(|Tmat|)= 1.4E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.3E-002 Tr(|Tmat|)= 1.6E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.9E-002 Tr(|Tmat|)= 1.8E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 6.2E-002 Tr(|Tmat|)= 1.8E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 6.2E-002 Tr(|Tmat|)= 1.8E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.9E-002 Tr(|Tmat|)= 1.8E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.3E-002 Tr(|Tmat|)= 1.6E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.8E-002 Tr(|Tmat|)= 1.4E-001 nconv=  4
+offsetTmat> Initial Max(|Tmat|)= 8.2E-002 Tr(|Tmat|)= 2.5E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.3E-002 Tr(|Tmat|)= 1.2E-001 nconv=  4
+solLinSys> ZLANGE: Supplied matrix 1-norm=  2.6705E+000
+solLinSys> ZGECON returned RCOND=  1.0418E-001
+solLinSys> isol=  0 triggered wrapper for LAPACK's ZGESV
+solve> Done!
+
+solve> Calculation time [calcSphBessels (reg. & irreg)] (CPU & real in s):   1.309E-03  0.000E+00
+solve> Calculation time [calcMieTMat] (CPU & real in s):   1.271E-02  1.000E-03
+solve> Calculation time [calcWignerBigD] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [stageAmat] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [balanceVecJ] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [solLinSys] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [invSqrMat] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [balanceMatJI] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [calcTIJStout] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [calcTIMackowski] (CPU & real in s):   2.269E+00  4.510E-01
+solve> Calculation time [calcMieIntCoeffs] (CPU & real in s):   0.000E+00  0.000E+00
+spectrumFF> Calculation time [Solve: diff. incs] (CPU & real in s):   2.354E+00  4.570E-01
+offsetTmat> Initial Max(|Tmat|)= 5.7E-002 Tr(|Tmat|)= 8.5E-002 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.6E-002 Tr(|Tmat|)= 2.7E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 6.4E-002 Tr(|Tmat|)= 1.2E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.8E-002 Tr(|Tmat|)= 2.9E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 7.1E-002 Tr(|Tmat|)= 1.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.9E-002 Tr(|Tmat|)= 2.9E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 7.6E-002 Tr(|Tmat|)= 1.8E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.6E-002 Tr(|Tmat|)= 2.9E-001 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 7.8E-002 Tr(|Tmat|)= 1.8E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 6.0E-002 Tr(|Tmat|)= 2.9E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 7.8E-002 Tr(|Tmat|)= 1.8E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 6.0E-002 Tr(|Tmat|)= 2.9E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 7.6E-002 Tr(|Tmat|)= 1.8E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 5.6E-002 Tr(|Tmat|)= 2.9E-001 nconv=  5
+offsetTmat> Initial Max(|Tmat|)= 7.1E-002 Tr(|Tmat|)= 1.6E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 4.9E-002 Tr(|Tmat|)= 2.9E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 6.4E-002 Tr(|Tmat|)= 1.2E-001 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.8E-002 Tr(|Tmat|)= 2.9E-001 nconv=  6
+offsetTmat> Initial Max(|Tmat|)= 5.7E-002 Tr(|Tmat|)= 8.5E-002 nconv=  4
+offsetTmat>   Final Max(|Tmat|)= 3.6E-002 Tr(|Tmat|)= 2.7E-001 nconv=  6
+diagnoseTmat> Ave&Max(|Tmat|)= 4.20E-004 4.54781E-01 MaxLoc=       2       2
+diagnoseTmat> For i=1:3, |Tmat(i,i)|=  2.44315E-01  4.54781E-01  2.44315E-01
+diagnoseTmat> For i=pmax+1:pmax+3, ~=  3.31430E-01  2.52759E-01  3.31430E-01
+diagnoseTmat> Tr(Tmat) converged to 1.0E-08 for n=  8
+diagnoseTmat> Max(|RelSymErr(Tmat)|)= 5.044E-10 for n,n'=   3  8
+diagnoseTmat> Max(|SymErr(Tmat)|)/Max(|Tmat|)= 7.257E-16 for n,n'=   2  2
+contractTmat> Calculation time [offsetTmat] (CPU & real in s):   5.691E-01  4.900E-02
+contractTmat> Calculation time [calcWignerBigD] (CPU & real in s):   0.000E+00  0.000E+00
+contractTmat> Calculation time [calcVTACsAxial] (CPU & real in s):   0.000E+00  0.000E+00
+contractTmat> Calculation time [calcVTACs] (CPU & real in s):   0.000E+00  0.000E+00
+
+spectrumFF> Calculation time [contractTmat] (CPU & real in s):   6.220E-01  5.600E-02
+calcOAprops> <csExt>=  4.53134905E+04 nConv=  8
+             <csSca>=  3.40245045E+04 nConv=  8
+             <csAbs>=  1.12889860E+04
+
+             <cdExt>= -1.95284019E+03
+             <cdSca>= -1.60736871E+03
+             <cdAbs>= -3.45471477E+02
+
+spectrumFF> Calculation time [calcOAprops] (CPU & real in s):   1.116E-02  1.000E-03
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  1.95613436E+03  2.35002829E+03 -3.93893932E+02  6  5
+                2  6.43377163E+03  5.52173443E+03  9.12037200E+02  6  5
+                3  7.05607093E+03  7.48474610E+03 -4.28675172E+02  6  5
+                4  3.97725947E+03  6.21250524E+03 -2.23524577E+03  5  5
+                5  3.31382726E+03  3.68398065E+03 -3.70153391E+02  5  5
+                6  6.34207159E+03  3.05238549E+03  3.28968611E+03  6  5
+                7  8.07747146E+03  4.01130392E+03  4.06616754E+03  6  5
+                8  6.45295533E+03  4.04824668E+03  2.40470866E+03  6  5
+                9  5.00542032E+03  2.79691657E+03  2.20850375E+03  5  5
+               10  4.18799886E+03  1.46167063E+03  2.72632823E+03  5  5
+             ---------------------------------------------------
+             Sum  5.28029812E+04  4.06235180E+04  1.21794632E+04
+
+calcCsStout> Calculation time [calcVTACs] (CPU & real in s):   9.721E-01  1.360E-01
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.60510990E+03  3.92966201E+03 -3.24552100E+02  6  5
+                2  1.70585361E+03  4.17009246E+03 -2.46423885E+03  6  5
+                3  2.64367943E+03  3.50009730E+03 -8.56417870E+02  5  5
+                4  6.55652383E+03  4.32016423E+03  2.23635961E+03  6  5
+                5  7.40732356E+03  5.55340058E+03  1.85392298E+03  6  5
+                6  4.71202114E+03  4.87217809E+03 -1.60156948E+02  5  5
+                7  4.22997774E+03  3.34686198E+03  8.83115761E+02  5  5
+                8  7.77687964E+03  3.53733085E+03  4.23954879E+03  6  5
+                9  9.67660956E+03  4.61761592E+03  5.05899365E+03  6  5
+               10  7.50357550E+03  4.18038233E+03  3.32319317E+03  5  5
+             ---------------------------------------------------
+             Sum  5.58175539E+04  4.20277857E+04  1.37897682E+04
+
+calcCsStout> Calculation time [calcVTACs] (CPU & real in s):   9.264E-02  9.300E-02
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  3.22729914E+03  4.19638821E+03 -9.69089078E+02  6  5
+                2  4.92477533E+03  6.45355080E+03 -1.52877547E+03  6  5
+                3  6.35038555E+03  7.15342189E+03 -8.03036336E+02  6  5
+                4  7.16239025E+03  6.71887766E+03  4.43512586E+02  6  5
+                5  7.47973235E+03  5.92880776E+03  1.55092459E+03  6  5
+                6  7.56645352E+03  5.16736935E+03  2.39908417E+03  6  5
+                7  7.70086848E+03  4.64942100E+03  3.05144748E+03  6  5
+                8  7.98946267E+03  4.33854531E+03  3.65091735E+03  6  5
+                9  7.92241911E+03  3.76467228E+03  4.15774684E+03  6  5
+               10  6.33376086E+03  2.70738950E+03  3.62637136E+03  5  5
+             ---------------------------------------------------
+             Sum  6.66575472E+04  5.10784438E+04  1.55791035E+04
+
+calcCsStout> Calculation time [calcVTACs] (CPU & real in s):   9.271E-02  9.300E-02
+calcCsStout> J     csExt(J)        csSca(J)        csAbs(J)    nConv
+                1  2.33394513E+03  2.08330209E+03  2.50643046E+02  6  5
+                2  3.21484992E+03  3.23827610E+03 -2.34261821E+01  6  5
+                3  3.34936481E+03  3.83142151E+03 -4.82056702E+02  6  5
+                4  3.37139307E+03  3.81379180E+03 -4.42398730E+02  6  5
+                5  3.24141847E+03  3.30857347E+03 -6.71549951E+01  6  5
+                6  3.48763923E+03  2.75719423E+03  7.30445000E+02  6  5
+                7  4.60658072E+03  2.70874490E+03  1.89783582E+03  6  5
+                8  6.24037231E+03  3.24703222E+03  2.99334010E+03  6  5
+                9  6.75961077E+03  3.64986021E+03  3.10975056E+03  6  5
+               10  5.35781350E+03  2.93466346E+03  2.42315004E+03  5  5
+             ---------------------------------------------------
+             Sum  4.19629879E+04  3.15728600E+04  1.03901280E+04
+
+calcCsStout> Calculation time [calcVTACs] (CPU & real in s):   9.263E-02  9.300E-02
+spectrumFF> Calculation time [calcCsStout] (CPU & real in s):   1.252E+00  4.150E-01
+spectrumFF> Calculation time [partial abs. for Mie scatterer] (CPU & real in s):   6.614E-04  0.000E+00
+spectrumFF> Calculation time (CPU & real in s):   4.569E+00  9.570E-01
+termsProgram> Program run time (CPU & real in s):  4.603E+00  9.820E-01

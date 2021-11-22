@@ -1,0 +1,11 @@
+ModeAndScheme 2 2
+MultipoleCutoff 5
+MultipoleSelections 1
+EE1:1  blocks
+OutputFormat HDF5 cross_sections_ref
+ScattererCentredCrossSections
+Wavelength 300 700 100
+Medium 1.7689 # epsilon of water
+Incidence  0.0 0.0 0.0 
+Scatterers 1
+Au_S1 0   0     0     50   

@@ -1,0 +1,15 @@
+ModeAndScheme 1 3
+Wavelength 400
+Medium 1.7689
+
+OutputFormat HDF5 map
+Incidence file incidence/incidence_leb_6 2
+ 
+SpacePoints  0   0   1   0   0   1    0   0   1
+
+Scatterers 2 
+Au 0 0 0 10 
+Au 0 30 0 10
+
+
+

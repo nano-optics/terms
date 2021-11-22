@@ -1,0 +1,104 @@
+---
+title: "Near-field map of a nano-shell dimer"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 2
+    fig_width: 7
+    fig_height: 4
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Near-field map of a nano-shell dimer}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE}
+library(knitr)
+library(terms)
+library(rhdf5)
+options(cli.num_colors = 1)
+theme_set(egg::theme_article())
+opts_chunk$set(echo = FALSE, warning =FALSE,
+               message=FALSE, comment='', 
+               tidy=FALSE, cache = FALSE)
+do.call(read_chunk, list(path = "_run.R"))
+```
+
+## Objective
+
+This example illustrates the calculation of near-field maps at a specific wavelength. The structure consists of two core-shell spheres `Au@Ag` in water with a 1 nm gap. 
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+library(terms)
+cat('  <style>
+.x3d_scene {
+float:right;
+margin:0em;
+ }
+  </style>')
+
+ge <- get_geometry('input_ff')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,200), width = "200px", height = "150px")
+```
+
+## Far-field
+
+We first run a far-field simulation to identify a resonance,
+
+```{bash input_ff}
+cat input_ff
+```
+
+```{r ff}
+```
+
+## Near-field
+
+Next we run a near-field simulation at 680 nm, 
+
+```{bash input_nf}
+cat input_nf
+```
+
+The command to run the example is simply
+
+```
+../../build/terms input_nf > log
+```
+
+The full log contains basic details of the calculations, and finishes with the timing.
+
+<details closed>
+<summary> Show log file (click to open) </summary>
+```{bash log}
+cat log_nf
+```
+</details> <br />
+
+The output consists of a file `map_E` which contains the near-field data. 
+<details closed>
+<summary> Show results file (click to open) </summary>
+```{r hdf5}
+h5ls('map.h5')
+```
+</details> <br />
+
+
+```{r nf}
+```
+
+Because the superposition T-matrix method does not require any discretisation of the scatterers, we can compute accurately the fields in very small regions of space, such as in the gap between the two particles, and within their thin shells. Beside the near-field information, the output also returns two variables to index the different regions and materials. This allows for easier post-processing, for example the calculation of local rate of absorption, which is proportional to $\Im(\varepsilon)\cdot |\mathbf{E}|^2$, where $\varepsilon(\lambda)$ is the (wavelength-dependent) dielectric function of each material. The following close-up map illustrates this field distribution across the gap.
+
+```{r nfcloseup}
+```
+
+-----
+
+```{r cleanup}
+```
+_Last run: `r format(Sys.time(), '%d %B, %Y')`_

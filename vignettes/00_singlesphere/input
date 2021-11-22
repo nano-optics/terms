@@ -1,0 +1,8 @@
+ModeAndScheme 2 3
+MultipoleCutoff 8
+Wavelength 300 800 250
+Medium 1.7689 # epsilon of water
+OutputFormat HDF5 results
+Medium 1.7689 # epsilon of water
+
+Scatterers 1Au 0.0 0.0 0.0 30

@@ -1,0 +1,149 @@
+---
+title: Indexing conventions
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup, warning=FALSE,echo=FALSE, message=FALSE}
+library(terms)
+```
+
+## Single particle T-matrix
+
+
+The convention is to use
+
+- m: multipole order, -n:n
+- n: multipole degree 1:nmax
+- q: multipole type, 1 or 2
+
+so for a T-matrix with Nmax=3, we have
+
+```{r tmat, warning=FALSE,echo=FALSE, message=FALSE}
+
+indices <- function(Nmax=3, part=1){
+  un <- seq(1,Nmax)
+  
+  n = do.call(c, lapply(un, function(.n)rep(.n, 2*.n+1)))
+  m = do.call(c, lapply(un, function(.n)seq(-.n,.n)))
+  
+  nn <- expand.grid(n = n, np = n)
+  mm <- expand.grid(m = m, mp = m)
+  d <- rbind(cbind(nn, mm, q=1,qp=1),
+             cbind(nn, mm, q=1,qp=2),
+             cbind(nn, mm, q=2,qp=1),
+             cbind(nn, mm, q=2,qp=2))
+  
+  dplyr::mutate(d, 
+                p = n*(n+1)+m, 
+                l = (q - 1)* max(p) + p,
+                i = (part-1) * max(l) + l,
+                pp = np*(np+1)+mp,
+                lp = (qp - 1)* max(pp) + pp,
+                j = (part-1) * max(lp) + lp)
+}
+
+tmat <- indices(3, 1)
+cat(sprintf("n: %s\nm: %s\nq: %s\n%s elements",
+            paste(range(tmat$n), collapse = '..'), 
+            paste(range(tmat$m), collapse = '..'), 
+            paste(range(tmat$q), collapse = '..'), 
+            nrow(tmat)))
+tmat$Tr <- 0
+tmat$Ti <- 0
+terms::display_tmat(tmat)
+```
+
+for each block we introduce a combined p-index such that,
+
+$$
+p(n,m) = n(n+1)+m
+$$
+which here varies as `r sprintf("p: %s", paste(range(tmat$p), collapse = '..'))`, as each block is of dimension `pmax = nmax(nmax+1)+nmax = 3(3+1)+3 = 15`.
+
+The whole T-matrix is indexed with a combined l-index such that,
+
+$$
+l(q,p) = (q-1)p_{max} + p 
+$$
+which here gives us,
+`r sprintf("l: %s", paste(range(tmat$l), collapse = '..'))`. The total T-matrix dimension (along rows/columns) is thus $l_{max}=2\times(nmax(nmax+1)+nmax)=30$.
+
+In summary, for a given $N_{max}$ the indices are given by:
+
+- $n=1:N_{max}$
+- $m=-n:n$ for each n
+- $q=1:2$ for each pair of (n,m)
+- $p(n,m) = n(n+1)+m$
+- $l(q,p) = (q-1)p_{max} + p$
+
+Given $l$ and $N_{max}$ we can invert these indices as follows,
+
+- $p = l - (q-1)l_{max}/2$,   
+giving here, `r (p=1:30 - (rep(1:2, each=15)-1)*30/2)`
+- $n = \lfloor\sqrt{p}\rfloor$,   
+giving here `r (n = floor(sqrt(p)))`
+- $m = p - n(n+1)$,   
+giving here `r (m = p-n*(n+1))`
+
+```{r summary, warning=FALSE,echo=FALSE, message=FALSE}
+show_indices <- subset(tmat, np==1 & mp==0 & qp==1)[c("l","p", "n","m")]
+display <- t(show_indices[,-1])
+colnames(display) <- show_indices$l
+knitr::kable(display, 
+             format = "markdown", padding = 2)
+```
+
+## Multi-particle matrices
+
+When combining multiple particles we introduce an additional index $j=1:j_{max}$ tracking the particle number, and a combined index $i$,
+$$
+i = (j-1) l_{max} + l.
+$$
+
+Knowing the number of particles, $j_{max}$, and the maximum order $n_{max}$, we can unpack the full set of indices with the following formulas,
+
+- $j = (i-1) / (i_{max}/j_{max}) + 1$ (integer division)
+- $l = i - (j-1)\times i_{max}/j_{max}$ (integer division)
+- $q = 2(l-1)/l_{max} + 1$ (integer division)
+- $p = l - (q-1)l_{max}/2$
+- $n = \lfloor\sqrt{p}\rfloor$
+- $m = p - n(n+1)$
+
+```{r all, warning=FALSE,echo=FALSE, message=FALSE}
+unpack_indices <- function(nmax=3, jmax=2){
+  
+  lmax <- 2*(nmax*(nmax+1)+nmax)
+  imax <- jmax*lmax
+  
+  dplyr::mutate(data.frame(i=seq(1, imax)),
+                j = (i-1) %/% (imax/jmax) + 1,
+                l = i - (j-1)*imax %/% jmax,
+                q = (2*(l-1))%/%lmax + 1,
+                p=l - (q-1)*lmax/2,
+                n = floor(sqrt(p)),
+                m = p - n*(n+1) )
+}
+
+nmax <- 3
+display <- unpack_indices(nmax, 2)
+library(magrittr)
+library(DT)
+DT::datatable(display[,c("i",'j','q','l','p','n','m')], rownames = FALSE,filter = 'top', options = list(
+  pageLength = nrow(display), autoWidth = TRUE
+) ) %>% formatStyle(
+   'q',backgroundColor = styleInterval(1, grey(c(0.9,0.8)))
+  ) %>% formatStyle(
+    'j',backgroundColor = styleInterval(1, blues9[1:2])
+  ) %>% formatStyle(
+    'n',backgroundColor = styleInterval(seq_len(nmax-1), hcl(360*seq_len(nmax)/nmax))
+  )
+```
+
+
+
+
+
+

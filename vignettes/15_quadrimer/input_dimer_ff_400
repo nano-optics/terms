@@ -1,0 +1,9 @@
+ModeAndScheme 2 3 
+MultipoleCutoff 15
+Wavelength 400
+Medium 1.7689 # epsilon of water
+OutputFormat HDF5 ff_dimer_400
+DumpCollectiveTmatrix collective_dimer_400.tmat
+
+Scatterers 2
+Ag 0.0 0.0 -30.0 25.0Ag 0.0 0.0  30.0 25.0

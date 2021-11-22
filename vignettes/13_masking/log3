@@ -1,0 +1,88 @@
+readInputFile> Parsing file input_EE2_MM0
+
+readInputFile> Detected keyword ModeAndScheme
+               mode=2 => spectrum_FF for far-field quantities
+               scheme=3 => Seek T^(j) using Mackowski's approach
+readInputFile> Detected keyword MultipoleCutoff
+               Supplied ncut(1)=  4
+               Setting ncut(2)= ncut(1)
+               Setting ncut(3)=  -8
+readInputFile> Detected keyword OutputFormat
+               OutputFormat=HDF5
+               All output files are stored in file "EE2_MM0.h5                                                      "
+readInputFile> Detected keyword DumpPrestagedA
+readInputFile> Detected keyword DumpStagedA
+readInputFile> Detected keyword DumpCollectiveTmatrix
+readInputFile> Detected keyword MultipoleSelections
+               selection 1: EE2:2_MM2:1_ME2:1_EM2:1 blocks
+                            T-block | n_lo | n_hi 
+                             MM/11      2      1
+                             EM/21      2      1
+                             ME/12      2      1
+                             EE/22      2      2
+readInputFile> Detected keyword Wavelength
+               Wavelength (nm):   650.0000
+readInputFile> Detected keyword Medium
+               Constant host epsilon=  1.7689E+0
+readInputFile> Detected keyword TmatrixFiles
+
+readInputFile> Detected keyword Scatterers
+ with nscat=    2
+
+readInputFile> Descriptor(s) and circumscribing sphere(s):
+
+ scatID String                  x          y          z         R_0
+    1   TF1                 0.0000E+0 -5.0000E+1  0.0000E+0  5.0000E+1
+    2   TF1                 0.0000E+0  5.0000E+1  0.0000E+0  5.0000E+1
+
+readInputFile> Individual geometry characteristic(s):
+
+ scatID Details
+    1   Euler angles:  0.0000000  0.0000000  0.0000000 asp. ratio:  2.5000000
+    2   Euler angles:  0.0000000  0.7853982  0.0000000 asp. ratio:  2.5000000
+
+readInputFile> Finished parsing 11 keywords
+
+
+spectrumFF> ===== Wavelength:   650.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  4
+
+calcOAprops> <csExt>=  1.38161396E-01 nConv=  0
+             <csSca>=  5.17999751E-05 nConv=  0
+             <csAbs>=  1.38109596E-01
+
+             <cdExt>= -1.62226556E-05
+             <cdSca>=  1.88361628E-06
+             <cdAbs>= -1.81062719E-05
+
+           1
+calcCs> csExt=  2.12544729E-01 nConv=  0
+         csSca=  9.53930274E-05 nConv=  0
+         csAbs=  2.12449336E-01
+
+           2
+calcCs> csExt=  9.07045947E-02 nConv=  0
+         csSca=  3.38627331E-05 nConv=  0
+         csAbs=  9.06707320E-02
+
+           3
+calcCs> csExt=  1.51312859E-01 nConv=  0
+         csSca=  6.45346743E-05 nConv=  0
+         csAbs=  1.51248325E-01
+
+           4
+calcCs> csExt=  1.51936465E-01 nConv=  0
+         csSca=  6.47210862E-05 nConv=  0
+         csAbs=  1.51871744E-01
+
+termsProgram> Program run time (CPU & real in s):  2.641E-02  2.600E-02

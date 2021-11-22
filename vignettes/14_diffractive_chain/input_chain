@@ -1,0 +1,30 @@
+ModeAndScheme 2 2
+MultipoleCutoff 5
+MultipoleSelections 1
+EE1:1  blocks
+OutputFormat HDF5 cross_sections_chain
+ScattererCentredCrossSections
+Wavelength 300 700 100
+Medium 1.7689 # epsilon of water
+Incidence  0.0 0.0 0.0 
+Scatterers 20 
+Au_S1 -4050 0     0     50   
+Au_S1 -3600 0     0     50   
+Au_S1 -3150 0     0     50   
+Au_S1 -2700 0     0     50   
+Au_S1 -2250 0     0     50   
+Au_S1 -1800 0     0     50   
+Au_S1 -1350 0     0     50   
+Au_S1 -900  0     0     50   
+Au_S1 -450  0     0     50   
+Au_S1 0     0     0     50   
+Au_S1 450   0     0     50   
+Au_S1 900   0     0     50   
+Au_S1 1350  0     0     50   
+Au_S1 1800  0     0     50   
+Au_S1 2250  0     0     50   
+Au_S1 2700  0     0     50   
+Au_S1 3150  0     0     50   
+Au_S1 3600  0     0     50   
+Au_S1 4050  0     0     50   
+Au_S1 4500  0     0     50   

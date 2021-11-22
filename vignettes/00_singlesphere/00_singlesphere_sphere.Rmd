@@ -1,0 +1,85 @@
+---
+title: "Single sphere"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 2
+    fig_width: 7
+    fig_height: 3
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Single sphere}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE}
+library(knitr)
+library(terms)
+library(dplyr)
+options(cli.num_colors = 1)
+theme_set(egg::theme_article())
+knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning =FALSE, comment='', tidy=FALSE, cache = FALSE)
+do.call(knitr::read_chunk, list(path = "_run.R"))
+```
+
+
+## Objective 
+
+This tivial example illustrates the calculation of far-field spectra for absorption, scattering, and extinction. The structure consists of a single gold sphere in water.
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+library(terms)
+cat('  <style>
+.x3d_scene {
+float:right;
+ }
+  </style>')
+
+ge <- get_geometry('input')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,200), width = "200px", height = "150px")
+```
+
+This simulation uses the following `input` file
+
+```{bash input}
+cat input
+```
+
+The command to run the example is simply
+
+```
+../../build/terms input > log
+```
+
+The full log contains basic details of the calculations, and finishes with the timing.
+
+<details closed>
+<summary> Show log file (click to open) </summary>
+```{bash log}
+head -n62 log
+echo "..."
+tail -n1 log
+```
+</details> <br />
+
+
+```{r read}
+```
+
+## Orientation-averaged results
+
+The following files contain orientation-averaged cross-sections,
+```{r oa, fig.height=3}
+```
+
+
+-----
+
+```{r cleanup}
+```
+_Last run: `r format(Sys.time(), '%d %B, %Y')`_

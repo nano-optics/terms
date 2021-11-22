@@ -1,0 +1,16 @@
+ModeAndScheme 1 2 
+MultipoleCutoff 16
+ScattererCentredCrossSections
+Incidence 0 0.0 0.0 1 
+OutputFormat HDF5 map_tmp
+Wavelength 633
+Medium 1.7689 # epsilon of water
+Verbosity 2 # show timings
+
+SpacePoints 32 0 0 0 0 0 0 0 0 # picking a point
+MapQuantity 2 E C
+MapOaQuantity E C
+
+Scatterers  2 
+Au                0                 0                 0                 30               
+Au                50                50                -70.7106781186547 30               

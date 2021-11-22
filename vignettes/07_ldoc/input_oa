@@ -1,0 +1,13 @@
+ModeAndScheme 1 3
+MultipoleCutoff 8
+Wavelength 540
+Medium 1.7689 # water
+
+Incidence 0 0 1 1 # LP -> both circular polarisation in OA
+OutputFormat HDF5 ldoc_oa
+SpacePoints -15 15 90 -25 25 150 0 0 0
+MapOaQuantity E C
+
+Scatterers 2
+Au 0 12.5 0 10
+Au 0 -12.5 0 10

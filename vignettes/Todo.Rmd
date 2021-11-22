@@ -1,0 +1,30 @@
+---
+title: TODO
+---
+
+Unordered list of possible extensions and work-in-progress. (Note: some ideas in the list may never be implemented; it will depend on relative priorities and availability)
+
+## New core features
+
+1. Internal fields for non-spherical particles
+1. Near-fields in the Rayleigh region, https://doi.org/10.3762/bjnano.8.66
+1. Extension to infinite periodic arrays, http://dx.doi.org/10.4208/cicp.OA-2020-0136
+1. Dipole source
+1. Orientation-averaged internal fields
+1. Orientation-averaged partial absorptions for layered spheres
+1. Orientation-averaged absorption and scattering circular dichroism in Stout's formalism
+1. Built-in calculation of spheroid T-matrix (port from Smarties)
+1. T-matrix for anisotropic core-shell spheres, http://dx.doi.org/10.1103/PhysRevB.103.085436
+1. T-matrix for coated spheroids, following https://doi.org/10.1103/PhysRevD.10.2670
+1. "Higher-Order Polarizability Tensors" conversion from T-matrix, after 10.1021/acsphotonics.9b01776
+
+## User level
+
+1. Import of T-matrices in HDF5 format
+1. Additional materials
+
+## Code optimisation
+
+1. Iterative solver
+1. Calculation of orientation-averaged near-fields
+1. Calculation of far-field cross-sections for many angles of incidence

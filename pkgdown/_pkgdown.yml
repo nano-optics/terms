@@ -1,0 +1,73 @@
+url: http://nano-optics.ac.nz/terms
+
+development:
+  mode: auto
+
+    
+home:
+  strip_header: false
+  icon: fas fa-home fa-lg
+  href: index.html
+  links:
+  - text: Download
+    href: https://github.com/nano-optics/terms/releases
+
+navbar:
+  left:
+  - text: Keywords
+    href: articles/Keywords.html
+  - text: Examples
+    menu:
+    - text: Simple examples
+    - text: 01 dimer spheres
+      href: articles/01_dimer_spheres/01_dimer_spheres.html
+    - text: 02 angular dispersion
+      href: articles/02_angular_dispersion/02_angular_dispersion.html
+    - text: 03 nearfield coreshells
+      href: articles/03_nearfield_coreshells/03_nearfield_coreshells.html
+    - text: 04 chiral dimer spheroids
+      href: articles/04_chiral_dimer_spheroids/04_chiral_dimer_spheroids.html
+    - text: 05 quadrature averaging
+      href: articles/05_quadrature_averaging/05_quadrature_averaging.html
+    - text: 06 dielectric function
+      href: articles/06_dielectric_function/06_dielectric_function.html
+    - text: 07 local degree of chirality
+      href: articles/07_ldoc/07_ldoc.html
+    - text: 08 polarimetry
+      href: articles/08_polarimetry/08_polarimetry.html
+    - text: 09 orientation-averaged near field spectrum
+      href: articles/09_spectrum_near_field/09_spectrum_near_field.html
+    - text: "---"
+    - text: Advanced examples & testing
+    - text: 10 shell absorption
+      href: articles/10_shell_absorption/10_shell_absorption.html
+    - text: 11 convergence
+      href: articles/11_convergence/11_convergence.html
+    - text: 12 convergence VTACS
+      href: articles/12_convergence_VTACS/12_convergence_VTACS.html
+    - text: 13 masking
+      href: articles/13_masking/13_masking.html
+    - text: 14 diffractive chain
+      href: articles/14_diffractive_chain/14_diffractive_chain.html
+    - text: 15 quadrimer vs 2 dimers
+      href: articles/15_quadrimer/15_quadrimer.html
+  - text: Technical notes
+    menu:
+    - text: "Convergence and timing studies"
+    - text: 101 timing
+      href: articles/101_timing/101_timing.html
+    - text: 102 comparison of schemes
+      href: articles/102_comparison_schemes/102_comparison_schemes.html
+    - text: 104 large separation
+      href: articles/104_large_separation/104_large_separation.html
+    - text: 105 factorised RTR
+      href: articles/105_factorised_RTR/105_factorised_RTR.html
+    - text: 106 balancing
+      href: articles/106_balancing/106_balancing.html
+    - text: "---"
+    - text: Indexing conventions
+      href: articles/Indexing.html
+  - text: News
+    menu:
+    - text: "Change log"
+      href: news/index.html

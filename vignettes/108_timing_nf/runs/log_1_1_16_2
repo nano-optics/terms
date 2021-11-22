@@ -1,0 +1,114 @@
+readInputFile> Parsing file runs/input_1_1_16_2
+
+readInputFile> Detected keyword ModeAndScheme
+               mode=1 => mapNF at diff. lambda and diff. Inc. and Sca_angles
+               scheme=2 => Seek T^(ji) using Stout's iterative scheme
+readInputFile> Detected keyword MultipoleCutoff
+               Supplied ncut(1)= 16
+               Setting ncut(2)= ncut(1)
+               Setting ncut(3)=  -8
+readInputFile> Detected keyword ScattererCentredCrossSections
+readInputFile> Detected keyword Incidence
+readInputFile> Euler angle alpha [0,2Pi) value=   0.00000000
+readInputFile> Euler angle beta  [0,Pi]  value=   0.00000000
+readInputFile> Euler angle gamma [0,2Pi) value=   0.00000000
+readInputFile> X-linear polarization
+               Incident Euler angles and weights:
+                  alpha        beta        gamma        weight
+               0.00000000   0.00000000   0.00000000   1.00000000
+readInputFile> Detected keyword OutputFormat
+               OutputFormat=HDF5
+               All output files are stored in file "map_tmp.h5                                                      "
+readInputFile> Detected keyword Wavelength
+               Wavelength (nm):   633.0000
+readInputFile> Detected keyword Medium
+               Constant host epsilon=  1.7689E+0
+readInputFile> Detected keyword Verbosity
+               verbosity=     2 (Medium)
+readInputFile> Detected keyword SpacePoints
+               i,lb_i,ub_i,npts_i= 1  3.20000000000000000E+01  0.00000000000000000E+00    0
+               i,lb_i,ub_i,npts_i= 2  0.00000000000000000E+00  0.00000000000000000E+00    0
+               i,lb_i,ub_i,npts_i= 3  0.00000000000000000E+00  0.00000000000000000E+00    0
+               nGridPoints=         1
+readInputFile> Detected keyword MapQuantity
+               Map enhancement |E|**p with p=   2
+readInputFile> Detected keyword MapOaQuantity
+
+readInputFile> Detected keyword Scatterers
+ with nscat=    1
+
+readInputFile> Descriptor(s) and circumscribing sphere(s):
+
+ scatID String                  x          y          z         R_0
+    1   Au                  0.0000E+0  0.0000E+0  0.0000E+0  3.0000E+1
+
+readInputFile> Individual geometry characteristic(s):
+
+ scatID Details
+    1   Mie with ncoats= 0
+
+readInputFile> Dielectric functions for (coated) Mie scatterer(s):
+
+ scatID volID Label
+    1     0     Au
+
+readInputFile> Finished parsing 12 keywords
+
+
+mapNF> ===== Wavelength:   633.00 (nm) ======================
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  1.00000000E+00  0.00000000E+00
+          y:  0.00000000E+00  0.00000000E+00  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+solve> Prestaging...
+solve> Prestaged Mie T-matrix for scatterer   1 with q, nlo, nhi = 1  1 16
+solve> Prestaged Mie T-matrix for scatterer   1 with q, nlo, nhi = 2  1 16
+solve> Staging and solving/inverting...
+solve> Determine the T-matrix using Stout's solution scheme
+solve> Done!
+
+solve> Calculation time [calcSphBessels (reg. & irreg)] (CPU & real in s):   4.660E-04  0.000E+00
+solve> Calculation time [calcMieTMat] (CPU & real in s):   8.779E-03  1.000E-03
+solve> Calculation time [calcWignerBigD] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [stageAmat] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [balanceVecJ] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [solLinSys] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [invSqrMat] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [balanceMatJI] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [calcTIJStout] (CPU & real in s):   7.160E-04  0.000E+00
+solve> Calculation time [calcTIMackowski] (CPU & real in s):   0.000E+00  0.000E+00
+solve> Calculation time [calcMieIntCoeffs] (CPU & real in s):   8.500E-04  0.000E+00
+calcOaExtField> Calculation time [calcVTACs] (CPU & real in s):   6.126E-03  1.000E-03
+calcOaExtField> Calculation time [calcVSWs] (CPU & real in s):   4.164E-03  0.000E+00
+
+calcOaExtField> Done!
+
+mapNF> Calculation time [calcOaExtField] (CPU & real in s):   1.471E+00  1.250E-01
+
+calcOaLDOC> Calculation time [calcVTACs] (CPU & real in s):   7.338E-03  0.000E+00
+calcOaLDOC> Calculation time [calcVSWs] (CPU & real in s):   1.632E-03  0.000E+00
+calcOaLDOC> Calculation time [irreg calcVSWs] (CPU & real in s):   1.351E-03  0.000E+00
+calcOaLDOC> Calculation time [reg calcVSWs] (CPU & real in s):   1.173E-03  0.000E+00
+
+calcOaLDOC> Done!
+
+mapNF> Calculation time [calcOaLDOC] (CPU & real in s):   1.764E+00  1.470E-01
+
+parseInc>         dirn         Re(ampl)         Im(ampl)
+          x:  0.00000000E+00  1.00000000E+00  0.00000000E+00
+          y:  0.00000000E+00  0.00000000E+00  0.00000000E+00
+          z:  1.00000000E+00  0.00000000E+00  0.00000000E+00
+calcField> Calculation time (CPU & real in s):   2.909E-03  1.000E-03
+
+calcLDOC> Calculation time (CPU & real in s):   2.098E-05  0.000E+00
+calcLDOC> Done!
+
+mapNF> Calculation time [NFs and LDOC for all inc.] (CPU & real in s):   3.983E-03  1.000E-03
+
+mapNF> Done!
+
+termsProgram> Dumping orientation average quantities to file mapOaQuantity                                                   
+termsProgram> Dumping normalized optical chirality to file normalised_ldoc                                                 
+termsProgram> Dumping E  field map to files normalised_ldoc                                                 
+termsProgram> Program run time (CPU & real in s):  3.384E+00  2.860E-01

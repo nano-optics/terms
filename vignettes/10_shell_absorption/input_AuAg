@@ -1,0 +1,12 @@
+ModeAndScheme 2 2
+MultipoleCutoff 8
+Wavelength 300 800 100
+Incidence file incidence
+Medium 1.7689 # for water
+Verbosity 0
+OutputFormat HDF5 cross_sections_AuAg
+
+# 2 spheres spaced by 1nm along x
+Scatterers 2
+Au@Ag -30.5 0 0 30 29
+Au@Ag  30.5 0 0 30 29

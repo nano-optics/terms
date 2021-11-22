@@ -1,0 +1,3183 @@
+readInputFile> Parsing file input2
+
+readInputFile> Detected keyword ModeAndScheme
+               mode=2 => spectrum_FF for far-field quantities
+               scheme=2 => Seek T^(ji) using Stout's iterative scheme
+readInputFile> Detected keyword MultipoleCutoff
+               Supplied ncut(1)= 20
+               Setting ncut(2)= ncut(1)
+               Setting ncut(3)=  -8
+readInputFile> Detected keyword Wavelength
+               Wavelength LB (nm):   300.000000
+               Wavelength UB (nm):   900.000000
+               nsteps, step:       100    6.0000
+readInputFile> Detected keyword Verbosity
+               verbosity=     1 (Low)
+readInputFile> Detected keyword Medium
+               Constant host epsilon=  1.7689E+0
+readInputFile> Detected keyword Incidence
+readInputFile> Euler angle alpha [0,2Pi) value=   0.00000000
+readInputFile> Euler angle beta  [0,Pi]  value=   0.00000000
+readInputFile> Euler angle gamma [0,2Pi) value=   0.00000000
+               Incident Euler angles and weights:
+                  alpha        beta        gamma        weight
+               0.00000000   0.00000000   0.00000000   1.00000000
+readInputFile> Detected keyword OutputFormat
+               OutputFormat=HDF5
+               All output files are stored in file "xsec_2.h5                                                       "
+
+readInputFile> Detected keyword Scatterers
+ with nscat=    2
+
+readInputFile> Descriptor(s) and circumscribing sphere(s):
+
+ scatID String                  x          y          z         R_0
+    1   Ag                  0.0000E+0  0.0000E+0  0.0000E+0  5.0000E+1
+    2   Ag                  0.0000E+0  1.0100E+2  0.0000E+0  5.0000E+1
+
+readInputFile> Individual geometry characteristic(s):
+
+ scatID Details
+    1   Mie with ncoats= 0
+    2   Mie with ncoats= 0
+
+readInputFile> Dielectric functions for (coated) Mie scatterer(s):
+
+ scatID volID Label
+    1     0     Ag
+    2     0     Ag
+
+readInputFile> Finished parsing  8 keywords
+
+
+spectrumFF> ===== Wavelength:   300.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.96086092E+04 nConv= 10
+             <csSca>=  1.77227765E+04 nConv= 10
+             <csAbs>=  1.88583270E+03
+
+             <cdExt>=  2.25016520E-11
+             <cdSca>=  3.64720988E-11
+             <cdAbs>= -1.39704468E-11
+
+calcCs> csExt=  2.60751447E+04 nConv= 13
+         csSca=  2.32416410E+04 nConv= 10
+         csAbs=  2.83350372E+03
+
+calcCs> csExt=  1.82319544E+04 nConv= 14
+         csSca=  1.69000648E+04 nConv= 10
+         csAbs=  1.33188963E+03
+
+calcCs> csExt=  2.21535496E+04 nConv= 14
+         csSca=  2.00708529E+04 nConv= 10
+         csAbs=  2.08269669E+03
+
+calcCs> csExt=  2.21535496E+04 nConv= 14
+         csSca=  2.00708529E+04 nConv= 10
+         csAbs=  2.08269669E+03
+
+
+spectrumFF> ===== Wavelength:   306.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.15260023E+04 nConv= 10
+             <csSca>=  1.96725812E+04 nConv= 10
+             <csAbs>=  1.85342105E+03
+
+             <cdExt>=  2.57522624E-11
+             <cdSca>=  4.14536935E-11
+             <cdAbs>= -1.57014312E-11
+
+calcCs> csExt=  2.89517191E+04 nConv= 13
+         csSca=  2.62504488E+04 nConv= 10
+         csAbs=  2.70127039E+03
+
+calcCs> csExt=  1.98232174E+04 nConv= 14
+         csSca=  1.84135937E+04 nConv= 10
+         csAbs=  1.40962376E+03
+
+calcCs> csExt=  2.43874683E+04 nConv= 14
+         csSca=  2.23320212E+04 nConv= 10
+         csAbs=  2.05544708E+03
+
+calcCs> csExt=  2.43874683E+04 nConv= 14
+         csSca=  2.23320212E+04 nConv= 10
+         csAbs=  2.05544708E+03
+
+
+spectrumFF> ===== Wavelength:   312.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.39369968E+04 nConv= 10
+             <csSca>=  2.16917934E+04 nConv= 10
+             <csAbs>=  2.24520344E+03
+
+             <cdExt>=  2.53267416E-11
+             <cdSca>=  4.10304220E-11
+             <cdAbs>= -1.57036804E-11
+
+calcCs> csExt=  3.23831916E+04 nConv= 13
+         csSca=  2.90200607E+04 nConv= 10
+         csAbs=  3.36313090E+03
+
+calcCs> csExt=  2.14539080E+04 nConv= 14
+         csSca=  1.99522113E+04 nConv= 10
+         csAbs=  1.50169662E+03
+
+calcCs> csExt=  2.69185498E+04 nConv= 14
+         csSca=  2.44861360E+04 nConv= 10
+         csAbs=  2.43241377E+03
+
+calcCs> csExt=  2.69185498E+04 nConv= 14
+         csSca=  2.44861360E+04 nConv= 10
+         csAbs=  2.43241377E+03
+
+
+spectrumFF> ===== Wavelength:   318.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.50229881E+04 nConv= 10
+             <csSca>=  2.21366194E+04 nConv= 10
+             <csAbs>=  2.88636874E+03
+
+             <cdExt>=  2.84524381E-11
+             <cdSca>=  4.74192618E-11
+             <cdAbs>= -1.89668237E-11
+
+calcCs> csExt=  3.31058779E+04 nConv= 13
+         csSca=  2.85468461E+04 nConv= 10
+         csAbs=  4.55903185E+03
+
+calcCs> csExt=  2.31408831E+04 nConv= 14
+         csSca=  2.15279325E+04 nConv= 10
+         csAbs=  1.61295059E+03
+
+calcCs> csExt=  2.81233805E+04 nConv= 14
+         csSca=  2.50373893E+04 nConv= 10
+         csAbs=  3.08599123E+03
+
+calcCs> csExt=  2.81233805E+04 nConv= 14
+         csSca=  2.50373893E+04 nConv= 10
+         csAbs=  3.08599123E+03
+
+
+spectrumFF> ===== Wavelength:   324.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.79030392E+04 nConv= 10
+             <csSca>=  2.52610594E+04 nConv= 10
+             <csAbs>=  2.64197975E+03
+
+             <cdExt>=  3.49432810E-11
+             <cdSca>=  5.46060244E-11
+             <cdAbs>= -1.96627434E-11
+
+calcCs> csExt=  3.77938984E+04 nConv= 13
+         csSca=  3.38115582E+04 nConv= 10
+         csAbs=  3.98234029E+03
+
+calcCs> csExt=  2.49065524E+04 nConv= 14
+         csSca=  2.31559063E+04 nConv= 10
+         csAbs=  1.75064612E+03
+
+calcCs> csExt=  3.13502254E+04 nConv= 13
+         csSca=  2.84837322E+04 nConv= 10
+         csAbs=  2.86649318E+03
+
+calcCs> csExt=  3.13502254E+04 nConv= 13
+         csSca=  2.84837322E+04 nConv= 10
+         csAbs=  2.86649318E+03
+
+
+spectrumFF> ===== Wavelength:   330.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.00917511E+04 nConv= 10
+             <csSca>=  2.65649802E+04 nConv= 10
+             <csAbs>=  3.52677094E+03
+
+             <cdExt>=  3.21826281E-11
+             <cdSca>=  5.14872956E-11
+             <cdAbs>= -1.93046675E-11
+
+calcCs> csExt=  3.98589784E+04 nConv= 13
+         csSca=  3.43810499E+04 nConv=  9
+         csAbs=  5.47792847E+03
+
+calcCs> csExt=  2.67817380E+04 nConv= 14
+         csSca=  2.48552599E+04 nConv= 10
+         csAbs=  1.92647810E+03
+
+calcCs> csExt=  3.33203582E+04 nConv= 13
+         csSca=  2.96181549E+04 nConv= 10
+         csAbs=  3.70220326E+03
+
+calcCs> csExt=  3.33203582E+04 nConv= 13
+         csSca=  2.96181549E+04 nConv= 10
+         csAbs=  3.70220326E+03
+
+
+spectrumFF> ===== Wavelength:   336.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.21268767E+04 nConv= 10
+             <csSca>=  2.85071513E+04 nConv= 10
+             <csAbs>=  3.61972536E+03
+
+             <cdExt>=  3.63472798E-11
+             <cdSca>=  5.80155008E-11
+             <cdAbs>= -2.16682209E-11
+
+calcCs> csExt=  4.28163629E+04 nConv= 13
+         csSca=  3.72560796E+04 nConv=  9
+         csAbs=  5.56028328E+03
+
+calcCs> csExt=  2.88117491E+04 nConv= 14
+         csSca=  2.66504297E+04 nConv= 10
+         csAbs=  2.16131932E+03
+
+calcCs> csExt=  3.58140560E+04 nConv= 13
+         csSca=  3.19532547E+04 nConv= 10
+         csAbs=  3.86080127E+03
+
+calcCs> csExt=  3.58140560E+04 nConv= 13
+         csSca=  3.19532547E+04 nConv= 10
+         csAbs=  3.86080127E+03
+
+
+spectrumFF> ===== Wavelength:   342.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.47066638E+04 nConv= 10
+             <csSca>=  3.04754756E+04 nConv= 10
+             <csAbs>=  4.23118822E+03
+
+             <cdExt>=  4.25366256E-11
+             <cdSca>=  6.39396969E-11
+             <cdAbs>= -2.14030713E-11
+
+calcCs> csExt=  4.57205044E+04 nConv= 13
+         csSca=  3.92672630E+04 nConv=  9
+         csAbs=  6.45324135E+03
+
+calcCs> csExt=  3.10713847E+04 nConv= 14
+         csSca=  2.85714047E+04 nConv= 10
+         csAbs=  2.49998000E+03
+
+calcCs> csExt=  3.83959445E+04 nConv= 13
+         csSca=  3.39193339E+04 nConv= 10
+         csAbs=  4.47661065E+03
+
+calcCs> csExt=  3.83959445E+04 nConv= 13
+         csSca=  3.39193339E+04 nConv= 10
+         csAbs=  4.47661065E+03
+
+
+spectrumFF> ===== Wavelength:   348.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.76315599E+04 nConv= 11
+             <csSca>=  3.27961815E+04 nConv= 10
+             <csAbs>=  4.83537842E+03
+
+             <cdExt>=  3.94814948E-11
+             <cdSca>=  5.64513047E-11
+             <cdAbs>= -1.69698099E-11
+
+calcCs> csExt=  4.92525321E+04 nConv= 13
+         csSca=  4.20438586E+04 nConv=  9
+         csAbs=  7.20867352E+03
+
+calcCs> csExt=  3.36940082E+04 nConv= 14
+         csSca=  3.06276538E+04 nConv= 10
+         csAbs=  3.06635440E+03
+
+calcCs> csExt=  4.14732701E+04 nConv= 13
+         csSca=  3.63357562E+04 nConv= 10
+         csAbs=  5.13751393E+03
+
+calcCs> csExt=  4.14732701E+04 nConv= 13
+         csSca=  3.63357562E+04 nConv= 10
+         csAbs=  5.13751393E+03
+
+
+spectrumFF> ===== Wavelength:   354.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.13728697E+04 nConv= 11
+             <csSca>=  3.54641758E+04 nConv= 10
+             <csAbs>=  5.90869389E+03
+
+             <cdExt>=  4.58221963E-11
+             <cdSca>=  7.03489156E-11
+             <cdAbs>= -2.45267193E-11
+
+calcCs> csExt=  5.37223853E+04 nConv= 13
+         csSca=  4.53129093E+04 nConv= 10
+         csAbs=  8.40947594E+03
+
+calcCs> csExt=  3.69202825E+04 nConv= 14
+         csSca=  3.27668854E+04 nConv= 10
+         csAbs=  4.15339706E+03
+
+calcCs> csExt=  4.53213339E+04 nConv= 14
+         csSca=  3.90398974E+04 nConv= 10
+         csAbs=  6.28143652E+03
+
+calcCs> csExt=  4.53213339E+04 nConv= 14
+         csSca=  3.90398974E+04 nConv= 10
+         csAbs=  6.28143652E+03
+
+
+spectrumFF> ===== Wavelength:   360.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.68042872E+04 nConv= 11
+             <csSca>=  3.82250163E+04 nConv= 10
+             <csAbs>=  8.57927095E+03
+
+             <cdExt>=  6.04674481E-11
+             <cdSca>=  8.83124347E-11
+             <cdAbs>= -2.78449866E-11
+
+calcCs> csExt=  5.91435470E+04 nConv= 13
+         csSca=  4.78653059E+04 nConv=  9
+         csAbs=  1.12782412E+04
+
+calcCs> csExt=  4.16503723E+04 nConv= 14
+         csSca=  3.54231825E+04 nConv= 10
+         csAbs=  6.22718984E+03
+
+calcCs> csExt=  5.03969597E+04 nConv= 14
+         csSca=  4.16442442E+04 nConv= 10
+         csAbs=  8.75271550E+03
+
+calcCs> csExt=  5.03969597E+04 nConv= 14
+         csSca=  4.16442442E+04 nConv= 10
+         csAbs=  8.75271550E+03
+
+
+spectrumFF> ===== Wavelength:   366.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.48263343E+04 nConv= 10
+             <csSca>=  4.29386194E+04 nConv= 10
+             <csAbs>=  1.18877149E+04
+
+             <cdExt>=  6.83771646E-11
+             <cdSca>=  9.71801685E-11
+             <cdAbs>= -2.88030039E-11
+
+calcCs> csExt=  7.12641256E+04 nConv= 13
+         csSca=  5.48634755E+04 nConv= 10
+         csAbs=  1.64006501E+04
+
+calcCs> csExt=  5.07405302E+04 nConv= 14
+         csSca=  3.87406684E+04 nConv= 10
+         csAbs=  1.19998618E+04
+
+calcCs> csExt=  6.10023279E+04 nConv= 14
+         csSca=  4.68020720E+04 nConv= 10
+         csAbs=  1.42002559E+04
+
+calcCs> csExt=  6.10023279E+04 nConv= 14
+         csSca=  4.68020720E+04 nConv= 10
+         csAbs=  1.42002559E+04
+
+
+spectrumFF> ===== Wavelength:   372.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  6.02063767E+04 nConv= 10
+             <csSca>=  4.70780452E+04 nConv= 10
+             <csAbs>=  1.31283315E+04
+
+             <cdExt>=  6.98922378E-11
+             <cdSca>=  8.61376309E-11
+             <cdAbs>= -1.62453931E-11
+
+calcCs> csExt=  7.38022175E+04 nConv= 13
+         csSca=  6.14419432E+04 nConv=  9
+         csAbs=  1.23602744E+04
+
+calcCs> csExt=  5.65658017E+04 nConv= 14
+         csSca=  4.00334555E+04 nConv= 10
+         csAbs=  1.65323461E+04
+
+calcCs> csExt=  6.51840096E+04 nConv= 14
+         csSca=  5.07376993E+04 nConv= 10
+         csAbs=  1.44463103E+04
+
+calcCs> csExt=  6.51840096E+04 nConv= 14
+         csSca=  5.07376993E+04 nConv= 10
+         csAbs=  1.44463103E+04
+
+
+spectrumFF> ===== Wavelength:   378.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  6.85061624E+04 nConv= 10
+             <csSca>=  5.36650405E+04 nConv= 10
+             <csAbs>=  1.48411218E+04
+
+             <cdExt>=  6.47583937E-11
+             <cdSca>=  7.98837357E-11
+             <cdAbs>= -1.51253420E-11
+
+calcCs> csExt=  8.50591208E+04 nConv= 13
+         csSca=  6.95630455E+04 nConv=  9
+         csAbs=  1.54960754E+04
+
+calcCs> csExt=  6.12523197E+04 nConv= 14
+         csSca=  4.81852934E+04 nConv= 10
+         csAbs=  1.30670263E+04
+
+calcCs> csExt=  7.31557202E+04 nConv= 13
+         csSca=  5.88741695E+04 nConv= 10
+         csAbs=  1.42815508E+04
+
+calcCs> csExt=  7.31557202E+04 nConv= 13
+         csSca=  5.88741695E+04 nConv= 10
+         csAbs=  1.42815508E+04
+
+
+spectrumFF> ===== Wavelength:   384.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  8.26866776E+04 nConv= 10
+             <csSca>=  6.13268192E+04 nConv= 10
+             <csAbs>=  2.13598584E+04
+
+             <cdExt>=  7.75167794E-11
+             <cdSca>=  9.39356065E-11
+             <cdAbs>= -1.64188271E-11
+
+calcCs> csExt=  1.06595646E+05 nConv= 13
+         csSca=  8.34854643E+04 nConv=  9
+         csAbs=  2.31101819E+04
+
+calcCs> csExt=  7.84001749E+04 nConv= 14
+         csSca=  5.85776760E+04 nConv= 10
+         csAbs=  1.98224990E+04
+
+calcCs> csExt=  9.24979105E+04 nConv= 13
+         csSca=  7.10315701E+04 nConv= 10
+         csAbs=  2.14663404E+04
+
+calcCs> csExt=  9.24979105E+04 nConv= 13
+         csSca=  7.10315701E+04 nConv= 10
+         csAbs=  2.14663404E+04
+
+
+spectrumFF> ===== Wavelength:   390.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  8.83300593E+04 nConv= 10
+             <csSca>=  6.43097036E+04 nConv= 10
+             <csAbs>=  2.40203556E+04
+
+             <cdExt>=  1.12294181E-10
+             <cdSca>=  1.34438683E-10
+             <cdAbs>= -2.21445016E-11
+
+calcCs> csExt=  1.26851029E+05 nConv= 13
+         csSca=  1.00893468E+05 nConv=  9
+         csAbs=  2.59575606E+04
+
+calcCs> csExt=  9.74349619E+04 nConv= 13
+         csSca=  6.39672756E+04 nConv= 10
+         csAbs=  3.34676862E+04
+
+calcCs> csExt=  1.12142995E+05 nConv= 13
+         csSca=  8.24303721E+04 nConv= 10
+         csAbs=  2.97126234E+04
+
+calcCs> csExt=  1.12142995E+05 nConv= 13
+         csSca=  8.24303721E+04 nConv= 10
+         csAbs=  2.97126234E+04
+
+
+spectrumFF> ===== Wavelength:   396.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  8.34152838E+04 nConv= 10
+             <csSca>=  6.14198541E+04 nConv=  9
+             <csAbs>=  2.19954297E+04
+
+             <cdExt>=  1.63484547E-10
+             <cdSca>=  1.63975040E-10
+             <cdAbs>= -4.90493101E-13
+
+calcCs> csExt=  1.17280176E+05 nConv= 13
+         csSca=  9.70143500E+04 nConv=  9
+         csAbs=  2.02658262E+04
+
+calcCs> csExt=  7.20372344E+04 nConv= 13
+         csSca=  4.44645704E+04 nConv= 10
+         csAbs=  2.75726640E+04
+
+calcCs> csExt=  9.46587053E+04 nConv= 13
+         csSca=  7.07394602E+04 nConv=  9
+         csAbs=  2.39192451E+04
+
+calcCs> csExt=  9.46587053E+04 nConv= 13
+         csSca=  7.07394602E+04 nConv=  9
+         csAbs=  2.39192451E+04
+
+
+spectrumFF> ===== Wavelength:   402.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  7.60386304E+04 nConv=  9
+             <csSca>=  6.03050724E+04 nConv=  9
+             <csAbs>=  1.57335580E+04
+
+             <cdExt>=  1.52885863E-10
+             <cdSca>=  1.46296357E-10
+             <cdAbs>=  6.58950550E-12
+
+calcCs> csExt=  9.96749304E+04 nConv= 12
+         csSca=  8.60689924E+04 nConv=  9
+         csAbs=  1.36059379E+04
+
+calcCs> csExt=  5.51525686E+04 nConv= 13
+         csSca=  3.96925376E+04 nConv=  9
+         csAbs=  1.54600311E+04
+
+calcCs> csExt=  7.74137495E+04 nConv= 13
+         csSca=  6.28807650E+04 nConv=  9
+         csAbs=  1.45329845E+04
+
+calcCs> csExt=  7.74137495E+04 nConv= 13
+         csSca=  6.28807650E+04 nConv=  9
+         csAbs=  1.45329845E+04
+
+
+spectrumFF> ===== Wavelength:   408.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  7.14513199E+04 nConv=  9
+             <csSca>=  6.07734576E+04 nConv=  9
+             <csAbs>=  1.06778623E+04
+
+             <cdExt>=  9.82814467E-11
+             <cdSca>=  1.08573407E-10
+             <cdAbs>= -1.02919606E-11
+
+calcCs> csExt=  8.86233123E+04 nConv= 12
+         csSca=  7.91702284E+04 nConv=  9
+         csAbs=  9.45308393E+03
+
+calcCs> csExt=  5.71973931E+04 nConv= 13
+         csSca=  4.51310503E+04 nConv=  9
+         csAbs=  1.20663428E+04
+
+calcCs> csExt=  7.29103527E+04 nConv= 12
+         csSca=  6.21506394E+04 nConv=  9
+         csAbs=  1.07597133E+04
+
+calcCs> csExt=  7.29103527E+04 nConv= 12
+         csSca=  6.21506394E+04 nConv=  9
+         csAbs=  1.07597133E+04
+
+
+spectrumFF> ===== Wavelength:   414.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  7.36448807E+04 nConv=  9
+             <csSca>=  6.37328474E+04 nConv=  9
+             <csAbs>=  9.91203331E+03
+
+             <cdExt>=  1.21319572E-10
+             <cdSca>=  1.40821321E-10
+             <cdAbs>= -1.95017488E-11
+
+calcCs> csExt=  8.28942371E+04 nConv= 12
+         csSca=  7.57507957E+04 nConv=  9
+         csAbs=  7.14344145E+03
+
+calcCs> csExt=  6.52430956E+04 nConv= 13
+         csSca=  5.20104815E+04 nConv=  9
+         csAbs=  1.32326141E+04
+
+calcCs> csExt=  7.40686663E+04 nConv= 12
+         csSca=  6.38806386E+04 nConv=  9
+         csAbs=  1.01880277E+04
+
+calcCs> csExt=  7.40686663E+04 nConv= 12
+         csSca=  6.38806386E+04 nConv=  9
+         csAbs=  1.01880277E+04
+
+
+spectrumFF> ===== Wavelength:   420.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  7.89092828E+04 nConv=  9
+             <csSca>=  6.72965125E+04 nConv=  9
+             <csAbs>=  1.16127703E+04
+
+             <cdExt>=  1.10240687E-10
+             <cdSca>=  1.11208550E-10
+             <cdAbs>= -9.67862294E-13
+
+calcCs> csExt=  7.99833978E+04 nConv= 12
+         csSca=  7.41639056E+04 nConv=  9
+         csAbs=  5.81949222E+03
+
+calcCs> csExt=  7.75690651E+04 nConv= 13
+         csSca=  5.97957540E+04 nConv=  9
+         csAbs=  1.77733111E+04
+
+calcCs> csExt=  7.87762314E+04 nConv= 12
+         csSca=  6.69798298E+04 nConv=  9
+         csAbs=  1.17964016E+04
+
+calcCs> csExt=  7.87762314E+04 nConv= 12
+         csSca=  6.69798298E+04 nConv=  9
+         csAbs=  1.17964016E+04
+
+
+spectrumFF> ===== Wavelength:   426.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  8.22023156E+04 nConv=  9
+             <csSca>=  6.77644274E+04 nConv=  9
+             <csAbs>=  1.44378882E+04
+
+             <cdExt>=  1.42014078E-10
+             <cdSca>=  1.37498200E-10
+             <cdAbs>=  4.51587743E-12
+
+calcCs> csExt=  7.84801335E+04 nConv= 12
+         csSca=  7.34652201E+04 nConv=  9
+         csAbs=  5.01491342E+03
+
+calcCs> csExt=  8.89358615E+04 nConv= 13
+         csSca=  6.48023225E+04 nConv=  9
+         csAbs=  2.41335389E+04
+
+calcCs> csExt=  8.37079975E+04 nConv= 13
+         csSca=  6.91337713E+04 nConv=  9
+         csAbs=  1.45742262E+04
+
+calcCs> csExt=  8.37079975E+04 nConv= 13
+         csSca=  6.91337713E+04 nConv=  9
+         csAbs=  1.45742262E+04
+
+
+spectrumFF> ===== Wavelength:   432.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  7.67231701E+04 nConv=  9
+             <csSca>=  6.21727158E+04 nConv=  9
+             <csAbs>=  1.45504543E+04
+
+             <cdExt>=  1.55451182E-10
+             <cdSca>=  1.48992546E-10
+             <cdAbs>=  6.45863596E-12
+
+calcCs> csExt=  7.76706853E+04 nConv= 12
+         csSca=  7.31738670E+04 nConv=  8
+         csAbs=  4.49681829E+03
+
+calcCs> csExt=  8.04430756E+04 nConv= 13
+         csSca=  5.45141106E+04 nConv=  9
+         csAbs=  2.59289650E+04
+
+calcCs> csExt=  7.90568804E+04 nConv= 12
+         csSca=  6.38439888E+04 nConv=  9
+         csAbs=  1.52128916E+04
+
+calcCs> csExt=  7.90568804E+04 nConv= 12
+         csSca=  6.38439888E+04 nConv=  9
+         csAbs=  1.52128916E+04
+
+
+spectrumFF> ===== Wavelength:   438.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  6.95925593E+04 nConv=  9
+             <csSca>=  5.67955953E+04 nConv=  9
+             <csAbs>=  1.27969640E+04
+
+             <cdExt>=  1.12949289E-10
+             <cdSca>=  1.19542184E-10
+             <cdAbs>= -6.59289482E-12
+
+calcCs> csExt=  7.71836051E+04 nConv= 12
+         csSca=  7.30384373E+04 nConv=  8
+         csAbs=  4.14516779E+03
+
+calcCs> csExt=  5.46109346E+04 nConv= 13
+         csSca=  3.13194266E+04 nConv=  9
+         csAbs=  2.32915080E+04
+
+calcCs> csExt=  6.58972698E+04 nConv= 12
+         csSca=  5.21789319E+04 nConv=  9
+         csAbs=  1.37183379E+04
+
+calcCs> csExt=  6.58972698E+04 nConv= 12
+         csSca=  5.21789319E+04 nConv=  9
+         csAbs=  1.37183379E+04
+
+
+spectrumFF> ===== Wavelength:   444.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  6.65929197E+04 nConv=  9
+             <csSca>=  5.54984793E+04 nConv=  9
+             <csAbs>=  1.10944403E+04
+
+             <cdExt>=  1.19804896E-10
+             <cdSca>=  1.23696395E-10
+             <cdAbs>= -3.89149951E-12
+
+calcCs> csExt=  7.68151230E+04 nConv= 11
+         csSca=  7.29204828E+04 nConv=  8
+         csAbs=  3.89464024E+03
+
+calcCs> csExt=  3.29552797E+04 nConv= 13
+         csSca=  1.39973029E+04 nConv=  9
+         csAbs=  1.89579767E+04
+
+calcCs> csExt=  5.48852014E+04 nConv= 12
+         csSca=  4.34588929E+04 nConv=  9
+         csAbs=  1.14263085E+04
+
+calcCs> csExt=  5.48852014E+04 nConv= 12
+         csSca=  4.34588929E+04 nConv=  9
+         csAbs=  1.14263085E+04
+
+
+spectrumFF> ===== Wavelength:   450.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  6.72172161E+04 nConv=  9
+             <csSca>=  5.74642980E+04 nConv=  9
+             <csAbs>=  9.75291815E+03
+
+             <cdExt>=  1.18309474E-10
+             <cdSca>=  1.30758797E-10
+             <cdAbs>= -1.24493225E-11
+
+calcCs> csExt=  7.64478574E+04 nConv= 11
+         csSca=  7.27401454E+04 nConv=  8
+         csAbs=  3.70771199E+03
+
+calcCs> csExt=  2.44244117E+04 nConv= 12
+         csSca=  9.91977482E+03 nConv=  9
+         csAbs=  1.45046368E+04
+
+calcCs> csExt=  5.04361346E+04 nConv= 12
+         csSca=  4.13299601E+04 nConv=  9
+         csAbs=  9.10617445E+03
+
+calcCs> csExt=  5.04361346E+04 nConv= 12
+         csSca=  4.13299601E+04 nConv=  9
+         csAbs=  9.10617445E+03
+
+
+spectrumFF> ===== Wavelength:   456.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  6.92507312E+04 nConv=  9
+             <csSca>=  6.03621041E+04 nConv=  8
+             <csAbs>=  8.88862704E+03
+
+             <cdExt>=  1.06427756E-10
+             <cdSca>=  1.29026979E-10
+             <cdAbs>= -2.25992227E-11
+
+calcCs> csExt=  7.60118872E+04 nConv= 11
+         csSca=  7.24501207E+04 nConv=  8
+         csAbs=  3.56176649E+03
+
+calcCs> csExt=  2.47084430E+04 nConv= 11
+         csSca=  1.34542417E+04 nConv=  9
+         csAbs=  1.12542013E+04
+
+calcCs> csExt=  5.03601651E+04 nConv= 11
+         csSca=  4.29521812E+04 nConv=  8
+         csAbs=  7.40798392E+03
+
+calcCs> csExt=  5.03601651E+04 nConv= 11
+         csSca=  4.29521812E+04 nConv=  8
+         csAbs=  7.40798392E+03
+
+
+spectrumFF> ===== Wavelength:   462.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  7.15417097E+04 nConv=  8
+             <csSca>=  6.30820378E+04 nConv=  8
+             <csAbs>=  8.45967197E+03
+
+             <cdExt>=  1.29598612E-10
+             <cdSca>=  1.53003471E-10
+             <cdAbs>= -2.34048583E-11
+
+calcCs> csExt=  7.54652002E+04 nConv= 11
+         csSca=  7.20225906E+04 nConv=  8
+         csAbs=  3.44260959E+03
+
+calcCs> csExt=  2.85901599E+04 nConv= 11
+         csSca=  1.93383561E+04 nConv=  9
+         csAbs=  9.25180381E+03
+
+calcCs> csExt=  5.20276801E+04 nConv= 11
+         csSca=  4.56804734E+04 nConv=  8
+         csAbs=  6.34720670E+03
+
+calcCs> csExt=  5.20276801E+04 nConv= 11
+         csSca=  4.56804734E+04 nConv=  8
+         csAbs=  6.34720670E+03
+
+
+spectrumFF> ===== Wavelength:   468.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  7.41136845E+04 nConv=  8
+             <csSca>=  6.56786606E+04 nConv=  8
+             <csAbs>=  8.43502392E+03
+
+             <cdExt>=  1.33016474E-10
+             <cdSca>=  1.67789447E-10
+             <cdAbs>= -3.47729727E-11
+
+calcCs> csExt=  7.47833464E+04 nConv= 11
+         csSca=  7.14423074E+04 nConv=  8
+         csAbs=  3.34103893E+03
+
+calcCs> csExt=  3.36801746E+04 nConv= 11
+         csSca=  2.55379332E+04 nConv=  8
+         csAbs=  8.14224145E+03
+
+calcCs> csExt=  5.42317605E+04 nConv= 11
+         csSca=  4.84901203E+04 nConv=  8
+         csAbs=  5.74164019E+03
+
+calcCs> csExt=  5.42317605E+04 nConv= 11
+         csSca=  4.84901203E+04 nConv=  8
+         csAbs=  5.74164019E+03
+
+
+spectrumFF> ===== Wavelength:   474.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  7.73516977E+04 nConv=  8
+             <csSca>=  6.84936448E+04 nConv=  8
+             <csAbs>=  8.85805293E+03
+
+             <cdExt>=  1.47650227E-10
+             <cdSca>=  1.82754784E-10
+             <cdAbs>= -3.51045564E-11
+
+calcCs> csExt=  7.39536514E+04 nConv= 11
+         csSca=  7.07027096E+04 nConv=  8
+         csAbs=  3.25094174E+03
+
+calcCs> csExt=  3.92008055E+04 nConv= 11
+         csSca=  3.15551339E+04 nConv=  8
+         csAbs=  7.64567160E+03
+
+calcCs> csExt=  5.65772284E+04 nConv= 11
+         csSca=  5.11289218E+04 nConv=  8
+         csAbs=  5.44830667E+03
+
+calcCs> csExt=  5.65772284E+04 nConv= 11
+         csSca=  5.11289218E+04 nConv=  8
+         csAbs=  5.44830667E+03
+
+
+spectrumFF> ===== Wavelength:   480.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  8.13866668E+04 nConv=  8
+             <csSca>=  7.15741466E+04 nConv=  8
+             <csAbs>=  9.81252025E+03
+
+             <cdExt>=  1.21214113E-10
+             <cdSca>=  1.71873068E-10
+             <cdAbs>= -5.06589551E-11
+
+calcCs> csExt=  7.29717759E+04 nConv= 11
+         csSca=  6.98035825E+04 nConv=  8
+         csAbs=  3.16819347E+03
+
+calcCs> csExt=  4.50138769E+04 nConv= 11
+         csSca=  3.74127199E+04 nConv=  8
+         csAbs=  7.60115705E+03
+
+calcCs> csExt=  5.89928264E+04 nConv= 11
+         csSca=  5.36081512E+04 nConv=  8
+         csAbs=  5.38467526E+03
+
+calcCs> csExt=  5.89928264E+04 nConv= 11
+         csSca=  5.36081512E+04 nConv=  8
+         csAbs=  5.38467526E+03
+
+
+spectrumFF> ===== Wavelength:   486.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  8.54482564E+04 nConv=  8
+             <csSca>=  7.41483291E+04 nConv=  8
+             <csAbs>=  1.12999273E+04
+
+             <cdExt>=  1.44917800E-10
+             <cdSca>=  1.98908461E-10
+             <cdAbs>= -5.39906611E-11
+
+calcCs> csExt=  7.18395178E+04 nConv= 11
+         csSca=  6.87495240E+04 nConv=  8
+         csAbs=  3.08999379E+03
+
+calcCs> csExt=  5.12046656E+04 nConv= 11
+         csSca=  4.32986762E+04 nConv=  8
+         csAbs=  7.90598937E+03
+
+calcCs> csExt=  6.15220917E+04 nConv= 11
+         csSca=  5.60241001E+04 nConv=  8
+         csAbs=  5.49799158E+03
+
+calcCs> csExt=  6.15220917E+04 nConv= 11
+         csSca=  5.60241001E+04 nConv=  8
+         csAbs=  5.49799158E+03
+
+
+spectrumFF> ===== Wavelength:   492.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  8.71250615E+04 nConv=  8
+             <csSca>=  7.41984610E+04 nConv=  8
+             <csAbs>=  1.29266005E+04
+
+             <cdExt>=  1.79416819E-10
+             <cdSca>=  2.22448256E-10
+             <cdAbs>= -4.30314364E-11
+
+calcCs> csExt=  7.05632919E+04 nConv= 11
+         csSca=  6.75488412E+04 nConv=  8
+         csAbs=  3.01445074E+03
+
+calcCs> csExt=  5.77532134E+04 nConv= 11
+         csSca=  4.93340091E+04 nConv=  8
+         csAbs=  8.41920437E+03
+
+calcCs> csExt=  6.41582527E+04 nConv= 11
+         csSca=  5.84414251E+04 nConv=  8
+         csAbs=  5.71682755E+03
+
+calcCs> csExt=  6.41582527E+04 nConv= 11
+         csSca=  5.84414251E+04 nConv=  8
+         csAbs=  5.71682755E+03
+
+
+spectrumFF> ===== Wavelength:   498.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  8.36786211E+04 nConv=  8
+             <csSca>=  6.99225643E+04 nConv=  8
+             <csAbs>=  1.37560568E+04
+
+             <cdExt>=  1.61327405E-10
+             <cdSca>=  1.89269488E-10
+             <cdAbs>= -2.79420823E-11
+
+calcCs> csExt=  6.91529911E+04 nConv= 11
+         csSca=  6.62126807E+04 nConv=  8
+         csAbs=  2.94031037E+03
+
+calcCs> csExt=  6.40988206E+04 nConv= 11
+         csSca=  5.51814298E+04 nConv=  8
+         csAbs=  8.91739079E+03
+
+calcCs> csExt=  6.66259058E+04 nConv= 11
+         csSca=  6.06970552E+04 nConv=  8
+         csAbs=  5.92885058E+03
+
+calcCs> csExt=  6.66259058E+04 nConv= 11
+         csSca=  6.06970552E+04 nConv=  8
+         csAbs=  5.92885058E+03
+
+
+spectrumFF> ===== Wavelength:   504.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  7.64705697E+04 nConv=  8
+             <csSca>=  6.31539686E+04 nConv=  8
+             <csAbs>=  1.33166011E+04
+
+             <cdExt>=  1.14239345E-10
+             <cdSca>=  1.21711809E-10
+             <cdAbs>= -7.47246443E-12
+
+calcCs> csExt=  6.76210712E+04 nConv= 11
+         csSca=  6.47542965E+04 nConv=  8
+         csAbs=  2.86677467E+03
+
+calcCs> csExt=  6.93499164E+04 nConv= 11
+         csSca=  6.00533723E+04 nConv=  8
+         csAbs=  9.29654402E+03
+
+calcCs> csExt=  6.84854938E+04 nConv= 11
+         csSca=  6.24038344E+04 nConv=  8
+         csAbs=  6.08165934E+03
+
+calcCs> csExt=  6.84854938E+04 nConv= 11
+         csSca=  6.24038344E+04 nConv=  8
+         csAbs=  6.08165934E+03
+
+
+spectrumFF> ===== Wavelength:   510.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  6.99226009E+04 nConv=  8
+             <csSca>=  5.75901355E+04 nConv=  8
+             <csAbs>=  1.23324653E+04
+
+             <cdExt>=  9.69341706E-11
+             <cdSca>=  7.83555098E-11
+             <cdAbs>=  1.85786608E-11
+
+calcCs> csExt=  6.59817817E+04 nConv= 11
+         csSca=  6.31884072E+04 nConv=  8
+         csAbs=  2.79337449E+03
+
+calcCs> csExt=  7.31757765E+04 nConv= 11
+         csSca=  6.34761683E+04 nConv=  8
+         csAbs=  9.69960821E+03
+
+calcCs> csExt=  6.95787791E+04 nConv= 11
+         csSca=  6.33322878E+04 nConv=  8
+         csAbs=  6.24649135E+03
+
+calcCs> csExt=  6.95787791E+04 nConv= 11
+         csSca=  6.33322878E+04 nConv=  8
+         csAbs=  6.24649135E+03
+
+
+spectrumFF> ===== Wavelength:   516.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  6.60985364E+04 nConv=  8
+             <csSca>=  5.44849272E+04 nConv=  8
+             <csAbs>=  1.16136093E+04
+
+             <cdExt>=  8.83699074E-11
+             <cdSca>=  6.86794128E-11
+             <cdAbs>=  1.96904946E-11
+
+calcCs> csExt=  6.42505014E+04 nConv= 11
+         csSca=  6.15306232E+04 nConv=  8
+         csAbs=  2.71987819E+03
+
+calcCs> csExt=  7.56206882E+04 nConv= 11
+         csSca=  6.53542599E+04 nConv=  8
+         csAbs=  1.02664283E+04
+
+calcCs> csExt=  6.99355948E+04 nConv= 11
+         csSca=  6.34424415E+04 nConv=  8
+         csAbs=  6.49315327E+03
+
+calcCs> csExt=  6.99355948E+04 nConv= 11
+         csSca=  6.34424415E+04 nConv=  8
+         csAbs=  6.49315327E+03
+
+
+spectrumFF> ===== Wavelength:   522.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  6.47109498E+04 nConv=  8
+             <csSca>=  5.32678658E+04 nConv=  8
+             <csAbs>=  1.14430841E+04
+
+             <cdExt>=  1.03253200E-10
+             <cdSca>=  6.87876662E-11
+             <cdAbs>=  3.44655343E-11
+
+calcCs> csExt=  6.24431627E+04 nConv= 11
+         csSca=  5.97969386E+04 nConv=  8
+         csAbs=  2.64622410E+03
+
+calcCs> csExt=  7.65109749E+04 nConv= 11
+         csSca=  6.55068682E+04 nConv=  8
+         csAbs=  1.10041067E+04
+
+calcCs> csExt=  6.94770688E+04 nConv= 11
+         csSca=  6.26519034E+04 nConv=  8
+         csAbs=  6.82516542E+03
+
+calcCs> csExt=  6.94770688E+04 nConv= 11
+         csSca=  6.26519034E+04 nConv=  8
+         csAbs=  6.82516542E+03
+
+
+spectrumFF> ===== Wavelength:   528.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  6.51037492E+04 nConv=  8
+             <csSca>=  5.32690116E+04 nConv=  8
+             <csAbs>=  1.18347375E+04
+
+             <cdExt>=  1.18282737E-10
+             <cdSca>=  7.42158705E-11
+             <cdAbs>=  4.40668669E-11
+
+calcCs> csExt=  6.05757586E+04 nConv= 11
+         csSca=  5.80032890E+04 nConv=  8
+         csAbs=  2.57246959E+03
+
+calcCs> csExt=  7.54584250E+04 nConv= 11
+         csSca=  6.36199108E+04 nConv=  8
+         csAbs=  1.18385143E+04
+
+calcCs> csExt=  6.80170918E+04 nConv= 11
+         csSca=  6.08115999E+04 nConv=  8
+         csAbs=  7.20549193E+03
+
+calcCs> csExt=  6.80170918E+04 nConv= 11
+         csSca=  6.08115999E+04 nConv=  8
+         csAbs=  7.20549193E+03
+
+
+spectrumFF> ===== Wavelength:   534.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  6.69780057E+04 nConv=  8
+             <csSca>=  5.42283985E+04 nConv=  8
+             <csAbs>=  1.27496071E+04
+
+             <cdExt>=  1.45456478E-10
+             <cdSca>=  1.07468707E-10
+             <cdAbs>=  3.79877708E-11
+
+calcCs> csExt=  5.86639288E+04 nConv= 11
+         csSca=  5.61651766E+04 nConv=  8
+         csAbs=  2.49875216E+03
+
+calcCs> csExt=  7.21174945E+04 nConv= 10
+         csSca=  5.94555860E+04 nConv=  8
+         csAbs=  1.26619084E+04
+
+calcCs> csExt=  6.53907119E+04 nConv= 11
+         csSca=  5.78103813E+04 nConv=  8
+         csAbs=  7.58033058E+03
+
+calcCs> csExt=  6.53907119E+04 nConv= 11
+         csSca=  5.78103813E+04 nConv=  8
+         csAbs=  7.58033058E+03
+
+
+spectrumFF> ===== Wavelength:   540.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  7.02977465E+04 nConv=  8
+             <csSca>=  5.61842612E+04 nConv=  8
+             <csAbs>=  1.41134853E+04
+
+             <cdExt>=  1.93756146E-10
+             <cdSca>=  1.58538811E-10
+             <cdAbs>=  3.52173350E-11
+
+calcCs> csExt=  5.67226247E+04 nConv= 11
+         csSca=  5.42973652E+04 nConv=  8
+         csAbs=  2.42525955E+03
+
+calcCs> csExt=  6.64243455E+04 nConv= 10
+         csSca=  5.30673149E+04 nConv=  8
+         csAbs=  1.33570306E+04
+
+calcCs> csExt=  6.15734851E+04 nConv= 10
+         csSca=  5.36823401E+04 nConv=  8
+         csAbs=  7.89114505E+03
+
+calcCs> csExt=  6.15734851E+04 nConv= 10
+         csSca=  5.36823401E+04 nConv=  8
+         csAbs=  7.89114505E+03
+
+
+spectrumFF> ===== Wavelength:   546.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  7.46306674E+04 nConv=  8
+             <csSca>=  5.89564209E+04 nConv=  8
+             <csAbs>=  1.56742466E+04
+
+             <cdExt>=  2.50297792E-10
+             <cdSca>=  2.52724673E-10
+             <cdAbs>= -2.42688166E-12
+
+calcCs> csExt=  5.47658505E+04 nConv= 11
+         csSca=  5.24136436E+04 nConv=  8
+         csAbs=  2.35220692E+03
+
+calcCs> csExt=  5.87151703E+04 nConv= 11
+         csSca=  4.49027272E+04 nConv=  8
+         csAbs=  1.38124431E+04
+
+calcCs> csExt=  5.67405102E+04 nConv= 10
+         csSca=  4.86581854E+04 nConv=  8
+         csAbs=  8.08232479E+03
+
+calcCs> csExt=  5.67405102E+04 nConv= 10
+         csSca=  4.86581854E+04 nConv=  8
+         csAbs=  8.08232479E+03
+
+
+spectrumFF> ===== Wavelength:   552.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  7.80040464E+04 nConv=  8
+             <csSca>=  6.12232906E+04 nConv=  8
+             <csAbs>=  1.67807559E+04
+
+             <cdExt>=  2.91161442E-10
+             <cdSca>=  3.15883439E-10
+             <cdAbs>= -2.47219967E-11
+
+calcCs> csExt=  5.28064751E+04 nConv= 11
+         csSca=  5.05266556E+04 nConv=  8
+         csAbs=  2.27981950E+03
+
+calcCs> csExt=  4.96839701E+04 nConv= 11
+         csSca=  3.57534720E+04 nConv=  8
+         csAbs=  1.39304981E+04
+
+calcCs> csExt=  5.12452224E+04 nConv= 10
+         csSca=  4.31400638E+04 nConv=  8
+         csAbs=  8.10515861E+03
+
+calcCs> csExt=  5.12452224E+04 nConv= 10
+         csSca=  4.31400638E+04 nConv=  8
+         csAbs=  8.10515861E+03
+
+
+spectrumFF> ===== Wavelength:   558.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  7.70699221E+04 nConv=  8
+             <csSca>=  6.04948854E+04 nConv=  8
+             <csAbs>=  1.65750367E+04
+
+             <cdExt>=  2.76242786E-10
+             <cdSca>=  3.49983522E-10
+             <cdAbs>= -7.37407360E-11
+
+calcCs> csExt=  5.08561095E+04 nConv= 11
+         csSca=  4.86477897E+04 nConv=  7
+         csAbs=  2.20831982E+03
+
+calcCs> csExt=  4.02770103E+04 nConv= 11
+         csSca=  2.66185509E+04 nConv=  8
+         csAbs=  1.36584594E+04
+
+calcCs> csExt=  4.55665598E+04 nConv= 10
+         csSca=  3.76331703E+04 nConv=  8
+         csAbs=  7.93338946E+03
+
+calcCs> csExt=  4.55665598E+04 nConv= 10
+         csSca=  3.76331703E+04 nConv=  8
+         csAbs=  7.93338946E+03
+
+
+spectrumFF> ===== Wavelength:   564.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  7.06108415E+04 nConv=  8
+             <csSca>=  5.56866407E+04 nConv=  8
+             <csAbs>=  1.49242009E+04
+
+             <cdExt>=  3.31773764E-10
+             <cdSca>=  4.39707038E-10
+             <cdAbs>= -1.07933274E-10
+
+calcCs> csExt=  4.89250419E+04 nConv= 11
+         csSca=  4.67871234E+04 nConv=  7
+         csAbs=  2.13791850E+03
+
+calcCs> csExt=  3.15328600E+04 nConv= 11
+         csSca=  1.84731922E+04 nConv=  8
+         csAbs=  1.30596678E+04
+
+calcCs> csExt=  4.02289509E+04 nConv= 10
+         csSca=  3.26301578E+04 nConv=  8
+         csAbs=  7.59879306E+03
+
+calcCs> csExt=  4.02289509E+04 nConv= 10
+         csSca=  3.26301578E+04 nConv=  8
+         csAbs=  7.59879306E+03
+
+
+spectrumFF> ===== Wavelength:   570.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  6.12927602E+04 nConv=  8
+             <csSca>=  4.86471308E+04 nConv=  8
+             <csAbs>=  1.26456294E+04
+
+             <cdExt>=  2.36980496E-10
+             <cdSca>=  3.40293160E-10
+             <cdAbs>= -1.03312664E-10
+
+calcCs> csExt=  4.70222211E+04 nConv= 11
+         csSca=  4.49534131E+04 nConv=  7
+         csAbs=  2.06880804E+03
+
+calcCs> csExt=  2.42238804E+04 nConv= 11
+         csSca=  1.19268518E+04 nConv=  8
+         csAbs=  1.22970287E+04
+
+calcCs> csExt=  3.56230507E+04 nConv= 10
+         csSca=  2.84401324E+04 nConv=  8
+         csAbs=  7.18291826E+03
+
+calcCs> csExt=  3.56230507E+04 nConv= 10
+         csSca=  2.84401324E+04 nConv=  8
+         csAbs=  7.18291826E+03
+
+
+spectrumFF> ===== Wavelength:   576.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.22635576E+04 nConv=  8
+             <csSca>=  4.17385515E+04 nConv=  8
+             <csAbs>=  1.05250062E+04
+
+             <cdExt>=  2.05946407E-10
+             <cdSca>=  3.07443961E-10
+             <cdAbs>= -1.01497554E-10
+
+calcCs> csExt=  4.51552797E+04 nConv= 11
+         csSca=  4.31541208E+04 nConv=  7
+         csAbs=  2.00115885E+03
+
+calcCs> csExt=  1.86283636E+04 nConv= 11
+         csSca=  7.11341339E+03 nConv=  8
+         csAbs=  1.15149502E+04
+
+calcCs> csExt=  3.18918216E+04 nConv= 10
+         csSca=  2.51337671E+04 nConv=  8
+         csAbs=  6.75805448E+03
+
+calcCs> csExt=  3.18918216E+04 nConv= 10
+         csSca=  2.51337671E+04 nConv=  8
+         csAbs=  6.75805448E+03
+
+
+spectrumFF> ===== Wavelength:   582.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.48892140E+04 nConv=  8
+             <csSca>=  3.60471659E+04 nConv=  8
+             <csAbs>=  8.84204810E+03
+
+             <cdExt>=  1.46093414E-10
+             <cdSca>=  2.28315333E-10
+             <cdAbs>= -8.22219187E-11
+
+calcCs> csExt=  4.33305886E+04 nConv= 10
+         csSca=  4.13954714E+04 nConv=  7
+         csAbs=  1.93511718E+03
+
+calcCs> csExt=  1.46686413E+04 nConv= 10
+         csSca=  3.87910605E+03 nConv=  8
+         csAbs=  1.07895352E+04
+
+calcCs> csExt=  2.89996149E+04 nConv= 10
+         csSca=  2.26372887E+04 nConv=  8
+         csAbs=  6.36232620E+03
+
+calcCs> csExt=  2.89996149E+04 nConv= 10
+         csSca=  2.26372887E+04 nConv=  8
+         csAbs=  6.36232620E+03
+
+
+spectrumFF> ===== Wavelength:   588.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.92708471E+04 nConv=  8
+             <csSca>=  3.16922836E+04 nConv=  7
+             <csAbs>=  7.57856356E+03
+
+             <cdExt>=  1.08115292E-10
+             <cdSca>=  1.69082777E-10
+             <cdAbs>= -6.09674853E-11
+
+calcCs> csExt=  4.15533343E+04 nConv= 10
+         csSca=  3.96825297E+04 nConv=  7
+         csAbs=  1.87080453E+03
+
+calcCs> csExt=  1.21221066E+04 nConv= 10
+         csSca=  1.97179091E+03 nConv=  8
+         csAbs=  1.01503157E+04
+
+calcCs> csExt=  2.68377204E+04 nConv= 10
+         csSca=  2.08271603E+04 nConv=  7
+         csAbs=  6.01056010E+03
+
+calcCs> csExt=  2.68377204E+04 nConv= 10
+         csSca=  2.08271603E+04 nConv=  7
+         csAbs=  6.01056010E+03
+
+
+spectrumFF> ===== Wavelength:   594.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.50924831E+04 nConv=  7
+             <csSca>=  2.84533280E+04 nConv=  7
+             <csAbs>=  6.63915501E+03
+
+             <cdExt>=  1.04994525E-10
+             <cdSca>=  1.67223135E-10
+             <cdAbs>= -6.22286106E-11
+
+calcCs> csExt=  3.98276109E+04 nConv= 10
+         csSca=  3.80192930E+04 nConv=  7
+         csAbs=  1.80831792E+03
+
+calcCs> csExt=  1.07393647E+04 nConv= 10
+         csSca=  1.13442517E+03 nConv=  8
+         csAbs=  9.60493955E+03
+
+calcCs> csExt=  2.52834878E+04 nConv= 10
+         csSca=  1.95768591E+04 nConv=  7
+         csAbs=  5.70662874E+03
+
+calcCs> csExt=  2.52834878E+04 nConv= 10
+         csSca=  1.95768591E+04 nConv=  7
+         csAbs=  5.70662874E+03
+
+
+spectrumFF> ===== Wavelength:   600.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.20041250E+04 nConv=  7
+             <csSca>=  2.60690312E+04 nConv=  7
+             <csAbs>=  5.93509380E+03
+
+             <cdExt>=  7.07780634E-11
+             <cdSca>=  1.26194155E-10
+             <cdAbs>= -5.54160914E-11
+
+calcCs> csExt=  3.81565227E+04 nConv= 10
+         csSca=  3.64087916E+04 nConv=  7
+         csAbs=  1.74773109E+03
+
+calcCs> csExt=  1.02929216E+04 nConv= 10
+         csSca=  1.14140563E+03 nConv=  8
+         csAbs=  9.15151600E+03
+
+calcCs> csExt=  2.42247221E+04 nConv= 10
+         csSca=  1.87750986E+04 nConv=  7
+         csAbs=  5.44962355E+03
+
+calcCs> csExt=  2.42247221E+04 nConv= 10
+         csSca=  1.87750986E+04 nConv=  7
+         csAbs=  5.44962355E+03
+
+
+spectrumFF> ===== Wavelength:   606.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.97246674E+04 nConv=  7
+             <csSca>=  2.43240303E+04 nConv=  7
+             <csAbs>=  5.40063708E+03
+
+             <cdExt>=  7.29315647E-11
+             <cdSca>=  1.29587379E-10
+             <cdAbs>= -5.66558146E-11
+
+calcCs> csExt=  3.65422892E+04 nConv= 10
+         csSca=  3.48531931E+04 nConv=  7
+         csAbs=  1.68909613E+03
+
+calcCs> csExt=  1.05933875E+04 nConv= 10
+         csSca=  1.80930210E+03 nConv=  8
+         csAbs=  8.78408538E+03
+
+calcCs> csExt=  2.35678383E+04 nConv= 10
+         csSca=  1.83312476E+04 nConv=  7
+         csAbs=  5.23659076E+03
+
+calcCs> csExt=  2.35678383E+04 nConv= 10
+         csSca=  1.83312476E+04 nConv=  7
+         csAbs=  5.23659076E+03
+
+
+spectrumFF> ===== Wavelength:   612.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.80487206E+04 nConv=  7
+             <csSca>=  2.30586284E+04 nConv=  7
+             <csAbs>=  4.99009221E+03
+
+             <cdExt>=  6.29614400E-11
+             <cdSca>=  1.21247034E-10
+             <cdAbs>= -5.82855941E-11
+
+calcCs> csExt=  3.49863516E+04 nConv= 10
+         csSca=  3.33539061E+04 nConv=  7
+         csAbs=  1.63244545E+03
+
+calcCs> csExt=  1.14913316E+04 nConv= 10
+         csSca=  2.99609015E+03 nConv=  8
+         csAbs=  8.49524149E+03
+
+calcCs> csExt=  2.32388416E+04 nConv= 10
+         csSca=  1.81749981E+04 nConv=  7
+         csAbs=  5.06384347E+03
+
+calcCs> csExt=  2.32388416E+04 nConv= 10
+         csSca=  1.81749981E+04 nConv=  7
+         csAbs=  5.06384347E+03
+
+
+spectrumFF> ===== Wavelength:   618.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.68308738E+04 nConv=  7
+             <csSca>=  2.21587884E+04 nConv=  7
+             <csAbs>=  4.67208535E+03
+
+             <cdExt>=  4.92671376E-11
+             <cdSca>=  9.11815483E-11
+             <cdAbs>= -4.19144107E-11
+
+calcCs> csExt=  3.34894748E+04 nConv= 10
+         csSca=  3.19116809E+04 nConv=  7
+         csAbs=  1.57779387E+03
+
+calcCs> csExt=  1.28731533E+04 nConv= 10
+         csSca=  4.59567692E+03 nConv=  7
+         csAbs=  8.27747636E+03
+
+calcCs> csExt=  2.31813141E+04 nConv= 10
+         csSca=  1.82536789E+04 nConv=  7
+         csAbs=  4.92763512E+03
+
+calcCs> csExt=  2.31813141E+04 nConv= 10
+         csSca=  1.82536789E+04 nConv=  7
+         csAbs=  4.92763512E+03
+
+
+spectrumFF> ===== Wavelength:   624.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.59690608E+04 nConv=  7
+             <csSca>=  2.15441450E+04 nConv=  7
+             <csAbs>=  4.42491579E+03
+
+             <cdExt>=  4.15034992E-11
+             <cdSca>=  8.15626603E-11
+             <cdAbs>= -4.00591612E-11
+
+calcCs> csExt=  3.20518449E+04 nConv= 10
+         csSca=  3.05267041E+04 nConv=  7
+         csAbs=  1.52514085E+03
+
+calcCs> csExt=  1.46550511E+04 nConv= 10
+         csSca=  6.53119434E+03 nConv=  7
+         csAbs=  8.12385677E+03
+
+calcCs> csExt=  2.33534480E+04 nConv= 10
+         csSca=  1.85289492E+04 nConv=  7
+         csAbs=  4.82449881E+03
+
+calcCs> csExt=  2.33534480E+04 nConv= 10
+         csSca=  1.85289492E+04 nConv=  7
+         csAbs=  4.82449881E+03
+
+
+spectrumFF> ===== Wavelength:   630.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.53916581E+04 nConv=  7
+             <csSca>=  2.11583002E+04 nConv=  7
+             <csAbs>=  4.23335797E+03
+
+             <cdExt>=  3.16513403E-11
+             <cdSca>=  6.26602152E-11
+             <cdAbs>= -3.10088748E-11
+
+calcCs> csExt=  3.06731591E+04 nConv= 10
+         csSca=  2.91986866E+04 nConv=  7
+         csAbs=  1.47447252E+03
+
+calcCs> csExt=  1.67770102E+04 nConv= 10
+         csSca=  8.74868636E+03 nConv=  7
+         csAbs=  8.02832385E+03
+
+calcCs> csExt=  2.37250846E+04 nConv= 10
+         csSca=  1.89736865E+04 nConv=  7
+         csAbs=  4.75139819E+03
+
+calcCs> csExt=  2.37250846E+04 nConv= 10
+         csSca=  1.89736865E+04 nConv=  7
+         csAbs=  4.75139819E+03
+
+
+spectrumFF> ===== Wavelength:   636.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.50483223E+04 nConv=  7
+             <csSca>=  2.09617619E+04 nConv=  7
+             <csAbs>=  4.08656035E+03
+
+             <cdExt>=  2.99034575E-11
+             <cdSca>=  5.91831617E-11
+             <cdAbs>= -2.92797042E-11
+
+calcCs> csExt=  2.93527081E+04 nConv= 10
+         csSca=  2.79269443E+04 nConv=  7
+         csAbs=  1.42576381E+03
+
+calcCs> csExt=  1.91975744E+04 nConv= 10
+         csSca=  1.12117933E+04 nConv=  7
+         csAbs=  7.98578114E+03
+
+calcCs> csExt=  2.42751413E+04 nConv= 10
+         csSca=  1.95693688E+04 nConv=  7
+         csAbs=  4.70577247E+03
+
+calcCs> csExt=  2.42751413E+04 nConv= 10
+         csSca=  1.95693688E+04 nConv=  7
+         csAbs=  4.70577247E+03
+
+
+spectrumFF> ===== Wavelength:   642.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.49036670E+04 nConv=  7
+             <csSca>=  2.09269922E+04 nConv=  7
+             <csAbs>=  3.97667484E+03
+
+             <cdExt>=  2.43622946E-11
+             <cdSca>=  5.75916055E-11
+             <cdAbs>= -3.32293109E-11
+
+calcCs> csExt=  2.80894504E+04 nConv= 10
+         csSca=  2.67104701E+04 nConv=  7
+         csAbs=  1.37898025E+03
+
+calcCs> csExt=  2.18895961E+04 nConv= 10
+         csSca=  1.38975263E+04 nConv=  7
+         csAbs=  7.99206978E+03
+
+calcCs> csExt=  2.49895232E+04 nConv= 10
+         csSca=  2.03039982E+04 nConv=  7
+         csAbs=  4.68552502E+03
+
+calcCs> csExt=  2.49895232E+04 nConv= 10
+         csSca=  2.03039982E+04 nConv=  7
+         csAbs=  4.68552502E+03
+
+
+spectrumFF> ===== Wavelength:   648.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.49329226E+04 nConv=  7
+             <csSca>=  2.10349680E+04 nConv=  7
+             <csAbs>=  3.89795458E+03
+
+             <cdExt>=  1.79553359E-11
+             <cdSca>=  4.46305763E-11
+             <cdAbs>= -2.66752403E-11
+
+calcCs> csExt=  2.68820781E+04 nConv= 10
+         csSca=  2.55479983E+04 nConv=  7
+         csAbs=  1.33407977E+03
+
+calcCs> csExt=  2.48368975E+04 nConv= 10
+         csSca=  1.67930089E+04 nConv=  7
+         csAbs=  8.04388859E+03
+
+calcCs> csExt=  2.58594878E+04 nConv= 10
+         csSca=  2.11705036E+04 nConv=  7
+         csAbs=  4.68898418E+03
+
+calcCs> csExt=  2.58594878E+04 nConv= 10
+         csSca=  2.11705036E+04 nConv=  7
+         csAbs=  4.68898418E+03
+
+
+spectrumFF> ===== Wavelength:   654.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.51189393E+04 nConv=  7
+             <csSca>=  2.12727892E+04 nConv=  7
+             <csAbs>=  3.84615006E+03
+
+             <cdExt>=  1.69600094E-11
+             <cdSca>=  3.59158637E-11
+             <cdAbs>= -1.89558543E-11
+
+calcCs> csExt=  2.57290745E+04 nConv= 10
+         csSca=  2.44380603E+04 nConv=  7
+         csAbs=  1.29101417E+03
+
+calcCs> csExt=  2.80316861E+04 nConv=  9
+         csSca=  1.98929950E+04 nConv=  7
+         csAbs=  8.13869107E+03
+
+calcCs> csExt=  2.68803803E+04 nConv= 10
+         csSca=  2.21655277E+04 nConv=  7
+         csAbs=  4.71485263E+03
+
+calcCs> csExt=  2.68803803E+04 nConv= 10
+         csSca=  2.21655277E+04 nConv=  7
+         csAbs=  4.71485263E+03
+
+
+spectrumFF> ===== Wavelength:   660.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.54500912E+04 nConv=  7
+             <csSca>=  2.16319947E+04 nConv=  7
+             <csAbs>=  3.81809651E+03
+
+             <cdExt>=  1.71111244E-11
+             <cdSca>=  3.28298100E-11
+             <cdAbs>= -1.57186856E-11
+
+calcCs> csExt=  2.46287649E+04 nConv= 10
+         csSca=  2.33790343E+04 nConv=  7
+         csAbs=  1.24973060E+03
+
+calcCs> csExt=  3.14725480E+04 nConv=  9
+         csSca=  2.31979722E+04 nConv=  6
+         csAbs=  8.27457578E+03
+
+calcCs> csExt=  2.80506564E+04 nConv= 10
+         csSca=  2.32885032E+04 nConv=  7
+         csAbs=  4.76215320E+03
+
+calcCs> csExt=  2.80506564E+04 nConv= 10
+         csSca=  2.32885032E+04 nConv=  7
+         csAbs=  4.76215320E+03
+
+
+spectrumFF> ===== Wavelength:   666.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.59187812E+04 nConv=  7
+             <csSca>=  2.21073560E+04 nConv=  7
+             <csAbs>=  3.81142514E+03
+
+             <cdExt>=  1.12948544E-11
+             <cdSca>=  2.85410202E-11
+             <cdAbs>= -1.72461659E-11
+
+calcCs> csExt=  2.35793591E+04 nConv= 10
+         csSca=  2.23691864E+04 nConv=  7
+         csAbs=  1.21017268E+03
+
+calcCs> csExt=  3.51628602E+04 nConv=  9
+         csSca=  2.67126834E+04 nConv=  6
+         csAbs=  8.45017677E+03
+
+calcCs> csExt=  2.93711097E+04 nConv= 10
+         csSca=  2.45409349E+04 nConv=  7
+         csAbs=  4.83017473E+03
+
+calcCs> csExt=  2.93711097E+04 nConv= 10
+         csSca=  2.45409349E+04 nConv=  7
+         csAbs=  4.83017473E+03
+
+
+spectrumFF> ===== Wavelength:   672.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.65203429E+04 nConv=  7
+             <csSca>=  2.26959876E+04 nConv=  7
+             <csAbs>=  3.82435533E+03
+
+             <cdExt>=  1.06590246E-11
+             <cdSca>=  3.10622481E-11
+             <cdAbs>= -2.04032235E-11
+
+calcCs> csExt=  2.25789889E+04 nConv= 10
+         csSca=  2.14067074E+04 nConv=  7
+         csAbs=  1.17228158E+03
+
+calcCs> csExt=  3.91094815E+04 nConv= 10
+         csSca=  3.04449255E+04 nConv=  6
+         csAbs=  8.66455601E+03
+
+calcCs> csExt=  3.08442352E+04 nConv= 10
+         csSca=  2.59258164E+04 nConv=  7
+         csAbs=  4.91841879E+03
+
+calcCs> csExt=  3.08442352E+04 nConv= 10
+         csSca=  2.59258164E+04 nConv=  7
+         csAbs=  4.91841879E+03
+
+
+spectrumFF> ===== Wavelength:   678.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.72521997E+04 nConv=  7
+             <csSca>=  2.33966599E+04 nConv=  7
+             <csAbs>=  3.85553984E+03
+
+             <cdExt>=  1.09655024E-11
+             <cdSca>=  2.53406888E-11
+             <cdAbs>= -1.43751864E-11
+
+calcCs> csExt=  2.16257386E+04 nConv= 10
+         csSca=  2.04897417E+04 nConv=  7
+         csAbs=  1.13599692E+03
+
+calcCs> csExt=  4.33216063E+04 nConv= 10
+         csSca=  3.44045106E+04 nConv=  6
+         csAbs=  8.91709573E+03
+
+calcCs> csExt=  3.24736725E+04 nConv= 10
+         csSca=  2.74471261E+04 nConv=  7
+         csAbs=  5.02654633E+03
+
+calcCs> csExt=  3.24736725E+04 nConv= 10
+         csSca=  2.74471261E+04 nConv=  7
+         csAbs=  5.02654633E+03
+
+
+spectrumFF> ===== Wavelength:   684.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.81131814E+04 nConv=  7
+             <csSca>=  2.42092371E+04 nConv=  7
+             <csAbs>=  3.90394438E+03
+
+             <cdExt>=  7.63750300E-12
+             <cdSca>=  2.46247213E-11
+             <cdAbs>= -1.69872183E-11
+
+calcCs> csExt=  2.07176708E+04 nConv= 10
+         csSca=  1.96164132E+04 nConv=  7
+         csAbs=  1.10125754E+03
+
+calcCs> csExt=  4.78096807E+04 nConv= 10
+         csSca=  3.86022930E+04 nConv=  6
+         csAbs=  9.20738765E+03
+
+calcCs> csExt=  3.42636757E+04 nConv= 10
+         csSca=  2.91093531E+04 nConv=  7
+         csAbs=  5.15432259E+03
+
+calcCs> csExt=  3.42636757E+04 nConv= 10
+         csSca=  2.91093531E+04 nConv=  7
+         csAbs=  5.15432259E+03
+
+
+spectrumFF> ===== Wavelength:   690.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.91029282E+04 nConv=  7
+             <csSca>=  2.51341793E+04 nConv=  7
+             <csAbs>=  3.96874887E+03
+
+             <cdExt>=  4.04251118E-12
+             <cdSca>=  2.00693717E-11
+             <cdAbs>= -1.60268605E-11
+
+calcCs> csExt=  1.98528479E+04 nConv= 10
+         csSca=  1.87848458E+04 nConv=  7
+         csAbs=  1.06800209E+03
+
+calcCs> csExt=  5.25842927E+04 nConv= 10
+         csSca=  4.30491784E+04 nConv=  6
+         csAbs=  9.53511432E+03
+
+calcCs> csExt=  3.62185703E+04 nConv= 10
+         csSca=  3.09170121E+04 nConv=  7
+         csAbs=  5.30155820E+03
+
+calcCs> csExt=  3.62185703E+04 nConv= 10
+         csSca=  3.09170121E+04 nConv=  7
+         csAbs=  5.30155820E+03
+
+
+spectrumFF> ===== Wavelength:   696.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.02213255E+04 nConv=  7
+             <csSca>=  2.61720643E+04 nConv=  7
+             <csAbs>=  4.04926120E+03
+
+             <cdExt>=  4.59566720E-13
+             <cdSca>=  1.60536550E-11
+             <cdAbs>= -1.55940883E-11
+
+calcCs> csExt=  1.90293492E+04 nConv= 10
+         csSca=  1.79931796E+04 nConv=  7
+         csAbs=  1.03616960E+03
+
+calcCs> csExt=  5.76549603E+04 nConv= 10
+         csSca=  4.77550423E+04 nConv=  6
+         csAbs=  9.89991793E+03
+
+calcCs> csExt=  3.83421547E+04 nConv= 10
+         csSca=  3.28741110E+04 nConv=  7
+         csAbs=  5.46804376E+03
+
+calcCs> csExt=  3.83421547E+04 nConv= 10
+         csSca=  3.28741110E+04 nConv=  7
+         csAbs=  5.46804376E+03
+
+
+spectrumFF> ===== Wavelength:   702.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.14679295E+04 nConv=  7
+             <csSca>=  2.73230927E+04 nConv=  7
+             <csAbs>=  4.14483685E+03
+
+             <cdExt>=  2.45218883E-12
+             <cdSca>=  8.37433200E-12
+             <cdAbs>= -5.92214317E-12
+
+calcCs> csExt=  1.82452851E+04 nConv= 10
+         csSca=  1.72395852E+04 nConv=  7
+         csAbs=  1.00569989E+03
+
+calcCs> csExt=  6.30287453E+04 nConv= 10
+         csSca=  5.27274937E+04 nConv=  6
+         csAbs=  1.03012516E+04
+
+calcCs> csExt=  4.06370152E+04 nConv= 10
+         csSca=  3.49835395E+04 nConv=  7
+         csAbs=  5.65347576E+03
+
+calcCs> csExt=  4.06370152E+04 nConv= 10
+         csSca=  3.49835395E+04 nConv=  7
+         csAbs=  5.65347576E+03
+
+
+spectrumFF> ===== Wavelength:   708.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.28413496E+04 nConv=  7
+             <csSca>=  2.85865498E+04 nConv=  7
+             <csAbs>=  4.25479978E+03
+
+             <cdExt>= -4.55059522E-13
+             <cdSca>=  1.58067806E-11
+             <cdAbs>= -1.62618402E-11
+
+calcCs> csExt=  1.74988076E+04 nConv= 10
+         csSca=  1.65222737E+04 nConv=  7
+         csAbs=  9.76533894E+02
+
+calcCs> csExt=  6.87086359E+04 nConv= 10
+         csSca=  5.79704269E+04 nConv=  6
+         csAbs=  1.07382090E+04
+
+calcCs> csExt=  4.31037218E+04 nConv= 10
+         csSca=  3.72463503E+04 nConv=  7
+         csAbs=  5.85737146E+03
+
+calcCs> csExt=  4.31037218E+04 nConv= 10
+         csSca=  3.72463503E+04 nConv=  7
+         csAbs=  5.85737146E+03
+
+
+spectrumFF> ===== Wavelength:   714.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.43385641E+04 nConv=  7
+             <csSca>=  2.99602031E+04 nConv=  7
+             <csAbs>=  4.37836095E+03
+
+             <cdExt>= -4.78030253E-13
+             <cdSca>=  1.05014461E-11
+             <cdAbs>= -1.09794764E-11
+
+calcCs> csExt=  1.67881187E+04 nConv= 10
+         csSca=  1.58395047E+04 nConv=  7
+         csAbs=  9.48613976E+02
+
+calcCs> csExt=  7.46916516E+04 nConv= 10
+         csSca=  6.34823229E+04 nConv=  6
+         csAbs=  1.12093287E+04
+
+calcCs> csExt=  4.57398851E+04 nConv= 10
+         csSca=  3.96609138E+04 nConv=  7
+         csAbs=  6.07897134E+03
+
+calcCs> csExt=  4.57398851E+04 nConv= 10
+         csSca=  3.96609138E+04 nConv=  7
+         csAbs=  6.07897134E+03
+
+
+spectrumFF> ===== Wavelength:   720.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.59541577E+04 nConv=  7
+             <csSca>=  3.14396248E+04 nConv=  7
+             <csAbs>=  4.51453295E+03
+
+             <cdExt>= -3.25784497E-16
+             <cdSca>=  1.19627924E-11
+             <cdAbs>= -1.19631182E-11
+
+calcCs> csExt=  1.61114773E+04 nConv= 10
+         csSca=  1.51895932E+04 nConv=  7
+         csAbs=  9.21884095E+02
+
+calcCs> csExt=  8.09666528E+04 nConv= 10
+         csSca=  6.92542793E+04 nConv=  6
+         csAbs=  1.17123735E+04
+
+calcCs> csExt=  4.85390650E+04 nConv= 10
+         csSca=  4.22219362E+04 nConv=  7
+         csAbs=  6.31712879E+03
+
+calcCs> csExt=  4.85390650E+04 nConv= 10
+         csSca=  4.22219362E+04 nConv=  7
+         csAbs=  6.31712879E+03
+
+
+spectrumFF> ===== Wavelength:   726.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.76794815E+04 nConv=  7
+             <csSca>=  3.30174410E+04 nConv=  7
+             <csAbs>=  4.66204041E+03
+
+             <cdExt>= -3.34238991E-12
+             <cdSca>=  6.71826306E-12
+             <cdAbs>= -1.00606530E-11
+
+calcCs> csExt=  1.54672029E+04 nConv= 10
+         csSca=  1.45709130E+04 nConv=  7
+         csAbs=  8.96289981E+02
+
+calcCs> csExt=  8.75118757E+04 nConv= 10
+         csSca=  7.52677880E+04 nConv=  6
+         csAbs=  1.22440877E+04
+
+calcCs> csExt=  5.14895393E+04 nConv= 10
+         csSca=  4.49193505E+04 nConv=  7
+         csAbs=  6.57018883E+03
+
+calcCs> csExt=  5.14895393E+04 nConv= 10
+         csSca=  4.49193505E+04 nConv=  7
+         csAbs=  6.57018883E+03
+
+
+spectrumFF> ===== Wavelength:   732.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.95017577E+04 nConv=  7
+             <csSca>=  3.46825292E+04 nConv=  7
+             <csAbs>=  4.81922855E+03
+
+             <cdExt>= -1.12281764E-11
+             <cdSca>=  5.27100525E-12
+             <cdAbs>= -1.64991817E-11
+
+calcCs> csExt=  1.48536795E+04 nConv= 10
+         csSca=  1.39819003E+04 nConv=  7
+         csAbs=  8.71779238E+02
+
+calcCs> csExt=  9.42922711E+04 nConv= 10
+         csSca=  8.14923295E+04 nConv=  6
+         csAbs=  1.27999416E+04
+
+calcCs> csExt=  5.45729753E+04 nConv= 10
+         csSca=  4.77371149E+04 nConv=  7
+         csAbs=  6.83586041E+03
+
+calcCs> csExt=  5.45729753E+04 nConv= 10
+         csSca=  4.77371149E+04 nConv=  7
+         csAbs=  6.83586041E+03
+
+
+spectrumFF> ===== Wavelength:   738.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.14031810E+04 nConv=  7
+             <csSca>=  3.64192062E+04 nConv=  7
+             <csAbs>=  4.98397474E+03
+
+             <cdExt>= -5.99904422E-12
+             <cdSca>=  2.48263169E-12
+             <cdAbs>= -8.48167591E-12
+
+calcCs> csExt=  1.42693566E+04 nConv= 10
+         csSca=  1.34210551E+04 nConv=  7
+         csAbs=  8.48301421E+02
+
+calcCs> csExt=  1.01256806E+05 nConv=  8
+         csSca=  8.78829285E+04 nConv=  6
+         csAbs=  1.33738777E+04
+
+calcCs> csExt=  5.77630828E+04 nConv= 10
+         csSca=  5.06519918E+04 nConv=  6
+         csAbs=  7.11109102E+03
+
+calcCs> csExt=  5.77630828E+04 nConv= 10
+         csSca=  5.06519918E+04 nConv=  6
+         csAbs=  7.11109102E+03
+
+
+spectrumFF> ===== Wavelength:   744.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.33600966E+04 nConv=  7
+             <csSca>=  3.82064850E+04 nConv=  7
+             <csAbs>=  5.15361155E+03
+
+             <cdExt>= -1.21345883E-11
+             <cdSca>= -1.51609761E-12
+             <cdAbs>= -1.06184907E-11
+
+calcCs> csExt=  1.37127505E+04 nConv= 10
+         csSca=  1.28869424E+04 nConv=  7
+         csAbs=  8.25808073E+02
+
+calcCs> csExt=  1.08336010E+05 nConv=  8
+         csSca=  9.43779070E+04 nConv=  6
+         csAbs=  1.39581031E+04
+
+calcCs> csExt=  6.10243818E+04 nConv= 10
+         csSca=  5.36324247E+04 nConv=  6
+         csAbs=  7.39195708E+03
+
+calcCs> csExt=  6.10243818E+04 nConv= 10
+         csSca=  5.36324247E+04 nConv=  6
+         csAbs=  7.39195708E+03
+
+
+spectrumFF> ===== Wavelength:   750.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.53423797E+04 nConv=  7
+             <csSca>=  4.00175066E+04 nConv=  7
+             <csAbs>=  5.32487309E+03
+
+             <cdExt>= -1.53216034E-11
+             <cdSca>= -2.38129170E-12
+             <cdAbs>= -1.29403117E-11
+
+calcCs> csExt=  1.31824443E+04 nConv= 10
+         csSca=  1.23781915E+04 nConv=  7
+         csAbs=  8.04252743E+02
+
+calcCs> csExt=  1.15440098E+05 nConv=  8
+         csSca=  1.00897176E+05 nConv=  6
+         csAbs=  1.45429225E+04
+
+calcCs> csExt=  6.43112728E+04 nConv= 10
+         csSca=  5.66376836E+04 nConv=  6
+         csAbs=  7.67358919E+03
+
+calcCs> csExt=  6.43112728E+04 nConv= 10
+         csSca=  5.66376836E+04 nConv=  6
+         csAbs=  7.67358919E+03
+
+
+spectrumFF> ===== Wavelength:   756.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.73131704E+04 nConv=  7
+             <csSca>=  4.18192905E+04 nConv=  7
+             <csAbs>=  5.49387991E+03
+
+             <cdExt>= -7.19898380E-12
+             <cdSca>= -4.91981972E-12
+             <cdAbs>= -2.27916407E-12
+
+calcCs> csExt=  1.26770871E+04 nConv= 10
+         csSca=  1.18934962E+04 nConv=  7
+         csAbs=  7.83590979E+02
+
+calcCs> csExt=  1.22458222E+05 nConv=  8
+         csSca=  1.07341505E+05 nConv=  6
+         csAbs=  1.51167169E+04
+
+calcCs> csExt=  6.75676559E+04 nConv= 10
+         csSca=  5.96175004E+04 nConv=  6
+         csAbs=  7.95015555E+03
+
+calcCs> csExt=  6.75676559E+04 nConv= 10
+         csSca=  5.96175004E+04 nConv=  6
+         csAbs=  7.95015555E+03
+
+
+spectrumFF> ===== Wavelength:   762.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.92291441E+04 nConv=  7
+             <csSca>=  4.35729648E+04 nConv=  6
+             <csAbs>=  5.65617926E+03
+
+             <cdExt>= -7.30795573E-12
+             <cdSca>= -8.28137792E-12
+             <cdAbs>=  9.73422198E-13
+
+calcCs> csExt=  1.21953931E+04 nConv= 10
+         csSca=  1.14316128E+04 nConv=  7
+         csAbs=  7.63780308E+02
+
+calcCs> csExt=  1.29259348E+05 nConv=  8
+         csSca=  1.13593272E+05 nConv=  6
+         csAbs=  1.56660762E+04
+
+calcCs> csExt=  7.07273723E+04 nConv= 10
+         csSca=  6.25124424E+04 nConv=  6
+         csAbs=  8.21492994E+03
+
+calcCs> csExt=  7.07273723E+04 nConv= 10
+         csSca=  6.25124424E+04 nConv=  6
+         csAbs=  8.21492994E+03
+
+
+spectrumFF> ===== Wavelength:   768.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.10414890E+04 nConv=  7
+             <csSca>=  4.52346328E+04 nConv=  6
+             <csAbs>=  5.80685620E+03
+
+             <cdExt>= -1.25672417E-11
+             <cdSca>= -5.84390375E-12
+             <cdAbs>= -6.72333796E-12
+
+calcCs> csExt=  1.17361397E+04 nConv=  9
+         csSca=  1.09913595E+04 nConv=  7
+         csAbs=  7.44780190E+02
+
+calcCs> csExt=  1.35695329E+05 nConv=  8
+         csSca=  1.19519177E+05 nConv=  6
+         csAbs=  1.61761523E+04
+
+calcCs> csExt=  7.37157362E+04 nConv= 10
+         csSca=  6.52552683E+04 nConv=  6
+         csAbs=  8.46046795E+03
+
+calcCs> csExt=  7.37157362E+04 nConv= 10
+         csSca=  6.52552683E+04 nConv=  6
+         csAbs=  8.46046795E+03
+
+
+spectrumFF> ===== Wavelength:   774.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.26977131E+04 nConv=  6
+             <csSca>=  4.67569876E+04 nConv=  6
+             <csAbs>=  5.94072552E+03
+
+             <cdExt>= -1.91345033E-11
+             <cdSca>= -8.46597525E-12
+             <cdAbs>= -1.06685280E-11
+
+calcCs> csExt=  1.12981660E+04 nConv=  9
+         csSca=  1.05716140E+04 nConv=  7
+         csAbs=  7.26552007E+02
+
+calcCs> csExt=  1.41606521E+05 nConv=  8
+         csSca=  1.24975263E+05 nConv=  6
+         csAbs=  1.66312578E+04
+
+calcCs> csExt=  7.64523450E+04 nConv= 10
+         csSca=  6.77734384E+04 nConv=  6
+         csAbs=  8.67890660E+03
+
+calcCs> csExt=  7.64523450E+04 nConv= 10
+         csSca=  6.77734384E+04 nConv=  6
+         csAbs=  8.67890660E+03
+
+
+spectrumFF> ===== Wavelength:   780.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.41442982E+04 nConv=  6
+             <csSca>=  4.80916945E+04 nConv=  6
+             <csAbs>=  6.05260365E+03
+
+             <cdExt>= -1.65898424E-11
+             <cdSca>= -9.08473865E-12
+             <cdAbs>= -7.50510377E-12
+
+calcCs> csExt=  1.08803706E+04 nConv=  9
+         csSca=  1.01713116E+04 nConv=  7
+         csAbs=  7.09058959E+02
+
+calcCs> csExt=  1.46830017E+05 nConv=  8
+         csSca=  1.29814308E+05 nConv=  6
+         csAbs=  1.70157097E+04
+
+calcCs> csExt=  7.88551957E+04 nConv= 10
+         csSca=  6.99928096E+04 nConv=  6
+         csAbs=  8.86238607E+03
+
+calcCs> csExt=  7.88551957E+04 nConv= 10
+         csSca=  6.99928096E+04 nConv=  6
+         csAbs=  8.86238607E+03
+
+
+spectrumFF> ===== Wavelength:   786.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.53300689E+04 nConv=  6
+             <csSca>=  4.91924245E+04 nConv=  6
+             <csAbs>=  6.13764449E+03
+
+             <cdExt>= -2.03173787E-11
+             <cdSca>= -1.37510068E-11
+             <cdAbs>= -6.56637188E-12
+
+calcCs> csExt=  1.04817093E+04 nConv=  9
+         csSca=  9.78944329E+03 nConv=  7
+         csAbs=  6.92266036E+02
+
+calcCs> csExt=  1.51210087E+05 nConv=  8
+         csSca=  1.33895220E+05 nConv=  6
+         csAbs=  1.73148671E+04
+
+calcCs> csExt=  8.08458998E+04 nConv= 10
+         csSca=  7.18423315E+04 nConv=  6
+         csAbs=  9.00356825E+03
+
+calcCs> csExt=  8.08458998E+04 nConv= 10
+         csSca=  7.18423315E+04 nConv=  6
+         csAbs=  9.00356825E+03
+
+
+spectrumFF> ===== Wavelength:   792.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.62099650E+04 nConv=  6
+             <csSca>=  5.00182589E+04 nConv=  6
+             <csAbs>=  6.19170611E+03
+
+             <cdExt>= -1.68897723E-11
+             <cdSca>= -1.09269479E-11
+             <cdAbs>= -5.96282445E-12
+
+calcCs> csExt=  1.01011931E+04 nConv=  9
+         csSca=  9.42505320E+03 nConv=  7
+         csAbs=  6.76139950E+02
+
+calcCs> csExt=  1.54609835E+05 nConv=  8
+         csSca=  1.37093575E+05 nConv=  6
+         csAbs=  1.75162595E+04
+
+calcCs> csExt=  8.23555158E+04 nConv= 10
+         csSca=  7.32593143E+04 nConv=  6
+         csAbs=  9.09620141E+03
+
+calcCs> csExt=  8.23555158E+04 nConv= 10
+         csSca=  7.32593143E+04 nConv=  6
+         csAbs=  9.09620141E+03
+
+
+spectrumFF> ===== Wavelength:   798.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.67487483E+04 nConv=  6
+             <csSca>=  5.05370473E+04 nConv=  6
+             <csAbs>=  6.21170100E+03
+
+             <cdExt>= -1.73450437E-11
+             <cdSca>= -1.63737470E-11
+             <cdAbs>= -9.71296781E-13
+
+calcCs> csExt=  9.73788559E+03 nConv=  9
+         csSca=  9.07723653E+03 nConv=  7
+         csAbs=  6.60649067E+02
+
+calcCs> csExt=  1.56922664E+05 nConv=  8
+         csSca=  1.39312000E+05 nConv=  6
+         csAbs=  1.76106633E+04
+
+calcCs> csExt=  8.33302746E+04 nConv=  8
+         csSca=  7.41946185E+04 nConv=  6
+         csAbs=  9.13565614E+03
+
+calcCs> csExt=  8.33302746E+04 nConv=  8
+         csSca=  7.41946185E+04 nConv=  6
+         csAbs=  9.13565614E+03
+
+
+spectrumFF> ===== Wavelength:   804.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.69241005E+04 nConv=  6
+             <csSca>=  5.07282240E+04 nConv=  6
+             <csAbs>=  6.19587647E+03
+
+             <cdExt>= -1.80103238E-11
+             <cdSca>= -1.47102898E-11
+             <cdAbs>= -3.30003401E-12
+
+calcCs> csExt=  9.39090047E+03 nConv=  9
+         csSca=  8.74513713E+03 nConv=  7
+         csAbs=  6.45763335E+02
+
+calcCs> csExt=  1.58081828E+05 nConv=  8
+         csSca=  1.40488870E+05 nConv=  6
+         csAbs=  1.75929586E+04
+
+calcCs> csExt=  8.37363643E+04 nConv=  8
+         csSca=  7.46170034E+04 nConv=  6
+         csAbs=  9.11936091E+03
+
+calcCs> csExt=  8.37363643E+04 nConv=  8
+         csSca=  7.46170034E+04 nConv=  6
+         csAbs=  9.11936091E+03
+
+
+spectrumFF> ===== Wavelength:   810.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.67286004E+04 nConv=  6
+             <csSca>=  5.05846229E+04 nConv=  6
+             <csAbs>=  6.14397750E+03
+
+             <cdExt>= -1.80948349E-11
+             <cdSca>= -1.17431894E-11
+             <cdAbs>= -6.35164552E-12
+
+calcCs> csExt=  9.05939945E+03 nConv=  9
+         csSca=  8.42794522E+03 nConv=  7
+         csAbs=  6.31454225E+02
+
+calcCs> csExt=  1.58066529E+05 nConv=  8
+         csSca=  1.40603906E+05 nConv=  6
+         csAbs=  1.74626238E+04
+
+calcCs> csExt=  8.35629644E+04 nConv=  8
+         csSca=  7.45159255E+04 nConv=  6
+         csAbs=  9.04703897E+03
+
+calcCs> csExt=  8.35629644E+04 nConv=  8
+         csSca=  7.45159255E+04 nConv=  6
+         csAbs=  9.04703897E+03
+
+
+spectrumFF> ===== Wavelength:   816.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.61702439E+04 nConv=  6
+             <csSca>=  5.01129811E+04 nConv=  6
+             <csAbs>=  6.05726285E+03
+
+             <cdExt>= -1.83442022E-11
+             <cdSca>= -9.85399176E-12
+             <cdAbs>= -8.49021045E-12
+
+calcCs> csExt=  8.74258976E+03 nConv=  9
+         csSca=  8.12489511E+03 nConv=  7
+         csAbs=  6.17694652E+02
+
+calcCs> csExt=  1.56903495E+05 nConv=  8
+         csSca=  1.39679718E+05 nConv=  6
+         csAbs=  1.72237771E+04
+
+calcCs> csExt=  8.28230425E+04 nConv=  8
+         csSca=  7.39023067E+04 nConv=  6
+         csAbs=  8.92073587E+03
+
+calcCs> csExt=  8.28230425E+04 nConv=  8
+         csSca=  7.39023067E+04 nConv=  6
+         csAbs=  8.92073587E+03
+
+
+spectrumFF> ===== Wavelength:   822.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.52714259E+04 nConv=  6
+             <csSca>=  4.93330549E+04 nConv=  6
+             <csAbs>=  5.93837103E+03
+
+             <cdExt>= -1.82063054E-11
+             <cdSca>= -1.18336202E-11
+             <cdAbs>= -6.37268520E-12
+
+calcCs> csExt=  8.43972188E+03 nConv=  9
+         csSca=  7.83526297E+03 nConv=  7
+         csAbs=  6.04458915E+02
+
+calcCs> csExt=  1.54663810E+05 nConv=  8
+         csSca=  1.37779052E+05 nConv=  6
+         csAbs=  1.68847573E+04
+
+calcCs> csExt=  8.15517658E+04 nConv=  8
+         csSca=  7.28071577E+04 nConv=  6
+         csAbs=  8.74460810E+03
+
+calcCs> csExt=  8.15517658E+04 nConv=  8
+         csSca=  7.28071577E+04 nConv=  6
+         csAbs=  8.74460810E+03
+
+
+spectrumFF> ===== Wavelength:   828.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.40665840E+04 nConv=  6
+             <csSca>=  4.82755234E+04 nConv=  6
+             <csAbs>=  5.79106061E+03
+
+             <cdExt>= -1.83423323E-11
+             <cdSca>= -1.20758186E-11
+             <cdAbs>= -6.26651372E-12
+
+calcCs> csExt=  8.15008729E+03 nConv=  9
+         csSca=  7.55836466E+03 nConv=  6
+         csAbs=  5.91722631E+02
+
+calcCs> csExt=  1.51455613E+05 nConv=  8
+         csSca=  1.34998295E+05 nConv=  6
+         csAbs=  1.64573188E+04
+
+calcCs> csExt=  7.98028503E+04 nConv=  8
+         csSca=  7.12783297E+04 nConv=  6
+         csAbs=  8.52452070E+03
+
+calcCs> csExt=  7.98028503E+04 nConv=  8
+         csSca=  7.12783297E+04 nConv=  6
+         csAbs=  8.52452070E+03
+
+
+spectrumFF> ===== Wavelength:   834.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.25989261E+04 nConv=  6
+             <csSca>=  4.69790569E+04 nConv=  6
+             <csAbs>=  5.61986925E+03
+
+             <cdExt>= -1.15492859E-11
+             <cdSca>= -1.24649851E-11
+             <cdAbs>=  9.15699177E-13
+
+calcCs> csExt=  7.87301631E+03 nConv=  9
+         csSca=  7.29355365E+03 nConv=  6
+         csAbs=  5.79462663E+02
+
+calcCs> csExt=  1.47413981E+05 nConv=  8
+         csSca=  1.31458402E+05 nConv=  6
+         csAbs=  1.59555798E+04
+
+calcCs> csExt=  7.76434988E+04 nConv=  8
+         csSca=  6.93759776E+04 nConv=  6
+         csAbs=  8.26752119E+03
+
+calcCs> csExt=  7.76434988E+04 nConv=  8
+         csSca=  6.93759776E+04 nConv=  6
+         csAbs=  8.26752119E+03
+
+
+spectrumFF> ===== Wavelength:   840.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.09167693E+04 nConv=  6
+             <csSca>=  4.54870247E+04 nConv=  6
+             <csAbs>=  5.42974459E+03
+
+             <cdExt>= -1.16056019E-11
+             <cdSca>= -8.90053660E-12
+             <cdAbs>= -2.70506525E-12
+
+calcCs> csExt=  7.60787604E+03 nConv=  9
+         csSca=  7.04021897E+03 nConv=  6
+         csAbs=  5.67657067E+02
+
+calcCs> csExt=  1.42689606E+05 nConv=  8
+         csSca=  1.27294719E+05 nConv=  6
+         csAbs=  1.53948862E+04
+
+calcCs> csExt=  7.51487408E+04 nConv=  8
+         csSca=  6.71674692E+04 nConv=  6
+         csAbs=  7.98127162E+03
+
+calcCs> csExt=  7.51487408E+04 nConv=  8
+         csSca=  6.71674692E+04 nConv=  6
+         csAbs=  7.98127162E+03
+
+
+spectrumFF> ===== Wavelength:   846.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.90699958E+04 nConv=  6
+             <csSca>=  4.38442994E+04 nConv=  6
+             <csAbs>=  5.22569642E+03
+
+             <cdExt>= -1.52350217E-11
+             <cdSca>= -1.07633684E-11
+             <cdAbs>= -4.47165338E-12
+
+calcCs> csExt=  7.35406832E+03 nConv=  9
+         csSca=  6.79778330E+03 nConv=  6
+         csAbs=  5.56285024E+02
+
+calcCs> csExt=  1.37437852E+05 nConv=  8
+         csSca=  1.22647108E+05 nConv=  6
+         csAbs=  1.47907437E+04
+
+calcCs> csExt=  7.23959602E+04 nConv=  8
+         csSca=  6.47224459E+04 nConv=  6
+         csAbs=  7.67351434E+03
+
+calcCs> csExt=  7.23959602E+04 nConv=  8
+         csSca=  6.47224459E+04 nConv=  6
+         csAbs=  7.67351434E+03
+
+
+spectrumFF> ===== Wavelength:   852.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.71070175E+04 nConv=  6
+             <csSca>=  4.20945110E+04 nConv=  6
+             <csAbs>=  5.01250647E+03
+
+             <cdExt>= -1.20457233E-11
+             <cdSca>= -9.16221613E-12
+             <cdAbs>= -2.88350713E-12
+
+calcCs> csExt=  7.11102786E+03 nConv=  9
+         csSca=  6.56570107E+03 nConv=  6
+         csAbs=  5.45326788E+02
+
+calcCs> csExt=  1.31809395E+05 nConv=  8
+         csSca=  1.17651466E+05 nConv=  6
+         csAbs=  1.41579283E+04
+
+calcCs> csExt=  6.94602112E+04 nConv=  8
+         csSca=  6.21085837E+04 nConv=  6
+         csAbs=  7.35162754E+03
+
+calcCs> csExt=  6.94602112E+04 nConv=  8
+         csSca=  6.21085837E+04 nConv=  6
+         csAbs=  7.35162754E+03
+
+
+spectrumFF> ===== Wavelength:   858.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.50724740E+04 nConv=  6
+             <csSca>=  4.02779586E+04 nConv=  6
+             <csAbs>=  4.79451541E+03
+
+             <cdExt>= -1.18675736E-11
+             <cdSca>= -1.10135428E-11
+             <cdAbs>= -8.54030856E-13
+
+calcCs> csExt=  6.87822037E+03 nConv=  9
+         csSca=  6.34345674E+03 nConv=  6
+         csAbs=  5.34763626E+02
+
+calcCs> csExt=  1.25943120E+05 nConv=  8
+         csSca=  1.12433284E+05 nConv=  6
+         csAbs=  1.35098362E+04
+
+calcCs> csExt=  6.64106701E+04 nConv=  8
+         csSca=  5.93883702E+04 nConv=  6
+         csAbs=  7.02229991E+03
+
+calcCs> csExt=  6.64106701E+04 nConv=  8
+         csSca=  5.93883702E+04 nConv=  6
+         csAbs=  7.02229991E+03
+
+
+spectrumFF> ===== Wavelength:   864.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.30057297E+04 nConv=  6
+             <csSca>=  3.84302388E+04 nConv=  6
+             <csAbs>=  4.57549083E+03
+
+             <cdExt>= -8.42245512E-12
+             <cdSca>= -3.59482413E-12
+             <cdAbs>= -4.82763099E-12
+
+calcCs> csExt=  6.65514083E+03 nConv=  9
+         csSca=  6.13056306E+03 nConv=  6
+         csAbs=  5.24577764E+02
+
+calcCs> csExt=  1.19961502E+05 nConv=  8
+         csSca=  1.07103419E+05 nConv=  6
+         csAbs=  1.28580824E+04
+
+calcCs> csExt=  6.33083212E+04 nConv=  8
+         csSca=  5.66169912E+04 nConv=  6
+         csAbs=  6.69133009E+03
+
+calcCs> csExt=  6.33083212E+04 nConv=  8
+         csSca=  5.66169912E+04 nConv=  6
+         csAbs=  6.69133009E+03
+
+
+spectrumFF> ===== Wavelength:   870.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.09401083E+04 nConv=  6
+             <csSca>=  3.65815404E+04 nConv=  6
+             <csAbs>=  4.35856790E+03
+
+             <cdExt>= -1.19545037E-11
+             <cdSca>= -7.42363687E-12
+             <cdAbs>= -4.53086686E-12
+
+calcCs> csExt=  6.44131185E+03 nConv=  9
+         csSca=  5.92655952E+03 nConv=  6
+         csAbs=  5.14752340E+02
+
+calcCs> csExt=  1.13968258E+05 nConv=  8
+         csSca=  1.01755934E+05 nConv=  6
+         csAbs=  1.22123234E+04
+
+calcCs> csExt=  6.02047847E+04 nConv=  8
+         csSca=  5.38412468E+04 nConv=  6
+         csAbs=  6.36353786E+03
+
+calcCs> csExt=  6.02047847E+04 nConv=  8
+         csSca=  5.38412468E+04 nConv=  6
+         csAbs=  6.36353786E+03
+
+
+spectrumFF> ===== Wavelength:   876.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.89027317E+04 nConv=  6
+             <csSca>=  3.47564836E+04 nConv=  6
+             <csAbs>=  4.14624809E+03
+
+             <cdExt>= -4.69409729E-12
+             <cdSca>=  9.79357973E-13
+             <cdAbs>= -5.67345527E-12
+
+calcCs> csExt=  6.23628210E+03 nConv=  9
+         csSca=  5.73101075E+03 nConv=  6
+         csAbs=  5.05271351E+02
+
+calcCs> csExt=  1.08047867E+05 nConv=  8
+         csSca=  9.64676093E+04 nConv=  6
+         csAbs=  1.15802572E+04
+
+calcCs> csExt=  5.71420743E+04 nConv=  8
+         csSca=  5.10993100E+04 nConv=  6
+         csAbs=  6.04276429E+03
+
+calcCs> csExt=  5.71420743E+04 nConv=  8
+         csSca=  5.10993100E+04 nConv=  6
+         csAbs=  6.04276429E+03
+
+
+spectrumFF> ===== Wavelength:   882.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.69147978E+04 nConv=  6
+             <csSca>=  3.29743590E+04 nConv=  6
+             <csAbs>=  3.94043875E+03
+
+             <cdExt>= -6.33693860E-12
+             <cdSca>= -7.53862863E-12
+             <cdAbs>=  1.20169003E-12
+
+calcCs> csExt=  6.03962479E+03 nConv=  9
+         csSca=  5.54350518E+03 nConv=  6
+         csAbs=  4.96119609E+02
+
+calcCs> csExt=  1.02266444E+05 nConv=  8
+         csSca=  9.12986952E+04 nConv=  6
+         csAbs=  1.09677491E+04
+
+calcCs> csExt=  5.41530345E+04 nConv=  8
+         csSca=  4.84211002E+04 nConv=  6
+         csAbs=  5.73193435E+03
+
+calcCs> csExt=  5.41530345E+04 nConv=  8
+         csSca=  4.84211002E+04 nConv=  6
+         csAbs=  5.73193435E+03
+
+
+spectrumFF> ===== Wavelength:   888.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.49921399E+04 nConv=  6
+             <csSca>=  3.12496222E+04 nConv=  6
+             <csAbs>=  3.74251779E+03
+
+             <cdExt>= -6.47906723E-12
+             <cdSca>= -1.86007270E-12
+             <cdAbs>= -4.61899453E-12
+
+calcCs> csExt=  5.85093629E+03 nConv=  9
+         csSca=  5.36365359E+03 nConv=  6
+         csAbs=  4.87282698E+02
+
+calcCs> csExt=  9.66734838E+04 nConv=  8
+         csSca=  8.62944510E+04 nConv=  6
+         csAbs=  1.03790328E+04
+
+calcCs> csExt=  5.12622100E+04 nConv=  8
+         csSca=  4.58290523E+04 nConv=  6
+         csAbs=  5.43315774E+03
+
+calcCs> csExt=  5.12622100E+04 nConv=  8
+         csSca=  4.58290523E+04 nConv=  6
+         csAbs=  5.43315774E+03
+
+
+spectrumFF> ===== Wavelength:   894.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.31459343E+04 nConv=  6
+             <csSca>=  2.95925241E+04 nConv=  6
+             <csAbs>=  3.55341021E+03
+
+             <cdExt>= -8.43425082E-12
+             <cdSca>= -2.97885143E-12
+             <cdAbs>= -5.45539939E-12
+
+calcCs> csExt=  5.66983480E+03 nConv=  9
+         csSca=  5.19108787E+03 nConv=  6
+         csAbs=  4.78746930E+02
+
+calcCs> csExt=  9.13040506E+04 nConv=  8
+         csSca=  8.14871022E+04 nConv=  6
+         csAbs=  9.81694840E+03
+
+calcCs> csExt=  4.84869427E+04 nConv=  8
+         csSca=  4.33390950E+04 nConv=  6
+         csAbs=  5.14784766E+03
+
+calcCs> csExt=  4.84869427E+04 nConv=  8
+         csSca=  4.33390950E+04 nConv=  6
+         csAbs=  5.14784766E+03
+
+
+spectrumFF> ===== Wavelength:   900.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.13834537E+04 nConv=  6
+             <csSca>=  2.80097866E+04 nConv=  6
+             <csAbs>=  3.37366713E+03
+
+             <cdExt>= -6.52689748E-12
+             <cdSca>= -6.86889045E-12
+             <cdAbs>=  3.41992968E-13
+
+calcCs> csExt=  5.49595908E+03 nConv=  9
+         csSca=  5.02545978E+03 nConv=  6
+         csAbs=  4.70499305E+02
+
+calcCs> csExt=  8.61811202E+04 nConv=  8
+         csSca=  7.68979338E+04 nConv=  6
+         csAbs=  9.28318643E+03
+
+calcCs> csExt=  4.58385397E+04 nConv=  8
+         csSca=  4.09616968E+04 nConv=  6
+         csAbs=  4.87684286E+03
+
+calcCs> csExt=  4.58385397E+04 nConv=  8
+         csSca=  4.09616968E+04 nConv=  6
+         csAbs=  4.87684286E+03
+
+termsProgram> Program run time (CPU & real in s):  3.936E+02  1.037E+02

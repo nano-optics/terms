@@ -1,0 +1,84 @@
+readInputFile> Parsing file input
+
+readInputFile> Detected keyword ModeAndScheme
+               mode=2 => spectrum_FF for far-field quantities
+               scheme=3 => Seek T^(j) using Mackowski's approach
+readInputFile> Detected keyword MultipoleCutoff
+               Supplied ncut(1)=  3
+               Setting ncut(2)= ncut(1)
+               Setting ncut(3)=  -8
+readInputFile> Detected keyword Wavelength
+               Wavelength (nm):   650.0000
+readInputFile> Detected keyword Medium
+               Constant host epsilon=  1.7689E+0
+readInputFile> Detected keyword OutputFormat
+               OutputFormat=HDF5
+               All output files are stored in file "all_orders.h5                                                   "
+readInputFile> Detected keyword DumpPrestagedA
+readInputFile> Detected keyword DumpStagedA
+readInputFile> Detected keyword DumpCollectiveTmatrix
+readInputFile> Detected keyword TmatrixFiles
+
+readInputFile> Detected keyword Scatterers
+ with nscat=    2
+
+readInputFile> Descriptor(s) and circumscribing sphere(s):
+
+ scatID String                  x          y          z         R_0
+    1   TF1                 0.0000E+0 -5.0000E+1  0.0000E+0  5.0000E+1
+    2   TF1                 0.0000E+0  5.0000E+1  0.0000E+0  5.0000E+1
+
+readInputFile> Individual geometry characteristic(s):
+
+ scatID Details
+    1   Euler angles:  0.0000000  0.0000000  0.0000000 asp. ratio:  2.5000000
+    2   Euler angles:  0.0000000  0.7853982  0.0000000 asp. ratio:  2.5000000
+
+readInputFile> Finished parsing 10 keywords
+
+
+spectrumFF> ===== Wavelength:   650.00 (nm) ======================
+
+           1
+           2
+           3
+           4
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-08 for n <= nmax=  3
+
+
+diagnoseTmat> WARNING: Max(|SymErr(Tmat)|)/Max(|Tmat|)= 1.9E-06
+
+calcOAprops> <csExt>=  3.84543776E+02 nConv=  0
+             <csSca>=  4.41082900E+01 nConv=  0
+             <csAbs>=  3.40435486E+02
+
+             <cdExt>=  3.00493873E+00
+             <cdSca>=  8.19634471E+00
+             <cdAbs>= -5.19140598E+00
+
+           1
+calcCs> csExt=  2.94335555E+02 nConv=  0
+         csSca=  3.16342380E+01 nConv=  0
+         csAbs=  2.62701317E+02
+
+           2
+calcCs> csExt=  3.04549726E+01 nConv=  0
+         csSca=  4.58998914E+00 nConv=  0
+         csAbs=  2.58649835E+01
+
+           3
+calcCs> csExt=  1.61197238E+02 nConv=  0
+         csSca=  1.80588333E+01 nConv=  0
+         csAbs=  1.43138404E+02
+
+           4
+calcCs> csExt=  1.63593289E+02 nConv=  0
+         csSca=  1.81653939E+01 nConv=  0
+         csAbs=  1.45427896E+02
+
+termsProgram> Program run time (CPU & real in s):  2.387E-02  2.400E-02

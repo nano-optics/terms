@@ -1,0 +1,28 @@
+Package: terms
+Version: 0.9.9
+Authors@R: c(person("Dmitri", "Schebarchov",
+    email = "dmitri.schebarchov@gmail.com",
+    role = c("aut", "cre"),
+    comment = c(ORCID = "0000-0002-8385-7186")),
+    person("Atefeh", "Fazel-Najafabadi",
+    role = c("aut", "ctb"),
+    comment = c(ORCID = "0000-0001-9040-2596")), 
+    person("Eric", "Le Ru",
+    role = c("aut", "ctb"),
+    comment = c(ORCID = "0000-0002-3052-9947")),
+    person("Baptiste", "Auguié",
+    email = "baptiste.auguie@vuw.ac.nz",
+    role = c("aut", "ctb"),
+    comment = c(ORCID = "0000-0002-2749-5715")))
+License: Mozilla Public License Version 2.0
+Title: T-matrix for Electromagnetic Radiation with Multiple Scatterers
+Description: A set of Fortran modules/routines for T-matrix-based calculations of light scattering by clusters of individual scatterers.
+URL: https://github.com/nano-optics/terms, http://nano-optics.ac.nz/terms/
+BugReports: https://github.com/nano-optics/terms/issues
+Type: Package
+VignetteBuilder: knitr
+Encoding: UTF-8
+RoxygenNote: 7.1.2
+Depends: ggplot2, gridExtra, egg, tidyr, purrr, glue, reshape2, ggforce, dplyr
+Suggests: rhdf5, DT, rgl, cubs
+

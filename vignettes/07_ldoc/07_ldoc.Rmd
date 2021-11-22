@@ -1,0 +1,81 @@
+---
+title: "Local degree of optical chirality"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 2
+    fig_width: 7
+    fig_height: 4
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Local degree of optical chirality}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE}
+library(knitr)
+library(terms)
+options(cli.num_colors = 1)
+theme_set(egg::theme_article())
+opts_chunk$set(echo = FALSE, warning =FALSE,
+               message=FALSE, comment='', 
+               tidy=FALSE, cache = FALSE)
+do.call(read_chunk, list(path = "_run.R"))
+```
+
+\usepackage{mathrsfs}
+\newcommand{\ldoc}{\mathscr{C}}
+\newcommand{\ldocbar}{\overline{\mathscr{C}}}
+\newcommand{\ldocoa}{\langle\mathscr{C}\rangle}
+\newcommand{\ldocoabar}{\langle\overline{\mathscr{C}}\rangle}
+
+## Objective
+
+This example illustrates on a very simple case the calculation of the local degree of optical chirality for a dimer of spheres. The structure consists of two gold spheres with radius 10nm and gap 5nm in water, the incident field is linear with angle $\pi/4$ and $3\pi/4$ and $\ldocbar$ is calculated at the resonance wavelength of the structure and all other parameters are kept to their default values.
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+library(terms)
+cat('  <style>
+.x3d_scene {
+float:right;
+margin:0em;
+ }
+  </style>')
+
+ge <- get_geometry('input')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,150), width = "200px", height = "150px") 
+```
+
+This simulation uses the following `input` file
+```{bash input}
+cat input
+```
+
+## LDOC maps at fixed incidence
+
+
+```{r read}
+```
+
+```{r comparison}
+```
+
+## Orientation-averaged near-field and LDOC maps 
+
+TERMS can also compute orientation-averaged near-field quantities, with the Keyword `MapOaQuantity`. This structure is not particularly good at enhancing the local degree of chirality, but we use it as a simple example to illustrate the results of this calculation. The following map shows the orientation averaged LDOC for L and R circular polarisations.
+
+
+```{r oa}
+```
+
+
+-----
+
+```{r cleanup}
+```
+_Last run: `r format(Sys.time(), '%d %B, %Y')`_

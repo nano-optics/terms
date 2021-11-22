@@ -1,0 +1,75 @@
+---
+title: "Quadrimer vs two dimers"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 2
+    fig_width: 7
+    fig_height: 4
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Quadrimer vs two dimers}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE}
+library(knitr)
+library(terms)
+library(rhdf5)
+options(cli.num_colors = 1)
+theme_set(egg::theme_article())
+opts_chunk$set(echo = FALSE, warning =FALSE,
+               message=FALSE, comment='', 
+               tidy=FALSE, cache = FALSE)
+do.call(read_chunk, list(path = "_run.R"))
+```
+
+## Objective
+
+This example illustrates the import of a TERMS-exported collective T-matrix as an input (effective) scatterer. We compare the simulation of a quadrimer of spheres to that of two dimers (with the same geometry). 
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+library(terms)
+cat('  <style>
+.x3d_scene {
+float:right;
+margin:0em;
+ }
+  </style>')
+
+ge <- get_geometry('input_quadrimer_ff')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,200), width = "200px", height = "150px", default_material='gold')
+```
+
+```{bash input}
+cat input_twodimers_nf
+```
+
+```{r read}
+```
+
+## Near-field
+
+```{r nf}
+```
+
+As expected, the local fields cannot be calculated within the circumbscribed sphere of a dimer described as an input T-matrix.
+
+## Far-field
+
+```{r ff}
+```
+
+remarkably, the far-field cross-sections are quite accurate even though the Rayleigh hypothesis is badly violated.
+
+-----
+
+```{r cleanup}
+```
+_Last run: `r format(Sys.time(), '%d %B, %Y')`_
+

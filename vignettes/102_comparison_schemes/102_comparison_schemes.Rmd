@@ -1,0 +1,74 @@
+---
+title: "Comparison of schemes"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 3
+    fig_width: 7
+    fig_height: 6
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Comparison of schemes}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE}
+library(knitr)
+library(terms)
+options(cli.num_colors = 1)
+theme_set(egg::theme_article())
+opts_chunk$set(echo = FALSE, warning =FALSE,
+               message=FALSE, comment='', 
+               tidy=FALSE, cache = FALSE)
+do.call(read_chunk, list(path = "_run.R"))
+```
+
+## Objective 
+
+This example checks for consistency of the four calculation schemes for the calculation of far-field cross-sections. The structure consists of four gold spheres in water arranged in a helix.
+
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+library(terms)
+cat('  <style>
+.x3d_scene {
+float:right;
+margin:0em;
+ }
+  </style>')
+
+ge <- get_geometry('input_1')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,150), width = "200px", height = "150px") 
+```
+
+This simulation uses the following template
+```{r tpl}
+```
+
+where `{scheme}` is replaced by `0,1,2,3` in each separate run. The results are stored in separate output folders and collated for comparison. Note that `Scheme=0` does not calculate orientation-averaged quantities.
+
+## Orientation-averaged results
+
+We first check that orientation-averaged cross-sections are consistent for Schemes 1 to 3,
+
+```{r oa, fig.height=4}
+```
+
+## Fixed-orientation results
+
+Similarly, we check the linear polarisation cross-sections at fixed orientation,
+
+```{r fo, fig.height=4}
+```
+
+
+-----
+
+```{r cleanup}
+```
+_Last run: `r format(Sys.time(), '%d %B, %Y')`_

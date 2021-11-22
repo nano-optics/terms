@@ -1,0 +1,601 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={keywords},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{mathrsfs}
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{keywords}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\ldoc}{\mathscr{C}}
+\newcommand{\ldocbar}{\overline{\mathscr{C}}}
+\newcommand{\ldocoa}{\langle\mathscr{C}\rangle}
+\newcommand{\ldocoabar}{\langle\overline{\mathscr{C}}\rangle}
+
+List of (case sensitive!) keywords and corresponding arguments supported
+by \textbf{TERMS}. Optional arguments are enclosed in square brackets
+(nested in some cases).
+
+\hypertarget{main-input-parameters}{%
+\subsection{Main input parameters}\label{main-input-parameters}}
+
+\hypertarget{modeandscheme-m-s}{%
+\subsubsection{\texorpdfstring{ModeAndScheme \emph{M}
+\emph{S}}{ModeAndScheme M S}}\label{modeandscheme-m-s}}
+
+If present, this keyword must appear first in the input file. It takes
+two arguments: positive integer \emph{M} specifying the desired
+calculation mode; and non-negative integer \emph{S} specifying the
+solution scheme to be used. The default values are \emph{M} = 2 and
+\emph{S} = 3.
+
+\textbf{Mode of calculation}
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{M = 1} triggers a single- or multi-wavelength calculation of
+  near fields \(\mathbf{E}\), \(\mathbf{B}\) and optical chirality
+  \(\mathscr{C}\), at fixed incidence directions and/or
+  orientation-averaged
+\item
+  \emph{M = 2} triggers a single- or multi-wavelength calculation of
+  far-field properties (e.g.~spectra of optical cross-sections), at
+  fixed incidence directions and/or orientation-averaged
+\item
+  \emph{M = 3} triggers a single- or multi-wavelength calculation of
+  polarimetric properties, such as Stokes scattering vectors, phase
+  matrix, and differential scattering cross sections for multiple
+  incidence and/or scattering angles
+\end{itemize}
+
+\textbf{Scheme of solution}
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{S = 0} will seek solutions for the given angles of incidence,
+  without seeking the collective \emph{T}-matrix
+\item
+  \emph{S \textgreater{} 0} will calculate the collective
+  \emph{T}-matrix either (\emph{S = 1}) by direct inversion of the
+  complete linear system to obtain \(T^{(i,j)}\), or (\emph{S = 2}) by
+  using Stout's iterative scheme for \(T^{(i,j)}\), or (\emph{S = 3}) by
+  using Mackowski's scheme for \(T^{(i)}\). Note that fixed-orientation
+  cross-sections are also calculated when \(S > 0\).
+\end{itemize}
+
+\hypertarget{scatterers-n}{%
+\subsubsection{\texorpdfstring{Scatterers
+\emph{N}}{Scatterers N}}\label{scatterers-n}}
+
+This keyword must appear last in the \texttt{inputfile}, with a single
+positive integer argument \emph{N} specifying the number of scatterers.
+The following \emph{N} lines specify all the required parameters per
+scatterer, and each line must contain five or more space-separated
+fields, i.e.
+
+\begin{verbatim}
+Tag x y z R [ a b c [ d ] ]     ( if Tag(1:2)  = "TF" )   
+            [ a [ b [ c ] ] ]   ( if Tag(1:2) != "TF" )
+\end{verbatim}
+
+where \emph{Tag} is a contiguous string, which may contain one
+underscore to separate the root from the suffix; \emph{x}, \emph{y},
+\emph{z} are the Cartesian coordinates (in the lab frame) for the
+scatterer, whose smallest circumscribing sphere has radius \emph{R}. All
+other subsequent parameters (inside square brackets) depend on the root
+of \emph{Tag} .
+
+Before the root of \emph{Tag} is parsed, the code first looks for a
+suffix of the form \emph{\_S?} and associates it with a multipole
+selection predefined using the
+\protect\hyperlink{MultipoleSelections}{\texttt{MultipoleSelections}}
+keyword.
+
+If the root of \emph{Tag} is either ``TF1'', ``TF2'', \ldots{} , or
+``TF9'', which correspond to a 1-body \emph{T}-matrix file listed under
+the \protect\hyperlink{TmatrixFiles}{\texttt{TmatrixFiles}} keyword,
+floats \emph{a}, \emph{b}, and \emph{c} can be supplied to specify the
+Euler angles describing the scatterer orientation (default angle values
+are all zero). Another float \emph{d} may be included to specify the
+aspect ratio for spheroids, which is currently only used for mapping
+local field intensity and visualising the geometry. Note that \emph{d}
+is interpreted as the ratio of polar (along z) to equatorial (along x or
+y) length, so that \emph{d \textgreater{} 1} for prolate spheroids,
+\emph{d \textless{} 1} for oblate spheroids, and \emph{d = 1} for
+spheres (default). Note that for nonspherical particles the
+circumscribing sphere radius \emph{R} is used to check for potential
+geometrical overlap between particles, but also in the balancing scheme.
+
+If the root of \emph{Tag} is not ``TF?'', the 1-body \emph{T}-matrix is
+computed using Mie theory, which is applicable to coated spheres. The
+expected \emph{Tag} format is \texttt{L0@L1@L2@L3}, with the character
+``@'' delimiting substrings that specify the material dielectric
+function of each concentric region inside the scatterer, starting from
+the core (\emph{L0}) and going \emph{outward}. The number of coats is
+inferred from the number of instances of ``@'' and is currently capped
+at 3. \emph{Tag} of a homogeneous sphere (without layers) should not
+contain any ``@'', i.e.~\emph{Tag = L0}. Currently accepted values for
+\emph{L?} are: ``Au'', ``Ag'', ``Al'', ``Cr'', ``Pt'', ``Pd'', ``Si'',
+and ``Water'' which trigger internal calculation of the
+wavelength-dependent dielectric functions for the required material, or
+``DF1'', ``DF2'', \ldots, ``DF9'' to impose a custom dielectric function
+listed under the
+\protect\hyperlink{dielectricfunctions-nfuns-1}{\texttt{DielectricFunctions}}
+keyword. For coated spheres, the outer radius of each region must be
+specified by floats \emph{R}, \emph{a}, \emph{b}, \emph{c} in the order
+of decreasing size (i.e.~going radially \emph{inward}).
+
+\hypertarget{tmatrixfiles-nfiles}{%
+\subsubsection{\texorpdfstring{TmatrixFiles
+\emph{Nfiles}}{TmatrixFiles Nfiles}}\label{tmatrixfiles-nfiles}}
+
+Specifies the number of external \emph{T}-matrix files (default:
+\emph{Nfiles = 0}). The subsequent \emph{Nfiles} lines are each read as
+a string and then interpreted as a filename. Wrap the string in
+quotation marks if it contains the relative path or special characters,
+e.g.~\texttt{"../../tmatrix\_Au\_spheroid\_50x20\_water.tmat"}. Note
+that the wavelengths in each file must \emph{exactly} correspond to the
+values specified by the
+\protect\hyperlink{wavelength-l1-l2-n-}{\texttt{Wavelength}} keyword.
+
+The \emph{T}-matrix file format is as follows:
+
+\begin{itemize}
+\tightlist
+\item
+  First line is a comment (starts with a \texttt{\#}) describing the
+  format \texttt{\#\ s\ sp\ n\ np\ m\ mp\ Tr\ Ti}
+\item
+  Second line is also a comment and starts with
+  \texttt{\#\ lambda=\ N1\ nelements=\ N2} where N1 is the wavelength in
+  nanometres, and N2 is the number of \emph{T}-matrix elements to be
+  read below
+\item
+  Subsequent lines contain the indices and \emph{T}-matrix values for
+  this particular wavelength,
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \texttt{s}, \texttt{sp} are the row (resp. column) index of the
+  multipole mode (1: magnetic, or 2: electric)
+\item
+  \texttt{n}, \texttt{np} index the multipole degree
+\item
+  \texttt{m}, \texttt{mp} index the multipole order
+\item
+  \texttt{Tr}, \texttt{Ti} give the real and imaginary part of the
+  \emph{T}-matrix element
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  If the file contains multiple wavelengths each wavelength-block is
+  appended below the others, starting with a line
+  \texttt{\#\ lambda=\ N1\ nelements=\ N2}
+\end{itemize}
+
+An example is show below,
+
+\begin{verbatim}
+# s sp n np m mp Tr Ti | prolate Au spheroid in water, a = 10 c = 20
+# lambda= 400 nelements= 136 epsIn= -1.649657+5.771763j
+  1   1   1   1  -1  -1 -1.189109253832815e-04 -2.161746691903687e-05
+  1   1   1   1   0   0 -5.597968829951113e-05 -3.444956295771378e-05
+... [truncated]
+  2   2   4   4   3   3 -3.794740062663782e-11 5.636725538124517e-11
+  2   2   4   4   4   4 -1.113090425618089e-11 1.707927691863483e-11
+# lambda= 402 nelements= 136 epsIn= -1.661947+5.778032j
+  1   1   1   1  -1  -1 -1.160926707256971e-04 -2.119092055798298e-05
+  1   1   1   1   0   0 -5.467319805259745e-05 -3.371696756234449e-05
+... [truncated]
+  2   2   4   4   3   3 -1.279170882307354e-15 1.378894188143029e-13
+  2   2   4   4   4   4 -3.752182192799965e-16 4.101975575297762e-14
+... [truncated]
+# lambda= 800 nelements= 136 epsIn= -24.236565+1.458652j
+  1   1   1   1  -1  -1 -7.146139984375531e-07 -1.120611667309835e-05
+  1   1   1   1   0   0 -4.379156367712547e-07 -7.955074171282911e-06
+... [truncated]
+  2   2   4   4   3   3 -1.240958755455683e-15 1.346747233206165e-13
+  2   2   4   4   4   4 -3.640885008022631e-16 4.006450678480949e-14
+... [truncated]
+\end{verbatim}
+
+\hypertarget{dielectricfunctions-nfuns}{%
+\subsubsection{\texorpdfstring{DielectricFunctions
+\emph{Nfuns}}{DielectricFunctions Nfuns}}\label{dielectricfunctions-nfuns}}
+
+Specifies the number of custom dielectric functions (default:
+\emph{Nfuns = 0}). The subsequent \emph{Nfuns} lines are each read as a
+string and then interpreted as either (i) a filename with a relative
+path or (ii) real and imaginary parts of a constant (i.e.~wavelength
+independent) value. Wrap each string in quotation marks,
+e.g.~\texttt{"../../epsAg.dat"} or \texttt{"2.25d0\ 0.0d0"}. The files
+should be in three-column format: the wavelength in nm followed by the
+real and imaginary parts of the relative dielectric function on each
+line. The wavelength range in the file must fully contain the range
+specified by the
+\protect\hyperlink{wavelength-l1-l2-n-}{\texttt{Wavelength}} keyword,
+but the values need not correspond exactly as they will be linearly
+interpolated.
+
+\hypertarget{medium-x}{%
+\subsubsection{\texorpdfstring{Medium
+\emph{X}}{Medium X}}\label{medium-x}}
+
+Sets the real-valued dielectric constant of the host medium (default
+value is \emph{1.0}). If \emph{X \textless{} 0} then its magnitude is
+interpreted as a refractive index (\emph{s}), from which the dielectric
+constant is calculated as \(X=s^2\).
+
+\hypertarget{wavelength-l1-l2-n}{%
+\subsubsection{\texorpdfstring{Wavelength \emph{L}1 {[} \emph{L2}
+\emph{n} {]}}{Wavelength L1 {[} L2 n {]}}}\label{wavelength-l1-l2-n}}
+
+Without the optional arguments, this keyword changes the default
+wavelength of 666.0 nm to a new value \emph{L}1. Including the optional
+arguments will specify a closed interval {[} \emph{L}1, \emph{L}2 {]}
+divided into \emph{n} regular grid spacings, thus producing \emph{n+1}
+wavelengths.
+
+\hypertarget{incidence-a-b-c-p-na-nb-nc}{%
+\subsubsection{\texorpdfstring{Incidence \emph{a} \emph{b} \emph{c} {[}
+\emph{p} {]} / {[} \emph{na} \emph{nb} \emph{nc}
+{]}}{Incidence a b c {[} p {]} / {[} na nb nc {]}}}\label{incidence-a-b-c-p-na-nb-nc}}
+
+or
+
+\texttt{Incidence\ file\ filename\ {[}p{]}}
+
+This keyword modifies the incident plane-wave. The default travel
+direction (along \emph{z} in lab-frame) can be changed by the Euler
+angles \emph{a} in the range \([0,2\pi)\) and \emph{b} in the range
+\([0,\pi]\), coinciding with the azimuthal and the polar angles,
+respectively, of the spherical polar coordinates in the lab frame. In
+addition, the amplitude vector can then be rotated about the new travel
+direction by the third Euler angle \emph{c} in the range \([0,2\pi)\).
+All three Euler angles are defined in accordance with the right-hand
+rule, and the sequence of rotation angles \emph{a},\emph{b},\emph{c}
+corresponds to the intrinsic ZY'Z' convention. That is: rotate by
+\emph{a} about the current \emph{z}-axis, then by \emph{b} about the new
+\emph{y}-axis, and finally by \emph{c} about the new \emph{z}-axis.
+
+Near-field and polarimetric calculations, i.e.~in modes \emph{M = 1} and
+\emph{M = 3}, require the polarisation of incident light to be
+specified. The polarisation is set by integer \emph{p}, with
+\emph{\textbar p\textbar{} = 1} setting linear polarisation,
+\emph{\textbar p\textbar{} = 2} setting circular polarisation, and the
+sign selecting one of the two Jones vectors in each case (positive:
+\emph{x}-linear-polarised or \emph{R}-circular-polarised; negative:
+\emph{y}-linear polarised or \emph{L}-circular-polarised). Note: for a
+circularly polarised wave travelling along \emph{z}, right-circular
+(\emph{R}) polarisation means that the amplitude vector is rotating
+clockwise in the \emph{xy}-plane from the receiver's viewpoint (looking
+in the negative \emph{z} direction).
+
+The integer \emph{p} can be omitted in mode \emph{M = 2}, because its
+output is always calculated for all four polarisations.
+
+A negative value of argument \emph{a}, \emph{b}, and/or \emph{c} will
+trigger discretisation of the corresponding angle range to produce
+\(-a\) grid points (resp. \(-b\) or \(-c\)). The grid points are
+uniformly spaced for the first and the third Euler angles, but for the
+second (i.e.~polar) angle the discretisation is such that the cosine is
+uniformly spaced. The range maximum of each angle can be divided by an
+(optional) integer \emph{na}, \emph{nb}, and \emph{nc}, to help avoid
+evaluating redundant grid points in the presence of symmetry. Note that
+the discretisation is constructed so that orientational averages are
+computed as a uniformly weighted Riemann sum with the midpoint rule. The
+weight \emph{wi} of each grid-point \emph{i} is simply
+\(w_i = 1/n_\text{gps}\), where \emph{ngps} is the total number of grid
+points.
+
+Multiple incidences can also be read from a file, in which case the
+argument \emph{a} must be a string starting with `f' or `F', and
+\emph{b} must specify the filename. The file's first line must contain
+the total incidence count, \emph{ninc}, and the subsequent \emph{ninc}
+lines each must contain four space-separated values: the three Euler
+angles (\emph{ai}, \emph{bi}, \emph{ci}) and the weight \emph{wi} of
+each incidence. The weights are only used to compute rotational averages
+for convenience, which is a common use-case.
+
+In \texttt{Mode\ =\ 1} (near-field calculations), if \texttt{p} is set
+to \texttt{p=1} (default value, linear polarisaiton), the orientation
+average of the local degree of optical chirality
+\(\langle\mathscr{C}\rangle\) will be calculated for both RCP and LCP
+(noting that linear polarisation would give 0 everywhere, when
+orientation-averaged). Since the calculation can be time-consuming,
+setting \texttt{p=+/-2} triggers the calculation for only that specific
+circular polarisation.
+
+\hypertarget{multipolecutoff-n1-n2-t}{%
+\subsubsection{\texorpdfstring{MultipoleCutoff \emph{n1} {[} \emph{n2}
+{[} \emph{t} {]}
+{]}}{MultipoleCutoff n1 {[} n2 {[} t {]} {]}}}\label{multipolecutoff-n1-n2-t}}
+
+Change the primary multipole cutoff (used for irregular offsetting when
+staging the linear system) from the default value of 8 to \emph{n1}.
+Another cutoff (used for regular offsetting when ``contracting'' the
+collective \emph{T}-matrix) can be set to \emph{n2} \textgreater=
+\emph{n1} (equality by default). A relative tolerance \(10^t\) (with
+\(t<0\) and \(t = -8\) by default) is used in the test for convergence
+of cross-sections with respect to multipole order \(n=1\dots n_2\) (the
+summation can terminate below \(n_2\) if the relative tolerance is
+reached).
+
+\hypertarget{multipoleselections-ns}{%
+\subsubsection{\texorpdfstring{MultipoleSelections
+\emph{Ns}}{MultipoleSelections Ns}}\label{multipoleselections-ns}}
+
+This keyword defines optional multipole selections for individual
+\emph{T}-matrices, and it must be followed by \emph{Ns} lines with two
+fields: (i) a string \emph{range} specifying the selection range; and
+(ii) a string \emph{type} specifying the selection type. For example:
+
+\begin{verbatim}
+MultipoleSelections 3
+MM1:4_EM1:4_ME1:4_EE1:4  blocks
+MM1:0_EM1:15_ME1:8_EE1:0  rows
+EM1:1_ME1:1  columns
+\end{verbatim}
+
+The \emph{range} string must be of the form MM?:?\_EM?:?\_ME?:?\_EE?:?,
+with the underscores separating the ranges for each \emph{T}-matrix
+block (e.g.~MM or ME), and each range specified by a closed multipole
+interval ?:? (e.g.~\emph{n}lo:\emph{n}hi = 1:4). No selection will be
+applied to blocks not included in \emph{range}, so these ``missing''
+blocks will remain unmasked (left ``as is'' in the original
+\emph{T}-matrix). On the other hand, a whole block can be masked (zeroed
+out) by setting \emph{n}lo \textgreater{} \emph{n}hi
+(e.g.~\texttt{MM1:0} will set the whole \texttt{MM} block of the
+\emph{T}-matrix to 0).
+
+The \emph{type} string must either start from ``c'', ``r'', or ``b'', to
+indicated that the selection is either applied to \emph{T}-matrix
+columns, rows, or both (producing non-zero blocks). To clarify, if
+\emph{type(1:1) = ``c''}, then all \emph{T}-matrix columns corresponding
+to multipole orders \emph{n \textless{} n}lo and \emph{n \textgreater{}
+n}hi will be set to zero. For \emph{type(1:1) = ``b''}, columns
+\textbf{and} rows for \emph{n \textless{} n}lo and \emph{n
+\textgreater{} n}hi will be set to zero.
+
+\hypertarget{output-control}{%
+\subsection{Output control}\label{output-control}}
+
+\hypertarget{outputformat-f-filename}{%
+\subsubsection{\texorpdfstring{OutputFormat \emph{F} {[} \emph{filename}
+{]}}{OutputFormat F {[} filename {]}}}\label{outputformat-f-filename}}
+
+If present, the output file format \emph{F} can be switched between
+plain text (``TXT'', default) and HDF5 (``HDF5''). With ``HDF5'', the
+results will be stored in a file with name ``results.h5'', or a
+user-specified filename (extension \emph{.h5} added automatically).
+
+\hypertarget{verbosity-l}{%
+\subsubsection{\texorpdfstring{Verbosity
+\emph{L}}{Verbosity L}}\label{verbosity-l}}
+
+Keyword specifying integer-valued verbosity level \emph{L}. Silent mode
+(\emph{L = 0}) prints only error statements and warnings. Physical
+quantities and some status indicators are printed at low verbosity
+(\emph{L = 1}, default value), with various timings and convergence
+indicators released at medium verbosity (\emph{L = 2}). The highest
+level (\emph{L = 3}) is intended for debugging, releasing all print
+statements throughout the code.
+
+\hypertarget{near-field-specific-keywords}{%
+\subsection{Near-field specific
+keywords}\label{near-field-specific-keywords}}
+
+\hypertarget{spacepoints-filename}{%
+\subsubsection{\texorpdfstring{SpacePoints
+\emph{filename}}{SpacePoints filename}}\label{spacepoints-filename}}
+
+or
+
+\texttt{SpacePoints} \emph{xlo} \emph{xhi} \emph{nx} \emph{ylo}
+\emph{yhi} \emph{ny} \emph{zlo} \emph{zhi} \emph{nz}
+
+Read (from a file) or calculate (on a regular grid) the Cartesian
+coordinates of points in space, where the local field quantities are to
+be evaluated. The file's first line should contain the total number of
+space-points, and the subsequent lines must contain the \emph{x},
+\emph{y}, and \emph{z} coordinates of each point. A regular grid is
+specified by a closed interval, e.g.~\emph{{[} xlo, xhi {]}}, and the
+number of bins (\emph{nx}) the interval is to be divided into (thus
+producing \emph{nx+1} grid points along that dimension).
+
+\hypertarget{mapquantity-p-e-b-c}{%
+\subsubsection{\texorpdfstring{MapQuantity {[}\emph{p}{]} {[}\emph{E}{]}
+{[}\emph{B}{]}
+{[}\emph{C}{]}}{MapQuantity {[}p{]} {[}E{]} {[}B{]} {[}C{]}}}\label{mapquantity-p-e-b-c}}
+
+Specify the near-field quantities of interest, in \texttt{Mode\ =\ 1}.
+Integer argument \emph{p} selects the raising power applied to the field
+amplitude \(|\mathbf{E}|^p\) or \(|\mathbf{B}|^p\). The default is
+\emph{p = 2} to produce the field intensity, \emph{p = 1} is for the
+field amplitude \textbar E\textbar, \emph{p = 4} for the (approximate)
+Raman enhancement factor \emph{\textasciitilde\textbar E\textbar{}4}.
+Setting \emph{p = 0} will output the real and imaginary parts of the
+(vector!) field components at each space-point.
+
+The optional letters {[}\emph{E}{]} {[}\emph{B}{]} {[}\emph{C}{]}
+(default: \emph{E} only) determine which of the near-field properties
+(electric and magnetic fields and normalised value of local degree of
+optical chirality) will be calculated.
+
+\hypertarget{mapoaquantity-e-b-c}{%
+\subsubsection{\texorpdfstring{MapOaQuantity {[}\emph{E}{]}
+{[}\emph{B}{]}
+{[}\emph{C}{]}}{MapOaQuantity {[}E{]} {[}B{]} {[}C{]}}}\label{mapoaquantity-e-b-c}}
+
+This is a keyword applicable in \texttt{Mode\ =\ 1}, to request the
+calculation of analytical orientation-averaged near-field quantities
+\(\langle|\mathbf{E}|^2\rangle\), \(\langle|\mathbf{B}|^2\rangle\), or
+\(\langle\overline{\mathscr{C}}\rangle\). If this keyword is not
+included in the input file, by default none will be calculated. Note
+that the
+\protect\hyperlink{incidence-a-b-c-p-na-nb-nc-}{\texttt{Incidence}}
+keyword is used to select LCP and RCP (or both).
+
+\hypertarget{polarimetry-keywords}{%
+\subsection{Polarimetry keywords}\label{polarimetry-keywords}}
+
+\hypertarget{scatteringangles-a-b-c-na-nb-nc}{%
+\subsubsection{\texorpdfstring{ScatteringAngles \emph{a} \emph{b}
+\emph{c} / {[} \emph{na} \emph{nb} \emph{nc}
+{]}}{ScatteringAngles a b c / {[} na nb nc {]}}}\label{scatteringangles-a-b-c-na-nb-nc}}
+
+This keyword specifies the scattering angles in \texttt{Mode\ =\ 3}
+(polarimetry), for the calculation of Stokes scattering vectors at
+different scattering angles. The parameters have the same interpretation
+as for
+\protect\hyperlink{incidence-a-b-c-p-na-nb-nc-}{\texttt{Incidence}}.
+
+Multiple scattering angles can also be read from a file, in which case
+the argument \texttt{a} must be a string starting with `f' or `F', and
+\texttt{b} must specify the filename. The file's first line must contain
+the number of scattering angles, \emph{nsca}, and the subsequent
+\emph{nsca} lines each must contain three space-separated values: the
+three Euler angles (\emph{ai}, \emph{bi}, \emph{ci}) for each scattering
+angle.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{advanced-use-development}{%
+\subsection{Advanced use / development}\label{advanced-use-development}}
+
+\hypertarget{scatterercentredcrosssections}{%
+\subsubsection{ScattererCentredCrossSections}\label{scatterercentredcrosssections}}
+
+Applicable in Scheme 1 and 2.
+
+Triggers Stout's formulae for fixed and orientation-averaged
+cross-sections based on scatterer-centred matrices; otherwise, the
+default behaviour is to collapse the coefficients to a common origin.
+Note that this does not affect the calculation of fixed-orientation
+partial shell absorptions for layered spheres, as they are calculated
+separately.
+
+\hypertarget{dumpcollectivetmatrix-filename}{%
+\subsubsection{\texorpdfstring{DumpCollectiveTmatrix {[} \emph{filename}
+{]}}{DumpCollectiveTmatrix {[} filename {]}}}\label{dumpcollectivetmatrix-filename}}
+
+If the collective \emph{T}-matrix is computed, this keyword will dump it
+to a file ``tmat\_col.txt'' or a user-specified \emph{filename}. The
+\protect\hyperlink{tmatrixfiles-nfiles-1}{file format} is
+self-consistent, so that the generated \emph{T}-matrix can be fed back
+into \textbf{TERMS} for subsequent calculations.
+
+\hypertarget{dumpprestageda}{%
+\subsubsection{DumpPrestagedA}\label{dumpprestageda}}
+
+If present, dumps a sparse-format representation of the full matrix
+comprising the individual \emph{T}-matrices after potential masking
+followed by rotation in their respective frame.
+
+\hypertarget{dumpstageda}{%
+\subsubsection{DumpStagedA}\label{dumpstageda}}
+
+If present, dumps a sparse-format representation of the full matrix
+comprising the individual \emph{T}-matrices along the diagonal blocks,
+and translation matrices in the off-diagonal blocks. The exact form of
+this matrix is scheme-dependent.
+
+\hypertarget{dumpscacoeff}{%
+\subsubsection{DumpScaCoeff}\label{dumpscacoeff}}
+
+If present, dumps the scattering coefficients in to a file
+``Sca\_coeff'' for different incidence angles.
+
+\hypertarget{dumpinccoeff}{%
+\subsubsection{DumpIncCoeff}\label{dumpinccoeff}}
+
+If present, dumps the incident coefficients in to a file ``Inc\_coeff''
+for different incidencd angles.
+
+\hypertarget{disablestoutbalancing}{%
+\subsubsection{DisableStoutBalancing}\label{disablestoutbalancing}}
+
+If present, switches off the balancing.
+
+\hypertarget{disablertr}{%
+\subsubsection{DisableRTR}\label{disablertr}}
+
+Switches off the three-step translation of \emph{T}-matrices, where a
+general translation is decomposed into a rotation, \emph{z}-axial
+translation, and then the inverse rotation. Instead, a one-step
+transformation is performed by pre- or post-multiplying by a single
+matrix containing the general translation-addition coefficients.
+
+\end{document}

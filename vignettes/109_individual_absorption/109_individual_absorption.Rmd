@@ -1,0 +1,96 @@
+---
+title: "Per-particle absorption"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 2
+    fig_width: 7
+    fig_height: 3
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Per-particle absorption}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE}
+library(knitr)
+library(terms)
+options(cli.num_colors = 1)
+theme_set(egg::theme_article())
+options(cli.num_colors = 1)
+opts_chunk$set(echo = FALSE, warning =FALSE,
+               message=FALSE, comment='', 
+               tidy=FALSE, cache = FALSE)
+do.call(read_chunk, list(path = "_run.R"))
+```
+
+## Objective
+
+This example illustrates the calculation of orientation-averaged absorption spectra in homogeneous spheres, with three different methods. The structure consists of two gold spheres in water.
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+library(terms)
+cat('  <style>
+.x3d_scene {
+float:right;
+margin:0em;
+ }
+  </style>')
+
+ge <- get_geometry('input')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,150), width = "200px", height = "150px") 
+```
+
+This simulation uses the following `input` file
+```{bash input}
+cat input
+```
+
+Note that currently the partial absorptions following Mackowski are not orientation-averaged (analytically); we therefore use an external incident file with quadrature nodes and weights,
+
+<details closed>
+<summary> Show incidence file (click to open) </summary>
+```{bash incidence}
+cat incidence
+```
+</details> <br />
+
+<details closed>
+<summary> Show log file (click to open) </summary>
+```{bash log}
+cat log
+```
+</details> <br />
+
+## Total cross-sections
+
+We first retrieve the total cross-sections, as usual,
+
+```{r total}
+```
+
+## Mackowski's partial cross-sections 
+
+```{r partial}
+```
+
+## Stout's per-particle cross-sections 
+
+```{r split}
+```
+
+## Comparison
+
+```{r comparison}
+```
+
+-----
+
+```{r cleanup}
+```
+_Last run: `r format(Sys.time(), '%d %B, %Y')`_

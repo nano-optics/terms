@@ -1,0 +1,57 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Latex auxiliary files
+*.aux
+*.bbl
+*.blg
+*.log
+*.synctex.gz
+*.m~
+
+
+
+# R stuff
+.Rhistory
+.Rproj.user
+.DS_Store
+
+# heavy files
+*.tmat
+*.h5
+terms_code.tar
+terms_code.zip
+vignettes/Keywords.html
+terms_code_0.9.9.tar
+terms_code_0.9.9.zip
+build/terms

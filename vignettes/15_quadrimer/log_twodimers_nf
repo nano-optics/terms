@@ -1,0 +1,66 @@
+readInputFile> Parsing file input_twodimers_nf
+
+readInputFile> Detected keyword ModeAndScheme
+               mode=1 => mapNF at diff. lambda and diff. Inc. and Sca_angles
+               scheme=3 => Seek T^(j) using Mackowski's approach
+readInputFile> Detected keyword MultipoleCutoff
+               Supplied ncut(1)= 15
+               Setting ncut(2)= ncut(1)
+               Setting ncut(3)=  -8
+readInputFile> Detected keyword Wavelength
+               Wavelength (nm):   400.0000
+readInputFile> Detected keyword Medium
+               Constant host epsilon=  1.7689E+0
+readInputFile> Detected keyword Incidence
+readInputFile> Euler angle alpha [0,2Pi) value=   0.00000000
+readInputFile> Euler angle beta  [0,Pi]  value=   1.57079600
+readInputFile> Euler angle gamma [0,2Pi) value=   0.00000000
+readInputFile> R-circular polarization
+               Incident Euler angles and weights:
+                  alpha        beta        gamma        weight
+               0.00000000   1.57079600   0.00000000   1.00000000
+readInputFile> Detected keyword TmatrixFiles
+readInputFile> Detected keyword MapQuantity
+               Map enhancement |E|**p with p=   2
+readInputFile> Detected keyword SpacePoints
+               i,lb_i,ub_i,npts_i= 1  0.00000000000000000E+00  0.00000000000000000E+00    1
+               i,lb_i,ub_i,npts_i= 2 -7.50000000000000000E+01  7.50000000000000000E+01  300
+               i,lb_i,ub_i,npts_i= 3 -7.50000000000000000E+01  7.50000000000000000E+01  300
+               nGridPoints=    181202
+readInputFile> Detected keyword OutputFormat
+               OutputFormat=HDF5
+               All output files are stored in file "map_twodimers.h5                                                "
+
+readInputFile> Detected keyword Scatterers
+ with nscat=    2
+
+readInputFile> Descriptor(s) and circumscribing sphere(s):
+
+ scatID String                  x          y          z         R_0
+    1   TF1                 0.0000E+0 -3.0000E+1  0.0000E+0  3.0000E+1
+    2   TF1                 0.0000E+0  3.0000E+1  0.0000E+0  3.0000E+1
+
+readInputFile> Individual geometry characteristic(s):
+
+ scatID Details
+    1   Euler angles:  0.0000000  0.0000000  0.0000000 asp. ratio: **********
+    2   Euler angles:  0.0000000  0.0000000  0.0000000 asp. ratio: **********
+
+readInputFile> Finished parsing 10 keywords
+
+ sizePlable      181202
+
+mapNF> ===== Wavelength:   400.00 (nm) ======================
+
+           3
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+           3
+calcField> Number of grid-points:   181202
+calcField> Evaluation time (CPU & real in s):  2.072E+01  2.077E+01
+
+ ngrid      181202
+mapNF>diff inc compute point (real in s):  2.081E+01
+termsProgram> Program run time (CPU & real in s):  2.216E+01  2.160E+01

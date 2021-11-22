@@ -1,0 +1,97 @@
+---
+title: "TERMS logo"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 3
+    fig_width: 7
+    fig_height: 2
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{TERMS logo}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE, warning=FALSE}
+library(knitr)
+library(terms)
+options(cli.num_colors = 1)
+theme_set(egg::theme_article())
+opts_chunk$set(echo = FALSE,
+               message=FALSE, comment='', 
+               tidy=FALSE, cache = FALSE)
+```
+
+This example describes the process to create the TERMS logo.
+
+1. Download the font bpdots
+2. Write TERMS with this font
+
+```{r geometry, fig.height=1.2}
+ge <- get_geometry(input = 'input')
+cl <- cluster_geometry(ge)
+
+ggplot() +
+  coord_equal() +
+  geom_circle(data=ge, aes(x0=x,y0=y,r=r,group=label),
+              inherit.aes=FALSE,
+              colour='black', alpha=0.5, lwd=0.2,lty=1) +
+  scale_x_continuous(expand=c(0,0)) +
+  scale_y_continuous(expand=c(0,0)) +
+  theme_void()+
+  theme(legend.position = 'none', legend.direction = 'horizontal')
+```
+
+3. Overlap circles on top, save as svg
+4. Import coordinates and radii 
+
+<details closed>
+<summary> Show svg file (click to open) </summary>
+```{bash svg}
+tail -n+6 terms.svg
+```
+</details> <br />
+
+5. Rescale dimensions to desired range of nanometres
+6. Create input file with those scatterers
+
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+library(terms)
+ge <- get_geometry('input')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,1500), width = "100%", height="50%") 
+```
+
+
+<details closed>
+<summary> Show input file (click to open) </summary>
+```{bash input}
+cat input
+```
+</details> <br />
+
+7. Run the simulation (with low Nmax!)
+8. Export the field map as a png image
+
+```{r map, out.width='600'}
+do.call(knitr::include_graphics, list(path = 'nf_map.png'))
+```
+
+9. Load the image in SquiggleDraw (Processing) and tune the parameters as desired
+
+```{r squiggle, out.width='600'}
+do.call(knitr::include_graphics, list(path = 'squiggle.png'))
+```
+
+[(link to svg)](squiggle.svg)
+
+10. Export as svg, load and rescale in Inkscape, draw
+
+```{r axi, out.width='600'}
+do.call(knitr::include_graphics, list(path = 'axidraw.jpg'))
+```
