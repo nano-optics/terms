@@ -353,11 +353,8 @@ contains
                lambda=wavelen(iwav), &
                ehost=ehost(iwav), &
                p_label=p_label, &
-               escat=escat_(:, :, iwav), &
+               scatK_ = tpi/wavelen(iwav)*sqrt(escat_(:,:,iwav)), &
                verb_=verb)
-
-            !orAvextEB_int(:,4:6,iwav)=(wavelen(iwav)/(tpi*sp_light))**2 &
-            !    * orAvextEB_int(:,4:6,iwav) !Note: (1/omega)*orAveB-->total orAveB2
 
             if (verb > 1) then
                call cpu_time(t1)
@@ -5946,7 +5943,7 @@ contains
 
    end subroutine calcOaLDOC
 !------------------------------------------------------------------------------
-   subroutine calcOaExtField(r, geometry, TIJ, oaEB2, verb_, lambda, ehost, escat, p_label)
+   subroutine calcOaExtField(r, geometry, TIJ, oaEB2, verb_, lambda, ehost, scatK_, p_label)
 
       !------------------------------------------------------------------
       ! This subroutine calculates the orientation average of the total external electric
@@ -5962,7 +5959,8 @@ contains
       real(8), intent(in), dimension(:, :) :: r
       !real(8), intent(in)  :: hostK
       integer, intent(in), optional :: verb_
-      complex(8), intent(in) :: TIJ(:, :), escat(:, :)
+      complex(8), intent(in) :: TIJ(:, :)
+      complex(8), intent(in), optional ::  scatK_(:,:)
       real(8), intent(in) :: geometry(:, :), ehost, lambda
       real(8), intent(out), optional :: oaEB2(size(r, 2), 6)
       integer, intent(inout) :: p_label(:, :)
@@ -6221,7 +6219,7 @@ contains
             rj(1:3) = rp - geometry(1:3, j)
             call calcVSWs( &
                r=rj, &
-               k=cmplx(hostK_G, 0, kind(hostK_G)), &
+               k = scatK_(j,abs(idepth)), & 
                pmax=lmax/2, &
                regt=.true., &
                cart=.true., &
@@ -6242,9 +6240,9 @@ contains
             !do j=1,nscat
             js = (j - 1)*lmax
             call calcLamMat( &
-               Xi=cmplx(hostK_G*scatXYZR(4, j), 0, kind(hostK_G)), &
-               ro=sqrt(escat(j, 1)/ehost), &
-               mat=lam_mat(js + 1:js + lmax, js + 1:js + lmax))
+               Xi= cmplx(hostK_G*scatXYZR(4, j), 0, kind(hostK_G)), &
+               ro= scatK_(j,abs(idepth))/hostK_G, &
+               mat= lam_mat(js + 1:js + lmax, js + 1:js + lmax))
             !enddo
             if (verb > 1) then
                call cpu_time(t1)
@@ -6297,7 +6295,7 @@ contains
             end do
 
             oaEB2(n, 1) = tpi*realpart(B0E)
-            !oaEB2(n,4)=(1/tpi)*escat(j,1)*(lambda/sp_light)**2* realpart(B0B)
+            oaEB2(n,4)=(1/tpi)*(lambda/sp_light)**2* realpart(B0B)
          end if
          if (verb > 1 .AND. (idepth .NE. 0)) write (*, '(i6,12x,A)') n, '-in '
 
