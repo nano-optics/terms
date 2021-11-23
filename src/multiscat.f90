@@ -319,7 +319,8 @@ contains
          end do
          !
          if (verb > 0) write (*, *)
-         ! if( oravE .OR. present(oa_ldoc)  ) then  !I do not change it now
+         if( (oravE .OR. present(oa_ldoc)) .AND. scheme == 3  ) &  ! there is currently a mismatch in the results
+           write (*, *) myName, '> WARNING: orientation-averaged near-field quantities are inaccurate at Scheme = 3'
 
          cJ = 0
          cJ(1:4, 1, :) = inc(1:4, :)

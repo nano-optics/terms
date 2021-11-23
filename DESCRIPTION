@@ -23,6 +23,6 @@ Type: Package
 VignetteBuilder: knitr
 Encoding: UTF-8
 RoxygenNote: 7.1.2
-Depends: ggplot2, gridExtra, egg, tidyr, purrr, glue, reshape2, ggforce, dplyr
-Suggests: rhdf5, DT, rgl, cubs
+Depends: R (>= 3.5.0), rhdf5, tidyr, purrr, glue, reshape2, dplyr, tibble
+Suggests: DT, rgl, cubs, ggplot2, gridExtra, egg, ggforce
 
