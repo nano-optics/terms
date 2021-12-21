@@ -1,3 +1,21 @@
+# terms 1.0.0
+
+## Website
+
+- new vignette for alpha tensor
+
+## Bug fix
+
+- LR vs RL error in calculation of scattering circular dichroism
+
+## User-facing changes
+
+- MapOaQuantity [p] new format
+
+## New functionality
+
+- implemented conversion of multipoles $l<=3$ into cartesian "alpha tensor"
+
 # terms 0.9.9
 
 
