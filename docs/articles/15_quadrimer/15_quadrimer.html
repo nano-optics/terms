@@ -51,7 +51,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">terms</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.9</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -96,7 +96,8 @@
       <a href="../../articles/09_spectrum_near_field/09_spectrum_near_field.html">09 orientation-averaged near field spectrum</a>
     </li>
     <li class="divider">
-    <li class="dropdown-header">Advanced examples &amp; testing</li>
+    </li>
+<li class="dropdown-header">Advanced examples &amp; testing</li>
     <li>
       <a href="../../articles/10_shell_absorption/10_shell_absorption.html">10 shell absorption</a>
     </li>
@@ -140,8 +141,27 @@
     <li>
       <a href="../../articles/106_balancing/106_balancing.html">106 balancing</a>
     </li>
-    <li class="divider">
     <li>
+      <a href="../../articles/109_individual_absorption/109_individual_absorption.html">109 individual absorption</a>
+    </li>
+    <li>
+      <a href="../../articles/110_alpha_tensor/110_alpha_tensor.html">110 alpha tensor</a>
+    </li>
+    <li>
+      <a href="../../articles/111_polarised_nf/111_polarised_nf.html">111 polarised OA near-fields</a>
+    </li>
+    <li class="divider">
+    </li>
+<li class="dropdown-header">Validation</li>
+    <li>
+      <a href="../../articles/1001_mstm_ff/1001_mstm_ff.html">1001 MSTM far-field</a>
+    </li>
+    <li>
+      <a href="../../articles/1003_cda/1003_cda.html">1003 CDA dichroism</a>
+    </li>
+    <li class="divider">
+    </li>
+<li>
       <a href="../../articles/Indexing.html">Indexing conventions</a>
     </li>
   </ul>
@@ -176,23 +196,23 @@
 
       
 
-      </header><script src="15_quadrimer_files/header-attrs-2.11/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Quadrimer vs two dimers</h1>
             
-            <h4 data-toc-skip class="date">22 November, 2021</h4>
+            <h4 data-toc-skip class="date">28 January, 2022</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/master/vignettes/15_quadrimer/15_quadrimer.Rmd" class="external-link"><code>vignettes/15_quadrimer/15_quadrimer.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/15_quadrimer/15_quadrimer.Rmd" class="external-link"><code>vignettes/15_quadrimer/15_quadrimer.Rmd</code></a></small>
       <div class="hidden name"><code>15_quadrimer.Rmd</code></div>
 
     </div>
 
     
     
-<div id="objective" class="section level2">
-<h2 class="hasAnchor">
-<a href="#objective" class="anchor" aria-hidden="true"></a>Objective</h2>
+<div class="section level2">
+<h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
+</h2>
 <p>This example illustrates the import of a TERMS-exported collective T-matrix as an input (effective) scatterer. We compare the simulation of a quadrimer of spheres to that of two dimers (with the same geometry).</p>
 <style>
 .x3d_scene {
@@ -228,27 +248,27 @@ $ scatID     &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 $ volID      &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
 $ I          &lt;dbl&gt; 0.4696095, 0.4666685, 0.4638208, 0.4610681, 0.4584123, 0.45…</code></pre>
 </div>
-<div id="near-field" class="section level2">
-<h2 class="hasAnchor">
-<a href="#near-field" class="anchor" aria-hidden="true"></a>Near-field</h2>
+<div class="section level2">
+<h2 id="near-field">Near-field<a class="anchor" aria-label="anchor" href="#near-field"></a>
+</h2>
 <p><img src="15_quadrimer_files/figure-html/nf-1.png" width="700"></p>
 <p>As expected, the local fields cannot be calculated within the circumbscribed sphere of a dimer described as an input T-matrix.</p>
 </div>
-<div id="far-field" class="section level2">
-<h2 class="hasAnchor">
-<a href="#far-field" class="anchor" aria-hidden="true"></a>Far-field</h2>
+<div class="section level2">
+<h2 id="far-field">Far-field<a class="anchor" aria-label="anchor" href="#far-field"></a>
+</h2>
 <pre><code>Rows: 16,281
 Columns: 6
-$ wavelength &lt;dbl&gt; 300, 302, 304, 306, 308, 310, 312, 314, 316, 318, 320, 322,…
+$ wavelength &lt;dbl&gt; 300, 300, 300, 300, 300, 300, 300, 300, 300, 302, 302, 302,…
 $ crosstype  &lt;chr&gt; "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Ab…
-$ variable   &lt;fct&gt; total, total, total, total, total, total, total, total, tot…
-$ dichroism  &lt;dbl&gt; -1.042942e-13, 2.024232e-14, 1.874713e-13, 1.025757e-13, -3…
-$ average    &lt;dbl&gt; 327.3973, 341.0951, 355.6499, 371.1430, 387.6676, 405.3314,…
+$ variable   &lt;chr&gt; "total", "I1", "I2", "I3", "I4", "I5", "I6", "I7", "I8", "t…
+$ dichroism  &lt;dbl&gt; -1.042942e-13, -1.123776e-13, 8.779497e-15, -6.841969e-16, …
+$ average    &lt;dbl&gt; 3.273973e+02, 2.673003e+02, 5.505600e+01, 4.820674e+00, 2.1…
 $ simulation &lt;chr&gt; "dimer", "dimer", "dimer", "dimer", "dimer", "dimer", "dime…</code></pre>
 <p><img src="15_quadrimer_files/figure-html/ff-1.png" width="700"></p>
 <p>remarkably, the far-field cross-sections are quite accurate even though the Rayleigh hypothesis is badly violated.</p>
 <hr>
-<p><em>Last run: 22 November, 2021</em></p>
+<p><em>Last run: 28 January, 2022</em></p>
 </div>
   </div>
 
@@ -269,7 +289,7 @@ $ simulation &lt;chr&gt; "dimer", "dimer", "dimer", "dimer", "dimer", "dimer", "
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.9000.9000.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>

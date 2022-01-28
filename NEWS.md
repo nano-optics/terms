@@ -2,22 +2,38 @@
 
 ## Website
 
-- new vignette for alpha tensor
+New vignettes:
+
+- Polarised orientation-averaged near fields
+- Reproducing cartesian `Higher-Order Polarizability Tensors' for a dimer
+- Validation against MSTM v4 for orientation-averaged cross-sections
+- Validation against coupled-dipole approximation for far-field circular dichroism
 
 ## Bug fix
 
-- LR vs RL error in calculation of scattering circular dichroism
+- Block matrices LR and RL were swapped, resulting in a (small) error when computing scattering circular dichroism
 
 ## User-facing changes
 
-- MapOaQuantity [p] new format
+- `MapOaQuantity [p]` has a new format (polarised or unpolarised); if specific polarisation(s) are requested, they are taken from the `Incidence` keyword
 
 ## New functionality
 
 - implemented conversion of multipoles $l<=3$ into cartesian "alpha tensor"
+- implemented polarised (L or R) orientation-averaged near-fields E2, B2, and LDOC (note: the results are incorrect inside spheres)
+
+## Low level changes
+
+- `calcOaExtField` renamed `calcOaNFUnpol`
+- `calcOaLDOC` renamed `calcOaNF`; now combines calculation of LDOC and field intensities (many terms are common)
+- new routine `alphaTensor`
+
+## R utilities
+
+- `export_cubature()` utility function to produce an incidence file suitable for TERMS from the `cubs` package.
+- removed dependency on `reshape2`; using `tidyr` instead
 
 # terms 0.9.9
-
 
 ## Website
 

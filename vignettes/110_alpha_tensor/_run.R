@@ -1,14 +1,13 @@
-
+setwd(here::here("vignettes/110_alpha_tensor/"))
 ## ----load----
 library(terms)
-library(gridExtra)
+library(egg)
 # library(reshape2)
 # library(purrr)
 library(ggplot2)
 library(egg)
 # library(grid)
 # library(readr)
-
 
 
 ## ----run----
@@ -33,7 +32,8 @@ s <- subset(v,   n <=3 & np <=3)
 s2 <- subset(v2, n <=3 & np <=3)
 s3 <- subset(v3, n <=3 & np <=3)
 
-g <- grid.arrange(display_tmat(s) + ggtitle('spheroid T-matrix'),
-                  display_tmat(s2) + ggtitle('dimer T-matrix'),
-                  display_tmat(s3) + ggtitle('dimer alpha-tensor'),ncol=3)
+display_tmat(s) + ggtitle('spheroid T-matrix') +
+  display_tmat(s2) + ggtitle('dimer T-matrix') +
+  display_tmat(s3) + ggtitle('dimer alpha-tensor')
+
 

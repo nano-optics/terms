@@ -51,7 +51,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">terms</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.9</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -96,7 +96,8 @@
       <a href="../../articles/09_spectrum_near_field/09_spectrum_near_field.html">09 orientation-averaged near field spectrum</a>
     </li>
     <li class="divider">
-    <li class="dropdown-header">Advanced examples &amp; testing</li>
+    </li>
+<li class="dropdown-header">Advanced examples &amp; testing</li>
     <li>
       <a href="../../articles/10_shell_absorption/10_shell_absorption.html">10 shell absorption</a>
     </li>
@@ -140,8 +141,27 @@
     <li>
       <a href="../../articles/106_balancing/106_balancing.html">106 balancing</a>
     </li>
-    <li class="divider">
     <li>
+      <a href="../../articles/109_individual_absorption/109_individual_absorption.html">109 individual absorption</a>
+    </li>
+    <li>
+      <a href="../../articles/110_alpha_tensor/110_alpha_tensor.html">110 alpha tensor</a>
+    </li>
+    <li>
+      <a href="../../articles/111_polarised_nf/111_polarised_nf.html">111 polarised OA near-fields</a>
+    </li>
+    <li class="divider">
+    </li>
+<li class="dropdown-header">Validation</li>
+    <li>
+      <a href="../../articles/1001_mstm_ff/1001_mstm_ff.html">1001 MSTM far-field</a>
+    </li>
+    <li>
+      <a href="../../articles/1003_cda/1003_cda.html">1003 CDA dichroism</a>
+    </li>
+    <li class="divider">
+    </li>
+<li>
       <a href="../../articles/Indexing.html">Indexing conventions</a>
     </li>
   </ul>
@@ -176,23 +196,23 @@
 
       
 
-      </header><script src="14_diffractive_chain_files/header-attrs-2.11/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Diffractive chain of spheres</h1>
             
-            <h4 data-toc-skip class="date">22 November, 2021</h4>
+            <h4 data-toc-skip class="date">28 January, 2022</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/master/vignettes/14_diffractive_chain/14_diffractive_chain.Rmd" class="external-link"><code>vignettes/14_diffractive_chain/14_diffractive_chain.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/14_diffractive_chain/14_diffractive_chain.Rmd" class="external-link"><code>vignettes/14_diffractive_chain/14_diffractive_chain.Rmd</code></a></small>
       <div class="hidden name"><code>14_diffractive_chain.Rmd</code></div>
 
     </div>
 
     
     
-<div id="objective" class="section level2">
-<h2 class="hasAnchor">
-<a href="#objective" class="anchor" aria-hidden="true"></a>Objective</h2>
+<div class="section level2">
+<h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
+</h2>
 <p>This example considers a chain of 20 Au spheres with relatively large inter-particle separation, commensurate with the wavelength. A strong multiple scattering effect is predicted despite the large distances between scatterers, due to diffractive coupling. The particle-centred scheme (Stout) is required in this calculation, as expanding about a single origin would require prohibitively large multipolar orders for accurate translations (the cluster as a whole has a large size parameter).</p>
 <style>
 .x3d_scene {
@@ -233,42 +253,42 @@ Au_S1 3600  0     0     50
 Au_S1 4050  0     0     50   
 Au_S1 4500  0     0     50   </code></pre>
 <pre><code>List of 3
- $ mCOA:'data.frame':   1818 obs. of  5 variables:
-  ..$ wavelength: num [1:1818] 300 304 308 312 316 320 324 328 332 336 ...
+ $ mCOA: tibble [1,818 × 5] (S3: tbl_df/tbl/data.frame)
+  ..$ wavelength: num [1:1818] 300 300 300 300 300 300 304 304 304 304 ...
   ..$ crosstype : chr [1:1818] "Abs" "Abs" "Abs" "Abs" ...
-  ..$ variable  : Factor w/ 6 levels "total","I1","I2",..: 1 1 1 1 1 1 1 1 1 1 ...
+  ..$ variable  : chr [1:1818] "total" "I1" "I2" "I3" ...
   ..$ dichroism : num [1:1818] 0 0 0 0 0 0 0 0 0 0 ...
-  ..$ average   : num [1:1818] 167224 170957 174689 178337 181884 ...
- $ mCFO:'data.frame':   1818 obs. of  7 variables:
-  ..$ wavelength   : num [1:1818] 300 304 308 312 316 320 324 328 332 336 ...
+  ..$ average   : num [1:1818] 167224 0 0 0 0 ...
+ $ mCFO: tibble [1,818 × 7] (S3: tbl_df/tbl/data.frame)
+  ..$ wavelength   : num [1:1818] 300 300 300 300 300 300 304 304 304 304 ...
   ..$ crosstype    : chr [1:1818] "Abs" "Abs" "Abs" "Abs" ...
-  ..$ variable     : Factor w/ 6 levels "total","I1","I2",..: 1 1 1 1 1 1 1 1 1 1 ...
-  ..$ polarisation1: num [1:1818] 170953 196668 205046 209542 212623 ...
-  ..$ polarisation2: num [1:1818] 170953 196668 205046 209542 212623 ...
-  ..$ dichroism    : num [1:1818] 2.91e-11 -2.91e-11 8.73e-11 -5.82e-11 -5.82e-11 ...
-  ..$ average      : num [1:1818] 170953 196668 205046 209542 212623 ...
- $ mLFO:'data.frame':   1818 obs. of  7 variables:
-  ..$ wavelength   : num [1:1818] 300 304 308 312 316 320 324 328 332 336 ...
+  ..$ variable     : chr [1:1818] "total" "I1" "I2" "I3" ...
+  ..$ polarisation1: num [1:1818] 170952.6 159859.6 10581.7 499.6 11.5 ...
+  ..$ polarisation2: num [1:1818] 170952.6 159859.6 10581.7 499.6 11.5 ...
+  ..$ dichroism    : num [1:1818] 2.91e-11 2.91e-11 0.00 0.00 3.55e-15 ...
+  ..$ average      : num [1:1818] 170952.6 159859.6 10581.7 499.6 11.5 ...
+ $ mLFO: tibble [1,818 × 7] (S3: tbl_df/tbl/data.frame)
+  ..$ wavelength   : num [1:1818] 300 300 300 300 300 300 304 304 304 304 ...
   ..$ crosstype    : chr [1:1818] "Abs" "Abs" "Abs" "Abs" ...
-  ..$ variable     : Factor w/ 6 levels "total","I1","I2",..: 1 1 1 1 1 1 1 1 1 1 ...
-  ..$ polarisation1: num [1:1818] 171724 178501 182896 186328 189407 ...
-  ..$ polarisation2: num [1:1818] 170181 214836 227196 232755 235839 ...
-  ..$ dichroism    : num [1:1818] 1542 -36336 -44300 -46426 -46432 ...
-  ..$ average      : num [1:1818] 170953 196668 205046 209542 212623 ...</code></pre>
+  ..$ variable     : chr [1:1818] "total" "I1" "I2" "I3" ...
+  ..$ polarisation1: num [1:1818] 171723.8 162369 8832.9 508 13.8 ...
+  ..$ polarisation2: num [1:1818] 170181.4 157350.2 12330.5 491.2 9.3 ...
+  ..$ dichroism    : num [1:1818] 1542.44 5018.8 -3497.6 16.77 4.47 ...
+  ..$ average      : num [1:1818] 170952.6 159859.6 10581.7 499.6 11.5 ...</code></pre>
 </div>
-<div id="fixed-orientation-results" class="section level2">
-<h2 class="hasAnchor">
-<a href="#fixed-orientation-results" class="anchor" aria-hidden="true"></a>Fixed-orientation results</h2>
+<div class="section level2">
+<h2 id="fixed-orientation-results">Fixed-orientation results<a class="anchor" aria-label="anchor" href="#fixed-orientation-results"></a>
+</h2>
 <p>We compare the fixed-orientation cross-sections to the single-sphere reference (scaled by the particle number),</p>
 <pre><code>Rows: 3,636
 Columns: 7
-$ wavelength &lt;dbl&gt; 300, 300, 304, 304, 308, 308, 312, 312, 316, 316, 320, 320,…
+$ wavelength &lt;dbl&gt; 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300,…
 $ crosstype  &lt;chr&gt; "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Ab…
-$ variable   &lt;fct&gt; total, total, total, total, total, total, total, total, tot…
-$ dichroism  &lt;dbl&gt; 1542.437, 1542.437, -36335.646, -36335.646, -44300.240, -44…
-$ average    &lt;dbl&gt; 170952.6, 170952.6, 196668.4, 196668.4, 205045.7, 205045.7,…
+$ variable   &lt;chr&gt; "total", "total", "I1", "I1", "I2", "I2", "I3", "I3", "I4",…
+$ dichroism  &lt;dbl&gt; 1.542437e+03, 1.542437e+03, 5.018797e+03, 5.018797e+03, -3.…
+$ average    &lt;dbl&gt; 1.709526e+05, 1.709526e+05, 1.598596e+05, 1.598596e+05, 1.0…
 $ name       &lt;chr&gt; "polarisation1", "polarisation2", "polarisation1", "polaris…
-$ value      &lt;dbl&gt; 171723.8, 170181.4, 178500.6, 214836.3, 182895.5, 227195.8,…</code></pre>
+$ value      &lt;dbl&gt; 1.717238e+05, 1.701814e+05, 1.623690e+05, 1.573502e+05, 8.8…</code></pre>
 <p><img src="14_diffractive_chain_files/figure-html/fo-1.png" width="700"></p>
 </div>
   </div>
@@ -290,7 +310,7 @@ $ value      &lt;dbl&gt; 171723.8, 170181.4, 178500.6, 214836.3, 182895.5, 22719
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.9000.9000.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>

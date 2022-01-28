@@ -6,7 +6,7 @@ library(terms)
 library(purrr)
 library(ggplot2)
 library(egg)
-theme_set(egg::theme_article())
+theme_set(theme_grey())
 
 ## ---run---
 
@@ -73,7 +73,7 @@ p1 <- ggplot(d, aes(y,z)) +
   scale_fill_viridis_c(option = 'plasma', 
                        limits=c(-4,max(log10(d2$I))), 
                        na.value = 'grey90') +
-  theme_article() +
+  theme_grey() +
   scale_x_continuous(expand=c(0,0)) +
   scale_y_continuous(expand=c(0,0)) +
   labs(x="y /nm", y="z /nm", fill="log(I)", 

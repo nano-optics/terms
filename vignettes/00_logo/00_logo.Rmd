@@ -19,8 +19,10 @@ vignette: >
 ```{r demo, message=FALSE, echo=FALSE, warning=FALSE}
 library(knitr)
 library(terms)
+library(ggplot2)
+library(ggforce)
 options(cli.num_colors = 1)
-theme_set(egg::theme_article())
+theme_set(theme_grey())
 opts_chunk$set(echo = FALSE,
                message=FALSE, comment='', 
                tidy=FALSE, cache = FALSE)

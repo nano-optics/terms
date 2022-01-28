@@ -1,6 +1,6 @@
 pandoc: 2.11.4
-pkgdown: 1.9000.9000.9000
-pkgdown_sha: 8a0332494bfd1edd015dbea701de4d2bc8c5d7b7
+pkgdown: 2.0.2
+pkgdown_sha: ~
 articles:
   00_logo: 00_logo/00_logo.html
   00_mantis: 00_mantis/00_mantis.html
@@ -14,6 +14,8 @@ articles:
   07_ldoc: 07_ldoc/07_ldoc.html
   08_polarimetry: 08_polarimetry/08_polarimetry.html
   09_spectrum_near_field: 09_spectrum_near_field/09_spectrum_near_field.html
+  1001_mstm_ff: 1001_mstm_ff/1001_mstm_ff.html
+  1003_cda: 1003_cda/1003_cda.html
   101_timing: 101_timing/101_timing.html
   102_comparison_schemes: 102_comparison_schemes/102_comparison_schemes.html
   104_large_separation: 104_large_separation/104_large_separation.html
@@ -23,6 +25,8 @@ articles:
   108_timing_nf: 108_timing_nf/108_timing_nf.html
   109_individual_absorption: 109_individual_absorption/109_individual_absorption.html
   10_shell_absorption: 10_shell_absorption/10_shell_absorption.html
+  110_alpha_tensor: 110_alpha_tensor/110_alpha_tensor.html
+  111_polarised_nf: 111_polarised_nf/111_polarised_nf.html
   11_convergence: 11_convergence/11_convergence.html
   12_convergence_VTACS: 12_convergence_VTACS/12_convergence_VTACS.html
   13_masking: 13_masking/13_masking.html
@@ -32,7 +36,7 @@ articles:
   Keywords: Keywords.html
   Theory: Theory.html
   Todo: Todo.html
-last_built: 2021-11-22T12:33Z
+last_built: 2022-01-28T20:43Z
 urls:
   reference: http://nano-optics.ac.nz/terms/reference
   article: http://nano-optics.ac.nz/terms/articles

@@ -2,7 +2,7 @@ setwd(here::here("vignettes/10_shell_absorption"))
 
 ## ----load----
 library(terms)
-theme_set(egg::theme_article())
+theme_set(theme_grey())
 
 ## ----run----
 system("../../build/terms input_AuAg > log1")
@@ -65,7 +65,7 @@ all <- ggplot(coats %>% filter(scatterer==1), aes(wavelength, value, colour=cros
   scale_color_brewer(palette = 'Set1') +
   labs(x='wavelength /nm', y=expression("per-part. cross-section /"*nm^2),
        colour='',linetype = 'region') +
-  theme_article() +
+  theme_grey() +
   theme(panel.grid.major.y = element_line(colour = 'grey80',size = 0.2,linetype=3),
         panel.grid.minor.y = element_line(colour = 'grey80',size = 0.1,linetype=3))
 

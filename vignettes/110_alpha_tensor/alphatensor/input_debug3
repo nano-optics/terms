@@ -1,0 +1,21 @@
+ModeAndScheme 1 3
+MultipoleCutoff 15
+
+Wavelength 820 
+Medium 1.7689 
+Incidence 0 0 0 2
+
+Verbosity 3
+
+#DisableStoutBalancing
+ScattererCentredCrossSections
+SpacePoints 0 0 0 0 0 0 0.1 0.1 0
+MapOaQuantity C
+MapQuantity 2 C
+
+OutputFormat TXT map_debug3
+#OutputFormat HDF5 map_debug3
+ 
+Scatterers 2 
+Au   0 0 -12  10  
+Au   0 0  12  10  

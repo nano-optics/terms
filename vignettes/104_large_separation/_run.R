@@ -3,7 +3,7 @@ setwd(here('vignettes/104_large_separation'))
 
 ## ----load---
 library(terms)
-theme_set(egg::theme_article())
+theme_set(theme_grey())
 
 # ----tpl----
 

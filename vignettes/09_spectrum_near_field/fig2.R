@@ -23,7 +23,7 @@ pa <- ggplot(data_a, aes( wavelength, c, color= material, linetype=k))+
   scale_y_continuous(expand=c(0,0),lim=c(-22,20))+
   labs(x='wavelength/ nm', y= 'Normalized optical chirality', map='C')+
   scale_colour_brewer(palette='Set1') +
-  theme_article(10) +
+  theme_grey(10) +
   theme()
   print(pa)
   fig <- pa

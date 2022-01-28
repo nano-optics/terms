@@ -88,7 +88,7 @@ for(ii in 1:nrow(params)){
 
 ## ----read---
 library(terms)
-theme_set(egg::theme_article())
+theme_set(theme_grey())
 
 old_extract_time <- function(log = 'log'){
   command <- paste0("grep '(CPU & real in s)' ", log)

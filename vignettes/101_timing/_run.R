@@ -82,7 +82,7 @@ for(ii in 1:nrow(params)){
 
 ## ----read---
 library(terms)
-theme_set(egg::theme_article())
+theme_set(theme_grey())
 
 
 extract_time <- function(log = 'log'){

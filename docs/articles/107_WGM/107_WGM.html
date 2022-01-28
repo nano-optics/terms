@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Balancing • terms</title>
+<title>Whispering gallery modes • terms</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../../apple-touch-icon.png">
@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../../pkgdown.css" rel="stylesheet">
 <script src="../../pkgdown.js"></script><link href="../../extra.css" rel="stylesheet">
-<meta property="og:title" content="Balancing">
+<meta property="og:title" content="Whispering gallery modes">
 <meta property="og:description" content="terms">
 <meta property="og:image" content="http://nano-optics.ac.nz/terms/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -51,7 +51,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">terms</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.9</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -96,7 +96,8 @@
       <a href="../../articles/09_spectrum_near_field/09_spectrum_near_field.html">09 orientation-averaged near field spectrum</a>
     </li>
     <li class="divider">
-    <li class="dropdown-header">Advanced examples &amp; testing</li>
+    </li>
+<li class="dropdown-header">Advanced examples &amp; testing</li>
     <li>
       <a href="../../articles/10_shell_absorption/10_shell_absorption.html">10 shell absorption</a>
     </li>
@@ -140,8 +141,27 @@
     <li>
       <a href="../../articles/106_balancing/106_balancing.html">106 balancing</a>
     </li>
-    <li class="divider">
     <li>
+      <a href="../../articles/109_individual_absorption/109_individual_absorption.html">109 individual absorption</a>
+    </li>
+    <li>
+      <a href="../../articles/110_alpha_tensor/110_alpha_tensor.html">110 alpha tensor</a>
+    </li>
+    <li>
+      <a href="../../articles/111_polarised_nf/111_polarised_nf.html">111 polarised OA near-fields</a>
+    </li>
+    <li class="divider">
+    </li>
+<li class="dropdown-header">Validation</li>
+    <li>
+      <a href="../../articles/1001_mstm_ff/1001_mstm_ff.html">1001 MSTM far-field</a>
+    </li>
+    <li>
+      <a href="../../articles/1003_cda/1003_cda.html">1003 CDA dichroism</a>
+    </li>
+    <li class="divider">
+    </li>
+<li>
       <a href="../../articles/Indexing.html">Indexing conventions</a>
     </li>
   </ul>
@@ -176,23 +196,23 @@
 
       
 
-      </header><script src="107_WGM_files/header-attrs-2.11/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Balancing</h1>
+      <h1 data-toc-skip>Whispering gallery modes</h1>
             
-            <h4 data-toc-skip class="date">22 November, 2021</h4>
+            <h4 data-toc-skip class="date">28 January, 2022</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/master/vignettes/107_WGM/107_WGM.Rmd" class="external-link"><code>vignettes/107_WGM/107_WGM.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/107_WGM/107_WGM.Rmd" class="external-link"><code>vignettes/107_WGM/107_WGM.Rmd</code></a></small>
       <div class="hidden name"><code>107_WGM.Rmd</code></div>
 
     </div>
 
     
     
-<div id="objective" class="section level2">
-<h2 class="hasAnchor">
-<a href="#objective" class="anchor" aria-hidden="true"></a>Objective</h2>
+<div class="section level2">
+<h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
+</h2>
 <p>This example seeks to illustrates the effect of balancing as described by Stout et al. We compare the far-field spectra for a dimer of large silver spheres with vanishingly small gap, with and without the <code>DisableStoutBalancing</code> keyword. Interestingly, we’ve had no luck finding any difference, expect for situations where particles collide (but where the results aren’t expected to be valid in either case).</p>
 <p>This simulation uses the following <code>input</code> files</p>
 <pre><code>ModeAndScheme 2 1
@@ -217,7 +237,7 @@ margin:0em;
 <p><x3d width="200px" height="150px" class="x3d_scene"><scene><transform scale="2000 2000 2000" rotation="0 0 0 1e-05" translation="0 -2002.5 0"><shape><appearance><material ambientintensity="0.4" diffusecolor="0.3921569 0.5843137 0.9294118" shininess="0.16" specularcolor="0.5294118 0.8078431 0.9803922"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="2000 2000 2000" rotation="0 0 0 1e-05" translation="0 2002.5 0"><shape><appearance><material ambientintensity="0.4" diffusecolor="0.3921569 0.5843137 0.9294118" shininess="0.16" specularcolor="0.5294118 0.8078431 0.9803922"></material></appearance><sphere radius="1"></sphere></shape></transform><shape><indexedlineset colorpervertex="false" colorindex="0 1 2" coordindex="0 1 -1 0 2 -1 0 3 -1"><coordinate point="0 0 0 100 0 0 0 100 0 0 0 100"></coordinate><color color="1 0 0 0 1 0 0.2 0.2 1"></color></indexedlineset></shape><viewpoint centerofrotation="0 0 0" position="0 0 300" orientation="0 0 1 0"></viewpoint></scene></x3d></p>
 <p><img src="107_WGM_files/figure-html/oa-1.png" width="700"></p>
 <hr>
-<p><em>Last run: 22 November, 2021</em></p>
+<p><em>Last run: 28 January, 2022</em></p>
 </div>
   </div>
 
@@ -238,7 +258,7 @@ margin:0em;
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.9000.9000.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>

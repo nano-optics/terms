@@ -1,0 +1,19 @@
+ModeAndScheme 2 3
+Wavelength 380 820 100
+
+MultipoleCutoff 12
+Medium 1.0 
+
+ScattererCentredCrossSections
+
+OutputFormat HDF5 terms
+
+Scatterers 8
+Au   1.200000e+02  0.000000e+00 -175 50
+Au   8.485281e+01  8.485281e+01 -125 50
+Au   7.347881e-15  1.200000e+02  -75 50
+Au  -8.485281e+01  8.485281e+01  -25 50
+Au  -1.200000e+02  1.469576e-14   25 50
+Au  -8.485281e+01 -8.485281e+01   75 50
+Au  -2.204364e-14 -1.200000e+02  125 50
+Au   8.485281e+01 -8.485281e+01  175 50

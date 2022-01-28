@@ -51,7 +51,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">terms</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.9</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -96,7 +96,8 @@
       <a href="../articles/09_spectrum_near_field/09_spectrum_near_field.html">09 orientation-averaged near field spectrum</a>
     </li>
     <li class="divider">
-    <li class="dropdown-header">Advanced examples &amp; testing</li>
+    </li>
+<li class="dropdown-header">Advanced examples &amp; testing</li>
     <li>
       <a href="../articles/10_shell_absorption/10_shell_absorption.html">10 shell absorption</a>
     </li>
@@ -140,8 +141,27 @@
     <li>
       <a href="../articles/106_balancing/106_balancing.html">106 balancing</a>
     </li>
-    <li class="divider">
     <li>
+      <a href="../articles/109_individual_absorption/109_individual_absorption.html">109 individual absorption</a>
+    </li>
+    <li>
+      <a href="../articles/110_alpha_tensor/110_alpha_tensor.html">110 alpha tensor</a>
+    </li>
+    <li>
+      <a href="../articles/111_polarised_nf/111_polarised_nf.html">111 polarised OA near-fields</a>
+    </li>
+    <li class="divider">
+    </li>
+<li class="dropdown-header">Validation</li>
+    <li>
+      <a href="../articles/1001_mstm_ff/1001_mstm_ff.html">1001 MSTM far-field</a>
+    </li>
+    <li>
+      <a href="../articles/1003_cda/1003_cda.html">1003 CDA dichroism</a>
+    </li>
+    <li class="divider">
+    </li>
+<li>
       <a href="../articles/Indexing.html">Indexing conventions</a>
     </li>
   </ul>
@@ -176,13 +196,13 @@
 
       
 
-      </header><script src="Theory_files/header-attrs-2.11/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Brief theory</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/master/vignettes/Theory.Rmd" class="external-link"><code>vignettes/Theory.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/Theory.Rmd" class="external-link"><code>vignettes/Theory.Rmd</code></a></small>
       <div class="hidden name"><code>Theory.Rmd</code></div>
 
     </div>
@@ -194,9 +214,9 @@ MathJax.Hub.Config({
 TeX: { equationNumbers: { autoNumber: "AMS" } }
 });
 </script><p>We are interested in solving direct (as opposed to inverse) electromagnetic (EM) scattering problems with multiple spheroidal scatterers. Denoting the EM filed by <span class="math inline">\(\mathbf{E}(\mathbf{r},t) \in \mathbb{C}^{3}\)</span>, where <span class="math inline">\(\mathbf{r}\)</span> is a point in <span class="math inline">\(\mathbb{R}^{3}\)</span> and <span class="math inline">\(t\)</span> is time, we assume  time dependence so that <span class="math inline">\(e^{-i\omega t}\)</span> factors out and the time dimension can be treated completely independently. We also make certain assumptions about the medium and the scatterer material properties, for which the relevant equation to be satisfied is the homogeneous Helmholtz equation, as well as the appropriate boundary conditions (BCs).</p>
-<div id="homogeneous-helmholtz-equation" class="section level3">
-<h3 class="hasAnchor">
-<a href="#homogeneous-helmholtz-equation" class="anchor" aria-hidden="true"></a>Homogeneous Helmholtz equation</h3>
+<div class="section level3">
+<h3 id="homogeneous-helmholtz-equation">Homogeneous Helmholtz equation<a class="anchor" aria-label="anchor" href="#homogeneous-helmholtz-equation"></a>
+</h3>
 <p>All contributions to the total EM field (“radiation”), including the incident and the scattered fields, are represented by solutions of the vector Helmholtz equation <span class="math display">\[\begin{equation}\label{eqn:vectorHelmholtz}
 \nabla^{2}\mathbf{E}+ k^{2}\mathbf{E}= 0,
 \end{equation}\]</span> where <span class="math inline">\(\nabla^{2}\)</span> is the vector Laplacian, <span class="math inline">\(\mathbf{E}(\mathbf{r}):\mathbb{R}^{3} \mapsto \mathbb{C}^{3}\)</span> must be divergence-free (i.e.~<span class="math inline">\(\nabla\cdot\mathbf{E}= 0\)</span>), and <span class="math inline">\(k \in \mathbb{C}\)</span> is the  or , related to the  <span class="math inline">\(\mathbf{k} \in \mathbb{C}^3\)</span>  <span class="math display">\[\begin{equation}
@@ -206,9 +226,9 @@ k^{2}=\mathbf{k}\cdot\mathbf{k} = \frac{\omega^2}{c^2}\epsilon(\omega) = \frac{4
 \nabla^{2}E + k^{2}E = 0,
 \end{equation}\]</span> where <span class="math inline">\(E(\mathbf{r}):\mathbb{R}^{3} \mapsto \mathbb{C}\)</span> and <span class="math inline">\(\nabla^{2}\)</span> is the scalar Laplacian.</p>
 </div>
-<div id="scalar-and-vector-spherical-waves" class="section level3">
-<h3 class="hasAnchor">
-<a href="#scalar-and-vector-spherical-waves" class="anchor" aria-hidden="true"></a>Scalar and vector spherical waves</h3>
+<div class="section level3">
+<h3 id="scalar-and-vector-spherical-waves">Scalar and vector spherical waves<a class="anchor" aria-label="anchor" href="#scalar-and-vector-spherical-waves"></a>
+</h3>
 <p>In spherical polar coordinates, () is satisfied by linear combinations of <span class="math display">\[\begin{equation}
 \psi_{nm}^{(\zeta)}(k\mathbf{r}) = z_{n}^{(\zeta)}(kr) Y_{nm}(\theta,\phi),
 \end{equation}\]</span> where <span class="math inline">\(z_{n}^{(\zeta)}\)</span> are  Bessel functions of kind <span class="math inline">\(\zeta\in\{1,2,3,4\}\)</span> and order <span class="math inline">\(n=0\dots\infty\)</span>, and <span class="math inline">\(Y_{nm}\)</span> are the spherical harmonics with <span class="math inline">\(|m| \leq n\)</span>, defined using the Condon-Shortley phase. Hence, a general solution to () can be expressed as <span class="math display">\[\begin{equation} \label{eqn:ScalGenSol}
@@ -239,9 +259,9 @@ l(q,n,m; n_{\rm max}) &amp; = &amp; (q-1)p_{\rm max} + p(n,m) \nonumber \\
 \mathbf{E}+ \widetilde{\mathbf{E}}= \mathbf{W}\mathbf{c}+ \widetilde{\mathbf{W}}\widetilde{\mathbf{c}}.
 \end{equation}\]</span></p>
 </div>
-<div id="linear-superposition-approach-and-the-t-matrix-ansatz" class="section level3">
-<h3 class="hasAnchor">
-<a href="#linear-superposition-approach-and-the-t-matrix-ansatz" class="anchor" aria-hidden="true"></a>Linear superposition approach and the T-matrix ansatz</h3>
+<div class="section level3">
+<h3 id="linear-superposition-approach-and-the-t-matrix-ansatz">Linear superposition approach and the T-matrix ansatz<a class="anchor" aria-label="anchor" href="#linear-superposition-approach-and-the-t-matrix-ansatz"></a>
+</h3>
 <p>Outside a given scatterer, the total field <span class="math inline">\(\mathbf{E}_{\rm tot}(\bf r) = \widetilde{\mathbf{E}}_{\rm inc}({\bf r}) + \mathbf{E}_{\rm sca}({\bf r})\)</span> is partitioned into a known incident contribution <span class="math inline">\(\widetilde{\mathbf{E}}_{\rm inc}({\bf r})\)</span> and unknown scattered contribution <span class="math inline">\(\mathbf{E}_{\rm sca}({\bf r})\)</span>. Both partitions are expanded in terms of VSWs up to some multipole order <span class="math inline">\(n_{\rm max}\)</span>, <span class="math display">\[\begin{eqnarray}
 \widetilde{\mathbf{E}}_{\rm inc}({\bf r}) &amp; = &amp; E \widetilde{\mathbf{W}}(\mathbf{r}) \widetilde{\mathbf{c}}_{\rm inc}, \\
 \mathbf{E}_{\rm sca}({\bf r}) &amp; = &amp; E \mathbf{W}(\mathbf{r}) \mathbf{c}_{\rm sca},
@@ -249,13 +269,13 @@ l(q,n,m; n_{\rm max}) &amp; = &amp; (q-1)p_{\rm max} + p(n,m) \nonumber \\
 \mathbf{c}_{\rm sca} = \mathbf{T}\, \widetilde{\mathbf{c}}_{\rm inc},
 \end{equation}\]</span> where <span class="math inline">\(\mathbf{T}\)</span> is the so-called “transition” or “transfer” matrix (<span class="math inline">\(T\)</span>-matrix for short), which depends on the scatterer characteristics and is independent of <span class="math inline">\(\widetilde{\mathbf{c}}_{\rm inc}\)</span>. The <span class="math inline">\(T\)</span>-matrix elements are (?) determined by matching the BCs over the scatterer’s surface in a particular way, which is generally a non-trivial task. However, for a spherically symmetric, homogeneous scatterer centred at the origin, <span class="math inline">\(\mathbf{T}\)</span> is a diagonal matrix with the diagonal elements determined analytically by Mie theory. <span class="math inline">\(T\)</span>-matrices can be calculated numerically for spheroids, as well as more general, axially symmetric scatterers, and… For multiple scatterers, the collective <span class="math inline">\(T\)</span>-matrix can be built up iteratively from the individual one-body T-matrices.</p>
 </div>
-<div id="transformation-under-rotationtranslation-of-coordinates" class="section level2">
-<h2 class="hasAnchor">
-<a href="#transformation-under-rotationtranslation-of-coordinates" class="anchor" aria-hidden="true"></a>Transformation under rotation/translation of coordinates</h2>
+<div class="section level2">
+<h2 id="transformation-under-rotationtranslation-of-coordinates">Transformation under rotation/translation of coordinates<a class="anchor" aria-label="anchor" href="#transformation-under-rotationtranslation-of-coordinates"></a>
+</h2>
 <p>In multiple scattering problems it is often either necessary or simply more convenient to express the same (partial) field in terms of different basis-sets, mutually related by a translation and/or rotation of the coordinate system. This section is concerned with relations between VSW basis-sets or coefficients defined in different reference frames.</p>
-<div id="rotation" class="section level3">
-<h3 class="hasAnchor">
-<a href="#rotation" class="anchor" aria-hidden="true"></a>Rotation</h3>
+<div class="section level3">
+<h3 id="rotation">Rotation<a class="anchor" aria-label="anchor" href="#rotation"></a>
+</h3>
 <p>Let <span class="math inline">\((\theta_{1},\phi_{1})\)</span> and <span class="math inline">\((\theta_{2},\phi_{2})\)</span> be the spherical angles of the same vector <span class="math inline">\(\mathbf{r}\)</span> in coordinate systems <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span>, respectively, sharing the same origin. If coordinate system <span class="math inline">\(2\)</span> is obtained by rotating coordinate system <span class="math inline">\(1\)</span> through Euler angles <span class="math inline">\((\alpha,\beta,\gamma)\)</span>, here defined in the “<span class="math inline">\(zyz\)</span>” convention with <span class="math inline">\(0 \leq \alpha &lt; 2\pi\)</span>, <span class="math inline">\(0 \leq \beta \leq \pi\)</span>, and <span class="math inline">\(0 \leq \gamma &lt; 2\pi\)</span>, then <span class="math display">\[\begin{eqnarray} \label{eqn:rotTrans}
 \psi_{nm}(kr,\theta_{2},\phi_{2}) &amp; = &amp; \sum_{\mu=-n}^{n} \psi_{n\mu}(kr,\theta_{1},\phi_{1}) D_{\mu m}^{n}(\alpha,\beta,\gamma), \\
 \psi_{nm}(kr,\theta_{1},\phi_{1}) &amp; = &amp; \sum_{\mu=-n}^{n} \psi_{n\mu}(kr,\theta_{2},\phi_{2}) D_{\mu m}^{n}(-\gamma,-\beta,-\alpha),
@@ -275,9 +295,9 @@ R_{ll'}(\alpha,\beta,\gamma) = \delta_{qq'}\delta_{nn'} D_{m'm}^{n}(\alpha,\beta
 \end{eqnarray*}\]</span></p>
 <p>If the scatterer is rotationally symmetric about the local <span class="math inline">\(z\)</span>-axis, which is tilted by spherical polar angles <span class="math inline">\((\theta,\phi)\)</span> relative to the global <span class="math inline">\(z\)</span>-axis, then <span class="math inline">\(\alpha = \phi\)</span>, <span class="math inline">\(\beta = \theta\)</span>, and the value of <span class="math inline">\(\gamma\)</span> is irrelevant due to axial symmetry, so we can choose <span class="math inline">\(\gamma = 0\)</span> to have <span class="math inline">\(\mathbf{T}^{(G)} = \mathbf{R}(\phi,\theta,0) \mathbf{T}^{(L)} \mathbf{R}(0,-\theta,-\phi)\)</span>. See Sec.,5.2 of Ref.~ for more details.</p>
 </div>
-<div id="translation" class="section level3">
-<h3 class="hasAnchor">
-<a href="#translation" class="anchor" aria-hidden="true"></a>Translation</h3>
+<div class="section level3">
+<h3 id="translation">Translation<a class="anchor" aria-label="anchor" href="#translation"></a>
+</h3>
 <p>Consider a point <span class="math inline">\(P\)</span> with coordinates <span class="math inline">\(\mathbf{r}_1\)</span> in coordinate systems <span class="math inline">\(1\)</span>, with the origin at <span class="math inline">\(O_{1}\)</span>. If we choose another origin <span class="math inline">\(O_{2}\)</span> with coordinates <span class="math inline">\(\mathbf{r}_{12}\)</span> relative to <span class="math inline">\(O_{1}\)</span>, then the new coordinates of <span class="math inline">\(P\)</span> relative to <span class="math inline">\(O_{2}\)</span> will be <span class="math inline">\(\mathbf{r}_{2} = \mathbf{r}_{1} - \mathbf{r}_{12}\)</span>, as illustrated in Fig.~. The translation-addition theorem for vector spherical waves states that, in the limit <span class="math inline">\(n_{\rm max} \to \infty\)</span>, <span class="math display">\[\begin{eqnarray}
 \mathbf{W}(k\mathbf{r}_1) &amp; = &amp; \left\{
 \begin{array}{lcl}
@@ -300,9 +320,9 @@ R_{ll'}(\alpha,\beta,\gamma) = \delta_{qq'}\delta_{nn'} D_{m'm}^{n}(\alpha,\beta
 \widetilde{\mathbf{c}}^{(j)} &amp; = &amp; \widetilde{\mathbf{O}}^{(j,i)}\widetilde{\mathbf{c}}^{(i)}. \label{eqn:rVTACS3}
 \end{eqnarray}\]</span> Note that (), () and () are in a similar form to the rotation equation (). Also, it is worth reiterating that the above equations hold exactly only in the limit of <span class="math inline">\(n_{\rm max} \to \infty\)</span>.</p>
 </div>
-<div id="factorized-translation-involving-rotation" class="section level3">
-<h3 class="hasAnchor">
-<a href="#factorized-translation-involving-rotation" class="anchor" aria-hidden="true"></a>Factorized translation (involving rotation)</h3>
+<div class="section level3">
+<h3 id="factorized-translation-involving-rotation">Factorized translation (involving rotation)<a class="anchor" aria-label="anchor" href="#factorized-translation-involving-rotation"></a>
+</h3>
 <p>A general translation, from <span class="math inline">\(\mathbf{x}_{i}\)</span> to <span class="math inline">\(\mathbf{x}_{j}\)</span> by <span class="math inline">\(\mathbf{x}_{ji} = \mathbf{r}_{ij} = (r_{ij},\theta_{ij},\phi_{ij})\)</span>, can be separated into three steps:</p>
 <ol style="list-style-type: decimal">
 <li>Rotation of the local frame to align the <span class="math inline">\(z\)</span>-axis with the <span class="math inline">\(\mathbf{r}_{ij}\)</span> vector. In the <span class="math inline">\(zyz\)</span> convention, the appropriate Euler angles are <span class="math inline">\(\alpha= \phi_{ij}\)</span>, <span class="math inline">\(\beta = \theta_{ij}\)</span>, and <span class="math inline">\(\gamma = 0\)</span>.</li>
@@ -316,13 +336,13 @@ R_{ll'}(\alpha,\beta,\gamma) = \delta_{qq'}\delta_{nn'} D_{m'm}^{n}(\alpha,\beta
 <p>To conclude this section, we note that computing <span class="math inline">\(\mathbf{O}\)</span> in general is actually more costly than the combined effort of computing <span class="math inline">\(\mathbf{O}^{(z)}\)</span>, <span class="math inline">\(\mathbf{R}\)</span>,  <span class="math inline">\(\mathbf{R}^{-1}\)</span>. However, performing matrix multiplication of the three factors in the right sequence (<span class="math inline">\(\mathbf{R}\mathbf{O}^{(z)}\mathbf{R}^{-1}\)</span>) does not seem to produce the expected result (<span class="math inline">\(\mathbf{O}\)</span>), perhaps symptomatic of the numerical subtleties involved in the calculation of <span class="math inline">\(\mathbf{O}\)</span>.</p>
 </div>
 </div>
-<div id="multiple-scattering" class="section level2">
-<h2 class="hasAnchor">
-<a href="#multiple-scattering" class="anchor" aria-hidden="true"></a>Multiple scattering</h2>
+<div class="section level2">
+<h2 id="multiple-scattering">Multiple scattering<a class="anchor" aria-label="anchor" href="#multiple-scattering"></a>
+</h2>
 <p>This section was written after first reading two papers by Stout_et al_~ and then three earlier papers by Mackowski_et al_~.</p>
-<div id="formulating-the-problem" class="section level3">
-<h3 class="hasAnchor">
-<a href="#formulating-the-problem" class="anchor" aria-hidden="true"></a>Formulating the problem</h3>
+<div class="section level3">
+<h3 id="formulating-the-problem">Formulating the problem<a class="anchor" aria-label="anchor" href="#formulating-the-problem"></a>
+</h3>
 <p>For a cluster of <span class="math inline">\(N\)</span> individual scatterers (each of arbitrary shape), the collectively scattered field <span class="math inline">\(\mathbf{E}_{\rm sca}^{\rm cl}\)</span> can be separated into additive contributions from the individuals, i.e.: <span class="math display">\[\begin{equation}
 \mathbf{E}_{\rm sca}^{\rm cl} (\mathbf{r}) = \sum\limits_{j=1}^{N} \mathbf{E}_{\rm sca}^{(j)}(\mathbf{r}) = E \sum\limits_{j=1}^{N} \mathbf{W}({\bf r}_{j}) \mathbf{c}_{\rm sca}^{(j)} \label{eqn:scaCoeffsJ}
 \end{equation}\]</span> where <span class="math inline">\(\mathbf{r}_{j} = \mathbf{r}- \mathbf{x}_{j}\)</span>, <span class="math inline">\(\mathbf{x}_{j}\)</span> is the position of the <span class="math inline">\(j\)</span>th scatterer relative to a fixed origin <span class="math inline">\(\mathbf{x}_{0}\)</span>. It is important to stress that the VSW expansion for each <span class="math inline">\(\mathbf{E}_{\rm sca}^{(j)}(\mathbf{r})\)</span> in () is developed in terms of irregular waves centred at <span class="math inline">\(\mathbf{x}_{j}\)</span>, as indicated in the subscript of <span class="math inline">\(\mathbf{r}_{j}\)</span> and the superscript of the corresponding coefficients <span class="math inline">\(\mathbf{c}_{\rm sca}^{(j)}\)</span>. It is even more important to note that () does not actually prescribe how exactly the collective field is partitioned among the individuals.</p>
@@ -403,9 +423,9 @@ R_{ll'}(\alpha,\beta,\gamma) = \delta_{qq'}\delta_{nn'} D_{m'm}^{n}(\alpha,\beta
 \end{equation}\]</span> which is equivalent to Mackowski’s eqn.~4 in ref.~. In Mackowski’s earlier papers, however, beware that the same “fundamental” equation (eqn.~13 in ref.~ and eqn.~3 in ref.~) has a plus sign instead of the minus, which may be entirely due to a dubious minus sign featuring in the incident field expansion (see eqn.~4 in ref.~). The dubious minus sign is absent in eqn.~2 of the more recent ref.~, and the subsequent eqn.~4 matches our equation (). Phew!</p>
 <p>Note that (), (), and () are all in the form of a general matrix equation <span class="math inline">\(\mathbf{A}\mathbf{x}= \mathbf{y}\)</span>, which can be solved for the column vector <span class="math inline">\(\mathbf{x}\)</span> without necessarily inverting the matrix <span class="math inline">\(\mathbf{A}\)</span>. However, formal inversion facilitates definition of auxiliary <span class="math inline">\(T\)</span>-matrix constructions for multiple scatterers.</p>
 </div>
-<div id="t-matrix-constructions-for-n-scatterers" class="section level3">
-<h3 class="hasAnchor">
-<a href="#t-matrix-constructions-for-n-scatterers" class="anchor" aria-hidden="true"></a>T-matrix constructions for <span class="math inline">\(N\)</span> scatterers</h3>
+<div class="section level3">
+<h3 id="t-matrix-constructions-for-n-scatterers">T-matrix constructions for <span class="math inline">\(N\)</span> scatterers<a class="anchor" aria-label="anchor" href="#t-matrix-constructions-for-n-scatterers"></a>
+</h3>
 <p>The system of coupled matrix equations in () can be solved for <span class="math inline">\(\mathbf{f}^{(j)}\)</span> by inverting the matrix to obtain</p>
 <p><span class="math display">\[\begin{equation}\label{eqn:scatCentTMat}
 \mathbf{c}^{(j)}_{\rm sca} = \sum_{i=1}^{N} \mathbf{T}_{N}^{(j,i)} \widetilde{\mathbf{c}}^{(i)}_{\rm inc} = \underbrace{\left(\sum_{i=1}^{N} \mathbf{T}_{N}^{(j,i)} \widetilde{\mathbf{O}}^{(i,0)}\right)}_{\mathrm{Mackowski's}~ \mathbf{T}_{N}^{(j)}} \widetilde{\mathbf{c}}_{\rm inc} = \underbrace{\left(\sum_{i=1}^{N} \mathbf{T}_{N}^{(j,i)} \widetilde{\mathbf{O}}^{(i,j)}\right)}_{\mathrm{Stout's}~ \mathbf{T}_{N}^{(j)}} \widetilde{\mathbf{c}}^{(j)}_{\rm inc},
@@ -468,9 +488,9 @@ R_{ll'}(\alpha,\beta,\gamma) = \delta_{qq'}\delta_{nn'} D_{m'm}^{n}(\alpha,\beta
 \end{equation}\]</span></p>
 <p>which is equivalent to Mackowski’s “cluster-centred” T-matrix (see eqn.~19 in ref.~, eqn.~64 in ref.~, and eqn.~29 in ref.~). Again, it is worth reiterating that () is valid only outside of the cluster’s smallest circumscribing sphere centred at the common origin, and Mackowski explicitly acknowledges this fact in refs.~! I suspect this limitation is present in most other studies that utilise a collective T-matrix, such as ref.~</p>
 </div>
-<div id="calculation-of-optical-cross-sections-and-activity" class="section level3">
-<h3 class="hasAnchor">
-<a href="#calculation-of-optical-cross-sections-and-activity" class="anchor" aria-hidden="true"></a>Calculation of optical cross-sections and activity</h3>
+<div class="section level3">
+<h3 id="calculation-of-optical-cross-sections-and-activity">Calculation of optical cross-sections and activity<a class="anchor" aria-label="anchor" href="#calculation-of-optical-cross-sections-and-activity"></a>
+</h3>
 <p>The total energy transfer from an incident plane wave <span class="math inline">\(\mathbf{E}_{\rm inc}\)</span> into <span class="math inline">\(\mathbf{E}_{\rm sca}\)</span> and/or <span class="math inline">\(\mathbf{E}_{\rm int}\)</span> as a result of scattering can be quantified by the  cross-section, <span class="math inline">\(\sigma_{\rm ext}\)</span>, which in the current formalism can be calculated from the scatterer-centred coefficients, here for convenience denoted by <span class="math inline">\(\mathbf{f}^{(j)} = \mathbf{c}_{\rm sca}^{(j)}\)</span> and <span class="math inline">\(\mathbf{a}^{(j)} = \widetilde{\mathbf{c}}_{\rm inc}^{(j)}\)</span>, using</p>
 <p><span class="math display">\[\begin{equation} \label{eqn:sigExt}
 \sigma_{\rm ext} = -\frac{1}{k_{\rm med}^{2}} \Re \left\{ \sum_{j=1}^{N} \mathbf{a}^{(j)\dagger}\mathbf{f}^{(j)}\right\} = -\frac{1}{k_{\rm med}^{2}} \sum_{j=1}^{N}\sum_{q=1}^{2}\sum_{n=1}^{n_{\rm max}} \sum_{m=-n}^{n} \Re \left\{ a^{(j)*}_{qnm} f^{(j)}_{qnm} \right \} \equiv \sum_{j=1}^{N} \sigma_{\rm ext}^{(j)},
@@ -485,9 +505,9 @@ R_{ll'}(\alpha,\beta,\gamma) = \delta_{qq'}\delta_{nn'} D_{m'm}^{n}(\alpha,\beta
 \end{equation}\]</span> or</p>
 <p>Recall that <span class="math inline">\(\sigma_{\rm ext}\)</span>, <span class="math inline">\(\sigma_{\rm sca}\)</span>, and <span class="math inline">\(\sigma_{\rm abs}\)</span> are defined for a particular incident field direction. The corresponding orientationally averaged quantities are obtained by averaging over all possible orientations, producing <span class="math inline">\(\langle \sigma_{\rm ext}\rangle\)</span>, <span class="math inline">\(\langle \sigma_{\rm sca}\rangle\)</span> and <span class="math inline">\(\langle \sigma_{\rm abs}\rangle\)</span>.</p>
 </div>
-<div id="convergence-truncation-and-error-propagation" class="section level3">
-<h3 class="hasAnchor">
-<a href="#convergence-truncation-and-error-propagation" class="anchor" aria-hidden="true"></a>Convergence, truncation, and error propagation</h3>
+<div class="section level3">
+<h3 id="convergence-truncation-and-error-propagation">Convergence, truncation, and error propagation<a class="anchor" aria-label="anchor" href="#convergence-truncation-and-error-propagation"></a>
+</h3>
 <p>The <span class="math inline">\(T\)</span>-matrix formalism is founded on the premise that everything converges below a finite multipole order <span class="math inline">\(n_{\rm max} &lt; \infty\)</span>, i.e.~the field coefficients and <span class="math inline">\(T\)</span>-matrix elements become negligible for <span class="math inline">\(n &gt; n_{\rm max}\)</span>. Hence, while the formalism (including the translation-addition theorem for VSWs) is exact only in the impractical limit of <span class="math inline">\(n\to\infty\)</span>, sufficiently accurate numerical results can be obtained with finite vectors and matrices truncated above <span class="math inline">\(n_{\rm max}\)</span>. The question is: what is the appropriate choice of <span class="math inline">\(n_{\rm max}\)</span> for a given system and given numerical scheme? Should one choose just one value of <span class="math inline">\(n_{\rm max}\)</span>, or multiple values, each used at a different stage of the scheme? How exactly does the truncation error propagate from stage to stage? Answering these questions requires some numerical analysis and convergence testing…</p>
 <ul>
 <li>What is the most appropriate convergence criterion for the scatterer-centred one-body <span class="math inline">\(T\)</span>-matrices <span class="math inline">\(\mathbf{T}_{1}^{(i)}\)</span>, and when is convergence most problematic (i.e.~for the shortest wavelength in the given range, or the most “resonant” wavelength)?</li>
@@ -496,14 +516,14 @@ R_{ll'}(\alpha,\beta,\gamma) = \delta_{qq'}\delta_{nn'} D_{m'm}^{n}(\alpha,\beta
 </ul>
 </div>
 </div>
-<div id="solution-schemes" class="section level2">
-<h2 class="hasAnchor">
-<a href="#solution-schemes" class="anchor" aria-hidden="true"></a>Solution schemes</h2>
+<div class="section level2">
+<h2 id="solution-schemes">Solution schemes<a class="anchor" aria-label="anchor" href="#solution-schemes"></a>
+</h2>
 <p>To “solve” a multiple scattering problem can mean different things. Usually it means to determine the scattering coefficients <span class="math inline">\(\mathbf{c}^{(j)}_{\rm sca}\)</span> for a given individual scatterer properties (described by <span class="math inline">\(\mathbf{T}_{1}^{(j)}\)</span>) and an excitation field (described by <span class="math inline">\(\widetilde{\mathbf{c}}^{(j)}_{\rm inc}\)</span>) impinging from a particular direction. This kind of “solution” can be achieved by solving the linear system of equations in () for <span class="math inline">\(\mathbf{a}^{(j)}_{\rm sca}\)</span>  performing matrix inversion, thus producing a complete description of the scattered field for the given excitation. The linear system would have to be solved again (entirely from scratch) for a different excitation. Performing the matrix inversion to determine the <span class="math inline">\(N\)</span>-body T-matrices becomes worthwhile only when many impinging directions are to be considered, or when rotationally-averaged quantities are of primary interest.</p>
 <p>A brute force approach to solving the multiple scattering problem would be to construct the <span class="math inline">\(NL \times NL\)</span> matrix in equation () and then invert it to obtain the pairwise matrices <span class="math inline">\(\mathbf{T}^{(i,j)}\)</span>. However, this approach is computationally demanding. To help alleviate the cost of one large matrix inversion, Stout_et al_ proposed a recursive scheme where a smaller (<span class="math inline">\(L \times L\)</span>) matrix is inverted <span class="math inline">\(N-1\)</span> times.</p>
-<div id="stouts-recursive-scheme-with-matrix-balancing" class="section level3">
-<h3 class="hasAnchor">
-<a href="#stouts-recursive-scheme-with-matrix-balancing" class="anchor" aria-hidden="true"></a>Stout’s recursive scheme with matrix balancing</h3>
+<div class="section level3">
+<h3 id="stouts-recursive-scheme-with-matrix-balancing">Stout’s recursive scheme with matrix balancing<a class="anchor" aria-label="anchor" href="#stouts-recursive-scheme-with-matrix-balancing"></a>
+</h3>
 <p>In the recursive algorithm described by Stout_et al_, the elements of <span class="math inline">\(\mathbf{T}_{N}^{(j,i)}\)</span> are accumulated recursively from auxiliary subsystems, incrementally built up from one to <span class="math inline">\(N\)</span> particles. The recursive system is prescribed by the following four equation: <span class="math display">\[\begin{eqnarray}
 \mathbf{T}_{N}^{(N,N)} &amp; = &amp; \left[ \left[\mathbf{T}_{1}^{(N)}\right]^{-1} - \sum_{j=1}^{N-1} \mathbf{O}^{(N,j)} \left( \underline{ \sum_{i=1}^{N-1} \mathbf{T}_{N-1}^{(j,i)} \mathbf{O}^{(i,N)} } \right) \right]^{-1} \equiv \mathbf{S}^{-1}, \label{eqn:TNNN} \\
 \mathbf{T}_{N}^{(N,i)} &amp; = &amp; \mathbf{T}_{N}^{(N,N)} \left( \sum_{j=1}^{N-1} \mathbf{O}^{(N,j)} \mathbf{T}_{N-1}^{(j,i)} \right), \quad i\neq N,\\
@@ -525,9 +545,9 @@ R_{ll'}(\alpha,\beta,\gamma) = \delta_{qq'}\delta_{nn'} D_{m'm}^{n}(\alpha,\beta
 \mathbf{S}_{R}^{-1} =  \widetilde{\mathbf{D}}_{N}^{(N)} \left[ \left[\widetilde{\mathbf{D}}_{N}^{(N)}\right]^{-1} \mathbf{S}_{R} \widetilde{\mathbf{D}}_{N}^{(N)} \right]^{-1} \left[\widetilde{\mathbf{D}}_{N}^{(N)}\right]^{-1}  \equiv \widetilde{\mathbf{D}}_{N}^{(N)}  \widehat{\mathbf{S}}_{R}^{-1} \left[\widetilde{\mathbf{D}}_{N}^{(N)}\right]^{-1}.
 \end{eqnarray}\]</span> Here <span class="math inline">\(\mathbf{S}_{L}\)</span> is balanced like irregular VTACs (or the inverse of a <span class="math inline">\(T\)</span>-matrix) using only irregular weights, while <span class="math inline">\(\mathbf{S}_{R}\)</span> is balanced like a <span class="math inline">\(T\)</span>-matrix using only regular weights. In my experience, <span class="math inline">\(\widehat{\mathbf{S}}_{R}\)</span> is much better conditioned for inversion than <span class="math inline">\(\widehat{\mathbf{S}}\)</span>, and I haven’t compared with <span class="math inline">\(\widehat{\mathbf{S}}_{L}\)</span>.</p>
 </div>
-<div id="mackowski-and-mishchenkos-scheme" class="section level3">
-<h3 class="hasAnchor">
-<a href="#mackowski-and-mishchenkos-scheme" class="anchor" aria-hidden="true"></a>Mackowski and Mishchenko’s scheme</h3>
+<div class="section level3">
+<h3 id="mackowski-and-mishchenkos-scheme">Mackowski and Mishchenko’s scheme<a class="anchor" aria-label="anchor" href="#mackowski-and-mishchenkos-scheme"></a>
+</h3>
 <p>From the equations () and () it follows that <span class="math display">\[\begin{equation}
 \begin{bmatrix}
 \mathbf{I}&amp; \cdots &amp; - \mathbf{T}_{1}^{(1)} \mathbf{O}^{(1,N)} \\
@@ -590,7 +610,7 @@ R_{ll'}(\alpha,\beta,\gamma) = \delta_{qq'}\delta_{nn'} D_{m'm}^{n}(\alpha,\beta
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.9000.9000.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>

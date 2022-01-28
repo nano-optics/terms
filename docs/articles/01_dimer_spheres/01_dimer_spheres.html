@@ -51,7 +51,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">terms</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.9</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -96,7 +96,8 @@
       <a href="../../articles/09_spectrum_near_field/09_spectrum_near_field.html">09 orientation-averaged near field spectrum</a>
     </li>
     <li class="divider">
-    <li class="dropdown-header">Advanced examples &amp; testing</li>
+    </li>
+<li class="dropdown-header">Advanced examples &amp; testing</li>
     <li>
       <a href="../../articles/10_shell_absorption/10_shell_absorption.html">10 shell absorption</a>
     </li>
@@ -140,8 +141,27 @@
     <li>
       <a href="../../articles/106_balancing/106_balancing.html">106 balancing</a>
     </li>
-    <li class="divider">
     <li>
+      <a href="../../articles/109_individual_absorption/109_individual_absorption.html">109 individual absorption</a>
+    </li>
+    <li>
+      <a href="../../articles/110_alpha_tensor/110_alpha_tensor.html">110 alpha tensor</a>
+    </li>
+    <li>
+      <a href="../../articles/111_polarised_nf/111_polarised_nf.html">111 polarised OA near-fields</a>
+    </li>
+    <li class="divider">
+    </li>
+<li class="dropdown-header">Validation</li>
+    <li>
+      <a href="../../articles/1001_mstm_ff/1001_mstm_ff.html">1001 MSTM far-field</a>
+    </li>
+    <li>
+      <a href="../../articles/1003_cda/1003_cda.html">1003 CDA dichroism</a>
+    </li>
+    <li class="divider">
+    </li>
+<li>
       <a href="../../articles/Indexing.html">Indexing conventions</a>
     </li>
   </ul>
@@ -176,23 +196,23 @@
 
       
 
-      </header><script src="01_dimer_spheres_files/header-attrs-2.11/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Dimer of spheres</h1>
             
-            <h4 data-toc-skip class="date">22 November, 2021</h4>
+            <h4 data-toc-skip class="date">28 January, 2022</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/master/vignettes/01_dimer_spheres/01_dimer_spheres.Rmd" class="external-link"><code>vignettes/01_dimer_spheres/01_dimer_spheres.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/01_dimer_spheres/01_dimer_spheres.Rmd" class="external-link"><code>vignettes/01_dimer_spheres/01_dimer_spheres.Rmd</code></a></small>
       <div class="hidden name"><code>01_dimer_spheres.Rmd</code></div>
 
     </div>
 
     
     
-<div id="objective" class="section level2">
-<h2 class="hasAnchor">
-<a href="#objective" class="anchor" aria-hidden="true"></a>Objective</h2>
+<div class="section level2">
+<h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
+</h2>
 <p>This example illustrates on a very simple case the calculation of far-field spectra for absorption, scattering, and extinction. The structure consists of two silver spheres in water, and all parameters are kept to their default values.</p>
 <style>
 .x3d_scene {
@@ -308,54 +328,54 @@ Show output file (click to open)
   316.000000  6.90820500283441106E+02  4.60920287212480162E+02  1.87485051357418683E+02  3.85735947571601088E+01  3.61655086187722485E+00  2.16535269678322151E-01  8.25258176121758565E-03  2.23488723765209317E-04  4.75434229311276841E-06</code></pre>
 </details><p><br></p>
 </div>
-<div id="orientation-averaged-results" class="section level2">
-<h2 class="hasAnchor">
-<a href="#orientation-averaged-results" class="anchor" aria-hidden="true"></a>Orientation-averaged results</h2>
+<div class="section level2">
+<h2 id="orientation-averaged-results">Orientation-averaged results<a class="anchor" aria-label="anchor" href="#orientation-averaged-results"></a>
+</h2>
 <p>The following files contain orientation-averaged cross-sections,</p>
 <pre><code>[1] "cdAbsOA.dat" "csAbsOA.dat" "cdExtOA.dat" "csExtOA.dat" "cdScaOA.dat"
 [6] "csScaOA.dat"</code></pre>
 <pre><code>Rows: 8,127
 Columns: 5
-$ wavelength &lt;dbl&gt; 300, 302, 304, 306, 308, 310, 312, 314, 316, 318, 320, 322,…
+$ wavelength &lt;dbl&gt; 300, 300, 300, 300, 300, 300, 300, 300, 300, 302, 302, 302,…
 $ crosstype  &lt;chr&gt; "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Ab…
-$ variable   &lt;fct&gt; total, total, total, total, total, total, total, total, tot…
-$ dichroism  &lt;dbl&gt; -2.788109e-13, -6.692990e-14, 5.071837e-14, -4.122691e-13, …
-$ average    &lt;dbl&gt; 503.6026, 522.6856, 542.8167, 564.0764, 586.5543, 610.3497,…</code></pre>
+$ variable   &lt;chr&gt; "total", "I1", "I2", "I3", "I4", "I5", "I6", "I7", "I8", "t…
+$ dichroism  &lt;dbl&gt; -2.788109e-13, -7.023598e-13, -1.404720e-13, 5.232580e-13, …
+$ average    &lt;dbl&gt; 5.036026e+02, 3.312614e+02, 1.401504e+02, 2.917210e+01, 2.8…</code></pre>
 <p><img src="01_dimer_spheres_files/figure-html/oa-1.png" width="700"></p>
 <p>Note that for this achiral dimer, there is no circular dichroism.</p>
 </div>
-<div id="fixed-orientation-results" class="section level2">
-<h2 class="hasAnchor">
-<a href="#fixed-orientation-results" class="anchor" aria-hidden="true"></a>Fixed-orientation results</h2>
+<div class="section level2">
+<h2 id="fixed-orientation-results">Fixed-orientation results<a class="anchor" aria-label="anchor" href="#fixed-orientation-results"></a>
+</h2>
 <p>The following files contain fixed-orientation cross-sections for X and Y linear polarisations,</p>
 <pre><code>[1] "csAbs1X.dat" "csAbs2Y.dat" "csExt1X.dat" "csExt2Y.dat" "csSca1X.dat"
 [6] "csSca2Y.dat"</code></pre>
 <pre><code>Rows: 8,127
 Columns: 7
-$ wavelength    &lt;dbl&gt; 300, 302, 304, 306, 308, 310, 312, 314, 316, 318, 320, 3…
+$ wavelength    &lt;dbl&gt; 300, 300, 300, 300, 300, 300, 300, 300, 300, 302, 302, 3…
 $ crosstype     &lt;chr&gt; "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", …
-$ variable      &lt;fct&gt; total, total, total, total, total, total, total, total, …
-$ polarisation1 &lt;dbl&gt; 596.5747, 621.0761, 646.9319, 674.2451, 703.1294, 733.71…
-$ polarisation2 &lt;dbl&gt; 483.7960, 500.0436, 517.0867, 534.9864, 553.8107, 573.63…
-$ dichroism     &lt;dbl&gt; 112.7787, 121.0324, 129.8452, 139.2587, 149.3187, 160.07…
-$ average       &lt;dbl&gt; 540.1854, 560.5598, 582.0093, 604.6157, 628.4701, 653.67…</code></pre>
+$ variable      &lt;chr&gt; "total", "I1", "I2", "I3", "I4", "I5", "I6", "I7", "I8",…
+$ polarisation1 &lt;dbl&gt; 596.574714643, -53.660165036, 547.831082887, 65.02418340…
+$ polarisation2 &lt;dbl&gt; 4.837960e+02, 5.818915e+01, 4.955256e+01, 3.436971e+02, …
+$ dichroism     &lt;dbl&gt; 1.127787e+02, -1.118493e+02, 4.982785e+02, -2.786729e+02…
+$ average       &lt;dbl&gt; 540.185355185, 2.264491480, 298.691822973, 204.360654314…</code></pre>
 <p><img src="01_dimer_spheres_files/figure-html/fol-1.png" width="700"></p>
 <p>The following files contain fixed-orientation cross-sections for L and R circular polarisations,</p>
 <pre><code>[1] "csAbs3R.dat" "csAbs4L.dat" "csExt3R.dat" "csExt4L.dat" "csSca3R.dat"
 [6] "csSca4L.dat"</code></pre>
 <pre><code>Rows: 8,127
 Columns: 7
-$ wavelength    &lt;dbl&gt; 300, 302, 304, 306, 308, 310, 312, 314, 316, 318, 320, 3…
+$ wavelength    &lt;dbl&gt; 300, 300, 300, 300, 300, 300, 300, 300, 300, 302, 302, 3…
 $ crosstype     &lt;chr&gt; "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", …
-$ variable      &lt;fct&gt; total, total, total, total, total, total, total, total, …
-$ polarisation1 &lt;dbl&gt; 540.1854, 560.5598, 582.0093, 604.6157, 628.4701, 653.67…
-$ polarisation2 &lt;dbl&gt; 540.1854, 560.5598, 582.0093, 604.6157, 628.4701, 653.67…
-$ dichroism     &lt;dbl&gt; -9.890755e-12, -8.299139e-12, -1.182343e-11, -1.239187e-…
-$ average       &lt;dbl&gt; 540.1854, 560.5598, 582.0093, 604.6157, 628.4701, 653.67…</code></pre>
+$ variable      &lt;chr&gt; "total", "I1", "I2", "I3", "I4", "I5", "I6", "I7", "I8",…
+$ polarisation1 &lt;dbl&gt; 540.185355185, 2.264491480, 298.691822973, 204.360654314…
+$ polarisation2 &lt;dbl&gt; 540.185355185, 2.264491480, 298.691822973, 204.360654314…
+$ dichroism     &lt;dbl&gt; -9.890755e-12, 1.136868e-11, -1.699618e-11, -6.536993e-1…
+$ average       &lt;dbl&gt; 540.185355185, 2.264491480, 298.691822973, 204.360654314…</code></pre>
 <p><img src="01_dimer_spheres_files/figure-html/foc-1.png" width="700"></p>
 <p>Note that for this configuration there is no circular dichroism, even with fixed incidence.</p>
 <hr>
-<p><em>Last run: 22 November, 2021</em></p>
+<p><em>Last run: 28 January, 2022</em></p>
 </div>
   </div>
 
@@ -376,7 +396,7 @@ $ average       &lt;dbl&gt; 540.1854, 560.5598, 582.0093, 604.6157, 628.4701, 65
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.9000.9000.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>

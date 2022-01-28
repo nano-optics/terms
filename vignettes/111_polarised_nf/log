@@ -1,0 +1,74 @@
+readInputFile> Parsing file input_L
+
+readInputFile> Detected keyword ModeAndScheme
+               mode=1 => mapNF at diff. lambda and diff. Inc. and Sca_angles
+               scheme=2 => Seek T^(ji) using Stout's iterative scheme
+readInputFile> Detected keyword Wavelength
+               Wavelength (nm):   600.0000
+readInputFile> Detected keyword MultipoleCutoff
+               Supplied ncut(1)=  3
+               Setting ncut(2)= ncut(1)
+               Setting ncut(3)=  -8
+readInputFile> Detected keyword Medium
+               Constant host epsilon=  1.7689E+0
+readInputFile> Detected keyword OutputFormat
+               OutputFormat=HDF5
+               All output files are stored in file "map_L.h5                                                        "
+readInputFile> Detected keyword SpacePoints
+               i,lb_i,ub_i,npts_i= 1 -4.00000000000000000E+01  1.00000000000000000E+02  100
+               i,lb_i,ub_i,npts_i= 2 -4.00000000000000000E+01  1.00000000000000000E+02  100
+               i,lb_i,ub_i,npts_i= 3  0.00000000000000000E+00  0.00000000000000000E+00    0
+               nGridPoints=     10201
+readInputFile> Detected keyword MapOaQuantity
+ Words=p
+readInputFile> Detected keyword Incidence
+readInputFile> Euler angle alpha [0,2Pi) value=   0.00000000
+readInputFile> Euler angle beta  [0,Pi]  value=   0.00000000
+readInputFile> Euler angle gamma [0,2Pi) value=   0.00000000
+readInputFile> L-circular polarization
+               Incident Euler angles and weights:
+                  alpha        beta        gamma        weight
+               0.00000000   0.00000000   0.00000000   1.00000000
+
+readInputFile> Detected keyword Scatterers
+ with nscat=    4
+
+readInputFile> Descriptor(s) and circumscribing sphere(s):
+
+ scatID String                  x          y          z         R_0
+    1   Au                  0.0000E+0  6.5000E+1  0.0000E+0  3.0000E+1
+    2   Au                  0.0000E+0  0.0000E+0  0.0000E+0  3.0000E+1
+    3   Au                  6.5000E+1  0.0000E+0  0.0000E+0  3.0000E+1
+    4   Au                  6.5000E+1  0.0000E+0  6.5000E+1  3.0000E+1
+
+readInputFile> Individual geometry characteristic(s):
+
+ scatID Details
+    1   Mie with ncoats= 0
+    2   Mie with ncoats= 0
+    3   Mie with ncoats= 0
+    4   Mie with ncoats= 0
+
+readInputFile> Dielectric functions for (coated) Mie scatterer(s):
+
+ scatID volID Label
+    1     0     Au
+    2     0     Au
+    3     0     Au
+    4     0     Au
+
+readInputFile> Finished parsing  9 keywords
+
+
+mapNF> ===== Wavelength:   600.00 (nm) ======================
+
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+calcOaNF> Done!
+
+mapNF> Done!
+
+termsProgram> Program run time (CPU & real in s):  6.266E+00  6.272E+00

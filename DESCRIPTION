@@ -1,18 +1,18 @@
 Package: terms
-Version: 0.9.9
+Version: 1.0.0
 Authors@R: c(person("Dmitri", "Schebarchov",
     email = "dmitri.schebarchov@gmail.com",
-    role = c("aut", "cre"),
+    role = c("aut"),
     comment = c(ORCID = "0000-0002-8385-7186")),
     person("Atefeh", "Fazel-Najafabadi",
-    role = c("aut", "ctb"),
+    role = c("aut"),
     comment = c(ORCID = "0000-0001-9040-2596")), 
     person("Eric", "Le Ru",
-    role = c("aut", "ctb"),
+    role = c("aut"),
     comment = c(ORCID = "0000-0002-3052-9947")),
     person("Baptiste", "Auguié",
     email = "baptiste.auguie@vuw.ac.nz",
-    role = c("aut", "ctb"),
+    role = c("aut", "cre"),
     comment = c(ORCID = "0000-0002-2749-5715")))
 License: Mozilla Public License Version 2.0
 Title: T-matrix for Electromagnetic Radiation with Multiple Scatterers
@@ -23,6 +23,6 @@ Type: Package
 VignetteBuilder: knitr
 Encoding: UTF-8
 RoxygenNote: 7.1.2
-Depends: R (>= 3.5.0), rhdf5, tidyr, purrr, glue, reshape2, dplyr, tibble
-Suggests: DT, rgl, cubs, ggplot2, gridExtra, egg, ggforce
+Depends: R (>= 3.5.0), rhdf5, tidyr, purrr, glue, dplyr, tibble, ggplot2
+Suggests: cubs, patchwork, egg, ggforce, DT, rgl
 

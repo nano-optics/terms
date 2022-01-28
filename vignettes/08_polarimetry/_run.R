@@ -3,7 +3,7 @@ setwd(here('vignettes/08_polarimetry'))
 
 ## ----load----
 library(terms)
-theme_set(egg::theme_article())
+theme_set(theme_grey())
 
 ## ----run----
 system("../../build/terms input > log")

@@ -51,7 +51,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">terms</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.9</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -96,7 +96,8 @@
       <a href="../../articles/09_spectrum_near_field/09_spectrum_near_field.html">09 orientation-averaged near field spectrum</a>
     </li>
     <li class="divider">
-    <li class="dropdown-header">Advanced examples &amp; testing</li>
+    </li>
+<li class="dropdown-header">Advanced examples &amp; testing</li>
     <li>
       <a href="../../articles/10_shell_absorption/10_shell_absorption.html">10 shell absorption</a>
     </li>
@@ -140,8 +141,27 @@
     <li>
       <a href="../../articles/106_balancing/106_balancing.html">106 balancing</a>
     </li>
-    <li class="divider">
     <li>
+      <a href="../../articles/109_individual_absorption/109_individual_absorption.html">109 individual absorption</a>
+    </li>
+    <li>
+      <a href="../../articles/110_alpha_tensor/110_alpha_tensor.html">110 alpha tensor</a>
+    </li>
+    <li>
+      <a href="../../articles/111_polarised_nf/111_polarised_nf.html">111 polarised OA near-fields</a>
+    </li>
+    <li class="divider">
+    </li>
+<li class="dropdown-header">Validation</li>
+    <li>
+      <a href="../../articles/1001_mstm_ff/1001_mstm_ff.html">1001 MSTM far-field</a>
+    </li>
+    <li>
+      <a href="../../articles/1003_cda/1003_cda.html">1003 CDA dichroism</a>
+    </li>
+    <li class="divider">
+    </li>
+<li>
       <a href="../../articles/Indexing.html">Indexing conventions</a>
     </li>
   </ul>
@@ -176,23 +196,23 @@
 
       
 
-      </header><script src="102_comparison_schemes_files/header-attrs-2.11/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Comparison of schemes</h1>
             
-            <h4 data-toc-skip class="date">22 November, 2021</h4>
+            <h4 data-toc-skip class="date">28 January, 2022</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/master/vignettes/102_comparison_schemes/102_comparison_schemes.Rmd" class="external-link"><code>vignettes/102_comparison_schemes/102_comparison_schemes.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/102_comparison_schemes/102_comparison_schemes.Rmd" class="external-link"><code>vignettes/102_comparison_schemes/102_comparison_schemes.Rmd</code></a></small>
       <div class="hidden name"><code>102_comparison_schemes.Rmd</code></div>
 
     </div>
 
     
     
-<div id="objective" class="section level2">
-<h2 class="hasAnchor">
-<a href="#objective" class="anchor" aria-hidden="true"></a>Objective</h2>
+<div class="section level2">
+<h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
+</h2>
 <p>This example checks for consistency of the four calculation schemes for the calculation of far-field cross-sections. The structure consists of four gold spheres in water arranged in a helix.</p>
 <style>
 .x3d_scene {
@@ -215,37 +235,37 @@ Au  30.9017 95.10565  10 20.0
 Au -30.9017 95.10565  30 20.0</code></pre>
 <p>where <code>{scheme}</code> is replaced by <code>0,1,2,3</code> in each separate run. The results are stored in separate output folders and collated for comparison. Note that <code>Scheme=0</code> does not calculate orientation-averaged quantities.</p>
 </div>
-<div id="orientation-averaged-results" class="section level2">
-<h2 class="hasAnchor">
-<a href="#orientation-averaged-results" class="anchor" aria-hidden="true"></a>Orientation-averaged results</h2>
+<div class="section level2">
+<h2 id="orientation-averaged-results">Orientation-averaged results<a class="anchor" aria-label="anchor" href="#orientation-averaged-results"></a>
+</h2>
 <p>We first check that orientation-averaged cross-sections are consistent for Schemes 1 to 3,</p>
 <pre><code>Rows: 24,381
 Columns: 6
 $ scheme     &lt;chr&gt; "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1",…
-$ wavelength &lt;dbl&gt; 300, 302, 304, 306, 308, 310, 312, 314, 316, 318, 320, 322,…
+$ wavelength &lt;dbl&gt; 300, 300, 300, 300, 300, 300, 300, 300, 300, 302, 302, 302,…
 $ crosstype  &lt;chr&gt; "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Ab…
-$ variable   &lt;fct&gt; total, total, total, total, total, total, total, total, tot…
-$ dichroism  &lt;dbl&gt; 0.18230396, 0.17315888, 0.16454024, 0.15647536, 0.14897635,…
-$ average    &lt;dbl&gt; 8400.046, 8339.415, 8280.613, 8223.789, 8169.071, 8116.567,…</code></pre>
+$ variable   &lt;chr&gt; "total", "I1", "I2", "I3", "I4", "I5", "I6", "I7", "I8", "t…
+$ dichroism  &lt;dbl&gt; 1.823040e-01, 3.157315e-01, -2.057442e-01, 3.855385e-02, 3.…
+$ average    &lt;dbl&gt; 8.400046e+03, 2.048282e+03, 3.534238e+03, 2.132195e+03, 5.8…</code></pre>
 <p><img src="102_comparison_schemes_files/figure-html/oa-1.png" width="700"></p>
 </div>
-<div id="fixed-orientation-results" class="section level2">
-<h2 class="hasAnchor">
-<a href="#fixed-orientation-results" class="anchor" aria-hidden="true"></a>Fixed-orientation results</h2>
+<div class="section level2">
+<h2 id="fixed-orientation-results">Fixed-orientation results<a class="anchor" aria-label="anchor" href="#fixed-orientation-results"></a>
+</h2>
 <p>Similarly, we check the linear polarisation cross-sections at fixed orientation,</p>
 <pre><code>Rows: 32,508
 Columns: 8
 $ scheme        &lt;chr&gt; "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "…
-$ wavelength    &lt;dbl&gt; 300, 302, 304, 306, 308, 310, 312, 314, 316, 318, 320, 3…
+$ wavelength    &lt;dbl&gt; 300, 300, 300, 300, 300, 300, 300, 300, 300, 302, 302, 3…
 $ crosstype     &lt;chr&gt; "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", …
-$ variable      &lt;fct&gt; total, total, total, total, total, total, total, total, …
-$ polarisation1 &lt;dbl&gt; 8064.383, 8015.337, 7967.720, 7921.665, 7877.290, 7834.6…
-$ polarisation2 &lt;dbl&gt; 7979.055, 7926.552, 7875.764, 7826.802, 7779.760, 7734.7…
-$ dichroism     &lt;dbl&gt; 85.32789, 88.78482, 91.95571, 94.86317, 97.52956, 99.976…
-$ average       &lt;dbl&gt; 8021.719, 7970.944, 7921.742, 7874.233, 7828.525, 7784.7…</code></pre>
+$ variable      &lt;chr&gt; "total", "I1", "I2", "I3", "I4", "I5", "I6", "I7", "I8",…
+$ polarisation1 &lt;dbl&gt; 8064.382572, 887.907883, 3655.980635, 1796.189835, 1302.…
+$ polarisation2 &lt;dbl&gt; 7979.054678, 1893.579424, 1601.175597, 3198.189754, 713.…
+$ dichroism     &lt;dbl&gt; 85.327894, -1005.671541, 2054.805038, -1401.999920, 588.…
+$ average       &lt;dbl&gt; 8021.718625, 1390.743653, 2628.578116, 2497.189795, 1007…</code></pre>
 <p><img src="102_comparison_schemes_files/figure-html/fo-1.png" width="700"></p>
 <hr>
-<p><em>Last run: 22 November, 2021</em></p>
+<p><em>Last run: 28 January, 2022</em></p>
 </div>
   </div>
 
@@ -266,7 +286,7 @@ $ average       &lt;dbl&gt; 8021.719, 7970.944, 7921.742, 7874.233, 7828.525, 77
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.9000.9000.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>

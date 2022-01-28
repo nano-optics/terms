@@ -1,7 +1,7 @@
 setwd(here::here('vignettes/06_dielectric_function/'))
 ## ----load----
 library(terms)
-theme_set(egg::theme_article())
+theme_set(theme_grey())
 
 ## ----run----
 system("../../build/terms input1 > log1")

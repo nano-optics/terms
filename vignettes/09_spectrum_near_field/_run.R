@@ -3,7 +3,7 @@ setwd(here('vignettes/09_spectrum_near_field'))
 
 ## ----load----
 library(terms)
-theme_set(egg::theme_article())
+theme_set(theme_grey())
 
 ## ----run----
 system("../../build/terms input > log")

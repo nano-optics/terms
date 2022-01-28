@@ -1,0 +1,17 @@
+ModeAndScheme 1 2
+Wavelength 600
+MultipoleCutoff 3
+Medium 1.7689
+
+OutputFormat HDF5 map_polarised
+
+SpacePoints -40 100 100 -40 100 100 0 0 0 0 0 0 
+MapOaQuantity polarised
+Incidence 0 0 0 1 # both
+
+Scatterers 4
+Au 0 65 0 30
+Au 0 0 0 30
+Au 65 0 0 30
+Au 65 0 65 30
+

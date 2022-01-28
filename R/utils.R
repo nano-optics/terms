@@ -1,3 +1,13 @@
+##' @noRd
+#' @export
+export_cubature <- function(q = cubs::cubs(N = 10, cubature = 'lebedev'), out=''){
+  
+  cat(nrow(q),'\n',file=out)
+  write.table(format(cbind(q[,1:2], 0, q[,3]), digits = 15), file = out, quote=FALSE,
+              row.names = FALSE, col.names = FALSE, append = TRUE)
+  
+}
+
 
 ##' @noRd
 #' @export

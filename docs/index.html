@@ -51,7 +51,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">terms</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.9</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -96,7 +96,8 @@
       <a href="articles/09_spectrum_near_field/09_spectrum_near_field.html">09 orientation-averaged near field spectrum</a>
     </li>
     <li class="divider">
-    <li class="dropdown-header">Advanced examples &amp; testing</li>
+    </li>
+<li class="dropdown-header">Advanced examples &amp; testing</li>
     <li>
       <a href="articles/10_shell_absorption/10_shell_absorption.html">10 shell absorption</a>
     </li>
@@ -140,8 +141,27 @@
     <li>
       <a href="articles/106_balancing/106_balancing.html">106 balancing</a>
     </li>
-    <li class="divider">
     <li>
+      <a href="articles/109_individual_absorption/109_individual_absorption.html">109 individual absorption</a>
+    </li>
+    <li>
+      <a href="articles/110_alpha_tensor/110_alpha_tensor.html">110 alpha tensor</a>
+    </li>
+    <li>
+      <a href="articles/111_polarised_nf/111_polarised_nf.html">111 polarised OA near-fields</a>
+    </li>
+    <li class="divider">
+    </li>
+<li class="dropdown-header">Validation</li>
+    <li>
+      <a href="articles/1001_mstm_ff/1001_mstm_ff.html">1001 MSTM far-field</a>
+    </li>
+    <li>
+      <a href="articles/1003_cda/1003_cda.html">1003 CDA dichroism</a>
+    </li>
+    <li class="divider">
+    </li>
+<li>
       <a href="articles/Indexing.html">Indexing conventions</a>
     </li>
   </ul>
@@ -161,7 +181,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/nano-optics/terms/">
+  <a href="https://github.com/nano-optics/terms/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -178,23 +198,22 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="terms-" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#terms-" class="anchor" aria-hidden="true"></a>TERMS <img src="reference/figures/logo.png" width="120" align="right">
+<div class="section level1">
+<div class="page-header"><h1 id="terms-">TERMS <img src="reference/figures/logo.png" width="120" align="right"><a class="anchor" aria-label="anchor" href="#terms-"></a>
 </h1></div>
 <p>TERMS stands for <strong>T</strong>-matrix for <strong>E</strong>lectromagnetic <strong>R</strong>adiation with <strong>M</strong>ultiple <strong>S</strong>catterers — it is a Fortran program to simulate the near-field and far-field optical properties of collections of particles. TERMS solves rigorously the Maxwell equations via the superposition <em>T</em>-matrix method, where incident and scattered fields are decomposed into a basis of multipolar electric and magnetic spherical waves.</p>
 <p>In a multiple-scattering problem the net field exciting a given particle is composed of the incident field plus the scattering contribution from neighbouring particles, restulting in a coupled system of equations to be solved for the total fields. TERMS implements several algorithms to describe the self-consistent electromagnetic interaction between multiple scatterers, and from there compute optical properties such as absorption, scattering, extinction, circular dichroism, as well as near-field intensities and the local degree of optical chirality.</p>
 <p>By describing the incident and scattered fields in a basis of spherical waves the <em>T</em>-matrix framework lends itself to analytical formulas for orientation-averaged quantities such as far-field cross-sections and near-field intensities, greatly reducing the computational time needed to simulate particles and systems of particles in random orientation.</p>
-<div id="features" class="section level3">
-<h3 class="hasAnchor">
-<a href="#features" class="anchor" aria-hidden="true"></a>Features</h3>
+<div class="section level3">
+<h3 id="features">Features<a class="anchor" aria-label="anchor" href="#features"></a>
+</h3>
 <p>The possible computations are divided into three main modes:</p>
 <ul>
 <li>Far-field quantities (absorption, scattering, extinction, circular dichroism) for multiple wavelengths and angles of incidence, as well as orientation-averages</li>
 <li>Near-field calculations for multiple wavelengths and incident angles, also computing the local degree of chirality, as well as orientation-averages</li>
 <li>Stokes parameters and differential scattering cross-sections for multiple incidence or scattering angles</li>
 </ul>
-<p>The computational cost scales with the size of the linear system, proportional to the number of particles <span class="math inline"><em>N</em><sub>p</sub></span>, and to the square of the maximum multipolar order <span class="math inline"><em>N</em><sub>max</sub></span>. On a typical PC we may treat up to <span class="math inline"> ∼ 500</span> particles with <span class="math inline"><em>N</em><sub>max</sub> = 1</span>, and a dimer with <span class="math inline"><em>N</em><sub>max</sub></span> up to <span class="math inline"> ∼ 60</span>.</p>
+<p>The computational cost scales with the size of the linear system, proportional to the number of particles <em>N</em><sub>p</sub>, and to the square of the maximum multipolar order <em>N</em><sub>max</sub>. On a typical PC we may treat up to  ∼ 500 particles with <em>N</em><sub>max</sub> = 1, and a dimer with <em>N</em><sub>max</sub> up to  ∼ 60.</p>
 <p>Notable features of TERMS include:</p>
 <ul>
 <li>Incident plane waves along arbitrary directions, with linear or circular polarisation</li>
@@ -202,8 +221,7 @@
 <li>Built-in dielectric functions for common materials such as Au, Ag, Al, Cr, Pt, Pd, Si, and Water, or from tabulated values</li>
 <li>Per-layer absorption in layered spheres</li>
 <li>Orientation-averaging of far-field cross-sections, as well as linear and circular dichroism</li>
-<li>Near-field maps of electric and magnetic field components, <span class="math inline">|<strong>E</strong>|<sup>2</sup></span>, <span class="math inline">|<strong>E</strong>|<sup>4</sup></span>, <span class="math inline">𝒞 ∝ ℑ(<strong>E</strong><sup>*</sup> ⋅ <strong>B</strong>)</span>
-</li>
+<li>Near-field maps of electric and magnetic field components, |<strong>E</strong>|<sup>2</sup>, |<strong>E</strong>|<sup>4</sup>, 𝒞 ∝ ℑ(<strong>E</strong><sup>*</sup> ⋅ <strong>B</strong>)</li>
 <li>Calculation of the global cluster <em>T</em>-matrix</li>
 <li>“Masking” of specific multipolar orders</li>
 <li>Calculation of Stokes parameters, phase matrix, differential scattering</li>
@@ -211,9 +229,9 @@
 <li>Possible compilation in quad-precision</li>
 </ul>
 </div>
-<div id="system-requirements" class="section level3">
-<h3 class="hasAnchor">
-<a href="#system-requirements" class="anchor" aria-hidden="true"></a>System requirements</h3>
+<div class="section level3">
+<h3 id="system-requirements">System requirements<a class="anchor" aria-label="anchor" href="#system-requirements"></a>
+</h3>
 <ul>
 <li>Fortran 90 compiler</li>
 <li>Cmake</li>
@@ -223,26 +241,64 @@
 <p>The electromagnetic field is expanded in the basis of vector spherical waves, with the Bessel/Hankel functions computed using <a href="http://www.netlib.org/toms-2014-06-10/644" class="external-link">TOMS644</a> library (source included in <strong>TERMS</strong>). Determining the collective scattering amounts to either solving or inverting a large linear system, which is done using <a href="http://www.netlib.org/lapack/" class="external-link">LAPACK</a>. All the relevant LAPACK routines are included in <strong>TERMS</strong>, but it is recommended to link with your system installed BLAS/LAPACK at compilation stage, because it can enable multi-threading during runtime.<br>
 Results are output in plain text files, or, alternatively, in <code>HDF5</code> data format, which requires suitable <code>hdf5</code> libraries to be available on your system.</p>
 </div>
-<div id="compilation" class="section level3">
-<h3 class="hasAnchor">
-<a href="#compilation" class="anchor" aria-hidden="true"></a>Compilation</h3>
+<div class="section level3">
+<h3 id="compilation">Compilation<a class="anchor" aria-label="anchor" href="#compilation"></a>
+</h3>
 <p>We recommend using the cross platform compilation tool <a href="https://cmake.org/" class="external-link">cmake</a>, to resolve all dependencies for your system. From within the <code>build/</code> directory, type</p>
-<pre><code>&gt; cmake ..
-&gt; make</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> cmake ..</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> make</span></code></pre></div>
 <p>to produce the executable <code>terms</code>. Note: if Cmake doesn’t find hdf5 (or another library path) by default, you may need to export it explicitly beforehand. For example on MacOS, the following has proved useful:</p>
-<pre><code># brew install hdf5
-export HDF5_ROOT=/usr/local/Cellar/hdf5/1.12.0_3/</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># brew install hdf5</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>export HDF5_ROOT<span class="ot">=</span><span class="er">/</span>usr<span class="sc">/</span>local<span class="sc">/</span>Cellar<span class="sc">/</span>hdf5<span class="sc">/</span><span class="dv">1</span>.<span class="fl">12.0</span>_3<span class="sc">/</span></span></code></pre></div>
 <p>Alternatively, a minimal build script is available in the <code>build/</code> directory; the program can be compiled by executing <code>bash buildTERMS.sh</code> from a Linux terminal with <a href="https://www.gnu.org/software/bash/" class="external-link">bash</a>. Edit ‘buildTERMS.sh’ to specify a compiler other than <a href="https://gcc.gnu.org/wiki/GFortran" class="external-link">GFortran</a>.</p>
-<div id="downloading-the-code" class="section level4">
-<h4 class="hasAnchor">
-<a href="#downloading-the-code" class="anchor" aria-hidden="true"></a>Downloading the code</h4>
+<div class="section level4">
+<h4 id="downloading-the-code">Downloading the code<a class="anchor" aria-label="anchor" href="#downloading-the-code"></a>
+</h4>
 <p>We recommend downloading the <a href="https://github.com/nano-optics/terms/releases" class="external-link">latest release here</a> [<code>terms_code_0.9.9(.zip|.tar)</code>]. You can also browse/clone/fork the <a href="https://github.com/nano-optics/terms" class="external-link">entire repository</a>, but note that it contains many files used to generate the website, which are not relevant for using TERMS.</p>
 </div>
 </div>
-<div id="the-input-file" class="section level3">
-<h3 class="hasAnchor">
-<a href="#the-input-file" class="anchor" aria-hidden="true"></a>The input file</h3>
+<div class="section level3">
+<h3 id="the-input-file">The input file<a class="anchor" aria-label="anchor" href="#the-input-file"></a>
+</h3>
 <p>When running the stand-alone executable, main input parameters are read from a plain text input file (line by line and from left to right). Each line is interpreted as a sentence and split into space-separated words. The first (left-most) word is interpreted as a keyword, and the subsequent words as arguments for that keyword. In each sentence, text from the first word starting with the hash character (<code>#</code>) is interpreted as a human-readable comment and thus ignored by the program. All the supported keywords and corresponding arguments are <a href="http://nano-optics.ac.nz/terms/articles/Keywords.html">documented on this page</a>. The order of keywords generally doesn’t matter, with just two exceptions: <code>ModeAndScheme</code> must be the first keyword, and <code>Scatterers</code> must be the last. Two examples of input files are provided in the <code>/test</code> directory.</p>
+</div>
+<div class="section level2">
+<h2 id="citing-terms">Citing TERMS<a class="anchor" aria-label="anchor" href="#citing-terms"></a>
+</h2>
+<p>If you use TERMS, please cite the following user guide, as well as other publications listed below if relevant:</p>
+<div style="display: none;">
+<p><sup>1</sup>,,<sup>2</sup>,<sup>3</sup>,<sup>4</sup>,<sup>5</sup>,<sup>6</sup>,<sup><strong>Fazel-Najafabadi:2021ud?</strong></sup>,<sup>7</sup> Herran:2021wh</p>
+</div>
+<div id="refs" class="references csl-bib-body">
+<div id="ref-Schebarchov:2021wc" class="csl-entry">
+<div class="csl-left-margin">(1) </div>
+<div class="csl-right-inline">Schebarchov, D.; Fazel-Najafabadi, A.; Ru, E. C. L.; Auguié, B. Multiple Scattering of Light in Nanoparticle Assemblies: User Guide for the TERMS Program, 2021.</div>
+</div>
+<div id="ref-Schebarchov:2021ut" class="csl-entry">
+<div class="csl-left-margin">(2) </div>
+<div class="csl-right-inline">Schebarchov, D.; Fazel-Najafabadi, A.; Le Ru, E. C.; Auguié, B. <em>TERMS Website</em>; 2021. <a href="https://doi.org/10.5281/zenodo.5703291" class="external-link uri">https://doi.org/10.5281/zenodo.5703291</a>.</div>
+</div>
+<div id="ref-Somerville:2016aa" class="csl-entry">
+<div class="csl-left-margin">(3) </div>
+<div class="csl-right-inline">Somerville, W. R. C.; Auguié, B.; Le Ru, E. C. SMARTIES: User-Friendly Codes for Fast and Accurate Calculations of Light Scattering by Spheroids. <em>J. Quant. Spectrosc. Ra.</em> <strong>2016</strong>, <em>174</em>, 39–55. <a href="https://doi.org/10.1016/j.jqsrt.2016.01.005" class="external-link uri">https://doi.org/10.1016/j.jqsrt.2016.01.005</a>.</div>
+</div>
+<div id="ref-schebarchov2019mind" class="csl-entry">
+<div class="csl-left-margin">(4) </div>
+<div class="csl-right-inline">Schebarchov, D.; Le Ru, E. C.; Grand, J.; Auguié, B. Mind the Gap: Testing the Rayleigh Hypothesis in <em>T</em>-Matrix Calculations with Adjacent Spheroids. <em>Optics express</em> <strong>2019</strong>, <em>27</em> (24), 35750–35760. <a href="https://doi.org/10.1364/OE.27.035750" class="external-link uri">https://doi.org/10.1364/OE.27.035750</a>.</div>
+</div>
+<div id="ref-Lee:2020aa" class="csl-entry">
+<div class="csl-left-margin">(5) </div>
+<div class="csl-right-inline">Lee, S.; Hwang, H.; Lee, W.; Schebarchov, D.; Wy, Y.; Grand, J.; Augui’e, B.; Wi, D. H.; Cort’es, E.; Han, S. W. Core–Shell Bimetallic Nanoparticle Trimers for Efficient Light-to-Chemical Energy Conversion. <em>ACS Energy Letters</em> <strong>2020</strong>, <em>5</em> (12), 3881–3890. <a href="https://doi.org/10.1021/acsenergylett.0c02110" class="external-link uri">https://doi.org/10.1021/acsenergylett.0c02110</a>.</div>
+</div>
+<div id="ref-fazel2021orientation" class="csl-entry">
+<div class="csl-left-margin">(6) </div>
+<div class="csl-right-inline">Fazel-Najafabadi, A.; Schuster, S.; Auguié, B. Orientation Averaging of Optical Chirality Near Nanoparticles and Aggregates. <em>Physical Review B</em> <strong>2021</strong>, <em>103</em> (11), 115405. <a href="https://doi.org/10.1103/PhysRevB.103.115405" class="external-link uri">https://doi.org/10.1103/PhysRevB.103.115405</a>.</div>
+</div>
+<div id="ref-Fazel-Najafabadi:2022ud" class="csl-entry">
+<div class="csl-left-margin">(7) </div>
+<div class="csl-right-inline">Fazel-Najafabadi, A.; Auguié, B. Orientation Dependence of Optical Activity in Light Scattering by Nanoparticle Clusters. <em>Mater. Adv.</em> <strong>2022</strong>, –. <a href="https://doi.org/10.1039/D1MA00869B" class="external-link uri">https://doi.org/10.1039/D1MA00869B</a>.</div>
+</div>
+</div>
 </div>
 </div>
   </div>
@@ -251,12 +307,9 @@ export HDF5_ROOT=/usr/local/Cellar/hdf5/1.12.0_3/</code></pre>
     <div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/nano-optics/terms/">https://​github.com/​nano-optics/​terms/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/nano-optics/terms/issues">https://​github.com/​nano-optics/​terms/​issues</a>
-</li>
-<li>Download at <br><a href="https://github.com/nano-optics/terms/releases">https://​github.com/​nano-optics/​terms/​releases</a>
-</li>
+<li><a href="https://github.com/nano-optics/terms/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/nano-optics/terms/issues" class="external-link">Report a bug</a></li>
+<li><a href="https://github.com/nano-optics/terms/releases" class="external-link">Download</a></li>
 </ul>
 </div>
 
@@ -268,13 +321,20 @@ export HDF5_ROOT=/usr/local/Cellar/hdf5/1.12.0_3/</code></pre>
 </div>
 
 
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing terms</a></li>
+</ul>
+</div>
+
 <div class="developers">
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li>Dmitri Schebarchov <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-8385-7186" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
-<li>Atefeh Fazel-Najafabadi <br><small class="roles"> Author, contributor </small> <a href="https://orcid.org/0000-0001-9040-2596" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
-<li>Eric Le Ru <br><small class="roles"> Author, contributor </small> <a href="https://orcid.org/0000-0002-3052-9947" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
-<li>Baptiste Auguié <br><small class="roles"> Author, contributor </small> <a href="https://orcid.org/0000-0002-2749-5715" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Dmitri Schebarchov <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0002-8385-7186" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Atefeh Fazel-Najafabadi <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0001-9040-2596" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Eric Le Ru <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0002-3052-9947" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Baptiste Auguié <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-2749-5715" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
 
@@ -291,7 +351,7 @@ export HDF5_ROOT=/usr/local/Cellar/hdf5/1.12.0_3/</code></pre>
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.9000.9000.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>

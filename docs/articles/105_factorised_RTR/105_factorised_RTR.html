@@ -51,7 +51,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">terms</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.9</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -96,7 +96,8 @@
       <a href="../../articles/09_spectrum_near_field/09_spectrum_near_field.html">09 orientation-averaged near field spectrum</a>
     </li>
     <li class="divider">
-    <li class="dropdown-header">Advanced examples &amp; testing</li>
+    </li>
+<li class="dropdown-header">Advanced examples &amp; testing</li>
     <li>
       <a href="../../articles/10_shell_absorption/10_shell_absorption.html">10 shell absorption</a>
     </li>
@@ -140,8 +141,27 @@
     <li>
       <a href="../../articles/106_balancing/106_balancing.html">106 balancing</a>
     </li>
-    <li class="divider">
     <li>
+      <a href="../../articles/109_individual_absorption/109_individual_absorption.html">109 individual absorption</a>
+    </li>
+    <li>
+      <a href="../../articles/110_alpha_tensor/110_alpha_tensor.html">110 alpha tensor</a>
+    </li>
+    <li>
+      <a href="../../articles/111_polarised_nf/111_polarised_nf.html">111 polarised OA near-fields</a>
+    </li>
+    <li class="divider">
+    </li>
+<li class="dropdown-header">Validation</li>
+    <li>
+      <a href="../../articles/1001_mstm_ff/1001_mstm_ff.html">1001 MSTM far-field</a>
+    </li>
+    <li>
+      <a href="../../articles/1003_cda/1003_cda.html">1003 CDA dichroism</a>
+    </li>
+    <li class="divider">
+    </li>
+<li>
       <a href="../../articles/Indexing.html">Indexing conventions</a>
     </li>
   </ul>
@@ -176,23 +196,23 @@
 
       
 
-      </header><script src="105_factorised_RTR_files/header-attrs-2.11/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>RTR factorisation</h1>
             
-            <h4 data-toc-skip class="date">22 November, 2021</h4>
+            <h4 data-toc-skip class="date">28 January, 2022</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/master/vignettes/105_factorised_RTR/105_factorised_RTR.Rmd" class="external-link"><code>vignettes/105_factorised_RTR/105_factorised_RTR.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/105_factorised_RTR/105_factorised_RTR.Rmd" class="external-link"><code>vignettes/105_factorised_RTR/105_factorised_RTR.Rmd</code></a></small>
       <div class="hidden name"><code>105_factorised_RTR.Rmd</code></div>
 
     </div>
 
     
     
-<div id="objective" class="section level2">
-<h2 class="hasAnchor">
-<a href="#objective" class="anchor" aria-hidden="true"></a>Objective</h2>
+<div class="section level2">
+<h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
+</h2>
 <p>This example illustrates the two ways to calculate VTACS. We compare the far-field spectra for a linear chain of gold spheres, with and without the <code>DisableRTR</code> keyword.</p>
 <style>
 .x3d_scene {
@@ -210,13 +230,13 @@ Medium 1.7689 # epsilon of water
 OutputFormat HDF5 {file}</code></pre>
 <p>(with and without the keyword).</p>
 </div>
-<div id="orientation-averaged-results" class="section level2">
-<h2 class="hasAnchor">
-<a href="#orientation-averaged-results" class="anchor" aria-hidden="true"></a>Orientation-averaged results</h2>
+<div class="section level2">
+<h2 id="orientation-averaged-results">Orientation-averaged results<a class="anchor" aria-label="anchor" href="#orientation-averaged-results"></a>
+</h2>
 <p>The far-field cross-sections are the same, and timing comparison doesn’t reveal a meaningful difference on this example.</p>
 <p><img src="105_factorised_RTR_files/figure-html/oa-1.png" width="700"></p>
 <hr>
-<p><em>Last run: 22 November, 2021</em></p>
+<p><em>Last run: 28 January, 2022</em></p>
 </div>
   </div>
 
@@ -237,7 +257,7 @@ OutputFormat HDF5 {file}</code></pre>
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.9000.9000.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>

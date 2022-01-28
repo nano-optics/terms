@@ -51,7 +51,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">terms</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.9</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -96,7 +96,8 @@
       <a href="../articles/09_spectrum_near_field/09_spectrum_near_field.html">09 orientation-averaged near field spectrum</a>
     </li>
     <li class="divider">
-    <li class="dropdown-header">Advanced examples &amp; testing</li>
+    </li>
+<li class="dropdown-header">Advanced examples &amp; testing</li>
     <li>
       <a href="../articles/10_shell_absorption/10_shell_absorption.html">10 shell absorption</a>
     </li>
@@ -140,8 +141,27 @@
     <li>
       <a href="../articles/106_balancing/106_balancing.html">106 balancing</a>
     </li>
-    <li class="divider">
     <li>
+      <a href="../articles/109_individual_absorption/109_individual_absorption.html">109 individual absorption</a>
+    </li>
+    <li>
+      <a href="../articles/110_alpha_tensor/110_alpha_tensor.html">110 alpha tensor</a>
+    </li>
+    <li>
+      <a href="../articles/111_polarised_nf/111_polarised_nf.html">111 polarised OA near-fields</a>
+    </li>
+    <li class="divider">
+    </li>
+<li class="dropdown-header">Validation</li>
+    <li>
+      <a href="../articles/1001_mstm_ff/1001_mstm_ff.html">1001 MSTM far-field</a>
+    </li>
+    <li>
+      <a href="../articles/1003_cda/1003_cda.html">1003 CDA dichroism</a>
+    </li>
+    <li class="divider">
+    </li>
+<li>
       <a href="../articles/Indexing.html">Indexing conventions</a>
     </li>
   </ul>
@@ -176,8 +196,8 @@
 
       
 
-      </header><script src="Indexing_files/header-attrs-2.11/header-attrs.js"></script><script src="Indexing_files/htmlwidgets-1.5.4/htmlwidgets.js"></script><link href="Indexing_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
-<script src="Indexing_files/datatables-binding-0.19/datatables.js"></script><script src="Indexing_files/jquery-3.6.0/jquery-3.6.0.min.js"></script><link href="Indexing_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet">
+      </header><script src="Indexing_files/htmlwidgets-1.5.4/htmlwidgets.js"></script><link href="Indexing_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+<script src="Indexing_files/datatables-binding-0.19/datatables.js"></script><link href="Indexing_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet">
 <link href="Indexing_files/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet">
 <script src="Indexing_files/dt-core-1.10.20/js/jquery.dataTables.min.js"></script><link href="Indexing_files/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet">
 <script src="Indexing_files/nouislider-7.0.10/jquery.nouislider.min.js"></script><link href="Indexing_files/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet">
@@ -188,16 +208,16 @@
       <h1 data-toc-skip>Indexing conventions</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/master/vignettes/Indexing.Rmd" class="external-link"><code>vignettes/Indexing.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/Indexing.Rmd" class="external-link"><code>vignettes/Indexing.Rmd</code></a></small>
       <div class="hidden name"><code>Indexing.Rmd</code></div>
 
     </div>
 
     
     
-<div id="single-particle-t-matrix" class="section level2">
-<h2 class="hasAnchor">
-<a href="#single-particle-t-matrix" class="anchor" aria-hidden="true"></a>Single particle T-matrix</h2>
+<div class="section level2">
+<h2 id="single-particle-t-matrix">Single particle T-matrix<a class="anchor" aria-label="anchor" href="#single-particle-t-matrix"></a>
+</h2>
 <p>The convention is to use</p>
 <ul>
 <li>m: multipole order, -n:n</li>
@@ -205,10 +225,10 @@
 <li>q: multipole type, 1 or 2</li>
 </ul>
 <p>so for a T-matrix with Nmax=3, we have</p>
-<pre><code>## n: 1..3
-## m: -3..3
-## q: 1..2
-## 900 elements</code></pre>
+<pre><code><span class="co">## n: 1..3</span>
+<span class="co">## m: -3..3</span>
+<span class="co">## q: 1..2</span>
+<span class="co">## 900 elements</span></code></pre>
 <p><img src="Indexing_files/figure-html/tmat-1.png" width="700"></p>
 <p>for each block we introduce a combined p-index such that,</p>
 <p><span class="math display">\[
@@ -377,9 +397,9 @@ giving here -1, 0, 1, -2, -1, 0, 1, 2, -3, -2, -1, 0, 1, 2, 3, -1, 0, 1, -2, -1,
 </tbody>
 </table>
 </div>
-<div id="multi-particle-matrices" class="section level2">
-<h2 class="hasAnchor">
-<a href="#multi-particle-matrices" class="anchor" aria-hidden="true"></a>Multi-particle matrices</h2>
+<div class="section level2">
+<h2 id="multi-particle-matrices">Multi-particle matrices<a class="anchor" aria-label="anchor" href="#multi-particle-matrices"></a>
+</h2>
 <p>When combining multiple particles we introduce an additional index <span class="math inline">\(j=1:j_{max}\)</span> tracking the particle number, and a combined index <span class="math inline">\(i\)</span>, <span class="math display">\[
 i = (j-1) l_{max} + l.
 \]</span></p>
@@ -395,8 +415,8 @@ i = (j-1) l_{max} + l.
 <li><span class="math inline">\(n = \lfloor\sqrt{p}\rfloor\)</span></li>
 <li><span class="math inline">\(m = p - n(n+1)\)</span></li>
 </ul>
-<div id="htmlwidget-971b035b3c00d4e08a2a" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-971b035b3c00d4e08a2a">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"integer\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"1\" data-max=\"60\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"1\" data-max=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"1\" data-max=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"1\" data-max=\"30\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"1\" data-max=\"15\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"1\" data-max=\"3\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"-3\" data-max=\"3\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","data":[[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],[1,1,1,2,2,2,2,2,3,3,3,3,3,3,3,1,1,1,2,2,2,2,2,3,3,3,3,3,3,3,1,1,1,2,2,2,2,2,3,3,3,3,3,3,3,1,1,1,2,2,2,2,2,3,3,3,3,3,3,3],[-1,0,1,-2,-1,0,1,2,-3,-2,-1,0,1,2,3,-1,0,1,-2,-1,0,1,2,-3,-2,-1,0,1,2,3,-1,0,1,-2,-1,0,1,2,-3,-2,-1,0,1,2,3,-1,0,1,-2,-1,0,1,2,-3,-2,-1,0,1,2,3]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>i<\/th>\n      <th>j<\/th>\n      <th>q<\/th>\n      <th>l<\/th>\n      <th>p<\/th>\n      <th>n<\/th>\n      <th>m<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":60,"autoWidth":true,"columnDefs":[{"className":"dt-right","targets":[0,1,2,3,4,5,6]}],"order":[],"orderClasses":false,"orderCellsTop":true,"lengthMenu":[10,25,50,60,100],"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'background-color':isNaN(parseFloat(value)) ? '' : value <= 1 ? \"#E6E6E6\" : \"#CCCCCC\"});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'background-color':isNaN(parseFloat(value)) ? '' : value <= 1 ? \"#F7FBFF\" : \"#DEEBF7\"});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'background-color':isNaN(parseFloat(value)) ? '' : value <= 1 ? \"#BBDEB1\" : value <= 2 ? \"#B8D8F8\" : \"#FFC5D0\"});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-eca87a68eda52a862274" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-eca87a68eda52a862274">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"integer\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"1\" data-max=\"60\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"1\" data-max=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"1\" data-max=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"1\" data-max=\"30\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"1\" data-max=\"15\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"1\" data-max=\"3\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"-3\" data-max=\"3\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","data":[[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],[1,1,1,2,2,2,2,2,3,3,3,3,3,3,3,1,1,1,2,2,2,2,2,3,3,3,3,3,3,3,1,1,1,2,2,2,2,2,3,3,3,3,3,3,3,1,1,1,2,2,2,2,2,3,3,3,3,3,3,3],[-1,0,1,-2,-1,0,1,2,-3,-2,-1,0,1,2,3,-1,0,1,-2,-1,0,1,2,-3,-2,-1,0,1,2,3,-1,0,1,-2,-1,0,1,2,-3,-2,-1,0,1,2,3,-1,0,1,-2,-1,0,1,2,-3,-2,-1,0,1,2,3]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>i<\/th>\n      <th>j<\/th>\n      <th>q<\/th>\n      <th>l<\/th>\n      <th>p<\/th>\n      <th>n<\/th>\n      <th>m<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":60,"autoWidth":true,"columnDefs":[{"className":"dt-right","targets":[0,1,2,3,4,5,6]}],"order":[],"orderClasses":false,"orderCellsTop":true,"lengthMenu":[10,25,50,60,100],"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'background-color':isNaN(parseFloat(value)) ? '' : value <= 1 ? \"#E6E6E6\" : \"#CCCCCC\"});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'background-color':isNaN(parseFloat(value)) ? '' : value <= 1 ? \"#F7FBFF\" : \"#DEEBF7\"});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'background-color':isNaN(parseFloat(value)) ? '' : value <= 1 ? \"#BBDEB1\" : value <= 2 ? \"#B8D8F8\" : \"#FFC5D0\"});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 </div>
   </div>
 
@@ -417,7 +437,7 @@ i = (j-1) l_{max} + l.
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.9000.9000.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>

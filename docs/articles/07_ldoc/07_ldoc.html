@@ -51,7 +51,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">terms</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.9</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -96,7 +96,8 @@
       <a href="../../articles/09_spectrum_near_field/09_spectrum_near_field.html">09 orientation-averaged near field spectrum</a>
     </li>
     <li class="divider">
-    <li class="dropdown-header">Advanced examples &amp; testing</li>
+    </li>
+<li class="dropdown-header">Advanced examples &amp; testing</li>
     <li>
       <a href="../../articles/10_shell_absorption/10_shell_absorption.html">10 shell absorption</a>
     </li>
@@ -140,8 +141,27 @@
     <li>
       <a href="../../articles/106_balancing/106_balancing.html">106 balancing</a>
     </li>
-    <li class="divider">
     <li>
+      <a href="../../articles/109_individual_absorption/109_individual_absorption.html">109 individual absorption</a>
+    </li>
+    <li>
+      <a href="../../articles/110_alpha_tensor/110_alpha_tensor.html">110 alpha tensor</a>
+    </li>
+    <li>
+      <a href="../../articles/111_polarised_nf/111_polarised_nf.html">111 polarised OA near-fields</a>
+    </li>
+    <li class="divider">
+    </li>
+<li class="dropdown-header">Validation</li>
+    <li>
+      <a href="../../articles/1001_mstm_ff/1001_mstm_ff.html">1001 MSTM far-field</a>
+    </li>
+    <li>
+      <a href="../../articles/1003_cda/1003_cda.html">1003 CDA dichroism</a>
+    </li>
+    <li class="divider">
+    </li>
+<li>
       <a href="../../articles/Indexing.html">Indexing conventions</a>
     </li>
   </ul>
@@ -176,23 +196,23 @@
 
       
 
-      </header><script src="07_ldoc_files/header-attrs-2.11/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Local degree of optical chirality</h1>
             
-            <h4 data-toc-skip class="date">22 November, 2021</h4>
+            <h4 data-toc-skip class="date">28 January, 2022</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/master/vignettes/07_ldoc/07_ldoc.Rmd" class="external-link"><code>vignettes/07_ldoc/07_ldoc.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/07_ldoc/07_ldoc.Rmd" class="external-link"><code>vignettes/07_ldoc/07_ldoc.Rmd</code></a></small>
       <div class="hidden name"><code>07_ldoc.Rmd</code></div>
 
     </div>
 
     
     
-<div id="objective" class="section level2">
-<h2 class="hasAnchor">
-<a href="#objective" class="anchor" aria-hidden="true"></a>Objective</h2>
+<div class="section level2">
+<h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
+</h2>
 <p>This example illustrates on a very simple case the calculation of the local degree of optical chirality for a dimer of spheres. The structure consists of two gold spheres with radius 10nm and gap 5nm in water, the incident field is linear with angle <span class="math inline">\(\pi/4\)</span> and <span class="math inline">\(3\pi/4\)</span> and <span class="math inline">\(\overline{\mathscr{C}}\)</span> is calculated at the resonance wavelength of the structure and all other parameters are kept to their default values.</p>
 <style>
 .x3d_scene {
@@ -216,9 +236,9 @@ Scatterers 2
 Au 0 12.5 0 10
 Au 0 -12.5 0 10</code></pre>
 </div>
-<div id="ldoc-maps-at-fixed-incidence" class="section level2">
-<h2 class="hasAnchor">
-<a href="#ldoc-maps-at-fixed-incidence" class="anchor" aria-hidden="true"></a>LDOC maps at fixed incidence</h2>
+<div class="section level2">
+<h2 id="ldoc-maps-at-fixed-incidence">LDOC maps at fixed incidence<a class="anchor" aria-label="anchor" href="#ldoc-maps-at-fixed-incidence"></a>
+</h2>
 <pre><code>        group            name       otype dclass       dim
 0           /      Near-Field   H5I_GROUP                 
 1 /Near-Field      Gridpoints H5I_DATASET  FLOAT 13741 x 3
@@ -228,9 +248,9 @@ Au 0 -12.5 0 10</code></pre>
 <pre><code> num [1:13741, 1:7] 540 540 540 540 540 540 540 540 540 540 ...</code></pre>
 <p><img src="07_ldoc_files/figure-html/comparison-1.png" width="700"></p>
 </div>
-<div id="orientation-averaged-near-field-and-ldoc-maps" class="section level2">
-<h2 class="hasAnchor">
-<a href="#orientation-averaged-near-field-and-ldoc-maps" class="anchor" aria-hidden="true"></a>Orientation-averaged near-field and LDOC maps</h2>
+<div class="section level2">
+<h2 id="orientation-averaged-near-field-and-ldoc-maps">Orientation-averaged near-field and LDOC maps<a class="anchor" aria-label="anchor" href="#orientation-averaged-near-field-and-ldoc-maps"></a>
+</h2>
 <p>TERMS can also compute orientation-averaged near-field quantities, with the Keyword <code>MapOaQuantity</code>. This structure is not particularly good at enhancing the local degree of chirality, but we use it as a simple example to illustrate the results of this calculation. The following map shows the orientation averaged LDOC for L and R circular polarisations.</p>
 <pre><code>        group          name       otype dclass       dim
 0           /    Near-Field   H5I_GROUP                 
@@ -248,7 +268,7 @@ Au 0 -12.5 0 10</code></pre>
 6        540 -15 -23.33333 0 1.479935 -1.029881 1.029881</code></pre>
 <p><img src="07_ldoc_files/figure-html/oa-1.png" width="700"></p>
 <hr>
-<p><em>Last run: 22 November, 2021</em></p>
+<p><em>Last run: 28 January, 2022</em></p>
 </div>
   </div>
 
@@ -269,7 +289,7 @@ Au 0 -12.5 0 10</code></pre>
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.9000.9000.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>

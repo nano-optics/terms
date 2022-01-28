@@ -3,7 +3,7 @@ setwd(here('vignettes/07_ldoc'))
 
 ## ----load----
 library(terms)
-theme_set(egg::theme_article())
+theme_set(theme_grey())
 
 
 ## ----tpl----
@@ -129,7 +129,7 @@ p
 #   scale_fill_distiller(palette = 'PiYG') +
 #   labs(x='x /nm', y='y /nm',
 #        fill='LDOC',linetype = 'region') +
-#   theme_article() +
+#   theme_grey() +
 #   theme(panel.grid.major.y = element_line(colour = 'grey80',size = 0.2,linetype=3),
 #         panel.grid.minor.y = element_line(colour = 'grey80',size = 0.1,linetype=3), panel.spacing.x = unit(5,'mm'))
 # p

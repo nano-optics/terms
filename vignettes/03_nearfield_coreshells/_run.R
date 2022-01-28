@@ -2,7 +2,7 @@ setwd(here::here('vignettes/03_nearfield_coreshells/'))
 ## ----load----
 library(terms)
 library(rhdf5)
-theme_set(egg::theme_article())
+theme_set(theme_grey())
 
 
 ## ----run----
@@ -46,7 +46,7 @@ p <- ggplot(m, aes(x,y)) +
               inherit.aes=FALSE,
               colour='white', alpha=0.5, lwd=0.2,lty=2) +
   scale_fill_viridis_c(option = 'plasma') +
-  theme_article() +
+  theme_grey() +
   scale_x_continuous(expand=c(0,0)) +
   scale_y_continuous(expand=c(0,0)) +
   labs(x="x /nm", y="y /nm", fill="log(I)", 
@@ -82,7 +82,7 @@ p <- ggplot(map, aes(x,y)) +
               inherit.aes=FALSE,
               colour='white', alpha=0.5, lwd=0.2,lty=2) +
   scale_fill_viridis_c(option = 'plasma') +
-  theme_article() +
+  theme_grey() +
   scale_x_continuous(expand=c(0,0)) +
   scale_y_continuous(expand=c(0,0)) +
   labs(x="x /nm", y="y /nm", fill=expression(Im(epsilon)*"|E|"^2), 

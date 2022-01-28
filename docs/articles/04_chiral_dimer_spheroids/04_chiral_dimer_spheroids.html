@@ -51,7 +51,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">terms</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.9</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -96,7 +96,8 @@
       <a href="../../articles/09_spectrum_near_field/09_spectrum_near_field.html">09 orientation-averaged near field spectrum</a>
     </li>
     <li class="divider">
-    <li class="dropdown-header">Advanced examples &amp; testing</li>
+    </li>
+<li class="dropdown-header">Advanced examples &amp; testing</li>
     <li>
       <a href="../../articles/10_shell_absorption/10_shell_absorption.html">10 shell absorption</a>
     </li>
@@ -140,8 +141,27 @@
     <li>
       <a href="../../articles/106_balancing/106_balancing.html">106 balancing</a>
     </li>
-    <li class="divider">
     <li>
+      <a href="../../articles/109_individual_absorption/109_individual_absorption.html">109 individual absorption</a>
+    </li>
+    <li>
+      <a href="../../articles/110_alpha_tensor/110_alpha_tensor.html">110 alpha tensor</a>
+    </li>
+    <li>
+      <a href="../../articles/111_polarised_nf/111_polarised_nf.html">111 polarised OA near-fields</a>
+    </li>
+    <li class="divider">
+    </li>
+<li class="dropdown-header">Validation</li>
+    <li>
+      <a href="../../articles/1001_mstm_ff/1001_mstm_ff.html">1001 MSTM far-field</a>
+    </li>
+    <li>
+      <a href="../../articles/1003_cda/1003_cda.html">1003 CDA dichroism</a>
+    </li>
+    <li class="divider">
+    </li>
+<li>
       <a href="../../articles/Indexing.html">Indexing conventions</a>
     </li>
   </ul>
@@ -176,23 +196,23 @@
 
       
 
-      </header><script src="04_chiral_dimer_spheroids_files/header-attrs-2.11/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Circular dichroism for a fingers crossed dimer of gold nanorods</h1>
             
-            <h4 data-toc-skip class="date">22 November, 2021</h4>
+            <h4 data-toc-skip class="date">28 January, 2022</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/master/vignettes/04_chiral_dimer_spheroids/04_chiral_dimer_spheroids.Rmd" class="external-link"><code>vignettes/04_chiral_dimer_spheroids/04_chiral_dimer_spheroids.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/04_chiral_dimer_spheroids/04_chiral_dimer_spheroids.Rmd" class="external-link"><code>vignettes/04_chiral_dimer_spheroids/04_chiral_dimer_spheroids.Rmd</code></a></small>
       <div class="hidden name"><code>04_chiral_dimer_spheroids.Rmd</code></div>
 
     </div>
 
     
     
-<div id="objective" class="section level2">
-<h2 class="hasAnchor">
-<a href="#objective" class="anchor" aria-hidden="true"></a>Objective</h2>
+<div class="section level2">
+<h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
+</h2>
 <p>This example illustrates the calculation of far-field spectra for a dimer of particles described by external T-matrix files. The structure consists of two prolate gold spheroids in water, oriented in a chiral “fingers crossed” configuration that yields strong optical activity.</p>
 <style>
 .x3d_scene {
@@ -304,20 +324,20 @@ termsProgram&gt; Program run time (CPU &amp; real in s):  1.049E+00  8.280E-01</
 </details><p><br></p>
 <p>The output consists of a number of files, storing the far-field cross-sections for each order from 1 to <span class="math inline">\(n_{1}\)</span>.</p>
 </div>
-<div id="orientation-averaged-results" class="section level2">
-<h2 class="hasAnchor">
-<a href="#orientation-averaged-results" class="anchor" aria-hidden="true"></a>Orientation-averaged results</h2>
+<div class="section level2">
+<h2 id="orientation-averaged-results">Orientation-averaged results<a class="anchor" aria-label="anchor" href="#orientation-averaged-results"></a>
+</h2>
 <pre><code>Rows: 3,618
 Columns: 5
-$ wavelength &lt;dbl&gt; 400, 402, 404, 406, 408, 410, 412, 414, 416, 418, 420, 422,…
+$ wavelength &lt;dbl&gt; 400, 400, 400, 400, 400, 400, 402, 402, 402, 402, 402, 402,…
 $ crosstype  &lt;chr&gt; "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Ab…
-$ variable   &lt;fct&gt; total, total, total, total, total, total, total, total, tot…
-$ dichroism  &lt;dbl&gt; 68.63995, 67.93173, 67.14765, 66.29057, 65.36443, 64.37408,…
-$ average    &lt;dbl&gt; 7642.993, 7625.128, 7606.890, 7588.318, 7569.454, 7550.344,…</code></pre>
+$ variable   &lt;chr&gt; "total", "I1", "I2", "I3", "I4", "I5", "total", "I1", "I2",…
+$ dichroism  &lt;dbl&gt; 6.863995e+01, 6.016556e+01, 9.546410e+00, -1.094083e+00, 2.…
+$ average    &lt;dbl&gt; 7642.9929773, 5955.4637817, 1558.6333188, 123.3448785, 5.41…</code></pre>
 <p><img src="04_chiral_dimer_spheroids_files/figure-html/oa-1.png" width="700"></p>
 <p>This chiral dimer produces strong circular dichroism.</p>
 <hr>
-<p><em>Last run: 22 November, 2021</em></p>
+<p><em>Last run: 28 January, 2022</em></p>
 </div>
   </div>
 
@@ -338,7 +358,7 @@ $ average    &lt;dbl&gt; 7642.993, 7625.128, 7606.890, 7588.318, 7569.454, 7550.
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.9000.9000.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>

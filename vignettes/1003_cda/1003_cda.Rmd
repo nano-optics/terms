@@ -1,0 +1,87 @@
+---
+title: "Circular dichroism for a fingers crossed dimer of gold nanorods"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 2
+    fig_width: 7
+    fig_height: 6
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Circular dichroism for a fingers crossed dimer of gold nanorods}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE}
+library(knitr)
+library(terms)
+library(ggplot2)
+library(rhdf5)
+library(R.matlab)
+options(cli.num_colors = 1)
+theme_set(theme_grey())
+opts_chunk$set(echo = FALSE, warning =FALSE,
+               message=FALSE, comment='', 
+               tidy=FALSE, cache = FALSE)
+do.call(read_chunk, list(path = "_run.R"))
+```
+
+## Objective
+
+This example compares the results of TERMS with a coupled-dipole approximation for the far-field properties of a chiral dimer of Au spheroids.
+
+```{r read, cache=FALSE}
+```
+
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+library(terms)
+cat('  <style>
+.x3d_scene {
+float:right;
+margin:0em;
+ }
+  </style>')
+
+ge <- get_geometry('input')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,200), width = "200px", height = "150px", default_material='gold')
+```
+
+This TERMS simulation uses the following `input` file
+```{bash input}
+cat input
+```
+
+as well as a second simulation with only the electric dipole term,
+
+```{bash input_dip}
+cat input_dip
+```
+
+The T-matrix file was previously created with [SMARTIES](https://www.wgtn.ac.nz/scps/research/research-groups/raman-lab/numerical-tools/smarties) using these parameters
+
+```{bash smarties, echo=TRUE}
+head -n14 smarties.m
+```
+
+```{r fun}
+```
+
+## Orientation-averaged results
+
+```{r oa}
+```
+
+This average cross-sections and circular dichroism are in good agreement, especially when TERMS uses only the electric-dipole term.
+
+
+-----
+
+```{r cleanup}
+```
+_Last run: `r format(Sys.time(), '%d %B, %Y')`_

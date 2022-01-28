@@ -3,7 +3,7 @@ setwd(here('vignettes/04_chiral_dimer_spheroids'))
 
 ## ----load----
 library(terms)
-theme_set(egg::theme_article())
+theme_set(theme_grey())
 
 ## ----run----
 system("../../build/terms input > log")

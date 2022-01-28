@@ -6,7 +6,7 @@ library(tibble)
 library(ggplot2)
 library(egg)
 library(ggforce)
-theme_set(egg::theme_article())
+theme_set(theme_grey())
 
 
 read_map <- function(f='map.dat'){
@@ -45,7 +45,7 @@ p <- ggplot(d, aes(x,y)) +
               colour='black', alpha=0.5, lwd=0.2,lty=2) +
   scale_fill_viridis_c(option = 'plasma', 
                        na.value = 'grey90') +
-  theme_article() +
+  theme_grey() +
   scale_x_continuous(expand=c(0,0)) +
   scale_y_continuous(expand=c(0,0)) +
   theme_void()+

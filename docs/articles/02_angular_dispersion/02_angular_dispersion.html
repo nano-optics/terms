@@ -51,7 +51,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">terms</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.9</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -96,7 +96,8 @@
       <a href="../../articles/09_spectrum_near_field/09_spectrum_near_field.html">09 orientation-averaged near field spectrum</a>
     </li>
     <li class="divider">
-    <li class="dropdown-header">Advanced examples &amp; testing</li>
+    </li>
+<li class="dropdown-header">Advanced examples &amp; testing</li>
     <li>
       <a href="../../articles/10_shell_absorption/10_shell_absorption.html">10 shell absorption</a>
     </li>
@@ -140,8 +141,27 @@
     <li>
       <a href="../../articles/106_balancing/106_balancing.html">106 balancing</a>
     </li>
-    <li class="divider">
     <li>
+      <a href="../../articles/109_individual_absorption/109_individual_absorption.html">109 individual absorption</a>
+    </li>
+    <li>
+      <a href="../../articles/110_alpha_tensor/110_alpha_tensor.html">110 alpha tensor</a>
+    </li>
+    <li>
+      <a href="../../articles/111_polarised_nf/111_polarised_nf.html">111 polarised OA near-fields</a>
+    </li>
+    <li class="divider">
+    </li>
+<li class="dropdown-header">Validation</li>
+    <li>
+      <a href="../../articles/1001_mstm_ff/1001_mstm_ff.html">1001 MSTM far-field</a>
+    </li>
+    <li>
+      <a href="../../articles/1003_cda/1003_cda.html">1003 CDA dichroism</a>
+    </li>
+    <li class="divider">
+    </li>
+<li>
       <a href="../../articles/Indexing.html">Indexing conventions</a>
     </li>
   </ul>
@@ -176,23 +196,23 @@
 
       
 
-      </header><script src="02_angular_dispersion_files/header-attrs-2.11/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Angular dispersion</h1>
             
-            <h4 data-toc-skip class="date">22 November, 2021</h4>
+            <h4 data-toc-skip class="date">28 January, 2022</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/master/vignettes/02_angular_dispersion/02_angular_dispersion.Rmd" class="external-link"><code>vignettes/02_angular_dispersion/02_angular_dispersion.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/02_angular_dispersion/02_angular_dispersion.Rmd" class="external-link"><code>vignettes/02_angular_dispersion/02_angular_dispersion.Rmd</code></a></small>
       <div class="hidden name"><code>02_angular_dispersion.Rmd</code></div>
 
     </div>
 
     
     
-<div id="objective" class="section level2">
-<h2 class="hasAnchor">
-<a href="#objective" class="anchor" aria-hidden="true"></a>Objective</h2>
+<div class="section level2">
+<h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
+</h2>
 <p>This example illustrates the calculation of far-field cross-sections for multiple angles of incidence. The structure consists of two silver spheres in water, and all parameters are kept to their default values.</p>
 <style>
 .x3d_scene {
@@ -352,25 +372,56 @@ Show file results.h5 (click to open)
 29 201 x 8
 30 201 x 8
 31 201 x 8</code></pre>
+<pre><code>List of 3
+ $ mCOA: tibble [3,618 × 5] (S3: tbl_df/tbl/data.frame)
+  ..$ wavelength: num [1:3618] 300 300 300 300 300 300 302 302 302 302 ...
+  ..$ crosstype : chr [1:3618] "Abs" "Abs" "Abs" "Abs" ...
+  ..$ variable  : chr [1:3618] "total" "I1" "I2" "I3" ...
+  ..$ dichroism : num [1:3618] 5.40e-13 2.25e-13 1.40e-14 2.88e-13 1.26e-14 ...
+  ..$ average   : num [1:3618] 504.4 367.13 117.67 18.2 1.34 ...
+ $ mCFO: tibble [4,824 × 7] (S3: tbl_df/tbl/data.frame)
+  ..$ wavelength   : num [1:4824] 300 300 300 300 300 300 300 300 302 302 ...
+  ..$ crosstype    : chr [1:4824] "Abs" "Abs" "Abs" "Abs" ...
+  ..$ variable     : chr [1:4824] "total" "I1" "I2" "I3" ...
+  ..$ polarisation1: num [1:4824] 517 517 517 517 517 ...
+  ..$ polarisation2: num [1:4824] 517 517 517 517 517 ...
+  ..$ dichroism    : num [1:4824] -1.07e-11 -1.36e-11 -1.00e-11 -1.14e-11 -1.14e-11 ...
+  ..$ average      : num [1:4824] 517 517 517 517 517 ...
+ $ mLFO: tibble [4,824 × 7] (S3: tbl_df/tbl/data.frame)
+  ..$ wavelength   : num [1:4824] 300 300 300 300 300 300 300 300 302 302 ...
+  ..$ crosstype    : chr [1:4824] "Abs" "Abs" "Abs" "Abs" ...
+  ..$ variable     : chr [1:4824] "total" "I1" "I2" "I3" ...
+  ..$ polarisation1: num [1:4824] 517 441 456 483 517 ...
+  ..$ polarisation2: num [1:4824] 517 593 578 551 517 ...
+  ..$ dichroism    : num [1:4824] -2.50e-12 -1.52e+02 -1.22e+02 -6.77e+01 -3.18e-12 ...
+  ..$ average      : num [1:4824] 517 517 517 517 517 ...</code></pre>
 </details><p><br></p>
 </div>
-<div id="fixed-orientation-results" class="section level2">
-<h2 class="hasAnchor">
-<a href="#fixed-orientation-results" class="anchor" aria-hidden="true"></a>Fixed-orientation results</h2>
+<div class="section level2">
+<h2 id="fixed-orientation-results">Fixed-orientation results<a class="anchor" aria-label="anchor" href="#fixed-orientation-results"></a>
+</h2>
 <p>The following files contain fixed-orientation cross-sections for X and Y linear polarisations,</p>
 <pre><code>Rows: 4,824
 Columns: 7
-$ wavelength    &lt;dbl&gt; 300, 302, 304, 306, 308, 310, 312, 314, 316, 318, 320, 3…
+$ wavelength    &lt;dbl&gt; 300, 300, 300, 300, 300, 300, 300, 300, 302, 302, 302, 3…
 $ crosstype     &lt;chr&gt; "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", …
-$ variable      &lt;fct&gt; total, total, total, total, total, total, total, total, …
-$ polarisation1 &lt;dbl&gt; 516.7623, 535.4624, 555.1458, 575.8907, 597.7849, 620.92…
-$ polarisation2 &lt;dbl&gt; 516.7623, 535.4624, 555.1458, 575.8907, 597.7849, 620.92…
-$ dichroism     &lt;dbl&gt; -2.501110e-12, -3.183231e-12, -3.069545e-12, -3.979039e-…
-$ average       &lt;dbl&gt; 516.7623, 535.4624, 555.1458, 575.8907, 597.7849, 620.92…</code></pre>
+$ variable      &lt;chr&gt; "total", "I1", "I2", "I3", "I4", "I5", "I6", "I7", "tota…
+$ polarisation1 &lt;dbl&gt; 516.7623, 440.6962, 455.7620, 482.9097, 516.7623, 550.61…
+$ polarisation2 &lt;dbl&gt; 516.7623, 592.8283, 577.7625, 550.6148, 516.7623, 482.90…
+$ dichroism     &lt;dbl&gt; -2.501110e-12, -1.521321e+02, -1.220005e+02, -6.770514e+…
+$ average       &lt;dbl&gt; 516.7623, 516.7623, 516.7623, 516.7623, 516.7623, 516.76…</code></pre>
+<pre><code>tibble [8,442 × 7] (S3: tbl_df/tbl/data.frame)
+ $ wavelength: num [1:8442] 300 300 300 300 300 300 300 300 300 300 ...
+ $ crosstype : chr [1:8442] "Abs" "Abs" "Abs" "Abs" ...
+ $ variable  : chr [1:8442] "I1" "I1" "I2" "I2" ...
+ $ dichroism : num [1:8442] -152.1 -152.1 -122 -122 -67.7 ...
+ $ average   : num [1:8442] 517 517 517 517 517 ...
+ $ name      : chr [1:8442] "polarisation1" "polarisation2" "polarisation1" "polarisation2" ...
+ $ value     : num [1:8442] 441 593 456 578 483 ...</code></pre>
 <p><img src="02_angular_dispersion_files/figure-html/fol-1.png" width="700"></p>
 <p>Because we are rotating <span class="math inline">\(\phi\)</span> from 0 to 90 degrees, the two polarisations show the opposite trend as the incident electric field rotates from x to y.</p>
 <hr>
-<p><em>Last run: 22 November, 2021</em></p>
+<p><em>Last run: 28 January, 2022</em></p>
 </div>
   </div>
 
@@ -391,7 +442,7 @@ $ average       &lt;dbl&gt; 516.7623, 535.4624, 555.1458, 575.8907, 597.7849, 62
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.9000.9000.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>

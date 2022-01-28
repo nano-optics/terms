@@ -31,10 +31,8 @@ store_xsec <- function(..., out = 'xsec.rds'){
   if(all(file.exists(lfOA))){
     
     lOA <- lapply(lfOA, read_file)
-    lCD <- lapply(lOA[c(1,3,5)], reshape2::melt, 
-                  id=c("wavelength","crosstype"))
-    lCS <- lapply(lOA[c(2,4,6)], reshape2::melt, 
-                  id=c("wavelength","crosstype"))
+    lCD <- lapply(lOA[c(1,3,5)], pivot_xsec)
+    lCS <- lapply(lOA[c(2,4,6)],  pivot_xsec)
     mCOA <- purrr::map2_df(lCD, lCS, process_OA)
     
     results <- c(results, list(mCOA=mCOA))
@@ -46,10 +44,8 @@ store_xsec <- function(..., out = 'xsec.rds'){
   if(all(file.exists(lfLinear))){
     
     lLFO <- lapply(lfLinear, read_file)
-    lX <- lapply(lLFO[c(1,3,5)], reshape2::melt, 
-                 id=c("wavelength","crosstype"))
-    lY <- lapply(lLFO[c(2,4,6)], reshape2::melt, 
-                 id=c("wavelength","crosstype"))
+    lX <- lapply(lLFO[c(1,3,5)],  pivot_xsec)
+    lY <- lapply(lLFO[c(2,4,6)],  pivot_xsec)
     mLFO <- purrr::map2_df(lX, lY, process_fixed)
     
     results <- c(results, list(mLFO = mLFO))
@@ -59,10 +55,8 @@ store_xsec <- function(..., out = 'xsec.rds'){
   if(all(file.exists(lfCircular))){
     
     lCFO <- lapply(lfCircular, read_file)
-    lL <- lapply(lCFO[c(1,3,5)], reshape2::melt, 
-                 id=c("wavelength","crosstype"))
-    lR <- lapply(lCFO[c(2,4,6)], reshape2::melt, 
-                 id=c("wavelength","crosstype"))
+    lL <- lapply(lCFO[c(1,3,5)],  pivot_xsec)
+    lR <- lapply(lCFO[c(2,4,6)],  pivot_xsec)
     mCFO <- purrr::map2_df(lL, lR, process_fixed)
     
     results <- c(results, list(mCFO=mCFO))
@@ -113,10 +107,8 @@ consolidate_xsec <- function(hdf5, verbose = TRUE, ...){
     })
     
     names(lOA) <- nms
-    lCD <- lapply(lOA[c("cdAbsOA", "cdExtOA", "cdScaOA")], reshape2::melt, 
-                  id=c("wavelength","crosstype"))
-    lCS <- lapply(lOA[c("csAbsOA", "csExtOA", "csScaOA")], reshape2::melt, 
-                  id=c("wavelength","crosstype"))
+    lCD <- lapply(lOA[c("cdAbsOA", "cdExtOA", "cdScaOA")],  pivot_xsec)
+    lCS <- lapply(lOA[c("csAbsOA", "csExtOA", "csScaOA")], pivot_xsec)
     mCOA <- purrr::map2_df(lCD, lCS, process_OA)
     
     results <- c(results, list(mCOA=mCOA))
@@ -149,10 +141,8 @@ consolidate_xsec <- function(hdf5, verbose = TRUE, ...){
       d
     })
     names(lCFO) <- lfCircular
-    lR <- lapply(lCFO[c(1,3,5)], reshape2::melt, 
-                 id=c("wavelength","crosstype"))
-    lL <- lapply(lCFO[c(2,4,6)], reshape2::melt, 
-                 id=c("wavelength","crosstype"))
+    lR <- lapply(lCFO[c(1,3,5)], pivot_xsec)
+    lL <- lapply(lCFO[c(2,4,6)], pivot_xsec)
     mCFO <- purrr::map2_df(lR, lL, process_fixed)
     
     # linear
@@ -166,10 +156,8 @@ consolidate_xsec <- function(hdf5, verbose = TRUE, ...){
     })
     names(lLFO) <- lfLinear
     
-    lX <- lapply(lLFO[c(1,3,5)], reshape2::melt, 
-                 id=c("wavelength","crosstype"))
-    lY <- lapply(lLFO[c(2,4,6)], reshape2::melt, 
-                 id=c("wavelength","crosstype"))
+    lX <- lapply(lLFO[c(1,3,5)], pivot_xsec)
+    lY <- lapply(lLFO[c(2,4,6)], pivot_xsec)
     mLFO <- purrr::map2_df(lX, lY, process_fixed)
     
     results <- c(results, list(mCFO = mCFO, mLFO = mLFO))
@@ -188,6 +176,12 @@ read_file <- function(x) {
   names(d) = c('wavelength', 'total', paste0('I', seq_len(ncol(d)-2)))
   d$crosstype <- substr(x,3,5)
   d
+}
+
+# utility wrapper
+#' @noRd
+pivot_xsec <- function(d){
+  tidyr::pivot_longer(d, names_to = "variable",  cols=!any_of(c("wavelength","crosstype")))
 }
 
 #' @noRd

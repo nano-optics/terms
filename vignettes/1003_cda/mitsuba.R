@@ -1,0 +1,169 @@
+# photonmapper
+tpl_head <- '<?xml version="1.0" encoding="utf-8"?>
+
+<scene version="0.5.0">
+	<integrator  type="irrcache">
+	  <integrator  type="volpath"/>
+	</integrator>
+
+
+
+	<sensor type="perspective" id="Camera-camera">
+		<string name="fovAxis" value="smaller"/>
+		<float name="focusDistance" value="50.0"/>
+		<float name="fov" value="2"/>
+		<transform name="toWorld">
+			<lookAt target="0, 0, 20" origin="3000, 00, 0" up="0, 0, 10"/>
+		</transform>
+
+		<sampler type="ldsampler">
+			<integer name="sampleCount" value="64"/>
+		</sampler>
+
+		<film type="hdrfilm" id="film">
+			<integer name="width" value="800"/>
+			<integer name="height" value="600"/>
+			<string name="pixelFormat" value="rgb"/>
+			<boolean name="banner" value="false"/>
+
+			<rfilter type="gaussian"/>
+		</film>
+	</sensor>
+
+	<emitter type="envmap" id="Area_002-light">
+		<string name="filename" value="cloudy.hdr"/>
+		<transform name="toWorld">
+			<rotate y="1" angle="-180"/>
+			<matrix value="-0.224951 -0.000001 -0.974370 0.000000 -0.974370 0.000000 0.224951 0.000000 0.000000 1.000000 -0.000001 8.870000 0.000000 0.000000 0.000000 1.000000 "/>
+		</transform>
+		<float name="scale" value="5"/>
+	</emitter>
+
+	<bsdf type="diffuse" id="__diffmat">
+		<rgb name="reflectance" value="0.3 0.3 0.3"/>
+	</bsdf>
+
+	<texture type="checkerboard" id="__planetex">
+		<rgb name="color0" value="#e0ebff"/>
+		<rgb name="color1" value="#e0ebff"/>
+		<float name="uscale" value="100.0"/>
+		<float name="vscale" value="100.0"/>
+		<float name="uoffset" value="0.0"/>
+		<float name="voffset" value="100.0"/>
+	</texture>
+
+	<bsdf type="diffuse" id="__planemat">
+		<ref name="reflectance" id="__planetex"/>
+	</bsdf>
+
+	<shape type="serialized" id="Plane-mesh_0">
+		<string name="filename" value="matpreview.serialized"/>
+		<integer name="shapeIndex" value="0"/>
+		<transform name="toWorld">
+			<rotate z="1" angle="90"/>
+			<matrix value="1000 -1000 0 -1000 1000 1000 0 1000 0 0 1000 -100 0 0 0 1"/>
+				<translate z="-100"/>
+		</transform>
+
+		<ref name="bsdf" id="__planemat"/>
+	</shape>
+ 
+<shape type="shapegroup" id="myShapeGroup">
+'
+	
+tpl_foot <- '
+
+<shape type="cylinder">
+<point name="p0" x="0" y="0" z="-500"/> 
+<point name="p1" x="0" y="0" z="500"/> 
+<float name="radius" value="18"/> 
+<bsdf type="dielectric">
+<float name="intIOR" value="1.001"/> 
+<float name="extIOR" value="1.0"/>
+</bsdf>
+<medium type="homogeneous" name="interior"> 
+<rgb name="sigmaS" value="0.0, 0.0, 0.0"/> 
+<rgb name="sigmaA" value="0.025, 0.025, 0.025"/>
+</medium>
+</shape>
+
+
+</shape> 
+<shape type="instance"> 
+		<transform name="toWorld">
+			<rotate z="1" angle="10"/>
+			<translate z="30"/>
+			<scale value="1"/>
+		</transform>
+<ref id="myShapeGroup"/>
+</shape>
+
+
+</scene>
+'
+
+library(glue)
+
+sphere <- function(x=0, y=0, z=0, r=1){
+  
+  glue('<shape type="sphere">
+<point name="center" x="{x}" y="{y}" z="{z}"/> 
+<float name="radius" value="{r}"/>
+<bsdf type="roughconductor">
+<string name="material"  value="Au"/>
+<float name="alpha"  value="0.25"/>
+</bsdf>
+</shape>')
+  
+}
+
+
+spheroid <- function(x=0, y=0, z=0, r=1, a=0,b=0,c=0,chi){
+  
+  glue('<shape type="sphere">
+<point name="center" x="{x}" y="{y}" z="{z}"/> 
+<float name="radius" value="{r}"/>
+			<scale value="{chi}"/>
+			<rotate z="1" angle="45"/>
+<bsdf type="roughconductor">
+<string name="material"  value="Au"/>
+<float name="alpha"  value="0.25"/>
+</bsdf>
+</shape>')
+  
+}
+
+f <- 'input'
+
+read_input <- function(f){
+  d <- data.table::fread(f,skip="Scatterer", header=F)
+  
+  if(ncol(d) == 5)
+  return(setNames(d, c('tag','x','y','z','r'))) else
+    # TF1  0.0  -100 0.0 100 0.0 0.0        0.0  2.5
+    return(setNames(d, c('tag','x','y','z','r', 'alpha', 'beta', 'gamma', 'chi'))) 
+}
+
+# cl <- read_input('cl80map/input')
+# out <- 'cl80_scene.xml'
+# cat(tpl_head, "\n", file = out)
+# for(ii in seq(1, nrow(cl))){
+#   p <- sphere(cl$x[ii],cl$y[ii],cl$z[ii],cl$r[ii])
+#   cat(p, "\n", file = out, append = TRUE)
+# }
+# 
+# cat(tpl_foot, file = out, append = TRUE)
+
+
+cl <- read_input('input')
+out <- 'clfingers_scene.xml'
+
+cat(tpl_head, "\n", file = out)
+for(ii in seq(1, nrow(cl))){
+  p <- spheroid(cl$x[ii],cl$y[ii],cl$z[ii],cl$r[ii],
+                cl$alpha[ii],cl$beta[ii],cl$gamma[ii],
+                cl$chi[ii])
+  cat(p, "\n", file = out, append = TRUE)
+}
+  
+cat(tpl_foot, file = out, append = TRUE)

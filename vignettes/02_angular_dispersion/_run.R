@@ -2,7 +2,8 @@ setwd(here::here('vignettes/02_angular_dispersion/'))
 
 ## ----load----
 library(terms)
-theme_set(egg::theme_article())
+library(ggplot2)
+theme_set(theme_grey())
 
 ## ----run----
 system("../../build/terms input > log")
@@ -11,20 +12,20 @@ system("../../build/terms input > log")
 library(rhdf5)
 lf <- h5ls('results.h5')
 lf
+
+
 # grab the results and store in hdf5 format
 xs <- consolidate_xsec('results.h5')
 
-
+str(xs)
 
 ## ----fol----
 glimpse(xs$mLFO)
 
-xs$mLFO$angle <- xs$mLFO$variable
-xs$mLFO$variable <- NULL
-mm <- melt(xs$mLFO, id=c("wavelength", "crosstype", "angle"), 
-           measure.vars = c("polarisation1","polarisation2"))
-mm$polarisation <- factor(mm$variable, labels=c('X','Y'))
-mm$angle <- seq(0,90,length=7)[as.integer(mm$angle)]
+mm <- pivot_longer(xs$mLFO %>% filter(variable != 'total'), c("polarisation1","polarisation2"))
+str(mm)
+mm$polarisation <- factor(mm$name, labels=c('X','Y'))
+mm$angle <- seq(0,90,length=7)[as.integer(factor(mm$variable))]
 
 p <- ggplot(subset(mm, angle != 'total'), aes(wavelength, value)) +
   facet_grid(polarisation~crosstype, scales='free_y')+

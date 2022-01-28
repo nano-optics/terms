@@ -3,7 +3,7 @@ setwd(here('vignettes/08_polarimetry'))
 
 ## ----load----
 library(terms)
-theme_set(egg::theme_article(base_size = 10, base_family = 'Source Sans Pro'))
+theme_set(egg::theme_grey(base_size = 10, base_family = 'Source Sans Pro'))
 
 library(rhdf5)
 lf <- h5ls('farfield.h5')

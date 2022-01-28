@@ -51,7 +51,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">terms</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.9</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -96,7 +96,8 @@
       <a href="../../articles/09_spectrum_near_field/09_spectrum_near_field.html">09 orientation-averaged near field spectrum</a>
     </li>
     <li class="divider">
-    <li class="dropdown-header">Advanced examples &amp; testing</li>
+    </li>
+<li class="dropdown-header">Advanced examples &amp; testing</li>
     <li>
       <a href="../../articles/10_shell_absorption/10_shell_absorption.html">10 shell absorption</a>
     </li>
@@ -140,8 +141,27 @@
     <li>
       <a href="../../articles/106_balancing/106_balancing.html">106 balancing</a>
     </li>
-    <li class="divider">
     <li>
+      <a href="../../articles/109_individual_absorption/109_individual_absorption.html">109 individual absorption</a>
+    </li>
+    <li>
+      <a href="../../articles/110_alpha_tensor/110_alpha_tensor.html">110 alpha tensor</a>
+    </li>
+    <li>
+      <a href="../../articles/111_polarised_nf/111_polarised_nf.html">111 polarised OA near-fields</a>
+    </li>
+    <li class="divider">
+    </li>
+<li class="dropdown-header">Validation</li>
+    <li>
+      <a href="../../articles/1001_mstm_ff/1001_mstm_ff.html">1001 MSTM far-field</a>
+    </li>
+    <li>
+      <a href="../../articles/1003_cda/1003_cda.html">1003 CDA dichroism</a>
+    </li>
+    <li class="divider">
+    </li>
+<li>
       <a href="../../articles/Indexing.html">Indexing conventions</a>
     </li>
   </ul>
@@ -176,14 +196,14 @@
 
       
 
-      </header><script src="13_masking_files/header-attrs-2.11/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Selecting/masking individual multipole orders</h1>
             
-            <h4 data-toc-skip class="date">22 November, 2021</h4>
+            <h4 data-toc-skip class="date">28 January, 2022</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/master/vignettes/13_masking/13_masking.Rmd" class="external-link"><code>vignettes/13_masking/13_masking.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/13_masking/13_masking.Rmd" class="external-link"><code>vignettes/13_masking/13_masking.Rmd</code></a></small>
       <div class="hidden name"><code>13_masking.Rmd</code></div>
 
     </div>
@@ -195,9 +215,9 @@
 Aerial view of La Plata; a T-matrix; the two overlayed
 </p>
 </div>
-<div id="objective" class="section level2">
-<h2 class="hasAnchor">
-<a href="#objective" class="anchor" aria-hidden="true"></a>Objective</h2>
+<div class="section level2">
+<h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
+</h2>
 <p>This example illustrates the syntax to select specific multipole orders from each individual particle T-matrix. We also display the collective T-matrix of a cluster.</p>
 <style>
 .x3d_scene {
@@ -207,9 +227,9 @@ margin:0em;
   </style>
 <p><x3d width="200px" height="150px" class="x3d_scene"><scene><transform scale="20 20 50" rotation="0 0 0 1e-05" translation="0 -50 0"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="20 20 50" rotation="0 0.99999000015073 0 0.7854082" translation="0 50 0"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><shape><indexedlineset colorpervertex="false" colorindex="0 1 2" coordindex="0 1 -1 0 2 -1 0 3 -1"><coordinate point="0 0 0 100 0 0 0 100 0 0 0 100"></coordinate><color color="1 0 0 0 1 0 0.2 0.2 1"></color></indexedlineset></shape><viewpoint centerofrotation="0 0 0" position="0 0 200" orientation="0 0 1 0"></viewpoint></scene></x3d></p>
 </div>
-<div id="unmasked-matrices" class="section level2">
-<h2 class="hasAnchor">
-<a href="#unmasked-matrices" class="anchor" aria-hidden="true"></a>Unmasked matrices</h2>
+<div class="section level2">
+<h2 id="unmasked-matrices">Unmasked matrices<a class="anchor" aria-label="anchor" href="#unmasked-matrices"></a>
+</h2>
 <p>We first start with a simulation using the following <code>input</code> file</p>
 <p>where we run everything at a single wavelength to make it easier to display the different matrices.</p>
 <p>The command to run the example is simply</p>
@@ -229,9 +249,9 @@ margin:0em;
 <p><img src="13_masking_files/figure-html/collective-1.png" width="700"></p>
 <p>Once TERMS has solved the multiple scattering problem, it can export the collective T-matrix of the whole cluster. In contrast to the T-matrix of a single spheroid, the matrix is fully dense due to the interaction between the two particles.</p>
 </div>
-<div id="masked-matrices" class="section level2">
-<h2 class="hasAnchor">
-<a href="#masked-matrices" class="anchor" aria-hidden="true"></a>Masked matrices</h2>
+<div class="section level2">
+<h2 id="masked-matrices">Masked matrices<a class="anchor" aria-label="anchor" href="#masked-matrices"></a>
+</h2>
 <p>With this default situation in mind, we now turn to the ability to select specific multipoles in the input T-matrices. For instance, we’ll use the following input file to select only the electric dipole term, which was already dominant because of the plasmon resonance.</p>
 <pre><code>ModeAndScheme 2 3
 
@@ -288,7 +308,7 @@ TF1_S1 0  50 0.0 50 0.0 0.7853982 0  2.5</code></pre>
 <p>With these input T-matrices being masked without the strong electric dipole component, the collective T-matrix is now very different.</p>
 <p><img src="13_masking_files/figure-html/collective3-1.png" width="700"></p>
 <hr>
-<p><em>Last run: 22 November, 2021</em></p>
+<p><em>Last run: 28 January, 2022</em></p>
 </div>
   </div>
 
@@ -309,7 +329,7 @@ TF1_S1 0  50 0.0 50 0.0 0.7853982 0  2.5</code></pre>
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.9000.9000.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>

@@ -34,7 +34,7 @@ v2 <- read_tmat(f2)
 s <- subset(v, wavelength == 650 & n <=3 & np <=3)
 s2 <- subset(v2, wavelength == 650 & n <=3 & np <=3)
 
-g <- grid.arrange(display_tmat(s) + ggtitle('spheroid T-matrix'),
+g <- egg::ggarrange(display_tmat(s) + ggtitle('spheroid T-matrix'),
 display_tmat(s2) + ggtitle('dimer T-matrix'),ncol=2)
 
 ## ----staged2, message=FALSE, echo=1:2----
@@ -59,7 +59,7 @@ v2 <- read_tmat(f2)
 s <- subset(v, wavelength == 650 & n <=3 & np <=3)
 s2 <- subset(v2, wavelength == 650 & n <=3 & np <=3)
 
-g <- grid.arrange(display_tmat(s) + ggtitle('spheroid T-matrix'),
+g <- egg::ggarrange(display_tmat(s) + ggtitle('spheroid T-matrix'),
                   display_tmat(s2) + ggtitle('dimer T-matrix'),ncol=2)
 
 
@@ -83,7 +83,7 @@ v2 <- read_tmat(f2)
 s <- subset(v, wavelength == 650 & n <=3 & np <=3)
 s2 <- subset(v2, wavelength == 650 & n <=3 & np <=3)
 
-g <- grid.arrange(display_tmat(s) + ggtitle('spheroid T-matrix'),
+g <- egg::ggarrange(display_tmat(s) + ggtitle('spheroid T-matrix'),
                   display_tmat(s2) + ggtitle('dimer T-matrix'),ncol=2)
 
 

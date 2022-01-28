@@ -51,7 +51,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">terms</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.9</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -96,7 +96,8 @@
       <a href="../../articles/09_spectrum_near_field/09_spectrum_near_field.html">09 orientation-averaged near field spectrum</a>
     </li>
     <li class="divider">
-    <li class="dropdown-header">Advanced examples &amp; testing</li>
+    </li>
+<li class="dropdown-header">Advanced examples &amp; testing</li>
     <li>
       <a href="../../articles/10_shell_absorption/10_shell_absorption.html">10 shell absorption</a>
     </li>
@@ -140,8 +141,27 @@
     <li>
       <a href="../../articles/106_balancing/106_balancing.html">106 balancing</a>
     </li>
-    <li class="divider">
     <li>
+      <a href="../../articles/109_individual_absorption/109_individual_absorption.html">109 individual absorption</a>
+    </li>
+    <li>
+      <a href="../../articles/110_alpha_tensor/110_alpha_tensor.html">110 alpha tensor</a>
+    </li>
+    <li>
+      <a href="../../articles/111_polarised_nf/111_polarised_nf.html">111 polarised OA near-fields</a>
+    </li>
+    <li class="divider">
+    </li>
+<li class="dropdown-header">Validation</li>
+    <li>
+      <a href="../../articles/1001_mstm_ff/1001_mstm_ff.html">1001 MSTM far-field</a>
+    </li>
+    <li>
+      <a href="../../articles/1003_cda/1003_cda.html">1003 CDA dichroism</a>
+    </li>
+    <li class="divider">
+    </li>
+<li>
       <a href="../../articles/Indexing.html">Indexing conventions</a>
     </li>
   </ul>
@@ -176,8 +196,8 @@
 
       
 
-      </header><script src="108_timing_nf_files/header-attrs-2.11/header-attrs.js"></script><script src="108_timing_nf_files/htmlwidgets-1.5.4/htmlwidgets.js"></script><link href="108_timing_nf_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
-<script src="108_timing_nf_files/datatables-binding-0.19/datatables.js"></script><script src="108_timing_nf_files/jquery-3.6.0/jquery-3.6.0.min.js"></script><link href="108_timing_nf_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet">
+      </header><script src="108_timing_nf_files/htmlwidgets-1.5.4/htmlwidgets.js"></script><link href="108_timing_nf_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+<script src="108_timing_nf_files/datatables-binding-0.19/datatables.js"></script><link href="108_timing_nf_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet">
 <link href="108_timing_nf_files/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet">
 <script src="108_timing_nf_files/dt-core-1.10.20/js/jquery.dataTables.min.js"></script><link href="108_timing_nf_files/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet">
 <script src="108_timing_nf_files/crosstalk-1.1.1/js/crosstalk.min.js"></script><div class="row">
@@ -185,18 +205,18 @@
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Timings, near-field calculations</h1>
             
-            <h4 data-toc-skip class="date">22 November, 2021</h4>
+            <h4 data-toc-skip class="date">28 January, 2022</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/master/vignettes/108_timing_nf/108_timing_nf.Rmd" class="external-link"><code>vignettes/108_timing_nf/108_timing_nf.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/108_timing_nf/108_timing_nf.Rmd" class="external-link"><code>vignettes/108_timing_nf/108_timing_nf.Rmd</code></a></small>
       <div class="hidden name"><code>108_timing_nf.Rmd</code></div>
 
     </div>
 
     
     
-<div id="objective" class="section level2">
-<h2 class="hasAnchor">
-<a href="#objective" class="anchor" aria-hidden="true"></a>Objective</h2>
+<div class="section level2">
+<h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
+</h2>
 <p>This example considers the scaling of computational time with respect to key parameters:</p>
 <ul>
 <li>number of particles</li>
@@ -206,11 +226,11 @@
 </ul>
 <p>The number of wavelengths simply scales the computation time for all other parameters, as everything needs to be re-calculated for each wavelength (assuming negligible input-output time, compared to the calculations).</p>
 </div>
-<div id="parameters" class="section level2">
-<h2 class="hasAnchor">
-<a href="#parameters" class="anchor" aria-hidden="true"></a>Parameters</h2>
-<div id="htmlwidget-c54b886958312807e59e" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c54b886958312807e59e">{"x":{"filter":"none","vertical":false,"data":[[1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,20,20,20,20,20,20,20,20,30,30,30,30,30,30,30,30,40,40,40,40,40,40,40,40],[8,8,8,8,16,16,16,16,8,8,8,8,16,16,16,16,5,5,5,5,10,10,10,10,15,15,15,15,20,20,20,20,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,16,16,16,16,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,5,5,5,5,8,8,8,8,10,10,10,10,15,15,15,15,16,16,16,16,20,20,20,20,8,8,8,8,16,16,16,16,8,8,8,8,16,16,16,16,8,8,8,8,16,16,16,16],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,300,300,300,300,200,200,200,200,100,100,100,100,50,50,50,50,1,1,1,1,1,1,1,1,1,1,1,1,300,300,300,300,200,200,200,200,100,100,100,100,50,50,50,50,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],[true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true],[0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Npart<\/th>\n      <th>Nmax<\/th>\n      <th>Ninc<\/th>\n      <th>OA<\/th>\n      <th>scheme<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"scrollX":true,"columnDefs":[{"className":"dt-right","targets":[0,1,2,4]}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script><p>The structure consists of a helix of gold spheres, with varying number of particles.</p>
+<div class="section level2">
+<h2 id="parameters">Parameters<a class="anchor" aria-label="anchor" href="#parameters"></a>
+</h2>
+<div id="htmlwidget-27e9ed89eee84b3bcc81" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-27e9ed89eee84b3bcc81">{"x":{"filter":"none","vertical":false,"data":[[1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,20,20,20,20,20,20,20,20,30,30,30,30,30,30,30,30,40,40,40,40,40,40,40,40],[8,8,8,8,16,16,16,16,8,8,8,8,16,16,16,16,5,5,5,5,10,10,10,10,15,15,15,15,20,20,20,20,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,16,16,16,16,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,5,5,5,5,8,8,8,8,10,10,10,10,15,15,15,15,16,16,16,16,20,20,20,20,8,8,8,8,16,16,16,16,8,8,8,8,16,16,16,16,8,8,8,8,16,16,16,16],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,300,300,300,300,200,200,200,200,100,100,100,100,50,50,50,50,1,1,1,1,1,1,1,1,1,1,1,1,300,300,300,300,200,200,200,200,100,100,100,100,50,50,50,50,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],[true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true],[0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Npart<\/th>\n      <th>Nmax<\/th>\n      <th>Ninc<\/th>\n      <th>OA<\/th>\n      <th>scheme<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"scrollX":true,"columnDefs":[{"className":"dt-right","targets":[0,1,2,4]}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script><p>The structure consists of a helix of gold spheres, with varying number of particles.</p>
 <style>
 .x3d_scene {
 float:right;
@@ -219,15 +239,15 @@ margin:0em;
   </style>
 <p><x3d width="200px" height="150px" class="x3d_scene"><scene><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="-475 -475 671.75144212722"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="-425 -425 601.040764008565"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="-375 -375 530.33008588991"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="-325 -325 459.619407771255"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="-275 -275 388.908729652601"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="-225 -225 318.198051533946"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="-175 -175 247.487373415291"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="-125 -125 176.776695296636"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="-75 -75 106.066017177982"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="-25 -25 35.3553390593273"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="25 25 -35.3553390593273"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="75 75 -106.066017177982"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="125 125 -176.776695296637"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="175 175 -247.487373415292"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="225 225 -318.198051533947"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="275 275 -388.908729652601"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="325 325 -459.619407771256"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="375 375 -530.330085889911"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="425 425 -601.040764008566"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="475 475 -671.75144212722"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><shape><indexedlineset colorpervertex="false" colorindex="0 1 2" coordindex="0 1 -1 0 2 -1 0 3 -1"><coordinate point="0 0 0 100 0 0 0 100 0 0 0 100"></coordinate><color color="1 0 0 0 1 0 0.2 0.2 1"></color></indexedlineset></shape><viewpoint centerofrotation="0 0 0" position="0 0 300" orientation="0 0 1 0"></viewpoint></scene></x3d></p>
 </div>
-<div id="total-timings" class="section level2">
-<h2 class="hasAnchor">
-<a href="#total-timings" class="anchor" aria-hidden="true"></a>Total timings</h2>
+<div class="section level2">
+<h2 id="total-timings">Total timings<a class="anchor" aria-label="anchor" href="#total-timings"></a>
+</h2>
 <p>We first look at the total run time summaries, as a function of number of particles <span class="math inline">\(Npart\)</span>, multipolar order <span class="math inline">\(Nmax\)</span>, and number of incidence directions <span class="math inline">\(Ninc\)</span>.</p>
 <p><img src="108_timing_nf_files/figure-html/fulltimings-1.png" width="960"></p>
 </div>
-<div id="detailed-timings-subroutines" class="section level2">
-<h2 class="hasAnchor">
-<a href="#detailed-timings-subroutines" class="anchor" aria-hidden="true"></a>Detailed timings (subroutines)</h2>
+<div class="section level2">
+<h2 id="detailed-timings-subroutines">Detailed timings (subroutines)<a class="anchor" aria-label="anchor" href="#detailed-timings-subroutines"></a>
+</h2>
 <p>At <code>Verbosity &gt; 0</code> we can also access the timings within subroutines, to break down the calculation and identify time-consuming steps.</p>
 <pre><code>tibble [12,309 × 10] (S3: tbl_df/tbl/data.frame)
  $ Npart  : num [1:12309] 1 1 1 1 1 1 1 1 1 1 ...
@@ -253,28 +273,28 @@ margin:0em;
 [15] "calcVSWs"                      "calcOaExtField"               
 [17] "irreg calcVSWs"                "reg calcVSWs"                 
 [19] "calcOaLDOC"                    "post-inversion"               </code></pre>
-<div id="varying-number-of-particles" class="section level3">
-<h3 class="hasAnchor">
-<a href="#varying-number-of-particles" class="anchor" aria-hidden="true"></a>Varying number of particles</h3>
+<div class="section level3">
+<h3 id="varying-number-of-particles">Varying number of particles<a class="anchor" aria-label="anchor" href="#varying-number-of-particles"></a>
+</h3>
 <p><img src="108_timing_nf_files/figure-html/detailedtimings_Npart-1.png" width="960"></p>
 <p>Details of the <code>solve</code> subroutine are shown below</p>
 <p><img src="108_timing_nf_files/figure-html/detailedtimings_Npart_2-1.png" width="960"></p>
 </div>
-<div id="varying-maximum-multipole-order" class="section level3">
-<h3 class="hasAnchor">
-<a href="#varying-maximum-multipole-order" class="anchor" aria-hidden="true"></a>Varying maximum multipole order</h3>
+<div class="section level3">
+<h3 id="varying-maximum-multipole-order">Varying maximum multipole order<a class="anchor" aria-label="anchor" href="#varying-maximum-multipole-order"></a>
+</h3>
 <p><img src="108_timing_nf_files/figure-html/detailedtimings_Nmax-1.png" width="960"></p>
 <p>Details of the <code>solve</code> subroutine are shown below</p>
 <p><img src="108_timing_nf_files/figure-html/detailedtimings_Nmax_2-1.png" width="960"></p>
 </div>
-<div id="varying-number-of-incidence-directions" class="section level3">
-<h3 class="hasAnchor">
-<a href="#varying-number-of-incidence-directions" class="anchor" aria-hidden="true"></a>Varying number of incidence directions</h3>
+<div class="section level3">
+<h3 id="varying-number-of-incidence-directions">Varying number of incidence directions<a class="anchor" aria-label="anchor" href="#varying-number-of-incidence-directions"></a>
+</h3>
 <p><img src="108_timing_nf_files/figure-html/detailedtimings_Ninc-1.png" width="960"></p>
 <p>Details of the <code>solve</code> subroutine are shown below</p>
 <p><img src="108_timing_nf_files/figure-html/detailedtimings_Ninc_2-1.png" width="1440"></p>
 <hr>
-<p><em>Last run: 22 November, 2021</em></p>
+<p><em>Last run: 28 January, 2022</em></p>
 </div>
 </div>
   </div>
@@ -296,7 +316,7 @@ margin:0em;
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.9000.9000.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>

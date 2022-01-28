@@ -2,7 +2,7 @@ setwd(here::here('vignettes/109_individual_absorption'))
 
 ## ----load----
 library(terms)
-theme_set(egg::theme_article())
+theme_set(theme_grey())
 
 ## ----tpl----
 

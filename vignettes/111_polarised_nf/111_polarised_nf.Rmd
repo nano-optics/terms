@@ -1,0 +1,81 @@
+---
+title: "Polarised orientation-averaged local field intensities"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 2
+    fig_width: 7
+    fig_height: 4
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Polarised orientation-averaged local field intensities}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE}
+library(knitr)
+library(terms)
+library(egg)
+library(ggforce)
+# library(purrr)
+library(ggplot2)
+library(egg)
+# library(grid)
+# library(readr)
+options(cli.num_colors = 1)
+theme_set(theme_grey())
+opts_chunk$set(echo = FALSE, warning =FALSE,
+               message=FALSE, comment='', 
+               tidy=FALSE, cache = FALSE)
+do.call(read_chunk, list(path = "_run.R"))
+```
+
+
+## Objective
+
+This example illustrates the calculation of orientation-averaged local field intensities for separate circular polarisations, using the keyword `MapOaQuantity [p]`. The structure consists of a tetramer of Au spheres. Because the structure is chiral, the local fields depend on the handedness of the incident light, even after full orientation averaging.
+
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+library(terms)
+cat('  <style>
+.x3d_scene {
+float:right;
+margin:0em;
+ }
+  </style>')
+
+ge <- get_geometry('input_u')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,200), width = "200px", height = "150px", default_material='gold')
+```
+We run three simulations: 
+
+- `MapOaQuantity unpolarised`: returns orientation-averaged near fields, also averaged over polarisation
+- `MapOaQuantity polarised`, with `Incidence 0 0 0 1` triggering both L and R polarisations
+- `MapOaQuantity polarised`, with `Incidence 0 0 0 2` triggering only R polarisation
+
+
+```{bash input}
+cat input_L
+```
+
+```{r read}
+```
+
+```{r load, cache=FALSE}
+```
+
+```{r plot, fig.height=10,fig.width=8}
+```
+
+
+-----
+
+```{r cleanup}
+```
+_Last run: `r format(Sys.time(), '%d %B, %Y')`_

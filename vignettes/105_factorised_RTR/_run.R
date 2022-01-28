@@ -3,7 +3,7 @@ setwd(here('vignettes/105_factorised_RTR'))
 
 ## ----load----
 library(terms)
-theme_set(egg::theme_article())
+theme_set(theme_grey())
 
 ## ----tpl----
 

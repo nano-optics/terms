@@ -4,7 +4,7 @@ setwd(here('vignettes/107_WGM'))
 
 ## ----load----
 library(terms)
-theme_set(egg::theme_article())
+theme_set(theme_grey())
 
 # ----tpl----
 

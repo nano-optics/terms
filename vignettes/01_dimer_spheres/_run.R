@@ -2,7 +2,7 @@ setwd(here::here("vignettes/01_dimer_spheres"))
 ## ----load----
 library(terms)
 library(dplyr)
-theme_set(egg::theme_article())
+theme_set(theme_grey())
 
 ## ----run----
 system("../../build/terms input > log")

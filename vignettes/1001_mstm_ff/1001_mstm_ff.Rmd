@@ -1,0 +1,68 @@
+---
+title: "Far-field comparison with MSTM"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 2
+    fig_width: 7
+    fig_height: 6
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Far-field comparison with MSTM}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE}
+library(knitr)
+library(terms)
+library(ggplot2)
+library(rhdf5)
+options(cli.num_colors = 1)
+theme_set(theme_grey())
+opts_chunk$set(echo = FALSE, warning =FALSE,
+               message=FALSE, comment='', 
+               tidy=FALSE, cache = FALSE)
+do.call(read_chunk, list(path = "_run.R"))
+```
+
+## Objective
+
+This example compares the results obtained with TERMS and MSTM for orientation-averaged far-field cross-sections of a helix of Au nanospheres. 
+
+```{r read, cache=FALSE}
+```
+
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+library(terms)
+cat('  <style>
+.x3d_scene {
+float:right;
+margin:0em;
+ }
+  </style>')
+
+ge <- get_geometry('input')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,800), width = "200px", height = "150px", default_material='gold')
+```
+
+This simulation uses the following `input` file
+```{bash input}
+cat input
+```
+
+
+```{r comparison}
+```
+
+
+-----
+
+```{r cleanup}
+```
+_Last run: `r format(Sys.time(), '%d %B, %Y')`_

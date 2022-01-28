@@ -51,7 +51,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">terms</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.9</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -96,7 +96,8 @@
       <a href="../../articles/09_spectrum_near_field/09_spectrum_near_field.html">09 orientation-averaged near field spectrum</a>
     </li>
     <li class="divider">
-    <li class="dropdown-header">Advanced examples &amp; testing</li>
+    </li>
+<li class="dropdown-header">Advanced examples &amp; testing</li>
     <li>
       <a href="../../articles/10_shell_absorption/10_shell_absorption.html">10 shell absorption</a>
     </li>
@@ -140,8 +141,27 @@
     <li>
       <a href="../../articles/106_balancing/106_balancing.html">106 balancing</a>
     </li>
-    <li class="divider">
     <li>
+      <a href="../../articles/109_individual_absorption/109_individual_absorption.html">109 individual absorption</a>
+    </li>
+    <li>
+      <a href="../../articles/110_alpha_tensor/110_alpha_tensor.html">110 alpha tensor</a>
+    </li>
+    <li>
+      <a href="../../articles/111_polarised_nf/111_polarised_nf.html">111 polarised OA near-fields</a>
+    </li>
+    <li class="divider">
+    </li>
+<li class="dropdown-header">Validation</li>
+    <li>
+      <a href="../../articles/1001_mstm_ff/1001_mstm_ff.html">1001 MSTM far-field</a>
+    </li>
+    <li>
+      <a href="../../articles/1003_cda/1003_cda.html">1003 CDA dichroism</a>
+    </li>
+    <li class="divider">
+    </li>
+<li>
       <a href="../../articles/Indexing.html">Indexing conventions</a>
     </li>
   </ul>
@@ -176,8 +196,8 @@
 
       
 
-      </header><script src="101_timing_files/header-attrs-2.11/header-attrs.js"></script><script src="101_timing_files/htmlwidgets-1.5.4/htmlwidgets.js"></script><link href="101_timing_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
-<script src="101_timing_files/datatables-binding-0.19/datatables.js"></script><script src="101_timing_files/jquery-3.6.0/jquery-3.6.0.min.js"></script><link href="101_timing_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet">
+      </header><script src="101_timing_files/htmlwidgets-1.5.4/htmlwidgets.js"></script><link href="101_timing_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+<script src="101_timing_files/datatables-binding-0.19/datatables.js"></script><link href="101_timing_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet">
 <link href="101_timing_files/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet">
 <script src="101_timing_files/dt-core-1.10.20/js/jquery.dataTables.min.js"></script><link href="101_timing_files/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet">
 <script src="101_timing_files/crosstalk-1.1.1/js/crosstalk.min.js"></script><div class="row">
@@ -185,18 +205,18 @@
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Timings</h1>
             
-            <h4 data-toc-skip class="date">22 November, 2021</h4>
+            <h4 data-toc-skip class="date">28 January, 2022</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/master/vignettes/101_timing/101_timing.Rmd" class="external-link"><code>vignettes/101_timing/101_timing.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/101_timing/101_timing.Rmd" class="external-link"><code>vignettes/101_timing/101_timing.Rmd</code></a></small>
       <div class="hidden name"><code>101_timing.Rmd</code></div>
 
     </div>
 
     
     
-<div id="objective" class="section level2">
-<h2 class="hasAnchor">
-<a href="#objective" class="anchor" aria-hidden="true"></a>Objective</h2>
+<div class="section level2">
+<h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
+</h2>
 <p>This example considers the scaling of computational time with respect to key parameters:</p>
 <ul>
 <li>number of particles</li>
@@ -206,11 +226,11 @@
 </ul>
 <p>The number of wavelengths simply scales the computation time for all other parameters, as everything needs to be re-calculated for each wavelength (assuming negligible input-output time, compared to the calculations).</p>
 </div>
-<div id="parameters" class="section level2">
-<h2 class="hasAnchor">
-<a href="#parameters" class="anchor" aria-hidden="true"></a>Parameters</h2>
-<div id="htmlwidget-780ce3d30b3fa62f428d" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-780ce3d30b3fa62f428d">{"x":{"filter":"none","vertical":false,"data":[[1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,20,20,20,20,20,20,20,20,30,30,30,30,30,30,30,30,40,40,40,40,40,40,40,40],[8,8,8,8,16,16,16,16,8,8,8,8,16,16,16,16,5,5,5,5,10,10,10,10,15,15,15,15,20,20,20,20,25,25,25,25,30,30,30,30,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,16,16,16,16,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,5,5,5,5,8,8,8,8,10,10,10,10,15,15,15,15,16,16,16,16,20,20,20,20,25,25,25,25,30,30,30,30,8,8,8,8,16,16,16,16,8,8,8,8,16,16,16,16,8,8,8,8,16,16,16,16],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,500,500,500,500,400,400,400,400,300,300,300,300,200,200,200,200,100,100,100,100,50,50,50,50,1,1,1,1,1,1,1,1,1,1,1,1,500,500,500,500,400,400,400,400,300,300,300,300,200,200,200,200,100,100,100,100,50,50,50,50,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],[0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Npart<\/th>\n      <th>Nmax<\/th>\n      <th>Ninc<\/th>\n      <th>scheme<\/th>\n      <th>centred<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"scrollX":true,"columnDefs":[{"className":"dt-right","targets":[0,1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script><p>The structure consists of a helix of gold spheres, with varying number of particles.</p>
+<div class="section level2">
+<h2 id="parameters">Parameters<a class="anchor" aria-label="anchor" href="#parameters"></a>
+</h2>
+<div id="htmlwidget-24ab3e36df41fa4f7515" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-24ab3e36df41fa4f7515">{"x":{"filter":"none","vertical":false,"data":[[1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,20,20,20,20,20,20,20,20,30,30,30,30,30,30,30,30,40,40,40,40,40,40,40,40],[8,8,8,8,16,16,16,16,8,8,8,8,16,16,16,16,5,5,5,5,10,10,10,10,15,15,15,15,20,20,20,20,25,25,25,25,30,30,30,30,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,16,16,16,16,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,5,5,5,5,8,8,8,8,10,10,10,10,15,15,15,15,16,16,16,16,20,20,20,20,25,25,25,25,30,30,30,30,8,8,8,8,16,16,16,16,8,8,8,8,16,16,16,16,8,8,8,8,16,16,16,16],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,500,500,500,500,400,400,400,400,300,300,300,300,200,200,200,200,100,100,100,100,50,50,50,50,1,1,1,1,1,1,1,1,1,1,1,1,500,500,500,500,400,400,400,400,300,300,300,300,200,200,200,200,100,100,100,100,50,50,50,50,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],[0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Npart<\/th>\n      <th>Nmax<\/th>\n      <th>Ninc<\/th>\n      <th>scheme<\/th>\n      <th>centred<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"scrollX":true,"columnDefs":[{"className":"dt-right","targets":[0,1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script><p>The structure consists of a helix of gold spheres, with varying number of particles.</p>
 <style>
 .x3d_scene {
 float:right;
@@ -242,15 +262,15 @@ $ detail  &lt;chr&gt; "calcSphBessels (reg. &amp; irreg)", "calcMieTMat", "calcW
 $ cpu     &lt;dbl&gt; 0.001346, 0.003255, 0.000000, 0.013800, 0.000703, 0.104900, 0.…
 $ total   &lt;dbl&gt; 0.000, 0.000, 0.000, 0.001, 0.000, 0.009, 0.000, 0.000, 0.000,…</code></pre>
 </div>
-<div id="total-timings" class="section level2">
-<h2 class="hasAnchor">
-<a href="#total-timings" class="anchor" aria-hidden="true"></a>Total timings</h2>
+<div class="section level2">
+<h2 id="total-timings">Total timings<a class="anchor" aria-label="anchor" href="#total-timings"></a>
+</h2>
 <p>We first look at the total run time summaries, as a function of number of particles <span class="math inline">\(Npart\)</span>, multipolar order <span class="math inline">\(Nmax\)</span>, and number of incidence directions <span class="math inline">\(Ninc\)</span>.</p>
 <p><img src="101_timing_files/figure-html/fulltimings-1.png" width="960"></p>
 </div>
-<div id="detailed-timings-subroutines" class="section level2">
-<h2 class="hasAnchor">
-<a href="#detailed-timings-subroutines" class="anchor" aria-hidden="true"></a>Detailed timings (subroutines)</h2>
+<div class="section level2">
+<h2 id="detailed-timings-subroutines">Detailed timings (subroutines)<a class="anchor" aria-label="anchor" href="#detailed-timings-subroutines"></a>
+</h2>
 <p>At <code>Verbosity &gt; 0</code> we can also access the timings within subroutines, to break down the calculation and identify time-consuming steps.</p>
 <pre><code>tibble [53,722 × 10] (S3: tbl_df/tbl/data.frame)
  $ Npart  : num [1:53722] 1 1 1 1 1 1 1 1 1 1 ...
@@ -278,9 +298,9 @@ $ total   &lt;dbl&gt; 0.000, 0.000, 0.000, 0.001, 0.000, 0.009, 0.000, 0.000, 0.
 [19] "contractTmat"                   "calcAbsMat"                    
 [21] "calcOaStout"                    "calcOAprops"                   
 [23] "post-inversion"                </code></pre>
-<div id="varying-number-of-particles" class="section level3">
-<h3 class="hasAnchor">
-<a href="#varying-number-of-particles" class="anchor" aria-hidden="true"></a>Varying number of particles</h3>
+<div class="section level3">
+<h3 id="varying-number-of-particles">Varying number of particles<a class="anchor" aria-label="anchor" href="#varying-number-of-particles"></a>
+</h3>
 <p><img src="101_timing_files/figure-html/detailedtimings_Npart-1.png" width="960"></p>
 <p>Details of the <code>solve</code> subroutine are shown below</p>
 <p><img src="101_timing_files/figure-html/detailedtimings_Npart_2-1.png" width="960"></p>
@@ -290,17 +310,17 @@ $ total   &lt;dbl&gt; 0.000, 0.000, 0.000, 0.001, 0.000, 0.009, 0.000, 0.000, 0.
 <li>Mackwoski’s Scheme (3) is very performant across the board; in fact it is about as fast as solving the original coupled-system without seeking the collective T-matrix, with the advantage that it also calculates orientation-averaged properties</li>
 </ul>
 </div>
-<div id="varying-maximum-multipole-order" class="section level3">
-<h3 class="hasAnchor">
-<a href="#varying-maximum-multipole-order" class="anchor" aria-hidden="true"></a>Varying maximum multipole order</h3>
+<div class="section level3">
+<h3 id="varying-maximum-multipole-order">Varying maximum multipole order<a class="anchor" aria-label="anchor" href="#varying-maximum-multipole-order"></a>
+</h3>
 <p><img src="101_timing_files/figure-html/detailedtimings_Nmax-1.png" width="960"></p>
 <p>Details of the <code>solve</code> subroutine are shown below</p>
 <p><img src="101_timing_files/figure-html/detailedtimings_Nmax_2-1.png" width="960"></p>
 <p>The computational cost scales similarly for all Schemes and subroutines with respect to maximum multipolar order.</p>
 </div>
-<div id="varying-number-of-incidence-directions" class="section level3">
-<h3 class="hasAnchor">
-<a href="#varying-number-of-incidence-directions" class="anchor" aria-hidden="true"></a>Varying number of incidence directions</h3>
+<div class="section level3">
+<h3 id="varying-number-of-incidence-directions">Varying number of incidence directions<a class="anchor" aria-label="anchor" href="#varying-number-of-incidence-directions"></a>
+</h3>
 <p><img src="101_timing_files/figure-html/detailedtimings_Ninc-1.png" width="960"></p>
 <p>Details of the <code>spectrumFF</code> subroutine are shown below</p>
 <p><img src="101_timing_files/figure-html/detailedtimings_Ninc_3-1.png" width="960"></p>
@@ -309,7 +329,7 @@ $ total   &lt;dbl&gt; 0.000, 0.000, 0.000, 0.001, 0.000, 0.009, 0.000, 0.000, 0.
 <p>Solving a linear system for multiple incidences (right hand side) differs between <code>Scheme = 0</code> (direct solve) and the other schemes (which seek a collective T-matrix). This is visible in routine <code>solLinSys</code>, which shows linear scaling in <code>Scheme = 0</code> while Schemes 1, 2, 3 have almost constant performance.</p>
 <p>Curiously, the total timings rise sharply between 1 and 50 incidence angles for some schemes, suggesting that another subroutine is doing substantial computations. This may point to a possible optimisation in the future.</p>
 <hr>
-<p><em>Last run: 22 November, 2021</em></p>
+<p><em>Last run: 28 January, 2022</em></p>
 </div>
 </div>
   </div>
@@ -331,7 +351,7 @@ $ total   &lt;dbl&gt; 0.000, 0.000, 0.000, 0.001, 0.000, 0.009, 0.000, 0.000, 0.
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.9000.9000.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>

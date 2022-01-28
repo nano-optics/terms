@@ -1,0 +1,5 @@
+OBJECT MyMesh
+	MESHFILE cube.mphtxt
+	MATERIAL FILE_epsilon.dat
+ENDOBJECT
+

@@ -51,7 +51,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">terms</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.9</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -96,7 +96,8 @@
       <a href="../../articles/09_spectrum_near_field/09_spectrum_near_field.html">09 orientation-averaged near field spectrum</a>
     </li>
     <li class="divider">
-    <li class="dropdown-header">Advanced examples &amp; testing</li>
+    </li>
+<li class="dropdown-header">Advanced examples &amp; testing</li>
     <li>
       <a href="../../articles/10_shell_absorption/10_shell_absorption.html">10 shell absorption</a>
     </li>
@@ -140,8 +141,27 @@
     <li>
       <a href="../../articles/106_balancing/106_balancing.html">106 balancing</a>
     </li>
-    <li class="divider">
     <li>
+      <a href="../../articles/109_individual_absorption/109_individual_absorption.html">109 individual absorption</a>
+    </li>
+    <li>
+      <a href="../../articles/110_alpha_tensor/110_alpha_tensor.html">110 alpha tensor</a>
+    </li>
+    <li>
+      <a href="../../articles/111_polarised_nf/111_polarised_nf.html">111 polarised OA near-fields</a>
+    </li>
+    <li class="divider">
+    </li>
+<li class="dropdown-header">Validation</li>
+    <li>
+      <a href="../../articles/1001_mstm_ff/1001_mstm_ff.html">1001 MSTM far-field</a>
+    </li>
+    <li>
+      <a href="../../articles/1003_cda/1003_cda.html">1003 CDA dichroism</a>
+    </li>
+    <li class="divider">
+    </li>
+<li>
       <a href="../../articles/Indexing.html">Indexing conventions</a>
     </li>
   </ul>
@@ -176,23 +196,23 @@
 
       
 
-      </header><script src="11_convergence_files/header-attrs-2.11/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Convergence with respect to maximum multipole order of individual scatterers</h1>
             
-            <h4 data-toc-skip class="date">22 November, 2021</h4>
+            <h4 data-toc-skip class="date">28 January, 2022</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/master/vignettes/11_convergence/11_convergence.Rmd" class="external-link"><code>vignettes/11_convergence/11_convergence.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/11_convergence/11_convergence.Rmd" class="external-link"><code>vignettes/11_convergence/11_convergence.Rmd</code></a></small>
       <div class="hidden name"><code>11_convergence.Rmd</code></div>
 
     </div>
 
     
     
-<div id="objective" class="section level2">
-<h2 class="hasAnchor">
-<a href="#objective" class="anchor" aria-hidden="true"></a>Objective</h2>
+<div class="section level2">
+<h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
+</h2>
 <p>This example checks the convergence of orientation-averaged cross-sections with respect the maximum multipolar order describing individual scatterers. The structure consists of four gold spheres in water arranged in a helix.</p>
 <style>
 .x3d_scene {
@@ -220,26 +240,26 @@ Au_S1 -30.9017 95.10565  30 25.0</code></pre>
 <pre><code>Rows: 15,855
 Columns: 6
 $ nmax       &lt;chr&gt; "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1",…
-$ wavelength &lt;dbl&gt; 400, 402, 404, 406, 408, 410, 412, 414, 416, 418, 420, 422,…
+$ wavelength &lt;dbl&gt; 400, 400, 400, 400, 400, 400, 400, 402, 402, 402, 402, 402,…
 $ crosstype  &lt;chr&gt; "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Ab…
-$ variable   &lt;fct&gt; total, total, total, total, total, total, total, total, tot…
-$ dichroism  &lt;dbl&gt; 0.8899669, 0.9016020, 0.9131909, 0.9246548, 0.9359208, 0.94…
-$ average    &lt;dbl&gt; 12481.17, 12461.23, 12440.24, 12418.38, 12395.84, 12372.83,…</code></pre>
+$ variable   &lt;chr&gt; "total", "I1", "I2", "I3", "I4", "I5", "I6", "total", "I1",…
+$ dichroism  &lt;dbl&gt; 8.899669e-01, 1.345960e+00, -4.605594e-01, 6.440675e-03, -1…
+$ average    &lt;dbl&gt; 1.248117e+04, 5.463212e+03, 5.211753e+03, 1.578303e+03, 2.1…</code></pre>
 <p>The output consists of a number of files, storing the far-field cross-sections for each order from 1 to <span class="math inline">\(n_{1}\)</span>.</p>
 </div>
-<div id="convergence-with-nmax" class="section level2">
-<h2 class="hasAnchor">
-<a href="#convergence-with-nmax" class="anchor" aria-hidden="true"></a>Convergence with Nmax</h2>
+<div class="section level2">
+<h2 id="convergence-with-nmax">Convergence with Nmax<a class="anchor" aria-label="anchor" href="#convergence-with-nmax"></a>
+</h2>
 <p>We see that in this example the cross-sections converge after only a few multipoles, and that the dipole term gives already a reasonable approximation of the spectral lineshape,</p>
 <p><img src="11_convergence_files/figure-html/oa-1.png" width="700"></p>
 </div>
-<div id="convergence-with-multipoleorder" class="section level2">
-<h2 class="hasAnchor">
-<a href="#convergence-with-multipoleorder" class="anchor" aria-hidden="true"></a>Convergence with “MultipoleOrder”</h2>
+<div class="section level2">
+<h2 id="convergence-with-multipoleorder">Convergence with “MultipoleOrder”<a class="anchor" aria-label="anchor" href="#convergence-with-multipoleorder"></a>
+</h2>
 <p>The study above used masking of individual T-matrices to restrict the maximum Nmax, keeping <code>MultipoleOrder = 6</code> constant in all simulations. This is more meaningful, since the <code>MultipoleOrder</code> keyword refers to the order of expansions in the multiple scattering calculation, which typically requires a larger cutoff to accurately translate spherical waves from one origin to another. If we were to look at the individual contributions of the multipoles appearing in the cluster’s expansion as a whole, the convergence looks very different (and arguably has a less physical interpretation).</p>
 <p><img src="11_convergence_files/figure-html/naive-1.png" width="700"></p>
 <hr>
-<p><em>Last run: 22 November, 2021</em></p>
+<p><em>Last run: 28 January, 2022</em></p>
 </div>
   </div>
 
@@ -260,7 +280,7 @@ $ average    &lt;dbl&gt; 12481.17, 12461.23, 12440.24, 12418.38, 12395.84, 12372
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.9000.9000.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>

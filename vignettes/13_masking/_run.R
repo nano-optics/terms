@@ -1,6 +1,8 @@
+setwd(here::here('vignettes/13_masking'))
 
 ## ----load----
 library(terms)
+library(patchwork)
 # library(reshape2)
 # library(purrr)
 # library(ggplot2)
@@ -19,8 +21,8 @@ library(terms)
 af1 <- 'all_orders/prestagedA.txt'
 af2 <- 'all_orders/stagedA_bal.txt'
 
-egg::ggarrange(display_amat(read_amat(af1)) + labs(title='pre-staged'),
-               display_amat(read_amat(af2)) + labs(title='staged'), nrow=1)
+display_amat(read_amat(af1)) + labs(title='pre-staged') +
+  display_amat(read_amat(af2)) + labs(title='staged')
 
 ## ----collective, message=FALSE, echo=1:2----
 
@@ -34,8 +36,8 @@ v2 <- read_tmat(f2)
 s <- subset(v, wavelength == 650 & n <=3 & np <=3)
 s2 <- subset(v2, wavelength == 650 & n <=3 & np <=3)
 
-g <- grid.arrange(display_tmat(s) + ggtitle('spheroid T-matrix'),
-display_tmat(s2) + ggtitle('dimer T-matrix'),ncol=2)
+display_tmat(s) + ggtitle('spheroid T-matrix') +
+  display_tmat(s2) + ggtitle('dimer T-matrix')
 
 ## ----staged2, message=FALSE, echo=1:2----
 af1 <- 'EE1/prestagedA.txt'
@@ -59,8 +61,8 @@ v2 <- read_tmat(f2)
 s <- subset(v, wavelength == 650 & n <=3 & np <=3)
 s2 <- subset(v2, wavelength == 650 & n <=3 & np <=3)
 
-g <- grid.arrange(display_tmat(s) + ggtitle('spheroid T-matrix'),
-                  display_tmat(s2) + ggtitle('dimer T-matrix'),ncol=2)
+display_tmat(s) + ggtitle('spheroid T-matrix') +
+  display_tmat(s2) + ggtitle('dimer T-matrix')
 
 
 
@@ -68,8 +70,8 @@ g <- grid.arrange(display_tmat(s) + ggtitle('spheroid T-matrix'),
 af1 <- 'EE2_MM0/prestagedA.txt'
 af2 <- 'EE2_MM0/stagedA_bal.txt'
 
-egg::ggarrange(display_amat(read_amat(af1)) + labs(title='pre-staged'),
-               display_amat(read_amat(af2)) + labs(title='staged'), nrow=1)
+display_amat(read_amat(af1)) + labs(title='pre-staged') +
+  display_amat(read_amat(af2)) + labs(title='staged')
 
 ## ----collective3, message=FALSE, echo=1:2----
 
@@ -83,7 +85,7 @@ v2 <- read_tmat(f2)
 s <- subset(v, wavelength == 650 & n <=3 & np <=3)
 s2 <- subset(v2, wavelength == 650 & n <=3 & np <=3)
 
-g <- grid.arrange(display_tmat(s) + ggtitle('spheroid T-matrix'),
-                  display_tmat(s2) + ggtitle('dimer T-matrix'),ncol=2)
+display_tmat(s) + ggtitle('spheroid T-matrix') +
+  display_tmat(s2) + ggtitle('dimer T-matrix')
 
 

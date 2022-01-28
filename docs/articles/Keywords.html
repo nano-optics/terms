@@ -51,7 +51,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">terms</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.9</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -96,7 +96,8 @@
       <a href="../articles/09_spectrum_near_field/09_spectrum_near_field.html">09 orientation-averaged near field spectrum</a>
     </li>
     <li class="divider">
-    <li class="dropdown-header">Advanced examples &amp; testing</li>
+    </li>
+<li class="dropdown-header">Advanced examples &amp; testing</li>
     <li>
       <a href="../articles/10_shell_absorption/10_shell_absorption.html">10 shell absorption</a>
     </li>
@@ -140,8 +141,27 @@
     <li>
       <a href="../articles/106_balancing/106_balancing.html">106 balancing</a>
     </li>
-    <li class="divider">
     <li>
+      <a href="../articles/109_individual_absorption/109_individual_absorption.html">109 individual absorption</a>
+    </li>
+    <li>
+      <a href="../articles/110_alpha_tensor/110_alpha_tensor.html">110 alpha tensor</a>
+    </li>
+    <li>
+      <a href="../articles/111_polarised_nf/111_polarised_nf.html">111 polarised OA near-fields</a>
+    </li>
+    <li class="divider">
+    </li>
+<li class="dropdown-header">Validation</li>
+    <li>
+      <a href="../articles/1001_mstm_ff/1001_mstm_ff.html">1001 MSTM far-field</a>
+    </li>
+    <li>
+      <a href="../articles/1003_cda/1003_cda.html">1003 CDA dichroism</a>
+    </li>
+    <li class="divider">
+    </li>
+<li>
       <a href="../articles/Indexing.html">Indexing conventions</a>
     </li>
   </ul>
@@ -176,13 +196,13 @@
 
       
 
-      </header><script src="Keywords_files/header-attrs-2.11/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>keywords</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/master/vignettes/Keywords.Rmd" class="external-link"><code>vignettes/Keywords.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/Keywords.Rmd" class="external-link"><code>vignettes/Keywords.Rmd</code></a></small>
       <div class="hidden name"><code>Keywords.Rmd</code></div>
 
     </div>
@@ -190,12 +210,11 @@
     
     
 <p>List of (case sensitive!) keywords and corresponding arguments supported by <strong>TERMS</strong>. Optional arguments are enclosed in square brackets (nested in some cases).</p>
-<div id="main-input-parameters" class="section level2">
-<h2 class="hasAnchor">
-<a href="#main-input-parameters" class="anchor" aria-hidden="true"></a>Main input parameters</h2>
-<div id="modeandscheme-m-s" class="section level3">
-<h3 class="hasAnchor">
-<a href="#modeandscheme-m-s" class="anchor" aria-hidden="true"></a>ModeAndScheme <em>M</em> <em>S</em>
+<div class="section level2">
+<h2 id="main-input-parameters">Main input parameters<a class="anchor" aria-label="anchor" href="#main-input-parameters"></a>
+</h2>
+<div class="section level3">
+<h3 id="modeandscheme-m-s">ModeAndScheme <em>M</em> <em>S</em><a class="anchor" aria-label="anchor" href="#modeandscheme-m-s"></a>
 </h3>
 <p>If present, this keyword must appear first in the input file. It takes two arguments: positive integer <em>M</em> specifying the desired calculation mode; and non-negative integer <em>S</em> specifying the solution scheme to be used. The default values are <em>M</em> = 2 and <em>S</em> = 3.</p>
 <p><strong>Mode of calculation</strong></p>
@@ -215,9 +234,8 @@
 <em>S &gt; 0</em> will calculate the collective <em>T</em>-matrix either (<em>S = 1</em>) by direct inversion of the complete linear system to obtain <span class="math inline">\(T^{(i,j)}\)</span>, or (<em>S = 2</em>) by using Stout’s iterative scheme for <span class="math inline">\(T^{(i,j)}\)</span>, or (<em>S = 3</em>) by using Mackowski’s scheme for <span class="math inline">\(T^{(i)}\)</span>. Note that fixed-orientation cross-sections are also calculated when <span class="math inline">\(S &gt; 0\)</span>.</li>
 </ul>
 </div>
-<div id="scatterers-n" class="section level3">
-<h3 class="hasAnchor">
-<a href="#scatterers-n" class="anchor" aria-hidden="true"></a>Scatterers <em>N</em>
+<div class="section level3">
+<h3 id="scatterers-n">Scatterers <em>N</em><a class="anchor" aria-label="anchor" href="#scatterers-n"></a>
 </h3>
 <p>This keyword must appear last in the <code>inputfile</code>, with a single positive integer argument <em>N</em> specifying the number of scatterers. The following <em>N</em> lines specify all the required parameters per scatterer, and each line must contain five or more space-separated fields, i.e.</p>
 <pre><code>Tag x y z R [ a b c [ d ] ]     ( if Tag(1:2)  = "TF" )   
@@ -227,9 +245,8 @@
 <p>If the root of <em>Tag</em> is either “TF1”, “TF2”, … , or “TF9”, which correspond to a 1-body <em>T</em>-matrix file listed under the <a href="#TmatrixFiles"><code>TmatrixFiles</code></a> keyword, floats <em>a</em>, <em>b</em>, and <em>c</em> can be supplied to specify the Euler angles describing the scatterer orientation (default angle values are all zero). Another float <em>d</em> may be included to specify the aspect ratio for spheroids, which is currently only used for mapping local field intensity and visualising the geometry. Note that <em>d</em> is interpreted as the ratio of polar (along z) to equatorial (along x or y) length, so that <em>d &gt; 1</em> for prolate spheroids, <em>d &lt; 1</em> for oblate spheroids, and <em>d = 1</em> for spheres (default). Note that for nonspherical particles the circumscribing sphere radius <em>R</em> is used to check for potential geometrical overlap between particles, but also in the balancing scheme.</p>
 <p>If the root of <em>Tag</em> is not “TF?”, the 1-body <em>T</em>-matrix is computed using Mie theory, which is applicable to coated spheres. The expected <em>Tag</em> format is <code>L0@L1@L2@L3</code>, with the character “@” delimiting substrings that specify the material dielectric function of each concentric region inside the scatterer, starting from the core (<em>L0</em>) and going <em>outward</em>. The number of coats is inferred from the number of instances of “@” and is currently capped at 3. <em>Tag</em> of a homogeneous sphere (without layers) should not contain any “@”, i.e. <em>Tag = L0</em>. Currently accepted values for <em>L?</em> are: “Au”, “Ag”, “Al”, “Cr”, “Pt”, “Pd”, “Si”, and “Water” which trigger internal calculation of the wavelength-dependent dielectric functions for the required material, or “DF1”, “DF2”, …, “DF9” to impose a custom dielectric function listed under the <a href="#dielectricfunctions-nfuns-1"><code>DielectricFunctions</code></a> keyword. For coated spheres, the outer radius of each region must be specified by floats <em>R</em>, <em>a</em>, <em>b</em>, <em>c</em> in the order of decreasing size (i.e. going radially <em>inward</em>).</p>
 </div>
-<div id="tmatrixfiles-nfiles" class="section level3">
-<h3 class="hasAnchor">
-<a href="#tmatrixfiles-nfiles" class="anchor" aria-hidden="true"></a>TmatrixFiles <em>N<sub>files</sub></em>
+<div class="section level3">
+<h3 id="tmatrixfiles-nfiles">TmatrixFiles <em>N<sub>files</sub></em><a class="anchor" aria-label="anchor" href="#tmatrixfiles-nfiles"></a>
 </h3>
 <p>Specifies the number of external <em>T</em>-matrix files (default: <em>N<sub>files</sub> = 0</em>). The subsequent <em>N<sub>files</sub></em> lines are each read as a string and then interpreted as a filename. Wrap the string in quotation marks if it contains the relative path or special characters, e.g. <code>"../../tmatrix_Au_spheroid_50x20_water.tmat"</code>. Note that the wavelengths in each file must <em>exactly</em> correspond to the values specified by the <a href="#wavelength-l1-l2-n-"><code>Wavelength</code></a> keyword.</p>
 <p>The <em>T</em>-matrix file format is as follows:</p>
@@ -276,26 +293,24 @@
   2   2   4   4   4   4 -3.640885008022631e-16 4.006450678480949e-14
 ... [truncated]</code></pre>
 </div>
-<div id="dielectricfunctions-nfuns" class="section level3">
-<h3 class="hasAnchor">
-<a href="#dielectricfunctions-nfuns" class="anchor" aria-hidden="true"></a>DielectricFunctions <em>N<sub>funs</sub></em>
+<div class="section level3">
+<h3 id="dielectricfunctions-nfuns">DielectricFunctions <em>N<sub>funs</sub></em><a class="anchor" aria-label="anchor" href="#dielectricfunctions-nfuns"></a>
 </h3>
 <p>Specifies the number of custom dielectric functions (default: <em>N<sub>funs</sub> = 0</em>). The subsequent <em>N<sub>funs</sub></em> lines are each read as a string and then interpreted as either (i) a filename with a relative path or (ii) real and imaginary parts of a constant (i.e. wavelength independent) value. Wrap each string in quotation marks, e.g. <code>"../../epsAg.dat"</code> or <code>"2.25d0 0.0d0"</code>. The files should be in three-column format: the wavelength in nm followed by the real and imaginary parts of the relative dielectric function on each line. The wavelength range in the file must fully contain the range specified by the <a href="#wavelength-l1-l2-n-"><code>Wavelength</code></a> keyword, but the values need not correspond exactly as they will be linearly interpolated.</p>
 </div>
-<div id="medium-x" class="section level3">
-<h3 class="hasAnchor">
-<a href="#medium-x" class="anchor" aria-hidden="true"></a>Medium <em>X</em>
+<div class="section level3">
+<h3 id="medium-x">Medium <em>X</em><a class="anchor" aria-label="anchor" href="#medium-x"></a>
 </h3>
 <p>Sets the real-valued dielectric constant of the host medium (default value is <em>1.0</em>). If <em>X &lt; 0</em> then its magnitude is interpreted as a refractive index (<em>s</em>), from which the dielectric constant is calculated as <span class="math inline">\(X=s^2\)</span>.</p>
 </div>
-<div id="wavelength-l1-l2-n" class="section level3">
-<h3 class="hasAnchor">
-<a href="#wavelength-l1-l2-n" class="anchor" aria-hidden="true"></a>Wavelength <em>L</em><sub>1</sub> [ <em>L<sub>2</sub></em> <em>n</em> ]</h3>
+<div class="section level3">
+<h3 id="wavelength-l1-l2-n">Wavelength <em>L</em><sub>1</sub> [ <em>L<sub>2</sub></em> <em>n</em> ]<a class="anchor" aria-label="anchor" href="#wavelength-l1-l2-n"></a>
+</h3>
 <p>Without the optional arguments, this keyword changes the default wavelength of 666.0 nm to a new value <em>L</em><sub>1</sub>. Including the optional arguments will specify a closed interval [ <em>L</em><sub>1</sub>, <em>L</em><sub>2</sub> ] divided into <em>n</em> regular grid spacings, thus producing <em>n+1</em> wavelengths.</p>
 </div>
-<div id="incidence-a-b-c-p-na-nb-nc" class="section level3">
-<h3 class="hasAnchor">
-<a href="#incidence-a-b-c-p-na-nb-nc" class="anchor" aria-hidden="true"></a>Incidence <em>a</em> <em>b</em> <em>c</em> [ <em>p</em> ] / [ <em>n<sub>a</sub></em> <em>n<sub>b</sub></em> <em>n<sub>c</sub></em> ]</h3>
+<div class="section level3">
+<h3 id="incidence-a-b-c-p-na-nb-nc">Incidence <em>a</em> <em>b</em> <em>c</em> [ <em>p</em> ] / [ <em>n<sub>a</sub></em> <em>n<sub>b</sub></em> <em>n<sub>c</sub></em> ]<a class="anchor" aria-label="anchor" href="#incidence-a-b-c-p-na-nb-nc"></a>
+</h3>
 <p>or</p>
 <p><code>Incidence file filename [p]</code></p>
 <p>This keyword modifies the incident plane-wave. The default travel direction (along <em>z</em> in lab-frame) can be changed by the Euler angles <em>a</em> in the range <span class="math inline">\([0,2\pi)\)</span> and <em>b</em> in the range <span class="math inline">\([0,\pi]\)</span>, coinciding with the azimuthal and the polar angles, respectively, of the spherical polar coordinates in the lab frame. In addition, the amplitude vector can then be rotated about the new travel direction by the third Euler angle <em>c</em> in the range <span class="math inline">\([0,2\pi)\)</span>. All three Euler angles are defined in accordance with the right-hand rule, and the sequence of rotation angles <em>a</em>,<em>b</em>,<em>c</em> corresponds to the intrinsic ZY’Z’ convention. That is: rotate by <em>a</em> about the current <em>z</em>-axis, then by <em>b</em> about the new <em>y</em>-axis, and finally by <em>c</em> about the new <em>z</em>-axis.</p>
@@ -305,14 +320,13 @@
 <p>Multiple incidences can also be read from a file, in which case the argument <em>a</em> must be a string starting with ‘f’ or ‘F’, and <em>b</em> must specify the filename. The file’s first line must contain the total incidence count, <em>n<sub>inc</sub></em>, and the subsequent <em>n<sub>inc</sub></em> lines each must contain four space-separated values: the three Euler angles (<em>a<sub>i</sub></em>, <em>b<sub>i</sub></em>, <em>c<sub>i</sub></em>) and the weight <em>w<sub>i</sub></em> of each incidence. The weights are only used to compute rotational averages for convenience, which is a common use-case.</p>
 <p>In <code>Mode = 1</code> (near-field calculations), if <code>p</code> is set to <code>p=1</code> (default value, linear polarisaiton), the orientation average of the local degree of optical chirality <span class="math inline">\(\langle\mathscr{C}\rangle\)</span> will be calculated for both RCP and LCP (noting that linear polarisation would give 0 everywhere, when orientation-averaged). Since the calculation can be time-consuming, setting <code>p=+/-2</code> triggers the calculation for only that specific circular polarisation.</p>
 </div>
-<div id="multipolecutoff-n1-n2-t" class="section level3">
-<h3 class="hasAnchor">
-<a href="#multipolecutoff-n1-n2-t" class="anchor" aria-hidden="true"></a>MultipoleCutoff <em>n<sub>1</sub></em> [ <em>n<sub>2</sub></em> [ <em>t</em> ] ]</h3>
+<div class="section level3">
+<h3 id="multipolecutoff-n1-n2-t">MultipoleCutoff <em>n<sub>1</sub></em> [ <em>n<sub>2</sub></em> [ <em>t</em> ] ]<a class="anchor" aria-label="anchor" href="#multipolecutoff-n1-n2-t"></a>
+</h3>
 <p>Change the primary multipole cutoff (used for irregular offsetting when staging the linear system) from the default value of 8 to <em>n<sub>1</sub></em>. Another cutoff (used for regular offsetting when “contracting” the collective <em>T</em>-matrix) can be set to <em>n<sub>2</sub></em> &gt;= <em>n<sub>1</sub></em> (equality by default). A relative tolerance <span class="math inline">\(10^t\)</span> (with <span class="math inline">\(t&lt;0\)</span> and <span class="math inline">\(t = -8\)</span> by default) is used in the test for convergence of cross-sections with respect to multipole order <span class="math inline">\(n=1\dots n_2\)</span> (the summation can terminate below <span class="math inline">\(n_2\)</span> if the relative tolerance is reached).</p>
 </div>
-<div id="multipoleselections-ns" class="section level3">
-<h3 class="hasAnchor">
-<a href="#multipoleselections-ns" class="anchor" aria-hidden="true"></a>MultipoleSelections <em>N<sub>s</sub></em>
+<div class="section level3">
+<h3 id="multipoleselections-ns">MultipoleSelections <em>N<sub>s</sub></em><a class="anchor" aria-label="anchor" href="#multipoleselections-ns"></a>
 </h3>
 <p>This keyword defines optional multipole selections for individual <em>T</em>-matrices, and it must be followed by <em>N<sub>s</sub></em> lines with two fields: (i) a string <em>range</em> specifying the selection range; and (ii) a string <em>type</em> specifying the selection type. For example:</p>
 <pre><code>MultipoleSelections 3
@@ -323,97 +337,95 @@ EM1:1_ME1:1  columns</code></pre>
 <p>The <em>type</em> string must either start from “c”, “r”, or “b”, to indicated that the selection is either applied to <em>T</em>-matrix columns, rows, or both (producing non-zero blocks). To clarify, if <em>type(1:1) = “c”</em>, then all <em>T</em>-matrix columns corresponding to multipole orders <em>n &lt; n</em><sub>lo</sub> and <em>n &gt; n</em><sub>hi</sub> will be set to zero. For <em>type(1:1) = “b”</em>, columns <strong>and</strong> rows for <em>n &lt; n</em><sub>lo</sub> and <em>n &gt; n</em><sub>hi</sub> will be set to zero.</p>
 </div>
 </div>
-<div id="output-control" class="section level2">
-<h2 class="hasAnchor">
-<a href="#output-control" class="anchor" aria-hidden="true"></a>Output control</h2>
-<div id="outputformat-f-filename" class="section level3">
-<h3 class="hasAnchor">
-<a href="#outputformat-f-filename" class="anchor" aria-hidden="true"></a>OutputFormat <em>F</em> [ <em>filename</em> ]</h3>
+<div class="section level2">
+<h2 id="output-control">Output control<a class="anchor" aria-label="anchor" href="#output-control"></a>
+</h2>
+<div class="section level3">
+<h3 id="outputformat-f-filename">OutputFormat <em>F</em> [ <em>filename</em> ]<a class="anchor" aria-label="anchor" href="#outputformat-f-filename"></a>
+</h3>
 <p>If present, the output file format <em>F</em> can be switched between plain text (“TXT”, default) and HDF5 (“HDF5”). With “HDF5”, the results will be stored in a file with name “results.h5”, or a user-specified filename (extension <em>.h5</em> added automatically).</p>
 </div>
-<div id="verbosity-l" class="section level3">
-<h3 class="hasAnchor">
-<a href="#verbosity-l" class="anchor" aria-hidden="true"></a>Verbosity <em>L</em>
+<div class="section level3">
+<h3 id="verbosity-l">Verbosity <em>L</em><a class="anchor" aria-label="anchor" href="#verbosity-l"></a>
 </h3>
 <p>Keyword specifying integer-valued verbosity level <em>L</em>. Silent mode (<em>L = 0</em>) prints only error statements and warnings. Physical quantities and some status indicators are printed at low verbosity (<em>L = 1</em>, default value), with various timings and convergence indicators released at medium verbosity (<em>L = 2</em>). The highest level (<em>L = 3</em>) is intended for debugging, releasing all print statements throughout the code.</p>
 </div>
 </div>
-<div id="near-field-specific-keywords" class="section level2">
-<h2 class="hasAnchor">
-<a href="#near-field-specific-keywords" class="anchor" aria-hidden="true"></a>Near-field specific keywords</h2>
-<div id="spacepoints-filename" class="section level3">
-<h3 class="hasAnchor">
-<a href="#spacepoints-filename" class="anchor" aria-hidden="true"></a>SpacePoints <em>filename</em>
+<div class="section level2">
+<h2 id="near-field-specific-keywords">Near-field specific keywords<a class="anchor" aria-label="anchor" href="#near-field-specific-keywords"></a>
+</h2>
+<div class="section level3">
+<h3 id="spacepoints-filename">SpacePoints <em>filename</em><a class="anchor" aria-label="anchor" href="#spacepoints-filename"></a>
 </h3>
 <p>or</p>
 <p><code>SpacePoints</code> <em>x<sub>lo</sub></em> <em>x<sub>hi</sub></em> <em>n<sub>x</sub></em> <em>y<sub>lo</sub></em> <em>y<sub>hi</sub></em> <em>n<sub>y</sub></em> <em>z<sub>lo</sub></em> <em>z<sub>hi</sub></em> <em>n<sub>z</sub></em></p>
 <p>Read (from a file) or calculate (on a regular grid) the Cartesian coordinates of points in space, where the local field quantities are to be evaluated. The file’s first line should contain the total number of space-points, and the subsequent lines must contain the <em>x</em>, <em>y</em>, and <em>z</em> coordinates of each point. A regular grid is specified by a closed interval, e.g. <em>[ x<sub>lo</sub>, x<sub>hi</sub> ]</em>, and the number of bins (<em>n<sub>x</sub></em>) the interval is to be divided into (thus producing <em>n<sub>x</sub>+1</em> grid points along that dimension).</p>
 </div>
-<div id="mapquantity-p-e-b-c" class="section level3">
-<h3 class="hasAnchor">
-<a href="#mapquantity-p-e-b-c" class="anchor" aria-hidden="true"></a>MapQuantity [<em>p</em>] [<em>E</em>] [<em>B</em>] [<em>C</em>]</h3>
+<div class="section level3">
+<h3 id="mapquantity-p-e-b-c">MapQuantity [<em>p</em>] [<em>E</em>] [<em>B</em>] [<em>C</em>]<a class="anchor" aria-label="anchor" href="#mapquantity-p-e-b-c"></a>
+</h3>
 <p>Specify the near-field quantities of interest, in <code>Mode = 1</code>. Integer argument <em>p</em> selects the raising power applied to the field amplitude <span class="math inline">\(|\mathbf{E}|^p\)</span> or <span class="math inline">\(|\mathbf{B}|^p\)</span>. The default is <em>p = 2</em> to produce the field intensity, <em>p = 1</em> is for the field amplitude |E|, <em>p = 4</em> for the (approximate) Raman enhancement factor <em>~|E|<sup>4</sup></em>. Setting <em>p = 0</em> will output the real and imaginary parts of the (vector!) field components at each space-point.</p>
 <p>The optional letters [<em>E</em>] [<em>B</em>] [<em>C</em>] (default: <em>E</em> only) determine which of the near-field properties (electric and magnetic fields and normalised value of local degree of optical chirality) will be calculated.</p>
 </div>
-<div id="mapoaquantity-e-b-c" class="section level3">
-<h3 class="hasAnchor">
-<a href="#mapoaquantity-e-b-c" class="anchor" aria-hidden="true"></a>MapOaQuantity [<em>E</em>] [<em>B</em>] [<em>C</em>]</h3>
+<div class="section level3">
+<h3 id="mapoaquantity-e-b-c">MapOaQuantity [<em>E</em>] [<em>B</em>] [<em>C</em>]<a class="anchor" aria-label="anchor" href="#mapoaquantity-e-b-c"></a>
+</h3>
 <p>This is a keyword applicable in <code>Mode = 1</code>, to request the calculation of analytical orientation-averaged near-field quantities <span class="math inline">\(\langle|\mathbf{E}|^2\rangle\)</span>, <span class="math inline">\(\langle|\mathbf{B}|^2\rangle\)</span>, or <span class="math inline">\(\langle\overline{\mathscr{C}}\rangle\)</span>. If this keyword is not included in the input file, by default none will be calculated. Note that the <a href="#incidence-a-b-c-p-na-nb-nc-"><code>Incidence</code></a> keyword is used to select LCP and RCP (or both).</p>
 </div>
 </div>
-<div id="polarimetry-keywords" class="section level2">
-<h2 class="hasAnchor">
-<a href="#polarimetry-keywords" class="anchor" aria-hidden="true"></a>Polarimetry keywords</h2>
-<div id="scatteringangles-a-b-c-na-nb-nc" class="section level3">
-<h3 class="hasAnchor">
-<a href="#scatteringangles-a-b-c-na-nb-nc" class="anchor" aria-hidden="true"></a>ScatteringAngles <em>a</em> <em>b</em> <em>c</em> / [ <em>n<sub>a</sub></em> <em>n<sub>b</sub></em> <em>n<sub>c</sub></em> ]</h3>
+<div class="section level2">
+<h2 id="polarimetry-keywords">Polarimetry keywords<a class="anchor" aria-label="anchor" href="#polarimetry-keywords"></a>
+</h2>
+<div class="section level3">
+<h3 id="scatteringangles-a-b-c-na-nb-nc">ScatteringAngles <em>a</em> <em>b</em> <em>c</em> / [ <em>n<sub>a</sub></em> <em>n<sub>b</sub></em> <em>n<sub>c</sub></em> ]<a class="anchor" aria-label="anchor" href="#scatteringangles-a-b-c-na-nb-nc"></a>
+</h3>
 <p>This keyword specifies the scattering angles in <code>Mode = 3</code> (polarimetry), for the calculation of Stokes scattering vectors at different scattering angles. The parameters have the same interpretation as for <a href="#incidence-a-b-c-p-na-nb-nc-"><code>Incidence</code></a>.</p>
 <p>Multiple scattering angles can also be read from a file, in which case the argument <code>a</code> must be a string starting with ‘f’ or ‘F’, and <code>b</code> must specify the filename. The file’s first line must contain the number of scattering angles, <em>nsca</em>, and the subsequent <em>nsca</em> lines each must contain three space-separated values: the three Euler angles (<em>ai</em>, <em>bi</em>, <em>ci</em>) for each scattering angle.</p>
 <hr>
 </div>
 </div>
-<div id="advanced-use-development" class="section level2">
-<h2 class="hasAnchor">
-<a href="#advanced-use-development" class="anchor" aria-hidden="true"></a>Advanced use / development</h2>
-<div id="scatterercentredcrosssections" class="section level3">
-<h3 class="hasAnchor">
-<a href="#scatterercentredcrosssections" class="anchor" aria-hidden="true"></a>ScattererCentredCrossSections</h3>
+<div class="section level2">
+<h2 id="advanced-use-development">Advanced use / development<a class="anchor" aria-label="anchor" href="#advanced-use-development"></a>
+</h2>
+<div class="section level3">
+<h3 id="scatterercentredcrosssections">ScattererCentredCrossSections<a class="anchor" aria-label="anchor" href="#scatterercentredcrosssections"></a>
+</h3>
 <p>Applicable in Scheme 1 and 2.</p>
 <p>Triggers Stout’s formulae for fixed and orientation-averaged cross-sections based on scatterer-centred matrices; otherwise, the default behaviour is to collapse the coefficients to a common origin. Note that this does not affect the calculation of fixed-orientation partial shell absorptions for layered spheres, as they are calculated separately.</p>
 </div>
-<div id="dumpcollectivetmatrix-filename" class="section level3">
-<h3 class="hasAnchor">
-<a href="#dumpcollectivetmatrix-filename" class="anchor" aria-hidden="true"></a>DumpCollectiveTmatrix [ <em>filename</em> ]</h3>
+<div class="section level3">
+<h3 id="dumpcollectivetmatrix-filename">DumpCollectiveTmatrix [ <em>filename</em> ]<a class="anchor" aria-label="anchor" href="#dumpcollectivetmatrix-filename"></a>
+</h3>
 <p>If the collective <em>T</em>-matrix is computed, this keyword will dump it to a file “tmat_col.txt” or a user-specified <em>filename</em>. The <a href="#tmatrixfiles-nfiles-1">file format</a> is self-consistent, so that the generated <em>T</em>-matrix can be fed back into <strong>TERMS</strong> for subsequent calculations.</p>
 </div>
-<div id="dumpprestageda" class="section level3">
-<h3 class="hasAnchor">
-<a href="#dumpprestageda" class="anchor" aria-hidden="true"></a>DumpPrestagedA</h3>
+<div class="section level3">
+<h3 id="dumpprestageda">DumpPrestagedA<a class="anchor" aria-label="anchor" href="#dumpprestageda"></a>
+</h3>
 <p>If present, dumps a sparse-format representation of the full matrix comprising the individual <em>T</em>-matrices after potential masking followed by rotation in their respective frame.</p>
 </div>
-<div id="dumpstageda" class="section level3">
-<h3 class="hasAnchor">
-<a href="#dumpstageda" class="anchor" aria-hidden="true"></a>DumpStagedA</h3>
+<div class="section level3">
+<h3 id="dumpstageda">DumpStagedA<a class="anchor" aria-label="anchor" href="#dumpstageda"></a>
+</h3>
 <p>If present, dumps a sparse-format representation of the full matrix comprising the individual <em>T</em>-matrices along the diagonal blocks, and translation matrices in the off-diagonal blocks. The exact form of this matrix is scheme-dependent.</p>
 </div>
-<div id="dumpscacoeff" class="section level3">
-<h3 class="hasAnchor">
-<a href="#dumpscacoeff" class="anchor" aria-hidden="true"></a>DumpScaCoeff</h3>
+<div class="section level3">
+<h3 id="dumpscacoeff">DumpScaCoeff<a class="anchor" aria-label="anchor" href="#dumpscacoeff"></a>
+</h3>
 <p>If present, dumps the scattering coefficients in to a file “Sca_coeff” for different incidence angles.</p>
 </div>
-<div id="dumpinccoeff" class="section level3">
-<h3 class="hasAnchor">
-<a href="#dumpinccoeff" class="anchor" aria-hidden="true"></a>DumpIncCoeff</h3>
+<div class="section level3">
+<h3 id="dumpinccoeff">DumpIncCoeff<a class="anchor" aria-label="anchor" href="#dumpinccoeff"></a>
+</h3>
 <p>If present, dumps the incident coefficients in to a file “Inc_coeff” for different incidencd angles.</p>
 </div>
-<div id="disablestoutbalancing" class="section level3">
-<h3 class="hasAnchor">
-<a href="#disablestoutbalancing" class="anchor" aria-hidden="true"></a>DisableStoutBalancing</h3>
+<div class="section level3">
+<h3 id="disablestoutbalancing">DisableStoutBalancing<a class="anchor" aria-label="anchor" href="#disablestoutbalancing"></a>
+</h3>
 <p>If present, switches off the balancing.</p>
 </div>
-<div id="disablertr" class="section level3">
-<h3 class="hasAnchor">
-<a href="#disablertr" class="anchor" aria-hidden="true"></a>DisableRTR</h3>
+<div class="section level3">
+<h3 id="disablertr">DisableRTR<a class="anchor" aria-label="anchor" href="#disablertr"></a>
+</h3>
 <p>Switches off the three-step translation of <em>T</em>-matrices, where a general translation is decomposed into a rotation, <em>z</em>-axial translation, and then the inverse rotation. Instead, a one-step transformation is performed by pre- or post-multiplying by a single matrix containing the general translation-addition coefficients.</p>
 </div>
 </div>
@@ -436,7 +448,7 @@ EM1:1_ME1:1  columns</code></pre>
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.9000.9000.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>

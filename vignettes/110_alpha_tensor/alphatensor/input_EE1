@@ -1,0 +1,25 @@
+ModeAndScheme 2 3
+
+MultipoleCutoff 4
+Medium 1.0
+
+OutputFormat HDF5 EE1
+
+DumpPrestagedA
+DumpStagedA
+DumpCollectiveTmatrix collective_tmat_EE1.tmat
+
+MultipoleSelections 1
+EE1:1_MM2:1_ME2:1_EM2:1  blocks
+
+Wavelength 520
+
+Medium 1.7689
+
+TmatrixFiles 1
+"tmat_Au20x50_Nmax4_lambda520.tmat" 
+
+# dimer, dihedral pi/4
+Scatterers 2
+TF1_S1 0 -50 0 50 0 1.963495  0.0  2.5
+TF1_S1 0 50  0 50 0 1.178097  0.0  2.5

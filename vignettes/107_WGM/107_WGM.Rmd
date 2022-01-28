@@ -1,5 +1,5 @@
 ---
-title: "Balancing"
+title: "Whispering gallery modes"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   rmarkdown::html_vignette:
@@ -12,7 +12,7 @@ output:
       in_header: "../../inst/_x3d_header.html"
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteIndexEntry{Balancing}
+  %\VignetteIndexEntry{Whispering gallery modes}
   %\VignetteEncoding{UTF-8}
 ---
 
@@ -20,7 +20,8 @@ vignette: >
 library(knitr)
 library(terms)
 options(cli.num_colors = 1)
-theme_set(egg::theme_article())
+theme_set(theme_grey())
+library(ggforce)
 opts_chunk$set(echo = FALSE, warning =FALSE,
                message=FALSE, comment='', 
                tidy=FALSE, cache = FALSE)

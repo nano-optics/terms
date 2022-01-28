@@ -51,7 +51,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">terms</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.9</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -96,7 +96,8 @@
       <a href="../../articles/09_spectrum_near_field/09_spectrum_near_field.html">09 orientation-averaged near field spectrum</a>
     </li>
     <li class="divider">
-    <li class="dropdown-header">Advanced examples &amp; testing</li>
+    </li>
+<li class="dropdown-header">Advanced examples &amp; testing</li>
     <li>
       <a href="../../articles/10_shell_absorption/10_shell_absorption.html">10 shell absorption</a>
     </li>
@@ -140,8 +141,27 @@
     <li>
       <a href="../../articles/106_balancing/106_balancing.html">106 balancing</a>
     </li>
-    <li class="divider">
     <li>
+      <a href="../../articles/109_individual_absorption/109_individual_absorption.html">109 individual absorption</a>
+    </li>
+    <li>
+      <a href="../../articles/110_alpha_tensor/110_alpha_tensor.html">110 alpha tensor</a>
+    </li>
+    <li>
+      <a href="../../articles/111_polarised_nf/111_polarised_nf.html">111 polarised OA near-fields</a>
+    </li>
+    <li class="divider">
+    </li>
+<li class="dropdown-header">Validation</li>
+    <li>
+      <a href="../../articles/1001_mstm_ff/1001_mstm_ff.html">1001 MSTM far-field</a>
+    </li>
+    <li>
+      <a href="../../articles/1003_cda/1003_cda.html">1003 CDA dichroism</a>
+    </li>
+    <li class="divider">
+    </li>
+<li>
       <a href="../../articles/Indexing.html">Indexing conventions</a>
     </li>
   </ul>
@@ -176,23 +196,23 @@
 
       
 
-      </header><script src="12_convergence_VTACS_files/header-attrs-2.11/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Convergence with respect to VTACS multipolar order</h1>
             
-            <h4 data-toc-skip class="date">22 November, 2021</h4>
+            <h4 data-toc-skip class="date">28 January, 2022</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/master/vignettes/12_convergence_VTACS/12_convergence_VTACS.Rmd" class="external-link"><code>vignettes/12_convergence_VTACS/12_convergence_VTACS.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/12_convergence_VTACS/12_convergence_VTACS.Rmd" class="external-link"><code>vignettes/12_convergence_VTACS/12_convergence_VTACS.Rmd</code></a></small>
       <div class="hidden name"><code>12_convergence_VTACS.Rmd</code></div>
 
     </div>
 
     
     
-<div id="objective" class="section level2">
-<h2 class="hasAnchor">
-<a href="#objective" class="anchor" aria-hidden="true"></a>Objective</h2>
+<div class="section level2">
+<h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
+</h2>
 <p>This example checks the convergence of orientation-averaged cross-sections with respect the maximum multipolar order describing individual scatterers and translation of vector spherical waves. The structure consists of four gold spheres in water arranged in a helix.</p>
 <style>
 .x3d_scene {
@@ -221,20 +241,20 @@ Columns: 8
 $ n1         &lt;int&gt; 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,…
 $ n2         &lt;int&gt; 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,…
 $ id         &lt;chr&gt; "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1",…
-$ wavelength &lt;dbl&gt; 400, 402, 404, 406, 408, 410, 412, 414, 416, 418, 420, 422,…
+$ wavelength &lt;dbl&gt; 400, 400, 400, 400, 400, 402, 402, 402, 402, 402, 404, 404,…
 $ crosstype  &lt;chr&gt; "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Ab…
-$ variable   &lt;fct&gt; total, total, total, total, total, total, total, total, tot…
-$ dichroism  &lt;dbl&gt; -0.09310683, -0.09016554, -0.08707443, -0.08386780, -0.0805…
-$ average    &lt;dbl&gt; 12600.16, 12599.67, 12597.07, 12592.64, 12586.67, 12579.48,…</code></pre>
+$ variable   &lt;chr&gt; "total", "I1", "I2", "I3", "I4", "total", "I1", "I2", "I3",…
+$ dichroism  &lt;dbl&gt; -0.093106832, -0.079989079, -0.002044647, 0.049549903, -0.0…
+$ average    &lt;dbl&gt; 12600.157, 1090.155, 2841.408, 4899.158, 3769.436, 12599.67…</code></pre>
 <p>where <code>{n1}, {n2}</code> are replaced by <code>4,5,...</code> in each separate run.</p>
 </div>
-<div id="orientation-averaged-results" class="section level2">
-<h2 class="hasAnchor">
-<a href="#orientation-averaged-results" class="anchor" aria-hidden="true"></a>Orientation-averaged results</h2>
+<div class="section level2">
+<h2 id="orientation-averaged-results">Orientation-averaged results<a class="anchor" aria-label="anchor" href="#orientation-averaged-results"></a>
+</h2>
 <p>We see that in this example the cross-sections require higher than 4 multipolar orders in both <span class="math inline">\(n_1\)</span> and <span class="math inline">\(n_2\)</span> to converge, especially at shorter wavelengths. Typically, one needn’t set <span class="math inline">\(n_2\)</span>, as the default value <span class="math inline">\(n_1=n_2\)</span> is accurate; this optional parameter is mostly a remnant from the initial development stages.</p>
 <p><img src="12_convergence_VTACS_files/figure-html/oa-1.png" width="700"></p>
 <hr>
-<p><em>Last run: 22 November, 2021</em></p>
+<p><em>Last run: 28 January, 2022</em></p>
 </div>
   </div>
 
@@ -255,7 +275,7 @@ $ average    &lt;dbl&gt; 12600.16, 12599.67, 12597.07, 12592.64, 12586.67, 12579
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.9000.9000.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>

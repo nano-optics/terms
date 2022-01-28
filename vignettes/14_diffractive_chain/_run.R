@@ -5,7 +5,7 @@ library(reshape2)
 library(purrr)
 library(ggplot2)
 library(egg)
-theme_set(egg::theme_article())
+theme_set(theme_grey())
 
 ## ----cluster----
 

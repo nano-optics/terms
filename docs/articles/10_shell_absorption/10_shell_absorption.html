@@ -51,7 +51,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">terms</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.9</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -96,7 +96,8 @@
       <a href="../../articles/09_spectrum_near_field/09_spectrum_near_field.html">09 orientation-averaged near field spectrum</a>
     </li>
     <li class="divider">
-    <li class="dropdown-header">Advanced examples &amp; testing</li>
+    </li>
+<li class="dropdown-header">Advanced examples &amp; testing</li>
     <li>
       <a href="../../articles/10_shell_absorption/10_shell_absorption.html">10 shell absorption</a>
     </li>
@@ -140,8 +141,27 @@
     <li>
       <a href="../../articles/106_balancing/106_balancing.html">106 balancing</a>
     </li>
-    <li class="divider">
     <li>
+      <a href="../../articles/109_individual_absorption/109_individual_absorption.html">109 individual absorption</a>
+    </li>
+    <li>
+      <a href="../../articles/110_alpha_tensor/110_alpha_tensor.html">110 alpha tensor</a>
+    </li>
+    <li>
+      <a href="../../articles/111_polarised_nf/111_polarised_nf.html">111 polarised OA near-fields</a>
+    </li>
+    <li class="divider">
+    </li>
+<li class="dropdown-header">Validation</li>
+    <li>
+      <a href="../../articles/1001_mstm_ff/1001_mstm_ff.html">1001 MSTM far-field</a>
+    </li>
+    <li>
+      <a href="../../articles/1003_cda/1003_cda.html">1003 CDA dichroism</a>
+    </li>
+    <li class="divider">
+    </li>
+<li>
       <a href="../../articles/Indexing.html">Indexing conventions</a>
     </li>
   </ul>
@@ -176,23 +196,23 @@
 
       
 
-      </header><script src="10_shell_absorption_files/header-attrs-2.11/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Partial absorption in a core-shell dimer</h1>
             
-            <h4 data-toc-skip class="date">22 November, 2021</h4>
+            <h4 data-toc-skip class="date">28 January, 2022</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/master/vignettes/10_shell_absorption/10_shell_absorption.Rmd" class="external-link"><code>vignettes/10_shell_absorption/10_shell_absorption.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/10_shell_absorption/10_shell_absorption.Rmd" class="external-link"><code>vignettes/10_shell_absorption/10_shell_absorption.Rmd</code></a></small>
       <div class="hidden name"><code>10_shell_absorption.Rmd</code></div>
 
     </div>
 
     
     
-<div id="objective" class="section level2">
-<h2 class="hasAnchor">
-<a href="#objective" class="anchor" aria-hidden="true"></a>Objective</h2>
+<div class="section level2">
+<h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
+</h2>
 <p>This example illustrates the calculation of absorption spectra in core-shell particles, separately for each layer. The structure consists of two core-shell spheres <code>Au@Ag</code> in water, and for comparison we also simulate a dummy <code>Au@Au</code> core-shell structure with the same dimensions.</p>
 <style>
 .x3d_scene {
@@ -351,9 +371,9 @@ readInputFile&gt; Finished parsing  8 keywords
 termsProgram&gt; Program run time (CPU &amp; real in s):  1.461E+01  1.257E+01</code></pre>
 </details><p><br></p>
 </div>
-<div id="total-cross-sections" class="section level2">
-<h2 class="hasAnchor">
-<a href="#total-cross-sections" class="anchor" aria-hidden="true"></a>Total cross-sections</h2>
+<div class="section level2">
+<h2 id="total-cross-sections">Total cross-sections<a class="anchor" aria-label="anchor" href="#total-cross-sections"></a>
+</h2>
 <p>We first retrieve the total cross-sections, as usual,</p>
 <details closed><summary>
 Show output structure (click to open)
@@ -443,15 +463,15 @@ Show output structure (click to open)
 Columns: 6
 $ wavelength &lt;dbl&gt; 300, 305, 310, 315, 320, 325, 330, 335, 340, 345, 350, 355,…
 $ crosstype  &lt;chr&gt; "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Ab…
-$ variable   &lt;fct&gt; total, total, total, total, total, total, total, total, tot…
+$ variable   &lt;chr&gt; "total", "total", "total", "total", "total", "total", "tota…
 $ dichroism  &lt;dbl&gt; -1.055521e-11, -1.091371e-11, -1.003158e-11, -1.083340e-11,…
 $ average    &lt;dbl&gt; 9862.443, 9854.690, 9843.744, 9831.910, 9821.330, 9813.848,…
 $ case       &lt;chr&gt; "Au@Au", "Au@Au", "Au@Au", "Au@Au", "Au@Au", "Au@Au", "Au@A…</code></pre>
 </details><p><br></p>
 </div>
-<div id="per-layer-absorption" class="section level2">
-<h2 class="hasAnchor">
-<a href="#per-layer-absorption" class="anchor" aria-hidden="true"></a>Per-layer absorption</h2>
+<div class="section level2">
+<h2 id="per-layer-absorption">Per-layer absorption<a class="anchor" aria-label="anchor" href="#per-layer-absorption"></a>
+</h2>
 <p>Additional files/fields in the form <code>csAbs4L_scat00{i}coat{i}</code> are created for each layered sphere, containing partial absorption cross-sections for particle <span class="math inline">\({i}\)</span>, up to layer <span class="math inline">\({j}\)</span>, with columns for each angle of incidence and the weighted average,</p>
 <p>To get the per-layer absorption we need to take the difference between successive coats.</p>
 <pre><code>Rows: 808
@@ -474,7 +494,7 @@ $ crosstype  &lt;chr&gt; "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs",
 <p><img src="10_shell_absorption_files/figure-html/comparison-1.png" width="700"></p>
 <p>The absorption in the Ag layer is maximum at the plasmon resonance of the dimer, the position of which is largely dictated by the gold cores.</p>
 <hr>
-<p><em>Last run: 22 November, 2021</em></p>
+<p><em>Last run: 28 January, 2022</em></p>
 </div>
   </div>
 
@@ -495,7 +515,7 @@ $ crosstype  &lt;chr&gt; "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs", "Abs",
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.9000.9000.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>
