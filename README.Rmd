@@ -14,6 +14,8 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+library(desc)
+(release_version <- desc::desc_get('Version', 'DESCRIPTION'))
 ```
 
 # TERMS <img src="man/figures/logo.png" width="120" align="right" />
@@ -79,7 +81,7 @@ Alternatively, a minimal build script is available in the `build/` directory; th
 
 #### Downloading the code
 
-We recommend downloading the [latest release here](https://github.com/nano-optics/terms/releases) [`terms_code_0.9.9(.zip|.tar)`]. You can also browse/clone/fork the [entire repository](https://github.com/nano-optics/terms), but note that it contains many files used to generate the website, which are not relevant for using TERMS.
+We recommend downloading the [latest release here](https://github.com/nano-optics/terms/releases) [`terms_code_`r release_version`(.zip|.tar)`]. You can also browse/clone/fork the [entire repository](https://github.com/nano-optics/terms), but note that it contains many files used to generate the website, which are not relevant for using TERMS.
 
 #### Repository structure
 
@@ -122,9 +124,11 @@ When running the stand-alone executable, main input parameters are read from a p
 ## Citing TERMS
 
 If you use TERMS, please cite the following user guide, as well as other publications listed below if relevant: 
+`r cat("<!--\n")`
 <div style="display: none;">
 @Schebarchov:2021wc, @Schebarchov:2021ut, @Somerville:2016aa, @schebarchov2019mind, @Lee:2020aa, @fazel2021orientation, @Fazel-Najafabadi:2021ud, @Fazel-Najafabadi:2022ud, Herran:2021wh
 </div>
+`r cat("-->\n")`
 
 
 

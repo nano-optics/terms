@@ -112,7 +112,7 @@ Edit ‘buildTERMS.sh’ to specify a compiler other than
 
 We recommend downloading the [latest release
 here](https://github.com/nano-optics/terms/releases)
-\[`terms_code_0.9.9(.zip|.tar)`\]. You can also browse/clone/fork the
+\[`terms_code_1.0.0(.zip|.tar)`\]. You can also browse/clone/fork the
 [entire repository](https://github.com/nano-optics/terms), but note that
 it contains many files used to generate the website, which are not
 relevant for using TERMS.
