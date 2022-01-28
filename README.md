@@ -183,8 +183,7 @@ publications listed below if relevant:
 
 <div style="display: none;">
 
-<sup>1</sup>,,<sup>2</sup>,<sup>3</sup>,<sup>4</sup>,<sup>5</sup>,<sup>6</sup>,<sup>**Fazel-Najafabadi:2021ud?**</sup>,<sup>7</sup>
-Herran:2021wh
+<sup>1</sup>,,<sup>2</sup>,<sup>3</sup>,<sup>4</sup>,<sup>5</sup>,<sup>6</sup>,<sup>7</sup><sup>8</sup>
 
 </div>
 
@@ -239,7 +238,7 @@ Light-to-Chemical Energy Conversion. *ACS Energy Letters* **2020**, *5*
 
 </div>
 
-<div id="ref-fazel2021orientation" class="csl-entry">
+<div id="ref-Fazel-Najafabadi:2021uq" class="csl-entry">
 
 <span class="csl-left-margin">(6) </span><span
 class="csl-right-inline">Fazel-Najafabadi, A.; Schuster, S.; Auguié, B.
@@ -256,6 +255,16 @@ class="csl-right-inline">Fazel-Najafabadi, A.; Auguié, B. Orientation
 Dependence of Optical Activity in Light Scattering by Nanoparticle
 Clusters. *Mater. Adv.* **2022**, –.
 <https://doi.org/10.1039/D1MA00869B>.</span>
+
+</div>
+
+<div id="ref-Fazel-Najafabadi:2022aa" class="csl-entry">
+
+<span class="csl-left-margin">(8) </span><span
+class="csl-right-inline">Fazel-Najafabadi, A.; Auguié, B.
+Orientation-Averaged Light Scattering by Nanoparticle Clusters:
+Far-Field and Near-Field Benchmarks of Numerical Cubature Methods,
+2022.</span>
 
 </div>
 
