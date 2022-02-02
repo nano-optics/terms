@@ -44,7 +44,7 @@ margin:0em;
 
 ge <- get_geometry('input_ff')
 cl <- cluster_geometry(ge)
-terms::x3d_scene(cl, viewpoint=c(0,0,200), width = "200px", height = "150px")
+terms::x3d_scene(cl, viewpoint=c(0,0,200), scale=10, width = "200px", height = "150px")
 ```
 
 ## Far-field
@@ -81,7 +81,7 @@ cat log_nf
 ```
 </details> <br />
 
-The output consists of a file `map_E` which contains the near-field data. 
+The output contains a field `map_E` with the near-field data. 
 <details closed>
 <summary> Show results file (click to open) </summary>
 ```{r hdf5}

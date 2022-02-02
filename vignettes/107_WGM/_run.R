@@ -8,46 +8,61 @@ theme_set(theme_grey())
 
 # ----tpl----
 
-tpl <- "ModeAndScheme 2 1
-MultipoleCutoff 20
-Wavelength 600 800 100
+tpl <- "ModeAndScheme 2 3
+MultipoleCutoff 15
+Wavelength 700 900 50
 Verbosity 1
-Medium 1.7689 
+Medium 1.0
 
-OutputFormat HDF5 {out}
-{comment}DisableStoutBalancing
+Incidence 0 1.570796 0 2
+OutputFormat HDF5 xsec
 
 Scatterers 2
-Si 0.0  0.0 0.0 2000.0
-Si 0.0  4005 0.0 2000.0
+Si 0.0  -1050.0 0.0 1000.0
+Si 0.0  1050 0.0 1000.0
 "
 
 cat(tpl)
 
 ## ----run----
-comment <- ''
-out <- 'xsec_1'
-cat(glue(tpl), file = 'input1')
-system("../../build/terms input1 > log1")
+cat(glue(tpl), file = 'input')
+system("../../build/terms input > log")
 
-comment <- '#'
-out <- 'xsec_2'
-cat(glue(tpl), file = 'input2')
-system("../../build/terms input2 > log2")
 
+## ----tplnf----
+
+tpl <- "ModeAndScheme 1 0
+MultipoleCutoff 20
+Wavelength 600 900 2
+Verbosity 1
+Medium 1.0
+
+Incidence 0 1.570796 0 2
+OutputFormat HDF5 map
+SpacePoints -1500 1500 200 -2500 2500 400 0 0 0 0 0 0 
+MapQuantity 2 E 
+
+Scatterers 2
+Si 0.0  -1050.0 0.0 1000.0
+Si 0.0  1050 0.0 1000.0
+"
+
+cat(tpl)
+
+## ----runnf----
+cat(glue(tpl), file = 'input_map')
+system("../../build/terms input_map > log")
 
 ## ----read----
 
-xs1 <- consolidate_xsec('xsec_1.h5')
-xs2 <- consolidate_xsec('xsec_2.h5')
+xs <- consolidate_xsec('xsec.h5')
 
 ## ----oa----
-mCOA <- rbind(cbind(xs1$mCOA, balancing = 'no balancing'),
-              cbind(xs2$mCOA, balancing = 'balancing'))
+mCOA <- xs$mCOA
 
 mCOAt <- subset(mCOA, variable == 'total')
 
-p1 <- ggplot(mCOAt, aes(wavelength, average, linetype=balancing, colour=crosstype)) +
+p1 <- ggplot(mCOAt, aes(wavelength, average, colour=crosstype)) +
   facet_wrap(~crosstype)+
   geom_line() +
   labs(x = expression("wavelength /nm"), 
@@ -57,4 +72,48 @@ p1 <- ggplot(mCOAt, aes(wavelength, average, linetype=balancing, colour=crosstyp
 
 p1
 
+
+## ----intensity----
+
+ld <- h5read('map.h5', "Near-Field")
+
+d1 <- data.frame(ld$map_E)
+names(d1) <- c('wavelength', 'x','y','z','Eavg','Ex','Ey')
+
+ge <- get_geometry('input_map')
+
+p2 <- ggplot(d1, aes(x, y, fill=log10(Ey))) +
+  facet_wrap(~wavelength,nrow=1) +
+  geom_raster() +
+  coord_equal() +
+  geom_circle(data=ge, aes(x0=x,y0=y,r=r), fill=NA, lty=2, inherit.aes = FALSE) +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_y_continuous(expand = c(0,0)) +
+  # scale_y_continuous(lim=c(0,19000),expand=c(0,0)) +
+  scale_fill_viridis_c(option = 'C') +
+  # scale_fill_distiller(palette = 'PiYG') +
+  labs(x='x /nm', y='y /nm',
+       fill=expression(E^2),linetype = 'region') +
+  theme(panel.grid.major.y = element_line(colour = 'grey80',size = 0.2,linetype=3),
+        panel.grid.minor.y = element_line(colour = 'grey80',size = 0.1,linetype=3),
+        panel.spacing.x = unit(0,'mm'))
+
+p2
+
+# p2 <- ggplot(d1 %>% filter((x^2 + (y-1000)^2) > 1000^2, (x^2 + (y+1000)^2) > 1000^2), aes(x, y, fill=Ey)) +
+#   facet_wrap(~wavelength,nrow=1) +
+#   geom_raster() +
+#   coord_equal() +
+#   geom_circle(data=ge, aes(x0=x,y0=y,r=r), fill=NA, lty=2, inherit.aes = FALSE) +
+#   scale_x_continuous(expand = c(0,0)) +
+#   scale_y_continuous(expand = c(0,0)) +
+#   # scale_y_continuous(lim=c(0,19000),expand=c(0,0)) +
+#   scale_fill_viridis_c(option = 'C') +
+#   # scale_fill_distiller(palette = 'PiYG') +
+#   labs(x='x /nm', y='y /nm',
+#        fill=expression(E^2),linetype = 'region') +
+#   theme(panel.grid.major.y = element_line(colour = 'grey80',size = 0.2,linetype=3),
+#         panel.grid.minor.y = element_line(colour = 'grey80',size = 0.1,linetype=3),
+#         panel.spacing.x = unit(0,'mm'))
+# p2
 

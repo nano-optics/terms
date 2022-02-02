@@ -93,7 +93,7 @@ d3 <- consolidate_xsec('cross_sections_twodimers.h5')
 all <- rbind(cbind(d1$mCOA, simulation = 'dimer'),
              cbind(d2$mCOA, simulation = 'quadrimer'),
              cbind(d3$mCOA, simulation = 'twodimers'))
-glimpse(all)
+# glimpse(all)
 
 p2 <- ggplot(all %>% filter(variable=='total', simulation != 'dimer'), 
        aes(wavelength, average, linetype=simulation, colour=crosstype)) +

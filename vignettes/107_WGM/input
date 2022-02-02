@@ -1,0 +1,11 @@
+ModeAndScheme 2 3
+MultipoleCutoff 15
+Wavelength 700 900 50
+Verbosity 1
+Medium 1.0
+
+OutputFormat HDF5 xsec
+
+Scatterers 2
+Si 0.0  -1050.0 0.0 1000.0
+Si 0.0  1050 0.0 1000.0

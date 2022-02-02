@@ -33,7 +33,7 @@ p8 <- ggplot(mCFOt, aes(wavelength, dichroism, colour=crosstype)) +
   geom_line(data=mCOAt, lty=2) +
   guides(colour='none')+
   scale_color_brewer(palette = 'Set1') +
-  scale_y_continuous(limits = egg::symmetric_range) +
+  scale_y_continuous(limits = symmetric_range) +
   labs(x = expression("wavelength /nm"), 
        y = expression("cross-section /"*nm^2),
        colour = expression(N)) +

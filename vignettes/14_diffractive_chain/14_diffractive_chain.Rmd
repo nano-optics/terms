@@ -43,7 +43,7 @@ margin:0em;
 
 ge <- get_geometry('input_chain')
 cl <- cluster_geometry(ge)
-terms::x3d_scene(cl, viewpoint=c(0,0,2000), width = "200px", height = "150px", default_material='gold')
+terms::x3d_scene(cl, viewpoint=c(-1000,-500,-500), width = "200px", height = "150px", default_material='gold')
 ```
 
 This simulation uses the following `input` file
@@ -51,7 +51,7 @@ This simulation uses the following `input` file
 cat input_chain
 ```
 
-```{r read, cache=FALSE}
+```{r read, cache=FALSE, results='hide'}
 ```
 
 ## Fixed-orientation results

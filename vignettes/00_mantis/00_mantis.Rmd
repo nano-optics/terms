@@ -59,6 +59,6 @@ video {
 
 If it remains unclear what the whispering is about, the interested reader may wish to consult the following references:
 
-- [_Dynamic polarization vision in mantis shrimps._](https://doi.org/10.1038/ncomms12140) Ilse M. Daly, Martin J. How, Julian C. Partridge, Shelby E. Temple, N. Justin Marshall, Thomas W. Cronin & Nicholas W. Roberts. _Nature Communications_ vol. **7**, 12140 (2016) 
+- [_Dynamic polarisation vision in mantis shrimps._](https://doi.org/10.1038/ncomms12140) Ilse M. Daly, Martin J. How, Julian C. Partridge, Shelby E. Temple, N. Justin Marshall, Thomas W. Cronin & Nicholas W. Roberts. _Nature Communications_ vol. **7**, 12140 (2016) 
 
 - [**ALL GLORY TO THE HYPNOTOAD**](https://futurama.fandom.com/wiki/Hypnotoad) 

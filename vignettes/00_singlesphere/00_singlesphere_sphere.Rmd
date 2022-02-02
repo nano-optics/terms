@@ -71,9 +71,7 @@ tail -n1 log
 ```{r read}
 ```
 
-## Orientation-averaged results
 
-The following files contain orientation-averaged cross-sections,
 ```{r oa, fig.height=3}
 ```
 

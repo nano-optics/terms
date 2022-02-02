@@ -6,7 +6,8 @@
 \usage{
 x3d_scene(
   cl,
-  viewpoint = NULL,
+  viewpoint = c(0, 0, 100),
+  orientation = NULL,
   width = "300px",
   height = "300px",
   scale = 100,
@@ -16,13 +17,15 @@ x3d_scene(
 \arguments{
 \item{cl}{cluster}
 
-\item{viewpoint}{optional viewpoint (3-vector)}
+\item{viewpoint}{viewpoint position (3-vector)}
+
+\item{orientation}{optional viewpoint orientation (axis-angle vector: x,y,z,angle)}
 
 \item{width}{display width}
 
 \item{height}{display height}
 
-\item{scale}{scaling of axes}
+\item{scale}{size of axes}
 
 \item{...}{extra arguments passed to cluster_to_x3d}
 }

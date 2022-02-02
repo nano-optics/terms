@@ -58,7 +58,7 @@ glimpse(lfo)
 
 
 p2 <- ggplot(lfo %>% filter(variable=='total') %>% pivot_longer(c('polarisation1','polarisation2')), 
-             aes(wavelength, value, linetype=factor(scheme), colour=crosstype)) +
+             aes(wavelength, value, linetype=factor(scheme, labels=0:3), colour=crosstype)) +
   facet_grid(name~crosstype, scales='free')+
   geom_line() + guides(colour='none') +
   labs(x = expression("wavelength /nm"), 

@@ -2,29 +2,35 @@
 ##' @title Interactive display of cluster geometries
 ##' @description Displays a cluster in X3D format
 ##' @param cl cluster 
-##' @param viewpoint optional viewpoint (3-vector)
+##' @param viewpoint viewpoint position (3-vector)
+##' @param orientation optional viewpoint orientation (axis-angle vector: x,y,z,angle)
 ##' @param width display width
 ##' @param height display height
-##' @param scale scaling of axes
+##' @param scale size of axes
 ##' @param ... extra arguments passed to cluster_to_x3d
 ##' @return returns X3D object to embed in a html document with suitable X3D support
 ##' @import glue
 ##' @export
-x3d_scene <- function(cl, viewpoint=NULL, width="300px", height="300px", scale=100, ...){
+x3d_scene <- function(cl, viewpoint=c(0,0,100), orientation = NULL,
+                      width="300px", height="300px", scale=100, ...){
   
-  if(is.null(viewpoint)) viewpoint <- c(0,0,1) * 1.1 * max(apply(cl$positions,1,max))
+  if(is.null(orientation)){ # from viewpoint, look back at origin
+    phi <- atan2(viewpoint[2],viewpoint[1])
+    theta <- acos(viewpoint[3]/sqrt(viewpoint[1]^2+viewpoint[2]^2+viewpoint[3]^2))
+    orientation <- euler_to_axisangle(phi,theta,0)
+  }
+  
   
   header <- glue('<X3D width="{width}" height="{height}" class="x3d_scene"><scene>')
   footer <- glue('<Shape><IndexedLineSet colorPerVertex="false" colorIndex="0 1 2" coordIndex="0 1 -1 0 2 -1 0 3 -1">
 <Coordinate point="0 0 0 {scale} 0 0 0 {scale} 0 0 0 {scale}"/><Color color="1 0 0 0 1 0 0.2 0.2 1"/></IndexedLineSet></Shape> 
-<viewpoint centerOfRotation="0 0 0" position="{paste(viewpoint, collapse=" ")}" orientation="0 0 1 0" />
+<viewpoint centerOfRotation="0 0 0" position="{paste(viewpoint, collapse=" ")}" orientation="{paste(orientation, collapse=" ")}" viewAll="false"/>
 </scene>
 </X3D>')
   
   cat(header, cluster_to_x3d(cl, ...), footer, sep="\n") 
   
 }
-
 #' @noRd
 #' @export
 particle_to_x3d <- function(position, size, angle, material = 'gold'){
@@ -39,7 +45,7 @@ particle_to_x3d <- function(position, size, angle, material = 'gold'){
     diffuseColor <- "0.3921569 0.5843137 0.9294118"
     specularColor<- "0.5294118 0.8078431 0.9803922"
   } 
-
+  
   
   rotation <- euler_to_axisangle(angle[1],angle[2],angle[3])
   scale <- size

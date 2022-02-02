@@ -43,7 +43,7 @@ margin:0em;
 
 ge <- get_geometry('input_200_0_1')
 cl <- cluster_geometry(ge)
-terms::x3d_scene(cl, viewpoint=c(0,0,300), width = "200px", height = "150px") 
+terms::x3d_scene(cl, viewpoint=c(100,0,400), width = "200px", height = "150px") 
 ```
 
 
@@ -61,7 +61,7 @@ where `{comment_centred}` comments out (`#`) or not the keyword `ScattererCentre
 
 ## Fixed-orientation results
 
-We compare the fixed-orientation cross-sections, with the results of `Scheme = 0, ScattererCentred` replotted in every panel for comparison (pale thick lines, assumed here to be "ground truth").
+We compare the fixed-orientation cross-sections, with the results of `Scheme = 0, ScattererCentred` replotted in every panel for comparison (dotted lines and shaded areas, assumed here to be "ground truth").
 
 ```{r fo, fig.height=7, fig.width=10}
 ```

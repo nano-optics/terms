@@ -52,10 +52,11 @@ This simulation uses the following `input` file
 
 where `{nmax}` is replaced by `1,2,3,...` in each separate run. 
 
+The output consists of a number of files, storing the far-field cross-sections for each order from 1 to $n_{1}$.
+
+
 ```{r read, cache=FALSE}
 ```
-
-The output consists of a number of files, storing the far-field cross-sections for each order from 1 to $n_{1}$.
 
 ```{r fun}
 ```

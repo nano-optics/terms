@@ -66,7 +66,7 @@ p2 <- ggplot(mCOAt, aes(wavelength, dichroism,colour=crosstype)) +
   scale_color_brewer(palette = 'Set1') +
   scale_fill_brewer(palette = 'Pastel1') +
   guides(linetype=guide_legend(label.hjust = 0))+
-  scale_y_continuous(limits = c(-740,260),expand=c(0,0)) + #egg::symmetric_range
+  scale_y_continuous(limits = c(-740,260), expand=c(0,0)) + #limits = symmetric_range
   scale_linetype_manual(values=c(2,1), labels = scales::parse_format()) +
   labs(x = expression("wavelength /nm"), 
        y = expression("cross-section /"*nm^2),

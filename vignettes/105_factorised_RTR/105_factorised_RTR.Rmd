@@ -29,7 +29,7 @@ do.call(read_chunk, list(path = "_run.R"))
 
 ## Objective
 
-This example illustrates the two ways to calculate VTACS. We compare the far-field spectra for a linear chain of gold spheres, with and without the `DisableRTR` keyword. 
+This example compares the two ways to calculate VTACS. We compare the far-field spectra for a linear chain of gold spheres, with and without the `DisableRTR` keyword. 
 
 ```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
 library(terms)
@@ -42,7 +42,7 @@ margin:0em;
 
 ge <- get_geometry('input2')
 cl <- cluster_geometry(ge)
-terms::x3d_scene(cl, viewpoint=c(0,0,300), width = "200px", height = "150px") 
+terms::x3d_scene(cl, viewpoint=c(100,0,300), width = "200px", height = "150px") 
 ```
 
 This simulation uses the following `input` file 

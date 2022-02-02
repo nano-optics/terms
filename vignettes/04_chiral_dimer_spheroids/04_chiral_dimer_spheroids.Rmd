@@ -78,8 +78,6 @@ tail -n1 log
 ```
 </details> <br />
 
-The output consists of a number of files, storing the far-field cross-sections for each order from 1 to $n_{1}$.
-
 ```{r fun}
 ```
 

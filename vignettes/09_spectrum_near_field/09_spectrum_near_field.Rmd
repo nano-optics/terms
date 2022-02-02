@@ -30,7 +30,7 @@ do.call(read_chunk, list(path = "_run.R"))
 
 ## Objective
 
-This example illustrates the calculation of near-field calculations for multiple wavelengths. The structure consists of two gold spheres in water. The wavelength is varied from 400 to 800 nm, and we map the normalised local degree of chirality around the structure.
+This example illustrates the calculation of near-field calculations for multiple wavelengths. The structure consists of a chiral tetramer of gold spheres in water. The wavelength is varied from 500 to 700 nm, and we map the electric field intensity and normalised local degree of chirality in the xy plane around the structure, which is illuminated with linear polarisation at 45 degrees in the xy plane and wavevector along z. Note that a small value of Nmax is used to keep the calculation time short; for accurate results a larger value should be used.
 
 ```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
 library(terms)
@@ -43,13 +43,16 @@ margin:0em;
 
 ge <- get_geometry('input')
 cl <- cluster_geometry(ge)
-terms::x3d_scene(cl, viewpoint=c(0,0,150), width = "200px", height = "150px") 
+
+terms::x3d_scene(cl, viewpoint=c(200,100,100), width = "200px", height = "150px") 
 ```
 
 This simulation uses the following `input` file
 ```{bash input}
 cat input
 ```
+
+The results contain the near-field data for all wavelengths in long format
 
 ```{r read}
 ```
@@ -63,6 +66,17 @@ cat input
 
 ```{r ldoc,fig.height=2}
 ```
+
+
+## Animation
+
+The same data can also be visualised as an animation by mapping the wavelength to time
+
+
+```{r echo=FALSE, fig.show="hold", out.width='100%'}
+knitr::include_graphics('./anim.gif')
+```
+
 
 -----
 

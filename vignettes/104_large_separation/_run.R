@@ -60,15 +60,20 @@ combined$comment <- ifelse(!combined$comment_centred, "ScattererCentred", "Clust
 
 p <- ggplot(combined %>% filter(variable=='total'), 
             aes(wavelength, average, colour=factor(crosstype))) +
-  geom_line(data = ground_truth, alpha=0.5,lwd=1.2, show.legend = c(TRUE,FALSE)) +
-  geom_line(aes(linetype=comment)) +
-  facet_grid(separation~scheme, scales='free_y')+
+  geom_area(data = ground_truth, aes(fill=factor(crosstype),lty='reference'), alpha=0.3, show.legend = c(TRUE,FALSE),position = "identity") +
+  # geom_line(data = ground_truth, alpha=0.3,lwd=2, show.legend = c(TRUE,FALSE)) +
+  geom_line(aes(linetype=comment),lwd=0.8) +
+  facet_grid(separation~scheme, scales='free_y', labeller = label_both)+
+  scale_colour_brewer(palette='Set1') +
+  scale_fill_brewer(palette='Pastel1') +
+  scale_x_continuous(expand=c(0,0),lim=c(320,680)) +
   labs(x = expression("wavelength /nm"), 
        y = expression("cross-section /"*nm^2),
        colour = '', linetype = '') +
-  scale_linetype_manual(values=c(2,1)) +
+  scale_linetype_manual(values=c('reference'=3,'ScattererCentred'=1,'ClusterCentred'=2)) +
   ggtitle("Fixed-orientation linear polarisation cross-sections") +
-  theme(legend.position = 'top', legend.direction = 'horizontal')
+  theme(legend.position = 'top', legend.direction = 'horizontal') +
+  guides(linetype=guide_legend(keywidth = unit(10,'mm')))
 
 p
 

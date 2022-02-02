@@ -44,14 +44,14 @@ margin:0em;
 
 ge <- get_geometry('input_quadrimer_ff')
 cl <- cluster_geometry(ge)
-terms::x3d_scene(cl, viewpoint=c(0,0,200), width = "200px", height = "150px", default_material='gold')
+terms::x3d_scene(cl, viewpoint=c(200,0,0), width = "200px", height = "150px", default_material='gold')
 ```
 
 ```{bash input}
 cat input_twodimers_nf
 ```
 
-```{r read}
+```{r read, results='hide'}
 ```
 
 ## Near-field

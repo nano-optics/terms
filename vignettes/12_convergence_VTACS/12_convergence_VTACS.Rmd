@@ -50,7 +50,7 @@ This simulation uses the following `input` file
 ```
 
 
-```{r read, cache=FALSE}
+```{r read, cache=FALSE, results='hide'}
 ```
 
 where `{n1}, {n2}` are replaced by `4,5,...` in each separate run. 

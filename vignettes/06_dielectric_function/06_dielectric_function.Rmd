@@ -29,7 +29,7 @@ do.call(read_chunk, list(path = "_run.R"))
 
 ## Objective
 
-This example illustrates the use of a custom dielectric function stored externally, which is interpolated by `TERMS`. We compare the far-field cross-sections for a dimer of silver spheres, using the built-in dielectric function of Ag, and that of PRB 2015 stored in `Ag_PRB.txt`
+This example illustrates the use of a custom dielectric function stored externally, which is interpolated by `TERMS`. We compare the far-field cross-sections for a dimer of silver spheres, using the built-in dielectric function of Ag (Drude model, from [Etchegoin and Le Ru](https://doi.org/10.1016/B978-0-444-52779-0.X0001-3)), and that of [Yang et al, Phys. Rev. B 91, 235137 (2015)](https://doi.org/10.1103/PhysRevB.91.235137) stored in `Ag_PRB.txt`
 
 
 ```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
@@ -43,7 +43,7 @@ margin:0em;
 
 ge <- get_geometry('input1')
 cl <- cluster_geometry(ge)
-terms::x3d_scene(cl, viewpoint=c(0,0,300), width = "200px", height = "150px") 
+terms::x3d_scene(cl, viewpoint=c(0,0,200), width = "200px", height = "150px") 
 ```
 
 This second simulation with a user-defined dielectric function uses the following `input` file

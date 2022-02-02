@@ -27,8 +27,6 @@ opts_chunk$set(echo = FALSE, warning =FALSE,
 do.call(read_chunk, list(path = "_run.R"))
 ```
 
-## Objective
-
 This example illustrates the effect of balancing as described by Stout et al. We compare the far-field spectra for a dimer of large silver spheres with a small gap, with and without the `DisableStoutBalancing` keyword. 
 
 This simulation uses the following `input` files 

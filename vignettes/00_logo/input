@@ -8,7 +8,7 @@ EE1:2_EM1:2_ME1:2_MM1:2  blocks
 
 Wavelength 633
 
-StoutCrossSections
+ScattererCentredCrossSections
 
 SpacePoints  -1100   1100   2200   -400   400   800    0   0   1
 

@@ -49,13 +49,20 @@ margin:0em;
 
 ge <- get_geometry('input')
 cl <- cluster_geometry(ge)
-terms::x3d_scene(cl, viewpoint=c(0,0,150), width = "200px", height = "150px") 
+terms::x3d_scene(cl, viewpoint=c(0,0,100), width = "200px", height = "150px", scale=10) 
 ```
 
 This simulation uses the following `input` file
 ```{bash input}
 cat input
 ```
+
+and `incidence` file
+
+```{bash incidence}
+cat incidence
+```
+
 
 ## LDOC maps at fixed incidence
 

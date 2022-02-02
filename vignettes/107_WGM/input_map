@@ -1,0 +1,14 @@
+ModeAndScheme 1 0
+MultipoleCutoff 20
+Wavelength 600 900 2
+Verbosity 1
+Medium 1.0
+
+Incidence 0 1.570796 0 2
+OutputFormat HDF5 map
+SpacePoints -1500 1500 200 -2500 2500 400 0 0 0 0 0 0 
+MapQuantity 2 E 
+
+Scatterers 2
+Si 0.0  -1050.0 0.0 1000.0
+Si 0.0  1050 0.0 1000.0

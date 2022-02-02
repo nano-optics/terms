@@ -8,6 +8,13 @@ export_cubature <- function(q = cubs::cubs(N = 10, cubature = 'lebedev'), out=''
   
 }
 
+##' @noRd
+#' @export
+symmetric_range <- function(range) 
+{
+  max_abs <- max(abs(range))
+  c(-max_abs, max_abs)
+}
 
 ##' @noRd
 #' @export

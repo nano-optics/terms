@@ -29,7 +29,7 @@ do.call(read_chunk, list(path = "_run.R"))
 
 ## Objective
 
-Here we compare analytical orientation averaging of far-field cross-sections with a numerical cubature (38 point Lebedev).
+Here we compare analytical orientation averaging of far-field cross-sections with a numerical cubature.
 
 ```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
 library(terms)
@@ -61,6 +61,12 @@ Incidence angles and the corresponding weights are specified in an external file
 cat incidence
 ```
 </details> <br />
+
+This file was obtained using the [`cubs` package](http://nano-optics.ac.nz/cubs/), with the following command:
+
+```{r cub, echo=TRUE, eval=FALSE}
+terms::export_cubature(cubs::cubs(N = 38, 'lebedev'), out = 'incidence')
+```
 
 The command to run the example is simply
 
