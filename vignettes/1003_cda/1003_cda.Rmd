@@ -72,6 +72,8 @@ head -n14 smarties.m
 ```{r fun}
 ```
 
+The coupled-dipole simulations were performed with a in-house implementation in Matlab, which we are in the process of documenting and porting to the Julia language at [`CoupledDipole.jl`](http://nano-optics.ac.nz/CoupledDipole.jl/dev/gettingstarted/).
+
 ## Orientation-averaged results
 
 ```{r oa}

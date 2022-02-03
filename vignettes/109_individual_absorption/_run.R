@@ -7,7 +7,7 @@ theme_set(theme_grey())
 ## ----tpl----
 
 
-system("../../build/terms input > log")
+# system("../../build/terms input > log")
 
 ## ----total----
 
@@ -38,44 +38,57 @@ p
 ## ----partial----
 
 # Mackowski's partial shell absorptions, with numerical cubature
-xsec_part <- consolidate_partials('cross_sections.h5')
-glimpse(ld$partial_absorption)
+mack <- consolidate_partials('cross_sections.h5')
 
-xsec_part$crosstype <- 'Abs'
-xsec_part$calculation <- 'parts'
-xsec_part <- xsec_part %>% mutate(total = partial_0)
+mack$crosstype <- 'Abs'
+mack$calculation <- 'Mackowski'
+mack <- mack %>% mutate(total = partial_0) %>% filter(polarisation=='4L') %>% 
+  pivot_longer(c('total'), names_to = 'region')
+glimpse(mack)
 
-# glimpse(xsec_part)
+mack_both <- mack %>% pivot_wider(names_from = scatterer, id_cols = c(polarisation, wavelength,calculation, region), values_from = value) %>% 
+  mutate(both = `1` + `2`)
+# glimpse(mack_both)
+
+# ggplot(mack_both, aes(wavelength, both)) + geom_line()
 
 ## ----split----
 
 ## Stout's per-particle OA absorptions
 
-glimpse(ld$oa_incidence)
+# glimpse(ld$oa_incidence)
 
 split <- setNames(data.frame(ld$Wavelengths, ld$oa_incidence$csAbsOA_split), c('wavelength','both','1','2'))
 # glimpse(split)
 
 split$crosstype <- 'Abs'
 
-ds <- split %>% pivot_longer(c('both','1','2'))
-ds$scatterer <- ds$name
-ds$region <- 'total_avg'
-ds$calculation <- 'split'
+stout <- split %>% pivot_longer(c('both','1','2'))
+stout$scatterer <- stout$name
+stout$region <- 'total_avg'
+stout$calculation <- 'Stout'
 
-mparts <- xsec_part %>% filter(polarisation=='4L') %>% 
-  pivot_longer(c('total'), names_to = 'region')
+glimpse(stout)
 
-glimpse(mparts)
+## ----byscatterer----
 
-
-## ----comparison----
-
-ggplot(total %>% filter(crosstype=='Abs'), aes(wavelength, average, linetype=calculation)) +
-  geom_line(lwd=1, alpha=0.5) +
-  geom_line(mparts, map=aes(wavelength, value, colour=region),lwd=1) +
-  # facet_grid(scatterer~crosstype, scales='free_y') +
-  geom_line(data=ds, map=aes(wavelength, value, colour=region),lwd=1) +
+ggplot(map= aes(wavelength, average)) +
+  geom_line(mack %>% filter(scatterer != 'both'), map=aes(wavelength, value, colour=calculation,linetype=calculation),lwd=1) +
+  geom_line(data=stout %>% filter(scatterer != 'both'), map=aes(wavelength, value, colour=calculation,linetype=calculation),lwd=1) +
   facet_wrap(~scatterer, scales='free_y', labeller = label_both) +
-  scale_colour_brewer(palette='Set1')
+  scale_x_continuous(expand=c(0,0)) +
+  scale_colour_brewer(palette='Set1')+
+  labs(title='Orientation-averaged absorption split by scatterer')
+
+
+## ----both----
+
+ggplot(total %>% filter(crosstype=='Abs', scatterer == 'both'), aes(wavelength, average)) +
+  geom_line(mack_both, map=aes(wavelength, both, colour=calculation,linetype=calculation),lwd=1) +
+  geom_line(data=stout %>% filter(scatterer == 'both'), map=aes(wavelength, value, colour=calculation,linetype=calculation),lwd=1) +
+  geom_line(aes(linetype=calculation, colour=calculation), lwd=1) +
+  # facet_wrap(~scatterer, scales='free_y', labeller = label_both) +
+  scale_x_continuous(expand=c(0,0)) +
+  scale_colour_brewer(palette='Set1') +
+  labs(title='Total orientation-averaged absorption')
 

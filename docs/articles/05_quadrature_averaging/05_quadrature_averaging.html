@@ -201,7 +201,7 @@
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Analytical vs numerical angular averaging</h1>
             
-            <h4 data-toc-skip class="date">28 January, 2022</h4>
+            <h4 data-toc-skip class="date">03 February, 2022</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/05_quadrature_averaging/05_quadrature_averaging.Rmd" class="external-link"><code>vignettes/05_quadrature_averaging/05_quadrature_averaging.Rmd</code></a></small>
       <div class="hidden name"><code>05_quadrature_averaging.Rmd</code></div>
@@ -213,14 +213,14 @@
 <div class="section level2">
 <h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
 </h2>
-<p>Here we compare analytical orientation averaging of far-field cross-sections with a numerical cubature (38 point Lebedev).</p>
+<p>Here we compare analytical orientation averaging of far-field cross-sections with a numerical cubature.</p>
 <style>
 .x3d_scene {
 float:right;
 margin:0em;
  }
   </style>
-<p><x3d width="200px" height="150px" class="x3d_scene"><scene><transform scale="20 20 20" rotation="0 0 0 1e-05" translation="54.774575 -62.2474575 -30"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="20 20 20" rotation="0 0 0 1e-05" translation="35.676275 -3.46892749999999 -10"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="20 20 20" rotation="0 0 0 1e-05" translation="-14.323725 32.8581925 10"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="20 20 20" rotation="0 0 0 1e-05" translation="-76.127125 32.8581925 30"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><shape><indexedlineset colorpervertex="false" colorindex="0 1 2" coordindex="0 1 -1 0 2 -1 0 3 -1"><coordinate point="0 0 0 100 0 0 0 100 0 0 0 100"></coordinate><color color="1 0 0 0 1 0 0.2 0.2 1"></color></indexedlineset></shape><viewpoint centerofrotation="0 0 0" position="0 0 300" orientation="0 0 1 0"></viewpoint></scene></x3d></p>
+<p><x3d width="200px" height="150px" class="x3d_scene"><scene><transform scale="20 20 20" rotation="0 0 0 1e-05" translation="54.774575 -62.2474575 -30"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="20 20 20" rotation="0 0 0 1e-05" translation="35.676275 -3.46892749999999 -10"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="20 20 20" rotation="0 0 0 1e-05" translation="-14.323725 32.8581925 10"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="20 20 20" rotation="0 0 0 1e-05" translation="-76.127125 32.8581925 30"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><shape><indexedlineset colorpervertex="false" colorindex="0 1 2" coordindex="0 1 -1 0 2 -1 0 3 -1"><coordinate point="0 0 0 100 0 0 0 100 0 0 0 100"></coordinate><color color="1 0 0 0 1 0 0.2 0.2 1"></color></indexedlineset></shape><viewpoint centerofrotation="0 0 0" position="0 0 300" orientation="0 0 0 1e-05" viewall="false"></viewpoint></scene></x3d></p>
 <p>This simulation uses the following <code>input</code> file</p>
 <pre><code>ModeAndScheme 2 3 
 MultipoleCutoff 5
@@ -277,6 +277,9 @@ Show incidence file (click to open)
 -1.57079633  1.09313802  0.00000000  0.02857143
 -1.57079633  2.04845464  0.00000000  0.02857143</code></pre>
 </details><p><br></p>
+<p>This file was obtained using the <a href="http://nano-optics.ac.nz/cubs/" class="external-link"><code>cubs</code> package</a>, with the following command:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">terms</span><span class="fu">::</span><span class="fu">export_cubature</span><span class="op">(</span><span class="fu">cubs</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/cubs/man/cubs.html" class="external-link">cubs</a></span><span class="op">(</span>N <span class="op">=</span> <span class="fl">38</span>, <span class="st">'lebedev'</span><span class="op">)</span>, out <span class="op">=</span> <span class="st">'incidence'</span><span class="op">)</span></code></pre></div>
 <p>The command to run the example is simply</p>
 <pre><code>../../build/terms input &gt; log</code></pre>
 <p>The full log contains basic details of the calculations, and finishes with the timing.</p>
@@ -315,7 +318,7 @@ termsProgram&gt; Program run time (CPU &amp; real in s):  1.056E+01  9.246E+00</
 <p>We compare the analytical orientation-averaged spectra (solid lines), with the numerical cubature (dashed lines): <img src="05_quadrature_averaging_files/figure-html/comparison-1.png" width="700"></p>
 <p>apart from the blue end of the spectrum, the accuracy is good.</p>
 <hr>
-<p><em>Last run: 28 January, 2022</em></p>
+<p><em>Last run: 03 February, 2022</em></p>
 </div>
   </div>
 

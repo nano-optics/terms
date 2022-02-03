@@ -201,7 +201,7 @@
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>User-defined dielectric function</h1>
             
-            <h4 data-toc-skip class="date">28 January, 2022</h4>
+            <h4 data-toc-skip class="date">03 February, 2022</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/06_dielectric_function/06_dielectric_function.Rmd" class="external-link"><code>vignettes/06_dielectric_function/06_dielectric_function.Rmd</code></a></small>
       <div class="hidden name"><code>06_dielectric_function.Rmd</code></div>
@@ -213,14 +213,14 @@
 <div class="section level2">
 <h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
 </h2>
-<p>This example illustrates the use of a custom dielectric function stored externally, which is interpolated by <code>TERMS</code>. We compare the far-field cross-sections for a dimer of silver spheres, using the built-in dielectric function of Ag, and that of PRB 2015 stored in <code>Ag_PRB.txt</code></p>
+<p>This example illustrates the use of a custom dielectric function stored externally, which is interpolated by <code>TERMS</code>. We compare the far-field cross-sections for a dimer of silver spheres, using the built-in dielectric function of Ag (Drude model, from <a href="https://doi.org/10.1016/B978-0-444-52779-0.X0001-3" class="external-link">Etchegoin and Le Ru</a>), and that of <a href="https://doi.org/10.1103/PhysRevB.91.235137" class="external-link">Yang et al, Phys. Rev. B 91, 235137 (2015)</a> stored in <code>Ag_PRB.txt</code></p>
 <style>
 .x3d_scene {
 float:right;
 margin:0em;
  }
   </style>
-<p><x3d width="200px" height="150px" class="x3d_scene"><scene><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="0 -50 0"><shape><appearance><material ambientintensity="0.4" diffusecolor="0.7529412 0.7529412 0.7529412" shininess="0.16" specularcolor="0.827451 0.827451 0.827451"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="0 50 0"><shape><appearance><material ambientintensity="0.4" diffusecolor="0.7529412 0.7529412 0.7529412" shininess="0.16" specularcolor="0.827451 0.827451 0.827451"></material></appearance><sphere radius="1"></sphere></shape></transform><shape><indexedlineset colorpervertex="false" colorindex="0 1 2" coordindex="0 1 -1 0 2 -1 0 3 -1"><coordinate point="0 0 0 100 0 0 0 100 0 0 0 100"></coordinate><color color="1 0 0 0 1 0 0.2 0.2 1"></color></indexedlineset></shape><viewpoint centerofrotation="0 0 0" position="0 0 300" orientation="0 0 1 0"></viewpoint></scene></x3d></p>
+<p><x3d width="200px" height="150px" class="x3d_scene"><scene><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="0 -50 0"><shape><appearance><material ambientintensity="0.4" diffusecolor="0.7529412 0.7529412 0.7529412" shininess="0.16" specularcolor="0.827451 0.827451 0.827451"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="0 50 0"><shape><appearance><material ambientintensity="0.4" diffusecolor="0.7529412 0.7529412 0.7529412" shininess="0.16" specularcolor="0.827451 0.827451 0.827451"></material></appearance><sphere radius="1"></sphere></shape></transform><shape><indexedlineset colorpervertex="false" colorindex="0 1 2" coordindex="0 1 -1 0 2 -1 0 3 -1"><coordinate point="0 0 0 100 0 0 0 100 0 0 0 100"></coordinate><color color="1 0 0 0 1 0 0.2 0.2 1"></color></indexedlineset></shape><viewpoint centerofrotation="0 0 0" position="0 0 200" orientation="0 0 0 1e-05" viewall="false"></viewpoint></scene></x3d></p>
 <p>This second simulation with a user-defined dielectric function uses the following <code>input</code> file</p>
 <pre><code>Wavelength 300 700 200
 Medium 1.7689 # epsilon of water
@@ -238,7 +238,7 @@ DF1 0.0  50.0 0.0 30.0</code></pre>
 </h2>
 <p><img src="06_dielectric_function_files/figure-html/oa-1.png" width="700"></p>
 <hr>
-<p><em>Last run: 28 January, 2022</em></p>
+<p><em>Last run: 03 February, 2022</em></p>
 </div>
   </div>
 

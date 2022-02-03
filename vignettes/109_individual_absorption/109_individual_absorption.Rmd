@@ -51,21 +51,15 @@ This simulation uses the following `input` file
 cat input
 ```
 
-Note that currently the partial absorptions following Mackowski are not orientation-averaged (analytically); we therefore use an external incident file with quadrature nodes and weights,
+<!-- Note that currently the partial absorptions following Mackowski are not orientation-averaged (analytically); we therefore use an external incident file with quadrature nodes and weights, -->
 
 <details closed>
 <summary> Show incidence file (click to open) </summary>
 ```{bash incidence}
 cat incidence
 ```
-</details> <br />
+</details> 
 
-<details closed>
-<summary> Show log file (click to open) </summary>
-```{bash log}
-cat log
-```
-</details> <br />
 
 ## Total cross-sections
 
@@ -76,17 +70,25 @@ We first retrieve the total cross-sections, as usual,
 
 ## Mackowski's partial cross-sections 
 
+Formulas derived by Mackowski provide partial absorptions for individual spheres, which we average with a numerical cubature.
+
 ```{r partial}
 ```
 
 ## Stout's per-particle cross-sections 
 
+In the Stout scheme, orientation-averaged quantities are obtained for each scatterer individually, using scatterer-centred formulas. This allows us to separate the absorption in different scatterers.
+
 ```{r split}
 ```
 
+
 ## Comparison
 
-```{r comparison}
+```{r byscatterer}
+```
+
+```{r both}
 ```
 
 -----

@@ -48,7 +48,7 @@ margin:0em;
 
 ge <- get_geometry('input')
 cl <- cluster_geometry(ge)
-terms::x3d_scene(cl, viewpoint=c(0,0,800), width = "200px", height = "150px", default_material='gold')
+terms::x3d_scene(cl, viewpoint=c(-200,200,500), width = "200px", height = "150px", default_material='gold')
 ```
 
 This simulation uses the following `input` file
@@ -56,10 +56,25 @@ This simulation uses the following `input` file
 cat input
 ```
 
+where the helix geometry was obtained via the convenience R function: 
+```{r eval=FALSE}
+terms::cluster_helix(N = 8, a = 50, b=50, c=50, R0 = 120, pitch = 400, delta = pi/4)
+```
+
+The results are also shown for a comparable simulation using the [MSTM package (version 4)](https://github.com/dmckwski/MSTM), which implements the superposition T-matrix method for clusters of spheres (note that TERMS uses similar algorithms in `Scheme=3`). 
+
+The MSTM simulation is run with a separate input file for each wavelength (here 400 nm)
+
+```{bash mstmfile}
+cat "400.inp"
+```
+
+## Comparison
 
 ```{r comparison}
 ```
 
+Very good agreement is observed over the entire spectrum, even with such closely-spaced nanoparticles at resonance. 
 
 -----
 

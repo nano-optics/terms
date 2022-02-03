@@ -30,14 +30,7 @@ do.call(read_chunk, list(path = "_run.R"))
 
 ## Objective
 
-This example illustrates the calculation of whispering gallery modes in a dimer of large dielectric spheres.
-
-This simulation uses the following `input` files 
-
-```{R tpl}
-```
-
-(with and without the keyword).
+This example illustrates the calculation of whispering gallery modes in a dimer of large silicon spheres.
 
 ```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
 library(terms)
@@ -53,6 +46,17 @@ cl <- cluster_geometry(ge)
 terms::x3d_scene(cl, viewpoint=c(0,0,2000), width = "200px", height = "150px") 
 ```
 
+This simulation uses the following `input` file for far-field cross-sections
+
+```{R tpl}
+```
+
+and for near-field maps
+
+```{R tplnf}
+```
+
+
 ```{r read, cache=FALSE}
 ```
 
@@ -63,7 +67,7 @@ terms::x3d_scene(cl, viewpoint=c(0,0,2000), width = "200px", height = "150px")
 
 ## Near field maps
 
-```{r intensity}
+```{r intensity, fig.height=4.5}
 ```
 
 

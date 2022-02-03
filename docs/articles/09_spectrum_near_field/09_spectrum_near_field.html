@@ -201,7 +201,7 @@
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Near-field spectrum</h1>
             
-            <h4 data-toc-skip class="date">28 January, 2022</h4>
+            <h4 data-toc-skip class="date">03 February, 2022</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/09_spectrum_near_field/09_spectrum_near_field.Rmd" class="external-link"><code>vignettes/09_spectrum_near_field/09_spectrum_near_field.Rmd</code></a></small>
       <div class="hidden name"><code>09_spectrum_near_field.Rmd</code></div>
@@ -213,35 +213,38 @@
 <div class="section level2">
 <h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
 </h2>
-<p>This example illustrates the calculation of near-field calculations for multiple wavelengths. The structure consists of two gold spheres in water. The wavelength is varied from 400 to 800 nm, and we map the normalised local degree of chirality around the structure.</p>
+<p>This example illustrates the calculation of near-field calculations for multiple wavelengths. The structure consists of a chiral tetramer of gold spheres in water. The wavelength is varied from 500 to 700 nm, and we map the electric field intensity and normalised local degree of chirality in the xy plane around the structure, which is illuminated with linear polarisation at 45 degrees in the xy plane and wavevector along z. Note that a small value of Nmax is used to keep the calculation time short; for accurate results a larger value should be used.</p>
 <style>
 .x3d_scene {
 float:right;
 margin:0em;
  }
   </style>
-<p><x3d width="200px" height="150px" class="x3d_scene"><scene><transform scale="10 10 10" rotation="0 0 0 1e-05" translation="0 -15 0"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="10 10 10" rotation="0 0 0 1e-05" translation="0 15 0"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><shape><indexedlineset colorpervertex="false" colorindex="0 1 2" coordindex="0 1 -1 0 2 -1 0 3 -1"><coordinate point="0 0 0 100 0 0 0 100 0 0 0 100"></coordinate><color color="1 0 0 0 1 0 0.2 0.2 1"></color></indexedlineset></shape><viewpoint centerofrotation="0 0 0" position="0 0 150" orientation="0 0 1 0"></viewpoint></scene></x3d></p>
+<p><x3d width="200px" height="150px" class="x3d_scene"><scene><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="-32.5 48.75 -16.25"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="-32.5 -16.25 -16.25"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="32.5 -16.25 -16.25"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="32.5 -16.25 48.75"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><shape><indexedlineset colorpervertex="false" colorindex="0 1 2" coordindex="0 1 -1 0 2 -1 0 3 -1"><coordinate point="0 0 0 100 0 0 0 100 0 0 0 100"></coordinate><color color="1 0 0 0 1 0 0.2 0.2 1"></color></indexedlineset></shape><viewpoint centerofrotation="0 0 0" position="200 100 100" orientation="-0.216552615839121 0.917331601399913 0.334066779108008 1.23035565991223" viewall="false"></viewpoint></scene></x3d></p>
 <p>This simulation uses the following <code>input</code> file</p>
 <pre><code>ModeAndScheme 1 3
-Wavelength 400 800 20
-MultipoleCutoff 8
+Wavelength 500 700 40
+MultipoleCutoff 4
 Medium 1.7689
-Incidence 0 0 0 1
+Incidence 0.7853982 0 0 1 # pi/4 linear
 
 OutputFormat HDF5 map
-SpacePoints -15 15 200 -15 45 200 0 0 0 
+SpacePoints -40 100 100 -40 100 100 0 0 0 0 0 0 
 MapQuantity 2 E C
 
-Scatterers 2 
-Au 0 0 0 10 
-Au 0 30 0 10</code></pre>
+Scatterers 4
+Au 0 65 0 30
+Au 0 0 0 30
+Au 65 0 0 30
+Au 65 0 65 30</code></pre>
+<p>The results contain the near-field data for all wavelengths in long format</p>
 <pre><code>        group            name       otype dclass        dim
 0           /      Near-Field   H5I_GROUP                  
-1 /Near-Field      Gridpoints H5I_DATASET  FLOAT  40401 x 3
+1 /Near-Field      Gridpoints H5I_DATASET  FLOAT  10201 x 3
 2 /Near-Field      Incidences H5I_DATASET  FLOAT      1 x 4
-3 /Near-Field     Wavelengths H5I_DATASET  FLOAT         21
-4 /Near-Field           map_E H5I_DATASET  FLOAT 848421 x 7
-5 /Near-Field normalised_ldoc H5I_DATASET  FLOAT 848421 x 5</code></pre>
+3 /Near-Field     Wavelengths H5I_DATASET  FLOAT         41
+4 /Near-Field           map_E H5I_DATASET  FLOAT 418241 x 7
+5 /Near-Field normalised_ldoc H5I_DATASET  FLOAT 418241 x 5</code></pre>
 </div>
 <div class="section level2">
 <h2 id="intensity">Intensity<a class="anchor" aria-label="anchor" href="#intensity"></a>
@@ -252,8 +255,14 @@ Au 0 30 0 10</code></pre>
 <h2 id="ldoc">LDOC<a class="anchor" aria-label="anchor" href="#ldoc"></a>
 </h2>
 <p><img src="09_spectrum_near_field_files/figure-html/ldoc-1.png" width="700"></p>
+</div>
+<div class="section level2">
+<h2 id="animation">Animation<a class="anchor" aria-label="anchor" href="#animation"></a>
+</h2>
+<p>The same data can also be visualised as an animation by mapping the wavelength to time</p>
+<p><img src="anim.gif" width="100%"></p>
 <hr>
-<p><em>Last run: 28 January, 2022</em></p>
+<p><em>Last run: 03 February, 2022</em></p>
 </div>
   </div>
 

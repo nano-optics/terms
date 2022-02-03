@@ -201,7 +201,7 @@
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Whispering gallery modes</h1>
             
-            <h4 data-toc-skip class="date">28 January, 2022</h4>
+            <h4 data-toc-skip class="date">03 February, 2022</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/107_WGM/107_WGM.Rmd" class="external-link"><code>vignettes/107_WGM/107_WGM.Rmd</code></a></small>
       <div class="hidden name"><code>107_WGM.Rmd</code></div>
@@ -213,31 +213,54 @@
 <div class="section level2">
 <h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
 </h2>
-<p>This example seeks to illustrates the effect of balancing as described by Stout et al. We compare the far-field spectra for a dimer of large silver spheres with vanishingly small gap, with and without the <code>DisableStoutBalancing</code> keyword. Interestingly, we’ve had no luck finding any difference, expect for situations where particles collide (but where the results aren’t expected to be valid in either case).</p>
-<p>This simulation uses the following <code>input</code> files</p>
-<pre><code>ModeAndScheme 2 1
-MultipoleCutoff 20
-Wavelength 600 800 100
-Verbosity 1
-Medium 1.7689 
-
-OutputFormat HDF5 {out}
-{comment}DisableStoutBalancing
-
-Scatterers 2
-Si 0.0  0.0 0.0 2000.0
-Si 0.0  4005 0.0 2000.0</code></pre>
-<p>(with and without the keyword).</p>
+<p>This example illustrates the calculation of whispering gallery modes in a dimer of large silicon spheres.</p>
 <style>
 .x3d_scene {
 float:right;
 margin:0em;
  }
   </style>
-<p><x3d width="200px" height="150px" class="x3d_scene"><scene><transform scale="2000 2000 2000" rotation="0 0 0 1e-05" translation="0 -2002.5 0"><shape><appearance><material ambientintensity="0.4" diffusecolor="0.3921569 0.5843137 0.9294118" shininess="0.16" specularcolor="0.5294118 0.8078431 0.9803922"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="2000 2000 2000" rotation="0 0 0 1e-05" translation="0 2002.5 0"><shape><appearance><material ambientintensity="0.4" diffusecolor="0.3921569 0.5843137 0.9294118" shininess="0.16" specularcolor="0.5294118 0.8078431 0.9803922"></material></appearance><sphere radius="1"></sphere></shape></transform><shape><indexedlineset colorpervertex="false" colorindex="0 1 2" coordindex="0 1 -1 0 2 -1 0 3 -1"><coordinate point="0 0 0 100 0 0 0 100 0 0 0 100"></coordinate><color color="1 0 0 0 1 0 0.2 0.2 1"></color></indexedlineset></shape><viewpoint centerofrotation="0 0 0" position="0 0 300" orientation="0 0 1 0"></viewpoint></scene></x3d></p>
+<p><x3d width="200px" height="150px" class="x3d_scene"><scene><transform scale="1000 1000 1000" rotation="0 0 0 1e-05" translation="0 -1050 0"><shape><appearance><material ambientintensity="0.4" diffusecolor="0.3921569 0.5843137 0.9294118" shininess="0.16" specularcolor="0.5294118 0.8078431 0.9803922"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="1000 1000 1000" rotation="0 0 0 1e-05" translation="0 1050 0"><shape><appearance><material ambientintensity="0.4" diffusecolor="0.3921569 0.5843137 0.9294118" shininess="0.16" specularcolor="0.5294118 0.8078431 0.9803922"></material></appearance><sphere radius="1"></sphere></shape></transform><shape><indexedlineset colorpervertex="false" colorindex="0 1 2" coordindex="0 1 -1 0 2 -1 0 3 -1"><coordinate point="0 0 0 100 0 0 0 100 0 0 0 100"></coordinate><color color="1 0 0 0 1 0 0.2 0.2 1"></color></indexedlineset></shape><viewpoint centerofrotation="0 0 0" position="0 0 2000" orientation="0 0 0 1e-05" viewall="false"></viewpoint></scene></x3d></p>
+<p>This simulation uses the following <code>input</code> file for far-field cross-sections</p>
+<pre><code>ModeAndScheme 2 3
+MultipoleCutoff 15
+Wavelength 700 900 50
+Verbosity 1
+Medium 1.0
+
+Incidence 0 1.570796 0 2
+OutputFormat HDF5 xsec
+
+Scatterers 2
+Si 0.0  -1050.0 0.0 1000.0
+Si 0.0  1050 0.0 1000.0</code></pre>
+<p>and for near-field maps</p>
+<pre><code>ModeAndScheme 1 0
+MultipoleCutoff 20
+Wavelength 600 900 2
+Verbosity 1
+Medium 1.0
+
+Incidence 0 1.570796 0 2
+OutputFormat HDF5 map
+SpacePoints -1500 1500 200 -2500 2500 400 0 0 0 0 0 0 
+MapQuantity 2 E 
+
+Scatterers 2
+Si 0.0  -1050.0 0.0 1000.0
+Si 0.0  1050 0.0 1000.0</code></pre>
+</div>
+<div class="section level2">
+<h2 id="far-field-spectra">Far field spectra<a class="anchor" aria-label="anchor" href="#far-field-spectra"></a>
+</h2>
 <p><img src="107_WGM_files/figure-html/oa-1.png" width="700"></p>
+</div>
+<div class="section level2">
+<h2 id="near-field-maps">Near field maps<a class="anchor" aria-label="anchor" href="#near-field-maps"></a>
+</h2>
+<p><img src="107_WGM_files/figure-html/intensity-1.png" width="700"></p>
 <hr>
-<p><em>Last run: 28 January, 2022</em></p>
+<p><em>Last run: 03 February, 2022</em></p>
 </div>
   </div>
 

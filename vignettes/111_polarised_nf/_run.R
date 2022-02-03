@@ -33,7 +33,7 @@ system("../../build/terms input_p > log")
 system("../../build/terms input_L > log")
 
 
-## ----read----
+## ----readL----
 
 library(rhdf5)
 ld <- h5read('map_L.h5', "Near-Field")
@@ -41,10 +41,14 @@ d1 <- data.frame(ld$mapOaQuantity)
 names(d1) <- c('wavelength', 'x','y','z','E^2', 'B^2', 'C^2')
 glimpse(d1)
 
+## ----readU----
+
 ld <- h5read('map_unpolarised.h5', "Near-Field")
 d2 <- data.frame(ld$mapOaQuantity)
 names(d2) <- c('wavelength', 'x','y','z','E^2', 'B^2') # no C, because formula not available: use 1/2(L+R)
 glimpse(d2)
+
+## ----readP----
 
 ld <- h5read('map_polarised.h5', "Near-Field")
 d3 <- data.frame(ld$mapOaQuantity)
@@ -64,18 +68,20 @@ pal2 <- RColorBrewer::brewer.pal(9,'PRGn')
 p1 <- 
 ggplot(combined, aes(x,y, fill=Ediff)) +
   geom_raster() + coord_equal() + scale_x_continuous(expand=c(0,0)) + scale_y_continuous(expand=c(0,0)) +
+  geom_circle(data=ge, aes(x0=x,y0=y,r=r), fill='grey90', lty=2, lwd=0.1, inherit.aes = FALSE) +
   scale_fill_gradient2(low = pal[1],mid = pal[5],high = pal[9], midpoint = 0) + 
-  labs(fill=expression(E[L]^2-E[R]^2))
+  labs(x='x /nm', y='y /nm', fill=expression(E[L]^2-E[R]^2))
 
 c <- 299792458
-p2 <- p1 + aes(fill = c^2*Bdiff)+ labs(fill=expression(B[L]^2-B[R]^2))
+p2 <- p1 + aes(fill = c^2*Bdiff)+ labs(fill=expression(c^2*B[L]^2-c^2*B[R]^2))
 p3 <- p1 + aes(fill = Cdiff)+ labs(fill=expression(C[L]-C[R]))
 p4 <- 
   ggplot(combined, aes(x,y, fill=log10(`E^2`))) +
   geom_raster() + coord_equal() + scale_x_continuous(expand=c(0,0)) + scale_y_continuous(expand=c(0,0)) +
-  scale_fill_viridis_c(option = 'A') + labs(subtitle = 'Electric field intensity', fill=expression(log10(E^2)))
+  geom_circle(data=ge, aes(x0=x,y0=y,r=r), fill='grey90', lty=2, lwd=0.1, inherit.aes = FALSE) +
+  scale_fill_viridis_c(option = 'A') + labs(x='x /nm', y='y /nm', subtitle = 'Electric field intensity', fill=expression(log10(E^2)))
 p5 <- p4 + scale_fill_viridis_c(option = 'D') + aes(fill = c^2*`B^2`)+ 
-  labs(subtitle = 'Magnetic field intensity', fill=expression(B^2))
+  labs(subtitle = 'Magnetic field intensity', fill=expression(c^2*B^2))
 p6 <- p4 + aes(fill = `C[R]` + `C[L]`) + labs(subtitle = 'Degree of optical chirality', fill=expression(C[L]+C[R])) +
   scale_fill_gradient2(low = pal2[1],mid = pal2[5],high = pal2[9], midpoint = 0) 
 

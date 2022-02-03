@@ -51,7 +51,7 @@ margin:0em;
 
 ge <- get_geometry('input_u')
 cl <- cluster_geometry(ge)
-terms::x3d_scene(cl, viewpoint=c(0,0,200), width = "200px", height = "150px", default_material='gold')
+terms::x3d_scene(cl, viewpoint=c(200,100,100), width = "200px", height = "150px", default_material='gold')
 ```
 We run three simulations: 
 
@@ -64,11 +64,31 @@ We run three simulations:
 cat input_L
 ```
 
-```{r read}
-```
-
 ```{r load, cache=FALSE}
 ```
+
+For a given (L) polarisation we obtain:
+
+```{r readL}
+```
+
+For unpolarised incidence:
+
+```{r readU}
+```
+
+
+For both polarisations:
+
+```{r readP}
+```
+
+
+## Maps
+
+We now map the orientation-averaged local electric and magnetic field intensity and local degree of optical chirality (LDOC) in the z=0 plane, for unpolarised excitation, and the difference between L and R polarisations. Note that only the unpolarised electric field intensity is displayed in log scale. The calculations inside the spheres are not reliable and therefore not displayed.
+
+For unpolarised LDOC, we simply average the two polarisations, as no formula is readily available.
 
 ```{r plot, fig.height=10,fig.width=8}
 ```

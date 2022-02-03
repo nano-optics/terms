@@ -2,7 +2,7 @@
 title: TODO
 ---
 
-Unordered list of possible extensions and work-in-progress. (Note: some ideas in the list may never be implemented; it will depend on relative priorities and availability)
+Unordered list of possible extensions and work-in-progress. (Note: some ideas in the list may never be implemented; it will depend on priorities and availability)
 
 ## New core features
 
@@ -16,11 +16,10 @@ Unordered list of possible extensions and work-in-progress. (Note: some ideas in
 1. Built-in calculation of spheroid T-matrix (port from Smarties)
 1. T-matrix for anisotropic core-shell spheres, http://dx.doi.org/10.1103/PhysRevB.103.085436
 1. T-matrix for coated spheroids, following https://doi.org/10.1103/PhysRevD.10.2670
-1. "Higher-Order Polarizability Tensors" conversion from T-matrix, after 10.1021/acsphotonics.9b01776
 
 ## User level
 
-1. Import of T-matrices in HDF5 format
+1. Import/Export of T-matrices in HDF5 format
 1. Additional materials
 
 ## Code optimisation

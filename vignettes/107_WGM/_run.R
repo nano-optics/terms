@@ -82,21 +82,21 @@ names(d1) <- c('wavelength', 'x','y','z','Eavg','Ex','Ey')
 
 ge <- get_geometry('input_map')
 
-p2 <- ggplot(d1, aes(x, y, fill=log10(Ey))) +
+p2 <- ggplot(d1, aes(x/1e3, y/1e3, fill=log10(Ey))) +
   facet_wrap(~wavelength,nrow=1) +
   geom_raster() +
   coord_equal() +
-  geom_circle(data=ge, aes(x0=x,y0=y,r=r), fill=NA, lty=2, inherit.aes = FALSE) +
-  scale_x_continuous(expand = c(0,0)) +
+  geom_circle(data=ge, aes(x0=x/1e3,y0=y/1e3,r=r/1e3), fill=NA, lty=1, lwd=0.5, col='white', inherit.aes = FALSE) +
+  scale_x_continuous(expand = c(0,0),lim=c(-1.45,1.45)) +
   scale_y_continuous(expand = c(0,0)) +
   # scale_y_continuous(lim=c(0,19000),expand=c(0,0)) +
   scale_fill_viridis_c(option = 'C') +
   # scale_fill_distiller(palette = 'PiYG') +
-  labs(x='x /nm', y='y /nm',
-       fill=expression(E^2),linetype = 'region') +
+  labs(x='x /µm', y='y /µm',
+       fill=expression(log[10](E^2)),linetype = 'region') +
   theme(panel.grid.major.y = element_line(colour = 'grey80',size = 0.2,linetype=3),
         panel.grid.minor.y = element_line(colour = 'grey80',size = 0.1,linetype=3),
-        panel.spacing.x = unit(0,'mm'))
+        panel.spacing.x = unit(2,'mm'))
 
 p2
 

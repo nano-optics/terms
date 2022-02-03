@@ -201,7 +201,7 @@
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Polarimetry: Stokes vectors, phase matrix</h1>
             
-            <h4 data-toc-skip class="date">28 January, 2022</h4>
+            <h4 data-toc-skip class="date">03 February, 2022</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/08_polarimetry/08_polarimetry.Rmd" class="external-link"><code>vignettes/08_polarimetry/08_polarimetry.Rmd</code></a></small>
       <div class="hidden name"><code>08_polarimetry.Rmd</code></div>
@@ -213,14 +213,17 @@
 <div class="section level2">
 <h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
 </h2>
-<p>This example illustrates the degree of circular polarization at different wavelengths and scattering angles (<span class="math inline">\(\theta\)</span>). The structure consists of a helix of five prolate gold spheroids inside the water with semi-axes a = b = 30 nm and c = 50 nm. The helix axis is z, radius 100 nm, pitch 700 nm, and the angular-step <span class="math inline">\(\delta = \pi / 4\)</span>. The structure is illuminated with a linear polarised plane wave along the x direction, and the wavevector along the z direction.</p>
+<p>This example illustrates the degree of circular polarisation at different wavelengths and scattering angles (<span class="math inline">\(\theta\)</span>). The structure consists of a helix of five prolate gold spheroids inside the water with semi-axes a = b = 30 nm and c = 50 nm. The helix axis is z, radius 100 nm, pitch 700 nm, and the angular-step <span class="math inline">\(\delta = \pi / 4\)</span>. The following R utility function was used to model the geometry,</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">terms</span><span class="fu">::</span><span class="fu"><a href="../../reference/clusters.html">cluster_helix</a></span><span class="op">(</span>N <span class="op">=</span> <span class="fl">5</span>, a <span class="op">=</span> <span class="fl">30</span>, b <span class="op">=</span> <span class="fl">30</span>, c <span class="op">=</span> <span class="fl">50</span>, R0 <span class="op">=</span> <span class="fl">100</span>, pitch <span class="op">=</span> <span class="fl">700</span>, delta <span class="op">=</span> <span class="va">pi</span><span class="op">/</span><span class="fl">4</span><span class="op">)</span></code></pre></div>
+<p>The structure is illuminated with a linear polarised plane wave along the x direction, and the wavevector along the z direction.</p>
 <style>
 .x3d_scene {
 float:right;
 margin:0em;
  }
   </style>
-<p><x3d width="200px" height="150px" class="x3d_scene"><scene><transform scale="29.940119760479 29.940119760479 50" rotation="-0.336144871813997 0.336412659619843 0.87967931808146 1.69786586278688" translation="100 -48.284 -175"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="29.940119760479 29.940119760479 50" rotation="-0.35315504503013 0.145494969421652 0.924194343684752 2.41399657488494" translation="70.71 22.426 -87.5"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="29.940119760479 29.940119760479 50" rotation="-0.359364793582371 0.000286171874762573 0.940445037447873 3.14011491804833" translation="0 51.716 0"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="29.940119760479 29.940119760479 50" rotation="0.35315504503013 0.145494969421652 -0.924194343684752 2.41399657488494" translation="-70.71 22.426 87.5"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="29.940119760479 29.940119760479 50" rotation="0.336144871813997 0.336412659619843 -0.87967931808146 1.69786586278688" translation="-100 -48.284 175"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><shape><indexedlineset colorpervertex="false" colorindex="0 1 2" coordindex="0 1 -1 0 2 -1 0 3 -1"><coordinate point="0 0 0 100 0 0 0 100 0 0 0 100"></coordinate><color color="1 0 0 0 1 0 0.2 0.2 1"></color></indexedlineset></shape><viewpoint centerofrotation="0 0 0" position="0 0 500" orientation="0 0 1 0"></viewpoint></scene></x3d></p>
+<p><x3d width="200px" height="150px" class="x3d_scene"><scene><transform scale="29.940119760479 29.940119760479 50" rotation="-0.336144871813997 0.336412659619843 0.87967931808146 1.69786586278688" translation="100 -48.284 -175"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="29.940119760479 29.940119760479 50" rotation="-0.35315504503013 0.145494969421652 0.924194343684752 2.41399657488494" translation="70.71 22.426 -87.5"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="29.940119760479 29.940119760479 50" rotation="-0.359364793582371 0.000286171874762573 0.940445037447873 3.14011491804833" translation="0 51.716 0"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="29.940119760479 29.940119760479 50" rotation="0.35315504503013 0.145494969421652 -0.924194343684752 2.41399657488494" translation="-70.71 22.426 87.5"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="29.940119760479 29.940119760479 50" rotation="0.336144871813997 0.336412659619843 -0.87967931808146 1.69786586278688" translation="-100 -48.284 175"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><shape><indexedlineset colorpervertex="false" colorindex="0 1 2" coordindex="0 1 -1 0 2 -1 0 3 -1"><coordinate point="0 0 0 100 0 0 0 100 0 0 0 100"></coordinate><color color="1 0 0 0 1 0 0.2 0.2 1"></color></indexedlineset></shape><viewpoint centerofrotation="0 0 0" position="0 0 500" orientation="0 0 0 1e-05" viewall="false"></viewpoint></scene></x3d></p>
 <p>This simulation uses the following <code>input</code> file</p>
 <pre><code>ModeAndScheme 3 3
 MultipoleCutoff 8
@@ -249,15 +252,12 @@ TF1   -100    0.0     175    50.0  -1.57  0.73   0  1.67</code></pre>
 4 /Polarimetry Stokes_phase_Mat H5I_DATASET  FLOAT 144180 x 20
 5 /Polarimetry      Wavelengths H5I_DATASET  FLOAT         801
 6 /Polarimetry      diff_Sca_CS H5I_DATASET  FLOAT  144180 x 5</code></pre>
-</div>
-<div class="section level2">
-<h2 id="results">Results<a class="anchor" aria-label="anchor" href="#results"></a>
-</h2>
-<p>The output consist of files <code>Stokes\_phase\_Mat.dat" and</code>Stokes_Sca_Vec.dat" include data of stokes phase matrix and stokes scattering vector for the specified illumination direction. The structure is chiral and therefore converts linear polarization to circular polarization which is calculated as the ratio between <span class="math inline">\(V\)</span> and <span class="math inline">\(I\)</span> (<span class="math inline">\(V/I\)</span>) or for <span class="math inline">\(x\)</span>-polarized plane wave as <span class="math inline">\((Z_{41}+Z_{42})/(Z_{11}+Z_{12})\)</span>. Fig.  shows the calculated results versus wavelength and different scattering angle.</p>
+<p>The output field <code>diff_Sca_CS</code> contains the differential scattering cross-section for the scattering angles requested, while fields <code>Stokes_phase_Mat</code> and <code>Stokes_Sca_Vec</code> include data of Stokes phase matrix and Stokes scattering vector. The structure is chiral and therefore converts linear polarisation to partially-circular polarisation, which can be quantified in the ratio between <span class="math inline">\(V\)</span> and <span class="math inline">\(I\)</span> (<span class="math inline">\(V/I\)</span>) or, for an <span class="math inline">\(x\)</span>-polarised plane wave, as <span class="math inline">\((Z_{41}+Z_{42})/(Z_{11}+Z_{12})\)</span>.</p>
 </div>
 <div class="section level2">
 <h2 id="differential-scattering-cross-section">Differential scattering cross-section<a class="anchor" aria-label="anchor" href="#differential-scattering-cross-section"></a>
 </h2>
+<p>The data have the following format</p>
 <pre><code>  alpha        beta gamma wavelength diff_Sca_CS
 1     0 0.008726646     0        200   0.2267166
 2     0 0.008726646     0        201   0.2313050
@@ -270,6 +270,7 @@ TF1   -100    0.0     175    50.0  -1.57  0.73   0  1.67</code></pre>
 <div class="section level2">
 <h2 id="phase-matrix">Phase matrix<a class="anchor" aria-label="anchor" href="#phase-matrix"></a>
 </h2>
+<p>The data have the following format</p>
 <pre><code>  alpha        beta gamma wavelength      z11      z21       z31      z41
 1     0 0.008726646     0        200 69.27876 59.16038 -3.080489 11.72434
 2     0 0.008726646     0        201 70.62095 60.42160 -3.201968 11.85424
@@ -296,6 +297,7 @@ TF1   -100    0.0     175    50.0  -1.57  0.73   0  1.67</code></pre>
 <div class="section level2">
 <h2 id="stokes-scattering-vector">Stokes scattering vector<a class="anchor" aria-label="anchor" href="#stokes-scattering-vector"></a>
 </h2>
+<p>The data have the following format</p>
 <pre><code>  alpha        beta gamma wavelength            I            Q             U
 1     0 0.008726646     0        200 0.0004001976 0.0003957638 -1.487647e-05
 2     0 0.008726646     0        201 0.0004082970 0.0004038323 -1.587040e-05
@@ -312,7 +314,7 @@ TF1   -100    0.0     175    50.0  -1.57  0.73   0  1.67</code></pre>
 6 5.975292e-05</code></pre>
 <p><img src="08_polarimetry_files/figure-html/stokes-1.png" width="700"></p>
 <hr>
-<p><em>Last run: 28 January, 2022</em></p>
+<p><em>Last run: 03 February, 2022</em></p>
 </div>
   </div>
 

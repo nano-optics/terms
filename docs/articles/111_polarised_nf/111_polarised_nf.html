@@ -201,7 +201,7 @@
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Polarised orientation-averaged local field intensities</h1>
             
-            <h4 data-toc-skip class="date">28 January, 2022</h4>
+            <h4 data-toc-skip class="date">03 February, 2022</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/111_polarised_nf/111_polarised_nf.Rmd" class="external-link"><code>vignettes/111_polarised_nf/111_polarised_nf.Rmd</code></a></small>
       <div class="hidden name"><code>111_polarised_nf.Rmd</code></div>
@@ -220,7 +220,7 @@ float:right;
 margin:0em;
  }
   </style>
-<p><x3d width="200px" height="150px" class="x3d_scene"><scene><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="-32.5 48.75 -16.25"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="-32.5 -16.25 -16.25"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="32.5 -16.25 -16.25"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="32.5 -16.25 48.75"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><shape><indexedlineset colorpervertex="false" colorindex="0 1 2" coordindex="0 1 -1 0 2 -1 0 3 -1"><coordinate point="0 0 0 100 0 0 0 100 0 0 0 100"></coordinate><color color="1 0 0 0 1 0 0.2 0.2 1"></color></indexedlineset></shape><viewpoint centerofrotation="0 0 0" position="0 0 200" orientation="0 0 1 0"></viewpoint></scene></x3d> We run three simulations:</p>
+<p><x3d width="200px" height="150px" class="x3d_scene"><scene><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="-32.5 48.75 -16.25"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="-32.5 -16.25 -16.25"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="32.5 -16.25 -16.25"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="32.5 -16.25 48.75"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><shape><indexedlineset colorpervertex="false" colorindex="0 1 2" coordindex="0 1 -1 0 2 -1 0 3 -1"><coordinate point="0 0 0 100 0 0 0 100 0 0 0 100"></coordinate><color color="1 0 0 0 1 0 0.2 0.2 1"></color></indexedlineset></shape><viewpoint centerofrotation="0 0 0" position="200 100 100" orientation="-0.216552615839121 0.917331601399913 0.334066779108008 1.23035565991223" viewall="false"></viewpoint></scene></x3d> We run three simulations:</p>
 <ul>
 <li>
 <code>MapOaQuantity unpolarised</code>: returns orientation-averaged near fields, also averaged over polarisation</li>
@@ -245,6 +245,7 @@ Au 0 65 0 30
 Au 0 0 0 30
 Au 65 0 0 30
 Au 65 0 65 30</code></pre>
+<p>For a given (L) polarisation we obtain:</p>
 <pre><code>Rows: 10,201
 Columns: 7
 $ wavelength &lt;dbl&gt; 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600,…
@@ -254,6 +255,7 @@ $ z          &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 $ `E^2`      &lt;dbl&gt; 2.598977, 2.732408, 2.875605, 3.029059, 3.193237, 3.368563,…
 $ `B^2`      &lt;dbl&gt; 2.591401e-17, 2.617457e-17, 2.644542e-17, 2.672731e-17, 2.7…
 $ `C^2`      &lt;dbl&gt; 1.067857, 1.078401, 1.089044, 1.099723, 1.110363, 1.120874,…</code></pre>
+<p>For unpolarised incidence:</p>
 <pre><code>Rows: 10,201
 Columns: 6
 $ wavelength &lt;dbl&gt; 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600,…
@@ -262,6 +264,7 @@ $ y          &lt;dbl&gt; -40.0, -38.6, -37.2, -35.8, -34.4, -33.0, -31.6, -30.2,
 $ z          &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
 $ `E^2`      &lt;dbl&gt; 2.659462, 2.795008, 2.940230, 3.095586, 3.261501, 3.438356,…
 $ `B^2`      &lt;dbl&gt; 2.481858e-17, 2.505532e-17, 2.530400e-17, 2.556574e-17, 2.5…</code></pre>
+<p>For both polarisations:</p>
 <pre><code>Rows: 10,201
 Columns: 10
 $ wavelength &lt;dbl&gt; 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600,…
@@ -274,9 +277,15 @@ $ `B^2[L]`   &lt;dbl&gt; 2.372315e-17, 2.393606e-17, 2.416259e-17, 2.440417e-17,
 $ `B^2[R]`   &lt;dbl&gt; 2.591401e-17, 2.617457e-17, 2.644542e-17, 2.672731e-17, 2.7…
 $ `C[L]`     &lt;dbl&gt; -1.0028411, -1.0100127, -1.0171346, -1.0241537, -1.0310116,…
 $ `C[R]`     &lt;dbl&gt; 1.067857, 1.078401, 1.089044, 1.099723, 1.110363, 1.120874,…</code></pre>
+</div>
+<div class="section level2">
+<h2 id="maps">Maps<a class="anchor" aria-label="anchor" href="#maps"></a>
+</h2>
+<p>We now map the orientation-averaged local electric and magnetic field intensity and local degree of optical chirality (LDOC) in the z=0 plane, for unpolarised excitation, and the difference between L and R polarisations. Note that only the unpolarised electric field intensity is displayed in log scale. The calculations inside the spheres are not reliable and therefore not displayed.</p>
+<p>For unpolarised LDOC, we simply average the two polarisations, as no formula is readily available.</p>
 <p><img src="111_polarised_nf_files/figure-html/plot-1.png" width="768"></p>
 <hr>
-<p><em>Last run: 28 January, 2022</em></p>
+<p><em>Last run: 03 February, 2022</em></p>
 </div>
   </div>
 

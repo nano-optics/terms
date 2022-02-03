@@ -39,6 +39,7 @@ do.call(read_chunk, list(path = "_run.R"))
 
 This example illustrates the conversion from spherical to cartesian multipoles for the collective T-matrix of a cluster, following Mun et al. (Describing Meta-Atoms Using the Exact Higher-Order Polarizability Tensors, ACS Photonics 2020, 7, 1153−1162).
 
+The geometry consists of a chiral dimer of prolate spheroids, modelled as electric dipoles (higher-order terms are ignored). 
 
 ```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
 library(terms)
@@ -54,11 +55,29 @@ cl <- cluster_geometry(ge)
 terms::x3d_scene(cl, viewpoint=c(0,0,200), width = "200px", height = "150px", default_material='gold')
 ```
 
+This simulation uses the following `input` file
+```{bash input}
+cat input_EE1
+```
+
+where the keyword `DumpCollectiveTmatrix` triggers the output of the collective T-matrix, and also a plain text file `alpha_col.txt` containing the cartesian components up to Lmax=3.
+
+<details closed>
+<summary> Show output file alpha_col.txt (click to open) </summary>
+```{bash alpha_col}
+cat alpha_col.txt
+```
+</details> 
+
+
 ```{r load, cache=FALSE}
 ```
 
-```{r collective}
+We compare below the matrix elements in the spherical basis and in the cartesian basis. The T-matrix of the original particle (electric dipole only term) is shown for reference.
+
+```{r collective, fig.height=3}
 ```
+
 
 
 -----
