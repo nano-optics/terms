@@ -39,15 +39,7 @@ cluster_chain(
   rot = rotation_euler_passive(0, 0, 0)
 )
 
-cluster_satellite(
-  N = 30,
-  Rcore = 30,
-  Rsat = 4,
-  gap = 0.1,
-  position = c("fibonacci", "landings", "hc"),
-  exclusion = 10,
-  ...
-)
+cluster_satellite(N = 30, Rcore = 30, Rsat = 4, gap = 0.1, exclusion = 10, ...)
 }
 \arguments{
 \item{N}{number of particles}
@@ -85,8 +77,6 @@ cluster_satellite(
 \item{Rcore}{satellite radius}
 
 \item{gap}{gap distance}
-
-\item{position}{positioning on the sphere}
 
 \item{exclusion}{minimum exclusion distance for hc positions}
 }

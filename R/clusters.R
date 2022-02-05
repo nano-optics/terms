@@ -99,26 +99,16 @@ cluster_chain <- function (N=5, pitch = 500,
 ##' @param Rcore core radius
 ##' @param Rcore satellite radius
 ##' @param gap gap distance
-##' @param position positioning on the sphere
 ##' @param exclusion minimum exclusion distance for hc positions
 ##' @export
 ##' @examples 
 ##' cluster_satellite()
 cluster_satellite <- function(N = 30, Rcore = 30, Rsat = 4,gap = 0.1, 
-                              position = c('fibonacci','landings','hc'),
                               exclusion = 10, ...){
-  position <- match.arg(position)
   
   R <- Rcore + Rsat + gap
   
-  if (position == "landings") {
-    tmp <- sample_landings(N, exclusion/R)
-    positions <- R * tmp$positions
-  } else if (position == "hc") {
-    positions <- R * sample_hc(N, exclusion/R, ...)
-  } else if (position == "fibonacci") {
-    positions <- R * sample_fibonacci(N)
-  }
+  positions <- R * sample_fibonacci(N)
   sizes <- Rsat + 0*positions
   angles <- 0*positions
   
@@ -143,3 +133,34 @@ equal_angles <- function (phi, theta, gamma, N)
   rbind(phi = rep(phi, N), theta = rep(theta, N), gamma = rep(gamma, 
                                                               N))
 }
+
+##
+## Functions for creating specific geometries
+##
+
+##' Fibonacci coverage of a sphere
+##'
+##' Produces a set of points that covers rather uniformly the unit sphere with N points
+##' with a spiral-like pattern based on a Fibonacci sequence
+##' @title sample_fibonacci
+##' @param N number of points
+##' @export
+##' @family low_level sample fibonacci sampling of a sphere
+##' @noRd
+sample_fibonacci <- function(N=301){
+  N0 <- N
+  if(N%%2 == 1) N0 <- N+1
+  P <- (N0-1)/2
+  ii <- seq(-P,P,by=1)
+  # note: uses latitude (internally), not colatitude
+  # but we don't use angles, just xyz in the end
+  lat <- asin(2*ii/N0)
+  Phi <- (1+sqrt(5))/2
+  long <- 2*pi*ii/Phi
+  
+  # return N xyz positions
+  rbind(x = cos(long)*cos(lat), 
+        y = sin(long)*cos(lat), 
+        z = sin(lat))[,1:N]
+}
+
