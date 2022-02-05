@@ -24,5 +24,6 @@ VignetteBuilder: knitr
 Encoding: UTF-8
 RoxygenNote: 7.1.2
 Depends: R (>= 3.5.0), rhdf5, tidyr, purrr, glue, dplyr, tibble, ggplot2
-Suggests: cubs, patchwork, egg, ggforce, DT, rgl
+Suggests: cubs, patchwork, egg, ggforce, DT, rgl, knitr
+
 
