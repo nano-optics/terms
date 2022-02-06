@@ -2,5 +2,6 @@
 ^\.Rproj\.user$
 src/
 logo.png
-docs/
+test/
 pkgdown/
+build/terms
