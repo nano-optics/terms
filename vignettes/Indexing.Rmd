@@ -1,13 +1,24 @@
 ---
-title: Indexing conventions
+title: "Indexing conventions"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
-  html_document:
+  rmarkdown::html_vignette:
     toc: true
     toc_depth: 2
+    fig_width: 7
+    fig_height: 3
+    fig_caption: true
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Indexing conventions}
+  %\VignetteEncoding{UTF-8}
 ---
+
 
 ```{r setup, warning=FALSE,echo=FALSE, message=FALSE}
 library(terms)
+library(dplyr)
+library(DT)
 ```
 
 ## Single particle T-matrix
@@ -129,8 +140,7 @@ unpack_indices <- function(nmax=3, jmax=2){
 
 nmax <- 3
 display <- unpack_indices(nmax, 2)
-library(magrittr)
-library(DT)
+
 DT::datatable(display[,c("i",'j','q','l','p','n','m')], rownames = FALSE,filter = 'top', options = list(
   pageLength = nrow(display), autoWidth = TRUE
 ) ) %>% formatStyle(

@@ -6,17 +6,24 @@
 # pmax=264
 # (-2+sqrt(2+4*pmax/2)) / (2)
 
-##' @noRd
-#' @export
+
+##' @description Combined T-matrix index
+##' @describeIn utility p-index
+##' @param in1 index
+##' @param in2 index
+##' @export
 p_index <- function(in1,in2){
   # % (n,m) -> p = n * (n+1) + m
   in1 * (in1 + 1) + in2
 }
 
-##' @noRd
-#' @export
-indices <- function(Nmax=3, part=1){
-  un <- seq(1,Nmax)
+##' @description T-matrix indices
+##' @describeIn utility indices
+##' @param n_max maximum single-particle index
+##' @param n_part number of particles
+##' @export
+indices <- function(n_max=3, n_part=1){
+  un <- seq(1,n_max)
   
   n = do.call(c, lapply(un, function(.n)rep(.n, 2*.n+1)))
   m = do.call(c, lapply(un, function(.n)seq(-.n,.n)))
@@ -31,22 +38,26 @@ indices <- function(Nmax=3, part=1){
   dplyr::mutate(d, 
                 p = n*(n+1)+m, 
                 l = (q - 1)* max(p) + p,
-                i = (part-1) * max(l) + l,
+                i = (n_part-1) * max(l) + l,
                 pp = np*(np+1)+mp,
                 lp = (qp - 1)* max(pp) + pp,
-                j = (part-1) * max(lp) + lp)
+                j = (n_part-1) * max(lp) + lp)
 }
 
-##' @noRd
-#' @export
-unpack_indices <- function(nmax=3, jmax=2){
+
+##' @description Unpack T-matrix indices
+##' @describeIn utility unpack indices
+##' @param n_max maximum single-particle index
+##' @param j_max size of collective T-matrix
+##' @export
+unpack_indices <- function(n_max=3, j_max=2){
   
-  lmax <- 2*(nmax*(nmax+1)+nmax)
-  imax <- jmax*lmax
+  lmax <- 2*(n_max*(n_max+1)+n_max)
+  imax <- j_max*lmax
   
   dplyr::mutate(data.frame(i=seq(1, imax)),
-                j = (i-1) %/% (imax/jmax) + 1,
-                l = i - (j-1)*imax %/% jmax,
+                j = (i-1) %/% (imax/j_max) + 1,
+                l = i - (j-1)*imax %/% j_max,
                 q = (2*(l-1))%/%lmax + 1,
                 p=l - (q-1)*lmax/2,
                 n = floor(sqrt(p)),
@@ -54,8 +65,11 @@ unpack_indices <- function(nmax=3, jmax=2){
 }
 
 
-##' @noRd
-#' @export
+
+##' @description Unpack T-matrix indices
+##' @describeIn utility unpack indices
+##' @param f filename
+##' @export
 read_amat <- function(f){
   size <- read.table(f, header = F, nrows = 1)
   v <- read.table(f, header = F, skip=1)
@@ -64,18 +78,27 @@ read_amat <- function(f){
   invisible(list(v = v, size=unlist(size)))
 }
 
-##' @noRd
-#' @export
-amat_to_tmatlist <- function(a, nmax=3, npart=2){
-  rows <- unpack_indices(nmax, jmax=npart)
+
+##' @description Wrap staged matrices into a list of T-matrix like objects
+##' @describeIn utility wrap staged matrices
+##' @param a A-matrix object (from read_amat)
+##' @param n_max maximum single-particle index
+##' @param n_part number of particles
+##' @export
+amat_to_tmatlist <- function(a, n_max=3, n_part=2){
+  rows <- unpack_indices(n_max, j_max=n_part)
   cols <- setNames(rows, paste0(names(rows),'p'))
   tmatbig <- merge(merge(a, rows, by = 'i'), cols, by = 'ip')
   split(tmatbig, f = tmatbig$j)
 }
 
 
-##' @noRd
-#' @export
+
+##' @description Read T-matrix into long-format data.frame
+##' @describeIn utility read T-matrix
+##' @param f filename
+##' @param save store result as Rds file
+##' @export
 read_tmat <- function(f, save=FALSE){
   con <- pipe(paste("grep -e ^#", f))
   comments <- readLines(con)
@@ -104,8 +127,12 @@ read_tmat <- function(f, save=FALSE){
 
 
 
-##' @noRd
-#' @export
+
+##' @description Display staged matrix
+##' @describeIn utility display staged matrix
+##' @param l list of T-matrices, from amat_to_tmatlist
+##' @import ggplot2 dplyr purrr tidyr
+##' @export
 display_amat <- function(l){
   
   s <- l$v
@@ -138,8 +165,10 @@ display_amat <- function(l){
 }
 
 
-##' @noRd
-#' @export
+##' @description Display T-matrix
+##' @describeIn utility display T-matrix
+##' @param s T-matrices, from read_tmat
+##' @export
 display_tmat <- function(s){
   
   # currently using s and not q in smarties
@@ -193,11 +222,17 @@ display_tmat <- function(s){
 }
 
 
-##' @noRd
-#' @export
-display_prestaged <- function(a, nmax=3, npart=2, draw=TRUE){
+
+##' @description Display prestaged matrix
+##' @describeIn utility display prestaged matrix
+##' @param a prestaged matrix, from read_amat
+##' @param n_max maximum order
+##' @param n_part number of particles
+##' @param draw logical, draw output
+##' @export
+display_prestaged <- function(a, n_max=3, n_part=2, draw=TRUE){
   
-  tmat_list <- amat_to_tmatlist(a, nmax, npart)
+  tmat_list <- amat_to_tmatlist(a, n_max, n_part)
   lay <- matrix(NA, length(tmat_list), length(tmat_list))
   diag(lay) <- seq_along(tmat_list)
   
@@ -225,7 +260,6 @@ display_prestaged <- function(a, nmax=3, npart=2, draw=TRUE){
 
 
 ##' @noRd
-#' @export
 read_vtacs <- function(f= 'debug_vtacs_h.txt'){
   d <- read.table(f, skip=1)
   m <- matrix(0, max(d$V1), max(d$V2))

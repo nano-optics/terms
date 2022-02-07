@@ -32,7 +32,6 @@ x3d_scene <- function(cl, viewpoint=c(0,0,100), orientation = NULL,
   
 }
 #' @noRd
-#' @export
 particle_to_x3d <- function(position, size, angle, material = 'gold'){
   
   if(material == 'gold'){
@@ -64,7 +63,6 @@ particle_to_x3d <- function(position, size, angle, material = 'gold'){
 
 
 #' @noRd
-#' @export
 cluster_to_x3d <- function(cl, default_material = 'dielectric'){
   N <- ncol(cl$sizes)
   mean_pos <- apply(cl$positions, 1, mean)
@@ -79,8 +77,11 @@ cluster_to_x3d <- function(cl, default_material = 'dielectric'){
 
 
 
-#' @noRd
-#' @export
+
+##' @description Extract geometry information from input file
+##' @describeIn utility extract geometry information from input file
+##' @param input filename
+##' @export
 get_geometry <- function(input = 'input'){
   
   # this assumes all scatterers of the same kind
@@ -106,8 +107,11 @@ get_geometry <- function(input = 'input'){
   g
 }
 
-#' @noRd
-#' @export
+
+##' @description Wrap geometry information into a 'cluster' structure
+##' @describeIn utility wrap geometry information obtained from input file
+##' @param ge geometry, from get_geometry
+##' @export
 cluster_geometry <- function(ge){
   positions <- t(ge[,c("x","y","z")])
   sizes <- t(ge[,c("r","r","r")] * cbind(1/ge[,c("chi")],1/ge[,c("chi")],1))
@@ -116,8 +120,14 @@ cluster_geometry <- function(ge){
   structure(list(positions=positions,angles=angles,sizes=sizes, materials=materials),class='cluster')
 }
 
-#' @noRd
-#' @export
+
+##' @description Visualise a 'cluster' structure
+##' @describeIn utility rgl visualisation of a cluster
+##' @param cl 'cluster' object
+##' @param outfile optional output snapshot
+##' @param show_core display a core sphere if 'R0' field present
+##' @param ... additional parameters passed to rgl.ellipsoids
+##' @export
 visualise_rgl <- function(cl, outfile=NULL, show_core=FALSE, ...){
   rgl.ellipsoids(cl$positions, cl$sizes, cl$angles, ...)
   
@@ -130,7 +140,6 @@ visualise_rgl <- function(cl, outfile=NULL, show_core=FALSE, ...){
 
 
 #' @noRd
-#' @export
 rgl.ellipsoid <- function (x=0, y=0, z=0, a = 1, b=1, c=3, phi=0, theta=0, psi=0,
                            subdivide = 2, ...)
 {
@@ -160,7 +169,6 @@ rgl.ellipsoid <- function (x=0, y=0, z=0, a = 1, b=1, c=3, phi=0, theta=0, psi=0
 
 
 #' @noRd
-#' @export
 rgl.ellipsoids <- function(positions, sizes, angles, colour = "red", ...){
   
   N <- NCOL(positions)
@@ -175,7 +183,6 @@ rgl.ellipsoids <- function(positions, sizes, angles, colour = "red", ...){
 }
 
 #' @noRd
-#' @export
 rgl_annotate <- function(){
   rgl::axes3d( labels = FALSE, tick = FALSE, edges=c("x", "y", "z") )
   rgl::axis3d(labels = FALSE, tick = FALSE, 'x',pos=c(NA, 0, 0))
@@ -185,7 +192,6 @@ rgl_annotate <- function(){
 }
 
 ##' @noRd
-#' @export
 generate_scad <- function(cl, out='', res=10,
                           x=cl$positions[1,],
                           y=cl$positions[2,],

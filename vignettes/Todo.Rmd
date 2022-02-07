@@ -1,6 +1,19 @@
 ---
-title: TODO
+title: "TODO"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 2
+    fig_width: 7
+    fig_height: 3
+    fig_caption: true
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{TODO}
+  %\VignetteEncoding{UTF-8}
 ---
+
 
 Unordered list of possible extensions and work-in-progress. (Note: some ideas in the list may never be implemented; it will depend on priorities and availability)
 

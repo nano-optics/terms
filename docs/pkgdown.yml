@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   00_logo: 00_logo/00_logo.html
   00_mantis: 00_mantis/00_mantis.html
-  00_singlesphere_sphere: 00_singlesphere/00_singlesphere_sphere.html
+  00_singlesphere: 00_singlesphere/00_singlesphere.html
   01_dimer_spheres: 01_dimer_spheres/01_dimer_spheres.html
   02_angular_dispersion: 02_angular_dispersion/02_angular_dispersion.html
   03_nearfield_coreshells: 03_nearfield_coreshells/03_nearfield_coreshells.html
@@ -36,7 +36,7 @@ articles:
   Keywords: Keywords.html
   Theory: Theory.html
   Todo: Todo.html
-last_built: 2022-02-03T11:22Z
+last_built: 2022-02-07T10:34Z
 urls:
   reference: http://nano-optics.ac.nz/terms/reference
   article: http://nano-optics.ac.nz/terms/articles

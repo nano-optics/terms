@@ -6,3 +6,5 @@ test/
 pkgdown/
 build/terms
 docs/
+.here
+.github

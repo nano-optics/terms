@@ -1,5 +1,17 @@
 ---
-title: Brief theory
+title: "Brief theory"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 2
+    fig_width: 7
+    fig_height: 3
+    fig_caption: true
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Brief theory}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{bash macros, echo=FALSE, results='asis'}

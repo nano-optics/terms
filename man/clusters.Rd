@@ -74,7 +74,9 @@ cluster_satellite(N = 30, Rcore = 30, Rsat = 4, gap = 0.1, exclusion = 10, ...)
 
 \item{rot}{rotation matrix applied to each particle}
 
-\item{Rcore}{satellite radius}
+\item{Rcore}{core radius}
+
+\item{Rsat}{satellite radius}
 
 \item{gap}{gap distance}
 

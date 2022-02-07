@@ -1,30 +1,27 @@
 
 ## common functions
 
-#' @noRd
-#' @export
-lfOA <- c("cdAbsOA.dat","csAbsOA.dat",
-          "cdExtOA.dat", "csExtOA.dat",
-          "cdScaOA.dat", "csScaOA.dat")
-
-#' @noRd
-#' @export
-lfLinear <- c("csAbs1X.dat", "csAbs2Y.dat",  
-              "csExt1X.dat", "csExt2Y.dat",  
-              "csSca1X.dat", "csSca2Y.dat")
-
-#' @noRd
-#' @export
-lfCircular <- c("csAbs3R.dat", "csAbs4L.dat",
-                "csExt3R.dat", "csExt4L.dat", 
-                "csSca3R.dat", "csSca4L.dat")
-
-
 ## Read and store the OA data
 
-#' @noRd
-#'@export
+
+##' @description Read and store plain text cross-sections
+##' @describeIn store store plain text cross-sections
+##' @param ... optional metadata to add to the results
+##' @param out output Rds filename
+##' @export
 store_xsec <- function(..., out = 'xsec.rds'){
+  
+  lfOA <- c("cdAbsOA.dat","csAbsOA.dat",
+            "cdExtOA.dat", "csExtOA.dat",
+            "cdScaOA.dat", "csScaOA.dat")
+  
+  lfLinear <- c("csAbs1X.dat", "csAbs2Y.dat",  
+                "csExt1X.dat", "csExt2Y.dat",  
+                "csSca1X.dat", "csSca2Y.dat")
+  
+  lfCircular <- c("csAbs3R.dat", "csAbs4L.dat",
+                  "csExt3R.dat", "csExt4L.dat", 
+                  "csSca3R.dat", "csSca4L.dat")
   
   results <- list()
   
@@ -170,7 +167,6 @@ consolidate_xsec <- function(hdf5, verbose = TRUE, ...){
 }
 
 #' @noRd
-#' @export
 read_file <- function(x) {
   d = read.table(x)
   names(d) = c('wavelength', 'total', paste0('I', seq_len(ncol(d)-2)))
@@ -185,7 +181,6 @@ pivot_xsec <- function(d){
 }
 
 #' @noRd
-#' @export
 process_OA <- function(m1, m2){
   m <- m1
   m$dichroism <- m1$value
@@ -195,7 +190,6 @@ process_OA <- function(m1, m2){
 }
 
 #' @noRd
-#' @export
 process_fixed <- function(m1, m2){
   m <- m1
   m$polarisation1 <- m1$value

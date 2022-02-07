@@ -1,5 +1,12 @@
-##' @noRd
-#' @export
+
+
+##' @title Utility functions
+##' @description Generate an incidence file for spherical cubature
+##' @describeIn utility export a spherical cubature
+##' @param q data.frame with angles and weights, from cubs::cubs()
+##' @param out filename
+##' @importFrom cubs cubs
+##' @export
 export_cubature <- function(q = cubs::cubs(N = 10, cubature = 'lebedev'), out=''){
   
   cat(nrow(q),'\n',file=out)
@@ -8,16 +15,14 @@ export_cubature <- function(q = cubs::cubs(N = 10, cubature = 'lebedev'), out=''
   
 }
 
-##' @noRd
-#' @export
-symmetric_range <- function(range) 
-{
-  max_abs <- max(abs(range))
-  c(-max_abs, max_abs)
-}
 
-##' @noRd
-#' @export
+
+##' @description Euler rotation matrix
+##' @describeIn utility passive rotation matrix
+##' @param phi Euler angle
+##' @param theta Euler angle
+##' @param psi Euler angle
+##' @export
 rotation_euler_passive <- function(phi, theta, psi){
   
   cosphi = cos(phi); cospsi = cos(psi); costheta = cos(theta)
@@ -40,8 +45,14 @@ rotation_euler_passive <- function(phi, theta, psi){
 }
 
 
-##' @noRd
-#' @export
+
+
+##' @description Euler rotation matrix
+##' @describeIn utility active rotation matrix
+##' @param phi Euler angle
+##' @param theta Euler angle
+##' @param psi Euler angle
+##' @export
 rotation_euler_active <- function(phi, theta, psi){
   cosphi = cos(phi); cospsi = cos(psi); costheta = cos(theta);
   sinphi = sin(phi); sinpsi = sin(psi); sintheta = sin(theta);
@@ -62,8 +73,14 @@ rotation_euler_active <- function(phi, theta, psi){
   R
 }
 
-##' @noRd
-#' @export
+
+
+##' @description Axis-angle rotation from Euler angles
+##' @describeIn utility axis-angle rotation
+##' @param a Euler angle
+##' @param b Euler angle
+##' @param c Euler angle
+##' @export
 euler_to_axisangle <- function(a,b,c){
   
   M = rotation_euler_active(a,b,c)
@@ -77,8 +94,17 @@ euler_to_axisangle <- function(a,b,c){
 }
 
 
+##' @description Extend a range symmetrically about 0
+##' @describeIn utility symmetric range
+##' @param range range (2-vector)
+##' @export
+symmetric_range <- function(range) 
+{
+  max_abs <- max(abs(range))
+  c(-max_abs, max_abs)
+}
+
 ##' @noRd
-#' @export
 match_closest <- function(x, y, tol=1e-5){
   
   breaks <- sort(c(y-0.5*tol, y+0.5*tol))

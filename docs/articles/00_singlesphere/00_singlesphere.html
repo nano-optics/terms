@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Local degree of optical chirality • terms</title>
+<title>Single sphere • terms</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../../apple-touch-icon.png">
@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../../pkgdown.css" rel="stylesheet">
 <script src="../../pkgdown.js"></script><link href="../../extra.css" rel="stylesheet">
-<meta property="og:title" content="Local degree of optical chirality">
+<meta property="og:title" content="Single sphere">
 <meta property="og:description" content="terms">
 <meta property="og:image" content="http://nano-optics.ac.nz/terms/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -199,12 +199,12 @@
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Local degree of optical chirality</h1>
+      <h1 data-toc-skip>Single sphere</h1>
             
             <h4 data-toc-skip class="date">07 February, 2022</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/07_ldoc/07_ldoc.Rmd" class="external-link"><code>vignettes/07_ldoc/07_ldoc.Rmd</code></a></small>
-      <div class="hidden name"><code>07_ldoc.Rmd</code></div>
+      <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/00_singlesphere/00_singlesphere.Rmd" class="external-link"><code>vignettes/00_singlesphere/00_singlesphere.Rmd</code></a></small>
+      <div class="hidden name"><code>00_singlesphere.Rmd</code></div>
 
     </div>
 
@@ -213,64 +213,94 @@
 <div class="section level2">
 <h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
 </h2>
-<p>This example illustrates on a very simple case the calculation of the local degree of optical chirality for a dimer of spheres. The structure consists of two gold spheres with radius 10nm and gap 5nm in water, the incident field is linear with angle <span class="math inline">\(\pi/4\)</span> and <span class="math inline">\(3\pi/4\)</span> and <span class="math inline">\(\overline{\mathscr{C}}\)</span> is calculated at the resonance wavelength of the structure and all other parameters are kept to their default values.</p>
+<p>This tivial example illustrates the calculation of far-field spectra for absorption, scattering, and extinction. The structure consists of a single gold sphere in water.</p>
 <style>
 .x3d_scene {
 float:right;
-margin:0em;
  }
   </style>
-<p><x3d width="200px" height="150px" class="x3d_scene"><scene><transform scale="10 10 10" rotation="0 0 0 1e-05" translation="0 12.5 0"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><transform scale="10 10 10" rotation="0 0 0 1e-05" translation="0 -12.5 0"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><shape><indexedlineset colorpervertex="false" colorindex="0 1 2" coordindex="0 1 -1 0 2 -1 0 3 -1"><coordinate point="0 0 0 10 0 0 0 10 0 0 0 10"></coordinate><color color="1 0 0 0 1 0 0.2 0.2 1"></color></indexedlineset></shape><viewpoint centerofrotation="0 0 0" position="0 0 100" orientation="0 0 0 1e-05" viewall="false"></viewpoint></scene></x3d></p>
+<p><x3d width="200px" height="150px" class="x3d_scene"><scene><transform scale="30 30 30" rotation="0 0 0 1e-05" translation="0 0 0"><shape><appearance><material ambientintensity="0.4" diffusecolor="1.0000000 0.8431373 0.0000000" shininess="0.16" specularcolor="0.8549020 0.6470588 0.1254902"></material></appearance><sphere radius="1"></sphere></shape></transform><shape><indexedlineset colorpervertex="false" colorindex="0 1 2" coordindex="0 1 -1 0 2 -1 0 3 -1"><coordinate point="0 0 0 100 0 0 0 100 0 0 0 100"></coordinate><color color="1 0 0 0 1 0 0.2 0.2 1"></color></indexedlineset></shape><viewpoint centerofrotation="0 0 0" position="0 0 200" orientation="0 0 0 1e-05" viewall="false"></viewpoint></scene></x3d></p>
 <p>This simulation uses the following <code>input</code> file</p>
-<pre><code>ModeAndScheme 1 0
+<pre><code>ModeAndScheme 2 3
 MultipoleCutoff 8
-Wavelength 540
-Medium 1.7689 # water
+Wavelength 300 800 250
+Medium 1.7689 # epsilon of water
+OutputFormat HDF5 results
+Medium 1.7689 # epsilon of water
 
-OutputFormat HDF5 ldoc
-Incidence file incidence 1  # linear polarisation, 45 &amp; 135
-SpacePoints -15 15 90 -25 25 150 0 0 0
-MapQuantity C
+Scatterers 1
+Au 0.0 0.0 0.0 30</code></pre>
+<p>The command to run the example is simply</p>
+<pre><code>../../build/terms input &gt; log</code></pre>
+<p>The full log contains basic details of the calculations, and finishes with the timing.</p>
+<details closed><summary>
+Show log file (click to open)
+</summary><pre><code>readInputFile&gt; Parsing file input
 
-Scatterers 2
-Au 0 12.5 0 10
-Au 0 -12.5 0 10</code></pre>
-<p>and <code>incidence</code> file</p>
-<pre><code>2
-0.7853982 0 0 0.5
-2.356194  0 0 0.5</code></pre>
-</div>
-<div class="section level2">
-<h2 id="ldoc-maps-at-fixed-incidence">LDOC maps at fixed incidence<a class="anchor" aria-label="anchor" href="#ldoc-maps-at-fixed-incidence"></a>
-</h2>
-<pre><code>        group            name       otype dclass       dim
-0           /      Near-Field   H5I_GROUP                 
-1 /Near-Field      Gridpoints H5I_DATASET  FLOAT 13741 x 3
-2 /Near-Field      Incidences H5I_DATASET  FLOAT     2 x 4
-3 /Near-Field     Wavelengths H5I_DATASET  FLOAT         1
-4 /Near-Field normalised_ldoc H5I_DATASET  FLOAT 13741 x 7</code></pre>
-<pre><code> num [1:13741, 1:7] 540 540 540 540 540 540 540 540 540 540 ...</code></pre>
-<p><img src="07_ldoc_files/figure-html/comparison-1.png" width="700"></p>
-</div>
-<div class="section level2">
-<h2 id="orientation-averaged-near-field-and-ldoc-maps">Orientation-averaged near-field and LDOC maps<a class="anchor" aria-label="anchor" href="#orientation-averaged-near-field-and-ldoc-maps"></a>
-</h2>
-<p>TERMS can also compute orientation-averaged near-field quantities, with the Keyword <code>MapOaQuantity</code>. This structure is not particularly good at enhancing the local degree of chirality, but we use it as a simple example to illustrate the results of this calculation. The following map shows the orientation averaged LDOC for L and R circular polarisations.</p>
-<pre><code>        group          name       otype dclass       dim
-0           /    Near-Field   H5I_GROUP                 
-1 /Near-Field    Gridpoints H5I_DATASET  FLOAT 13741 x 3
-2 /Near-Field    Incidences H5I_DATASET  FLOAT     1 x 4
-3 /Near-Field   Wavelengths H5I_DATASET  FLOAT         1
-4 /Near-Field mapOaQuantity H5I_DATASET  FLOAT 13741 x 7
-5 /Near-Field         map_E H5I_DATASET  FLOAT 13741 x 7</code></pre>
-<pre><code>  wavelength   x         y z        E         R        L
-1        540 -15 -25.00000 0 1.362272 -1.025050 1.025050
-2        540 -15 -24.66667 0 1.383590 -1.025919 1.025919
-3        540 -15 -24.33333 0 1.405998 -1.026835 1.026835
-4        540 -15 -24.00000 0 1.429517 -1.027800 1.027800
-5        540 -15 -23.66667 0 1.454160 -1.028815 1.028815
-6        540 -15 -23.33333 0 1.479935 -1.029881 1.029881</code></pre>
-<p><img src="07_ldoc_files/figure-html/oa-1.png" width="700"></p>
+readInputFile&gt; Detected keyword ModeAndScheme
+               mode=2 =&gt; spectrum_FF for far-field quantities
+               scheme=3 =&gt; Seek T^(j) using Mackowski's approach
+readInputFile&gt; Detected keyword MultipoleCutoff
+               Supplied ncut(1)=  8
+               Setting ncut(2)= ncut(1)
+               Setting ncut(3)=  -8
+readInputFile&gt; Detected keyword Wavelength
+               Wavelength LB (nm):   300.000000
+               Wavelength UB (nm):   800.000000
+               nsteps, step:       250    2.0000
+readInputFile&gt; Detected keyword Medium
+               Constant host epsilon=  1.7689E+0
+readInputFile&gt; Detected keyword OutputFormat
+               OutputFormat=HDF5
+               All output files are stored in file "results.h5                                                      "
+readInputFile&gt; Detected keyword Medium
+               Constant host epsilon=  1.7689E+0
+
+readInputFile&gt; Detected keyword Scatterers
+ with nscat=    1
+
+readInputFile&gt; Descriptor(s) and circumscribing sphere(s):
+
+ scatID String                  x          y          z         R_0
+    1   Au                  0.0000E+0  0.0000E+0  0.0000E+0  3.0000E+1
+
+readInputFile&gt; Individual geometry characteristic(s):
+
+ scatID Details
+    1   Mie with ncoats= 0
+
+readInputFile&gt; Dielectric functions for (coated) Mie scatterer(s):
+
+ scatID volID Label
+    1     0     Au
+
+readInputFile&gt; Finished parsing  7 keywords
+
+
+spectrumFF&gt; ===== Wavelength:   300.00 (nm) ======================
+
+solve&gt; Prestaging...
+solve&gt; Staging and solving/inverting...
+solve&gt; Done!
+
+calcOAprops&gt; &lt;csExt&gt;=  8.12704834E+03 nConv=  6
+             &lt;csSca&gt;=  2.23216132E+03 nConv=  4
+             &lt;csAbs&gt;=  5.89488702E+03
+
+             &lt;cdExt&gt;=  0.00000000E+00
+             &lt;cdSca&gt;= -5.35857968E-20
+             &lt;cdAbs&gt;=  5.35857968E-20
+
+calcCs&gt; csExt=  8.12704834E+03 nConv=  6
+         csSca=  2.23216132E+03 nConv=  4
+         csAbs=  5.89488702E+03
+
+calcCs&gt; csExt=  8.12704834E+03 nConv=  6
+         csSca=  2.23216132E+03 nConv=  4
+...
+termsProgram&gt; Program run time (CPU &amp; real in s):  2.888E+00  2.113E+00</code></pre>
+</details><p><br></p>
+<p><img src="00_singlesphere_files/figure-html/oa-1.png" width="700"></p>
 <hr>
 <p><em>Last run: 07 February, 2022</em></p>
 </div>

@@ -1,12 +1,21 @@
 ---
-title: keywords
+title: Keywords
 keep_tex: true
 header-includes:
    - \usepackage{mathrsfs}
 output:
-  pdf_document:
-    keep_tex: true
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 2
+    fig_width: 7
+    fig_height: 3
+    fig_caption: true
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Keywords}
+  %\VignetteEncoding{UTF-8}
 ---
+
 
 \newcommand{\bE}{\mathbf{E}}
 \newcommand{\bB}{\mathbf{B}}

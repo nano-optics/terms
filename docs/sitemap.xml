@@ -13,6 +13,9 @@
     <loc>http://nano-optics.ac.nz/terms/articles/00_mantis/00_mantis.html</loc>
   </url>
   <url>
+    <loc>http://nano-optics.ac.nz/terms/articles/00_singlesphere/00_singlesphere.html</loc>
+  </url>
+  <url>
     <loc>http://nano-optics.ac.nz/terms/articles/00_singlesphere/00_singlesphere_sphere.html</loc>
   </url>
   <url>
@@ -130,7 +133,13 @@
     <loc>http://nano-optics.ac.nz/terms/reference/index.html</loc>
   </url>
   <url>
+    <loc>http://nano-optics.ac.nz/terms/reference/sample_fibonacci.html</loc>
+  </url>
+  <url>
     <loc>http://nano-optics.ac.nz/terms/reference/store.html</loc>
+  </url>
+  <url>
+    <loc>http://nano-optics.ac.nz/terms/reference/utility.html</loc>
   </url>
   <url>
     <loc>http://nano-optics.ac.nz/terms/reference/utils.html</loc>

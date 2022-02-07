@@ -29,6 +29,7 @@ p7 <- ggplot(mCFOt, aes(wavelength, average, colour=crosstype)) +
 
 p8 <- ggplot(mCFOt, aes(wavelength, dichroism, colour=crosstype)) +
   facet_wrap(~crosstype)+
+  # annotate('hline', yintercept=0,y=0,lty=3) +
   geom_line(lty=1) +
   geom_line(data=mCOAt, lty=2) +
   guides(colour='none')+

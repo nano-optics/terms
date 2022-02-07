@@ -1,4 +1,4 @@
-Wavelength 300 700 200
+Wavelength 300 600 300
 Medium 1.7689 # epsilon of water
 OutputFormat HDF5 Ag_PRB
 
@@ -6,4 +6,5 @@ DielectricFunctions 1
 "Ag_PRB.txt"
 
 Scatterers 2
-DF1 0.0 -50.0 0.0 30.0DF1 0.0  50.0 0.0 30.0
+DF1 0.0 -50.0 0.0 30.0
+DF1 0.0  50.0 0.0 30.0

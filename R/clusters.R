@@ -1,3 +1,8 @@
+##
+## Functions for creating specific geometries, and utilities
+##
+
+
 ##' @title Clusters of particles
 ##' @description Defines various cluster geometries and exports in a format suitable for TERMS
 ##' @describeIn clusters write cluster positions to input file
@@ -9,6 +14,8 @@
 ##' @param digits accuracy
 ##' @param ... extra arguments passed to cl_fun
 ##' @return returns scatterers positions and sizes for an input file
+##' @importFrom stats setNames
+##' @importFrom utils read.table strcapture write.table 
 ##' @import tibble
 ##' @export
 ##' @examples 
@@ -97,7 +104,7 @@ cluster_chain <- function (N=5, pitch = 500,
 ##' @description Core-satellite cluster of spheres
 ##' @describeIn clusters core-satellite cluster
 ##' @param Rcore core radius
-##' @param Rcore satellite radius
+##' @param Rsat satellite radius
 ##' @param gap gap distance
 ##' @param exclusion minimum exclusion distance for hc positions
 ##' @export
@@ -119,24 +126,32 @@ cluster_satellite <- function(N = 30, Rcore = 30, Rsat = 4,gap = 0.1,
 }
 
 
+
+##' @description Matrix of equal sizes
+##' @describeIn utility equal sizes
+##' @param a semi-axis
+##' @param b semi-axis
+##' @param c semi-axis
+##' @param N number of particles
 ##' @export
-##' @noRd
 equal_sizes <- function (a, b, c, N) 
 {
   rbind(a = rep(a, N), b = rep(b, N), c = rep(c, N))
 }
 
+
+##' @description Matrix of equal angles
+##' @describeIn utility equal angles
+##' @param phi Euler angle
+##' @param theta Euler angle
+##' @param gamma Euler angle
+##' @param N number of particles
 ##' @export
-##' @noRd
 equal_angles <- function (phi, theta, gamma, N) 
 {
   rbind(phi = rep(phi, N), theta = rep(theta, N), gamma = rep(gamma, 
                                                               N))
 }
-
-##
-## Functions for creating specific geometries
-##
 
 ##' Fibonacci coverage of a sphere
 ##'
@@ -146,7 +161,6 @@ equal_angles <- function (phi, theta, gamma, N)
 ##' @param N number of points
 ##' @export
 ##' @family low_level sample fibonacci sampling of a sphere
-##' @noRd
 sample_fibonacci <- function(N=301){
   N0 <- N
   if(N%%2 == 1) N0 <- N+1

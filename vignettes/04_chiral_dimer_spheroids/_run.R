@@ -30,6 +30,7 @@ p1 <- ggplot(mCOAt, aes(wavelength, average,colour=crosstype)) +
 
 p2 <- ggplot(mCOAt, aes(wavelength, dichroism,colour=crosstype)) +
   facet_wrap(~crosstype)+
+  annotate('hline', yintercept=0,y=0,lty=3) +
   geom_line(data=mCOAt, lty=1) +
   guides(colour='none')+
   scale_color_brewer(palette = 'Set1') +
