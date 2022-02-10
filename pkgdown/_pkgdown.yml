@@ -70,6 +70,8 @@ navbar:
       href: articles/110_alpha_tensor/110_alpha_tensor.html
     - text: 111 polarised OA near-fields
       href: articles/111_polarised_nf/111_polarised_nf.html
+    - text: 112 core-shell absorption vs internal fields
+      href: articles/112_absorption_field/112_absorption_field.html
     - text: "---"
     - text: "Validation"
     - text: 1001 MSTM far-field

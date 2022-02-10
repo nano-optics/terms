@@ -1,0 +1,125 @@
+---
+title: "Absorption computed from internal field"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 2
+    fig_width: 7
+    fig_height: 3
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Absorption computed from internal field}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE}
+library(knitr)
+library(terms)
+options(cli.num_colors = 1)
+theme_set(theme_grey())
+options(cli.num_colors = 1)
+opts_chunk$set(echo = FALSE, warning =FALSE,
+               message=FALSE, comment='', 
+               tidy=FALSE, cache = FALSE)
+do.call(read_chunk, list(path = "_run.R"))
+```
+
+## Objective
+
+This example compares the calculation of far-field absorption against that of internal electric field intensity, for a core-shell dimer. The calculation is done for a fixed incidence direction.
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+library(terms)
+cat('  <style>
+.x3d_scene {
+float:right;
+margin:0em;
+ }
+  </style>')
+
+ge <- get_geometry('input')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,150), width = "200px", height = "150px") 
+```
+
+The standard far-field simulation uses the following `input` file
+
+```{bash input}
+cat input
+```
+
+Note that the two particles are different: the first scatterer is a homogeneous Au sphere, artificially separated into two regions. The second scatterer is a Au@Pd core-shell.
+
+## Total cross-sections
+
+We first retrieve the total cross-sections, as usual,
+
+```{r total}
+```
+
+## Mackowski's partial cross-sections 
+
+Formulas derived by Mackowski provide partial absorptions for individual spheres, which we average with a numerical cubature. We verify that the total coincides with the previous plot.
+
+```{r partial, fig.height=4}
+```
+
+
+## Internal field intensity
+
+Absorption can also be calculated from the internal electric field intensity as
+
+$$
+\sigma_\mathrm{abs}(\lambda) = \frac{2\pi}{n \lambda}\iiint_V \varepsilon''(\lambda) |\mathbf{E}(\mathbf{r})|^2 \,\mathrm{dV}
+$$
+with $n$ the refractive index of the incident medium, $\varepsilon''$ the imaginary part of the material's dielectric function, and $\mathbf{E}(\mathbf{r}$ the internal electric field.
+
+We apply this formula below to the four distinct regions (2 cores, and 2 shells). The first step is to generate a grid of points for TERMS to compute the electric field intensity in the regions of interest. One could use a regular grid extending over a larger area, and select the different regions in post-processing, but this is not efficient as many points would have to be sampled, including in non-absorbing regions (ambient medium). Instead, we create a numerical cubature over the ball (or shell) region, by taking a cartesian product of a spherical cubature in $(\varphi, \theta)$, and a Gauss-Legendre quadrature over the radial range.
+ 
+```{r volumes, fig.height=6}
+```
+
+We define 4 such cubatures, one for each region of interest, and convert the points to cartesian coordinates before exporting them in a `position` file for use in TERMS
+ 
+<details closed>
+<summary> Show positions file (click to open) </summary>
+```{bash positions}
+cat positions
+```
+</details> 
+
+Note that TERMS will automatically detect whether a point is within a given region, and return this information in the near-field map. This is helpful to combine multiple regions as in this example, without needing to run separate simulations, or keep track of the regions ourselves.
+
+The input file for this near-field simulation is shown below.
+
+```{bash inputnf}
+cat input_map
+```
+
+### Processing
+
+The output near-field maps can be split by `volID` and `scatID` fields, corresponding to our four regions of interest. We visualise below the electric field intensity at the sampled points for the outer shell of scatterer 1,
+
+```{r readnf, fig.height=5}
+```
+
+
+```{r processnf, fig.height=4}
+```
+
+From the volumetric intensity maps, we apply the integration formula by multiplying with the cubature weights, and compare the results to the partial absorption cross-sections obtained above.
+
+```{r comparison, fig.height=4}
+```
+
+Note that we only sampled a few wavelengths for clarity, but the near-field calculation is relatively fast, especially with the reasonable number of points afforded by the use of an efficient cubature, and the use of `Scheme=0` for solving at fixed incidence.
+
+-----
+
+```{r cleanup}
+```
+_Last run: `r format(Sys.time(), '%d %B, %Y')`_

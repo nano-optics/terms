@@ -1,0 +1,15 @@
+ModeAndScheme 1 0
+MultipoleCutoff 15
+Wavelength 350 750 20
+Incidence 0 0 0 2 # z axis, CP
+Medium 1.7689 # for water
+Verbosity 1
+OutputFormat HDF5 map
+#ScattererCentredCrossSections
+
+SpacePoints positions
+MapQuantity 2 E
+
+Scatterers 2
+Au@Au  0 0 0 21  18 
+Au@Pd  55 0 0 32  30  

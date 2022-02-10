@@ -55,16 +55,16 @@ Tag x y z R [ a b c [ d ] ]     ( if Tag(1:2)  = "TF" )
 
 where _Tag_ is a contiguous string, which may contain one underscore to separate the root from the suffix; _x_, _y_, _z_ are the Cartesian coordinates (in the lab frame) for the scatterer, whose smallest circumscribing sphere has radius _R_. All other subsequent parameters (inside square brackets) depend on the root of _Tag_ .  
 
-Before the root of _Tag_ is parsed, the code first looks for a suffix of the form _\_S?_ and associates it with a multipole selection predefined using the [`MultipoleSelections`](#MultipoleSelections) keyword. 
+Before the root of _Tag_ is parsed, the code first looks for a suffix of the form _\_S?_ and associates it with a multipole selection predefined using the [`MultipoleSelections`](#multipoleselections-ns) keyword. 
 
-If the root of _Tag_ is either "TF1", "TF2", ... , or "TF9", which correspond to a 1-body _T_-matrix file listed under the [`TmatrixFiles`](#TmatrixFiles) keyword, floats _a_, _b_, and _c_ can be supplied to specify the Euler angles describing the scatterer orientation (default angle values are all zero). Another float _d_ may be included to specify the aspect ratio for spheroids, which is currently only used for mapping local field intensity and visualising the geometry. Note that _d_ is interpreted as the ratio of polar (along z) to equatorial (along x or y) length, so that _d > 1_ for prolate spheroids, _d < 1_ for oblate spheroids, and _d = 1_ for spheres (default). Note that for nonspherical particles the circumscribing sphere radius _R_ is used to check for potential geometrical overlap between particles, but also in the balancing scheme.
+If the root of _Tag_ is either "TF1", "TF2", ... , or "TF9", which correspond to a 1-body _T_-matrix file listed under the [`TmatrixFiles`](#tmatrixfiles-nfiles) keyword, floats _a_, _b_, and _c_ can be supplied to specify the Euler angles describing the scatterer orientation (default angle values are all zero). Another float _d_ may be included to specify the aspect ratio for spheroids, which is currently only used for mapping local field intensity and visualising the geometry. Note that _d_ is interpreted as the ratio of polar (along z) to equatorial (along x or y) length, so that _d > 1_ for prolate spheroids, _d < 1_ for oblate spheroids, and _d = 1_ for spheres (default). Note that for nonspherical particles the circumscribing sphere radius _R_ is used to check for potential geometrical overlap between particles, but also in the balancing scheme.
 
-If the root of _Tag_ is not "TF?", the 1-body _T_-matrix is computed using Mie theory, which is applicable to coated spheres. The expected _Tag_ format is `L0@L1@L2@L3`, with the character "@" delimiting substrings that specify the material dielectric function of each concentric region inside the scatterer, starting from the core (_L0_) and going *outward*. The number of coats is inferred from the number of instances of "@" and is currently capped at 3. _Tag_ of a homogeneous sphere (without layers) should not contain any "@", i.e. _Tag = L0_. Currently accepted values for _L?_ are: "Au", "Ag", "Al", "Cr", "Pt", "Pd", "Si", and "Water" which trigger internal calculation of the wavelength-dependent dielectric functions for the required material, or "DF1", "DF2", ..., "DF9" to impose a custom dielectric function listed under the [`DielectricFunctions`](#dielectricfunctions-nfuns-1) keyword. For coated spheres, the outer radius of each region must be specified by floats _R_, _a_, _b_, _c_ in the order of decreasing size (i.e. going radially *inward*). 
+If the root of _Tag_ is not "TF?", the 1-body _T_-matrix is computed using Mie theory, which is applicable to coated spheres. The expected _Tag_ format is `L0@L1@L2@L3`, with the character "@" delimiting substrings that specify the material dielectric function of each concentric region inside the scatterer, starting from the core (_L0_) and going *outward*. The number of coats is inferred from the number of instances of "@" and is currently capped at 3. _Tag_ of a homogeneous sphere (without layers) should not contain any "@", i.e. _Tag = L0_. Currently accepted values for _L?_ are: "Au", "Ag", "Al", "Cr", "Pt", "Pd", "Si", and "Water" which trigger internal calculation of the wavelength-dependent dielectric functions for the required material, or "DF1", "DF2", ..., "DF9" to impose a custom dielectric function listed under the [`DielectricFunctions`](#dielectricfunctions-nfuns) keyword. For coated spheres, the outer radius of each region must be specified by floats _R_, _a_, _b_, _c_ in the order of decreasing size (i.e. going radially *inward*). 
 
 
 ### TmatrixFiles _N<sub>files</sub>_
 
-Specifies the number of external _T_-matrix files (default: _N<sub>files</sub> = 0_). The subsequent _N<sub>files</sub>_ lines are each read as a string and then interpreted as a filename. Wrap the string in quotation marks if it contains the relative path or special characters, e.g. `"../../tmatrix_Au_spheroid_50x20_water.tmat"`. Note that the wavelengths in each file must _exactly_ correspond to the values specified by the [`Wavelength`](#wavelength-l1-l2-n-) keyword.
+Specifies the number of external _T_-matrix files (default: _N<sub>files</sub> = 0_). The subsequent _N<sub>files</sub>_ lines are each read as a string and then interpreted as a filename. Wrap the string in quotation marks if it contains the relative path or special characters, e.g. `"../../tmatrix_Au_spheroid_50x20_water.tmat"`. Note that the wavelengths in each file must _exactly_ correspond to the values specified by the [`Wavelength`](#wavelength-l1-l2-n) keyword.
 
 The _T_-matrix file format is as follows:
 
@@ -105,7 +105,7 @@ An example is show below,
 
 ### DielectricFunctions _N<sub>funs</sub>_
 
-Specifies the number of custom dielectric functions (default: _N<sub>funs</sub> = 0_). The subsequent _N<sub>funs</sub>_ lines are each read as a string and then interpreted as either (i) a filename with a relative path or (ii) real and imaginary parts of a constant (i.e. wavelength independent) value. Wrap each string in quotation marks, e.g. `"../../epsAg.dat"` or `"2.25d0 0.0d0"`. The files should be in three-column format: the wavelength in nm followed by the real and imaginary parts of the relative dielectric function on each line. The wavelength range in the file must fully contain the range specified by the [`Wavelength`](#wavelength-l1-l2-n-) keyword, but the values need not correspond exactly as they will be linearly interpolated.
+Specifies the number of custom dielectric functions (default: _N<sub>funs</sub> = 0_). The subsequent _N<sub>funs</sub>_ lines are each read as a string and then interpreted as either (i) a filename with a relative path or (ii) real and imaginary parts of a constant (i.e. wavelength independent) value. Wrap each string in quotation marks, e.g. `"../../epsAg.dat"` or `"2.25d0 0.0d0"`. The files should be in three-column format: the wavelength in nm followed by the real and imaginary parts of the relative dielectric function on each line. The wavelength range in the file must fully contain the range specified by the [`Wavelength`](#wavelength-l1-l2-n) keyword, but the values need not correspond exactly as they will be linearly interpolated.
 
 ### Medium _X_
 
@@ -184,16 +184,21 @@ Specify the near-field quantities of interest, in `Mode = 1`. Integer argument _
 
 The optional letters [_E_] [_B_] [_C_] (default: _E_ only) determine which of the near-field properties (electric and magnetic fields and normalised value of local degree of optical chirality) will be calculated.
 
-### MapOaQuantity [_E_] [_B_] [_C_]
+### MapOaQuantity [_p_]
 
-This is a keyword applicable in `Mode = 1`, to request the calculation of analytical orientation-averaged near-field quantities \(\langle|\mathbf{E}|^2\rangle\), \(\langle|\mathbf{B}|^2\rangle\), or \(\langle\overline{\mathscr{C}}\rangle\). If this keyword is not included in the input file, by default none will be calculated. Note that the [`Incidence`](#incidence-a-b-c-p-na-nb-nc-) keyword is used to select LCP and RCP (or both).
+This is a keyword applicable in `Mode = 1`, to request the calculation of analytical orientation-averaged near-field quantities.
 
+- if `p` is `unpolarised`, or any word starting with "`u`", the calculation proceeds to calculate $\langle|\mathbf{E}|^2\rangle$ only, averaged over incidence directions _and_ polarisation using formulas by Stout et al.
+
+- if `p` is `polarised`, or any word starting with "`p`", the calculation proceeds to calculate  $\langle|\mathbf{E}|^2\rangle$, $\langle|\mathbf{B}|^2\rangle$, and $\ldocoa$ following the polarisation(s) given in [`Incidence`](#incidence-a-b-c-p-na-nb-nc), namely both LCP and RCP polarisations if `+/-1`, and a single circular polarisation if `+/-2`. Note that all three quantities are calculated, unlike `MapQuantity`, as many terms are common. 
+
+The calculation can be slow, which is why there is the option to compute the results for a single polarisation.
 
 ## Polarimetry keywords
 
 ### ScatteringAngles _a_ _b_ _c_ / [ _n<sub>a</sub>_ _n<sub>b</sub>_ _n<sub>c</sub>_ ] 
 
-This keyword specifies the scattering angles in `Mode = 3` (polarimetry), for the calculation of Stokes scattering vectors at different scattering angles. The parameters have the same interpretation as for [`Incidence`](#incidence-a-b-c-p-na-nb-nc-).
+This keyword specifies the scattering angles in `Mode = 3` (polarimetry), for the calculation of Stokes scattering vectors at different scattering angles. The parameters have the same interpretation as for [`Incidence`](#incidence-a-b-c-p-na-nb-nc).
 
 Multiple scattering angles can also be read from a file, in which case the argument `a` must be a string starting with ‘f’ or ‘F’, and `b` must specify the filename. The file’s first line must contain the number of scattering angles, _nsca_, and the subsequent _nsca_ lines each must contain three space-separated values: the three Euler angles (_ai_, _bi_, _ci_) for each scattering angle. 
 
