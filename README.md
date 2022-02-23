@@ -189,12 +189,14 @@ publications listed below if relevant:
 
 <div id="refs" class="references csl-bib-body">
 
-<div id="ref-Schebarchov:2021wc" class="csl-entry">
+<div id="ref-Schebarchov:2022wc" class="csl-entry">
 
 <span class="csl-left-margin">(1) </span><span
-class="csl-right-inline">Schebarchov, D.; Fazel-Najafabadi, A.; Ru, E.
-C. L.; Auguié, B. Multiple Scattering of Light in Nanoparticle
-Assemblies: User Guide for the TERMS Program, 2021.</span>
+class="csl-right-inline">Schebarchov, D.; Fazel-Najafabadi, A.; Le Ru,
+E. C.; Auguié, B. Multiple Scattering of Light in Nanoparticle
+Assemblies: User Guide for the Terms Program. *Journal of Quantitative
+Spectroscopy and Radiative Transfer* **2022**, 108131.
+https://doi.org/<https://doi.org/10.1016/j.jqsrt.2022.108131>.</span>
 
 </div>
 

@@ -1,5 +1,5 @@
 ---
-title: "List of subroutines"
+title: "Code organisation"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   rmarkdown::html_vignette:
@@ -10,7 +10,7 @@ output:
     fig_caption: true
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteIndexEntry{List of subroutines}
+  %\VignetteIndexEntry{Code organisation}
   %\VignetteEncoding{UTF-8}
 ---
 

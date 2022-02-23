@@ -81,7 +81,7 @@ navbar:
     - text: "---"
     - text: "Indexing conventions"
       href: articles/Indexing.html
-    - text: "List of subroutines"
+    - text: "Code organisation"
       href: articles/Subroutines.html
   - text: News
     menu:
