@@ -167,6 +167,9 @@
 <li>
       <a href="../../articles/Indexing.html">Indexing conventions</a>
     </li>
+    <li>
+      <a href="../../articles/Subroutines.html">List of subroutines</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -204,7 +207,7 @@
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Absorption computed from internal field</h1>
             
-            <h4 data-toc-skip class="date">10 February, 2022</h4>
+            <h4 data-toc-skip class="date">23 February, 2022</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/112_absorption_field/112_absorption_field.Rmd" class="external-link"><code>vignettes/112_absorption_field/112_absorption_field.Rmd</code></a></small>
       <div class="hidden name"><code>112_absorption_field.Rmd</code></div>
@@ -237,7 +240,7 @@ OutputFormat HDF5 cross_sections
 Scatterers 2
 Au@Au  0 0 0 21  18 
 Au@Pd  55 0 0 32  30  </code></pre>
-<p>Note that the two particles are different: the first scatterer is a homogeneous Au sphere, artificially separated into two regions. The second scatterer is a <a href="mailto:Au@Pd" class="email">Au@Pd</a> core-shell.</p>
+<p>Note that the two particles are different: the first scatterer is a homogeneous Au sphere, artificially separated into two regions. The second scatterer is a <code>Au@Pd</code> core-shell.</p>
 </div>
 <div class="section level2">
 <h2 id="total-cross-sections">Total cross-sections<a class="anchor" aria-label="anchor" href="#total-cross-sections"></a>
@@ -2784,7 +2787,7 @@ Show positions file (click to open)
  86.406825983   1.554613678 -5.867378e+00
  62.996944122  -2.281729641 -3.088809e+01
  52.474661717 -17.349264259  2.675551e+01</code></pre>
-</details><p>Note that TERMS will automatically detect whether a point is within a given region, and return this information in the near-field map. This is helpful to combine multiple regions as in this example, without needing to run separate simulations, or keep track of the regions ourselves.</p>
+</details><p>Note that TERMS will automatically detect the material region corresponding to each point, and return this information in the near-field map. This is helpful to combine multiple regions as in this example, without needing to run separate simulations, or keep track of each point ourselves.</p>
 <p>The input file for this near-field simulation is shown below.</p>
 <pre><code>ModeAndScheme 1 0
 MultipoleCutoff 15
@@ -2822,7 +2825,7 @@ $ I          &lt;dbl&gt; 0.4750168, 1.2593607, 0.5449848, 0.7380284, 0.5376374, 
 <p><img src="112_absorption_field_files/figure-html/comparison-1.png" width="700"></p>
 <p>Note that we only sampled a few wavelengths for clarity, but the near-field calculation is relatively fast, especially with the reasonable number of points afforded by the use of an efficient cubature, and the use of <code>Scheme=0</code> for solving at fixed incidence.</p>
 <hr>
-<p><em>Last run: 10 February, 2022</em></p>
+<p><em>Last run: 23 February, 2022</em></p>
 </div>
 </div>
   </div>

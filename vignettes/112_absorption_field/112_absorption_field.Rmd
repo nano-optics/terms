@@ -52,13 +52,13 @@ The standard far-field simulation uses the following `input` file
 cat input
 ```
 
-Note that the two particles are different: the first scatterer is a homogeneous Au sphere, artificially separated into two regions. The second scatterer is a Au@Pd core-shell.
+Note that the two particles are different: the first scatterer is a homogeneous Au sphere, artificially separated into two regions. The second scatterer is a `Au@Pd` core-shell.
 
 ## Total cross-sections
 
 We first retrieve the total cross-sections, as usual,
 
-```{r total}
+```{r total, fig.height=2.5}
 ```
 
 ## Mackowski's partial cross-sections 
@@ -92,7 +92,7 @@ cat positions
 ```
 </details> 
 
-Note that TERMS will automatically detect whether a point is within a given region, and return this information in the near-field map. This is helpful to combine multiple regions as in this example, without needing to run separate simulations, or keep track of the regions ourselves.
+Note that TERMS will automatically detect the material region corresponding to each point, and return this information in the near-field map. This is helpful to combine multiple regions as in this example, without needing to run separate simulations, or keep track of each point ourselves.
 
 The input file for this near-field simulation is shown below.
 

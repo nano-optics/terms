@@ -33,7 +33,8 @@ p <- ggplot(total, aes(wavelength, average, colour=crosstype)) +
   # scale_x_continuous(expand=c(0,0)) +
   scale_colour_brewer(palette='Set1') +
   labs(title='Far-field cross-sections', colour='',
-       x=expression(wavelength/nm),y=expression(sigma/nm^2))
+       x=expression(wavelength/nm),y=expression(sigma/nm^2)) +
+  theme(legend.position = 'none')
 
   
 p

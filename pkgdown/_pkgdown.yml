@@ -14,11 +14,11 @@ home:
 
 navbar:
   left:
-  - text: Keywords
+  - text: "Keywords"
     href: articles/Keywords.html
   - text: Examples
     menu:
-    - text: Simple examples
+    - text: "Simple examples"
     - text: 01 dimer spheres
       href: articles/01_dimer_spheres/01_dimer_spheres.html
     - text: 02 angular dispersion
@@ -38,7 +38,7 @@ navbar:
     - text: 09 orientation-averaged near field spectrum
       href: articles/09_spectrum_near_field/09_spectrum_near_field.html
     - text: "---"
-    - text: Advanced examples & testing
+    - text: "Advanced examples & testing"
     - text: 10 shell absorption
       href: articles/10_shell_absorption/10_shell_absorption.html
     - text: 11 convergence
@@ -51,7 +51,7 @@ navbar:
       href: articles/14_diffractive_chain/14_diffractive_chain.html
     - text: 15 quadrimer vs 2 dimers
       href: articles/15_quadrimer/15_quadrimer.html
-  - text: Technical notes
+  - text: "Technical notes"
     menu:
     - text: "Convergence and timing studies"
     - text: 101 timing
@@ -74,13 +74,15 @@ navbar:
       href: articles/112_absorption_field/112_absorption_field.html
     - text: "---"
     - text: "Validation"
-    - text: 1001 MSTM far-field
+    - text: "1001 MSTM far-field"
       href: articles/1001_mstm_ff/1001_mstm_ff.html
-    - text: 1003 CDA dichroism
+    - text: "1003 CDA dichroism"
       href: articles/1003_cda/1003_cda.html
     - text: "---"
-    - text: Indexing conventions
+    - text: "Indexing conventions"
       href: articles/Indexing.html
+    - text: "List of subroutines"
+      href: articles/Subroutines.html
   - text: News
     menu:
     - text: "Change log"
