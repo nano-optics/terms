@@ -16,6 +16,21 @@ export_cubature <- function(q = cubs::cubs(N = 10, cubature = 'lebedev'), out=''
 }
 
 
+##' @title Utility functions
+##' @description Generate a dielectric function in suitable format for TERMS
+##' @describeIn utility export a dielectric function
+##' @param m data.frame with wavelength and epsilon, e.g. from dielectric::epsAu()
+##' @param out filename
+##' @importFrom dielectric epsAu
+##' @export
+export_dielectric <- function(m = dielectric::epsAu(seq(400,800)), out=''){
+  
+  wavelength <- m[["wavelength"]]
+  epsilon <- m[["epsilon"]]
+  write.table(format(cbind(wavelength, Re(epsilon), Im(epsilon)), digits = 15), file = out, quote=FALSE,
+              row.names = FALSE, col.names = FALSE, append = FALSE)
+  
+}
 
 ##' @description Euler rotation matrix
 ##' @describeIn utility passive rotation matrix

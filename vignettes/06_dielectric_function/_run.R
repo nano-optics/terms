@@ -29,4 +29,4 @@ p <- ggplot(mCOA, aes(wavelength, average, linetype = epsilon,colour=crosstype))
   ggtitle("Orientation-averaged cross-sections")
 
 p
-
+  

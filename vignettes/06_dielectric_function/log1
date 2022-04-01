@@ -9364,4 +9364,4 @@ calcCs> csExt=  3.34976908E+03 nConv=  8
          csSca=  2.86105337E+03 nConv=  6
          csAbs=  4.88715709E+02
 
-termsProgram> Program run time (CPU & real in s):  1.443E+01  7.609E+00
+termsProgram> Program run time (CPU & real in s):  1.436E+01  7.740E+00
