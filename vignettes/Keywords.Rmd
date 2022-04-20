@@ -113,7 +113,14 @@ Sets the real-valued dielectric constant of the host medium (default value is _1
 
 ### Wavelength _L_<sub>1</sub> [ _L<sub>2</sub>_  _n_ ]
 
+or
+
+`Wavelength file filename`
+
+
 Without the optional arguments, this keyword changes the default wavelength of 666.0 nm to a new value _L_<sub>1</sub>. Including the optional arguments will specify a closed interval [ _L_<sub>1</sub>, _L_<sub>2</sub> ] divided into _n_ regular grid spacings, thus producing _n+1_ wavelengths. 
+
+The alternative format is to provide a list of wavelengths in an external file, in which case the argument _file_ must be a string starting with 'f' or 'F', and _filename_ must specify the filename. The file's first line must contain the total wavelength count, _n<sub>lambda</sub>_, and the subsequent _n<sub>lambda</sub>_ lines each must contain a single value, interpreted as a wavelength in nanometres. Note that wavelengths read from an external file need not be regularly spaced, or ordered.
 
 ### Incidence _a_ _b_ _c_ [ _p_ ] / [ _n<sub>a</sub>_ _n<sub>b</sub>_ _n<sub>c</sub>_ ] 
 
@@ -132,8 +139,7 @@ A negative value of argument _a_, _b_, and/or _c_ will trigger discretisation of
 Multiple incidences can also be read from a file, in which case the argument _a_ must be a string starting with 'f' or 'F', and _b_ must specify the filename. The file's first line must contain the total incidence count, _n<sub>inc</sub>_, and the subsequent _n<sub>inc</sub>_ lines each must contain four space-separated values: the three Euler angles (_a<sub>i</sub>_, _b<sub>i</sub>_, _c<sub>i</sub>_) and the weight _w<sub>i</sub>_ of each incidence. The weights are only used to compute rotational
 averages for convenience, which is a common use-case.
 
-In `Mode = 1` (near-field calculations), if `p` is set to `p=1` (default value, linear polarisaiton), the orientation average of the local degree of optical chirality $\ldocoa$ will be calculated for both RCP and LCP (noting that linear polarisation would give 0 everywhere, when orientation-averaged). Since the calculation can be time-consuming, setting `p=+/-2` triggers the calculation for only that specific circular
-polarisation.
+In `Mode = 1` (near-field calculations), if `p` is set to `p=1` (default value, linear polarisaiton), the orientation average of the local degree of optical chirality $\ldocoa$ will be calculated for both RCP and LCP (noting that linear polarisation would give 0 everywhere, when orientation-averaged). Since the calculation can be time-consuming, setting `p=+/-2` triggers the calculation for only that specific circular polarisation.
 
 
 ### MultipoleCutoff _n<sub>1</sub>_ [ _n<sub>2</sub>_ [ _t_ ] ]
