@@ -1,0 +1,15 @@
+ModeAndScheme 2 3
+#Wavelength 400 800 20
+Wavelength f wavelengths 
+#Wavelength 700
+
+Medium 1.7689
+
+OutputFormat HDF5 xsec
+
+Scatterers 2 
+Au 0 0 0 10 
+Au 0 30 0 10
+
+
+

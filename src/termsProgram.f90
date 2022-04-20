@@ -1516,8 +1516,52 @@ contains
             !
             write (*, '(A,A,A)') &
                myName, '> Detected keyword ', trim(keyword)
-            !
-            if (words(2) /= '' .and. words(3) /= '' .and. words(4) /= '') then
+
+            ! baptiste 20/04/2022: added option to pass a filename
+            if (words(2) (1:1) == 'f' .or. words(2) (1:1) == 'F') then ! only filename supplied
+               
+               if (trim(words(3)) == '') then
+                  write (*, '(A,A)') myname, &
+                     '> ERROR: Missing wavelength filename'
+                  STOP
+               end if
+               !
+               write (*, '(15x,A,A)') 'Wavelength filename= ', trim(words(3))
+               !
+               inquire (file=trim(words(3)), exist=yes)
+               if (.not. yes) then
+                  write (*, '(A,A,A)') myName, &
+                     '> ERROR: Missing wavelength file ', &
+                     trim(words(3))
+                  STOP
+               end if
+               !
+               open (unit=11, file=trim(words(3)), status='old')
+               read (11, *, IOSTAT=eof) k
+               if (eof /= 0) then
+                  write (*, '(A,A,A)') myName, '> ERROR: In header of ', trim(words(3))
+                  STOP
+               elseif (k < 1) then
+                  write (*, '(A,A)') myName, '> ERROR: Wavelength count < 1'
+                  STOP
+               else
+                  write (*, '(15x,A,i6)') 'Expected wavelength count= ', k
+               end if
+               if (allocated(wavelen)) deallocate (wavelen)
+               allocate (wavelen(k))
+               if (allocated(ehost)) deallocate (ehost)
+               allocate (ehost(k))
+               do j = 1, k
+                  read (11, *, IOSTAT=eof) wavelen(j)
+                  if (eof /= 0) then
+                     write (*, '(A,A,i6)') myName, &
+                        '> ERROR reading wavelength ', j
+                     STOP
+                  end if
+               end do
+               close (11)
+
+            else if (words(2) /= '' .and. words(3) /= '' .and. words(4) /= '') then
                !
                !
                read (words(2:4), *, IOSTAT=eof) x(1), x(2), i
@@ -1545,7 +1589,7 @@ contains
                   wavelen(j + 1) = x(1) + j*x(2)
                end do
                !
-            elseif (words(2) /= '') then
+            else if (words(2) /= '') then
                !
                if (allocated(wavelen)) deallocate (wavelen)
                allocate (wavelen(1))
@@ -1558,6 +1602,7 @@ contains
                !
             else
                !
+               write (*, '(15x,A,f10.4)') 'not happy', wavelen(1)
                call errorParsingArguments(keyword)
                !
             end if
