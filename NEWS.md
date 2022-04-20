@@ -1,3 +1,13 @@
+# terms 1.0.1
+
+## Website
+
+- updated list of publications 
+
+## User-facing changes
+
+- new option to provide input wavelengths as an external file
+
 # terms 1.0.0
 
 ## Website
