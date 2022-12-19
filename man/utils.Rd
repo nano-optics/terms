@@ -17,6 +17,6 @@ Parses a log file to extract timing information from subroutines (verbosity-depe
 }
 \section{Functions}{
 \itemize{
-\item \code{extract_time}: extract timings from log files
-}}
+\item \code{extract_time()}: extract timings from log files
 
+}}

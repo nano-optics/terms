@@ -96,15 +96,15 @@ Core-satellite cluster of spheres
 }
 \section{Functions}{
 \itemize{
-\item \code{cluster_positions}: write cluster positions to input file
+\item \code{cluster_positions()}: write cluster positions to input file
 
-\item \code{cluster_helix}: helical cluster
+\item \code{cluster_helix()}: helical cluster
 
-\item \code{cluster_chain}: linear chain cluster
+\item \code{cluster_chain()}: linear chain cluster
 
-\item \code{cluster_satellite}: core-satellite cluster
+\item \code{cluster_satellite()}: core-satellite cluster
+
 }}
-
 \examples{
 cluster_positions()
 cluster_helix()

@@ -13,6 +13,7 @@
 \alias{display_tmat}
 \alias{display_prestaged}
 \alias{export_cubature}
+\alias{export_dielectric}
 \alias{rotation_euler_passive}
 \alias{rotation_euler_active}
 \alias{euler_to_axisangle}
@@ -45,6 +46,8 @@ display_tmat(s)
 display_prestaged(a, n_max = 3, n_part = 2, draw = TRUE)
 
 export_cubature(q = cubs::cubs(N = 10, cubature = "lebedev"), out = "")
+
+export_dielectric(m = dielectric::epsAu(seq(400, 800)), out = "")
 
 rotation_euler_passive(phi, theta, psi)
 
@@ -99,6 +102,8 @@ visualise_rgl(cl, outfile = NULL, show_core = FALSE, ...)
 
 \item{out}{filename}
 
+\item{m}{data.frame with wavelength and epsilon, e.g. from dielectric::epsAu()}
+
 \item{psi}{Euler angle}
 
 \item{range}{range (2-vector)}
@@ -140,6 +145,8 @@ Display prestaged matrix
 
 Generate an incidence file for spherical cubature
 
+Generate a dielectric function in suitable format for TERMS
+
 Euler rotation matrix
 
 Euler rotation matrix
@@ -156,42 +163,44 @@ Visualise a 'cluster' structure
 }
 \section{Functions}{
 \itemize{
-\item \code{equal_sizes}: equal sizes
+\item \code{equal_sizes()}: equal sizes
 
-\item \code{equal_angles}: equal angles
+\item \code{equal_angles()}: equal angles
 
-\item \code{p_index}: p-index
+\item \code{p_index()}: p-index
 
-\item \code{indices}: indices
+\item \code{indices()}: indices
 
-\item \code{unpack_indices}: unpack indices
+\item \code{unpack_indices()}: unpack indices
 
-\item \code{read_amat}: unpack indices
+\item \code{read_amat()}: unpack indices
 
-\item \code{amat_to_tmatlist}: wrap staged matrices
+\item \code{amat_to_tmatlist()}: wrap staged matrices
 
-\item \code{read_tmat}: read T-matrix
+\item \code{read_tmat()}: read T-matrix
 
-\item \code{display_amat}: display staged matrix
+\item \code{display_amat()}: display staged matrix
 
-\item \code{display_tmat}: display T-matrix
+\item \code{display_tmat()}: display T-matrix
 
-\item \code{display_prestaged}: display prestaged matrix
+\item \code{display_prestaged()}: display prestaged matrix
 
-\item \code{export_cubature}: export a spherical cubature
+\item \code{export_cubature()}: export a spherical cubature
 
-\item \code{rotation_euler_passive}: passive rotation matrix
+\item \code{export_dielectric()}: export a dielectric function
 
-\item \code{rotation_euler_active}: active rotation matrix
+\item \code{rotation_euler_passive()}: passive rotation matrix
 
-\item \code{euler_to_axisangle}: axis-angle rotation
+\item \code{rotation_euler_active()}: active rotation matrix
 
-\item \code{symmetric_range}: symmetric range
+\item \code{euler_to_axisangle()}: axis-angle rotation
 
-\item \code{get_geometry}: extract geometry information from input file
+\item \code{symmetric_range()}: symmetric range
 
-\item \code{cluster_geometry}: wrap geometry information obtained from input file
+\item \code{get_geometry()}: extract geometry information from input file
 
-\item \code{visualise_rgl}: rgl visualisation of a cluster
+\item \code{cluster_geometry()}: wrap geometry information obtained from input file
+
+\item \code{visualise_rgl()}: rgl visualisation of a cluster
+
 }}
-

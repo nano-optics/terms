@@ -33,10 +33,10 @@ Extracts partial absorption cross-sections from a HDF5 file storing far-field cr
 }
 \section{Functions}{
 \itemize{
-\item \code{store_xsec}: store plain text cross-sections
+\item \code{store_xsec()}: store plain text cross-sections
 
-\item \code{consolidate_xsec}: consolidate cross-sections
+\item \code{consolidate_xsec()}: consolidate cross-sections
 
-\item \code{consolidate_partials}: consolidate partial absorption cross-sections for multilayered spheres
+\item \code{consolidate_partials()}: consolidate partial absorption cross-sections for multilayered spheres
+
 }}
-
