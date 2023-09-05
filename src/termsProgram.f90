@@ -2513,14 +2513,12 @@ contains
                do j = 1, size(wavelen)
                   escat(i, k, j) = epsAu(wavelen(j))
                end do
-            elseif (trim(labels(i, k)) == 'AuRaschke') then
-               do j = 1, size(wavelen)
-                  escat(i, k, j) = epsAuRaschke(wavelen(j))
-            end do
-            elseif (trim(labels(i, k)) == 'AgRaschke') then
-               do j = 1, size(wavelen)
-                  escat(i, k, j) = epsAgRaschke(wavelen(j))
-            end do
+            elseif (trim(labels(i, k)) == 'Au2') then
+               escat(i, k, 1:size(wavelen)) = epsAuRaschke(wavelen)
+
+            elseif (trim(labels(i, k)) == 'Ag2') then
+               escat(i, k, 1:size(wavelen)) = epsAgRaschke(wavelen)
+
             elseif (trim(labels(i, k)) == 'Ag') then
                do j = 1, size(wavelen)
                   escat(i, k, j) = epsAg(wavelen(j))
@@ -2544,6 +2542,7 @@ contains
             elseif (trim(labels(i, k)) == 'Cr') then
 
                escat(i, k, 1:size(wavelen)) = epsCr(wavelen)
+
             elseif (trim(labels(i, k)) == 'Water') then
 
                escat(i, k, 1:size(wavelen)) = epsWater(wavelen)
