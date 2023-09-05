@@ -2495,7 +2495,7 @@ contains
       ! Update the escat to a given wavelength.
       ! ==============================================================
       !
-      use eps, only: epsAu, epsAg, epsPd, epsPt, epsSi, epsAl, epsCr, epsWater, interp1
+      use eps, only: epsAu, epsAg, epsAuRaschke, epsAgRaschke, epsPd, epsPt, epsSi, epsAl, epsCr, epsWater, interp1
       !
       implicit none
       !
@@ -2513,6 +2513,14 @@ contains
                do j = 1, size(wavelen)
                   escat(i, k, j) = epsAu(wavelen(j))
                end do
+            elseif (trim(labels(i, k)) == 'AuRaschke') then
+               do j = 1, size(wavelen)
+                  escat(i, k, j) = epsAuRaschke(wavelen(j))
+            end do
+            elseif (trim(labels(i, k)) == 'AgRaschke') then
+               do j = 1, size(wavelen)
+                  escat(i, k, j) = epsAgRaschke(wavelen(j))
+            end do
             elseif (trim(labels(i, k)) == 'Ag') then
                do j = 1, size(wavelen)
                   escat(i, k, j) = epsAg(wavelen(j))
