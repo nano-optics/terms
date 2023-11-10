@@ -1,0 +1,33 @@
+readInputFile> Parsing file input_Au2
+
+readInputFile> Detected keyword Wavelength
+               Wavelength LB (nm):   250.000000
+               Wavelength UB (nm):  1200.000000
+               nsteps, step:       500    1.9000
+readInputFile> Detected keyword Medium
+               Constant host epsilon=  1.7689E+0
+readInputFile> Detected keyword OutputFormat
+               OutputFormat=HDF5
+               All output files are stored in file "Au2.h5                                                          "
+
+readInputFile> Detected keyword Scatterers
+ with nscat=    1
+
+readInputFile> Descriptor(s) and circumscribing sphere(s):
+
+ scatID String                  x          y          z         R_0
+    1   Au2                 0.0000E+0  0.0000E+0  0.0000E+0  3.0000E+1
+
+readInputFile> Individual geometry characteristic(s):
+
+ scatID Details
+    1   Mie with ncoats= 0
+
+readInputFile> Dielectric functions for (coated) Mie scatterer(s):
+
+ scatID volID Label
+    1     0     Au2
+
+readInputFile> Finished parsing  4 keywords
+
+interp1> ERROR: x2-range not inside x1-range

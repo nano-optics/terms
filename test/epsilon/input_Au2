@@ -1,0 +1,7 @@
+Wavelength 250 1200 500
+Medium 1.7689 # epsilon of water
+OutputFormat HDF5 Au2
+
+
+Scatterers 1
+Au2 0.0 0.0 0.0 30.0

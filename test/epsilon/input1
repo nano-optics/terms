@@ -1,0 +1,6 @@
+Wavelength 300 1200 800
+Medium 1.7689 # epsilon of water
+OutputFormat HDF5 Ag_default
+
+Scatterers 1
+Ag 0.0 0.0 0.0 30.0

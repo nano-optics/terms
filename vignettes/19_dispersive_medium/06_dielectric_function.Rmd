@@ -1,0 +1,68 @@
+---
+title: "User-defined dielectric function"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 3
+    fig_width: 7
+    fig_height: 3
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{User-defined dielectric function}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE}
+library(knitr)
+library(terms)
+options(cli.num_colors = 1)
+theme_set(theme_grey())
+opts_chunk$set(echo = FALSE, warning =FALSE,
+               message=FALSE, comment='', 
+               tidy=FALSE, cache = FALSE)
+do.call(read_chunk, list(path = "_run.R"))
+```
+
+## Objective
+
+This example illustrates the use of a custom dielectric function stored externally, which is interpolated by `TERMS`. We compare the far-field cross-sections for a dimer of silver spheres, using the built-in dielectric function of Ag (Drude model, from [Etchegoin and Le Ru](https://doi.org/10.1016/B978-0-444-52779-0.X0001-3)), and that of [Yang et al, Phys. Rev. B 91, 235137 (2015)](https://doi.org/10.1103/PhysRevB.91.235137) stored in `Ag_PRB.txt`
+
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+library(terms)
+cat('  <style>
+.x3d_scene {
+float:right;
+margin:0em;
+ }
+  </style>')
+
+ge <- get_geometry('input1')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,200), width = "200px", height = "150px") 
+```
+
+This second simulation with a user-defined dielectric function uses the following `input` file
+
+```{bash input}
+cat input2
+```
+
+```{r read, cache=FALSE}
+```
+
+## Orientation-averaged results
+
+```{r oa}
+```
+
+
+-----
+
+```{r cleanup}
+```
+_Last run: `r format(Sys.time(), '%d %B, %Y')`_
