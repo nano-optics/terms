@@ -1,5 +1,5 @@
 ---
-title: "User-defined dielectric function"
+title: "Dispersive incident medium"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   rmarkdown::html_vignette:
@@ -12,13 +12,14 @@ output:
       in_header: "../../inst/_x3d_header.html"
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteIndexEntry{User-defined dielectric function}
+  %\VignetteIndexEntry{Dispersive incident medium}
   %\VignetteEncoding{UTF-8}
 ---
 
 ```{r demo, message=FALSE, echo=FALSE}
 library(knitr)
 library(terms)
+library(dielectric)
 options(cli.num_colors = 1)
 theme_set(theme_grey())
 opts_chunk$set(echo = FALSE, warning =FALSE,
@@ -29,8 +30,11 @@ do.call(read_chunk, list(path = "_run.R"))
 
 ## Objective
 
-This example illustrates the use of a custom dielectric function stored externally, which is interpolated by `TERMS`. We compare the far-field cross-sections for a dimer of silver spheres, using the built-in dielectric function of Ag (Drude model, from [Etchegoin and Le Ru](https://doi.org/10.1016/B978-0-444-52779-0.X0001-3)), and that of [Yang et al, Phys. Rev. B 91, 235137 (2015)](https://doi.org/10.1103/PhysRevB.91.235137) stored in `Ag_PRB.txt`
+Presently, TERMS assumes a constant refractive index for the incident medium. In some situations, however, the dispersion should be taken into account. 
+This example illustrates a workaround, using a rescaled dielectric function for the particles. We compare the far-field cross-sections for a dimer of silver spheres, using the built-in dielectric function of [Yang et al, Phys. Rev. B 91, 235137 (2015)](https://doi.org/10.1103/PhysRevB.91.235137) stored in `Ag_PRB.txt` and dispersionless "water" ($n=1.33$), and a simulation run with rescaled values in vacuum:
 
+- $\lambda \to \lambda/n$
+- $\varepsilon \to \varepsilon/n^2$
 
 ```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
 library(terms)
@@ -46,7 +50,7 @@ cl <- cluster_geometry(ge)
 terms::x3d_scene(cl, viewpoint=c(0,0,200), width = "200px", height = "150px") 
 ```
 
-This second simulation with a user-defined dielectric function uses the following `input` file
+This second simulation with a user-defined dielectric function uses the following `input` file with rescaled values in vacuum.
 
 ```{bash input}
 cat input2
@@ -60,6 +64,8 @@ cat input2
 ```{r oa}
 ```
 
+
+The two plots are identical. To use a dispersive incident medium one would simply use $n(\lambda)$ values for water in the rescaling above.
 
 -----
 

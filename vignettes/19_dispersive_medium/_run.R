@@ -1,6 +1,7 @@
 setwd(here::here('vignettes/19_dispersive_medium/'))
 ## ----load----
 library(terms)
+library(dielectric)
 theme_set(theme_grey())
 
 
