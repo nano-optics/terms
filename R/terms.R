@@ -5,5 +5,6 @@
 #' @import tidyr
 #' @import dplyr
 #' @import rhdf5
+#' @import dielectric
 
 

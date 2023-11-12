@@ -1,3 +1,14 @@
+# terms 1.0.2
+
+## Bug fix
+
+- missing dependency on `dielectric`
+
+## Website
+
+- new vignette illustrating rescaling for dispersive incident medium
+
+
 # terms 1.0.1
 
 ## Website

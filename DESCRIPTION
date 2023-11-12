@@ -1,5 +1,5 @@
 Package: terms
-Version: 1.0.1
+Version: 1.0.2
 Authors@R: c(person("Dmitri", "Schebarchov",
     email = "dmitri.schebarchov@gmail.com",
     role = c("aut"),
