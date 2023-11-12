@@ -24,4 +24,4 @@ VignetteBuilder: knitr
 Encoding: UTF-8
 RoxygenNote: 7.2.3
 Depends: R (>= 3.5.0), rhdf5, cubs, tidyr, purrr, glue, dplyr, tibble, ggplot2
-Suggests: stringr, patchwork, gridExtra, egg, ggforce, DT, rgl, knitr, rmarkdown
+Suggests: dielectric, stringr, patchwork, gridExtra, egg, ggforce, DT, rgl, knitr, rmarkdown
