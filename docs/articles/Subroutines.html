@@ -24,15 +24,15 @@
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]--><link rel="stylesheet" type="text/css" href="http://www.x3dom.org/x3dom/src/x3dom.css">
-<script type="text/javascript" src="http://www.x3dom.org/x3dom/src/x3dom.js"></script><style>
+<![endif]--><link rel="stylesheet" type="text/css" href="../../x3dom.css">
+<script type="text/javascript" src="../../x3dom.js"></script><style>
 .x3d_scene {
   max-width: 300px;
-    width: 80%;
-    height: 80%;
-    margin: 1em;
-    background: rgb(238,251,255);
-    background: radial-gradient(circle, rgba(238,251,255,1) 0%, rgba(212,212,212,1) 100%);
+  width: 80%;
+  height: 80%;
+  margin: 1em;
+  background: rgb(238,251,255);
+  background: radial-gradient(circle, rgba(238,251,255,1) 0%, rgba(212,212,212,1) 100%);
  }
   </style>
 </head>
@@ -51,7 +51,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">terms</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.2</span>
       </span>
     </div>
 
@@ -61,7 +61,7 @@
   <a href="../articles/Keywords.html">Keywords</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Examples
      
     <span class="caret"></span>
@@ -119,7 +119,7 @@
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Technical notes
      
     <span class="caret"></span>
@@ -173,7 +173,7 @@
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     News
      
     <span class="caret"></span>
@@ -207,7 +207,7 @@
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Code organisation</h1>
             
-            <h4 data-toc-skip class="date">23 February, 2022</h4>
+            <h4 data-toc-skip class="date">05 December, 2023</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/nano-optics/terms/blob/HEAD/vignettes/Subroutines.Rmd" class="external-link"><code>vignettes/Subroutines.Rmd</code></a></small>
       <div class="hidden name"><code>Subroutines.Rmd</code></div>
@@ -220,301 +220,734 @@
 MathJax.Hub.Config({
 TeX: { equationNumbers: { autoNumber: "AMS" } }
 });
-</script><div class="figure">
-<img src="terms_modules.png" style="width:100.0%" alt=""><p class="caption">organisation of the code</p>
+</script><div class="float">
+<img src="terms_modules.png" style="width:100.0%" alt="organisation of the code"><div class="figcaption">organisation of the code</div>
 </div>
 <div class="section level3 unnumbered">
 <h3 class="unnumbered" id="main-program-termsprogram">
-<a href="https://github.com/nano-optics/terms/blob/main/src/termsProgram.f90" class="external-link">Main program <code>termsProgram</code></a><a class="anchor" aria-label="anchor" href="#main-program-termsprogram"></a>
+<a href="https://github.com/nano-optics/terms/blob/main/src/termsProgram.f90" class="external-link">Main
+program <code>termsProgram</code></a><a class="anchor" aria-label="anchor" href="#main-program-termsprogram"></a>
 </h3>
-<p><code>termsProgram</code> is the main module, with subroutines listed below; it reads the keywords and their corresponding values in the input file and then calls different subroutines of <code>multiscat</code> module for the calculation of requested outputs.</p>
+<p><code>termsProgram</code> is the main module, with subroutines listed
+below; it reads the keywords and their corresponding values in the input
+file and then calls different subroutines of <code>multiscat</code>
+module for the calculation of requested outputs.</p>
 <ul>
 <li><p><code>readInputFile(inputfile)</code><br>
-Reads the input file containing specific keywords and the corresponding parameter values.</p></li>
+Reads the input file containing specific keywords and the corresponding
+parameter values.</p></li>
 <li><p><code>errorParsingArguments(keyword)</code><br>
-If there is an error with the parameter values assigned to a keyword, this subroutine informs the user and stops the program.</p></li>
+If there is an error with the parameter values assigned to a keyword,
+this subroutine informs the user and stops the program.</p></li>
 <li><p><code>calcEpsilon()</code><br>
-Updates the <code>escat</code> array storing the relative dielectric function(s) for each scatterer evaluated at the specified wavelengths.<br><code>escat</code> is an array for which the number of rows, columns and the 3<span class="math inline">\(^{rd}\)</span> dimension correspond to the number of shells, scatterers, and wavelengths, respectively.</p></li>
+Updates the <code>escat</code> array storing the relative dielectric
+function(s) for each scatterer evaluated at the specified
+wavelengths.<br><code>escat</code> is an array for which the number of rows, columns and
+the 3<span class="math inline">\(^{rd}\)</span> dimension correspond to
+the number of shells, scatterers, and wavelengths,
+respectively.</p></li>
 <li><p><code>calcGridPoints(points)</code><br>
-For a near-field calculation, this subroutine calculates the grid points based on the number of steps, lower and upper values along the desired axes.<br><code>points(3, nGridPoints)</code> is an in/output matrix storing the cartesian coordinates <span class="math inline">\((x,y,z)\)</span> of the grid points.</p></li>
+For a near-field calculation, this subroutine calculates the grid points
+based on the number of steps, lower and upper values along the desired
+axes.<br><code>points(3, nGridPoints)</code> is an in/output matrix storing the
+cartesian coordinates <span class="math inline">\((x,y,z)\)</span> of
+the grid points.</p></li>
 <li><p><code>sentence2words(sentence, words, nwords_)</code><br>
-Reads each line of the input file as a sentence and splits it into space-separated words.<br><code>sentence</code>, <code>words</code> are in/output character arrays, and <code>nwords_</code> is an optional output integer containing the number of words in the sentence.</p></li>
+Reads each line of the input file as a sentence and splits it into
+space-separated words.<br><code>sentence</code>, <code>words</code> are in/output character
+arrays, and <code>nwords_</code> is an optional output integer
+containing the number of words in the sentence.</p></li>
 <li><p><code>dumpNFs2TXTFile(filename, incidences, Epower, wavelen, work, Ef, p_label)</code><br>
-Exports electric and magnetic near fields into a plain text file. <code>filename</code> is the name of the text file. <code>incidences, Epower, wavelen, work</code> are the incidence angles, selected power for mapping fields, wavelength, and near-field quantities, respectively. <code>Ef</code> is a logical flag which selects either electric field or magnetic field. <code>p_label</code> is an integer array indexing the position of each grid point, whether it is inside the surrounding medium or a particle, and in which layer.</p></li>
-<li><p><code>dumpNFs2HDF5File(fname, groupname, filename, incidences, Epower, wavelen, work, p_label)</code> Exports electric and magnetic near fields into a HDF5 file. <code>filename</code>, <code>fname</code>, <code>groupname</code> are the names of the HDF5 file, group, and subgroup name, respectively. <code>incidences, Epower, wavelen, work</code> are the incidence angles, selected power for mapping fields, wavelength, and near-field quantities, respectively. <code>Ef</code> is a logical flag which selects either electric field or magnetic field. <code>p_label</code> is an integer array indexing the position of each grid point, whether it is inside the surrounding medium or a particle, and in which layer.</p></li>
+Exports electric and magnetic near fields into a plain text file.
+<code>filename</code> is the name of the text file.
+<code>incidences, Epower, wavelen, work</code> are the incidence angles,
+selected power for mapping fields, wavelength, and near-field
+quantities, respectively. <code>Ef</code> is a logical flag which
+selects either electric field or magnetic field. <code>p_label</code> is
+an integer array indexing the position of each grid point, whether it is
+inside the surrounding medium or a particle, and in which
+layer.</p></li>
+<li><p><code>dumpNFs2HDF5File(fname, groupname, filename, incidences, Epower, wavelen, work, p_label)</code>
+Exports electric and magnetic near fields into a HDF5 file.
+<code>filename</code>, <code>fname</code>, <code>groupname</code> are
+the names of the HDF5 file, group, and subgroup name, respectively.
+<code>incidences, Epower, wavelen, work</code> are the incidence angles,
+selected power for mapping fields, wavelength, and near-field
+quantities, respectively. <code>Ef</code> is a logical flag which
+selects either electric field or magnetic field. <code>p_label</code> is
+an integer array indexing the position of each grid point, whether it is
+inside the surrounding medium or a particle, and in which
+layer.</p></li>
 <li><p><code>countLines(filename) result(nlines)</code><br>
 Counts lines in a text file.</p></li>
 </ul>
 </div>
 <div class="section level3 unnumbered">
 <h3 class="unnumbered" id="multiscat-module">
-<a href="https://github.com/nano-optics/terms/blob/main/src/multiscat.f90" class="external-link"><code>multiscat</code> module</a><a class="anchor" aria-label="anchor" href="#multiscat-module"></a>
+<a href="https://github.com/nano-optics/terms/blob/main/src/multiscat.f90" class="external-link"><code>multiscat</code>
+module</a><a class="anchor" aria-label="anchor" href="#multiscat-module"></a>
 </h3>
-<p>This module consists of a mix of high-level, core, low-level and supplementary routines for solving a multiple scattering problem using the <em>T</em>-matrix formalism. We list below the subroutines of the <code>multiscat</code> module with a brief explanation. A list of common arguments and their brief description is at the end of this section. The other arguments are explained after each subroutine.</p>
+<p>This module consists of a mix of high-level, core, low-level and
+supplementary routines for solving a multiple scattering problem using
+the <em>T</em>-matrix formalism. We list below the subroutines of the
+<code>multiscat</code> module with a brief explanation. A list of common
+arguments and their brief description is at the end of this section. The
+other arguments are explained after each subroutine.</p>
 <ul>
 <li><p><code>mapNF(ncut, wavelen, inc,ehost, geometry, scheme, tfiles_, escat_, nselect_, verb_, noRTR_, dump_oaE2, dump_oaB2, field, Bfield, N_OC, orAvextEB_int, oa_ldoc, p_label)</code><br>
-Calculates the electric and magnetic near fields, and normalised optical chirality (<span class="math inline">\(\overline{\mathscr{C}}\)</span>) for a multiple scattering problem, for different incidence directions and wavelengths, as well as the orientation-averaged value of external <span class="math inline">\(\langle|\mathbf{E}|^2\rangle, \langle|\mathbf{B}|^2\rangle\)</span> and <span class="math inline">\(\langle\overline{\mathscr{C}}\rangle\)</span>. <code>escat_, tfiles_, nselect_, verb_, noRTR_</code> are optional inputs. <code>dump_oaE2, dump_oaB2</code> are logical flags selecting whether the orientation-averaged values <span class="math inline">\(\langle|\mathbf{E}|^2\rangle\)</span> and <span class="math inline">\(\langle|\mathbf{B}|^2\rangle\)</span> will be calculated, respectively.</p></li>
+Calculates the electric and magnetic near fields, and normalised optical
+chirality (<span class="math inline">\(\overline{\mathscr{C}}\)</span>)
+for a multiple scattering problem, for different incidence directions
+and wavelengths, as well as the orientation-averaged value of external
+<span class="math inline">\(\langle|\mathbf{E}|^2\rangle,
+\langle|\mathbf{B}|^2\rangle\)</span> and <span class="math inline">\(\langle\overline{\mathscr{C}}\rangle\)</span>.
+<code>escat_, tfiles_, nselect_, verb_, noRTR_</code> are optional
+inputs. <code>dump_oaE2, dump_oaB2</code> are logical flags selecting
+whether the orientation-averaged values <span class="math inline">\(\langle|\mathbf{E}|^2\rangle\)</span> and <span class="math inline">\(\langle|\mathbf{B}|^2\rangle\)</span> will be
+calculated, respectively.</p></li>
 <li><p><code>spectrumFF(ncut, wavelen, ehost, geometry, scheme, escat_, tfiles_, nselect_, noRTR_, verb_, sig_oa_, sig_, sig_abs_, jsig_abs_oa)</code><br>
-Calculates cross-section spectra for (multiple) fixed orientations, partial absorptions, and orientation-averaged cross-sections for a particle cluster. <em>T</em>-matrices for individual scatterers are either constructed using Mie theory or read from an optional argument <code>tfiles_</code>. <code>escat_, tfiles_, nselect_, verb_, noRTR_</code> are optional inputs. <code>jsig_abs_oa</code> contains the orientation-averaged absorption cross-section of each particle (valid for homogeneous spheres only, at present).</p></li>
+Calculates cross-section spectra for (multiple) fixed orientations,
+partial absorptions, and orientation-averaged cross-sections for a
+particle cluster. <em>T</em>-matrices for individual scatterers are
+either constructed using Mie theory or read from an optional argument
+<code>tfiles_</code>.
+<code>escat_, tfiles_, nselect_, verb_, noRTR_</code> are optional
+inputs. <code>jsig_abs_oa</code> contains the orientation-averaged
+absorption cross-section of each particle (valid for homogeneous spheres
+only, at present).</p></li>
 <li><p><code>solve(wavelen, ehost, geometry, nselect_, scheme_, verb_, noRTR_, TIJ, cJ_, cJint_, csAbs_, ierr_ )</code><br>
-This routine is the crux of <span class="smallcaps">terms</span> and solves a given multiple scattering problem by operating in a specified scheme. <code>TIJ</code> is an in/output argument, <code>cJ_, cJint_, csAbs_</code> are optional in/output arguments, <code>nselect_, scheme_, verb_, noRTR_</code> are optional inputs, and <code>ierr_</code> is an optional output. <code>TIJ</code> (<span class="math inline">\(l_{max}\times \text{nscat}\)</span>, <span class="math inline">\(l_{max}\times\text{nscat}\)</span>) as the input argument stores the <em>T</em>-matrix of nonspherical particles as the diagonal blocks of the matrix, or dielectric values of different shells for spherical particles as the diagonal elements of the matrix. <code>nscat</code> is the number of scatterers. This subroutine updates and returns <code>TIJ</code> for the whole system as the output. <code>cJ_(nscat x l_{max}, 2, nfi)</code> as the input argument contains details of the incident field and as a output argument contains incident plane wave coefficients in the first column and scattering coefficients in the second column. <code>nfi</code> is the number of incident angles. <code>cJint_(nscat x l_{max}, 4, 2)</code>: contains the regular and irregular field coefficients for each concentric region inside spherical scatterers. <code>csAbs_(nscat,4)</code>: contains absorption cross section inside each shell of each spherical scatterer.</p></li>
+This routine is the crux of <span class="smallcaps">terms</span> and
+solves a given multiple scattering problem by operating in a specified
+scheme. <code>TIJ</code> is an in/output argument,
+<code>cJ_, cJint_, csAbs_</code> are optional in/output arguments,
+<code>nselect_, scheme_, verb_, noRTR_</code> are optional inputs, and
+<code>ierr_</code> is an optional output. <code>TIJ</code> (<span class="math inline">\(l_{max}\times \text{nscat}\)</span>, <span class="math inline">\(l_{max}\times\text{nscat}\)</span>) as the input
+argument stores the <em>T</em>-matrix of nonspherical particles as the
+diagonal blocks of the matrix, or dielectric values of different shells
+for spherical particles as the diagonal elements of the matrix.
+<code>nscat</code> is the number of scatterers. This subroutine updates
+and returns <code>TIJ</code> for the whole system as the output.
+<code>cJ_(nscat x l_{max}, 2, nfi)</code> as the input argument contains
+details of the incident field and as a output argument contains incident
+plane wave coefficients in the first column and scattering coefficients
+in the second column. <code>nfi</code> is the number of incident angles.
+<code>cJint_(nscat x l_{max}, 4, 2)</code>: contains the regular and
+irregular field coefficients for each concentric region inside spherical
+scatterers. <code>csAbs_(nscat,4)</code>: contains absorption cross
+section inside each shell of each spherical scatterer.</p></li>
 <li><p><code>stageAmat(scatXYZ, scatMiet, rtr, right_, balance_, verb_, A, Tmats_)</code><br>
-Stages a pre-staged matrix <span class="math inline">\(A\)</span>.<br><code>A (l_{max} x nscat, l_{max} x nscat)</code>: an in/output matrix, which must contain 1-body <em>T</em>-matrices in the diagonal blocks on input and is a pre-staged matrix on the output; <code>right_, balance_, verb_</code> are optional inputs; <code>Tmats_(l_{max}, l_{max}, nscat)</code>: an optional output matrix which contains the 1-body <em>T</em>-matrix of each particle. <code>balance_</code>: a logical input argument which determines whether balancing is applied or not.</p></li>
+Stages a pre-staged matrix <span class="math inline">\(A\)</span>.<br><code>A (l_{max} x nscat, l_{max} x nscat)</code>: an in/output matrix,
+which must contain 1-body <em>T</em>-matrices in the diagonal blocks on
+input and is a pre-staged matrix on the output;
+<code>right_, balance_, verb_</code> are optional inputs;
+<code>Tmats_(l_{max}, l_{max}, nscat)</code>: an optional output matrix
+which contains the 1-body <em>T</em>-matrix of each particle.
+<code>balance_</code>: a logical input argument which determines whether
+balancing is applied or not.</p></li>
 <li><p><code>calcTIJStout(scatXYZ, scatMiet, rtr, TIJ)</code><br>
-Calculates the scatterer-centred <em>T</em>-matrix using the recursive scheme presented in Stout. <code>TIJ</code> is an in/output argument. <code>TIJ(l_{max} x nscat, l_{max} x nscat)</code> as the input argument stores the <em>T</em>-matrix of nonspherical particles as the diagonal blocks, or dielectric values of different shells for spherical particles as diagonal blocks.</p></li>
+Calculates the scatterer-centred <em>T</em>-matrix using the recursive
+scheme presented in Stout. <code>TIJ</code> is an in/output argument.
+<code>TIJ(l_{max} x nscat, l_{max} x nscat)</code> as the input argument
+stores the <em>T</em>-matrix of nonspherical particles as the diagonal
+blocks, or dielectric values of different shells for spherical particles
+as diagonal blocks.</p></li>
 <li><p><code>calcTIMackowski(scatXYZ, scatMiet, rtr, TIJ)</code><br>
-Calculates the cluster’s <em>T</em>-matrix using Mackowski &amp; Mishchenko’s formulation. <code>TIJ</code> is an in/output argument. <code>TIJ(l_{max} x nscat, l_{max} x nscat)</code> as the input argument stores the <em>T</em>-matrix of nonspherical particles as the diagonal blocks, or dielectric values of different shells for spherical particles as diagonal blocks. The output <code>TIJ</code> is the scatterer-centred <em>T</em>-matrices calculated using Mackowski &amp; Mishchenko’s scheme.</p></li>
+Calculates the cluster’s <em>T</em>-matrix using Mackowski &amp;
+Mishchenko’s formulation. <code>TIJ</code> is an in/output argument.
+<code>TIJ(l_{max} x nscat, l_{max} x nscat)</code> as the input argument
+stores the <em>T</em>-matrix of nonspherical particles as the diagonal
+blocks, or dielectric values of different shells for spherical particles
+as diagonal blocks. The output <code>TIJ</code> is the scatterer-centred
+<em>T</em>-matrices calculated using Mackowski &amp; Mishchenko’s
+scheme.</p></li>
 <li><p><code>balanceMatJI(j, jregt, iregt, i, rev_, mnq_, Mat)</code><br>
-Performs balancing on a matrix (<code>Mat</code>) using two weights (indexed by <span class="math inline">\(j\)</span> and <span class="math inline">\(i\)</span>). <code>Mat</code> is here taken as relating two vectors of VSWF coefficients, <span class="math inline">\(c_j\)</span> (centred at <span class="math inline">\(j\)</span>) and <span class="math inline">\(c_i\)</span> (centred at <span class="math inline">\(i\)</span>), such that <span class="math inline">\(c_j = \text{Mat}\, c_i\)</span>. Logical inputs <code>jregt</code> and <code>iregt</code> specify whether <span class="math inline">\(c_j\)</span> and <span class="math inline">\(c_i\)</span> are regular or not. <code>Mat</code> is an in/output argument.</p></li>
+Performs balancing on a matrix (<code>Mat</code>) using two weights
+(indexed by <span class="math inline">\(j\)</span> and <span class="math inline">\(i\)</span>). <code>Mat</code> is here taken as
+relating two vectors of VSWF coefficients, <span class="math inline">\(c_j\)</span> (centred at <span class="math inline">\(j\)</span>) and <span class="math inline">\(c_i\)</span> (centred at <span class="math inline">\(i\)</span>), such that <span class="math inline">\(c_j = \text{Mat}\, c_i\)</span>. Logical inputs
+<code>jregt</code> and <code>iregt</code> specify whether <span class="math inline">\(c_j\)</span> and <span class="math inline">\(c_i\)</span> are regular or not. <code>Mat</code>
+is an in/output argument.</p></li>
 <li><p><code>balanceVecJ(j, jregt, rev_, Vec)</code><br>
-Performs balancing on a single vector (<code>V</code>) with a weight indexed by <span class="math inline">\(j\)</span>. <code>V</code> corresponds here to the VSWF coefficients of particle <span class="math inline">\(j\)</span>. <code>Vec</code> is an unbalanced/ balanced vector as the in/output argument. <code>j</code> specifies the scatterer.</p></li>
+Performs balancing on a single vector (<code>V</code>) with a weight
+indexed by <span class="math inline">\(j\)</span>. <code>V</code>
+corresponds here to the VSWF coefficients of particle <span class="math inline">\(j\)</span>. <code>Vec</code> is an unbalanced/
+balanced vector as the in/output argument. <code>j</code> specifies the
+scatterer.</p></li>
 <li><p><code>calcCsStout(scatXYZR, aJ, fJ, nmax2_, tol_, verb_, sig)</code><br>
-Calculates the extinction, scattering and absorption cross-sections from the incident and scattered coefficients using the Stout formulae. <code>nmax2_, tol_, verb_</code> are optional inputs and <code>sig</code> is an in/output matrix.</p></li>
+Calculates the extinction, scattering and absorption cross-sections from
+the incident and scattered coefficients using the Stout formulae.
+<code>nmax2_, tol_, verb_</code> are optional inputs and
+<code>sig</code> is an in/output matrix.</p></li>
 <li><p><code>calcCs(scatXYZR, inc, fJ, nmax2_, tol_, verb_, sig)</code><br>
-Calculates the extinction, scattering and absorption cross-sections from the incident and scattered coefficients which are collapsed to the common origin. Depending on the dimension of the <code>sig</code>, each cross-section is either just a total sum, or resolved into contributions from the multipole orders. <code>inc</code>: a vector of incidence angles.</p></li>
+Calculates the extinction, scattering and absorption cross-sections from
+the incident and scattered coefficients which are collapsed to the
+common origin. Depending on the dimension of the <code>sig</code>, each
+cross-section is either just a total sum, or resolved into contributions
+from the multipole orders. <code>inc</code>: a vector of incidence
+angles.</p></li>
 <li><p><code>calcOAprops(Tmat, rtol_, sigOA, verb_)</code><br>
-Calculates orientation-averaged cross-sections and circular dichroism (CD) by transforming the <em>T</em>-matrix (<code>Tmat</code>) from "parity" (M–N) basis to "helicity" (L–R) basis, following Ref. . <code>rtol_</code> is an optional input, <code>verb_</code> is an optional output, and <code>sigOA</code> is an in/output matrix containing orientation-averaged cross-sections and CD in each column for <span class="math inline">\(n=1, \dots, n_{max}\)</span>.</p></li>
+Calculates orientation-averaged cross-sections and circular dichroism
+(CD) by transforming the <em>T</em>-matrix (<code>Tmat</code>) from
+"parity" (M–N) basis to "helicity" (L–R) basis, following Ref. .
+<code>rtol_</code> is an optional input, <code>verb_</code> is an
+optional output, and <code>sigOA</code> is an in/output matrix
+containing orientation-averaged cross-sections and CD in each column for
+<span class="math inline">\(n=1, \dots, n_{max}\)</span>.</p></li>
 <li><p><code>contractTmat(Tin, scatXYZR, rtr, mack_, Tout, verb_)</code><br>
-Combines the scatterer-centred <em>T</em>-matrices into a common origin; the output will be the collective <em>T</em>-matrix (<code>Tout</code>). <code>verb_</code> is an optional in/output, <code>mack_</code> is an optional logical input to calculate the collective <em>T</em>-matrix based on Mackowski &amp; Mishchenko’s scheme.</p></li>
+Combines the scatterer-centred <em>T</em>-matrices into a common origin;
+the output will be the collective <em>T</em>-matrix (<code>Tout</code>).
+<code>verb_</code> is an optional in/output, <code>mack_</code> is an
+optional logical input to calculate the collective <em>T</em>-matrix
+based on Mackowski &amp; Mishchenko’s scheme.</p></li>
 <li><p><code>alphaTensor(T, Alpha)</code><br>
-Conversion of <span class="math inline">\(l\leq 3\)</span> spherical multipoles of the <em>T</em>-matrix <span class="math inline">\(T\)</span> into cartesian multipoles (tensor <code>Alpha</code>), following formulas for ‘Higher-Order Polarizability Tensors’ in Mun. This function is called when the keyword <code>DumpCollectiveTmatrix</code> is present, and outputs a file <code>alpha_col.txt</code> in the working directory.</p></li>
+Conversion of <span class="math inline">\(l\leq 3\)</span> spherical
+multipoles of the <em>T</em>-matrix <span class="math inline">\(T\)</span> into cartesian multipoles (tensor
+<code>Alpha</code>), following formulas for ‘Higher-Order Polarizability
+Tensors’ in Mun. This function is called when the keyword
+<code>DumpCollectiveTmatrix</code> is present, and outputs a file
+<code>alpha_col.txt</code> in the working directory.</p></li>
 <li><p><code>diagnoseTmat(mode_, verb_, Tmat)</code><br>
-Determines the value of <span class="math inline">\(n \leq n_{max}\)</span> when <span class="math inline">\(\operatorname{Tr}(\Re{(\text{Tcol})})\)</span> converges to <span class="math inline">\(\text{rtol\_G}:=10^{-\text{ncut(3)}}\)</span>. If mode_ <span class="math inline">\(&gt; 0\)</span>, also tests for the general symmetry, which applies to all <em>T</em>-matrices. (See equation 5.34 on p. 121 of Mishchenko).</p></li>
+Determines the value of <span class="math inline">\(n \leq
+n_{max}\)</span> when <span class="math inline">\(\operatorname{Tr}(\Re{(\text{Tcol})})\)</span>
+converges to <span class="math inline">\(\text{rtol\_G}:=10^{-\text{ncut(3)}}\)</span>. If
+mode_ <span class="math inline">\(&gt; 0\)</span>, also tests for the
+general symmetry, which applies to all <em>T</em>-matrices. (See
+equation 5.34 on p. 121 of Mishchenko).</p></li>
 <li>
 <p><code>calcOaStout(TIJ, scatXYZ, verb_, sigOA, cdOA_, jAbsOA)</code><br>
-Calculates the orientation-averaged extinction and scattering cross-sections defined in equations 44 and 47 of Stout. The absorption cross-section is then deduced as the difference. <code>TIJ</code> is the collective <em>T</em>-matrix, <code>sigOA(3)</code> contains orientation-averaged extinction and scattering cross-sections, and <code>cdOA_</code> is an optional output containing the corresponding values of</p>
+Calculates the orientation-averaged extinction and scattering
+cross-sections defined in equations 44 and 47 of Stout. The absorption
+cross-section is then deduced as the difference. <code>TIJ</code> is the
+collective <em>T</em>-matrix, <code>sigOA(3)</code> contains
+orientation-averaged extinction and scattering cross-sections, and
+<code>cdOA_</code> is an optional output containing the corresponding
+values of</p>
 <ol start="400" style="list-style-type: upper-roman">
 <li>
-<code>jAbsOA</code>: contains the orientation-averaged absorption cross-section for each particle.</li>
+<code>jAbsOA</code>: contains the orientation-averaged absorption
+cross-section for each particle.</li>
 </ol>
 </li>
 <li><p><code>applyRotTranzRotOnMat(vtacs, bigdOP, rightOP, mat)</code><br>
-Performs the factorised translation of <em>T</em>-matrices when changing origin. Instead of a single multiplication of a <em>T</em>-matrix by a dense matrix containing the general translation-addition coefficients, this routine executes three multiplications by sparse matrices representing 1) a rotation, 2) a translation along the z-axis; and 3) an inverse rotation. This is meant to be more efficient when high multipole orders are included.<br><code>vtacs(2x pmax,2 x pmax)</code>: axial VTACs with <span class="math inline">\((m,n,q)\)</span> indexing, <code>bigdOP(pmax, pmax)</code>: optional input for rotation, <code>rightOP</code>: an optional logical input argument for applying the product from the right. <code>mat</code>: a non/translated matrix as the in/output.</p></li>
+Performs the factorised translation of <em>T</em>-matrices when changing
+origin. Instead of a single multiplication of a <em>T</em>-matrix by a
+dense matrix containing the general translation-addition coefficients,
+this routine executes three multiplications by sparse matrices
+representing 1) a rotation, 2) a translation along the z-axis; and 3) an
+inverse rotation. This is meant to be more efficient when high multipole
+orders are included.<br><code>vtacs(2x pmax,2 x pmax)</code>: axial VTACs with <span class="math inline">\((m,n,q)\)</span> indexing,
+<code>bigdOP(pmax, pmax)</code>: optional input for rotation,
+<code>rightOP</code>: an optional logical input argument for applying
+the product from the right. <code>mat</code>: a non/translated matrix as
+the in/output.</p></li>
 <li><p><code>calcField(r, geometry, ipwVec, ipwE0, scaCJ, intCJreg_, intCJirr_, scatK_, verb_, reE, imE, reB, imB, reE_sca,imE_sca, reB_sca,imB_sca, p_label)</code><br>
-Calculates the electric and magnetic near-field values at the determined grid points.<br><code>r</code>: a matrix containing the coordinates of the grid points; <code>ipwVec(3)</code>,<code>ipwE0(3)</code>: contain the wavevector and amplitude of the incident field, respectively; <code>scaCJ</code>: a vector containing scattering coefficients, <code>intCJreg_, intCJirr_</code>: contain the regular and irregular parts of the incident field coefficients transformed to the origin of each particle, respectively, <code>scatK_</code> is the wavenumber in the host medium, and <code>reE, imE, reB, imB, reE_sca,imE_sca, reB_sca,imB_sca</code>: contain real(re) and imaginary(im) parts of the total electric (E) and magnetic (B) fields and the scattered field values at the grid points.</p></li>
+Calculates the electric and magnetic near-field values at the determined
+grid points.<br><code>r</code>: a matrix containing the coordinates of the grid points;
+<code>ipwVec(3)</code>,<code>ipwE0(3)</code>: contain the wavevector and
+amplitude of the incident field, respectively; <code>scaCJ</code>: a
+vector containing scattering coefficients,
+<code>intCJreg_, intCJirr_</code>: contain the regular and irregular
+parts of the incident field coefficients transformed to the origin of
+each particle, respectively, <code>scatK_</code> is the wavenumber in
+the host medium, and
+<code>reE, imE, reB, imB, reE_sca,imE_sca, reB_sca,imB_sca</code>:
+contain real(re) and imaginary(im) parts of the total electric (E) and
+magnetic (B) fields and the scattered field values at the grid
+points.</p></li>
 <li>
 <p><code>dumpTmat(tmat, filename, lambda, eps_med, tol_, verb_)</code><br>
-Routine for dumping the collective <em>T</em>-matrix (<code>tmat</code>) to a file in the format:</p>
+Routine for dumping the collective <em>T</em>-matrix (<code>tmat</code>)
+to a file in the format:</p>
 <div class="center">
 <p><code>s, s’, n, n’, m, m’, T_re, T_im</code></p>
 </div>
-<p><code>filename</code> is an argument of type character corresponding to the name of the output file; <code>lambda</code>: the value of wavelength; <code>eps_med</code>: the dielectric value of the host medium.</p>
+<p><code>filename</code> is an argument of type character corresponding
+to the name of the output file; <code>lambda</code>: the value of
+wavelength; <code>eps_med</code>: the dielectric value of the host
+medium.</p>
 </li>
 <li><p><code>dumpMatrix(mat, ofile, tolOP, verb_)</code><br>
-Outputs matrix <code>mat</code> to a desired optional tolerance (<code>tolOP</code>). <code>ofile</code>: the name of the output file.</p></li>
+Outputs matrix <code>mat</code> to a desired optional tolerance
+(<code>tolOP</code>). <code>ofile</code>: the name of the output
+file.</p></li>
 <li><p><code>offsetTmat(off, miet, rtr, right, bigD_, useD_, balJI_, Tmat)</code><br>
-Offsets the supplied <em>T</em>-matrix <code>Tmat</code> by <code>off</code>, which can be either a square matrix of VTACs or a (note: complex!) displacement vector <span class="math inline">\(k\mathbf{r}\)</span>(3) from which VTACs will be generated. Regular or irregular VTACs will be generated depending on whether <span class="math inline">\(k\mathbf{r}\)</span>(3) is purely real or purely imaginary. If the logical input <code>miet</code> is true, Tmat will be treated as diagonal. If the logical input <code>rtr</code> is true, then offsetting will be based on factorised translation. If the logical input <code>right</code> is true, then offsetting will be done by post-multiplying Tmat from the right. <code>balJI_</code> triggers balancing of the VTACs and the <em>T</em>-matrices individually, before offsetting, but currently works only without factorised translation.</p></li>
+Offsets the supplied <em>T</em>-matrix <code>Tmat</code> by
+<code>off</code>, which can be either a square matrix of VTACs or a
+(note: complex!) displacement vector <span class="math inline">\(k\mathbf{r}\)</span>(3) from which VTACs will be
+generated. Regular or irregular VTACs will be generated depending on
+whether <span class="math inline">\(k\mathbf{r}\)</span>(3) is purely
+real or purely imaginary. If the logical input <code>miet</code> is
+true, Tmat will be treated as diagonal. If the logical input
+<code>rtr</code> is true, then offsetting will be based on factorised
+translation. If the logical input <code>right</code> is true, then
+offsetting will be done by post-multiplying Tmat from the right.
+<code>balJI_</code> triggers balancing of the VTACs and the
+<em>T</em>-matrices individually, before offsetting, but currently works
+only without factorised translation.</p></li>
 <li><p><code>readTmatFile(filename, unit, wavelen, verb_, Tmat)</code><br>
-Reads a <em>T</em>-matrix from the input file (<code>filename</code>) and import it into the matrix <code>Tmat</code>. <code>unit</code>: an integer indexing the name of the <em>T</em>-matrix file. <code>wavelen</code> is the value of the wavelength.</p></li>
+Reads a <em>T</em>-matrix from the input file (<code>filename</code>)
+and import it into the matrix <code>Tmat</code>. <code>unit</code>: an
+integer indexing the name of the <em>T</em>-matrix file.
+<code>wavelen</code> is the value of the wavelength.</p></li>
 <li><p><code>parseInc(inc, verb_, inc_dirn, inc_ampl)</code><br>
-Calculates the amplitude and direction vector of the incident plane wave based on the input Euler angles (<span class="math inline">\(\alpha, \beta, \gamma\)</span>). <code>inc_dirn</code> and <code>inc_ampl</code> are vectors containing the wavevector and amplitude of the incident electric field in cartesian coordinates, respectively. <code>inc</code> is a vector consisting of polarisation type and Euler angles of the incidence direction.</p></li>
+Calculates the amplitude and direction vector of the incident plane wave
+based on the input Euler angles (<span class="math inline">\(\alpha,
+\beta, \gamma\)</span>). <code>inc_dirn</code> and <code>inc_ampl</code>
+are vectors containing the wavevector and amplitude of the incident
+electric field in cartesian coordinates, respectively. <code>inc</code>
+is a vector consisting of polarisation type and Euler angles of the
+incidence direction.</p></li>
 <li><p><code>calcStokesScaVec(sca_angles, inc2, ncut, wavelen, ehost, geometry, scheme, tfiles_, escat_, nselect_, noRTR_, verb_, StokesPhaseMat, StokesScaVec, diff_sca)</code><br>
-Calculates the Stokes phase matrix (<code>StokesPhaseMat</code>), Stokes scattering vector (<code>StokesScaVec</code>), and differential scattering cross-sections (<code>diff_sca</code>).<br><code>sca_angles</code> is a matrix of desired scattering angles; if it is not specified in the input file, they are taken equal to the incidence angles. <code>inc2</code> is a matrix containing incidence angles.</p></li>
+Calculates the Stokes phase matrix (<code>StokesPhaseMat</code>), Stokes
+scattering vector (<code>StokesScaVec</code>), and differential
+scattering cross-sections (<code>diff_sca</code>).<br><code>sca_angles</code> is a matrix of desired scattering angles; if it
+is not specified in the input file, they are taken equal to the
+incidence angles. <code>inc2</code> is a matrix containing incidence
+angles.</p></li>
 <li><p><code>calcLDOC(Ef, Bf, verb_, N_OpC)</code><br>
-Calculates the normalised optical chirality (<span class="math inline">\(\overline{\mathscr{C}}\)</span>) relative to the optical chirality of circularly polarised light. <code>Ef</code>, <code>Bf</code>, and <code>N_OpC</code> are matrices containing the electric and magnetic field, and <span class="math inline">\(\overline{\mathscr{C}}\)</span> values at the grid points, respectively.<br></p></li>
+Calculates the normalised optical chirality (<span class="math inline">\(\overline{\mathscr{C}}\)</span>) relative to the
+optical chirality of circularly polarised light. <code>Ef</code>,
+<code>Bf</code>, and <code>N_OpC</code> are matrices containing the
+electric and magnetic field, and <span class="math inline">\(\overline{\mathscr{C}}\)</span> values at the grid
+points, respectively.<br></p></li>
 <li><p><code>calcOaNFUnpol(r, geometry, TIJ, lambda, ehost, escat, p_label, verb_, orEB2)</code><br>
-Calculates the orientation average of the total external electric and magnetic field intensities. <code>r</code> is a matrix containing the cartesian coordinates of the grid points. <code>TIJ</code> is the scatterer-centred <em>T</em>-matrix of the cluster. <code>orEB2</code> is a vector containing the value of orientation-averaged external electric and magnetic field intensities at the grid points.</p></li>
+Calculates the orientation average of the total external electric and
+magnetic field intensities. <code>r</code> is a matrix containing the
+cartesian coordinates of the grid points. <code>TIJ</code> is the
+scatterer-centred <em>T</em>-matrix of the cluster. <code>orEB2</code>
+is a vector containing the value of orientation-averaged external
+electric and magnetic field intensities at the grid points.</p></li>
 <li><p><code>calcOaNF(pol_type, r, geometry, TIJ, Oa_OC, ehost, p_label, scatK_, verb_, Oa_EB2)</code><br>
-Calculates the orientation average of normalised optical chirality <span class="math inline">\(\langle\overline{\mathscr{C}}\rangle\)</span>, and near field intensities <span class="math inline">\(\langle |\mathbf{E}_\mathrm{tot}(\it{k}\mathbf{r})|^2\rangle\)</span>, <span class="math inline">\(\langle |\mathbf{B}_\mathrm{tot}(\it{k}\mathbf{r})|^2\rangle\)</span> for circularly polarised incident light. <code>pol_type</code> is the polarisation type, <code>r</code> is a matrix containing the cartesian coordinate of the grid points. <code>TIJ</code> is the scatterer-centred <em>T</em>-matrix of the structure.</p></li>
+Calculates the orientation average of normalised optical chirality <span class="math inline">\(\langle\overline{\mathscr{C}}\rangle\)</span>, and
+near field intensities <span class="math inline">\(\langle
+|\mathbf{E}_\mathrm{tot}(\it{k}\mathbf{r})|^2\rangle\)</span>, <span class="math inline">\(\langle
+|\mathbf{B}_\mathrm{tot}(\it{k}\mathbf{r})|^2\rangle\)</span> for
+circularly polarised incident light. <code>pol_type</code> is the
+polarisation type, <code>r</code> is a matrix containing the cartesian
+coordinate of the grid points. <code>TIJ</code> is the scatterer-centred
+<em>T</em>-matrix of the structure.</p></li>
 <li><p><code>calcTrace(TRANSA, TRANSB, A, B, tr)</code><br>
-Calculates the trace of a product of two matrices, <code>op(A)*op(B)</code>. The input characters <code>TRANSA</code> and <code>TRANSB</code> determine the operation <code>op</code>, following the convention of <span class="smallcaps">blas</span>’ <code>gemm</code>. Specifically, <code>op = ’N’</code> corresponds to <span class="math inline">\(\mathtt{op(A) = A}\)</span> (no operation), whereas <code>op = ’C’</code> corresponds to <span class="math inline">\(\mathtt{op(A) = A^\dagger}\)</span>.</p></li>
+Calculates the trace of a product of two matrices,
+<code>op(A)*op(B)</code>. The input characters <code>TRANSA</code> and
+<code>TRANSB</code> determine the operation <code>op</code>, following
+the convention of <span class="smallcaps">blas</span>’
+<code>gemm</code>. Specifically, <code>op = ’N’</code> corresponds to
+<span class="math inline">\(\mathtt{op(A) = A}\)</span> (no operation),
+whereas <code>op = ’C’</code> corresponds to <span class="math inline">\(\mathtt{op(A) = A^\dagger}\)</span>.</p></li>
 </ul>
 <!-- --><ul>
 <li><p><code>RotMatX(ang) result(rotMat)</code><br>
-Calculates a rotation matrix along the x axis using input argument angle(<code>ang</code>).</p></li>
+Calculates a rotation matrix along the x axis using input argument
+angle(<code>ang</code>).</p></li>
 <li><p><code>RotMatY(ang) result(rotMat)</code><br>
-Calculates a rotation matrix along the y axis using input argument angle(<code>ang</code>).</p></li>
+Calculates a rotation matrix along the y axis using input argument
+angle(<code>ang</code>).</p></li>
 <li><p><code>RotMatZ(ang) result(rotMat)</code><br>
-Calculates a rotation matrix along the z axis using input argument angle(<code>ang</code>).</p></li>
+Calculates a rotation matrix along the z axis using input argument
+angle(<code>ang</code>).</p></li>
 <li><p><code>rotZYZmat(angles) result(mat)</code><br>
-Calculates rotation matrix <code>mat</code> for ZY’Z’, using the Euler <code>angles</code>=(<span class="math inline">\(\alpha,\beta,\gamma\)</span>)</p></li>
+Calculates rotation matrix <code>mat</code> for ZY’Z’, using the Euler
+<code>angles</code>=(<span class="math inline">\(\alpha,\beta,\gamma\)</span>)</p></li>
 </ul>
 <p><strong>List of common arguments</strong></p>
 <ul>
-<li><p><code>acs_int_</code>: a matrix containing partial internal absorption inside each scatterer and for each shell.</p></li>
-<li><p><code>aJ(\text{nscat}\times l_{max}), fJ(\text{nscat}\times l_{max})</code>: contains incident and scattering coefficients.</p></li>
-<li><p><code>Bfield</code>: contains the real and imaginary parts of the magnetic near field at the specified grid points, wavelengths, and incidence.</p></li>
-<li><p><code>ehost</code>: a vector of dielectric permittivity of the host medium at specified wavelengths.</p></li>
-<li><p><code>escat_(nscat, 4, size(wavelen))</code>: depending on the number of wavelengths, it is a 2D or 3D array of dielectric values for each scatterer, for each shell and wavelength.</p></li>
-<li><p><code>field</code>: contains the real and imaginary parts of the electric near field at the specified grid points, wavelengths, and incidence.</p></li>
-<li><p><code>geometry</code>: a matrix containing physical information of different scatterers such as centre, dimensions and direction.</p></li>
-<li><p><code>ierr_</code>: an integer value (0 or 1 or 2); 0 indicates solving was successful, 1 means there is an error in processing arguments, and 2 means an error in prestaging, staging, or solving/inverting <span class="math inline">\(Ax=b\)</span>.</p></li>
-<li><p><code>iregt</code>: logical input, specifies whether vectors are regular or not.</p></li>
-<li><p><code>jregt</code>: logical input, specifies whether vectors are regular or not.</p></li>
-<li><p><code>mnq_</code>: an optional logical argument which is false by default, but if true will change the indexing convention from (q,n,m) to (m,n,q), which is used to make the z-axial VTACs block-diagonal. Note that index <span class="math inline">\(q\)</span> corresponds to <span class="math inline">\(s\)</span> in this user guide.</p></li>
-<li><p><code>ncut</code>: a vector in the form [<span class="math inline">\(n_1\)</span>, <span class="math inline">\(n_2\)</span>, tol], which contains the values corresponding to the keyword "<code>MultipoleCutoff</code>". Default values: <span class="math inline">\([8, 8, -8]\)</span>.</p></li>
+<li><p><code>acs_int_</code>: a matrix containing partial internal
+absorption inside each scatterer and for each shell.</p></li>
+<li><p><code>aJ(\text{nscat}\times l_{max}), fJ(\text{nscat}\times l_{max})</code>:
+contains incident and scattering coefficients.</p></li>
+<li><p><code>Bfield</code>: contains the real and imaginary parts of the
+magnetic near field at the specified grid points, wavelengths, and
+incidence.</p></li>
+<li><p><code>ehost</code>: a vector of dielectric permittivity of the
+host medium at specified wavelengths.</p></li>
+<li><p><code>escat_(nscat, 4, size(wavelen))</code>: depending on the
+number of wavelengths, it is a 2D or 3D array of dielectric values for
+each scatterer, for each shell and wavelength.</p></li>
+<li><p><code>field</code>: contains the real and imaginary parts of the
+electric near field at the specified grid points, wavelengths, and
+incidence.</p></li>
+<li><p><code>geometry</code>: a matrix containing physical information
+of different scatterers such as centre, dimensions and
+direction.</p></li>
+<li><p><code>ierr_</code>: an integer value (0 or 1 or 2); 0 indicates
+solving was successful, 1 means there is an error in processing
+arguments, and 2 means an error in prestaging, staging, or
+solving/inverting <span class="math inline">\(Ax=b\)</span>.</p></li>
+<li><p><code>iregt</code>: logical input, specifies whether vectors are
+regular or not.</p></li>
+<li><p><code>jregt</code>: logical input, specifies whether vectors are
+regular or not.</p></li>
+<li><p><code>mnq_</code>: an optional logical argument which is false by
+default, but if true will change the indexing convention from (q,n,m) to
+(m,n,q), which is used to make the z-axial VTACs block-diagonal. Note
+that index <span class="math inline">\(q\)</span> corresponds to <span class="math inline">\(s\)</span> in this user guide.</p></li>
+<li><p><code>ncut</code>: a vector in the form [<span class="math inline">\(n_1\)</span>, <span class="math inline">\(n_2\)</span>, tol], which contains the values
+corresponding to the keyword "<code>MultipoleCutoff</code>". Default
+values: <span class="math inline">\([8, 8, -8]\)</span>.</p></li>
 <li><p><code>nmax2_</code>: an integer value equals to ncut(2).</p></li>
-<li><p><code>noRTR_</code>: an optional input with logical value <code>.true.</code> or <code>.false.</code> for the keyword <code>DisableRTR</code>. Default: <code>.false.</code>.</p></li>
-<li><p><code>nselect_</code>: an optional input matrix which includes information about multipole selection for different scatterers.</p></li>
-<li><p><code>oa_ldoc</code> (<span class="math inline">\(\text{npts}\times 4\times \text{nwavelen}\)</span>): contains the orientation averaged value of <span class="math inline">\(\overline{\mathscr{C}}\)</span> at different grid points and wavelengths.</p></li>
-<li><p><code>orAvextE_int</code>(<span class="math inline">\(\text{npts}\times \text{nwavelen}\)</span>): contains the orientation averaged electric field intensity values at different grid points and wavelengths.</p></li>
-<li><p><code>p_label</code>: a matrix determining the position of each grid point, whether it is inside the surrounding medium or particles, and in which layer.</p></li>
-<li><p><code>rev_</code>: an optional logical input which is false by default; triggers the reverse of balancing – "unbalancing".</p></li>
-<li><p><code>right_</code>: a logical input. There are two ways for obtaining the <code>TIJ</code> matrix. This argument determines whether the product is taken from the left or from the right.</p></li>
-<li><p><code>rtr</code>: a logical input that is the reverse of <code>noRTR_</code>.</p></li>
-<li><p><code>scatMiet</code>(nscat): a logical vector with <code>.true.</code> and <code>.false.</code> values, determining whether a scatterer is spherical or not.</p></li>
-<li><p><code>scatXYZ</code>(3,nscat): a matrix containing the cartesian coordinates (in lab frame) of the particle’s centre.</p></li>
-<li><p><code>scatXYZR</code>(4,nscat): a matrix containing the cartesian coordinates (in lab frame) and the radius of the smallest circumscribed sphere of each particle.</p></li>
-<li><p><code>scheme, scheme_</code>: an integer value specifying the selected scheme.</p></li>
-<li><p><code>sig_</code>: a matrix containing cross-sections (Extinction, Scattering, Absorption) for different polarisation(s), wavelength(s), and incidence(s).</p></li>
-<li><p><code>sig_abs_</code>(<span class="math inline">\(4\times \text{nscat}\times 4\times \text{nwavelen}\times \text{nfi}\)</span>): a 5D array containing absorption cross-sections inside each shell for each scatterer for 4 Jones vectors, different wavelengths and different incidence directions.</p></li>
-<li><p><code>sig_oa_</code>(<span class="math inline">\(6\times \text{n}\times \text{nwavelen}\)</span>): a matrix consisting of orientation-averaged cross-sections and CD at different wavelengtha. The first column gives the values for <span class="math inline">\(n_{max}\)</span> and other columns contain values for different value of <span class="math inline">\(n=1, \dots, \text{ncut(2)}\)</span>.</p></li>
-<li><p><code>tfiles_</code>: a matrix of character type, includes the <em>T</em>-matrix filename and filepath for non-spherical scatterers.</p></li>
-<li><p><code>tol_, rtol_</code>: a real value <code>rtol_G = 10^{\textbf{ncut(3)}}</code>.</p></li>
-<li><p><code>N_OC</code>: contains <span class="math inline">\(\overline{\mathscr{C}}\)</span> at the specified grid points, wavelengths, and incidence.</p></li>
-<li><p><code>verb_</code>: an integer variable containing the verbosity value (<span class="math inline">\(\in [0,1,2,3]\)</span>) (the default value is 1).</p></li>
-<li><p><code>wavelen</code>: a vector of specified wavelength(s).</p></li>
+<li><p><code>noRTR_</code>: an optional input with logical value
+<code>.true.</code> or <code>.false.</code> for the keyword
+<code>DisableRTR</code>. Default: <code>.false.</code>.</p></li>
+<li><p><code>nselect_</code>: an optional input matrix which includes
+information about multipole selection for different scatterers.</p></li>
+<li><p><code>oa_ldoc</code> (<span class="math inline">\(\text{npts}\times 4\times
+\text{nwavelen}\)</span>): contains the orientation averaged value of
+<span class="math inline">\(\overline{\mathscr{C}}\)</span> at different
+grid points and wavelengths.</p></li>
+<li><p><code>orAvextE_int</code>(<span class="math inline">\(\text{npts}\times \text{nwavelen}\)</span>):
+contains the orientation averaged electric field intensity values at
+different grid points and wavelengths.</p></li>
+<li><p><code>p_label</code>: a matrix determining the position of each
+grid point, whether it is inside the surrounding medium or particles,
+and in which layer.</p></li>
+<li><p><code>rev_</code>: an optional logical input which is false by
+default; triggers the reverse of balancing – "unbalancing".</p></li>
+<li><p><code>right_</code>: a logical input. There are two ways for
+obtaining the <code>TIJ</code> matrix. This argument determines whether
+the product is taken from the left or from the right.</p></li>
+<li><p><code>rtr</code>: a logical input that is the reverse of
+<code>noRTR_</code>.</p></li>
+<li><p><code>scatMiet</code>(nscat): a logical vector with
+<code>.true.</code> and <code>.false.</code> values, determining whether
+a scatterer is spherical or not.</p></li>
+<li><p><code>scatXYZ</code>(3,nscat): a matrix containing the cartesian
+coordinates (in lab frame) of the particle’s centre.</p></li>
+<li><p><code>scatXYZR</code>(4,nscat): a matrix containing the cartesian
+coordinates (in lab frame) and the radius of the smallest circumscribed
+sphere of each particle.</p></li>
+<li><p><code>scheme, scheme_</code>: an integer value specifying the
+selected scheme.</p></li>
+<li><p><code>sig_</code>: a matrix containing cross-sections
+(Extinction, Scattering, Absorption) for different polarisation(s),
+wavelength(s), and incidence(s).</p></li>
+<li><p><code>sig_abs_</code>(<span class="math inline">\(4\times
+\text{nscat}\times 4\times \text{nwavelen}\times \text{nfi}\)</span>): a
+5D array containing absorption cross-sections inside each shell for each
+scatterer for 4 Jones vectors, different wavelengths and different
+incidence directions.</p></li>
+<li><p><code>sig_oa_</code>(<span class="math inline">\(6\times
+\text{n}\times \text{nwavelen}\)</span>): a matrix consisting of
+orientation-averaged cross-sections and CD at different wavelengtha. The
+first column gives the values for <span class="math inline">\(n_{max}\)</span> and other columns contain values
+for different value of <span class="math inline">\(n=1, \dots,
+\text{ncut(2)}\)</span>.</p></li>
+<li><p><code>tfiles_</code>: a matrix of character type, includes the
+<em>T</em>-matrix filename and filepath for non-spherical
+scatterers.</p></li>
+<li><p><code>tol_, rtol_</code>: a real value
+<code>rtol_G = 10^{\textbf{ncut(3)}}</code>.</p></li>
+<li><p><code>N_OC</code>: contains <span class="math inline">\(\overline{\mathscr{C}}\)</span> at the specified
+grid points, wavelengths, and incidence.</p></li>
+<li><p><code>verb_</code>: an integer variable containing the verbosity
+value (<span class="math inline">\(\in [0,1,2,3]\)</span>) (the default
+value is 1).</p></li>
+<li><p><code>wavelen</code>: a vector of specified
+wavelength(s).</p></li>
 </ul>
 </div>
 <div class="section level3 unnumbered">
 <h3 class="unnumbered" id="miet-module">
-<a href="https://github.com/nano-optics/terms/blob/main/src/miet.f90" class="external-link"><code>miet</code> module</a><a class="anchor" aria-label="anchor" href="#miet-module"></a>
+<a href="https://github.com/nano-optics/terms/blob/main/src/miet.f90" class="external-link"><code>miet</code>
+module</a><a class="anchor" aria-label="anchor" href="#miet-module"></a>
 </h3>
-<p>This module contains routines for calculating one-body <em>T</em>-matrices (currently limited to spherical scatterers, using Mie theory).</p>
+<p>This module contains routines for calculating one-body
+<em>T</em>-matrices (currently limited to spherical scatterers, using
+Mie theory).</p>
 <ul>
 <li><p><code>calcMieTMat(x, s, zeropad_, tmat)</code><br>
-Calculates the diagonal <em>T</em>-matrix of a spherical scatterer for a given size parameter <code>x=kR</code>, relative refractive indices (<span class="math inline">\(s = k_{in}/k_{out}\)</span>); <code>zeropad_=nmax</code> maximum value of the multipole index inferred from <code>tmat</code>’s dimensions.</p></li>
+Calculates the diagonal <em>T</em>-matrix of a spherical scatterer for a
+given size parameter <code>x=kR</code>, relative refractive indices
+(<span class="math inline">\(s = k_{in}/k_{out}\)</span>);
+<code>zeropad_=nmax</code> maximum value of the multipole index inferred
+from <code>tmat</code>’s dimensions.</p></li>
 <li><p><code>calcMieCoeffs(x, s, gammas, deltas)</code><br>
-Calculates the Mie coefficients for a spherical scatterer as defined by equations H.46 and H.47 of Ref. . The coefficients are interpreted as magnetic and electric susceptibilities (<span class="math inline">\(\Gamma_n\)</span> and <span class="math inline">\(\Delta_n\)</span>, respectively) of the scattered field. Note the relation to standard Mie coefficients: <span class="math inline">\(a_n = -\Delta_n\)</span> and <span class="math inline">\(b_n = -\Gamma_n\)</span>.</p></li>
+Calculates the Mie coefficients for a spherical scatterer as defined by
+equations H.46 and H.47 of Ref. . The coefficients are interpreted as
+magnetic and electric susceptibilities (<span class="math inline">\(\Gamma_n\)</span> and <span class="math inline">\(\Delta_n\)</span>, respectively) of the scattered
+field. Note the relation to standard Mie coefficients: <span class="math inline">\(a_n = -\Delta_n\)</span> and <span class="math inline">\(b_n = -\Gamma_n\)</span>.</p></li>
 <li><p><code>calcCoatMieCoeffs(x, s, gammas, deltas)</code><br>
-Calculates the Mie coefficients for a coated sphere based on the equations H.110 and H.113 of Etchegoin and Le Ru.</p></li>
+Calculates the Mie coefficients for a coated sphere based on the
+equations H.110 and H.113 of Etchegoin and Le Ru.</p></li>
 <li><p><code>calcStoutCoeffs(x, rri, nmax, Cn, Dn)</code><br>
-Calculates the <code>Cn,Dn</code> coefficients as defined by equation (50) in Stout. These coefficients are used to calculate absorption cross-sections. <code>rri</code> is the relative refractive index, <code>nmax</code> is the maximum value of the multipole index.</p></li>
+Calculates the <code>Cn,Dn</code> coefficients as defined by equation
+(50) in Stout. These coefficients are used to calculate absorption
+cross-sections. <code>rri</code> is the relative refractive index,
+<code>nmax</code> is the maximum value of the multipole index.</p></li>
 <li><p><code>calcMieIntCoeffs(a, k, scaCoeffs, intCoeffsReg, intCoeffsIrr, csAbs)</code><br>
-Calculates the regular and irregular VSWF coefficients for the field inside each concentric region of a (layered) Mie scatterer. The formulae are based on Eqs. H.117–H.123 of Etchegoin and Le Ru. <code>a</code>, <code>k</code>, and <code>scaCoeffs</code> are vectors of the radius of the concentric interfaces, relative refractive index, and scattered field coefficients for the host medium, respectively. <code>intCoeffsReg</code> and <code>intCoeffsIrr</code> are matrices of regular and irregular field coefficients for each concentric region inside the scatterers and <code>csAbs</code> contains the partial absorptions calculated using equation (29) in Mackowski.</p></li>
+Calculates the regular and irregular VSWF coefficients for the field
+inside each concentric region of a (layered) Mie scatterer. The formulae
+are based on Eqs. H.117–H.123 of Etchegoin and Le Ru. <code>a</code>,
+<code>k</code>, and <code>scaCoeffs</code> are vectors of the radius of
+the concentric interfaces, relative refractive index, and scattered
+field coefficients for the host medium, respectively.
+<code>intCoeffsReg</code> and <code>intCoeffsIrr</code> are matrices of
+regular and irregular field coefficients for each concentric region
+inside the scatterers and <code>csAbs</code> contains the partial
+absorptions calculated using equation (29) in Mackowski.</p></li>
 </ul>
 </div>
 <div class="section level3 unnumbered">
 <h3 class="unnumbered" id="swav-module">
-<a href="https://github.com/nano-optics/terms/blob/main/src/swav.f90" class="external-link"><code>swav</code> module</a><a class="anchor" aria-label="anchor" href="#swav-module"></a>
+<a href="https://github.com/nano-optics/terms/blob/main/src/swav.f90" class="external-link"><code>swav</code>
+module</a><a class="anchor" aria-label="anchor" href="#swav-module"></a>
 </h3>
-<p>This module contains routines for calculating and transforming scalar (SSWs) and vector spherical waves (VSWFs). It depends on <code>Amos (toms644.f)</code> to calculate spherical Bessel and Hankel functions using recurrence. In order to limit redundancy, parameter definitions are renewed only where they are changed.</p>
+<p>This module contains routines for calculating and transforming scalar
+(SSWs) and vector spherical waves (VSWFs). It depends on
+<code>Amos (toms644.f)</code> to calculate spherical Bessel and Hankel
+functions using recurrence. In order to limit redundancy, parameter
+definitions are renewed only where they are changed.</p>
 <ul>
 <li><p><code>calcVTACs(r0, k, regt, vtacs)</code><br>
-Calculates the irregular (if <code>regt=.false.</code>) or the regular (if <code>regt=.true.</code>) vector translation-addition coefficients for a given <code>kr0</code>.<br><code>r0</code> is a relative position vector, <code>k</code> is the wavenumber, <code>regt</code> is a logical argument which determines the type: regular or irregular, and <code>vtacs(1:2*pmax,1:2*pmax)</code> is the input/output array.</p></li>
+Calculates the irregular (if <code>regt=.false.</code>) or the regular
+(if <code>regt=.true.</code>) vector translation-addition coefficients
+for a given <code>kr0</code>.<br><code>r0</code> is a relative position vector, <code>k</code> is the
+wavenumber, <code>regt</code> is a logical argument which determines the
+type: regular or irregular, and <code>vtacs(1:2*pmax,1:2*pmax)</code> is
+the input/output array.</p></li>
 <li><p><code>calcSTACs(r0, k, pmax, regt, scoeff)</code><br>
-Calculates the scalar translation-addition coefficients.(<span class="math inline">\(\alpha_{nu,mu;n,m}\)</span> or <span class="math inline">\(\beta_{nu,mu;n,m}\)</span>). The output corresponds to the scalar translation-addition coefficients <code>\alpha</code>(irregular, for <code>regt=.false.</code>) or <code>\beta</code>(regular, for <code>regt=.true.</code>).<br><code>pmax</code> is a maximal composite index and <code>scoeff(0:pmax,0:pmax)</code> is the coefficients matrix.</p></li>
+Calculates the scalar translation-addition coefficients.(<span class="math inline">\(\alpha_{nu,mu;n,m}\)</span> or <span class="math inline">\(\beta_{nu,mu;n,m}\)</span>). The output
+corresponds to the scalar translation-addition coefficients
+<code>\alpha</code>(irregular, for <code>regt=.false.</code>) or
+<code>\beta</code>(regular, for <code>regt=.true.</code>).<br><code>pmax</code> is a maximal composite index and
+<code>scoeff(0:pmax,0:pmax)</code> is the coefficients matrix.</p></li>
 <li><p><code>calcVTACsAxial(r0, k, pmax, regt, flip, mqn_, vtacs)</code><br>
-Calculates the irregular (if <code>regt=.false.</code>) or the regular (if <code>regt=.true.</code>) vector translation-addition coefficients for a given <code>kr0</code>, along the z-axis.<br><code>r0</code> is the z-axial displacement distance, flip is a logical argument, <code>mqn_</code> is a logical argument for changing from <code>qnm</code> to <code>mqn</code> indexing, and <code>vtacs(1:2*pmax,1:2*pmax)</code> is the matrix of coefficients.</p></li>
+Calculates the irregular (if <code>regt=.false.</code>) or the regular
+(if <code>regt=.true.</code>) vector translation-addition coefficients
+for a given <code>kr0</code>, along the z-axis.<br><code>r0</code> is the z-axial displacement distance, flip is a logical
+argument, <code>mqn_</code> is a logical argument for changing from
+<code>qnm</code> to <code>mqn</code> indexing, and
+<code>vtacs(1:2*pmax,1:2*pmax)</code> is the matrix of
+coefficients.</p></li>
 <li><p><code>calcSTACsAxial(r0, k, pmax, regt, flip, stacs)</code><br>
-Calculates the normalised scalar translation-addition coefficients along the z-axis for a given <code>kr0</code>.<br><code>r0</code> is a displacement distance and <code>stacs(0:pmax,0:pmax)</code> is the coefficients matrix corresponding to <span class="math inline">\(\alpha\)</span> (irregular, for <code>regt=.false.</code>) or <span class="math inline">\(\beta\)</span>.</p></li>
+Calculates the normalised scalar translation-addition coefficients along
+the z-axis for a given <code>kr0</code>.<br><code>r0</code> is a displacement distance and
+<code>stacs(0:pmax,0:pmax)</code> is the coefficients matrix
+corresponding to <span class="math inline">\(\alpha\)</span> (irregular,
+for <code>regt=.false.</code>) or <span class="math inline">\(\beta\)</span>.</p></li>
 <li><p><code>calcVSWs(r, k, pmax, regt, cart, waves, wavesB)</code><br>
-Calculates (at <code>r</code>) the normalised vector spherical waves, <span class="math inline">\(M_{nm}\)</span> and <span class="math inline">\(N_{nm}\)</span> for evaluation of electric and magnetic fields<br><code>r(3)</code> is the cartesian coordinate of a point in 3D; <code>cart</code> is a logical argument which triggers conversion to cartesian coordinates; <code>waves(2*pmax,3)</code> contains elements (<span class="math inline">\(M_{nm}\)</span> and <span class="math inline">\(N_{nm}\)</span>) of the abstract column vector defined in Eq. B1 of Ref. and <code>wavesB(2*pmax,3)</code> is similar to <code>waves</code>, only swapping the position of <span class="math inline">\(M_{nm}\)</span> and <span class="math inline">\(N_{nm}\)</span> and multiplying by <span class="math inline">\(-ik\)</span> for calculation of the magnetic field.</p></li>
+Calculates (at <code>r</code>) the normalised vector spherical waves,
+<span class="math inline">\(M_{nm}\)</span> and <span class="math inline">\(N_{nm}\)</span> for evaluation of electric and
+magnetic fields<br><code>r(3)</code> is the cartesian coordinate of a point in 3D;
+<code>cart</code> is a logical argument which triggers conversion to
+cartesian coordinates; <code>waves(2*pmax,3)</code> contains elements
+(<span class="math inline">\(M_{nm}\)</span> and <span class="math inline">\(N_{nm}\)</span>) of the abstract column vector
+defined in Eq. B1 of Ref. and <code>wavesB(2*pmax,3)</code> is similar
+to <code>waves</code>, only swapping the position of <span class="math inline">\(M_{nm}\)</span> and <span class="math inline">\(N_{nm}\)</span> and multiplying by <span class="math inline">\(-ik\)</span> for calculation of the magnetic
+field.</p></li>
 <li><p><code>calcSSWs(xyz, k, pmax, regt, psi)</code><br>
-Calculates (at <code>xyz</code>) the scalar spherical waves <code>\psi_{nm}</code>.<br><code>xyz</code> is the cartesian coordinates of a point in 3D; <code>psi(0:pmax)</code> contains elements of the spherical waves <code>\psi_{nm}</code> as defined by equation 13a in Chew.</p></li>
+Calculates (at <code>xyz</code>) the scalar spherical waves
+<code>\psi_{nm}</code>.<br><code>xyz</code> is the cartesian coordinates of a point in 3D;
+<code>psi(0:pmax)</code> contains elements of the spherical waves
+<code>\psi_{nm}</code> as defined by equation 13a in Chew.</p></li>
 <li><p><code>calcJCoeffsPW(ipwE0, kVec, xyz, ipwCoeffsJ)</code><br>
-Translates the supplied <code>ipwCoeffs</code> coefficients to different centres for an incident plane wave.<br><code>ipwE0(3)</code> is the incident plane wave’s amplitude vector, <code>kVec(3)</code> is the incident wave vector, <code>xyz(3,nscat)</code> is a matrix containing the centre of different scatterers, and <code>ipwCoeffsJ</code>(<span class="math inline">\(\text{nscat} \times \text{lmax}\)</span>) is a vector containing the translated incident plane wave coefficients to the centre of different scatterers.</p></li>
+Translates the supplied <code>ipwCoeffs</code> coefficients to different
+centres for an incident plane wave.<br><code>ipwE0(3)</code> is the incident plane wave’s amplitude vector,
+<code>kVec(3)</code> is the incident wave vector,
+<code>xyz(3,nscat)</code> is a matrix containing the centre of different
+scatterers, and <code>ipwCoeffsJ</code>(<span class="math inline">\(\text{nscat} \times \text{lmax}\)</span>) is a
+vector containing the translated incident plane wave coefficients to the
+centre of different scatterers.</p></li>
 <li><p><code>calcCoeffsPW(ipwE0, ipwDirn, ipwCoeffs)</code><br>
-Calculates the coefficients for expressing an incident plane wave in terms of vector spherical waves <span class="math inline">\(M_{nm}\)</span> and <span class="math inline">\(N_{nm}\)</span>.<br><code>ipwDirn</code>(3) is the normalised direction vector of the incident plane wave and <code>ipwCoeffs</code>(2*pmax) contains coefficients for expressing an incident plane wave in terms of vector spherical waves <span class="math inline">\(M_{nm}\)</span> and <span class="math inline">\(N_{nm}\)</span>, up to a maximum <span class="math inline">\(n_{max}\)</span>.</p></li>
+Calculates the coefficients for expressing an incident plane wave in
+terms of vector spherical waves <span class="math inline">\(M_{nm}\)</span> and <span class="math inline">\(N_{nm}\)</span>.<br><code>ipwDirn</code>(3) is the normalised direction vector of the
+incident plane wave and <code>ipwCoeffs</code>(2*pmax) contains
+coefficients for expressing an incident plane wave in terms of vector
+spherical waves <span class="math inline">\(M_{nm}\)</span> and <span class="math inline">\(N_{nm}\)</span>, up to a maximum <span class="math inline">\(n_{max}\)</span>.</p></li>
 <li><p><code>offsetCoeffsPW(a, kVec, xyzr, aJ)</code><br>
-Translates the VSWF coefficients (<code>a</code>) of an incident plane wave (centred at the origin) to another origin.<br><code>a</code>(<span class="math inline">\(l_{max}\)</span>) contains coefficients for a regular VSWF expansion centred at the origin for an incident plane wave, <code>xyzr</code> includes centres of different scatterers, and <code>aJ</code> contains scatterer centred coefficients.</p></li>
+Translates the VSWF coefficients (<code>a</code>) of an incident plane
+wave (centred at the origin) to another origin.<br><code>a</code>(<span class="math inline">\(l_{max}\)</span>) contains
+coefficients for a regular VSWF expansion centred at the origin for an
+incident plane wave, <code>xyzr</code> includes centres of different
+scatterers, and <code>aJ</code> contains scatterer centred
+coefficients.</p></li>
 <li><p><code>calcWignerBigD(angles, pmax, bigD)</code><br>
-Calculates the Wigner D-functions (<span class="math inline">\(D^s_{m,n}(\alpha,\beta,\gamma)\)</span>).<br><code>angles</code>(3) includes (<span class="math inline">\(\alpha,\beta,\gamma\)</span>) in radians and <code>bigD</code>(pmax,pmax) contains Wigner D-coefficients.</p></li>
+Calculates the Wigner D-functions (<span class="math inline">\(D^s_{m,n}(\alpha,\beta,\gamma)\)</span>).<br><code>angles</code>(3) includes (<span class="math inline">\(\alpha,\beta,\gamma\)</span>) in radians and
+<code>bigD</code>(pmax,pmax) contains Wigner D-coefficients.</p></li>
 <li><p><code>calcWignerLittled(theta, pmax, d)</code><br>
-Calculates the Wigner d-functions (<span class="math inline">\(d^s_{m,n}(\theta)\)</span>).<br><code>theta</code> is angle in radians and <code>d</code>(0:pmax,0:pmax) are values for <span class="math inline">\(d^s_{m,n}\)</span> in block diagonal matrix form.</p></li>
+Calculates the Wigner d-functions (<span class="math inline">\(d^s_{m,n}(\theta)\)</span>).<br><code>theta</code> is angle in radians and <code>d</code>(0:pmax,0:pmax)
+are values for <span class="math inline">\(d^s_{m,n}\)</span> in block
+diagonal matrix form.</p></li>
 <li><p><code>calcWignerd0andMore(x, pmax, d, pi, tau)</code><br>
-Calculates the Wigner d-functions for <span class="math inline">\(n=0\)</span> and also computes the derivative functions for optional outputs <code>pi</code> and <code>tau</code>.<br><code>x</code> is <span class="math inline">\(\cos(\theta)\)</span>, <code>d</code>(0:pmax), <code>pi</code>(0:pmax), <code>tau</code>(0:pmax) contain values for <span class="math inline">\(d^s_{m,0}\)</span>, <span class="math inline">\(\pi_{m,s}\)</span>, and <span class="math inline">\(\tau_{m,s}\)</span> respectively.</p></li>
+Calculates the Wigner d-functions for <span class="math inline">\(n=0\)</span> and also computes the derivative
+functions for optional outputs <code>pi</code> and
+<code>tau</code>.<br><code>x</code> is <span class="math inline">\(\cos(\theta)\)</span>,
+<code>d</code>(0:pmax), <code>pi</code>(0:pmax),
+<code>tau</code>(0:pmax) contain values for <span class="math inline">\(d^s_{m,0}\)</span>, <span class="math inline">\(\pi_{m,s}\)</span>, and <span class="math inline">\(\tau_{m,s}\)</span> respectively.</p></li>
 <li><p><code>calcRiccatiBessels(z, nmax, regt, f, df)</code><br>
-Calculates the Riccati-Bessel functions <span class="math inline">\(\psi_n\)</span> (if <code>regt=.true.</code>) or <span class="math inline">\(\xi_n\)</span> (<code>regt=.false.</code>), and their derivatives, for <span class="math inline">\(n=1,\dots,n_\text{max}\)</span>.<br><code>z</code> is a scalar complex argument, <code>f</code>(1:nmax) is a matrix containing Riccati-Bessel functions <span class="math inline">\(\psi_n(z)=z*j_n(z)\)</span> or <span class="math inline">\(\xi_n(z)=z*h_n(z)\)</span> for <span class="math inline">\(n=1,\dots,n_\text{max}\)</span>, and <code>df</code>(1:nmax) are the corresponding derivatives of <code>f</code>.</p></li>
+Calculates the Riccati-Bessel functions <span class="math inline">\(\psi_n\)</span> (if <code>regt=.true.</code>) or
+<span class="math inline">\(\xi_n\)</span> (<code>regt=.false.</code>),
+and their derivatives, for <span class="math inline">\(n=1,\dots,n_\text{max}\)</span>.<br><code>z</code> is a scalar complex argument, <code>f</code>(1:nmax) is a
+matrix containing Riccati-Bessel functions <span class="math inline">\(\psi_n(z)=z*j_n(z)\)</span> or <span class="math inline">\(\xi_n(z)=z*h_n(z)\)</span> for <span class="math inline">\(n=1,\dots,n_\text{max}\)</span>, and
+<code>df</code>(1:nmax) are the corresponding derivatives of
+<code>f</code>.</p></li>
 <li><p><code>calcSphBessels(z, nmax, regt, bes)</code><br>
-A wrapper routine for computing spherical Bessel/Hankel functions of the first kind for a complex argument <code>z</code>.<br><code>bes(0:nmax)</code> contain Bessel (<span class="math inline">\(J_{n+1/2}\)</span>) or Hankel (<span class="math inline">\(H_{n+1/2}\)</span>) function (of <span class="math inline">\(1^{st}\)</span> kind) values for <span class="math inline">\(n=0,\dots,n_\text{max}\)</span> for a complex argument <code>z</code>.</p></li>
+A wrapper routine for computing spherical Bessel/Hankel functions of the
+first kind for a complex argument <code>z</code>.<br><code>bes(0:nmax)</code> contain Bessel (<span class="math inline">\(J_{n+1/2}\)</span>) or Hankel (<span class="math inline">\(H_{n+1/2}\)</span>) function (of <span class="math inline">\(1^{st}\)</span> kind) values for <span class="math inline">\(n=0,\dots,n_\text{max}\)</span> for a complex
+argument <code>z</code>.</p></li>
 <li><p><code>xyz2rtp(xyz, rtp, cth)</code><br>
-Transforms the cartesian coordinates <code>(x,y,z)</code> of a point in 3D space to spherical polar coordinates <code>(r,\theta,\phi)</code><br><code>xyz(3)</code> is a vector of cartesian coordinates, <code>rtp(3)</code> is a vector of spherical polar coordinates, and <code>cth</code> is cos<span class="math inline">\((\theta)\)</span>.</p></li>
+Transforms the cartesian coordinates <code>(x,y,z)</code> of a point in
+3D space to spherical polar coordinates
+<code>(r,\theta,\phi)</code><br><code>xyz(3)</code> is a vector of cartesian coordinates,
+<code>rtp(3)</code> is a vector of spherical polar coordinates, and
+<code>cth</code> is cos<span class="math inline">\((\theta)\)</span>.</p></li>
 <li><p><code>rtp2xyz(rtp, xyz)</code><br>
-The inverse of <code>xyz2rtp</code>. Transforms the spherical polar coordinates <code>(r,\theta,\phi)</code> of a point in 3D space to cartesian coordinates <span class="math inline">\((x,y,z)\)</span>.</p></li>
+The inverse of <code>xyz2rtp</code>. Transforms the spherical polar
+coordinates <code>(r,\theta,\phi)</code> of a point in 3D space to
+cartesian coordinates <span class="math inline">\((x,y,z)\)</span>.</p></li>
 <li><p><code>calcVTrtp2xyz(rtp, transform)</code><br>
-Calculates the matrix of transformation from a vector in spherical coordinates to a vector in cartesian coordinates at point <code>(r,\theta,\phi)</code> (in spherical polar coordinates).</p></li>
+Calculates the matrix of transformation from a vector in spherical
+coordinates to a vector in cartesian coordinates at point
+<code>(r,\theta,\phi)</code> (in spherical polar coordinates).</p></li>
 <li><p><code>calcVTxyz2rtp(rtp, transform)</code><br>
-The inverse of <code>calcVTrtp2xyz</code>. Calculates the matrix of transformation from a vector in cartesian coordinates to a vector in spherical coordinates at point <code>(r,\theta,\phi)</code> (in spherical polar coordinates).<br></p></li>
+The inverse of <code>calcVTrtp2xyz</code>. Calculates the matrix of
+transformation from a vector in cartesian coordinates to a vector in
+spherical coordinates at point <code>(r,\theta,\phi)</code> (in
+spherical polar coordinates).<br></p></li>
 <li><p><code>calcAbsMat(Xi, ro, mat)</code><br>
-Calculates the absorption matrix <span class="math inline">\(\Gamma_j = \mathtt{mat(l_{max},l_{max})}\)</span> for the input arguments <code>Xi</code> and <code>ro</code> (Eq. (49) of Stout). <span class="math inline">\(\Gamma_j\)</span> is used in the evaluation of the orientation-averaged absorption cross-section inside each particle.</p></li>
+Calculates the absorption matrix <span class="math inline">\(\Gamma_j =
+\mathtt{mat(l_{max},l_{max})}\)</span> for the input arguments
+<code>Xi</code> and <code>ro</code> (Eq. (49) of Stout). <span class="math inline">\(\Gamma_j\)</span> is used in the evaluation of the
+orientation-averaged absorption cross-section inside each
+particle.</p></li>
 <li><p><code>calcLamMat(Xi, ro, mat)</code><br>
-Calculates the "Lambda" matrix <span class="math inline">\(\Lambda_j = \mathtt{mat(l_{max},l_{max})}\)</span> for the input arguments <code>Xi</code> and <code>ro</code> (Eq. (53) of Stout). <span class="math inline">\(\Lambda_j\)</span> is used in the evaluation of the orientation-averaged internal electric field inside homogeneous spheres.</p></li>
+Calculates the "Lambda" matrix <span class="math inline">\(\Lambda_j =
+\mathtt{mat(l_{max},l_{max})}\)</span> for the input arguments
+<code>Xi</code> and <code>ro</code> (Eq. (53) of Stout). <span class="math inline">\(\Lambda_j\)</span> is used in the evaluation of
+the orientation-averaged internal electric field inside homogeneous
+spheres.</p></li>
 <li><p><code>nm2p(n, m, l)</code><br>
-Calculates a generalised index <code>l=n(n+1)+m</code>, for a unique <code>(n,m)</code>, (Vector spherical harmonics are spanned by two indices: <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span>, such that <span class="math inline">\(0 \leq n \leq n_{max}\)</span> and <span class="math inline">\(-n \leq m \leq n\)</span>).<br><code>n,m,l</code> are integers.</p></li>
+Calculates a generalised index <code>l=n(n+1)+m</code>, for a unique
+<code>(n,m)</code>, (Vector spherical harmonics are spanned by two
+indices: <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span>, such that <span class="math inline">\(0 \leq n \leq n_{max}\)</span> and <span class="math inline">\(-n \leq m \leq n\)</span>).<br><code>n,m,l</code> are integers.</p></li>
 <li><p><code>p2nm(p, n, m)</code><br>
-Calculates unique <code>(n,m)</code> from a given composite index <code>p</code>.<br><code>p</code> is a real value.</p></li>
+Calculates unique <code>(n,m)</code> from a given composite index
+<code>p</code>.<br><code>p</code> is a real value.</p></li>
 <li><p><code>nm2pv2(n, m, p)</code><br>
-Some recurrences are defined only for <span class="math inline">\(m \geq 0\)</span>, in which case we shall use a second version of the composite index <span class="math inline">\(p_{v2}=n(n+1)/2+m\)</span>.</p></li>
+Some recurrences are defined only for <span class="math inline">\(m \geq
+0\)</span>, in which case we shall use a second version of the composite
+index <span class="math inline">\(p_{v2}=n(n+1)/2+m\)</span>.</p></li>
 <li><p><code>testPmax(name, pmax, nmax)</code><br>
-Tests <code>pmax</code> for commensurability, i.e. is <span class="math inline">\(p_{max}==n_{max}(n_{max}+2)\)</span> and <span class="math inline">\(n_{max}=m_{max}\)</span>? If not, then the program will be stopped.</p></li>
+Tests <code>pmax</code> for commensurability, i.e. is <span class="math inline">\(p_{max}==n_{max}(n_{max}+2)\)</span> and <span class="math inline">\(n_{max}=m_{max}\)</span>? If not, then the program
+will be stopped.</p></li>
 </ul>
 </div>
 <div class="section level3 unnumbered">
 <h3 class="unnumbered" id="sphmsv-module">
-<a href="https://github.com/nano-optics/terms/blob/main/src/sphmsv.f90" class="external-link"><code>sphmsv</code> module</a><a class="anchor" aria-label="anchor" href="#sphmsv-module"></a>
+<a href="https://github.com/nano-optics/terms/blob/main/src/sphmsv.f90" class="external-link"><code>sphmsv</code>
+module</a><a class="anchor" aria-label="anchor" href="#sphmsv-module"></a>
 </h3>
-<p>This module contains routines for calculating Stokes incident vector, Stokes phase matrix and scattering matrix for an input <em>T</em>-matrix. The formulae are based on Mishchenko.</p>
+<p>This module contains routines for calculating Stokes incident vector,
+Stokes phase matrix and scattering matrix for an input
+<em>T</em>-matrix. The formulae are based on Mishchenko.</p>
 <ul>
 <li><p><code>calcStokesIncVec(ehost_, ipwDirn_, ipwAmpl_, verb_, Stokes_Vec)</code><br>
 Calculates the Stokes incident vector <code>Stokes_Vec</code>.</p></li>
 <li><p><code>calcStokesPhaseMat(SMat, verb_, Z)</code><br>
-Calculates the Stokes phase matrix for the specified incident and scattered angles. <code>SMat(2,2)</code> and <code>Z(4,4)</code> are the scattering and Stokes phase matrices which follow Eqs. (5.11-14) and (2.106-121) of Mishchenko.</p></li>
+Calculates the Stokes phase matrix for the specified incident and
+scattered angles. <code>SMat(2,2)</code> and <code>Z(4,4)</code> are the
+scattering and Stokes phase matrices which follow Eqs. (5.11-14) and
+(2.106-121) of Mishchenko.</p></li>
 <li><p><code>calcScatMat(tmat, host_K, spwDirn_, ipwDirn_, verb_, SMat)</code><br>
-Calculates the scattering matrix using the <em>T</em>-matrix, for the specified incident and scattering angles.</p></li>
+Calculates the scattering matrix using the <em>T</em>-matrix, for the
+specified incident and scattering angles.</p></li>
 </ul>
 </div>
 <div class="section level3 unnumbered">
 <h3 class="unnumbered" id="linalg-module">
-<a href="https://github.com/nano-optics/terms/blob/main/src/linalg.f90" class="external-link"><code>linalg</code> module</a><a class="anchor" aria-label="anchor" href="#linalg-module"></a>
+<a href="https://github.com/nano-optics/terms/blob/main/src/linalg.f90" class="external-link"><code>linalg</code>
+module</a><a class="anchor" aria-label="anchor" href="#linalg-module"></a>
 </h3>
-<p>This module contains wrappers to drive LAPACK’s square-matrix inversion routines and linear solvers.</p>
+<p>This module contains wrappers to drive LAPACK’s square-matrix
+inversion routines and linear solvers.</p>
 <ul>
 <li><p><code>invSqrMat(trans_, verb_ A)</code><br>
-Calculates inverse of a complex-valued square matrix <code>A(n,n)</code>, using the ZGETRF and ZGETRI routines in LAPACK. <code>A</code> is overwritten by inv(A) on the output. <code>trans_</code> is an optional logical input, in case <code>.true.</code> the routine considers transpose of A and finally returns the transpose of the inverted matrix as the output. <code>verb_</code>: an optional input of the verbosity value.<br></p></li>
+Calculates inverse of a complex-valued square matrix
+<code>A(n,n)</code>, using the ZGETRF and ZGETRI routines in LAPACK.
+<code>A</code> is overwritten by inv(A) on the output.
+<code>trans_</code> is an optional logical input, in case
+<code>.true.</code> the routine considers transpose of A and finally
+returns the transpose of the inverted matrix as the output.
+<code>verb_</code>: an optional input of the verbosity value.<br></p></li>
 <li><p><code>solLinSys(isol_, verb_, A, X)</code><br>
-Solves a complex-valued linear system of equations <span class="math inline">\(Ax=b\)</span>, where <code>A</code>(n,n) is a square matrix, <code>b</code>(n) is a known vector, and <code>x</code>(n) is the vector to be determined. Depending on the value <code>isol_</code>, calls <code>solLinSysV</code> or <code>solLinSysVX</code>. Both <code>A</code> and <code>X</code> are overwritten on output.</p></li>
+Solves a complex-valued linear system of equations <span class="math inline">\(Ax=b\)</span>, where <code>A</code>(n,n) is a
+square matrix, <code>b</code>(n) is a known vector, and
+<code>x</code>(n) is the vector to be determined. Depending on the value
+<code>isol_</code>, calls <code>solLinSysV</code> or
+<code>solLinSysVX</code>. Both <code>A</code> and <code>X</code> are
+overwritten on output.</p></li>
 <li><p><code>solLinSysV(verb_, A, X)</code><br>
-For solving a linear system, uses LAPACK’s "simple" driver ZGESV.</p></li>
+For solving a linear system, uses LAPACK’s "simple" driver
+ZGESV.</p></li>
 <li><p><code>solLinSysVX(verb_, A, X)</code><br>
-For solving a linear system, uses LAPACK’s "simple" driver ZGESVX.</p></li>
+For solving a linear system, uses LAPACK’s "simple" driver
+ZGESVX.</p></li>
 </ul>
 </div>
 <div class="section level3 unnumbered">
 <h3 class="unnumbered" id="eps-module">
-<a href="https://github.com/nano-optics/terms/blob/main/src/eps.f90" class="external-link"><code>eps</code> module</a><a class="anchor" aria-label="anchor" href="#eps-module"></a>
+<a href="https://github.com/nano-optics/terms/blob/main/src/eps.f90" class="external-link"><code>eps</code>
+module</a><a class="anchor" aria-label="anchor" href="#eps-module"></a>
 </h3>
-<p>This module contains wavelength-dependent dielectric functions <code>epsXX(lambda)</code> for various materials including Au, Ag, Al, Cr, Pd, Pt, Si, and Water).</p>
+<p>This module contains wavelength-dependent dielectric functions
+<code>epsXX(lambda)</code> for various materials including Au, Ag, Al,
+Cr, Pd, Pt, Si, and Water).</p>
 <ul>
 <li>
 <code>interp1( x1, y1, x2, y2 )</code><br>
-Calculates the interpolated data <code>y2</code> using the input values <code>x1,y1</code> at the points <code>x2</code>.</li>
+Calculates the interpolated data <code>y2</code> using the input values
+<code>x1,y1</code> at the points <code>x2</code>.</li>
 </ul>
 <!-- --><ul>
 <li><p><code>epsAu(wavelength) result(eps)</code><br>
-Returns the wavelength-dependent relative dielectric function of gold. This function uses the analytical expression given in Eq. (E.2) of Etchegoin and Le Ru.</p></li>
+Returns the wavelength-dependent relative dielectric function of gold.
+This function uses the analytical expression given in Eq. (E.2) of
+Etchegoin and Le Ru.</p></li>
 <li><p><code>epsAg(wavelength) result(eps)</code><br>
-Returns the wavelength-dependent relative dielectric function of silver. This function uses the analytical expression given in Eq. (E.1) of Etchegoin and Le Ru.</p></li>
+Returns the wavelength-dependent relative dielectric function of silver.
+This function uses the analytical expression given in Eq. (E.1) of
+Etchegoin and Le Ru.</p></li>
 <li><p><code>epsPt(wavelength) result(eps)</code><br>
-Returns the wavelength-dependent relative dielectric function of a Lorentz-Drude metal, with the parameters for Pt from Rakic.</p></li>
+Returns the wavelength-dependent relative dielectric function of a
+Lorentz-Drude metal, with the parameters for Pt from Rakic.</p></li>
 <li><p><code>epsPd(wavelength) result(eps)</code><br>
-Returns the wavelength-dependent relative dielectric function of a Lorentz-Drude metal, with the parameters for Pd from Rakic.</p></li>
+Returns the wavelength-dependent relative dielectric function of a
+Lorentz-Drude metal, with the parameters for Pd from Rakic.</p></li>
 <li><p><code>epsSi(wavelength) result(eps)</code><br>
-Returns the wavelength-dependent relative dielectric function of Silicon in the range 206.6 nm to 1200.0 nm interpolated from Aspnes.</p></li>
+Returns the wavelength-dependent relative dielectric function of Silicon
+in the range 206.6 nm to 1200.0 nm interpolated from Aspnes.</p></li>
 <li><p><code>epsAl(wavelength) result(eps)</code><br>
-Returns the wavelength-dependent relative dielectric function of Aluminum in the range 103.32 nm to 2755.2 nm from Rakic.</p></li>
+Returns the wavelength-dependent relative dielectric function of
+Aluminum in the range 103.32 nm to 2755.2 nm from Rakic.</p></li>
 <li><p><code>epsCr(wavelength) result(eps)</code><br>
-Returns the wavelength-dependent relative dielectric function of Aluminum in the range 100.8 nm to 31 <span class="math inline">\(\mu m\)</span>, from tabulated data.</p></li>
+Returns the wavelength-dependent relative dielectric function of
+Aluminum in the range 100.8 nm to 31 <span class="math inline">\(\mu
+m\)</span>, from tabulated data.</p></li>
 <li><p><code>epsWater(wavelength) result(eps)</code><br>
-Returns the wavelength-dependent relative dielectric function of Water at temperature <span class="math inline">\(20^o\text{C}\)</span> in the range 200 nm to 3000 nm from Daimon.</p></li>
+Returns the wavelength-dependent relative dielectric function of Water
+at temperature <span class="math inline">\(20^o\text{C}\)</span> in the
+range 200 nm to 3000 nm from Daimon.</p></li>
 <li><p><code>epsDrude(wavelength, eps_infty, lambda_p, mu_p) result(eps)</code><br>
-Returns the wavelength-dependent relative dielectric function of a Drude metal.</p></li>
+Returns the wavelength-dependent relative dielectric function of a Drude
+metal.</p></li>
 </ul>
 </div>
 <div class="section level3 unnumbered">
 <h3 class="unnumbered" id="hdffive-module">
-<a href="https://github.com/nano-optics/terms/blob/main/src/HDFfive.f90" class="external-link"><code>HDFfive</code> module</a><a class="anchor" aria-label="anchor" href="#hdffive-module"></a>
+<a href="https://github.com/nano-optics/terms/blob/main/src/HDFfive.f90" class="external-link"><code>HDFfive</code>
+module</a><a class="anchor" aria-label="anchor" href="#hdffive-module"></a>
 </h3>
-<p>This module contains subroutines for reading and writing data in HDF5 format.</p>
+<p>This module contains subroutines for reading and writing data in HDF5
+format.</p>
 <ul>
 <li><p><code>h5_crtgrp(filename_, main_grpname, subgrpsname)</code><br>
 This subroutine creates subgroups in an existing group.</p></li>
 <li><p><code>h5_wrtvec2file(filename_, groupname, dsetname, dset_data)</code><br>
-This subroutine writes vector data in a dataset in an existing group.</p></li>
+This subroutine writes vector data in a dataset in an existing
+group.</p></li>
 <li><p><code>h5_wrt2file(filename_, groupname, dsetname, dset_data)</code><br>
 This subroutine writes data in a dataset in an existing group.</p></li>
 <li><p><code>h5_wrt_attr(attribute, dataset_id)</code><br>
-This subroutine adds an attribute to an existing dataset, typically a brief explanation about the contents of the dataset.</p></li>
+This subroutine adds an attribute to an existing dataset, typically a
+brief explanation about the contents of the dataset.</p></li>
 </ul>
 </div>
   </div>
@@ -534,7 +967,7 @@ This subroutine adds an attribute to an existing dataset, typically a brief expl
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>

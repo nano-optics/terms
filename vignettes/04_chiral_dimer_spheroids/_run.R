@@ -2,7 +2,7 @@ library(here)
 setwd(here('vignettes/04_chiral_dimer_spheroids'))
 
 ## ----load----
-library(terms)
+suppressPackageStartupMessages(require(terms))
 theme_set(theme_grey())
 
 ## ----run----

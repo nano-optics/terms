@@ -3,7 +3,7 @@ setwd(here('vignettes/107_WGM'))
 
 
 ## ----load----
-library(terms)
+suppressPackageStartupMessages(require(terms))
 theme_set(theme_grey())
 
 # ----tpl----

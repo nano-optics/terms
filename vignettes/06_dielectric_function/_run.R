@@ -1,6 +1,6 @@
 setwd(here::here('vignettes/06_dielectric_function/'))
 ## ----load----
-library(terms)
+suppressPackageStartupMessages(require(terms))
 theme_set(theme_grey())
 
 ## ----run----

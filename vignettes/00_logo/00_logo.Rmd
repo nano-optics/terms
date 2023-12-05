@@ -18,7 +18,7 @@ vignette: >
 
 ```{r demo, message=FALSE, echo=FALSE, warning=FALSE}
 library(knitr)
-library(terms)
+suppressPackageStartupMessages(require(terms))
 library(ggplot2)
 library(ggforce)
 options(cli.num_colors = 1)
@@ -63,7 +63,7 @@ tail -n+6 terms.svg
 
 
 ```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
-library(terms)
+suppressPackageStartupMessages(require(terms))
 ge <- get_geometry('input')
 cl <- cluster_geometry(ge)
 terms::x3d_scene(cl, viewpoint=c(0,0,1500), width = "100%", height="50%") 

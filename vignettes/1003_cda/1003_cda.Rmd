@@ -16,9 +16,9 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r demo, message=FALSE, echo=FALSE}
+```{r demo, message=FALSE, echo=FALSE, warning=FALSE}
 library(knitr)
-library(terms)
+suppressPackageStartupMessages(require(terms))
 library(ggplot2)
 library(rhdf5)
 library(R.matlab)
@@ -39,7 +39,7 @@ This example compares the results of TERMS with a coupled-dipole approximation f
 
 
 ```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
-library(terms)
+suppressPackageStartupMessages(require(terms))
 cat('  <style>
 .x3d_scene {
 float:right;

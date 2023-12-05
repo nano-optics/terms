@@ -3,10 +3,10 @@ setwd(here('vignettes/106_balancing'))
 
 
 ## ----load----
-library(terms)
+suppressPackageStartupMessages(require(terms))
 theme_set(theme_grey())
 
-# ----tpl----
+## ----tpl----
 
 tpl <- "ModeAndScheme 2 2
 MultipoleCutoff {Lmax}
@@ -31,12 +31,12 @@ comment <- ''
 Lmax <- 20
 out <- 'xsec_1'
 cat(glue(tpl), file = 'input1')
-system("../../build/terms input1 > log1")
+# system("../../build/terms input1 > log1")
 
 comment <- '#'
 out <- 'xsec_2'
 cat(glue(tpl), file = 'input2')
-system("../../build/terms input2 > log2")
+# system("../../build/terms input2 > log2")
 
 
 ## ----read----
@@ -53,12 +53,13 @@ mCOAt <- subset(mCOA, variable == 'total')
 p1 <- ggplot(mCOAt, aes(wavelength, average, linetype=balancing, colour=crosstype)) +
   facet_wrap(~crosstype)+
   geom_line() +
-  coord_cartesian(ylim=c(0, 9e4)) +
-  labs(x = expression("wavelength /nm"), 
+  # coord_cartesian(ylim=c(0, 9e4)) + # bug
+  labs(x = expression("wavelength /nm"),
        y = expression("cross-section /"*nm^2),
        colour = '', linetype='') +
   ggtitle("Orientation-averaged cross-sections")
 
 p1
+
 
 

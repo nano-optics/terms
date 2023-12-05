@@ -1,7 +1,7 @@
 setwd(here::here('vignettes/112_absorption_field'))
 
 ## ----load----
-library(terms)
+suppressPackageStartupMessages(require(terms))
 theme_set(theme_grey())
 
 ## ----runff----

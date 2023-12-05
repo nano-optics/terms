@@ -1,6 +1,6 @@
 setwd(here::here("vignettes/01_dimer_spheres"))
 ## ----load----
-library(terms)
+suppressPackageStartupMessages(require(terms))
 library(dplyr)
 theme_set(theme_grey())
 

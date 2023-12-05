@@ -2,7 +2,7 @@ library(here)
 setwd(here('vignettes/15_quadrimer'))
 
 ## ----load---
-library(terms)
+suppressPackageStartupMessages(require(terms))
 library(purrr)
 library(ggplot2)
 library(egg)

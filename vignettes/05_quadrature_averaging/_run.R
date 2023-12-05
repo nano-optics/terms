@@ -1,6 +1,6 @@
 setwd(here::here('vignettes/05_quadrature_averaging/'))
 ## ----load----
-library(terms)
+suppressPackageStartupMessages(require(terms))
 theme_set(theme_grey())
 
 ## ----run----

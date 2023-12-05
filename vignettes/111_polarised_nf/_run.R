@@ -2,7 +2,7 @@ library(here)
 setwd(here('vignettes/111_polarised_nf'))
 
 ## ----load----
-library(terms)
+suppressPackageStartupMessages(require(terms))
 library(ggplot2)
 theme_set(theme_grey())
 

@@ -16,9 +16,9 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r demo, message=FALSE, echo=FALSE}
+```{r demo, message=FALSE, echo=FALSE, warning=FALSE}
 library(knitr)
-library(terms)
+suppressPackageStartupMessages(require(terms))
 options(cli.num_colors = 1)
 theme_set(theme_grey())
 opts_chunk$set(echo = FALSE, warning=FALSE,
@@ -38,7 +38,7 @@ terms::cluster_helix(N = 5, a = 30, b = 30, c = 50, R0 = 100, pitch = 700, delta
 The structure is illuminated with a linear polarised plane wave along the x direction, and the wavevector along the z direction. 
 
 ```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
-library(terms)
+suppressPackageStartupMessages(require(terms))
 cat('  <style>
 .x3d_scene {
 float:right;

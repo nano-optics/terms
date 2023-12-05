@@ -17,9 +17,9 @@ vignette: >
 ---
 
 
-```{r demo, message=FALSE, echo=FALSE}
+```{r demo, message=FALSE, echo=FALSE, warning=FALSE}
 library(knitr)
-library(terms)
+suppressPackageStartupMessages(require(terms))
 library(rhdf5)
 options(cli.num_colors = 1)
 theme_set(theme_grey())
@@ -35,7 +35,7 @@ This example illustrates the calculation of far-field cross-sections for multipl
 
 
 ```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
-library(terms)
+suppressPackageStartupMessages(require(terms))
 cat('  <style>
 .x3d_scene {
 float:right;

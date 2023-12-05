@@ -2,7 +2,7 @@ library(here)
 setwd(here('vignettes/105_factorised_RTR'))
 
 ## ----load----
-library(terms)
+suppressPackageStartupMessages(require(terms))
 theme_set(theme_grey())
 
 ## ----tpl----

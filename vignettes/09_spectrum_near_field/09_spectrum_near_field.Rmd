@@ -16,9 +16,9 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r demo, message=FALSE, echo=FALSE}
+```{r demo, message=FALSE, echo=FALSE, warning=FALSE}
 library(knitr)
-library(terms)
+suppressPackageStartupMessages(require(terms))
 library(ggforce)
 options(cli.num_colors = 1)
 theme_set(theme_grey())
@@ -33,7 +33,7 @@ do.call(read_chunk, list(path = "_run.R"))
 This example illustrates the calculation of near-field calculations for multiple wavelengths. The structure consists of a chiral tetramer of gold spheres in water. The wavelength is varied from 500 to 700 nm, and we map the electric field intensity and normalised local degree of chirality in the xy plane around the structure, which is illuminated with linear polarisation at 45 degrees in the xy plane and wavevector along z. Note that a small value of Nmax is used to keep the calculation time short; for accurate results a larger value should be used.
 
 ```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
-library(terms)
+suppressPackageStartupMessages(require(terms))
 cat('  <style>
 .x3d_scene {
 float:right;

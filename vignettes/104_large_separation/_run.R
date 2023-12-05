@@ -2,7 +2,7 @@ library(here)
 setwd(here('vignettes/104_large_separation'))
 
 ## ----load---
-library(terms)
+suppressPackageStartupMessages(require(terms))
 theme_set(theme_grey())
 
 # ----tpl----

@@ -4,7 +4,7 @@ getwd()
 
 ## ----params----
 
-library(terms)
+suppressPackageStartupMessages(require(terms))
 library(dplyr)
 
 # easy case, check scaling with Npart
@@ -87,7 +87,7 @@ for(ii in 1:nrow(params)){
 
 
 ## ----read---
-library(terms)
+suppressPackageStartupMessages(require(terms))
 theme_set(theme_grey())
 
 old_extract_time <- function(log = 'log'){

@@ -60,9 +60,9 @@ calcOAprops> <csExt>=  1.96086092E+04 nConv= 10
              <csSca>=  1.77227765E+04 nConv= 10
              <csAbs>=  1.88583270E+03
 
-             <cdExt>=  2.25016520E-11
-             <cdSca>=  3.64720988E-11
-             <cdAbs>= -1.39704468E-11
+             <cdExt>=  2.38279346E-11
+             <cdSca>=  3.72550551E-11
+             <cdAbs>= -1.34271205E-11
 
 calcCs> csExt=  2.60751447E+04 nConv= 13
          csSca=  2.32416410E+04 nConv= 10
@@ -91,9 +91,9 @@ calcOAprops> <csExt>=  2.15260023E+04 nConv= 10
              <csSca>=  1.96725812E+04 nConv= 10
              <csAbs>=  1.85342105E+03
 
-             <cdExt>=  2.57522624E-11
-             <cdSca>=  4.14536935E-11
-             <cdAbs>= -1.57014312E-11
+             <cdExt>=  2.65509279E-11
+             <cdSca>=  4.04637750E-11
+             <cdAbs>= -1.39128471E-11
 
 calcCs> csExt=  2.89517191E+04 nConv= 13
          csSca=  2.62504488E+04 nConv= 10
@@ -122,9 +122,9 @@ calcOAprops> <csExt>=  2.39369968E+04 nConv= 10
              <csSca>=  2.16917934E+04 nConv= 10
              <csAbs>=  2.24520344E+03
 
-             <cdExt>=  2.53267416E-11
-             <cdSca>=  4.10304220E-11
-             <cdAbs>= -1.57036804E-11
+             <cdExt>=  2.43120452E-11
+             <cdSca>=  3.56681666E-11
+             <cdAbs>= -1.13561215E-11
 
 calcCs> csExt=  3.23831916E+04 nConv= 13
          csSca=  2.90200607E+04 nConv= 10
@@ -153,9 +153,9 @@ calcOAprops> <csExt>=  2.50229881E+04 nConv= 10
              <csSca>=  2.21366194E+04 nConv= 10
              <csAbs>=  2.88636874E+03
 
-             <cdExt>=  2.84524381E-11
-             <cdSca>=  4.74192618E-11
-             <cdAbs>= -1.89668237E-11
+             <cdExt>=  2.61853530E-11
+             <cdSca>=  4.43503182E-11
+             <cdAbs>= -1.81649652E-11
 
 calcCs> csExt=  3.31058779E+04 nConv= 13
          csSca=  2.85468461E+04 nConv= 10
@@ -184,9 +184,9 @@ calcOAprops> <csExt>=  2.79030392E+04 nConv= 10
              <csSca>=  2.52610594E+04 nConv= 10
              <csAbs>=  2.64197975E+03
 
-             <cdExt>=  3.49432810E-11
-             <cdSca>=  5.46060244E-11
-             <cdAbs>= -1.96627434E-11
+             <cdExt>=  4.12184968E-11
+             <cdSca>=  6.42506179E-11
+             <cdAbs>= -2.30321211E-11
 
 calcCs> csExt=  3.77938984E+04 nConv= 13
          csSca=  3.38115582E+04 nConv= 10
@@ -215,9 +215,9 @@ calcOAprops> <csExt>=  3.00917511E+04 nConv= 10
              <csSca>=  2.65649802E+04 nConv= 10
              <csAbs>=  3.52677094E+03
 
-             <cdExt>=  3.21826281E-11
-             <cdSca>=  5.14872956E-11
-             <cdAbs>= -1.93046675E-11
+             <cdExt>=  2.98148650E-11
+             <cdSca>=  4.81295465E-11
+             <cdAbs>= -1.83146815E-11
 
 calcCs> csExt=  3.98589784E+04 nConv= 13
          csSca=  3.43810499E+04 nConv=  9
@@ -246,9 +246,9 @@ calcOAprops> <csExt>=  3.21268767E+04 nConv= 10
              <csSca>=  2.85071513E+04 nConv= 10
              <csAbs>=  3.61972536E+03
 
-             <cdExt>=  3.63472798E-11
-             <cdSca>=  5.80155008E-11
-             <cdAbs>= -2.16682209E-11
+             <cdExt>=  3.17999428E-11
+             <cdSca>=  5.09167969E-11
+             <cdAbs>= -1.91168541E-11
 
 calcCs> csExt=  4.28163629E+04 nConv= 13
          csSca=  3.72560796E+04 nConv=  9
@@ -277,9 +277,9 @@ calcOAprops> <csExt>=  3.47066638E+04 nConv= 10
              <csSca>=  3.04754756E+04 nConv= 10
              <csAbs>=  4.23118822E+03
 
-             <cdExt>=  4.25366256E-11
-             <cdSca>=  6.39396969E-11
-             <cdAbs>= -2.14030713E-11
+             <cdExt>=  3.88200344E-11
+             <cdSca>=  5.87456499E-11
+             <cdAbs>= -1.99256155E-11
 
 calcCs> csExt=  4.57205044E+04 nConv= 13
          csSca=  3.92672630E+04 nConv=  9
@@ -308,9 +308,9 @@ calcOAprops> <csExt>=  3.76315599E+04 nConv= 11
              <csSca>=  3.27961815E+04 nConv= 10
              <csAbs>=  4.83537842E+03
 
-             <cdExt>=  3.94814948E-11
-             <cdSca>=  5.64513047E-11
-             <cdAbs>= -1.69698099E-11
+             <cdExt>=  4.04363139E-11
+             <cdSca>=  6.13255693E-11
+             <cdAbs>= -2.08892554E-11
 
 calcCs> csExt=  4.92525321E+04 nConv= 13
          csSca=  4.20438586E+04 nConv=  9
@@ -339,9 +339,9 @@ calcOAprops> <csExt>=  4.13728697E+04 nConv= 11
              <csSca>=  3.54641758E+04 nConv= 10
              <csAbs>=  5.90869389E+03
 
-             <cdExt>=  4.58221963E-11
-             <cdSca>=  7.03489156E-11
-             <cdAbs>= -2.45267193E-11
+             <cdExt>=  5.11247309E-11
+             <cdSca>=  7.59794311E-11
+             <cdAbs>= -2.48547002E-11
 
 calcCs> csExt=  5.37223853E+04 nConv= 13
          csSca=  4.53129093E+04 nConv= 10
@@ -370,9 +370,9 @@ calcOAprops> <csExt>=  4.68042872E+04 nConv= 11
              <csSca>=  3.82250163E+04 nConv= 10
              <csAbs>=  8.57927095E+03
 
-             <cdExt>=  6.04674481E-11
-             <cdSca>=  8.83124347E-11
-             <cdAbs>= -2.78449866E-11
+             <cdExt>=  5.24226531E-11
+             <cdSca>=  7.35195691E-11
+             <cdAbs>= -2.10969160E-11
 
 calcCs> csExt=  5.91435470E+04 nConv= 13
          csSca=  4.78653059E+04 nConv=  9
@@ -401,9 +401,9 @@ calcOAprops> <csExt>=  5.48263343E+04 nConv= 10
              <csSca>=  4.29386194E+04 nConv= 10
              <csAbs>=  1.18877149E+04
 
-             <cdExt>=  6.83771646E-11
-             <cdSca>=  9.71801685E-11
-             <cdAbs>= -2.88030039E-11
+             <cdExt>=  6.50155275E-11
+             <cdSca>=  8.77571294E-11
+             <cdAbs>= -2.27416019E-11
 
 calcCs> csExt=  7.12641256E+04 nConv= 13
          csSca=  5.48634755E+04 nConv= 10
@@ -432,9 +432,9 @@ calcOAprops> <csExt>=  6.02063767E+04 nConv= 10
              <csSca>=  4.70780452E+04 nConv= 10
              <csAbs>=  1.31283315E+04
 
-             <cdExt>=  6.98922378E-11
-             <cdSca>=  8.61376309E-11
-             <cdAbs>= -1.62453931E-11
+             <cdExt>=  6.76084900E-11
+             <cdSca>=  7.76551364E-11
+             <cdAbs>= -1.00466464E-11
 
 calcCs> csExt=  7.38022175E+04 nConv= 13
          csSca=  6.14419432E+04 nConv=  9
@@ -463,9 +463,9 @@ calcOAprops> <csExt>=  6.85061624E+04 nConv= 10
              <csSca>=  5.36650405E+04 nConv= 10
              <csAbs>=  1.48411218E+04
 
-             <cdExt>=  6.47583937E-11
-             <cdSca>=  7.98837357E-11
-             <cdAbs>= -1.51253420E-11
+             <cdExt>=  5.89222383E-11
+             <cdSca>=  7.54698955E-11
+             <cdAbs>= -1.65476572E-11
 
 calcCs> csExt=  8.50591208E+04 nConv= 13
          csSca=  6.95630455E+04 nConv=  9
@@ -494,9 +494,9 @@ calcOAprops> <csExt>=  8.26866776E+04 nConv= 10
              <csSca>=  6.13268192E+04 nConv= 10
              <csAbs>=  2.13598584E+04
 
-             <cdExt>=  7.75167794E-11
-             <cdSca>=  9.39356065E-11
-             <cdAbs>= -1.64188271E-11
+             <cdExt>=  6.85710703E-11
+             <cdSca>=  8.45631674E-11
+             <cdAbs>= -1.59920971E-11
 
 calcCs> csExt=  1.06595646E+05 nConv= 13
          csSca=  8.34854643E+04 nConv=  9
@@ -525,9 +525,9 @@ calcOAprops> <csExt>=  8.83300593E+04 nConv= 10
              <csSca>=  6.43097036E+04 nConv= 10
              <csAbs>=  2.40203556E+04
 
-             <cdExt>=  1.12294181E-10
-             <cdSca>=  1.34438683E-10
-             <cdAbs>= -2.21445016E-11
+             <cdExt>=  1.17243966E-10
+             <cdSca>=  1.39583251E-10
+             <cdAbs>= -2.23392847E-11
 
 calcCs> csExt=  1.26851029E+05 nConv= 13
          csSca=  1.00893468E+05 nConv=  9
@@ -556,9 +556,9 @@ calcOAprops> <csExt>=  8.34152838E+04 nConv= 10
              <csSca>=  6.14198541E+04 nConv=  9
              <csAbs>=  2.19954297E+04
 
-             <cdExt>=  1.63484547E-10
-             <cdSca>=  1.63975040E-10
-             <cdAbs>= -4.90493101E-13
+             <cdExt>=  1.32282300E-10
+             <cdSca>=  1.28013791E-10
+             <cdAbs>=  4.26850839E-12
 
 calcCs> csExt=  1.17280176E+05 nConv= 13
          csSca=  9.70143500E+04 nConv=  9
@@ -587,9 +587,9 @@ calcOAprops> <csExt>=  7.60386304E+04 nConv=  9
              <csSca>=  6.03050724E+04 nConv=  9
              <csAbs>=  1.57335580E+04
 
-             <cdExt>=  1.52885863E-10
-             <cdSca>=  1.46296357E-10
-             <cdAbs>=  6.58950550E-12
+             <cdExt>=  1.52715276E-10
+             <cdSca>=  1.52838245E-10
+             <cdAbs>= -1.22968639E-13
 
 calcCs> csExt=  9.96749304E+04 nConv= 12
          csSca=  8.60689924E+04 nConv=  9
@@ -618,9 +618,9 @@ calcOAprops> <csExt>=  7.14513199E+04 nConv=  9
              <csSca>=  6.07734576E+04 nConv=  9
              <csAbs>=  1.06778623E+04
 
-             <cdExt>=  9.82814467E-11
-             <cdSca>=  1.08573407E-10
-             <cdAbs>= -1.02919606E-11
+             <cdExt>=  1.21315068E-10
+             <cdSca>=  1.32981744E-10
+             <cdAbs>= -1.16666760E-11
 
 calcCs> csExt=  8.86233123E+04 nConv= 12
          csSca=  7.91702284E+04 nConv=  9
@@ -649,9 +649,9 @@ calcOAprops> <csExt>=  7.36448807E+04 nConv=  9
              <csSca>=  6.37328474E+04 nConv=  9
              <csAbs>=  9.91203331E+03
 
-             <cdExt>=  1.21319572E-10
-             <cdSca>=  1.40821321E-10
-             <cdAbs>= -1.95017488E-11
+             <cdExt>=  1.09270538E-10
+             <cdSca>=  1.32086636E-10
+             <cdAbs>= -2.28160972E-11
 
 calcCs> csExt=  8.28942371E+04 nConv= 12
          csSca=  7.57507957E+04 nConv=  9
@@ -680,9 +680,9 @@ calcOAprops> <csExt>=  7.89092828E+04 nConv=  9
              <csSca>=  6.72965125E+04 nConv=  9
              <csAbs>=  1.16127703E+04
 
-             <cdExt>=  1.10240687E-10
-             <cdSca>=  1.11208550E-10
-             <cdAbs>= -9.67862294E-13
+             <cdExt>=  1.28550367E-10
+             <cdSca>=  1.47064502E-10
+             <cdAbs>= -1.85141350E-11
 
 calcCs> csExt=  7.99833978E+04 nConv= 12
          csSca=  7.41639056E+04 nConv=  9
@@ -711,9 +711,9 @@ calcOAprops> <csExt>=  8.22023156E+04 nConv=  9
              <csSca>=  6.77644274E+04 nConv=  9
              <csAbs>=  1.44378882E+04
 
-             <cdExt>=  1.42014078E-10
-             <cdSca>=  1.37498200E-10
-             <cdAbs>=  4.51587743E-12
+             <cdExt>=  1.31310636E-10
+             <cdSca>=  1.28359433E-10
+             <cdAbs>=  2.95120364E-12
 
 calcCs> csExt=  7.84801335E+04 nConv= 12
          csSca=  7.34652201E+04 nConv=  9
@@ -742,9 +742,9 @@ calcOAprops> <csExt>=  7.67231701E+04 nConv=  9
              <csSca>=  6.21727158E+04 nConv=  9
              <csAbs>=  1.45504543E+04
 
-             <cdExt>=  1.55451182E-10
-             <cdSca>=  1.48992546E-10
-             <cdAbs>=  6.45863596E-12
+             <cdExt>=  1.25197017E-10
+             <cdSca>=  1.26083855E-10
+             <cdAbs>= -8.86838158E-13
 
 calcCs> csExt=  7.76706853E+04 nConv= 12
          csSca=  7.31738670E+04 nConv=  8
@@ -773,9 +773,9 @@ calcOAprops> <csExt>=  6.95925593E+04 nConv=  9
              <csSca>=  5.67955953E+04 nConv=  9
              <csAbs>=  1.27969640E+04
 
-             <cdExt>=  1.12949289E-10
-             <cdSca>=  1.19542184E-10
-             <cdAbs>= -6.59289482E-12
+             <cdExt>=  1.15316767E-10
+             <cdSca>=  1.25582450E-10
+             <cdAbs>= -1.02656831E-11
 
 calcCs> csExt=  7.71836051E+04 nConv= 12
          csSca=  7.30384373E+04 nConv=  8
@@ -804,9 +804,9 @@ calcOAprops> <csExt>=  6.65929197E+04 nConv=  9
              <csSca>=  5.54984793E+04 nConv=  9
              <csAbs>=  1.10944403E+04
 
-             <cdExt>=  1.19804896E-10
-             <cdSca>=  1.23696395E-10
-             <cdAbs>= -3.89149951E-12
+             <cdExt>=  1.20087830E-10
+             <cdSca>=  1.33265036E-10
+             <cdAbs>= -1.31772059E-11
 
 calcCs> csExt=  7.68151230E+04 nConv= 11
          csSca=  7.29204828E+04 nConv=  8
@@ -835,9 +835,9 @@ calcOAprops> <csExt>=  6.72172161E+04 nConv=  9
              <csSca>=  5.74642980E+04 nConv=  9
              <csAbs>=  9.75291815E+03
 
-             <cdExt>=  1.18309474E-10
-             <cdSca>=  1.30758797E-10
-             <cdAbs>= -1.24493225E-11
+             <cdExt>=  9.10912308E-11
+             <cdSca>=  1.05349649E-10
+             <cdAbs>= -1.42584183E-11
 
 calcCs> csExt=  7.64478574E+04 nConv= 11
          csSca=  7.27401454E+04 nConv=  8
@@ -866,9 +866,9 @@ calcOAprops> <csExt>=  6.92507312E+04 nConv=  9
              <csSca>=  6.03621041E+04 nConv=  8
              <csAbs>=  8.88862704E+03
 
-             <cdExt>=  1.06427756E-10
-             <cdSca>=  1.29026979E-10
-             <cdAbs>= -2.25992227E-11
+             <cdExt>=  1.20940278E-10
+             <cdSca>=  1.52015296E-10
+             <cdAbs>= -3.10750185E-11
 
 calcCs> csExt=  7.60118872E+04 nConv= 11
          csSca=  7.24501207E+04 nConv=  8
@@ -897,9 +897,9 @@ calcOAprops> <csExt>=  7.15417097E+04 nConv=  8
              <csSca>=  6.30820378E+04 nConv=  8
              <csAbs>=  8.45967197E+03
 
-             <cdExt>=  1.29598612E-10
-             <cdSca>=  1.53003471E-10
-             <cdAbs>= -2.34048583E-11
+             <cdExt>=  1.17172433E-10
+             <cdSca>=  1.40242369E-10
+             <cdAbs>= -2.30699357E-11
 
 calcCs> csExt=  7.54652002E+04 nConv= 11
          csSca=  7.20225906E+04 nConv=  8
@@ -928,9 +928,9 @@ calcOAprops> <csExt>=  7.41136845E+04 nConv=  8
              <csSca>=  6.56786606E+04 nConv=  8
              <csAbs>=  8.43502392E+03
 
-             <cdExt>=  1.33016474E-10
-             <cdSca>=  1.67789447E-10
-             <cdAbs>= -3.47729727E-11
+             <cdExt>=  1.27665982E-10
+             <cdSca>=  1.55985277E-10
+             <cdAbs>= -2.83192949E-11
 
 calcCs> csExt=  7.47833464E+04 nConv= 11
          csSca=  7.14423074E+04 nConv=  8
@@ -959,9 +959,9 @@ calcOAprops> <csExt>=  7.73516977E+04 nConv=  8
              <csSca>=  6.84936448E+04 nConv=  8
              <csAbs>=  8.85805293E+03
 
-             <cdExt>=  1.47650227E-10
-             <cdSca>=  1.82754784E-10
-             <cdAbs>= -3.51045564E-11
+             <cdExt>=  1.46370249E-10
+             <cdSca>=  1.83557151E-10
+             <cdAbs>= -3.71869021E-11
 
 calcCs> csExt=  7.39536514E+04 nConv= 11
          csSca=  7.07027096E+04 nConv=  8
@@ -990,9 +990,9 @@ calcOAprops> <csExt>=  8.13866668E+04 nConv=  8
              <csSca>=  7.15741466E+04 nConv=  8
              <csAbs>=  9.81252025E+03
 
-             <cdExt>=  1.21214113E-10
-             <cdSca>=  1.71873068E-10
-             <cdAbs>= -5.06589551E-11
+             <cdExt>=  1.48745582E-10
+             <cdSca>=  1.98368515E-10
+             <cdAbs>= -4.96229332E-11
 
 calcCs> csExt=  7.29717759E+04 nConv= 11
          csSca=  6.98035825E+04 nConv=  8
@@ -1021,9 +1021,9 @@ calcOAprops> <csExt>=  8.54482564E+04 nConv=  8
              <csSca>=  7.41483291E+04 nConv=  8
              <csAbs>=  1.12999273E+04
 
-             <cdExt>=  1.44917800E-10
-             <cdSca>=  1.98908461E-10
-             <cdAbs>= -5.39906611E-11
+             <cdExt>=  1.70320497E-10
+             <cdSca>=  2.15081622E-10
+             <cdAbs>= -4.47611253E-11
 
 calcCs> csExt=  7.18395178E+04 nConv= 11
          csSca=  6.87495240E+04 nConv=  8
@@ -1052,9 +1052,9 @@ calcOAprops> <csExt>=  8.71250615E+04 nConv=  8
              <csSca>=  7.41984610E+04 nConv=  8
              <csAbs>=  1.29266005E+04
 
-             <cdExt>=  1.79416819E-10
-             <cdSca>=  2.22448256E-10
-             <cdAbs>= -4.30314364E-11
+             <cdExt>=  1.64879231E-10
+             <cdSca>=  2.02981853E-10
+             <cdAbs>= -3.81026218E-11
 
 calcCs> csExt=  7.05632919E+04 nConv= 11
          csSca=  6.75488412E+04 nConv=  8
@@ -1083,9 +1083,9 @@ calcOAprops> <csExt>=  8.36786211E+04 nConv=  8
              <csSca>=  6.99225643E+04 nConv=  8
              <csAbs>=  1.37560568E+04
 
-             <cdExt>=  1.61327405E-10
-             <cdSca>=  1.89269488E-10
-             <cdAbs>= -2.79420823E-11
+             <cdExt>=  1.50769033E-10
+             <cdSca>=  1.88238107E-10
+             <cdAbs>= -3.74690736E-11
 
 calcCs> csExt=  6.91529911E+04 nConv= 11
          csSca=  6.62126807E+04 nConv=  8
@@ -1114,9 +1114,9 @@ calcOAprops> <csExt>=  7.64705697E+04 nConv=  8
              <csSca>=  6.31539686E+04 nConv=  8
              <csAbs>=  1.33166011E+04
 
-             <cdExt>=  1.14239345E-10
-             <cdSca>=  1.21711809E-10
-             <cdAbs>= -7.47246443E-12
+             <cdExt>=  1.24865308E-10
+             <cdSca>=  1.34978381E-10
+             <cdAbs>= -1.01130730E-11
 
 calcCs> csExt=  6.76210712E+04 nConv= 11
          csSca=  6.47542965E+04 nConv=  8
@@ -1145,9 +1145,9 @@ calcOAprops> <csExt>=  6.99226009E+04 nConv=  8
              <csSca>=  5.75901355E+04 nConv=  8
              <csAbs>=  1.23324653E+04
 
-             <cdExt>=  9.69341706E-11
-             <cdSca>=  7.83555098E-11
-             <cdAbs>=  1.85786608E-11
+             <cdExt>=  1.12686226E-10
+             <cdSca>=  1.07597697E-10
+             <cdAbs>=  5.08852895E-12
 
 calcCs> csExt=  6.59817817E+04 nConv= 11
          csSca=  6.31884072E+04 nConv=  8
@@ -1176,9 +1176,9 @@ calcOAprops> <csExt>=  6.60985364E+04 nConv=  8
              <csSca>=  5.44849272E+04 nConv=  8
              <csAbs>=  1.16136093E+04
 
-             <cdExt>=  8.83699074E-11
-             <cdSca>=  6.86794128E-11
-             <cdAbs>=  1.96904946E-11
+             <cdExt>=  9.97726575E-11
+             <cdSca>=  8.12511291E-11
+             <cdAbs>=  1.85215284E-11
 
 calcCs> csExt=  6.42505014E+04 nConv= 11
          csSca=  6.15306232E+04 nConv=  8
@@ -1207,9 +1207,9 @@ calcOAprops> <csExt>=  6.47109498E+04 nConv=  8
              <csSca>=  5.32678658E+04 nConv=  8
              <csAbs>=  1.14430841E+04
 
-             <cdExt>=  1.03253200E-10
-             <cdSca>=  6.87876662E-11
-             <cdAbs>=  3.44655343E-11
+             <cdExt>=  8.49174238E-11
+             <cdSca>=  5.95073723E-11
+             <cdAbs>=  2.54100514E-11
 
 calcCs> csExt=  6.24431627E+04 nConv= 11
          csSca=  5.97969386E+04 nConv=  8
@@ -1238,9 +1238,9 @@ calcOAprops> <csExt>=  6.51037492E+04 nConv=  8
              <csSca>=  5.32690116E+04 nConv=  8
              <csAbs>=  1.18347375E+04
 
-             <cdExt>=  1.18282737E-10
-             <cdSca>=  7.42158705E-11
-             <cdAbs>=  4.40668669E-11
+             <cdExt>=  1.18641886E-10
+             <cdSca>=  7.88087106E-11
+             <cdAbs>=  3.98331756E-11
 
 calcCs> csExt=  6.05757586E+04 nConv= 11
          csSca=  5.80032890E+04 nConv=  8
@@ -1269,9 +1269,9 @@ calcOAprops> <csExt>=  6.69780057E+04 nConv=  8
              <csSca>=  5.42283985E+04 nConv=  8
              <csAbs>=  1.27496071E+04
 
-             <cdExt>=  1.45456478E-10
-             <cdSca>=  1.07468707E-10
-             <cdAbs>=  3.79877708E-11
+             <cdExt>=  1.48313801E-10
+             <cdSca>=  1.20482817E-10
+             <cdAbs>=  2.78309839E-11
 
 calcCs> csExt=  5.86639288E+04 nConv= 11
          csSca=  5.61651766E+04 nConv=  8
@@ -1300,9 +1300,9 @@ calcOAprops> <csExt>=  7.02977465E+04 nConv=  8
              <csSca>=  5.61842612E+04 nConv=  8
              <csAbs>=  1.41134853E+04
 
-             <cdExt>=  1.93756146E-10
-             <cdSca>=  1.58538811E-10
-             <cdAbs>=  3.52173350E-11
+             <cdExt>=  1.73917850E-10
+             <cdSca>=  1.42809001E-10
+             <cdAbs>=  3.11088483E-11
 
 calcCs> csExt=  5.67226247E+04 nConv= 11
          csSca=  5.42973652E+04 nConv=  8
@@ -1331,9 +1331,9 @@ calcOAprops> <csExt>=  7.46306674E+04 nConv=  8
              <csSca>=  5.89564209E+04 nConv=  8
              <csAbs>=  1.56742466E+04
 
-             <cdExt>=  2.50297792E-10
-             <cdSca>=  2.52724673E-10
-             <cdAbs>= -2.42688166E-12
+             <cdExt>=  2.46162169E-10
+             <cdSca>=  2.37981334E-10
+             <cdAbs>=  8.18083473E-12
 
 calcCs> csExt=  5.47658505E+04 nConv= 11
          csSca=  5.24136436E+04 nConv=  8
@@ -1362,9 +1362,9 @@ calcOAprops> <csExt>=  7.80040464E+04 nConv=  8
              <csSca>=  6.12232906E+04 nConv=  8
              <csAbs>=  1.67807559E+04
 
-             <cdExt>=  2.91161442E-10
-             <cdSca>=  3.15883439E-10
-             <cdAbs>= -2.47219967E-11
+             <cdExt>=  3.36927565E-10
+             <cdSca>=  3.67113020E-10
+             <cdAbs>= -3.01854552E-11
 
 calcCs> csExt=  5.28064751E+04 nConv= 11
          csSca=  5.05266556E+04 nConv=  8
@@ -1393,9 +1393,9 @@ calcOAprops> <csExt>=  7.70699221E+04 nConv=  8
              <csSca>=  6.04948854E+04 nConv=  8
              <csAbs>=  1.65750367E+04
 
-             <cdExt>=  2.76242786E-10
-             <cdSca>=  3.49983522E-10
-             <cdAbs>= -7.37407360E-11
+             <cdExt>=  2.98066088E-10
+             <cdSca>=  3.42956187E-10
+             <cdAbs>= -4.48900988E-11
 
 calcCs> csExt=  5.08561095E+04 nConv= 11
          csSca=  4.86477897E+04 nConv=  7
@@ -1424,9 +1424,9 @@ calcOAprops> <csExt>=  7.06108415E+04 nConv=  8
              <csSca>=  5.56866407E+04 nConv=  8
              <csAbs>=  1.49242009E+04
 
-             <cdExt>=  3.31773764E-10
-             <cdSca>=  4.39707038E-10
-             <cdAbs>= -1.07933274E-10
+             <cdExt>=  2.42090018E-10
+             <cdSca>=  3.14481688E-10
+             <cdAbs>= -7.23916703E-11
 
 calcCs> csExt=  4.89250419E+04 nConv= 11
          csSca=  4.67871234E+04 nConv=  7
@@ -1455,9 +1455,9 @@ calcOAprops> <csExt>=  6.12927602E+04 nConv=  8
              <csSca>=  4.86471308E+04 nConv=  8
              <csAbs>=  1.26456294E+04
 
-             <cdExt>=  2.36980496E-10
-             <cdSca>=  3.40293160E-10
-             <cdAbs>= -1.03312664E-10
+             <cdExt>=  2.35402040E-10
+             <cdSca>=  3.31914465E-10
+             <cdAbs>= -9.65124252E-11
 
 calcCs> csExt=  4.70222211E+04 nConv= 11
          csSca=  4.49534131E+04 nConv=  7
@@ -1486,9 +1486,9 @@ calcOAprops> <csExt>=  5.22635576E+04 nConv=  8
              <csSca>=  4.17385515E+04 nConv=  8
              <csAbs>=  1.05250062E+04
 
-             <cdExt>=  2.05946407E-10
-             <cdSca>=  3.07443961E-10
-             <cdAbs>= -1.01497554E-10
+             <cdExt>=  1.76626630E-10
+             <cdSca>=  2.67226388E-10
+             <cdAbs>= -9.05997576E-11
 
 calcCs> csExt=  4.51552797E+04 nConv= 11
          csSca=  4.31541208E+04 nConv=  7
@@ -1517,9 +1517,9 @@ calcOAprops> <csExt>=  4.48892140E+04 nConv=  8
              <csSca>=  3.60471659E+04 nConv=  8
              <csAbs>=  8.84204810E+03
 
-             <cdExt>=  1.46093414E-10
-             <cdSca>=  2.28315333E-10
-             <cdAbs>= -8.22219187E-11
+             <cdExt>=  1.66340166E-10
+             <cdSca>=  2.58836352E-10
+             <cdAbs>= -9.24961859E-11
 
 calcCs> csExt=  4.33305886E+04 nConv= 10
          csSca=  4.13954714E+04 nConv=  7
@@ -1548,9 +1548,9 @@ calcOAprops> <csExt>=  3.92708471E+04 nConv=  8
              <csSca>=  3.16922836E+04 nConv=  7
              <csAbs>=  7.57856356E+03
 
-             <cdExt>=  1.08115292E-10
-             <cdSca>=  1.69082777E-10
-             <cdAbs>= -6.09674853E-11
+             <cdExt>=  1.01209571E-10
+             <cdSca>=  1.66618291E-10
+             <cdAbs>= -6.54087204E-11
 
 calcCs> csExt=  4.15533343E+04 nConv= 10
          csSca=  3.96825297E+04 nConv=  7
@@ -1579,9 +1579,9 @@ calcOAprops> <csExt>=  3.50924831E+04 nConv=  7
              <csSca>=  2.84533280E+04 nConv=  7
              <csAbs>=  6.63915501E+03
 
-             <cdExt>=  1.04994525E-10
-             <cdSca>=  1.67223135E-10
-             <cdAbs>= -6.22286106E-11
+             <cdExt>=  7.91903848E-11
+             <cdSca>=  1.28546157E-10
+             <cdAbs>= -4.93557725E-11
 
 calcCs> csExt=  3.98276109E+04 nConv= 10
          csSca=  3.80192930E+04 nConv=  7
@@ -1610,9 +1610,9 @@ calcOAprops> <csExt>=  3.20041250E+04 nConv=  7
              <csSca>=  2.60690312E+04 nConv=  7
              <csAbs>=  5.93509380E+03
 
-             <cdExt>=  7.07780634E-11
-             <cdSca>=  1.26194155E-10
-             <cdAbs>= -5.54160914E-11
+             <cdExt>=  7.99053381E-11
+             <cdSca>=  1.30016518E-10
+             <cdAbs>= -5.01111803E-11
 
 calcCs> csExt=  3.81565227E+04 nConv= 10
          csSca=  3.64087916E+04 nConv=  7
@@ -1641,9 +1641,9 @@ calcOAprops> <csExt>=  2.97246674E+04 nConv=  7
              <csSca>=  2.43240303E+04 nConv=  7
              <csAbs>=  5.40063708E+03
 
-             <cdExt>=  7.29315647E-11
-             <cdSca>=  1.29587379E-10
-             <cdAbs>= -5.66558146E-11
+             <cdExt>=  6.42021853E-11
+             <cdSca>=  1.15510019E-10
+             <cdAbs>= -5.13078334E-11
 
 calcCs> csExt=  3.65422892E+04 nConv= 10
          csSca=  3.48531931E+04 nConv=  7
@@ -1672,9 +1672,9 @@ calcOAprops> <csExt>=  2.80487206E+04 nConv=  7
              <csSca>=  2.30586284E+04 nConv=  7
              <csAbs>=  4.99009221E+03
 
-             <cdExt>=  6.29614400E-11
-             <cdSca>=  1.21247034E-10
-             <cdAbs>= -5.82855941E-11
+             <cdExt>=  5.73658526E-11
+             <cdSca>=  1.04799553E-10
+             <cdAbs>= -4.74337001E-11
 
 calcCs> csExt=  3.49863516E+04 nConv= 10
          csSca=  3.33539061E+04 nConv=  7
@@ -1703,9 +1703,9 @@ calcOAprops> <csExt>=  2.68308738E+04 nConv=  7
              <csSca>=  2.21587884E+04 nConv=  7
              <csAbs>=  4.67208535E+03
 
-             <cdExt>=  4.92671376E-11
-             <cdSca>=  9.11815483E-11
-             <cdAbs>= -4.19144107E-11
+             <cdExt>=  4.99369161E-11
+             <cdSca>=  8.75274088E-11
+             <cdAbs>= -3.75904926E-11
 
 calcCs> csExt=  3.34894748E+04 nConv= 10
          csSca=  3.19116809E+04 nConv=  7
@@ -1734,9 +1734,9 @@ calcOAprops> <csExt>=  2.59690608E+04 nConv=  7
              <csSca>=  2.15441450E+04 nConv=  7
              <csAbs>=  4.42491579E+03
 
-             <cdExt>=  4.15034992E-11
-             <cdSca>=  8.15626603E-11
-             <cdAbs>= -4.00591612E-11
+             <cdExt>=  4.40883591E-11
+             <cdSca>=  7.81572690E-11
+             <cdAbs>= -3.40689099E-11
 
 calcCs> csExt=  3.20518449E+04 nConv= 10
          csSca=  3.05267041E+04 nConv=  7
@@ -1765,9 +1765,9 @@ calcOAprops> <csExt>=  2.53916581E+04 nConv=  7
              <csSca>=  2.11583002E+04 nConv=  7
              <csAbs>=  4.23335797E+03
 
-             <cdExt>=  3.16513403E-11
-             <cdSca>=  6.26602152E-11
-             <cdAbs>= -3.10088748E-11
+             <cdExt>=  2.97135244E-11
+             <cdSca>=  5.33255247E-11
+             <cdAbs>= -2.36120002E-11
 
 calcCs> csExt=  3.06731591E+04 nConv= 10
          csSca=  2.91986866E+04 nConv=  7
@@ -1796,9 +1796,9 @@ calcOAprops> <csExt>=  2.50483223E+04 nConv=  7
              <csSca>=  2.09617619E+04 nConv=  7
              <csAbs>=  4.08656035E+03
 
-             <cdExt>=  2.99034575E-11
-             <cdSca>=  5.91831617E-11
-             <cdAbs>= -2.92797042E-11
+             <cdExt>=  2.56008787E-11
+             <cdSca>=  5.22648697E-11
+             <cdAbs>= -2.66639909E-11
 
 calcCs> csExt=  2.93527081E+04 nConv= 10
          csSca=  2.79269443E+04 nConv=  7
@@ -1827,9 +1827,9 @@ calcOAprops> <csExt>=  2.49036670E+04 nConv=  7
              <csSca>=  2.09269922E+04 nConv=  7
              <csAbs>=  3.97667484E+03
 
-             <cdExt>=  2.43622946E-11
-             <cdSca>=  5.75916055E-11
-             <cdAbs>= -3.32293109E-11
+             <cdExt>=  2.62940322E-11
+             <cdSca>=  5.97164402E-11
+             <cdAbs>= -3.34224080E-11
 
 calcCs> csExt=  2.80894504E+04 nConv= 10
          csSca=  2.67104701E+04 nConv=  7
@@ -1858,9 +1858,9 @@ calcOAprops> <csExt>=  2.49329226E+04 nConv=  7
              <csSca>=  2.10349680E+04 nConv=  7
              <csAbs>=  3.89795458E+03
 
-             <cdExt>=  1.79553359E-11
-             <cdSca>=  4.46305763E-11
-             <cdAbs>= -2.66752403E-11
+             <cdExt>=  2.15167651E-11
+             <cdSca>=  4.88715618E-11
+             <cdAbs>= -2.73547967E-11
 
 calcCs> csExt=  2.68820781E+04 nConv= 10
          csSca=  2.55479983E+04 nConv=  7
@@ -1889,9 +1889,9 @@ calcOAprops> <csExt>=  2.51189393E+04 nConv=  7
              <csSca>=  2.12727892E+04 nConv=  7
              <csAbs>=  3.84615006E+03
 
-             <cdExt>=  1.69600094E-11
-             <cdSca>=  3.59158637E-11
-             <cdAbs>= -1.89558543E-11
+             <cdExt>=  1.23964411E-11
+             <cdSca>=  3.49691285E-11
+             <cdAbs>= -2.25726873E-11
 
 calcCs> csExt=  2.57290745E+04 nConv= 10
          csSca=  2.44380603E+04 nConv=  7
@@ -1920,9 +1920,9 @@ calcOAprops> <csExt>=  2.54500912E+04 nConv=  7
              <csSca>=  2.16319947E+04 nConv=  7
              <csAbs>=  3.81809651E+03
 
-             <cdExt>=  1.71111244E-11
-             <cdSca>=  3.28298100E-11
-             <cdAbs>= -1.57186856E-11
+             <cdExt>=  1.37130434E-11
+             <cdSca>=  3.86091920E-11
+             <cdAbs>= -2.48961486E-11
 
 calcCs> csExt=  2.46287649E+04 nConv= 10
          csSca=  2.33790343E+04 nConv=  7
@@ -1951,9 +1951,9 @@ calcOAprops> <csExt>=  2.59187812E+04 nConv=  7
              <csSca>=  2.21073560E+04 nConv=  7
              <csAbs>=  3.81142514E+03
 
-             <cdExt>=  1.12948544E-11
-             <cdSca>=  2.85410202E-11
-             <cdAbs>= -1.72461659E-11
+             <cdExt>=  7.16324324E-12
+             <cdSca>=  3.29418032E-11
+             <cdAbs>= -2.57785600E-11
 
 calcCs> csExt=  2.35793591E+04 nConv= 10
          csSca=  2.23691864E+04 nConv=  7
@@ -1982,9 +1982,9 @@ calcOAprops> <csExt>=  2.65203429E+04 nConv=  7
              <csSca>=  2.26959876E+04 nConv=  7
              <csAbs>=  3.82435533E+03
 
-             <cdExt>=  1.06590246E-11
-             <cdSca>=  3.10622481E-11
-             <cdAbs>= -2.04032235E-11
+             <cdExt>=  9.25345522E-12
+             <cdSca>=  2.98648321E-11
+             <cdAbs>= -2.06113768E-11
 
 calcCs> csExt=  2.25789889E+04 nConv= 10
          csSca=  2.14067074E+04 nConv=  7
@@ -2013,9 +2013,9 @@ calcOAprops> <csExt>=  2.72521997E+04 nConv=  7
              <csSca>=  2.33966599E+04 nConv=  7
              <csAbs>=  3.85553984E+03
 
-             <cdExt>=  1.09655024E-11
-             <cdSca>=  2.53406888E-11
-             <cdAbs>= -1.43751864E-11
+             <cdExt>=  1.13786066E-11
+             <cdSca>=  3.01603954E-11
+             <cdAbs>= -1.87817887E-11
 
 calcCs> csExt=  2.16257386E+04 nConv= 10
          csSca=  2.04897417E+04 nConv=  7
@@ -2044,9 +2044,9 @@ calcOAprops> <csExt>=  2.81131814E+04 nConv=  7
              <csSca>=  2.42092371E+04 nConv=  7
              <csAbs>=  3.90394438E+03
 
-             <cdExt>=  7.63750300E-12
-             <cdSca>=  2.46247213E-11
-             <cdAbs>= -1.69872183E-11
+             <cdExt>=  7.33514225E-12
+             <cdSca>=  2.06279671E-11
+             <cdAbs>= -1.32928248E-11
 
 calcCs> csExt=  2.07176708E+04 nConv= 10
          csSca=  1.96164132E+04 nConv=  7
@@ -2075,9 +2075,9 @@ calcOAprops> <csExt>=  2.91029282E+04 nConv=  7
              <csSca>=  2.51341793E+04 nConv=  7
              <csAbs>=  3.96874887E+03
 
-             <cdExt>=  4.04251118E-12
-             <cdSca>=  2.00693717E-11
-             <cdAbs>= -1.60268605E-11
+             <cdExt>=  3.01567400E-12
+             <cdSca>=  2.09385339E-11
+             <cdAbs>= -1.79228599E-11
 
 calcCs> csExt=  1.98528479E+04 nConv= 10
          csSca=  1.87848458E+04 nConv=  7
@@ -2106,9 +2106,9 @@ calcOAprops> <csExt>=  3.02213255E+04 nConv=  7
              <csSca>=  2.61720643E+04 nConv=  7
              <csAbs>=  4.04926120E+03
 
-             <cdExt>=  4.59566720E-13
-             <cdSca>=  1.60536550E-11
-             <cdAbs>= -1.55940883E-11
+             <cdExt>=  3.18101209E-12
+             <cdSca>=  2.21375068E-11
+             <cdAbs>= -1.89564947E-11
 
 calcCs> csExt=  1.90293492E+04 nConv= 10
          csSca=  1.79931796E+04 nConv=  7
@@ -2137,9 +2137,9 @@ calcOAprops> <csExt>=  3.14679295E+04 nConv=  7
              <csSca>=  2.73230927E+04 nConv=  7
              <csAbs>=  4.14483685E+03
 
-             <cdExt>=  2.45218883E-12
-             <cdSca>=  8.37433200E-12
-             <cdAbs>= -5.92214317E-12
+             <cdExt>=  2.80298088E-12
+             <cdSca>=  1.94009593E-11
+             <cdAbs>= -1.65979784E-11
 
 calcCs> csExt=  1.82452851E+04 nConv= 10
          csSca=  1.72395852E+04 nConv=  7
@@ -2168,9 +2168,9 @@ calcOAprops> <csExt>=  3.28413496E+04 nConv=  7
              <csSca>=  2.85865498E+04 nConv=  7
              <csAbs>=  4.25479978E+03
 
-             <cdExt>= -4.55059522E-13
-             <cdSca>=  1.58067806E-11
-             <cdAbs>= -1.62618402E-11
+             <cdExt>=  3.13111729E-13
+             <cdSca>=  1.13896879E-11
+             <cdAbs>= -1.10765762E-11
 
 calcCs> csExt=  1.74988076E+04 nConv= 10
          csSca=  1.65222737E+04 nConv=  7
@@ -2199,9 +2199,9 @@ calcOAprops> <csExt>=  3.43385641E+04 nConv=  7
              <csSca>=  2.99602031E+04 nConv=  7
              <csAbs>=  4.37836095E+03
 
-             <cdExt>= -4.78030253E-13
-             <cdSca>=  1.05014461E-11
-             <cdAbs>= -1.09794764E-11
+             <cdExt>= -2.55133660E-12
+             <cdSca>=  8.22688286E-12
+             <cdAbs>= -1.07782195E-11
 
 calcCs> csExt=  1.67881187E+04 nConv= 10
          csSca=  1.58395047E+04 nConv=  7
@@ -2230,9 +2230,9 @@ calcOAprops> <csExt>=  3.59541577E+04 nConv=  7
              <csSca>=  3.14396248E+04 nConv=  7
              <csAbs>=  4.51453295E+03
 
-             <cdExt>= -3.25784497E-16
-             <cdSca>=  1.19627924E-11
-             <cdAbs>= -1.19631182E-11
+             <cdExt>= -2.59470515E-12
+             <cdSca>=  8.33006636E-12
+             <cdAbs>= -1.09247715E-11
 
 calcCs> csExt=  1.61114773E+04 nConv= 10
          csSca=  1.51895932E+04 nConv=  7
@@ -2261,9 +2261,9 @@ calcOAprops> <csExt>=  3.76794815E+04 nConv=  7
              <csSca>=  3.30174410E+04 nConv=  7
              <csAbs>=  4.66204041E+03
 
-             <cdExt>= -3.34238991E-12
-             <cdSca>=  6.71826306E-12
-             <cdAbs>= -1.00606530E-11
+             <cdExt>= -5.77983375E-12
+             <cdSca>=  7.02953883E-12
+             <cdAbs>= -1.28093726E-11
 
 calcCs> csExt=  1.54672029E+04 nConv= 10
          csSca=  1.45709130E+04 nConv=  7
@@ -2292,9 +2292,9 @@ calcOAprops> <csExt>=  3.95017577E+04 nConv=  7
              <csSca>=  3.46825292E+04 nConv=  7
              <csAbs>=  4.81922855E+03
 
-             <cdExt>= -1.12281764E-11
-             <cdSca>=  5.27100525E-12
-             <cdAbs>= -1.64991817E-11
+             <cdExt>= -1.40719624E-11
+             <cdSca>= -2.51848387E-12
+             <cdAbs>= -1.15534785E-11
 
 calcCs> csExt=  1.48536795E+04 nConv= 10
          csSca=  1.39819003E+04 nConv=  7
@@ -2323,9 +2323,9 @@ calcOAprops> <csExt>=  4.14031810E+04 nConv=  7
              <csSca>=  3.64192062E+04 nConv=  7
              <csAbs>=  4.98397474E+03
 
-             <cdExt>= -5.99904422E-12
-             <cdSca>=  2.48263169E-12
-             <cdAbs>= -8.48167591E-12
+             <cdExt>= -6.31782171E-12
+             <cdSca>= -2.18234310E-12
+             <cdAbs>= -4.13547861E-12
 
 calcCs> csExt=  1.42693566E+04 nConv= 10
          csSca=  1.34210551E+04 nConv=  7
@@ -2354,9 +2354,9 @@ calcOAprops> <csExt>=  4.33600966E+04 nConv=  7
              <csSca>=  3.82064850E+04 nConv=  7
              <csAbs>=  5.15361155E+03
 
-             <cdExt>= -1.21345883E-11
-             <cdSca>= -1.51609761E-12
-             <cdAbs>= -1.06184907E-11
+             <cdExt>= -1.19776477E-11
+             <cdSca>=  1.40204738E-12
+             <cdAbs>= -1.33796951E-11
 
 calcCs> csExt=  1.37127505E+04 nConv= 10
          csSca=  1.28869424E+04 nConv=  7
@@ -2385,9 +2385,9 @@ calcOAprops> <csExt>=  4.53423797E+04 nConv=  7
              <csSca>=  4.00175066E+04 nConv=  7
              <csAbs>=  5.32487309E+03
 
-             <cdExt>= -1.53216034E-11
-             <cdSca>= -2.38129170E-12
-             <cdAbs>= -1.29403117E-11
+             <cdExt>= -1.19956803E-11
+             <cdSca>= -5.42291175E-12
+             <cdAbs>= -6.57276854E-12
 
 calcCs> csExt=  1.31824443E+04 nConv= 10
          csSca=  1.23781915E+04 nConv=  7
@@ -2416,9 +2416,9 @@ calcOAprops> <csExt>=  4.73131704E+04 nConv=  7
              <csSca>=  4.18192905E+04 nConv=  7
              <csAbs>=  5.49387991E+03
 
-             <cdExt>= -7.19898380E-12
-             <cdSca>= -4.91981972E-12
-             <cdAbs>= -2.27916407E-12
+             <cdExt>= -1.27244086E-11
+             <cdSca>= -1.67202000E-12
+             <cdAbs>= -1.10523886E-11
 
 calcCs> csExt=  1.26770871E+04 nConv= 10
          csSca=  1.18934962E+04 nConv=  7
@@ -2447,9 +2447,9 @@ calcOAprops> <csExt>=  4.92291441E+04 nConv=  7
              <csSca>=  4.35729648E+04 nConv=  6
              <csAbs>=  5.65617926E+03
 
-             <cdExt>= -7.30795573E-12
-             <cdSca>= -8.28137792E-12
-             <cdAbs>=  9.73422198E-13
+             <cdExt>= -1.56459816E-11
+             <cdSca>= -6.04875155E-12
+             <cdAbs>= -9.59723004E-12
 
 calcCs> csExt=  1.21953931E+04 nConv= 10
          csSca=  1.14316128E+04 nConv=  7
@@ -2478,9 +2478,9 @@ calcOAprops> <csExt>=  5.10414890E+04 nConv=  7
              <csSca>=  4.52346328E+04 nConv=  6
              <csAbs>=  5.80685620E+03
 
-             <cdExt>= -1.25672417E-11
-             <cdSca>= -5.84390375E-12
-             <cdAbs>= -6.72333796E-12
+             <cdExt>= -1.62494541E-11
+             <cdSca>= -5.67743055E-12
+             <cdAbs>= -1.05720235E-11
 
 calcCs> csExt=  1.17361397E+04 nConv=  9
          csSca=  1.09913595E+04 nConv=  7
@@ -2509,9 +2509,9 @@ calcOAprops> <csExt>=  5.26977131E+04 nConv=  6
              <csSca>=  4.67569876E+04 nConv=  6
              <csAbs>=  5.94072552E+03
 
-             <cdExt>= -1.91345033E-11
-             <cdSca>= -8.46597525E-12
-             <cdAbs>= -1.06685280E-11
+             <cdExt>= -1.33317878E-11
+             <cdSca>= -2.88024421E-12
+             <cdAbs>= -1.04515436E-11
 
 calcCs> csExt=  1.12981660E+04 nConv=  9
          csSca=  1.05716140E+04 nConv=  7
@@ -2540,9 +2540,9 @@ calcOAprops> <csExt>=  5.41442982E+04 nConv=  6
              <csSca>=  4.80916945E+04 nConv=  6
              <csAbs>=  6.05260365E+03
 
-             <cdExt>= -1.65898424E-11
-             <cdSca>= -9.08473865E-12
-             <cdAbs>= -7.50510377E-12
+             <cdExt>= -1.63993679E-11
+             <cdSca>= -6.14421709E-12
+             <cdAbs>= -1.02551508E-11
 
 calcCs> csExt=  1.08803706E+04 nConv=  9
          csSca=  1.01713116E+04 nConv=  7
@@ -2571,9 +2571,9 @@ calcOAprops> <csExt>=  5.53300689E+04 nConv=  6
              <csSca>=  4.91924245E+04 nConv=  6
              <csAbs>=  6.13764449E+03
 
-             <cdExt>= -2.03173787E-11
-             <cdSca>= -1.37510068E-11
-             <cdAbs>= -6.56637188E-12
+             <cdExt>= -1.70444637E-11
+             <cdSca>= -1.08826552E-11
+             <cdAbs>= -6.16180853E-12
 
 calcCs> csExt=  1.04817093E+04 nConv=  9
          csSca=  9.78944329E+03 nConv=  7
@@ -2602,9 +2602,9 @@ calcOAprops> <csExt>=  5.62099650E+04 nConv=  6
              <csSca>=  5.00182589E+04 nConv=  6
              <csAbs>=  6.19170611E+03
 
-             <cdExt>= -1.68897723E-11
-             <cdSca>= -1.09269479E-11
-             <cdAbs>= -5.96282445E-12
+             <cdExt>= -1.70916039E-11
+             <cdSca>= -6.24298535E-12
+             <cdAbs>= -1.08486185E-11
 
 calcCs> csExt=  1.01011931E+04 nConv=  9
          csSca=  9.42505320E+03 nConv=  7
@@ -2633,9 +2633,9 @@ calcOAprops> <csExt>=  5.67487483E+04 nConv=  6
              <csSca>=  5.05370473E+04 nConv=  6
              <csAbs>=  6.21170100E+03
 
-             <cdExt>= -1.73450437E-11
-             <cdSca>= -1.63737470E-11
-             <cdAbs>= -9.71296781E-13
+             <cdExt>= -1.75692634E-11
+             <cdSca>= -6.14225869E-12
+             <cdAbs>= -1.14270047E-11
 
 calcCs> csExt=  9.73788559E+03 nConv=  9
          csSca=  9.07723653E+03 nConv=  7
@@ -2664,9 +2664,9 @@ calcOAprops> <csExt>=  5.69241005E+04 nConv=  6
              <csSca>=  5.07282240E+04 nConv=  6
              <csAbs>=  6.19587647E+03
 
-             <cdExt>= -1.80103238E-11
-             <cdSca>= -1.47102898E-11
-             <cdAbs>= -3.30003401E-12
+             <cdExt>= -1.80172238E-11
+             <cdSca>= -1.45996427E-11
+             <cdAbs>= -3.41758113E-12
 
 calcCs> csExt=  9.39090047E+03 nConv=  9
          csSca=  8.74513713E+03 nConv=  7
@@ -2695,9 +2695,9 @@ calcOAprops> <csExt>=  5.67286004E+04 nConv=  6
              <csSca>=  5.05846229E+04 nConv=  6
              <csAbs>=  6.14397750E+03
 
-             <cdExt>= -1.80948349E-11
-             <cdSca>= -1.17431894E-11
-             <cdAbs>= -6.35164552E-12
+             <cdExt>= -1.78773201E-11
+             <cdSca>= -8.15844257E-12
+             <cdAbs>= -9.71887749E-12
 
 calcCs> csExt=  9.05939945E+03 nConv=  9
          csSca=  8.42794522E+03 nConv=  7
@@ -2726,9 +2726,9 @@ calcOAprops> <csExt>=  5.61702439E+04 nConv=  6
              <csSca>=  5.01129811E+04 nConv=  6
              <csAbs>=  6.05726285E+03
 
-             <cdExt>= -1.83442022E-11
-             <cdSca>= -9.85399176E-12
-             <cdAbs>= -8.49021045E-12
+             <cdExt>= -2.16697605E-11
+             <cdSca>= -6.40759860E-12
+             <cdAbs>= -1.52621619E-11
 
 calcCs> csExt=  8.74258976E+03 nConv=  9
          csSca=  8.12489511E+03 nConv=  7
@@ -2757,9 +2757,9 @@ calcOAprops> <csExt>=  5.52714259E+04 nConv=  6
              <csSca>=  4.93330549E+04 nConv=  6
              <csAbs>=  5.93837103E+03
 
-             <cdExt>= -1.82063054E-11
-             <cdSca>= -1.18336202E-11
-             <cdAbs>= -6.37268520E-12
+             <cdExt>= -1.12326049E-11
+             <cdSca>= -4.74528486E-12
+             <cdAbs>= -6.48732004E-12
 
 calcCs> csExt=  8.43972188E+03 nConv=  9
          csSca=  7.83526297E+03 nConv=  7
@@ -2788,9 +2788,9 @@ calcOAprops> <csExt>=  5.40665840E+04 nConv=  6
              <csSca>=  4.82755234E+04 nConv=  6
              <csAbs>=  5.79106061E+03
 
-             <cdExt>= -1.83423323E-11
-             <cdSca>= -1.20758186E-11
-             <cdAbs>= -6.26651372E-12
+             <cdExt>= -1.84493374E-11
+             <cdSca>= -1.02168880E-11
+             <cdAbs>= -8.23244944E-12
 
 calcCs> csExt=  8.15008729E+03 nConv=  9
          csSca=  7.55836466E+03 nConv=  6
@@ -2819,9 +2819,9 @@ calcOAprops> <csExt>=  5.25989261E+04 nConv=  6
              <csSca>=  4.69790569E+04 nConv=  6
              <csAbs>=  5.61986925E+03
 
-             <cdExt>= -1.15492859E-11
-             <cdSca>= -1.24649851E-11
-             <cdAbs>=  9.15699177E-13
+             <cdExt>= -1.15591447E-11
+             <cdSca>= -6.78450093E-12
+             <cdAbs>= -4.77464377E-12
 
 calcCs> csExt=  7.87301631E+03 nConv=  9
          csSca=  7.29355365E+03 nConv=  6
@@ -2850,9 +2850,9 @@ calcOAprops> <csExt>=  5.09167693E+04 nConv=  6
              <csSca>=  4.54870247E+04 nConv=  6
              <csAbs>=  5.42974459E+03
 
-             <cdExt>= -1.16056019E-11
-             <cdSca>= -8.90053660E-12
-             <cdAbs>= -2.70506525E-12
+             <cdExt>= -1.16058178E-11
+             <cdSca>= -4.50601364E-12
+             <cdAbs>= -7.09980418E-12
 
 calcCs> csExt=  7.60787604E+03 nConv=  9
          csSca=  7.04021897E+03 nConv=  6
@@ -2881,9 +2881,9 @@ calcOAprops> <csExt>=  4.90699958E+04 nConv=  6
              <csSca>=  4.38442994E+04 nConv=  6
              <csAbs>=  5.22569642E+03
 
-             <cdExt>= -1.52350217E-11
-             <cdSca>= -1.07633684E-11
-             <cdAbs>= -4.47165338E-12
+             <cdExt>= -1.17616264E-11
+             <cdSca>= -6.51842645E-12
+             <cdAbs>= -5.24319993E-12
 
 calcCs> csExt=  7.35406832E+03 nConv=  9
          csSca=  6.79778330E+03 nConv=  6
@@ -2912,9 +2912,9 @@ calcOAprops> <csExt>=  4.71070175E+04 nConv=  6
              <csSca>=  4.20945110E+04 nConv=  6
              <csAbs>=  5.01250647E+03
 
-             <cdExt>= -1.20457233E-11
-             <cdSca>= -9.16221613E-12
-             <cdAbs>= -2.88350713E-12
+             <cdExt>= -1.19323654E-11
+             <cdSca>= -1.00614706E-11
+             <cdAbs>= -1.87089480E-12
 
 calcCs> csExt=  7.11102786E+03 nConv=  9
          csSca=  6.56570107E+03 nConv=  6
@@ -2943,9 +2943,9 @@ calcOAprops> <csExt>=  4.50724740E+04 nConv=  6
              <csSca>=  4.02779586E+04 nConv=  6
              <csAbs>=  4.79451541E+03
 
-             <cdExt>= -1.18675736E-11
-             <cdSca>= -1.10135428E-11
-             <cdAbs>= -8.54030856E-13
+             <cdExt>= -8.05419966E-12
+             <cdSca>= -6.35240878E-12
+             <cdAbs>= -1.70179089E-12
 
 calcCs> csExt=  6.87822037E+03 nConv=  9
          csSca=  6.34345674E+03 nConv=  6
@@ -2974,9 +2974,9 @@ calcOAprops> <csExt>=  4.30057297E+04 nConv=  6
              <csSca>=  3.84302388E+04 nConv=  6
              <csAbs>=  4.57549083E+03
 
-             <cdExt>= -8.42245512E-12
-             <cdSca>= -3.59482413E-12
-             <cdAbs>= -4.82763099E-12
+             <cdExt>= -1.57626620E-11
+             <cdSca>= -1.01047559E-11
+             <cdAbs>= -5.65790610E-12
 
 calcCs> csExt=  6.65514083E+03 nConv=  9
          csSca=  6.13056306E+03 nConv=  6
@@ -3005,9 +3005,9 @@ calcOAprops> <csExt>=  4.09401083E+04 nConv=  6
              <csSca>=  3.65815404E+04 nConv=  6
              <csAbs>=  4.35856790E+03
 
-             <cdExt>= -1.19545037E-11
-             <cdSca>= -7.42363687E-12
-             <cdAbs>= -4.53086686E-12
+             <cdExt>= -1.23164125E-11
+             <cdSca>= -6.52228473E-12
+             <cdAbs>= -5.79412775E-12
 
 calcCs> csExt=  6.44131185E+03 nConv=  9
          csSca=  5.92655952E+03 nConv=  6
@@ -3036,9 +3036,9 @@ calcOAprops> <csExt>=  3.89027317E+04 nConv=  6
              <csSca>=  3.47564836E+04 nConv=  6
              <csAbs>=  4.14624809E+03
 
-             <cdExt>= -4.69409729E-12
-             <cdSca>=  9.79357973E-13
-             <cdAbs>= -5.67345527E-12
+             <cdExt>= -4.33466248E-12
+             <cdSca>= -5.53814512E-12
+             <cdAbs>=  1.20348264E-12
 
 calcCs> csExt=  6.23628210E+03 nConv=  9
          csSca=  5.73101075E+03 nConv=  6
@@ -3067,9 +3067,9 @@ calcOAprops> <csExt>=  3.69147978E+04 nConv=  6
              <csSca>=  3.29743590E+04 nConv=  6
              <csAbs>=  3.94043875E+03
 
-             <cdExt>= -6.33693860E-12
-             <cdSca>= -7.53862863E-12
-             <cdAbs>=  1.20169003E-12
+             <cdExt>= -1.05808291E-11
+             <cdSca>= -3.61371383E-12
+             <cdAbs>= -6.96711530E-12
 
 calcCs> csExt=  6.03962479E+03 nConv=  9
          csSca=  5.54350518E+03 nConv=  6
@@ -3098,9 +3098,9 @@ calcOAprops> <csExt>=  3.49921399E+04 nConv=  6
              <csSca>=  3.12496222E+04 nConv=  6
              <csAbs>=  3.74251779E+03
 
-             <cdExt>= -6.47906723E-12
-             <cdSca>= -1.86007270E-12
-             <cdAbs>= -4.61899453E-12
+             <cdExt>= -1.02984152E-11
+             <cdSca>= -4.54559537E-12
+             <cdAbs>= -5.75281986E-12
 
 calcCs> csExt=  5.85093629E+03 nConv=  9
          csSca=  5.36365359E+03 nConv=  6
@@ -3129,9 +3129,9 @@ calcOAprops> <csExt>=  3.31459343E+04 nConv=  6
              <csSca>=  2.95925241E+04 nConv=  6
              <csAbs>=  3.55341021E+03
 
-             <cdExt>= -8.43425082E-12
-             <cdSca>= -2.97885143E-12
-             <cdAbs>= -5.45539939E-12
+             <cdExt>= -6.50259555E-12
+             <cdSca>= -1.45345052E-12
+             <cdAbs>= -5.04914503E-12
 
 calcCs> csExt=  5.66983480E+03 nConv=  9
          csSca=  5.19108787E+03 nConv=  6
@@ -3160,9 +3160,9 @@ calcOAprops> <csExt>=  3.13834537E+04 nConv=  6
              <csSca>=  2.80097866E+04 nConv=  6
              <csAbs>=  3.37366713E+03
 
-             <cdExt>= -6.52689748E-12
-             <cdSca>= -6.86889045E-12
-             <cdAbs>=  3.41992968E-13
+             <cdExt>= -4.44098161E-12
+             <cdSca>= -2.48445430E-12
+             <cdAbs>= -1.95652731E-12
 
 calcCs> csExt=  5.49595908E+03 nConv=  9
          csSca=  5.02545978E+03 nConv=  6
@@ -3180,4 +3180,4 @@ calcCs> csExt=  4.58385397E+04 nConv=  8
          csSca=  4.09616968E+04 nConv=  6
          csAbs=  4.87684286E+03
 
-termsProgram> Program run time (CPU & real in s):  3.936E+02  1.037E+02
+termsProgram> Program run time (CPU & real in s):  4.130E+01  4.095E+01

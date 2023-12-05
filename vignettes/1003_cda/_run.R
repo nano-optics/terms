@@ -1,7 +1,7 @@
 setwd(here::here('vignettes/1003_cda'))
 
 ## ----load----
-library(terms)
+suppressPackageStartupMessages(require(terms))
 library(ggplot2)
 library(R.matlab)
 theme_set(theme_grey())

@@ -16,9 +16,9 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r demo, message=FALSE, echo=FALSE}
+```{r demo, message=FALSE, echo=FALSE, warning=FALSE}
 library(knitr)
-library(terms)
+suppressPackageStartupMessages(require(terms))
 library(ggforce)
 library(rhdf5)
 options(cli.num_colors = 1)
@@ -34,7 +34,7 @@ do.call(read_chunk, list(path = "_run.R"))
 This example illustrates the calculation of near-field maps at a specific wavelength. The structure consists of two core-shell spheres `Au@Ag` in water with a 1 nm gap. 
 
 ```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
-library(terms)
+suppressPackageStartupMessages(require(terms))
 cat('  <style>
 .x3d_scene {
 float:right;

@@ -16,9 +16,9 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r demo, message=FALSE, echo=FALSE}
+```{r demo, message=FALSE, echo=FALSE, warning=FALSE}
 library(knitr)
-library(terms)
+suppressPackageStartupMessages(require(terms))
 library(dplyr)
 options(cli.num_colors = 1)
 theme_set(theme_grey())
@@ -32,7 +32,7 @@ do.call(knitr::read_chunk, list(path = "_run.R"))
 This example illustrates on a very simple case the calculation of far-field spectra for absorption, scattering, and extinction. The structure consists of two silver spheres in water, and all parameters are kept to their default values. 
 
 ```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
-library(terms)
+suppressPackageStartupMessages(require(terms))
 cat('  <style>
 .x3d_scene {
 float:right;

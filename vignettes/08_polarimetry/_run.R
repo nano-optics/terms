@@ -2,7 +2,7 @@ library(here)
 setwd(here('vignettes/08_polarimetry'))
 
 ## ----load----
-library(terms)
+suppressPackageStartupMessages(require(terms))
 theme_set(theme_grey())
 
 ## ----run----

@@ -2,7 +2,7 @@ library(here)
 setwd(here('vignettes/09_spectrum_near_field'))
 
 ## ----load----
-library(terms)
+suppressPackageStartupMessages(require(terms))
 library(ggforce)
 theme_set(theme_grey())
 

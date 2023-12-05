@@ -1,6 +1,6 @@
 setwd(here::here('vignettes/03_nearfield_coreshells/'))
 ## ----load----
-library(terms)
+suppressPackageStartupMessages(require(terms))
 library(ggforce)
 library(rhdf5)
 theme_set(theme_grey())

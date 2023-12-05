@@ -1,7 +1,7 @@
 setwd(here::here('vignettes/02_angular_dispersion/'))
 
 ## ----load----
-library(terms)
+suppressPackageStartupMessages(require(terms))
 library(ggplot2)
 theme_set(theme_grey())
 

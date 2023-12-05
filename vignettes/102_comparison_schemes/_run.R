@@ -2,7 +2,7 @@ library(here)
 setwd(here('vignettes/102_comparison_schemes'))
 
 ## ----load---
-library(terms)
+suppressPackageStartupMessages(require(terms))
 library(glue)
 library(purrr)
 library(ggplot2)

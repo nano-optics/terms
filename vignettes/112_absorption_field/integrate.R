@@ -1,7 +1,7 @@
 setwd(here::here('vignettes/109_individual_absorption'))
 
 ## ----load----
-library(terms)
+suppressPackageStartupMessages(require(terms))
 theme_set(theme_grey())
 
 ## ----tpl----

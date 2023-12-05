@@ -4,7 +4,7 @@ getwd()
 
 ## ----params----
 
-library(terms)
+suppressPackageStartupMessages(require(terms))
 library(dplyr)
 options(cli.num_colors = 1)
 par1 <- crossing(Npart = c(1, 2, 5, seq(10, 40, by = 10)),
@@ -81,7 +81,7 @@ for(ii in 1:nrow(params)){
 
 
 ## ----read---
-library(terms)
+suppressPackageStartupMessages(require(terms))
 theme_set(theme_grey())
 
 

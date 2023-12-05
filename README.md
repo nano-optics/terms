@@ -29,47 +29,47 @@ to simulate particles and systems of particles in random orientation.
 
 The possible computations are divided into three main modes:
 
--   Far-field quantities (absorption, scattering, extinction, circular
-    dichroism) for multiple wavelengths and angles of incidence, as well
-    as orientation-averages
--   Near-field calculations for multiple wavelengths and incident
-    angles, also computing the local degree of chirality, as well as
-    orientation-averages
--   Stokes parameters and differential scattering cross-sections for
-    multiple incidence or scattering angles
+- Far-field quantities (absorption, scattering, extinction, circular
+  dichroism) for multiple wavelengths and angles of incidence, as well
+  as orientation-averages
+- Near-field calculations for multiple wavelengths and incident angles,
+  also computing the local degree of chirality, as well as
+  orientation-averages
+- Stokes parameters and differential scattering cross-sections for
+  multiple incidence or scattering angles
 
 The computational cost scales with the size of the linear system,
 proportional to the number of particles Np, and to the square of the
-maximum multipolar order Nmax. On a typical PC we may treat up to \~500
-particles with Nmax=1, and a dimer with Nmax up to \~60.
+maximum multipolar order Nmax. On a typical PC we may treat up to ~500
+particles with Nmax=1, and a dimer with Nmax up to ~60.
 
 Notable features of TERMS include:
 
--   Incident plane waves along arbitrary directions, with linear or
-    circular polarisation
--   Built-in calculation of individual *T*-matrices for coated spheres;
-    import of general *T*-matrices from other programs
-    (e.g. [SMARTIES](https://www.victoria.ac.nz/scps/research/research-groups/raman-lab/numerical-tools/smarties))
--   Built-in dielectric functions for common materials such as Au, Ag,
-    Al, Cr, Pt, Pd, Si, and Water, or from tabulated values
--   Per-layer absorption in layered spheres
--   Orientation-averaging of far-field cross-sections, as well as linear
-    and circular dichroism
--   Near-field maps of electric and magnetic field components, E^2, E^4,
-    local degree of chirality
--   Calculation of the global cluster *T*-matrix
--   “Masking” of specific multipolar orders
--   Calculation of Stokes parameters, phase matrix, differential
-    scattering
--   Plain text or HDF5 I/O format
--   Possible compilation in quad-precision
+- Incident plane waves along arbitrary directions, with linear or
+  circular polarisation
+- Built-in calculation of individual *T*-matrices for coated spheres;
+  import of general *T*-matrices from other programs
+  (e.g. [SMARTIES](https://www.victoria.ac.nz/scps/research/research-groups/raman-lab/numerical-tools/smarties))
+- Built-in dielectric functions for common materials such as Au, Ag, Al,
+  Cr, Pt, Pd, Si, and Water, or from tabulated values
+- Per-layer absorption in layered spheres
+- Orientation-averaging of far-field cross-sections, as well as linear
+  and circular dichroism
+- Near-field maps of electric and magnetic field components, E^2, E^4,
+  local degree of chirality
+- Calculation of the global cluster *T*-matrix
+- “Masking” of specific multipolar orders
+- Calculation of Stokes parameters, phase matrix, differential
+  scattering
+- Plain text or HDF5 I/O format
+- Possible compilation in quad-precision
 
 ### System requirements
 
--   Fortran 90 compiler
--   Cmake
--   (optional) HDF5 library
--   (optional) LAPACK
+- Fortran 90 compiler
+- Cmake
+- (optional) HDF5 library
+- (optional) LAPACK
 
 The electromagnetic field is expanded in the basis of vector spherical
 waves, with the Bessel/Hankel functions computed using
@@ -110,7 +110,7 @@ Edit ‘buildTERMS.sh’ to specify a compiler other than
 
 We recommend downloading the [latest release
 here](https://github.com/nano-optics/terms/releases)
-\[`terms_code_1.0.0(.zip|.tar)`\]. You can also browse/clone/fork the
+\[`terms_code_1.0.2(.zip|.tar)`\]. You can also browse/clone/fork the
 [entire repository](https://github.com/nano-optics/terms), but note that
 it contains many files used to generate the website, which are not
 relevant for using TERMS.
@@ -183,58 +183,60 @@ publications listed below if relevant:
 
 <div style="display: none;">
 
-<sup>1</sup>,,<sup>2</sup>,<sup>3</sup>,<sup>4</sup>,<sup>5</sup>,<sup>6</sup>,<sup>7</sup><sup>8</sup>
+<sup>1</sup>,<sup>2</sup>,<sup>3</sup>,<sup>4</sup>,<sup>5</sup>,<sup>6</sup>,<sup>7</sup>,<sup>8</sup>,<sup>9</sup>
 
 </div>
 
-<div id="refs" class="references csl-bib-body">
+<div id="refs" class="references csl-bib-body" entry-spacing="0">
 
 <div id="ref-Schebarchov:2022wc" class="csl-entry">
 
-<span class="csl-left-margin">(1) </span><span
-class="csl-right-inline">Schebarchov, D.; Fazel-Najafabadi, A.; Le Ru,
-E. C.; Auguié, B. Multiple Scattering of Light in Nanoparticle
-Assemblies: User Guide for the Terms Program. *Journal of Quantitative
-Spectroscopy and Radiative Transfer* **2022**, 108131.
-https://doi.org/<https://doi.org/10.1016/j.jqsrt.2022.108131>.</span>
+<span class="csl-left-margin">(1)
+</span><span class="csl-right-inline">Schebarchov, D.; Fazel-Najafabadi,
+A.; Le Ru, E. C.; Auguié, B. Multiple Scattering of Light in
+Nanoparticle Assemblies: User Guide for the Terms Program. *Journal of
+Quantitative Spectroscopy and Radiative Transfer* **2022**, 108131.
+<https://doi.org/10.1016/j.jqsrt.2022.108131>.</span>
 
 </div>
 
 <div id="ref-Schebarchov:2021ut" class="csl-entry">
 
-<span class="csl-left-margin">(2) </span><span
-class="csl-right-inline">Schebarchov, D.; Fazel-Najafabadi, A.; Le Ru,
-E. C.; Auguié, B. *TERMS Website*; 2021.
+<span class="csl-left-margin">(2)
+</span><span class="csl-right-inline">Schebarchov, D.; Fazel-Najafabadi,
+A.; Le Ru, E. C.; Auguié, B. *TERMS Website*; 2021.
 <https://doi.org/10.5281/zenodo.5703291>.</span>
 
 </div>
 
 <div id="ref-Somerville:2016aa" class="csl-entry">
 
-<span class="csl-left-margin">(3) </span><span
-class="csl-right-inline">Somerville, W. R. C.; Auguié, B.; Le Ru, E. C.
-SMARTIES: User-Friendly Codes for Fast and Accurate Calculations of
-Light Scattering by Spheroids. *J. Quant. Spectrosc. Ra.* **2016**,
-*174*, 39–55. <https://doi.org/10.1016/j.jqsrt.2016.01.005>.</span>
+<span class="csl-left-margin">(3)
+</span><span class="csl-right-inline">Somerville, W. R. C.; Auguié, B.;
+Le Ru, E. C. SMARTIES: User-Friendly Codes for Fast and Accurate
+Calculations of Light Scattering by Spheroids. *J. Quant. Spectrosc.
+Ra.* **2016**, *174*, 39–55.
+<https://doi.org/10.1016/j.jqsrt.2016.01.005>.</span>
 
 </div>
 
 <div id="ref-schebarchov2019mind" class="csl-entry">
 
-<span class="csl-left-margin">(4) </span><span
-class="csl-right-inline">Schebarchov, D.; Le Ru, E. C.; Grand, J.;
-Auguié, B. Mind the Gap: Testing the Rayleigh Hypothesis in *T*-Matrix
-Calculations with Adjacent Spheroids. *Optics express* **2019**, *27*
-(24), 35750–35760. <https://doi.org/10.1364/OE.27.035750>.</span>
+<span class="csl-left-margin">(4)
+</span><span class="csl-right-inline">Schebarchov, D.; Le Ru, E. C.;
+Grand, J.; Auguié, B. Mind the Gap: Testing the Rayleigh Hypothesis in
+$T$-Matrix Calculations with Adjacent Spheroids. *Optics express*
+**2019**, *27* (24), 35750–35760.
+<https://doi.org/10.1364/OE.27.035750>.</span>
 
 </div>
 
 <div id="ref-Lee:2020aa" class="csl-entry">
 
-<span class="csl-left-margin">(5) </span><span
-class="csl-right-inline">Lee, S.; Hwang, H.; Lee, W.; Schebarchov, D.;
-Wy, Y.; Grand, J.; Augui’e, B.; Wi, D. H.; Cort’es, E.; Han, S. W.
-Core–Shell Bimetallic Nanoparticle Trimers for Efficient
+<span class="csl-left-margin">(5)
+</span><span class="csl-right-inline">Lee, S.; Hwang, H.; Lee, W.;
+Schebarchov, D.; Wy, Y.; Grand, J.; Auguié, B.; Wi, D. H.; Cort’es, E.;
+Han, S. W. Core–Shell Bimetallic Nanoparticle Trimers for Efficient
 Light-to-Chemical Energy Conversion. *ACS Energy Letters* **2020**, *5*
 (12), 3881–3890. <https://doi.org/10.1021/acsenergylett.0c02110>.</span>
 
@@ -242,31 +244,41 @@ Light-to-Chemical Energy Conversion. *ACS Energy Letters* **2020**, *5*
 
 <div id="ref-Fazel-Najafabadi:2021uq" class="csl-entry">
 
-<span class="csl-left-margin">(6) </span><span
-class="csl-right-inline">Fazel-Najafabadi, A.; Schuster, S.; Auguié, B.
-Orientation Averaging of Optical Chirality Near Nanoparticles and
-Aggregates. *Physical Review B* **2021**, *103* (11), 115405.
-<https://doi.org/10.1103/PhysRevB.103.115405>.</span>
+<span class="csl-left-margin">(6)
+</span><span class="csl-right-inline">Fazel-Najafabadi, A.; Schuster,
+S.; Auguié, B. Orientation Averaging of Optical Chirality Near
+Nanoparticles and Aggregates. *Physical Review B* **2021**, *103* (11),
+115405. <https://doi.org/10.1103/PhysRevB.103.115405>.</span>
 
 </div>
 
 <div id="ref-Fazel-Najafabadi:2022ud" class="csl-entry">
 
-<span class="csl-left-margin">(7) </span><span
-class="csl-right-inline">Fazel-Najafabadi, A.; Auguié, B. Orientation
-Dependence of Optical Activity in Light Scattering by Nanoparticle
-Clusters. *Mater. Adv.* **2022**, –.
+<span class="csl-left-margin">(7)
+</span><span class="csl-right-inline">Fazel-Najafabadi, A.; Auguié, B.
+Orientation Dependence of Optical Activity in Light Scattering by
+Nanoparticle Clusters. *Mater. Adv.* **2022**, –.
 <https://doi.org/10.1039/D1MA00869B>.</span>
 
 </div>
 
-<div id="ref-Fazel-Najafabadi:2022aa" class="csl-entry">
+<div id="ref-Fazel-Najafabadi:2022vx" class="csl-entry">
 
-<span class="csl-left-margin">(8) </span><span
-class="csl-right-inline">Fazel-Najafabadi, A.; Auguié, B.
+<span class="csl-left-margin">(8)
+</span><span class="csl-right-inline">Fazel-Najafabadi, A.; Auguié, B.
 Orientation-Averaged Light Scattering by Nanoparticle Clusters:
-Far-Field and Near-Field Benchmarks of Numerical Cubature Methods,
-2022.</span>
+Far-Field and Near-Field Benchmarks of Numerical Cubature Methods. *J.
+Quant. Spectrosc. Radiat. Transf.* **2022**.
+<https://doi.org/10.1016/j.jqsrt.2022.108197>.</span>
+
+</div>
+
+<div id="ref-Glukhova:2023aa" class="csl-entry">
+
+<span class="csl-left-margin">(9)
+</span><span class="csl-right-inline">Glukhova, S.; Le Ru, E.; Auguié,
+B. Generalised Coupled-Dipole Model for Core-Satellite Nanostructures.
+*Nanoscale* **2023**, –. <https://doi.org/10.1039/D3NR05238A>.</span>
 
 </div>
 

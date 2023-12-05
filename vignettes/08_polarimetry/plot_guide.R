@@ -2,7 +2,7 @@ library(here)
 setwd(here('vignettes/08_polarimetry'))
 
 ## ----load----
-library(terms)
+suppressPackageStartupMessages(require(terms))
 theme_set(egg::theme_grey(base_size = 10, base_family = 'Source Sans Pro'))
 
 library(rhdf5)

@@ -1,6 +1,6 @@
 
 ## ----load---
-library(terms)
+suppressPackageStartupMessages(require(terms))
 library(glue)
 library(purrr)
 library(ggplot2)

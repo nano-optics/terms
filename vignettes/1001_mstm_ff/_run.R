@@ -1,6 +1,6 @@
 setwd(here::here("vignettes/1001_mstm_ff"))
 ## ----load----
-library(terms)
+suppressPackageStartupMessages(require(terms))
 library(dplyr)
 library(ggplot2)
 library(dplyr)

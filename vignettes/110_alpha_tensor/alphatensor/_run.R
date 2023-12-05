@@ -1,6 +1,6 @@
 setwd("~/Documents/nano-optics/terms2/build")
 ## ----load----
-library(terms)
+suppressPackageStartupMessages(require(terms))
 library(egg)
 # library(reshape2)
 # library(purrr)

@@ -2,7 +2,7 @@ library(here)
 setwd(here('vignettes/07_ldoc'))
 
 ## ----load----
-library(terms)
+suppressPackageStartupMessages(require(terms))
 theme_set(theme_grey())
 
 

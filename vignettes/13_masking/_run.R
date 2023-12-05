@@ -1,7 +1,7 @@
 setwd(here::here('vignettes/13_masking'))
 
 ## ----load----
-library(terms)
+suppressPackageStartupMessages(require(terms))
 library(patchwork)
 # library(reshape2)
 # library(purrr)

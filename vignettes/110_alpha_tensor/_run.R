@@ -1,6 +1,6 @@
 setwd(here::here("vignettes/110_alpha_tensor/"))
 ## ----load----
-library(terms)
+suppressPackageStartupMessages(require(terms))
 library(egg)
 # library(reshape2)
 # library(purrr)
