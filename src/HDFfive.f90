@@ -9,7 +9,7 @@ MODULE HDFfive
    implicit none
    private
    !
-   public ::  h5_crtgrp, h5_wrt2file, h5_wrtvec2file
+   public ::  h5_crtgrp, h5_wrt2file, h5_wrtvec2file, h5_rd_vec, h5_rd_file   
 
 contains
 
@@ -75,7 +75,7 @@ contains
       ! Close FORTRAN interface.
       !
       CALL h5close_f(error)
-      if (allocated(group_id)) deallocate (group_id)
+      if (allocated(group_id)) deallocate(group_id)
    end subroutine h5_crtgrp
 
 !--------------------------------------------------------------------
@@ -208,7 +208,7 @@ contains
 
       !Create the data space for the second dataset.
       !
-      CALL h5screate_simple_f(rank, dims, dataspace_id, error)
+      CALL h5screate_simple_f(rank, dims, dataspace_id, error)                     
 
       ! Create the second dataset in group "Group_A" with default properties.
       !
@@ -243,7 +243,7 @@ contains
       ! Close FORTRAN interface.
       !
       CALL h5close_f(error)
-
+	!if (allocated(group_id)) deallocate(group_id)
    END SUBROUTINE h5_wrt2file
 !-------------------------------------------------------------------
 
@@ -290,5 +290,203 @@ contains
    END SUBROUTINE h5_wrt_attr
 
 !------------------------------------------------------------------
+  SUBROUTINE h5_rd_vec(filename_, groupname, dsetname, dset_data) !, attribute)
+      !============================================================
+      ! This subroutine reads data in a dataset in an existing group.
+      !============================================================
+
+      !USE HDF5 ! This module contains all necessary modules
+
+      IMPLICIT NONE
+
+      !---------------------------------------------------
+      ! Start of variable declarations.
+      !---------------------------------------------------
+      ! Passed variables
+
+    CHARACTER(*), intent(in) :: filename_ ! File name
+    !CHARACTER(LEN=4), PARAMETER :: dsetname = "FT"     ! Dataset name
+    CHARACTER(*), intent(in) :: groupname != "MyGroup/Group_A" ! Group name
+    CHARACTER(*), intent(in) :: dsetname  ! = "MyGroup/dset1"  ! Dataset name
+   ! CHARACTER(LEN=256), OPTIONAL, intent(in) :: attribute !Ati: I think this is not needed
+    !REAL(8), intent(out)  :: dset_data(:,:)      ! output data
+      
+      
+    INTEGER(HID_T) :: file_id       ! File identifier
+    INTEGER(HID_T) :: dataset_id       ! Dataset identifier
+    INTEGER(HID_T) :: space_id       ! Dataspace identifier
+    INTEGER(HID_T) :: dtype_id       ! Dataspace identifier
+    INTEGER(HID_T) :: group_id      ! Group identifier
+    INTEGER     ::   error ! Error flag
+    INTEGER     ::  i, j, cols, rows
+    INTEGER(HSIZE_T) :: npoints
+    REAL(KIND = 8), intent(out), DIMENSION(:), ALLOCATABLE :: dset_data
+    INTEGER(HSIZE_T), DIMENSION(1) :: dims, maxdims                 
+    INTEGER :: rank   
+    
+  
+    !print *, 'Starting HDF5 Fortran Read'
+
+   ! Initialize FORTRAN interface.
+
+   CALL h5open_f(error)
+  
+
+   ! Open an existing file.
+
+   CALL h5fopen_f (filename_, H5F_ACC_RDWR_F, file_id, error)   
+    
+   CALL h5gopen_f(file_id, groupname, group_id, error)  !groupname should be complete!
+   ! Open an existing dataset.
+    
+   CALL h5dopen_f(group_id, dsetname, dataset_id, error)   ! CALL h5dopen_f(file_id, dsetname, dataset_id, error) original
+   
+
+   !Get dataspace ID
+   CALL h5dget_space_f(dataset_id, space_id,error)
+   
+
+   !Get dataspace dims
+   CALL h5sget_simple_extent_ndims_f (space_id, rank, error)
+  ! print *, 'rank'
+ !  print *, rank
+   
+   CALL h5sget_simple_extent_dims_f(space_id,dims, maxdims, error)
+  ! print *, dims
+  ! print *, maxdims
+   
+   if (rank == 0) then
+   	dims(1) = 1
+   end if
+   if (ALLOCATED(dset_data)) DEALLOCATE(dset_data)
+   ALLOCATE(dset_data(dims(1)))
+   !Get data
+    CALL h5dread_f(dataset_id,  H5T_NATIVE_DOUBLE, dset_data, dims,  error)  ! CALL h5dread_f(dataset_id, H5T_NATIVE_INTEGER, dset_data, data_dims, error) 
+    CALL h5dclose_f(dataset_id, error)
+    CALL h5sclose_f(space_id, error)
+    CALL h5gclose_f(group_id, error)
+    CALL h5fclose_f(file_id, error)
+    CALL h5close_f(error)
+    
+	!if (allocated(group_id)) deallocate(group_id)
+   END SUBROUTINE h5_rd_vec
+
+!--------------------------------------------------------
+SUBROUTINE h5_rd_file(filename_, groupname, dsetname, dset_data) !, attribute)
+      !============================================================
+      ! This subroutine reads data in a dataset in an existing group.
+      !============================================================
+
+      !USE HDF5 ! This module contains all necessary modules
+      USE ISO_C_BINDING
+      IMPLICIT NONE
+
+      !---------------------------------------------------
+      ! Start of variable declarations.
+      !---------------------------------------------------
+      ! Passed variables
+
+    CHARACTER(*), intent(in) :: filename_ ! File name
+    !CHARACTER(LEN=4), PARAMETER :: dsetname = "FT"     ! Dataset name
+    CHARACTER(*), intent(in) :: groupname != "MyGroup/Group_A" ! Group name
+    CHARACTER(*), intent(in) :: dsetname  ! = "MyGroup/dset1"  ! Dataset name
+   ! CHARACTER(LEN=256), OPTIONAL, intent(in) :: attribute !I think this is not needed
+   
+    INTEGER, PARAMETER :: r_k8 = KIND(0.0d0)
+    COMPLEX(KIND = r_k8), intent(out), DIMENSION(:,:,:), ALLOCATABLE, TARGET :: dset_data   ! output data
+      
+    INTEGER(HID_T) :: file_id       ! File identifier
+    INTEGER(HID_T) :: dataset_id       ! Dataset identifier
+    INTEGER(HID_T) :: space_id       ! Dataspace identifier
+    INTEGER(HID_T) :: dtype_id       ! Dataspace identifier
+    INTEGER(HID_T) :: group_id      ! Group identifier
+    INTEGER(HID_T) :: memtype      ! Group identifier
+    INTEGER(HID_T) :: sample_type_id
+    INTEGER     ::   error ! Error flag
+    INTEGER     ::  i, j, cols, rows, shell, rank
+    
+    INTEGER(HSIZE_T), DIMENSION(3) :: dims
+    INTEGER(HSIZE_T), DIMENSION(3) :: maxdims                  
+    TYPE(C_PTR) :: f_ptr
+    INTEGER(8) :: real_size, real_complex_size
+    real_size = storage_size(1_r_k8, r_k8) / 8
+    real_complex_size = real_size * 2_8  ! a complex is (real,real)
+    
+    
+    
+    if (ALLOCATED(dset_data)) DEALLOCATE(dset_data)
+    !print *, 'Starting HDF5 Fortran Read'
+
+   ! Initialize FORTRAN interface.
+   
+   CALL h5open_f(error)
+
+
+   ! Open an existing file.
+
+   CALL h5fopen_f (filename_, H5F_ACC_RDWR_F, file_id, error)
+
+   CALL h5gopen_f(file_id, groupname, group_id, error)  !groupname should be complete!
+   ! Open an existing dataset.
+
+   CALL h5dopen_f(group_id, dsetname, dataset_id, error)   ! CALL h5dopen_f(file_id, dsetname, dataset_id, error) original
+
+   
+   !Get dataspace ID
+   CALL h5dget_space_f(dataset_id, space_id,error)
+
+
+   !Get dataspace dims
+   CALL h5sget_simple_extent_ndims_f (space_id, rank, error)
+  ! print *, 'rank'
+  ! print *, rank
+      
+   CALL h5sget_simple_extent_dims_f(space_id,dims, maxdims, error)
+
+   cols = dims(1)
+   rows = dims(2)
+   shell= dims(3)
+   if (rank == 0)then
+       cols = 1
+       rows = 1
+       shell = 1 
+    end if
+  
+   ALLOCATE(dset_data(cols, rows, shell))
+   CALL H5Tcreate_f(H5T_COMPOUND_F, 16_8, sample_type_id,error)   !Creates a new datatype, 16_8: for double complex
+
+   CALL H5Tinsert_f( sample_type_id, "r", &
+      	 0_8, h5kind_to_type(r_k8,H5_REAL_KIND), error)
+   CALL H5Tinsert_f( sample_type_id, "i", &
+       real_size, h5kind_to_type(r_k8,H5_REAL_KIND), error)
+   	!Get data
+        f_ptr = C_LOC(dset_data(1,1,1))
+  	! CALL h5dread_f(dataset_id, H5T_NATIVE_DOUBLE, dset_data, coord_dims, error)  ! CALL h5dread_f(dataset_id, H5T_NATIVE_INTEGER, dset_data, data_dims, error)
+   CALL h5dread_f(dataset_id, sample_type_id, f_ptr, error) 
+
+     !print *, dset_data
+
+
+    !CALL h5sclose_f(space_id, error)
+
+      ! Close the second dataset.
+      !
+    CALL h5dclose_f(dataset_id, error)
+    CALL H5Tclose_f(sample_type_id, error)
+      ! Close the group.
+      !
+    CALL h5gclose_f(group_id, error)
+
+      ! Close the file.
+      !
+      CALL h5fclose_f(file_id, error)
+
+      !
+      ! Close FORTRAN interface.
+      !
+      CALL h5close_f(error)
+	!if (allocated(group_id)) deallocate(group_id)
+   END SUBROUTINE h5_rd_file
+
 
 END MODULE

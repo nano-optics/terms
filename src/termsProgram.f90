@@ -1,7 +1,7 @@
 program termsProgram
    !
    use multiscat, only: mapNF, spectrumFF, calcStokesScaVec
-   use HDFfive, only: h5_crtgrp, h5_wrt2file, h5_wrtvec2file
+   use HDFfive, only: h5_crtgrp, h5_wrt2file, h5_wrtvec2file, h5_rd_file, h5_rd_vec  
    !
    implicit none
    !
@@ -14,26 +14,29 @@ program termsProgram
    integer :: ndipoles = 0
 
    integer :: ncut(3) = (/8, 8, -8/) ! ncut(3) := [n1, n2, tol]
+   integer :: ncut_h5(3)=(/0, 0, -8/)
    ! n1 is nmax [for irregular/initial offsetting when staging]
    ! n2 >= n1 [for regular offsetting when contracting]
    character(len=3), allocatable :: labels(:, :)
    character(len=18), allocatable :: string(:)
-   real(8) :: ehost_const = 1
+   real(8) :: ehost_const = 1 
+   complex(8), allocatable  :: ehost_h5 (:,:,:)
    real(8), allocatable :: geometry(:, :), dipoles(:, :)
    integer :: Epower = 2, pol_type = 1
    real(8), allocatable :: ehost(:)
-   real(8), allocatable :: wavelen(:)
+   real(8), allocatable :: wavelen(:), wavelen_h5(:)
    real(8), allocatable :: incidences(:, :), sca_angles(:, :)
    real(8), allocatable :: inc(:, :)
    real(8) :: gridLB(3) = (/0.0d0, 0.0d0, 0.0d0/)
    real(8) :: gridUB(3) = (/0.0d0, 0.0d0, 0.0d0/)
    integer :: gridNbins(3) = (/0, 0, 0/), nGridPoints = 1
-   logical :: noRTR = .false., HDF5_out = .false. !, HDF5_in= .true.
+   logical :: noRTR = .false., HDF5_out = .false. 
+   logical, allocatable :: HDF5_in(:)
    logical :: nf = .false., PWinc = .false., Ef = .true.
    logical :: dump_E = .true., dump_B = .false., dump_C = .false., split_absOA = .false.
    ! --- Declare in/output arguments for the solve function
    integer, allocatable :: nselect(:, :, :, :)
-   complex(8), allocatable :: escat(:, :, :)
+   complex(8), allocatable :: escat(:, :, :), escat_h5(:, :, :)
    real(8), allocatable :: work2(:, :, :), work1(:, :, :, :), work3(:, :, :, :, :), work5(:, :)
    real(8), allocatable :: work6(:, :), work7(:, :)
    real(8), allocatable :: work4(:, :, :, :, :), N_OC(:, :, :, :, :)
@@ -77,7 +80,43 @@ program termsProgram
    end if
    call readInputFile(inputfile=filename)
    !
+   !print *, 'ncut'
+   !print *, ncut 
+   
+     if (any(HDF5_in))then                                                                            !compare input file values and hdf5 file input values
+   	if (size(wavelen) /= size(wavelen_h5)) then
+   	   write (*,'(A)') 'ERROR: wavelengths mismatch between the inputfile and HDF5 file '
+             STOP
+        end if
+   	do idum=1, size(wavelen)
+   		if (abs(wavelen(idum) - wavelen_h5(idum)) >= 0.001) then
+   			print *, wavelen(idum)
+   			print *, wavelen_h5(idum)
+   	  	    write (*,'(A)') 'ERROR: wavelengths mismatch between the inputfile and HDF5 file '
+                     STOP
+               end if
+   	end do
+   	!print *, ehost(1)
+   	!print *, realpart(ehost_h5(1,1,1))
+   	if (abs(ehost(1) - realpart(ehost_h5(1,1,1)))  >= 0.001)then
+   	    write (*,'(A)') 'ERROR: Media mismatch between the inputfile and HDF5 file '
+                STOP
+        end if
+        
+   	if (ncut(1) /= ncut_h5(1)) then
+   		write (*,'(A)') 'Warning: MultipoleCutoff mismatch between the inputfile and HDF5 file '
 
+         if (ncut(1) > ncut_h5(1)) then ! tmat file does not have high enough N
+              ncut(1) = ncut_h5(1)      ! truncate simulation to maximum available N
+              ncut(2) = ncut_h5(2)
+         write (*,'(A,i2)') 'Warning: MultipoleCutoff is set to = ', ncut_h5(1)
+   		write (*,'(A,i2)') 'ncut_h5 = ', ncut_h5(1)
+   		write (*,'(A,i2)') 'ncut1 = ', ncut(1)
+         end if
+        end if
+     end if
+    
+  
    if (mode == 2) then ! spectrum for far-field properties
       !
       if (scheme > 0) then
@@ -120,7 +159,8 @@ program termsProgram
          nselect_=nselect, &
          noRTR_=noRTR, &
          verb_=verb, &
-         jsig_abs_oa=jsig_abs_oa)
+         jsig_abs_oa=jsig_abs_oa, &
+         HDF5_in=HDF5_in)
       !
       ! ------------------------------------------------------
       ! Deal with (multiple) single-orientation cross-sections
@@ -529,7 +569,8 @@ program termsProgram
          dump_oaE2=dump_oaE2, &
          dump_oaB2=dump_oaB2, &
          p_label=p_label, &
-         dipoles=dipoles)
+         dipoles=dipoles, & 
+         HDF5_in=HDF5_in)
 
       if (.not. HDF5_out) then
          if (nGridpoints > 0) then
@@ -867,7 +908,8 @@ program termsProgram
          verb_=verb, &
          StokesPhaseMat=StokesPhaseMat, &
          StokesScaVec=StokesScaVec, &
-         diff_sca=diff_Sca_CS)
+         diff_sca=diff_Sca_CS, &
+          HDF5_in=HDF5_in)
 
       if (.not. HDF5_out) then  !****
          write (filename, '(A)') 'Stokes_Sca_Vec.dat'
@@ -1061,6 +1103,8 @@ contains
       use multiscat, only: dumpTmatCol_G, dumpStagedA_G, dumpPrestagedA_G, &
                            DumpScaCoeff_G, DumpIncCoeff_G, &
                            isolve_G, balScale_G, balStout_G, transInv_G, tfilename_G, cs_stout_G
+                           
+      use HDFfive, only: h5_rd_vec, h5_rd_file
       !use optim, only : dumpGeometry_G
       !
       implicit none
@@ -1072,11 +1116,16 @@ contains
       character(len=64) :: keyword
       logical :: yes
       integer, parameter :: u4inpFile = 22982
-      integer :: eof, i, j, k, nkeywords, nwords, nhi, nlo
+      integer :: eof, i, j, k, nkeywords, nwords, nhi, nlo, ii, jj, jo
       real(8) :: x(8)
       integer, allocatable :: selections(:, :, :, :)
       real(8), allocatable :: alphas(:), betas(:), gammas(:), alphas_bar(:), betas_bar(:), gammas_bar(:)
+      real(8), allocatable :: ang_wave_num(:), ldum(:), mdum(:), freq(:)
+      integer, allocatable :: pdum(:), sdum(:), qdum(:)
+      complex(8), allocatable ::  tmat(:,:,:), tmat_h5(:,:,:)
       character(len=256), allocatable :: tfilenames(:)
+      real(8), parameter :: sp_light = 2.99792458d8
+      
       !
       inquire (file=inputfile, exist=yes)
       if (.not. yes) then
@@ -1193,15 +1242,100 @@ contains
             if (eof /= 0) call errorParsingArguments(keyword)
             !
             allocate (tfilenames(idum))
-            do i = 1, idum
-               read (u4inpfile, *, IOSTAT=eof) tfilenames(i)
+            allocate(HDF5_in(idum))
+            HDF5_in(:)=.false.
+             do i = 1, idum
+            	   read (u4inpfile, *, IOSTAT=eof) tfilenames(i)
+             	   jo = index(tfilenames(i), '.h5', back=.true.)
+            	  if (jo > 0)then
+            	  	HDF5_in(i) = .true.            	
+            	        if (allocated(ldum)) deallocate(ldum)
+                        if (allocated(mdum)) deallocate(mdum)
+            	        if (allocated(ang_wave_num)) deallocate(ang_wave_num)
+                        if (allocated(tmat_h5)) deallocate(tmat_h5)
+                         if (allocated(tmat)) deallocate(tmat)
+            	        if (allocated(escat_h5)) deallocate(escat_h5)
+            	       print *, tfilenames(i)
+            	      call h5_rd_vec(tfilenames(i), '/modes','l', ldum)
+                     !   print *, int(ldum(:))
+                    call h5_rd_vec(tfilenames(i), '/modes','m', mdum)    
+                     !  print *,'finish l'
+                    do jj=1, size(mdum)
+            	
+                     !  print *, int(mdum(jj))
+                   end do
+                     !  print *,'finish m'
+                   allocate(pdum(size(ldum)), sdum(size(ldum)), qdum(size(ldum)) )   
+                   pdum = int(ldum)*(int(ldum) + 1) + int(mdum)
+                   sdum(1:size(sdum):2)=2
+                   sdum(2:size(sdum):2)=1
+                   qdum=(sdum-1)*maxval(pdum)+pdum
+                   do jj=1, size(pdum)
+            	
+                      !print *, (pdum(jj))
+                     !  print *, (qdum(jj))
+                   end do 
+                  !  print *,'finish s' 
+                   if (allocated(wavelen_h5)) deallocate(wavelen_h5)  
+                   call h5_rd_vec(tfilenames(i), '/','angular_vacuum_wavenumber', ang_wave_num) 
+            	      
+            	    allocate(wavelen_h5(size(ang_wave_num)))
+            	     wavelen_h5 = tpi/ang_wave_num
+            	     ! if (call h5_rd_vec(tfilenames(i), '/','angular_vacuum_wavenumber', ang_wave_num)) then
+            	      
+            	     !              allocate(wavelen_h5(size(ang_wave_num)))
+            	     !               wavelen_h5 = tpi/ang_wave_num
+            	    !  end if
+            	      
+            	    !  if (call h5_rd_vec(tfilenames(i), '/','vacuum_wavelength', wavelen_h5)) then
+            	      		
+            	                 !  allocate(wavelen_h5(size(vac_wavelen)))
+            	                  !  wavelen_h5 = vac_wavelen
+            	     !             wavelen_h5 = wavelen_h5
+            	    !  end if
+            	     ! if (call h5_rd_vec(tfilenames(i), '/','frequency', freq)) then
+            	      
+            	     !              allocate(wavelen_h5(size(freq)))
+            	     !               wavelen_h5 = sp_light / freq
+            	     ! end if
+            	      
+            	      
+            	do jj=1, size(ang_wave_num)
+            	
+                  !  print *, (wavelen_h5(jj))
+                end do
+                print *,'wave_num'
+            	   call h5_rd_file(tfilenames(i), '/','tmatrix', tmat_h5)
+            	   ncut_h5(1)=int(ldum(size(ldum)))
+            	   ncut_h5(2)=ncut_h5(1)
+            	   ! print *, size(tmat_h5,1)
+            	   !------------New: making Tmatrix compatible with TERMS -------------------
+            	   allocate(tmat(size(tmat_h5,1), size(tmat_h5,2), size(tmat_h5,3)))
+            	   tmat =0
+            	   do ii=1,size(tmat,1)
+            	       do jj=1, size(tmat,1) 
+            		  tmat(qdum(jj),qdum(ii),:)=tmat_h5(ii,jj,:)
+            		end do
+            	   end do 
+            	                      	   
+            	   !-------------------------------------------------------------------------
+            	   !call h5_rd_file(tfilenames(i), '/materials/sphere/','relative_permittivity', escat_h5)
+            	   !call h5_rd_file(tfilenames(i), '/materials/embedding/','relative_permittivity', ehost_h5)
+            	   
+            	   call h5_rd_file(tfilenames(i), 'embedding/','relative_permittivity', ehost_h5)   
+            	   !print *, 'escat_h5'
+            	   !print *, escat_h5
+            	   print *, 'ehost_h5'
+            	   print *, ehost_h5
+            	 end if
+             end do 
+            
                if (eof /= 0) then
                   write (*, '(A,A,i2)') myname, &
                      '> ERROR reading tfilename for i= ', i
                   STOP
                end if
-            end do
-            !
+            !   
          else if (keyword == "MultipoleSelections") then
             !
             write (*, '(A,A,A)') myName, '> Detected keyword ', &
@@ -1516,52 +1650,8 @@ contains
             !
             write (*, '(A,A,A)') &
                myName, '> Detected keyword ', trim(keyword)
-
-            ! baptiste 20/04/2022: added option to pass a filename
-            if (words(2) (1:1) == 'f' .or. words(2) (1:1) == 'F') then ! only filename supplied
-               
-               if (trim(words(3)) == '') then
-                  write (*, '(A,A)') myname, &
-                     '> ERROR: Missing wavelength filename'
-                  STOP
-               end if
-               !
-               write (*, '(15x,A,A)') 'Wavelength filename= ', trim(words(3))
-               !
-               inquire (file=trim(words(3)), exist=yes)
-               if (.not. yes) then
-                  write (*, '(A,A,A)') myName, &
-                     '> ERROR: Missing wavelength file ', &
-                     trim(words(3))
-                  STOP
-               end if
-               !
-               open (unit=11, file=trim(words(3)), status='old')
-               read (11, *, IOSTAT=eof) k
-               if (eof /= 0) then
-                  write (*, '(A,A,A)') myName, '> ERROR: In header of ', trim(words(3))
-                  STOP
-               elseif (k < 1) then
-                  write (*, '(A,A)') myName, '> ERROR: Wavelength count < 1'
-                  STOP
-               else
-                  write (*, '(15x,A,i6)') 'Expected wavelength count= ', k
-               end if
-               if (allocated(wavelen)) deallocate (wavelen)
-               allocate (wavelen(k))
-               if (allocated(ehost)) deallocate (ehost)
-               allocate (ehost(k))
-               do j = 1, k
-                  read (11, *, IOSTAT=eof) wavelen(j)
-                  if (eof /= 0) then
-                     write (*, '(A,A,i6)') myName, &
-                        '> ERROR reading wavelength ', j
-                     STOP
-                  end if
-               end do
-               close (11)
-
-            else if (words(2) /= '' .and. words(3) /= '' .and. words(4) /= '') then
+            !
+            if (words(2) /= '' .and. words(3) /= '' .and. words(4) /= '') then
                !
                !
                read (words(2:4), *, IOSTAT=eof) x(1), x(2), i
@@ -1589,7 +1679,7 @@ contains
                   wavelen(j + 1) = x(1) + j*x(2)
                end do
                !
-            else if (words(2) /= '') then
+            elseif (words(2) /= '') then
                !
                if (allocated(wavelen)) deallocate (wavelen)
                allocate (wavelen(1))
@@ -1602,7 +1692,6 @@ contains
                !
             else
                !
-               write (*, '(15x,A,f10.4)') 'not happy', wavelen(1)
                call errorParsingArguments(keyword)
                !
             end if
@@ -2204,6 +2293,10 @@ contains
             end if
             !
             write (*, '(1x,A,i4,/)') 'with nscat= ', nscat
+            if (.not. allocated(HDF5_in))then
+               allocate(HDF5_in(nscat))
+               HDF5_in = .false.
+            end if
             !
             allocate (geometry(8, nscat))
             allocate (labels(nscat, 4), string(nscat))
@@ -2495,7 +2588,7 @@ contains
       ! Update the escat to a given wavelength.
       ! ==============================================================
       !
-      use eps, only: epsAu, epsAg, epsAuRaschke, epsAgRaschke, epsPd, epsPt, epsSi, epsAl, epsCr, epsWater, interp1
+      use eps, only: epsAu, epsAg, epsPd, epsPt, epsSi, epsAl, epsCr, epsWater, interp1
       !
       implicit none
       !
@@ -2513,12 +2606,6 @@ contains
                do j = 1, size(wavelen)
                   escat(i, k, j) = epsAu(wavelen(j))
                end do
-            elseif (trim(labels(i, k)) == 'Au2') then
-               escat(i, k, 1:size(wavelen)) = epsAuRaschke(wavelen)
-
-            elseif (trim(labels(i, k)) == 'Ag2') then
-               escat(i, k, 1:size(wavelen)) = epsAgRaschke(wavelen)
-
             elseif (trim(labels(i, k)) == 'Ag') then
                do j = 1, size(wavelen)
                   escat(i, k, j) = epsAg(wavelen(j))
@@ -2542,7 +2629,6 @@ contains
             elseif (trim(labels(i, k)) == 'Cr') then
 
                escat(i, k, 1:size(wavelen)) = epsCr(wavelen)
-
             elseif (trim(labels(i, k)) == 'Water') then
 
                escat(i, k, 1:size(wavelen)) = epsWater(wavelen)
