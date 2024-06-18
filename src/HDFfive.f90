@@ -290,7 +290,7 @@ contains
    END SUBROUTINE h5_wrt_attr
 
 !------------------------------------------------------------------
-  SUBROUTINE h5_rd_vec(filename_, groupname, dsetname, dset_data) !, attribute)
+  SUBROUTINE h5_rd_vec(filename_, groupname, dsetname, dset_data, iflag_) !, attribute)
       !============================================================
       ! This subroutine reads data in a dataset in an existing group.
       !============================================================
@@ -308,6 +308,7 @@ contains
     !CHARACTER(LEN=4), PARAMETER :: dsetname = "FT"     ! Dataset name
     CHARACTER(*), intent(in) :: groupname != "MyGroup/Group_A" ! Group name
     CHARACTER(*), intent(in) :: dsetname  ! = "MyGroup/dset1"  ! Dataset name
+    LOGICAL, OPTIONAL, intent(out) :: iflag_ 
    ! CHARACTER(LEN=256), OPTIONAL, intent(in) :: attribute !Ati: I think this is not needed
     !REAL(8), intent(out)  :: dset_data(:,:)      ! output data
       
@@ -324,7 +325,7 @@ contains
     INTEGER(HSIZE_T), DIMENSION(1) :: dims, maxdims                 
     INTEGER :: rank   
     
-  
+    if (present(iflag_)) iflag_= .true.
     !print *, 'Starting HDF5 Fortran Read'
 
    ! Initialize FORTRAN interface.
@@ -335,25 +336,42 @@ contains
    ! Open an existing file.
 
    CALL h5fopen_f (filename_, H5F_ACC_RDWR_F, file_id, error)   
-    
+    !print * , file_id
    CALL h5gopen_f(file_id, groupname, group_id, error)  !groupname should be complete!
    ! Open an existing dataset.
-    
+    !print * , group_id
    CALL h5dopen_f(group_id, dsetname, dataset_id, error)   ! CALL h5dopen_f(file_id, dsetname, dataset_id, error) original
-   
-
+   !print *, error
+   !print * , dataset_id
    !Get dataspace ID
+     if (error /= 0) THEN
+       WRITE(*,'("cannot initialise HDF5",/)')
+        if (present(iflag_)) iflag_= .false.
+        ALLOCATE(dset_data(1))
+       RETURN
+     endif
+   
+   
+   
    CALL h5dget_space_f(dataset_id, space_id,error)
    
-
+   !print * , error
    !Get dataspace dims
    CALL h5sget_simple_extent_ndims_f (space_id, rank, error)
   ! print *, 'rank'
  !  print *, rank
-   
+  ! print * , error
    CALL h5sget_simple_extent_dims_f(space_id,dims, maxdims, error)
   ! print *, dims
   ! print *, maxdims
+  !print * , error
+  ! if (error /= 0) THEN
+   !    WRITE(*,'("cannot initialise HDF5",/)')
+   !     if (present(iflag_)) iflag_= .false.
+   !     ALLOCATE(dset_data(1))
+   !    RETURN
+   !endif
+   
    
    if (rank == 0) then
    	dims(1) = 1
@@ -362,6 +380,7 @@ contains
    ALLOCATE(dset_data(dims(1)))
    !Get data
     CALL h5dread_f(dataset_id,  H5T_NATIVE_DOUBLE, dset_data, dims,  error)  ! CALL h5dread_f(dataset_id, H5T_NATIVE_INTEGER, dset_data, data_dims, error) 
+    
     CALL h5dclose_f(dataset_id, error)
     CALL h5sclose_f(space_id, error)
     CALL h5gclose_f(group_id, error)
@@ -372,7 +391,7 @@ contains
    END SUBROUTINE h5_rd_vec
 
 !--------------------------------------------------------
-SUBROUTINE h5_rd_file(filename_, groupname, dsetname, dset_data) !, attribute)
+SUBROUTINE h5_rd_file(filename_, groupname, dsetname, dset_data, iflag_) !, attribute)
       !============================================================
       ! This subroutine reads data in a dataset in an existing group.
       !============================================================
@@ -391,7 +410,7 @@ SUBROUTINE h5_rd_file(filename_, groupname, dsetname, dset_data) !, attribute)
     CHARACTER(*), intent(in) :: groupname != "MyGroup/Group_A" ! Group name
     CHARACTER(*), intent(in) :: dsetname  ! = "MyGroup/dset1"  ! Dataset name
    ! CHARACTER(LEN=256), OPTIONAL, intent(in) :: attribute !I think this is not needed
-   
+    LOGICAL, OPTIONAL, intent(out) :: iflag_ 
     INTEGER, PARAMETER :: r_k8 = KIND(0.0d0)
     COMPLEX(KIND = r_k8), intent(out), DIMENSION(:,:,:), ALLOCATABLE, TARGET :: dset_data   ! output data
       
@@ -411,7 +430,7 @@ SUBROUTINE h5_rd_file(filename_, groupname, dsetname, dset_data) !, attribute)
     INTEGER(8) :: real_size, real_complex_size
     real_size = storage_size(1_r_k8, r_k8) / 8
     real_complex_size = real_size * 2_8  ! a complex is (real,real)
-    
+    if (present(iflag_)) iflag_= .true.
     
     
     if (ALLOCATED(dset_data)) DEALLOCATE(dset_data)
@@ -428,7 +447,13 @@ SUBROUTINE h5_rd_file(filename_, groupname, dsetname, dset_data) !, attribute)
 
    CALL h5gopen_f(file_id, groupname, group_id, error)  !groupname should be complete!
    ! Open an existing dataset.
-
+    print *, error
+    if (error /= 0) THEN
+       WRITE(*,'("cannot initialise HDF5",/)')
+        if (present(iflag_)) iflag_= .false.
+        ALLOCATE(dset_data(1,1,1))
+       RETURN
+     endif
    CALL h5dopen_f(group_id, dsetname, dataset_id, error)   ! CALL h5dopen_f(file_id, dsetname, dataset_id, error) original
 
    

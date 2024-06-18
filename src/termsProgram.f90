@@ -99,7 +99,7 @@ program termsProgram
    	!print *, ehost(1)
    	!print *, realpart(ehost_h5(1,1,1))
    	if (abs(ehost(1) - realpart(ehost_h5(1,1,1)))  >= 0.001)then
-   	    write (*,'(A)') 'ERROR: Media mismatch between the inputfile and HDF5 file '
+   	    write (*,'(A)') 'ERROR: Medium mismatch between the inputfile and HDF5 file '
                 STOP
         end if
         
@@ -113,6 +113,7 @@ program termsProgram
    		write (*,'(A,i2)') 'ncut_h5 = ', ncut_h5(1)
    		write (*,'(A,i2)') 'ncut1 = ', ncut(1)
          end if
+
         end if
      end if
     
@@ -1114,7 +1115,7 @@ contains
       character(len=1024) :: sentence
       character(len=64) :: words(18)
       character(len=64) :: keyword
-      logical :: yes
+      logical :: yes , iflag
       integer, parameter :: u4inpFile = 22982
       integer :: eof, i, j, k, nkeywords, nwords, nhi, nlo, ii, jj, jo
       real(8) :: x(8)
@@ -1255,60 +1256,48 @@ contains
                         if (allocated(tmat_h5)) deallocate(tmat_h5)
                          if (allocated(tmat)) deallocate(tmat)
             	        if (allocated(escat_h5)) deallocate(escat_h5)
-            	       print *, tfilenames(i)
+            	      ! print *, tfilenames(i)
             	      call h5_rd_vec(tfilenames(i), '/modes','l', ldum)
-                     !   print *, int(ldum(:))
+                     ! print *, int(ldum(:))
                     call h5_rd_vec(tfilenames(i), '/modes','m', mdum)    
-                     !  print *,'finish l'
-                    do jj=1, size(mdum)
-            	
-                     !  print *, int(mdum(jj))
-                   end do
-                     !  print *,'finish m'
+                   
                    allocate(pdum(size(ldum)), sdum(size(ldum)), qdum(size(ldum)) )   
                    pdum = int(ldum)*(int(ldum) + 1) + int(mdum)
                    sdum(1:size(sdum):2)=2
                    sdum(2:size(sdum):2)=1
                    qdum=(sdum-1)*maxval(pdum)+pdum
-                   do jj=1, size(pdum)
-            	
-                      !print *, (pdum(jj))
-                     !  print *, (qdum(jj))
-                   end do 
-                  !  print *,'finish s' 
+                  
                    if (allocated(wavelen_h5)) deallocate(wavelen_h5)  
-                   call h5_rd_vec(tfilenames(i), '/','angular_vacuum_wavenumber', ang_wave_num) 
-            	      
-            	    allocate(wavelen_h5(size(ang_wave_num)))
-            	     wavelen_h5 = tpi/ang_wave_num
-            	     ! if (call h5_rd_vec(tfilenames(i), '/','angular_vacuum_wavenumber', ang_wave_num)) then
-            	      
-            	     !              allocate(wavelen_h5(size(ang_wave_num)))
-            	     !               wavelen_h5 = tpi/ang_wave_num
-            	    !  end if
-            	      
-            	    !  if (call h5_rd_vec(tfilenames(i), '/','vacuum_wavelength', wavelen_h5)) then
-            	      		
-            	                 !  allocate(wavelen_h5(size(vac_wavelen)))
-            	                  !  wavelen_h5 = vac_wavelen
-            	     !             wavelen_h5 = wavelen_h5
-            	    !  end if
-            	     ! if (call h5_rd_vec(tfilenames(i), '/','frequency', freq)) then
-            	      
-            	     !              allocate(wavelen_h5(size(freq)))
-            	     !               wavelen_h5 = sp_light / freq
-            	     ! end if
-            	      
-            	      
-            	do jj=1, size(ang_wave_num)
+                   call h5_rd_vec(tfilenames(i), '/','angular_vacuum_wavenumber', ang_wave_num, iflag_=iflag) 
+            	     print *, iflag 
+            	     if (iflag )then
+            	          allocate(wavelen_h5(size(ang_wave_num)))
+            	          wavelen_h5 = tpi/ang_wave_num
+            	     else 
+            	     
+            	        call h5_rd_vec(tfilenames(i), '/','vacuum_wavelength', wavelen_h5, iflag_=iflag)
+            	        print *, iflag
+            	        if ( .not. iflag)then 
+            	        	call h5_rd_vec(tfilenames(i), '/','frequency', freq, iflag_=iflag )
+            	        	if (iflag )then 
+            	        		allocate(wavelen_h5(size(freq)))
+            	                       wavelen_h5 = sp_light / freq
+            	                else
+            	                      print *, 'ERROR: .H5 file doesnot include ang_vac_num or vac_wavelen or freq. '
+            	                      STOP
+            	                end if
+            	        end if   
+            	     end if
+            	               	      
+            	!do jj=1, size(wavelen_h5)
             	
-                  !  print *, (wavelen_h5(jj))
-                end do
-                print *,'wave_num'
+                !   print *, (wavelen_h5(jj))
+               ! end do
+               ! print *,'wave_num'
             	   call h5_rd_file(tfilenames(i), '/','tmatrix', tmat_h5)
             	   ncut_h5(1)=int(ldum(size(ldum)))
             	   ncut_h5(2)=ncut_h5(1)
-            	   ! print *, size(tmat_h5,1)
+            	   !print *, size(tmat_h5,1)
             	   !------------New: making Tmatrix compatible with TERMS -------------------
             	   allocate(tmat(size(tmat_h5,1), size(tmat_h5,2), size(tmat_h5,3)))
             	   tmat =0
@@ -1319,12 +1308,13 @@ contains
             	   end do 
             	                      	   
             	   !-------------------------------------------------------------------------
-            	   !call h5_rd_file(tfilenames(i), '/materials/sphere/','relative_permittivity', escat_h5)
-            	   !call h5_rd_file(tfilenames(i), '/materials/embedding/','relative_permittivity', ehost_h5)
             	   
-            	   call h5_rd_file(tfilenames(i), 'embedding/','relative_permittivity', ehost_h5)   
-            	   !print *, 'escat_h5'
-            	   !print *, escat_h5
+            	   call h5_rd_file(tfilenames(i), '/materials/embedding/','relative_permittivity', ehost_h5, iflag_=iflag)
+            	   
+            	   if (.not. iflag)then
+            	   
+            	      call h5_rd_file(tfilenames(i), 'embedding/','relative_permittivity', ehost_h5, iflag_=iflag)   
+            	   end if
             	   print *, 'ehost_h5'
             	   print *, ehost_h5
             	 end if
