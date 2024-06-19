@@ -20,7 +20,7 @@ program termsProgram
    character(len=3), allocatable :: labels(:, :)
    character(len=18), allocatable :: string(:)
    real(8) :: ehost_const = 1 
-   complex(8), allocatable  :: ehost_h5 (:,:,:)
+   real(8), allocatable  :: ehost_h5(:)
    real(8), allocatable :: geometry(:, :), dipoles(:, :)
    integer :: Epower = 2, pol_type = 1
    real(8), allocatable :: ehost(:)
@@ -98,8 +98,9 @@ program termsProgram
    	end do
    	!print *, ehost(1)
    	!print *, realpart(ehost_h5(1,1,1))
-   	if (abs(ehost(1) - realpart(ehost_h5(1,1,1)))  >= 0.001)then
+   	if (abs(ehost(1) - ehost_h5(1))  >= 0.001)then
    	    write (*,'(A)') 'ERROR: Medium mismatch between the inputfile and HDF5 file '
+          write (*,'(A)') ehost_h5(1)
                 STOP
         end if
         
@@ -1267,28 +1268,17 @@ contains
                    sdum(2:size(sdum):2)=1
                    qdum=(sdum-1)*maxval(pdum)+pdum
                   
-                   if (allocated(wavelen_h5)) deallocate(wavelen_h5)  
-                   call h5_rd_vec(tfilenames(i), '/','angular_vacuum_wavenumber', ang_wave_num, iflag_=iflag) 
-            	     print *, iflag 
+                   if (allocated(wavelen_h5)) deallocate(wavelen_h5) 
+                       call h5_rd_vec(tfilenames(i), '/','angular_vacuum_wavenumber', ang_wave_num, iflag_=iflag) 
+            	            print *, iflag 
             	     if (iflag )then
             	          allocate(wavelen_h5(size(ang_wave_num)))
             	          wavelen_h5 = tpi/ang_wave_num
             	     else 
-            	     
-            	        call h5_rd_vec(tfilenames(i), '/','vacuum_wavelength', wavelen_h5, iflag_=iflag)
-            	        print *, iflag
-            	        if ( .not. iflag)then 
-            	        	call h5_rd_vec(tfilenames(i), '/','frequency', freq, iflag_=iflag )
-            	        	if (iflag )then 
-            	        		allocate(wavelen_h5(size(freq)))
-            	                       wavelen_h5 = sp_light / freq
-            	                else
-            	                      print *, 'ERROR: .H5 file doesnot include ang_vac_num or vac_wavelen or freq. '
-            	                      STOP
-            	                end if
-            	        end if   
-            	     end if
-            	               	      
+                       call h5_rd_vec(tfilenames(i), '/','vacuum_wavelength', wavelen_h5, iflag_=iflag)
+            	        print *, 'somehow read vacuum_wavelength'
+                       print *, iflag
+            	     end if        	      
             	!do jj=1, size(wavelen_h5)
             	
                 !   print *, (wavelen_h5(jj))
@@ -1309,12 +1299,14 @@ contains
             	                      	   
             	   !-------------------------------------------------------------------------
             	   
-            	   call h5_rd_file(tfilenames(i), '/materials/embedding/','relative_permittivity', ehost_h5, iflag_=iflag)
+            	   ! call h5_rd_file(tfilenames(i), '/materials/embedding/','relative_permittivity', ehost_h5, iflag_=iflag)
             	   
-            	   if (.not. iflag)then
+            	   ! if (.not. iflag) then
             	   
-            	      call h5_rd_file(tfilenames(i), 'embedding/','relative_permittivity', ehost_h5, iflag_=iflag)   
-            	   end if
+            	   print *, 'WAT'
+                  call h5_rd_vec(tfilenames(i),  '/embedding/','relative_permittivity', ehost_h5, iflag_=iflag) 
+            	   !  call h5_rd_file(tfilenames(i), '/embedding/','relative_permittivity', ehost_h5, iflag_=iflag)   
+            	   ! end if
             	   print *, 'ehost_h5'
             	   print *, ehost_h5
             	 end if
@@ -1641,7 +1633,51 @@ contains
             write (*, '(A,A,A)') &
                myName, '> Detected keyword ', trim(keyword)
             !
-            if (words(2) /= '' .and. words(3) /= '' .and. words(4) /= '') then
+                        ! baptiste 20/04/2022: added option to pass a filename
+            if (words(2) (1:1) == 'f' .or. words(2) (1:1) == 'F') then ! only filename supplied
+               
+               if (trim(words(3)) == '') then
+                  write (*, '(A,A)') myname, &
+                     '> ERROR: Missing wavelength filename'
+                  STOP
+               end if
+               !
+               write (*, '(15x,A,A)') 'Wavelength filename= ', trim(words(3))
+               !
+               inquire (file=trim(words(3)), exist=yes)
+               if (.not. yes) then
+                  write (*, '(A,A,A)') myName, &
+                     '> ERROR: Missing wavelength file ', &
+                     trim(words(3))
+                  STOP
+               end if
+               !
+               open (unit=11, file=trim(words(3)), status='old')
+               read (11, *, IOSTAT=eof) k
+               if (eof /= 0) then
+                  write (*, '(A,A,A)') myName, '> ERROR: In header of ', trim(words(3))
+                  STOP
+               elseif (k < 1) then
+                  write (*, '(A,A)') myName, '> ERROR: Wavelength count < 1'
+                  STOP
+               else
+                  write (*, '(15x,A,i6)') 'Expected wavelength count= ', k
+               end if
+               if (allocated(wavelen)) deallocate (wavelen)
+               allocate (wavelen(k))
+               if (allocated(ehost)) deallocate (ehost)
+               allocate (ehost(k))
+               do j = 1, k
+                  read (11, *, IOSTAT=eof) wavelen(j)
+                  if (eof /= 0) then
+                     write (*, '(A,A,i6)') myName, &
+                        '> ERROR reading wavelength ', j
+                     STOP
+                  end if
+               end do
+               close (11)
+
+            else if (words(2) /= '' .and. words(3) /= '' .and. words(4) /= '') then
                !
                !
                read (words(2:4), *, IOSTAT=eof) x(1), x(2), i
@@ -1669,7 +1705,7 @@ contains
                   wavelen(j + 1) = x(1) + j*x(2)
                end do
                !
-            elseif (words(2) /= '') then
+            else if (words(2) /= '') then
                !
                if (allocated(wavelen)) deallocate (wavelen)
                allocate (wavelen(1))
@@ -1682,6 +1718,7 @@ contains
                !
             else
                !
+               write (*, '(15x,A,f10.4)') 'wavelength issue', wavelen(1)
                call errorParsingArguments(keyword)
                !
             end if
@@ -2578,7 +2615,7 @@ contains
       ! Update the escat to a given wavelength.
       ! ==============================================================
       !
-      use eps, only: epsAu, epsAg, epsPd, epsPt, epsSi, epsAl, epsCr, epsWater, interp1
+      use eps, only: epsAu, epsAg, epsAuRaschke, epsAgRaschke, epsPd, epsPt, epsSi, epsAl, epsCr, epsWater, interp1
       !
       implicit none
       !
@@ -2596,6 +2633,12 @@ contains
                do j = 1, size(wavelen)
                   escat(i, k, j) = epsAu(wavelen(j))
                end do
+            elseif (trim(labels(i, k)) == 'Au2') then
+               escat(i, k, 1:size(wavelen)) = epsAuRaschke(wavelen)
+
+            elseif (trim(labels(i, k)) == 'Ag2') then
+               escat(i, k, 1:size(wavelen)) = epsAgRaschke(wavelen)
+
             elseif (trim(labels(i, k)) == 'Ag') then
                do j = 1, size(wavelen)
                   escat(i, k, j) = epsAg(wavelen(j))
