@@ -121,7 +121,7 @@ contains
         ncut, wavelen, inc, ehost, geometry, scheme, &      !Mandatory ins
         field, Bfield, N_OC, orAvextEB_int, oa_ldoc, p_label, & ! in/out
         tfiles_, escat_, nselect_, verb_, noRTR_, dump_oaE2, &
-        dump_oaB2, dipoles) ! optional ins
+        dump_oaB2, dipoles, HDF5_in) ! optional ins
 
         ! Map the near field for a multiple scattering problem, after solving it.
         ! Currently restricted to either (i) all scatterers being described using
@@ -146,7 +146,7 @@ contains
         logical, intent(in), optional :: noRTR_
         logical, intent(in) :: dump_oaE2, dump_oaB2
         character*256, intent(in), optional :: tfiles_(size(geometry, 2))
-
+	 logical, intent(in), optional :: HDF5_in(:)
         !real(8), intent(inout), optional :: acs_int_(size(geometry,2), 4)
         ! Local variables
         character(*), parameter :: myName = 'mapNF'
@@ -304,7 +304,8 @@ contains
                             Tmat=TIJ(js + 1:js + lmax, js + 1:js + lmax), &
                             filename=trim(tfiles(j)), &
                             unit=units(j), &
-                            wavelen=wavelen(iwav))
+                            wavelen=wavelen(iwav), &
+                            HDF5_in_ = HDF5_in(j))
                     elseif (units(j) < 0) then
                         i = abs(units(j))
                         is = (i - 1)*lmax
@@ -491,7 +492,7 @@ contains
     subroutine spectrumFF( &
         ncut, wavelen, ehost, geometry, scheme, &
         sig_oa_, sig_, sig_abs_, jsig_abs_oa, & ! output (cross-sectine outions)
-        escat_, tfiles_, nselect_, noRTR_, verb_) ! optional ins
+        escat_, tfiles_, nselect_, noRTR_, verb_, HDF5_in) ! optional ins
         !
         use swav, only: calcJCoeffsPW
         use miet, only: calcMieIntCoeffs
@@ -514,6 +515,7 @@ contains
         integer, intent(in), optional :: nselect_(2, 2, 2, size(geometry, 2)), verb_
         logical, intent(in), optional :: noRTR_
         real(8), intent(inout), optional :: jsig_abs_oa(:, :, :)
+        logical, intent(in), optional :: HDF5_in(:)
         ! Local variables
         character(*), parameter :: myName = 'spectrumFF'
         character*256 :: tfiles(size(geometry, 2))
@@ -696,7 +698,8 @@ contains
                             Tmat=TIJ(js + 1:js + lmax, js + 1:js + lmax), &
                             filename=trim(tfiles(j)), &
                             unit=units(j), &
-                            wavelen=wavelen(iwav))
+                            wavelen=wavelen(iwav), &
+                            HDF5_in_ = HDF5_in(j))
                     elseif (units(j) < 0) then
                         i = abs(units(j))
                         is = (i - 1)*lmax
@@ -5157,20 +5160,26 @@ contains
         return
     end function RotMatZ
     !
-    subroutine readTmatFile(Tmat, filename, unit, wavelen, verb_)
+    subroutine readTmatFile(Tmat, filename, unit, wavelen,HDF5_in_, verb_)
+        
+        use HDFfive, only: h5_rd_file, h5_rd_vec
         !
         complex(8), intent(inout) :: Tmat(:, :)
         character(*), intent(in) :: filename
         integer, intent(in) :: unit
         real(8), intent(in) :: wavelen
         integer, intent(in), optional :: verb_
+        logical, intent(in), optional :: HDF5_in_
         !
         character(*), parameter :: myName = 'readTmatFile'
         character(64) :: comment
         logical :: yes
-        integer :: i, j, eof, m, mp, n, np, q, qp, k
+        integer :: i, j, eof, m, mp, n, np, q, qp, k, ij(1)
         integer :: lmax, pmax, nmax, nelements, verb
         real(8) :: x, y
+        complex(8), allocatable :: Tmat_h5(:, :, :)
+        real(8), allocatable :: ang_wave_num(:), wavelen_h5(:), ldum(:), mdum(:)  
+        integer, allocatable :: pdum(:), sdum(:), qdum(:)     
         !
         verb = 0
         if (present(verb_)) verb = verb_
@@ -5179,6 +5188,8 @@ contains
             myName, '> Filename ', trim(filename)
         !
         lmax = size(Tmat, 1)
+        print *, 'lmax'
+        print *, lmax
         pmax = lmax/2
         nmax = int(sqrt(dble(pmax)))
         if (size(Tmat, 2) /= lmax) then
@@ -5207,44 +5218,72 @@ contains
         !
         read (unit, '(A)', iostat=eof) comment ! comment line
         !
-        i = index(comment, '=')  ! look for 1st equal
-        comment = adjustl(comment(i + 1:))
-        read (comment, *, iostat=eof) x ! will read just the wavelength
-        if (eof /= 0) then
-            write (*, '(/,A,A)') myName, &
-                '> ERROR: Failed to extract wavelength from comment'
-            STOP
-        elseif (abs(x - wavelen) > tiny1) then
-            write (*, '(/,A,A)') myName, '> ERROR: Wavelengh mismatch'
-            STOP
-        elseif (verb > 1) then
-            write (*, '(A,es15.8E2)') '  wavelength=', x
-        end if
+        if (.not. HDF5_in_)then
+              i = index(comment, '=')  ! look for 1st equal
+              comment = adjustl(comment(i + 1:))
+              read (comment, *, iostat=eof) x ! will read just the wavelength
+              if (eof /= 0) then
+                 write (*, '(/,A,A)') myName, &
+                   '> ERROR: Failed to extract wavelength from comment'
+                 STOP
+              elseif (abs(x - wavelen) > tiny1) then
+                  write (*, '(/,A,A)') myName, '> ERROR: Wavelengh mismatch'
+                  STOP
+              elseif (verb > 1) then
+                  write (*, '(A,es15.8E2)') '  wavelength=', x
+              end if
         !
-        i = index(comment, '=')  ! look for 2nd equal
-        comment = adjustl(comment(i + 1:))
-        read (comment, *, iostat=eof) nelements ! read the expected element count
-        if (eof /= 0) then
-            write (*, '(A,A)') myName, &
-                '> ERROR: Failed to extract element count from comment'
-            STOP
-        end if
+              i = index(comment, '=')  ! look for 2nd equal
+              comment = adjustl(comment(i + 1:))
+              read (comment, *, iostat=eof) nelements ! read the expected element count
+              if (eof /= 0) then
+                  write (*, '(A,A)') myName, &
+                  '> ERROR: Failed to extract element count from comment'
+                  STOP
+              end if
         !
-        kloop: do k = 1, nelements
-            read (unit, *, iostat=eof) q, qp, n, np, m, mp, x, y
-            if (eof /= 0) then
-                write (*, '(A,A,A)') myName, '> ERROR: Premature end of file ', &
-                    trim(filename)
-                STOP
-            elseif (q < 1 .or. qp < 1) then
-                write (*, '(A,A)') myName, '> ERROR: q < 1, wrong column order?'
-                STOP
-            end if
-            if (n > nmax .or. np > nmax) cycle kloop
-            i = (q - 1)*pmax + n*(n + 1) + m
-            j = (qp - 1)*pmax + np*(np + 1) + mp
-            Tmat(i, j) = cmplx(x, y, kind(Tmat))
-        end do kloop
+              kloop: do k = 1, nelements
+                  read (unit, *, iostat=eof) q, qp, n, np, m, mp, x, y
+                  if (eof /= 0) then
+                      write (*, '(A,A,A)') myName, '> ERROR: Premature end of file ', &
+                          trim(filename)
+                      STOP
+                  elseif (q < 1 .or. qp < 1) then
+                      write (*, '(A,A)') myName, '> ERROR: q < 1, wrong column order?'
+                      STOP
+                  end if
+                  if (n > nmax .or. np > nmax) cycle kloop
+                  i = (q - 1)*pmax + n*(n + 1) + m
+                  j = (qp - 1)*pmax + np*(np + 1) + mp
+                  Tmat(i, j) = cmplx(x, y, kind(Tmat))
+                  end do kloop
+          else
+                 print *, filename
+           	 call h5_rd_vec(filename,'/','vacuum_wavelength', wavelen_h5)
+            	!  if (allocated(wavelen_h5)) deallocate(wavelen_h5)
+            	!  allocate(wavelen_h5(size(ang_wave_num)))
+            	!  wavelen_h5 = tpi/ang_wave_num
+            	 ij=minloc(abs(wavelen_h5-wavelen), 1)           	          	  
+          	 !----------------------------------------------------
+          	 call h5_rd_vec(filename, '/modes','l', ldum)
+                 call h5_rd_vec(filename, '/modes','m', mdum)    
+                 allocate(pdum(size(ldum)), sdum(size(ldum)), qdum(size(ldum)) )   
+                   pdum = int(ldum)*(int(ldum) + 1) + int(mdum)
+                   sdum(1:size(sdum):2)=2
+                   sdum(2:size(sdum):2)=1
+                   qdum=(sdum-1)*maxval(pdum)+pdum 
+                   if (allocated(Tmat_h5)) deallocate(Tmat_h5)  	      
+            	   call h5_rd_file(filename, '/','tmatrix', Tmat_h5)
+            	   !------------New: making Tmatrix compatible with TERMS -------------------
+            	  ! allocate(tmat(size(Tmat_h5,1), size(Tmat_h5,2), size(Tmat_h5,3)))
+            	   Tmat =0
+            	   do i=1,size(Tmat,1)
+            	   	do j=1, size(Tmat,1)
+            		   Tmat(qdum(j),qdum(i))=Tmat_h5(i,j,ij(1))
+            		end do
+            	   end do 
+          	 !----------------------------------------------------   
+          end if
         !
     end subroutine readTmatFile
     !
@@ -5377,7 +5416,7 @@ contains
 
     subroutine calcStokesScaVec(sca_angles, inc2, ncut, wavelen, ehost, geometry, scheme, &
                                 tfiles_, escat_, nselect_, noRTR_, verb_, &
-                                StokesPhaseMat, StokesScaVec, diff_sca)
+                                StokesPhaseMat, StokesScaVec, diff_sca, HDF5_in)
 
         use sphmsv, only: calcScatMat, calcStokesIncVec, calcStokesPhaseMat
 
@@ -5402,7 +5441,7 @@ contains
         logical, intent(in), optional :: noRTR_
         real(8), intent(inout) :: StokesScaVec(:, :, :, :), diff_sca(:, :, :, :)
         real(8), intent(inout) :: StokesPhaseMat(:, :, :, :)
-
+	logical, intent(in) :: HDF5_in(:)
         ! Local variables
         character(*), parameter :: myName = 'calcStokesScaVec'
 
@@ -5540,7 +5579,8 @@ contains
                             Tmat=TIJ(js + 1:js + lmax, js + 1:js + lmax), &
                             filename=trim(tfiles(j)), &
                             unit=units(j), &
-                            wavelen=wavelen(iwav))
+                            wavelen=wavelen(iwav), &
+                            HDF5_in_ = HDF5_in(j))
                     elseif (units(j) < 0) then
                         i = abs(units(j))
                         is = (i - 1)*lmax
