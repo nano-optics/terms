@@ -80,29 +80,21 @@ program termsProgram
    end if
    call readInputFile(inputfile=filename)
    !
-   !print *, 'ncut'
-   !print *, ncut 
    
-     if (any(HDF5_in))then                                                                            !compare input file values and hdf5 file input values
+     if (any(HDF5_in))then   !compare input file values and hdf5 file input values
    	if (size(wavelen) /= size(wavelen_h5)) then
-   	   write (*,'(A)') 'ERROR: wavelengths are not match in the inputfile and hDF5 file '
+   	   write (*,'(A)') 'ERROR: wavelength mismatch between the input file and HDF5 file'
              STOP
         end if
    	do idum=1, size(wavelen)
    		if (abs(wavelen(idum) - wavelen_h5(idum)) >= 0.001) then
    			print *, wavelen(idum)
    			print *, wavelen_h5(idum)
-   	  	    write (*,'(A)') 'ERROR: wavelengths are not match in the inputfile and hDF5 file '
+   	  	    write (*,'(A)') 'ERROR: wavelength mismatch between the input file and HDF5 file'
                      STOP
                end if
    	end do
-   	!print *, ehost(1)
-   	!print *, realpart(ehost_h5(1,1,1))
-   	! if (abs(ehost(1) - realpart(ehost_h5(1,1,1)))  >= 0.001)then
-   	!     write (*,'(A)') 'ERROR: Mediums are not match in the inputfile and hDF5 file '
-      !           STOP
-      !   end if
-        
+
    	if (ncut(1) /= ncut_h5(1)) then
    		write (*,'(A)') 'Warning: MultipoleCutoff mismatch between the inputfile and HDF5 file '
 
@@ -253,8 +245,7 @@ program termsProgram
          ! -----------------------------------------------------
          ! Now deal with orientationally-averaged cross-sections
          ! -----------------------------------------------------
-         !write(*,*)'scheme', scheme
-         !write(*,*)'split_absOA', split_absOA
+         !
          if (scheme > 0) then
             if ((scheme /= 3) .and. split_absOA) then !@
 
@@ -278,7 +269,6 @@ program termsProgram
                      trim(filenames(ndum)), '.dat'
                   open (unit=11, file=filename, status='replace')
 
-                  ! open(unit=11,file=filenames(ndum),'.dat',status='replace')
                   write (11, '(A)') '# Wavelength | Total | n= 1 | ...'
                   do idum = 1, size(wavelen)
                      write (11, '(f12.6,1x,ES24.17E2)', advance='NO') &
@@ -435,8 +425,6 @@ program termsProgram
 
                groupname = '/Far-Field/oa_incidence      '
                dsetname = 'csAbsOA_split'
-               !write(11,'(A)') &
-               ! ' Wavelength || Total || absOA(particle=1) | absOA(particle=2) | ...'
                attribute = 'Total, absOA(particle=1), absOA(particle=2),  ...'
                if (allocated(work5)) deallocate (work5)
                allocate (work5(size(wavelen), nscat + 1))
@@ -452,7 +440,6 @@ program termsProgram
 !------------------------------------------------------------------
    elseif (mode == 1) then ! map near field at different wavelength and Incidence, Optical chirality(OC)
       ! & and orientation average of OC & E2 & B2
-      !write(*,*)'nGridPoints', nGridPoints
       nf = .true.
       if (ndipoles > 0) then
          kdum = ndipoles
@@ -465,8 +452,6 @@ program termsProgram
          end if
          kdum = size(incidences, 2)
       end if
-
-      ! if(nGridPoints /= 0) then
 
       if (nGridPoints > 0) then ! calculate regular grid
          allocate (p_label(nGridPoints, 2))
@@ -483,7 +468,7 @@ program termsProgram
          end if
 
          call calcGridPoints(work3(1:3, 1, 1:nGridPoints, 1, 1))
-         ! write(*,*)'work3', work3(1:3,1,1:nGridPoints,1,1)
+
          work4 = work3
       else ! read from file
          inquire (file=trim(pfilename), exist=ldum)
@@ -502,7 +487,7 @@ program termsProgram
          work4 = 0
          if (dump_C) allocate (N_OC(1, 1, nGridPoints, size(wavelen), kdum))
 
-         if (scheme /= 0 .AND. (PWinc)) then   !these quantities are just calculated for PWinc??
+         if (scheme /= 0 .AND. (PWinc)) then   !these quantities are just calculated for PW inc
             if (dump_oaE2 .OR. dump_oaB2) allocate (orAvextEB_int(nGridPoints, 6, size(wavelen)))
             if (dump_oaLdoc) allocate (oa_ldoc(nGridPoints, 10, size(wavelen)))
          end if
@@ -515,18 +500,7 @@ program termsProgram
          work4(1:3, 1, :, 1, 1) = work3(1:3, 1, :, 1, 1)
 
       end if
-      ! else
-      !  allocate(work3(3,5,1,size(wavelen),kdum),&
-      !            work4(3,5,1,size(wavelen),kdum), p_label(1,2))
-      !  work3 = 0
-      !  work4 = 0
-      ! p_label=0
-      ! if (dump_C) allocate(N_OC(1,1,1,size(wavelen),kdum))
-      ! if (scheme/=0  .AND. (PWinc)) then
-      !    if (dump_oaE2 .OR. dump_oaB2) allocate(orAvextEB_int(1,6,size(wavelen)))
-      !    if (dump_oaLdoc) allocate(oa_ldoc(1,10,size(wavelen)))
-      ! endif
-      !endif
+
       if (dump_C) N_OC = 0
       if (scheme /= 0 .AND. (PWinc)) then
          if (dump_oaE2 .OR. dump_oaB2) orAvextEB_int = 0
@@ -537,9 +511,8 @@ program termsProgram
       if (PWinc) then
          allocate (inc(4, size(incidences, 2)))
          inc = 0
-         !  rdum(1) = real(pol_type,kind(incidences))
          do pdum = 1, size(incidences, 2)
-            rdum(1) = real(pol_type, kind(incidences))  !(1:3,pdum)
+            rdum(1) = real(pol_type, kind(incidences))  
             inc(1, pdum) = rdum(1)
             inc(2:4, pdum) = incidences(1:3, pdum)
          end do
@@ -628,7 +601,7 @@ program termsProgram
 
                write (filename, '(A)') 'normalised_ldoc.dat'
                if (verb > 1) write (*, '(A,A,A)') &
-                  myname, '> Dumping normalized optical chirality to file ', filename
+                  myname, '> Dumping normalised optical chirality to file ', filename
                open (13, file=filename, status='replace')
                if (size(incidences, 2) == 1) then  !++++++++
 
@@ -772,14 +745,12 @@ program termsProgram
 
                filename = 'normalised_ldoc'
                if (verb > 1) write (*, '(A,A,A)') &
-                  myname, '> Dumping normalized optical chirality to file ', filename
+                  myname, '> Dumping normalised optical chirality to file ', filename
 
                if (size(incidences, 2) == 1) then  !++++++++
                   if (allocated(work5)) deallocate (work5)
                   allocate (work5(nGridpoints*size(wavelen), 5))
 
-                  ! write(12,*)'lambda, x1, y1, z1, Inc1: ldoc1, ...'
-                  ! write(13,*)'lambda, x1, y1, z1, Inc1: n_ldoc1, ...'
                   do odum = 1, size(wavelen)
                      do ndum = 1, nGridpoints
                         work5(ndum + (odum - 1)*nGridpoints, 1) = wavelen(odum)
@@ -861,9 +832,9 @@ program termsProgram
       if (allocated(work3)) deallocate (work3)
       if (allocated(work4)) deallocate (work4)
 
-      !------------------------------------------------------------------
-!Stokes Scattering Vector, Stokes phase matrix, and diff_scat cross section
-! at different wavelength or different scattering angle
+      !--------- Mode 3 --------------
+      ! Stokes Scattering Vector, Stokes phase matrix, and diff_scat cross section
+      ! at different wavelength or different scattering angle
    elseif (mode == 3) then
       if (.not. allocated(Sca_angles)) then
          allocate (sca_angles(3, size(incidences, 2)))
@@ -989,8 +960,6 @@ program termsProgram
                myname, '> Dumping differential Scattering cross section to file', filename2
          end if
 
-         !open(11, file=filename, status='replace')
-         !open(12, file=filename1, status='replace')
          if (size(incidences, 2) > 1) then
             ! write(11,*)'Inc(i)&Sca(j)     I             Q              U              V'
             ! write(12,*)'Inc(i)&Sca(j)    z11 z12 z13 z14, ...,z44
@@ -1042,8 +1011,7 @@ program termsProgram
             work5 = 0
             work6 = 0
             work7 = 0
-            !write(*,*)'size(wavelen)=', size(wavelen)
-            ! write(*,*)'size(sca_angles,2)=', size(sca_angles,2)
+
             do pdum = 1, size(sca_angles, 2)
                do odum = 1, size(wavelen)
                   work5(odum + (pdum - 1)*size(wavelen), 1:3) = sca_angles(1:3, pdum)
@@ -1184,11 +1152,11 @@ contains
             !
 
             if (mode == 2) then ! spectrumFF
-               write (*, '(15x,A)') 'mode=2 => spectrum_FF for far-field quantities'
+               write (*, '(15x,A)') 'mode=2 => Far-field spectra'
             elseif (mode == 1) then ! map field on grid at diff. lambda and Inc. field
-               write (*, '(15x,A)') 'mode=1 => mapNF at diff. lambda and diff. Inc. and Sca_angles'
+               write (*, '(15x,A)') 'mode=1 => Near-field maps at multiple wavelengths and incident and scattering angles'
             elseif (mode == 3) then ! Stokes Vector at diff. lambda and Inc. field
-               write (*, '(15x,A)') 'mode=3 => Stokes Phase Matrixes & Stokes Scattering Vectors'
+               write (*, '(15x,A)') 'mode=3 => Stokes Phase Matrices & Stokes Scattering Vectors'
             else
                write (*, '(A,A,i2)') myname, '> ERROR: Unrecognised mode=', mode
                STOP
@@ -1258,10 +1226,9 @@ contains
             	  	HDF5_in(i) = .true.            	
             	        if (allocated(ldum)) deallocate(ldum)
                         if (allocated(mdum)) deallocate(mdum)
-            	      !   if (allocated(wavelen_h5)) deallocate(wavelen_h5)
+            	         if (allocated(wavelen_h5)) deallocate(wavelen_h5)
                         if (allocated(tmat_h5)) deallocate(tmat_h5)
                          if (allocated(tmat)) deallocate(tmat)
-            	        if (allocated(escat_h5)) deallocate(escat_h5)
             	       print *, tfilenames(i)
 
             	   print *, 'read modes/l'
@@ -1272,17 +1239,9 @@ contains
 
                    allocate(pdum(size(ldum)), sdum(size(ldum)), qdum(size(ldum)) )   
                    pdum = int(ldum)*(int(ldum) + 1) + int(mdum)
-                   sdum(1:size(sdum):2)=2
-                   sdum(2:size(sdum):2)=1
+                   sdum(1:size(sdum):2)=2 ! electric first in tmat.h5
+                   sdum(2:size(sdum):2)=1 ! magnetic second in tmat.h5
                    qdum=(sdum-1)*maxval(pdum)+pdum
-
-                  !  if (allocated(wavelen_h5)) deallocate(wavelen_h5)  
-                  !WHAT IS THIS
-                  
-                    ! Check if dataset exists
-                  !   CALL H5LEXISTS_F(loc_id, '/vacuum_wavelength', got, errorread)
-                  !   IF (.NOT.got) RETURN
-
 
             	   print *, 'read vacuum_wavelength'
                    call h5_rd_vec(tfilenames(i), '/','vacuum_wavelength', wavelen_h5) 
@@ -1292,7 +1251,7 @@ contains
             	   ncut_h5(1)=int(ldum(size(ldum)))
             	   ncut_h5(2)=ncut_h5(1)
             	   print *, size(tmat_h5,1)
-            	   !------------New: making Tmatrix compatible with TERMS -------------------
+            	   !------------ order T-matrix elements in TERMS convention -------------------
             	   allocate(tmat(size(tmat_h5,1), size(tmat_h5,2), size(tmat_h5,3)))
             	   tmat =0
             	   do ii=1,size(tmat,1)
@@ -1300,7 +1259,7 @@ contains
             		  tmat(qdum(jj),qdum(ii),:)=tmat_h5(ii,jj,:)
             		end do
             	   end do 
-            	                      	   
+            	   ! TODO check for epsilon embedding 
             	   ! call h5_rd_file(tfilenames(i), 'embedding/','relative_permittivity', ehost_h5)   
             	   ! print *, 'ehost_h5'
             	   ! print *, ehost_h5
@@ -1546,7 +1505,6 @@ contains
             write (*, '(A,A,A)') &
                myName, '> Detected keyword ', trim(keyword)
             !
-            !  read(words(2:3),*,IOSTAT=eof) Epower   !Atefeh
             read (words(2), *, IOSTAT=eof) Epower
             if (eof /= 0) then    !call errorParsingArguments(keyword)
                if (words(2) /= '') then
@@ -1627,7 +1585,7 @@ contains
             !
             write (*, '(A,A,A)') &
                myName, '> Detected keyword ', trim(keyword)
-                        ! baptiste 20/04/2022: added option to pass a filename
+                        ! baptiste 20/04/2022: added option to pass a filename for arbitrary wavelengths
             if (words(2) (1:1) == 'f' .or. words(2) (1:1) == 'F') then ! only filename supplied
                
                if (trim(words(3)) == '') then
@@ -2579,11 +2537,11 @@ contains
       if (allocated(selections)) deallocate (selections)
       !if (ndipoles > 0 .AND. PWinc ) then
       !   write(*,'(A,A)') myName, &
-      !    '> ERROR: Both plane wave incidence and dipole source are not allowed'
+      !    '> ERROR: Simultaneous plane wave incidence and dipole source are not allowed'
       !  STOP
       ! elseif (ndipoles == 0 .AND. (.not. PWinc) ) then
       !   write(*,'(A,A)') myName, &
-      !    '> ERROR: Please determine the source (Plane Wave or dipole)'
+      !    '> ERROR: Please specify the source (Plane Wave or dipole)'
       !  STOP
       !endif
    end subroutine readInputFile
