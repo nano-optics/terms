@@ -638,7 +638,7 @@ contains
                 !    write(*,'(A,A)') myname,'> ERROR: variable polarisation'
                 !    STOP
                 ! endif
-                do j = 1, 4 ! loop over all 4 Jone's vectors
+                do j = 1, 4 ! loop over all 4 Jones vectors
                     is = is + 1
                     inc(1, is) = j
                     inc(2:4, is) = sig_(1:3, 1, 1, i)
@@ -5193,7 +5193,7 @@ contains
         pmax = lmax/2
         nmax = int(sqrt(dble(pmax)))
         if (size(Tmat, 2) /= lmax) then
-            write (*, '(A,A)') myname, '> ERROR: Passed Tmat not square!'
+            write (*, '(A,A)') myname, '> ERROR: input T-matrix is not square!'
             STOP
         elseif (lmax /= 2*nmax*(nmax + 2)) then
             write (*, '(A,A)') myname, '> ERROR: lmax /= 2*nmax*(nmax+2)'
@@ -5261,8 +5261,7 @@ contains
                  print *, filename
            	 call h5_rd_vec(filename,'/','vacuum_wavelength', wavelen_h5)
             	!  if (allocated(wavelen_h5)) deallocate(wavelen_h5)
-            	!  allocate(wavelen_h5(size(ang_wave_num)))
-            	!  wavelen_h5 = tpi/ang_wave_num
+
             	 ij=minloc(abs(wavelen_h5-wavelen), 1)           	          	  
           	 !----------------------------------------------------
           	 call h5_rd_vec(filename, '/modes','l', ldum)
@@ -5274,8 +5273,7 @@ contains
                    qdum=(sdum-1)*maxval(pdum)+pdum 
                    if (allocated(Tmat_h5)) deallocate(Tmat_h5)  	      
             	   call h5_rd_file(filename, '/','tmatrix', Tmat_h5)
-            	   !------------New: making Tmatrix compatible with TERMS -------------------
-            	  ! allocate(tmat(size(Tmat_h5,1), size(Tmat_h5,2), size(Tmat_h5,3)))
+            	   !------------ re-order T-matrix entries following TERMS conventions --------
             	   Tmat =0
             	   do i=1,size(Tmat,1)
             	   	do j=1, size(Tmat,1)
@@ -6194,7 +6192,7 @@ contains
                     waves=si_reg(:, :, j))
 
                 ! enddo
-                if (verb > 1) then   !Note:check timing!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                if (verb > 1) then   ! Note:check timing!
                     call cpu_time(t1)
                     call system_clock(toc, count_rate=tps)
                     t2 = t2 + t1 - t0
@@ -6353,7 +6351,6 @@ contains
         end if
 
         write (*, *) ! empty line
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
         if (verb > 0) write (*, '(A,A,/)') myname, '> Done!'
 
