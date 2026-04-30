@@ -1,0 +1,10 @@
+ModeAndScheme 2 3
+MultipoleCutoff 6 6 -3
+Wavelength 300 700 200
+Medium 1
+OutputFormat HDF5 tetrahedron_external
+TmatrixFiles 1
+tetrahedron_nm.tmat.h5
+Scatterers 1
+TF1 0 0 0 270 0 0 0 1
+

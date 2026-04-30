@@ -1,3 +1,21 @@
+# terms 1.2.0
+
+## New features
+
+- implemented basic import of `.tmat.h5` T-matrices
+- added 'Au2' built-in dielectric function based on Raschke et al Phys. Rev. B 86, 235147 (2012)
+- added 'Ag2' built-in dielectric function based on Raschke et al Phys. Rev. B 91, 235137 (2015)
+
+## Documentation
+
+- added vignette for `.tmat.h5` import and comparison with tetrahedron of built-in spheres
+- added vignette for `.tmat.h5` import and comparison of spheroid T-matrix from SMARTIES and JCMsuite 
+
+## Website
+
+- convert to quarto vignettes
+- updated list of publications 
+
 # terms 1.0.2
 
 ## Bug fix

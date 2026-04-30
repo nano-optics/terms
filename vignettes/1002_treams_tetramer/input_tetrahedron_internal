@@ -1,0 +1,13 @@
+ModeAndScheme 2 3
+MultipoleCutoff 6 6 -3
+Wavelength 300 700 100
+ScattererCentredCrossSections
+Medium 1
+OutputFormat HDF5 tetrahedron_internal
+DielectricFunctions 1
+"9.0d0 0.0d0"
+Scatterers 4
+DF1 -150 -86.60254 -61.23724 50
+DF1  150 -86.60254 -61.23724 60
+DF1    0 173.20508 -61.23724 70
+DF1    0   0.00000 183.71173 80

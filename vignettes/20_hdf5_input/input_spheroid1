@@ -1,0 +1,10 @@
+ModeAndScheme 2 3
+MultipoleCutoff 3 3 -3
+Wavelength 400 800 200
+Medium 1.7689
+OutputFormat HDF5 smarties_dimer
+TmatrixFiles 1 
+smarties.tmat.h5
+Scatterers 2
+TF1 0 -50 0 40 0 0 0 2
+TF1 0  50 0 40 0 0.7853982 0 2

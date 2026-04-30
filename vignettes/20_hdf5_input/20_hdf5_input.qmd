@@ -1,0 +1,79 @@
+---
+title: "Importing T-matrices in TERMS"
+author: "baptiste"
+date: today
+engine: knitr
+---
+
+Below is an example script to run TERMS with input T-matrices in `.tmat.h5` format. The input file for this example is available as standalone script [terms/input_spheroid1_dimer](/terms/input_spheroid1_dimer). 
+
+The input file for TERMS is
+
+```{.bash}
+{{< include ../terms/input_spheroid1_dimer >}}
+```
+
+Note that only `vacuum_wavelength` in nanometres is supported, and the wavelengths much match exactly. TERMS does not check the embedding medium, so it also the user's responsibility to ensure they are identical.
+
+The simulation is run at the command line with:
+
+```
+terms input_spheroid1_dimer > log1
+```
+
+and produces an output file `smarties_dimer.h5` storing the simulated results. For comparison, we also run the same simulation with a T-matrix obtained via Finite-element simulations using JCMsuite. Below is a plot comparing the results.
+
+```{r, echo=FALSE, message=FALSE}
+suppressPackageStartupMessages(require(terms))
+theme_set(theme_grey())
+
+## ----read----
+xs1 <- terms::consolidate_xsec('../terms/smarties_dimer.h5')
+# xs2 <- terms::consolidate_xsec('internal2.h5')
+xs2 <- terms::consolidate_xsec('../terms/JCMsuite_dimer.h5')
+
+## ----oa----
+mCOA <- rbind(cbind(xs1$mCOA, tmatrix = 'SMARTIES'),
+              cbind(xs2$mCOA, tmatrix = 'JCMsuite')) 
+mCOA$crosstype <- factor(mCOA$crosstype, levels = c("Ext", "Abs", "Sca"),
+                  labels = c("Extinction", "Absorption", "Scattering")
+)
+mCOAt <- subset(mCOA, variable == 'total')
+
+p1 <- ggplot(mCOA, aes(wavelength, average, alpha=tmatrix,
+                      linetype = tmatrix,colour=crosstype)) +
+  facet_wrap(~crosstype)+
+  geom_line(data=mCOAt |> filter(tmatrix=='SMARTIES',wavelength>420, 
+                                 wavelength <760),
+            lwd=0.8,lty=1) +
+  geom_point(data=mCOAt |> filter(tmatrix=='JCMsuite')) +
+  scale_alpha_manual(values=c(0.8,1)) +
+  guides(colour='none') +
+  scale_x_continuous(expand=c(0,0))+ 
+  scale_colour_brewer(palette='Set1') +
+  theme(legend.position	="inside", legend.position.inside = c(0.915,0.7))+
+  labs(x = expression("wavelength /nm"), 
+       y = expression("avg. cross-sec. /"*nm^2),
+       colour = expression(N), linetype="", pch="",alpha="T-matrix") 
+
+p2 <- ggplot(mCOA, aes(wavelength, dichroism, alpha=tmatrix,
+                       linetype = tmatrix,colour=crosstype)) +
+  facet_wrap(~crosstype)+
+    annotate("segment", x = -Inf, xend=Inf, y=0,yend=0, lty=3, col='grey')+
+  geom_line(data=mCOAt |> filter(tmatrix=='SMARTIES',wavelength>420, wavelength <760),
+            lwd=0.8,lty=1) +
+  geom_point(data=mCOAt |> filter(tmatrix=='JCMsuite')) +
+  scale_alpha_manual(values=c(0.8,1)) +
+  scale_x_continuous(expand=c(0,0))+ 
+  guides(colour='none') +
+  scale_colour_brewer(palette='Set1') +
+  labs(x = expression("wavelength /nm"), 
+       y = expression("dich. cross-sec. /"*nm^2),
+       colour = expression(N), linetype="", pch="") +
+  scale_y_continuous(limits = symmetric_range) +
+  theme(legend.position = "none")
+
+library(patchwork)
+print(p1/p2)
+
+```

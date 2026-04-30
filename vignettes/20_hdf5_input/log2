@@ -1,0 +1,1154 @@
+readInputFile> Parsing file input_spheroid2_dimer
+
+readInputFile> Detected keyword ModeAndScheme
+               mode=2 => Far-field spectra
+               scheme=3 => Seek T^(j) using Mackowski's approach
+readInputFile> Detected keyword MultipoleCutoff
+               Supplied ncut(1)=  3
+               Supplied ncut(2)=  3
+               Supplied ncut(3)=  -3
+readInputFile> Detected keyword Wavelength
+               Wavelength LB (nm):   450.000000
+               Wavelength UB (nm):   740.000000
+               nsteps, step:        29   10.0000
+readInputFile> Detected keyword Medium
+               Constant host epsilon=  1.7689E+0
+readInputFile> Detected keyword OutputFormat
+               OutputFormat=HDF5
+               All output files are stored in file "JCMsuite_dimer.h5                                               "
+readInputFile> Detected keyword TmatrixFiles
+ JCMsuite_nm.tmat.h5                                                                                                                                                                                                                                             
+ read modes/l
+ read modes/m
+ read vacuum_wavelength
+ read tmatrix
+          30
+
+readInputFile> Detected keyword Scatterers
+ with nscat=    2
+
+readInputFile> Descriptor(s) and circumscribing sphere(s):
+
+ scatID String                  x          y          z         R_0
+    1   TF1                 0.0000E+0 -5.0000E+1  0.0000E+0  4.0000E+1
+    2   TF1                 0.0000E+0  5.0000E+1  0.0000E+0  4.0000E+1
+
+readInputFile> Individual geometry characteristic(s):
+
+ scatID Details
+    1   Euler angles:  0.0000000  0.0000000  0.0000000 asp. ratio:  2.0000000
+    2   Euler angles:  0.0000000  0.7853982  0.0000000 asp. ratio:  2.0000000
+
+readInputFile> Finished parsing  7 keywords
+
+
+spectrumFF> ===== Wavelength:   450.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  6.98563149E+03 nConv=  0
+             <csSca>=  6.82079962E+02 nConv=  0
+             <csAbs>=  6.30355152E+03
+
+             <cdExt>=  6.34480652E+01
+             <cdSca>=  4.18332062E+01
+             <cdAbs>=  2.16148590E+01
+
+calcCs> csExt=  6.36594618E+03 nConv=  0
+         csSca=  6.43376155E+02 nConv=  0
+         csAbs=  5.72257003E+03
+
+calcCs> csExt=  5.93089945E+03 nConv=  0
+         csSca=  7.42335595E+02 nConv=  0
+         csAbs=  5.18856386E+03
+
+calcCs> csExt=  6.13843505E+03 nConv=  0
+         csSca=  6.89789375E+02 nConv=  0
+         csAbs=  5.44864568E+03
+
+calcCs> csExt=  6.15841058E+03 nConv=  0
+         csSca=  6.95922374E+02 nConv=  0
+         csAbs=  5.46248821E+03
+
+
+spectrumFF> ===== Wavelength:   460.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  6.86460996E+03 nConv=  0
+             <csSca>=  6.31291440E+02 nConv=  0
+             <csAbs>=  6.23331852E+03
+
+             <cdExt>=  5.82853613E+01
+             <cdSca>=  3.89772768E+01
+             <cdAbs>=  1.93080845E+01
+
+calcCs> csExt=  6.29809991E+03 nConv=  0
+         csSca=  6.00731381E+02 nConv=  0
+         csAbs=  5.69736853E+03
+
+calcCs> csExt=  5.92932900E+03 nConv=  0
+         csSca=  6.97701705E+02 nConv=  0
+         csAbs=  5.23162730E+03
+
+calcCs> csExt=  6.10595187E+03 nConv=  0
+         csSca=  6.46775688E+02 nConv=  0
+         csAbs=  5.45917618E+03
+
+calcCs> csExt=  6.12147704E+03 nConv=  0
+         csSca=  6.51657397E+02 nConv=  0
+         csAbs=  5.46981964E+03
+
+
+spectrumFF> ===== Wavelength:   470.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  6.74778861E+03 nConv=  0
+             <csSca>=  5.84455851E+02 nConv=  0
+             <csAbs>=  6.16333276E+03
+
+             <cdExt>=  5.31779440E+01
+             <cdSca>=  3.60832942E+01
+             <cdAbs>=  1.70946498E+01
+
+calcCs> csExt=  6.23426701E+03 nConv=  0
+         csSca=  5.60942811E+02 nConv=  0
+         csAbs=  5.67332420E+03
+
+calcCs> csExt=  5.93480790E+03 nConv=  0
+         csSca=  6.51490054E+02 nConv=  2
+         csAbs=  5.28331784E+03
+
+calcCs> csExt=  6.07886329E+03 nConv=  0
+         csSca=  6.06596688E+02 nConv=  0
+         csAbs=  5.47226661E+03
+
+calcCs> csExt=  6.09021161E+03 nConv=  0
+         csSca=  6.10426777E+02 nConv=  0
+         csAbs=  5.47978483E+03
+
+
+spectrumFF> ===== Wavelength:   480.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  6.89832043E+03 nConv=  0
+             <csSca>=  5.84906923E+02 nConv=  0
+             <csAbs>=  6.31341351E+03
+
+             <cdExt>=  5.51342149E+01
+             <cdSca>=  3.86025714E+01
+             <cdAbs>=  1.65316436E+01
+
+calcCs> csExt=  6.43804094E+03 nConv=  0
+         csSca=  5.65635476E+02 nConv=  0
+         csAbs=  5.87240547E+03
+
+calcCs> csExt=  6.29000756E+03 nConv=  0
+         csSca=  6.74754510E+02 nConv=  2
+         csAbs=  5.61525305E+03
+
+calcCs> csExt=  6.36175521E+03 nConv=  0
+         csSca=  6.20913836E+02 nConv=  0
+         csAbs=  5.74084138E+03
+
+calcCs> csExt=  6.36629330E+03 nConv=  0
+         csSca=  6.23834724E+02 nConv=  0
+         csAbs=  5.74245857E+03
+
+
+spectrumFF> ===== Wavelength:   490.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  7.13014751E+03 nConv=  0
+             <csSca>=  6.02844793E+02 nConv=  0
+             <csAbs>=  6.52730272E+03
+
+             <cdExt>=  5.63138091E+01
+             <cdSca>=  4.30553372E+01
+             <cdAbs>=  1.32584719E+01
+
+calcCs> csExt=  6.73095778E+03 nConv=  0
+         csSca=  5.87238815E+02 nConv=  0
+         csAbs=  6.14371896E+03
+
+calcCs> csExt=  6.78013625E+03 nConv=  0
+         csSca=  7.23762026E+02 nConv=  2
+         csAbs=  6.05637423E+03
+
+calcCs> csExt=  6.75737207E+03 nConv=  0
+         csSca=  6.56643703E+02 nConv=  0
+         csAbs=  6.10072837E+03
+
+calcCs> csExt=  6.75372196E+03 nConv=  0
+         csSca=  6.58651872E+02 nConv=  0
+         csAbs=  6.09507008E+03
+
+
+spectrumFF> ===== Wavelength:   500.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  7.60438769E+03 nConv=  0
+             <csSca>=  6.82747447E+02 nConv=  0
+             <csAbs>=  6.92164025E+03
+
+             <cdExt>=  6.51477380E+01
+             <cdSca>=  5.76844084E+01
+             <cdAbs>=  7.46332955E+00
+
+calcCs> csExt=  7.23594738E+03 nConv=  0
+         csSca=  6.63900698E+02 nConv=  0
+         csAbs=  6.57204668E+03
+
+calcCs> csExt=  7.54724287E+03 nConv=  0
+         csSca=  8.55228098E+02 nConv=  2
+         csAbs=  6.69201477E+03
+
+calcCs> csExt=  7.39817888E+03 nConv=  0
+         csSca=  7.61298107E+02 nConv=  0
+         csAbs=  6.63688078E+03
+
+calcCs> csExt=  7.38501137E+03 nConv=  0
+         csSca=  7.62499382E+02 nConv=  0
+         csAbs=  6.62251199E+03
+
+
+spectrumFF> ===== Wavelength:   510.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  8.34245798E+03 nConv=  0
+             <csSca>=  8.76936161E+02 nConv=  0
+             <csAbs>=  7.46552182E+03
+
+             <cdExt>=  1.00170537E+02
+             <cdSca>=  1.00988813E+02
+             <cdAbs>= -8.18275938E-01
+
+calcCs> csExt=  7.91969937E+03 nConv=  0
+         csSca=  8.32318596E+02 nConv=  0
+         csAbs=  7.08738077E+03
+
+calcCs> csExt=  8.62946978E+03 nConv=  0
+         csSca=  1.14991466E+03 nConv=  2
+         csAbs=  7.47955512E+03
+
+calcCs> csExt=  8.28634871E+03 nConv=  0
+         csSca=  9.93862994E+02 nConv=  0
+         csAbs=  7.29248571E+03
+
+calcCs> csExt=  8.26282044E+03 nConv=  0
+         csSca=  9.94149376E+02 nConv=  0
+         csAbs=  7.26867107E+03
+
+
+spectrumFF> ===== Wavelength:   520.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  8.83175138E+03 nConv=  0
+             <csSca>=  1.13023802E+03 nConv=  0
+             <csAbs>=  7.70151336E+03
+
+             <cdExt>=  1.69967319E+02
+             <cdSca>=  1.80630320E+02
+             <cdAbs>= -1.06630011E+01
+
+calcCs> csExt=  8.28562240E+03 nConv=  0
+         csSca=  1.02647460E+03 nConv=  0
+         csAbs=  7.25914780E+03
+
+calcCs> csExt=  9.51085096E+03 nConv=  0
+         csSca=  1.55501822E+03 nConv=  2
+         csAbs=  7.95583275E+03
+
+calcCs> csExt=  8.91206247E+03 nConv=  0
+         csSca=  1.29488852E+03 nConv=  0
+         csAbs=  7.61717395E+03
+
+calcCs> csExt=  8.88441089E+03 nConv=  0
+         csSca=  1.29380628E+03 nConv=  0
+         csAbs=  7.59060461E+03
+
+
+spectrumFF> ===== Wavelength:   530.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  8.41831325E+03 nConv=  0
+             <csSca>=  1.23919832E+03 nConv=  0
+             <csAbs>=  7.17911493E+03
+
+             <cdExt>=  3.02460735E+02
+             <cdSca>=  2.66755753E+02
+             <cdAbs>=  3.57049821E+01
+
+calcCs> csExt=  7.61355660E+03 nConv=  0
+         csSca=  1.04555995E+03 nConv=  0
+         csAbs=  6.56799665E+03
+
+calcCs> csExt=  8.56786277E+03 nConv=  0
+         csSca=  1.63324214E+03 nConv=  2
+         csAbs=  6.93462063E+03
+
+calcCs> csExt=  8.08587127E+03 nConv=  0
+         csSca=  1.34164213E+03 nConv=  0
+         csAbs=  6.74422915E+03
+
+calcCs> csExt=  8.09554810E+03 nConv=  0
+         csSca=  1.34410563E+03 nConv=  0
+         csAbs=  6.75144247E+03
+
+
+spectrumFF> ===== Wavelength:   540.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  7.80880141E+03 nConv=  0
+             <csSca>=  1.31851199E+03 nConv=  0
+             <csAbs>=  6.49028942E+03
+
+             <cdExt>=  4.56840754E+02
+             <cdSca>=  3.66839021E+02
+             <cdAbs>=  9.00017333E+01
+
+calcCs> csExt=  6.73949291E+03 nConv=  0
+         csSca=  1.01754403E+03 nConv=  0
+         csAbs=  5.72194888E+03
+
+calcCs> csExt=  7.00772131E+03 nConv=  0
+         csSca=  1.55483119E+03 nConv=  2
+         csAbs=  5.45289013E+03
+
+calcCs> csExt=  6.84661402E+03 nConv=  0
+         csSca=  1.28499333E+03 nConv=  0
+         csAbs=  5.56162069E+03
+
+calcCs> csExt=  6.90060021E+03 nConv=  0
+         csSca=  1.29343928E+03 nConv=  0
+         csAbs=  5.60716092E+03
+
+
+spectrumFF> ===== Wavelength:   550.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  7.37428784E+03 nConv=  0
+             <csSca>=  1.43568741E+03 nConv=  0
+             <csAbs>=  5.93860043E+03
+
+             <cdExt>=  6.20101676E+02
+             <cdSca>=  4.86415062E+02
+             <cdAbs>=  1.33686615E+02
+
+calcCs> csExt=  6.01973527E+03 nConv=  0
+         csSca=  1.00534094E+03 nConv=  0
+         csAbs=  5.01439433E+03
+
+calcCs> csExt=  5.37868222E+03 nConv=  0
+         csSca=  1.38939475E+03 nConv=  2
+         csAbs=  3.98928747E+03
+
+calcCs> csExt=  5.65919344E+03 nConv=  0
+         csSca=  1.19288178E+03 nConv=  0
+         csAbs=  4.46631166E+03
+
+calcCs> csExt=  5.73922406E+03 nConv=  0
+         csSca=  1.20681861E+03 nConv=  0
+         csAbs=  4.53240545E+03
+
+
+spectrumFF> ===== Wavelength:   560.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  7.45559914E+03 nConv=  0
+             <csSca>=  1.61926554E+03 nConv=  0
+             <csAbs>=  5.83633360E+03
+
+             <cdExt>=  7.65470183E+02
+             <cdSca>=  6.09121723E+02
+             <cdAbs>=  1.56348460E+02
+
+calcCs> csExt=  5.77178938E+03 nConv=  0
+         csSca=  1.04627486E+03 nConv=  0
+         csAbs=  4.72551453E+03
+
+calcCs> csExt=  4.11438277E+03 nConv=  0
+         csSca=  1.18794509E+03 nConv=  2
+         csAbs=  2.92643768E+03
+
+calcCs> csExt=  4.90019122E+03 nConv=  0
+         csSca=  1.11072037E+03 nConv=  0
+         csAbs=  3.78947085E+03
+
+calcCs> csExt=  4.85606276E+03 nConv=  2
+         csSca=  1.12742145E+03 nConv=  0
+         csAbs=  3.72864131E+03
+
+
+spectrumFF> ===== Wavelength:   570.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  8.11678099E+03 nConv=  0
+             <csSca>=  1.98590683E+03 nConv=  0
+             <csAbs>=  6.13087416E+03
+
+             <cdExt>=  9.40796146E+02
+             <cdSca>=  7.83258360E+02
+             <cdAbs>=  1.57537786E+02
+
+calcCs> csExt=  5.98411607E+03 nConv=  0
+         csSca=  1.20289904E+03 nConv=  0
+         csAbs=  4.78121702E+03
+
+calcCs> csExt=  3.11875872E+03 nConv=  0
+         csSca=  1.00879027E+03 nConv=  2
+         csAbs=  2.10996845E+03
+
+calcCs> csExt=  4.50646032E+03 nConv=  0
+         csSca=  1.09779144E+03 nConv=  0
+         csAbs=  3.40866888E+03
+
+calcCs> csExt=  4.59641447E+03 nConv=  0
+         csSca=  1.11699129E+03 nConv=  0
+         csAbs=  3.47942317E+03
+
+
+spectrumFF> ===== Wavelength:   580.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  9.60387867E+03 nConv=  0
+             <csSca>=  2.67244558E+03 nConv=  0
+             <csAbs>=  6.93143309E+03
+
+             <cdExt>=  1.15549864E+03
+             <cdSca>=  1.04504120E+03
+             <cdAbs>=  1.10457446E+02
+
+calcCs> csExt=  6.82005385E+03 nConv=  0
+         csSca=  1.55678024E+03 nConv=  0
+         csAbs=  5.26327361E+03
+
+calcCs> csExt=  2.35863094E+03 nConv=  0
+         csSca=  8.57113559E+02 nConv=  2
+         csAbs=  1.50151738E+03
+
+calcCs> csExt=  4.53863184E+03 nConv=  0
+         csSca=  1.19650154E+03 nConv=  0
+         csAbs=  3.34213031E+03
+
+calcCs> csExt=  4.64005295E+03 nConv=  0
+         csSca=  1.21984219E+03 nConv=  0
+         csAbs=  3.42021076E+03
+
+
+spectrumFF> ===== Wavelength:   590.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  1.22489833E+04 nConv=  0
+             <csSca>=  3.75396859E+03 nConv=  0
+             <csAbs>=  8.49501467E+03
+
+             <cdExt>=  1.24772018E+03
+             <cdSca>=  1.35728915E+03
+             <cdAbs>= -1.09568971E+02
+
+calcCs> csExt=  8.58652941E+03 nConv=  0
+         csSca=  2.17849813E+03 nConv=  0
+         csAbs=  6.40803128E+03
+
+calcCs> csExt=  1.84292627E+03 nConv=  0
+         csSca=  7.29612332E+02 nConv=  2
+         csAbs=  1.11331393E+03
+
+calcCs> csExt=  5.15113698E+03 nConv=  0
+         csSca=  1.43985089E+03 nConv=  0
+         csAbs=  3.71128609E+03
+
+calcCs> csExt=  5.27831870E+03 nConv=  0
+         csSca=  1.47020802E+03 nConv=  0
+         csAbs=  3.80811068E+03
+
+
+spectrumFF> ===== Wavelength:   600.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  1.62003479E+04 nConv=  0
+             <csSca>=  5.38722769E+03 nConv=  0
+             <csAbs>=  1.08131202E+04
+
+             <cdExt>=  8.40944254E+02
+             <cdSca>=  1.65184634E+03
+             <cdAbs>= -8.10902082E+02
+
+calcCs> csExt=  1.15254896E+04 nConv=  0
+         csSca=  3.21077092E+03 nConv=  0
+         csAbs=  8.31471870E+03
+
+calcCs> csExt=  1.46587398E+03 nConv=  0
+         csSca=  6.26447458E+02 nConv=  2
+         csAbs=  8.39426522E+02
+
+calcCs> csExt=  6.40859346E+03 nConv=  0
+         csSca=  1.89808621E+03 nConv=  0
+         csAbs=  4.51050725E+03
+
+calcCs> csExt=  6.58277014E+03 nConv=  0
+         csSca=  1.94069698E+03 nConv=  0
+         csAbs=  4.64207316E+03
+
+
+spectrumFF> ===== Wavelength:   610.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  2.08258579E+04 nConv=  0
+             <csSca>=  7.43090554E+03 nConv=  0
+             <csAbs>=  1.33949524E+04
+
+             <cdExt>= -9.50653141E+02
+             <cdSca>=  1.60212563E+03
+             <cdAbs>= -2.55277877E+03
+
+calcCs> csExt=  1.55745455E+04 nConv=  0
+         csSca=  4.71589772E+03 nConv=  0
+         csAbs=  1.08586478E+04
+
+calcCs> csExt=  1.17745224E+03 nConv=  0
+         csSca=  5.42890229E+02 nConv=  2
+         csAbs=  6.34562013E+02
+
+calcCs> csExt=  8.25254293E+03 nConv=  0
+         csSca=  2.59915521E+03 nConv=  0
+         csAbs=  5.65338772E+03
+
+calcCs> csExt=  8.49945486E+03 nConv=  0
+         csSca=  2.66090220E+03 nConv=  0
+         csAbs=  5.83855266E+03
+
+
+spectrumFF> ===== Wavelength:   620.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  2.28837106E+04 nConv=  0
+             <csSca>=  8.66859030E+03 nConv=  0
+             <csAbs>=  1.42151203E+04
+
+             <cdExt>= -3.66430467E+03
+             <cdSca>=  9.25016523E+02
+             <cdAbs>= -4.58932120E+03
+
+calcCs> csExt=  1.83110392E+04 nConv=  0
+         csSca=  6.00936945E+03 nConv=  0
+         csAbs=  1.23016698E+04
+
+calcCs> csExt=  9.63964618E+02 nConv=  0
+         csSca=  4.75914896E+02 nConv=  2
+         csAbs=  4.88049722E+02
+
+calcCs> csExt=  9.48825896E+03 nConv=  0
+         csSca=  3.20527852E+03 nConv=  0
+         csAbs=  6.28298043E+03
+
+calcCs> csExt=  9.78674488E+03 nConv=  0
+         csSca=  3.28104822E+03 nConv=  0
+         csAbs=  6.50569666E+03
+
+
+spectrumFF> ===== Wavelength:   630.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  1.97298652E+04 nConv=  0
+             <csSca>=  7.99884839E+03 nConv=  0
+             <csAbs>=  1.17310168E+04
+
+             <cdExt>= -3.70842695E+03
+             <cdSca>=  4.90434688E+02
+             <cdAbs>= -4.19886164E+03
+
+calcCs> csExt=  1.62362515E+04 nConv=  0
+         csSca=  5.85303145E+03 nConv=  0
+         csAbs=  1.03832200E+04
+
+calcCs> csExt=  8.11637908E+02 nConv=  0
+         csSca=  4.22632619E+02 nConv=  2
+         csAbs=  3.89005289E+02
+
+calcCs> csExt=  8.39933403E+03 nConv=  0
+         csSca=  3.10632868E+03 nConv=  0
+         csAbs=  5.29300535E+03
+
+calcCs> csExt=  8.64855534E+03 nConv=  0
+         csSca=  3.17020330E+03 nConv=  0
+         csAbs=  5.47835204E+03
+
+
+spectrumFF> ===== Wavelength:   640.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  1.42382688E+04 nConv=  0
+             <csSca>=  6.31533884E+03 nConv=  0
+             <csAbs>=  7.92292997E+03
+
+             <cdExt>= -1.91512941E+03
+             <cdSca>=  4.95041385E+02
+             <cdAbs>= -2.41017079E+03
+
+calcCs> csExt=  1.15496410E+04 nConv=  0
+         csSca=  4.66585519E+03 nConv=  0
+         csAbs=  6.88378576E+03
+
+calcCs> csExt=  6.86866236E+02 nConv=  0
+         csSca=  3.77385955E+02 nConv=  2
+         csAbs=  3.09480282E+02
+
+calcCs> csExt=  6.04059237E+03 nConv=  0
+         csSca=  2.50159023E+03 nConv=  0
+         csAbs=  3.53900214E+03
+
+calcCs> csExt=  6.19591482E+03 nConv=  0
+         csSca=  2.54237846E+03 nConv=  0
+         csAbs=  3.65353637E+03
+
+
+spectrumFF> ===== Wavelength:   650.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  9.69744292E+03 nConv=  0
+             <csSca>=  4.71116339E+03 nConv=  0
+             <csAbs>=  4.98627952E+03
+
+             <cdExt>= -6.46670497E+02
+             <cdSca>=  5.08146023E+02
+             <cdAbs>= -1.15481652E+03
+
+calcCs> csExt=  7.66406203E+03 nConv=  0
+         csSca=  3.45724784E+03 nConv=  0
+         csAbs=  4.20681419E+03
+
+calcCs> csExt=  5.84215988E+02 nConv=  0
+         csSca=  3.38754533E+02 nConv=  2
+         csAbs=  2.45461455E+02
+
+calcCs> csExt=  4.08013908E+03 nConv=  0
+         csSca=  1.88632010E+03 nConv=  0
+         csAbs=  2.19381898E+03
+
+calcCs> csExt=  4.16813894E+03 nConv=  0
+         csSca=  1.91029596E+03 nConv=  0
+         csAbs=  2.25784298E+03
+
+
+spectrumFF> ===== Wavelength:   660.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  6.67086925E+03 nConv=  0
+             <csSca>=  3.51869383E+03 nConv=  0
+             <csAbs>=  3.15217542E+03
+
+             <cdExt>= -9.79146939E+01
+             <cdSca>=  4.49851301E+02
+             <cdAbs>= -5.47765995E+02
+
+calcCs> csExt=  5.16482247E+03 nConv=  0
+         csSca=  2.56787017E+03 nConv=  0
+         csAbs=  2.59695230E+03
+
+calcCs> csExt=  5.00291700E+02 nConv=  0
+         csSca=  3.05574429E+02 nConv=  2
+         csAbs=  1.94717270E+02
+
+calcCs> csExt=  2.80723132E+03 nConv=  0
+         csSca=  1.42978663E+03 nConv=  0
+         csAbs=  1.37744470E+03
+
+calcCs> csExt=  2.85788285E+03 nConv=  0
+         csSca=  1.44417862E+03 nConv=  0
+         csAbs=  1.41370423E+03
+
+
+spectrumFF> ===== Wavelength:   670.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  4.96904612E+03 nConv=  0
+             <csSca>=  2.69585095E+03 nConv=  0
+             <csAbs>=  2.27319516E+03
+
+             <cdExt>=  6.32368396E+01
+             <cdSca>=  3.70745317E+02
+             <cdAbs>= -3.07508477E+02
+
+calcCs> csExt=  3.81039211E+03 nConv=  0
+         csSca=  1.96513788E+03 nConv=  0
+         csAbs=  1.84525423E+03
+
+calcCs> csExt=  4.48758991E+02 nConv=  0
+         csSca=  2.77535401E+02 nConv=  2
+         csAbs=  1.71223589E+02
+
+calcCs> csExt=  2.11304214E+03 nConv=  0
+         csSca=  1.11696525E+03 nConv=  0
+         csAbs=  9.96076890E+02
+
+calcCs> csExt=  2.14610895E+03 nConv=  0
+         csSca=  1.12615312E+03 nConv=  0
+         csAbs=  1.01995584E+03
+
+
+spectrumFF> ===== Wavelength:   680.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  3.81936448E+03 nConv=  0
+             <csSca>=  2.12389857E+03 nConv=  0
+             <csAbs>=  1.69546591E+03
+
+             <cdExt>=  1.16883103E+02
+             <cdSca>=  3.00333246E+02
+             <cdAbs>= -1.83450144E+02
+
+calcCs> csExt=  2.91448963E+03 nConv=  0
+         csSca=  1.55099168E+03 nConv=  3
+         csAbs=  1.36349795E+03
+
+calcCs> csExt=  4.04183414E+02 nConv=  0
+         csSca=  2.52992197E+02 nConv=  2
+         csAbs=  1.51191218E+02
+
+calcCs> csExt=  1.64804020E+03 nConv=  0
+         csSca=  8.99124591E+02 nConv=  0
+         csAbs=  7.48915608E+02
+
+calcCs> csExt=  1.67063284E+03 nConv=  0
+         csSca=  9.05241491E+02 nConv=  0
+         csAbs=  7.65391354E+02
+
+
+spectrumFF> ===== Wavelength:   690.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  3.01446648E+03 nConv=  3
+             <csSca>=  1.71398660E+03 nConv=  3
+             <csAbs>=  1.30047988E+03
+
+             <cdExt>=  1.28018344E+02
+             <cdSca>=  2.43285538E+02
+             <cdAbs>= -1.15267194E+02
+
+calcCs> csExt=  2.29595697E+03 nConv=  0
+         csSca=  1.25599662E+03 nConv=  3
+         csAbs=  1.03996035E+03
+
+calcCs> csExt=  3.65400087E+02 nConv=  0
+         csSca=  2.31391162E+02 nConv=  2
+         csAbs=  1.34008925E+02
+
+calcCs> csExt=  1.32267592E+03 nConv=  0
+         csSca=  7.41756780E+02 nConv=  0
+         csAbs=  5.80919136E+02
+
+calcCs> csExt=  1.33868114E+03 nConv=  0
+         csSca=  7.45960578E+02 nConv=  3
+         csAbs=  5.92720558E+02
+
+
+spectrumFF> ===== Wavelength:   700.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  2.43254507E+03 nConv=  3
+             <csSca>=  1.41161498E+03 nConv=  3
+             <csAbs>=  1.02093010E+03
+
+             <cdExt>=  1.22748235E+02
+             <cdSca>=  1.98402068E+02
+             <cdAbs>= -7.56538325E+01
+
+calcCs> csExt=  1.85276332E+03 nConv=  0
+         csSca=  1.03892713E+03 nConv=  3
+         csAbs=  8.13836182E+02
+
+calcCs> csExt=  3.31477466E+02 nConv=  0
+         csSca=  2.12284906E+02 nConv=  2
+         csAbs=  1.19192560E+02
+
+calcCs> csExt=  1.08628534E+03 nConv=  0
+         csSca=  6.24269781E+02 nConv=  3
+         csAbs=  4.62015558E+02
+
+calcCs> csExt=  1.09795544E+03 nConv=  0
+         csSca=  6.27227559E+02 nConv=  3
+         csAbs=  4.70727883E+02
+
+
+spectrumFF> ===== Wavelength:   710.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  2.02064207E+03 nConv=  3
+             <csSca>=  1.18550682E+03 nConv=  3
+             <csAbs>=  8.35135251E+02
+
+             <cdExt>=  1.10860210E+02
+             <cdSca>=  1.63710915E+02
+             <cdAbs>= -5.28507055E+01
+
+calcCs> csExt=  1.54136059E+03 nConv=  0
+         csSca=  8.76555986E+02 nConv=  3
+         csAbs=  6.64804604E+02
+
+calcCs> csExt=  3.03918681E+02 nConv=  0
+         csSca=  1.95441628E+02 nConv=  2
+         csAbs=  1.08477053E+02
+
+calcCs> csExt=  9.18204099E+02 nConv=  0
+         csSca=  5.35057979E+02 nConv=  3
+         csAbs=  3.83146120E+02
+
+calcCs> csExt=  9.27075172E+02 nConv=  0
+         csSca=  5.37187672E+02 nConv=  3
+         csAbs=  3.89887500E+02
+
+
+spectrumFF> ===== Wavelength:   720.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  1.71797595E+03 nConv=  3
+             <csSca>=  1.01159872E+03 nConv=  3
+             <csAbs>=  7.06377229E+02
+
+             <cdExt>=  9.78244420E+01
+             <cdSca>=  1.36660125E+02
+             <cdAbs>= -3.88356827E+01
+
+calcCs> csExt=  1.31360249E+03 nConv=  0
+         csSca=  7.51430820E+02 nConv=  3
+         csAbs=  5.62171666E+02
+
+calcCs> csExt=  2.73036996E+02 nConv=  2
+         csSca=  1.80485756E+02 nConv=  2
+         csAbs=  9.25512402E+01
+
+calcCs> csExt=  7.93864508E+02 nConv=  0
+         csSca=  4.65287133E+02 nConv=  3
+         csAbs=  3.28577375E+02
+
+calcCs> csExt=  8.00840847E+02 nConv=  0
+         csSca=  4.66845912E+02 nConv=  3
+         csAbs=  3.33994935E+02
+
+
+spectrumFF> ===== Wavelength:   730.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  1.47875334E+03 nConv=  3
+             <csSca>=  8.73436872E+02 nConv=  3
+             <csAbs>=  6.05316463E+02
+
+             <cdExt>=  8.58696867E+01
+             <cdSca>=  1.15124773E+02
+             <cdAbs>= -2.92550863E+01
+
+calcCs> csExt=  1.13375081E+03 nConv=  0
+         csSca=  6.51765569E+02 nConv=  3
+         csAbs=  4.81985245E+02
+
+calcCs> csExt=  2.60625314E+02 nConv=  0
+         csSca=  1.67056800E+02 nConv=  2
+         csAbs=  9.35685136E+01
+
+calcCs> csExt=  6.94401257E+02 nConv=  0
+         csSca=  4.08931635E+02 nConv=  3
+         csAbs=  2.85469622E+02
+
+calcCs> csExt=  6.99974871E+02 nConv=  0
+         csSca=  4.10080231E+02 nConv=  3
+         csAbs=  2.89894640E+02
+
+
+spectrumFF> ===== Wavelength:   740.00 (nm) ======================
+
+ lmax
+          30
+ JCMsuite_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  3
+
+calcOAprops> <csExt>=  1.28637347E+03 nConv=  3
+             <csSca>=  7.61821881E+02 nConv=  3
+             <csAbs>=  5.24551588E+02
+
+             <cdExt>=  7.53015473E+01
+             <cdSca>=  9.78178439E+01
+             <cdAbs>= -2.25162967E+01
+
+calcCs> csExt=  9.89098467E+02 nConv=  0
+         csSca=  5.70989981E+02 nConv=  3
+         csAbs=  4.18108486E+02
+
+calcCs> csExt=  2.42183624E+02 nConv=  0
+         csSca=  1.54958304E+02 nConv=  2
+         csAbs=  8.72253204E+01
+
+calcCs> csExt=  6.13384421E+02 nConv=  0
+         csSca=  3.62633141E+02 nConv=  3
+         csAbs=  2.50751280E+02
+
+calcCs> csExt=  6.17897671E+02 nConv=  0
+         csSca=  3.63481511E+02 nConv=  3
+         csAbs=  2.54416160E+02
+
+termsProgram> Program run time (CPU & real in s):  2.967E-02  3.200E-02

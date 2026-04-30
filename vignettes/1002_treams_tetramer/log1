@@ -1,0 +1,7059 @@
+readInputFile> Parsing file input_tetrahedron_external
+
+readInputFile> Detected keyword ModeAndScheme
+               mode=2 => Far-field spectra
+               scheme=3 => Seek T^(j) using Mackowski's approach
+readInputFile> Detected keyword MultipoleCutoff
+               Supplied ncut(1)=  6
+               Supplied ncut(2)=  6
+               Supplied ncut(3)=  -3
+readInputFile> Detected keyword Wavelength
+               Wavelength LB (nm):   300.000000
+               Wavelength UB (nm):   700.000000
+               nsteps, step:       200    2.0000
+readInputFile> Detected keyword Medium
+               Constant host epsilon=  1.0000E+0
+readInputFile> Detected keyword OutputFormat
+               OutputFormat=HDF5
+               All output files are stored in file "tetrahedron_external.h5                                         "
+readInputFile> Detected keyword TmatrixFiles
+ tetrahedron_nm.tmat.h5                                                                                                                                                                                                                                          
+ read modes/l
+ read modes/m
+ read vacuum_wavelength
+ read tmatrix
+          96
+
+readInputFile> Detected keyword Scatterers
+ with nscat=    1
+
+readInputFile> Descriptor(s) and circumscribing sphere(s):
+
+ scatID String                  x          y          z         R_0
+    1   TF1                 0.0000E+0  0.0000E+0  0.0000E+0  2.7000E+2
+
+readInputFile> Individual geometry characteristic(s):
+
+ scatID Details
+    1   Euler angles:  0.0000000  0.0000000  0.0000000 asp. ratio:  1.0000000
+
+readInputFile> Finished parsing  7 keywords
+
+
+spectrumFF> ===== Wavelength:   300.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.04627588E+05 nConv=  0
+             <csSca>=  2.03829690E+05 nConv=  0
+             <csAbs>=  7.97897697E+02
+
+             <cdExt>=  7.27388581E+01
+             <cdSca>=  6.85426839E+01
+             <cdAbs>=  4.19617419E+00
+
+calcCs> csExt=  1.81499647E+05 nConv=  0
+         csSca=  1.80781161E+05 nConv=  0
+         csAbs=  7.18485425E+02
+
+calcCs> csExt=  1.89934047E+05 nConv=  0
+         csSca=  1.89389602E+05 nConv=  0
+         csAbs=  5.44445143E+02
+
+calcCs> csExt=  1.86239854E+05 nConv=  0
+         csSca=  1.85597764E+05 nConv=  0
+         csAbs=  6.42090000E+02
+
+calcCs> csExt=  1.85193840E+05 nConv=  0
+         csSca=  1.84572999E+05 nConv=  0
+         csAbs=  6.20840568E+02
+
+
+spectrumFF> ===== Wavelength:   302.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.15178046E+05 nConv=  0
+             <csSca>=  2.14351823E+05 nConv=  0
+             <csAbs>=  8.26222775E+02
+
+             <cdExt>=  9.12392074E+01
+             <cdSca>=  8.63468462E+01
+             <cdAbs>=  4.89236117E+00
+
+calcCs> csExt=  1.89737733E+05 nConv=  0
+         csSca=  1.89011848E+05 nConv=  0
+         csAbs=  7.25884545E+02
+
+calcCs> csExt=  2.04827391E+05 nConv=  0
+         csSca=  2.04279341E+05 nConv=  0
+         csAbs=  5.48049353E+02
+
+calcCs> csExt=  1.98003008E+05 nConv=  0
+         csSca=  1.97350469E+05 nConv=  0
+         csAbs=  6.52539053E+02
+
+calcCs> csExt=  1.96562115E+05 nConv=  0
+         csSca=  1.95940720E+05 nConv=  0
+         csAbs=  6.21394846E+02
+
+
+spectrumFF> ===== Wavelength:   304.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.28597370E+05 nConv=  0
+             <csSca>=  2.27719189E+05 nConv=  0
+             <csAbs>=  8.78181141E+02
+
+             <cdExt>=  7.49150275E+01
+             <cdSca>=  6.92695950E+01
+             <cdAbs>=  5.64543252E+00
+
+calcCs> csExt=  1.97120266E+05 nConv=  0
+         csSca=  1.96371637E+05 nConv=  0
+         csAbs=  7.48629393E+02
+
+calcCs> csExt=  2.22527226E+05 nConv=  0
+         csSca=  2.21951344E+05 nConv=  0
+         csAbs=  5.75881992E+02
+
+calcCs> csExt=  2.10728303E+05 nConv=  0
+         csSca=  2.10041691E+05 nConv=  0
+         csAbs=  6.86612738E+02
+
+calcCs> csExt=  2.08919189E+05 nConv=  0
+         csSca=  2.08281290E+05 nConv=  0
+         csAbs=  6.37898647E+02
+
+
+spectrumFF> ===== Wavelength:   306.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.39389936E+05 nConv=  0
+             <csSca>=  2.38488398E+05 nConv=  0
+             <csAbs>=  9.01538203E+02
+
+             <cdExt>=  4.68803065E+00
+             <cdSca>= -9.91077280E-01
+             <cdAbs>=  5.67910793E+00
+
+calcCs> csExt=  1.99143121E+05 nConv=  0
+         csSca=  1.98386901E+05 nConv=  0
+         csAbs=  7.56219558E+02
+
+calcCs> csExt=  2.35470442E+05 nConv=  0
+         csSca=  2.34867470E+05 nConv=  0
+         csAbs=  6.02972393E+02
+
+calcCs> csExt=  2.18349528E+05 nConv=  0
+         csSca=  2.17633072E+05 nConv=  0
+         csAbs=  7.16456332E+02
+
+calcCs> csExt=  2.16264035E+05 nConv=  0
+         csSca=  2.15621299E+05 nConv=  0
+         csAbs=  6.42735619E+02
+
+
+spectrumFF> ===== Wavelength:   308.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.38733514E+05 nConv=  0
+             <csSca>=  2.37913391E+05 nConv=  0
+             <csAbs>=  8.20123033E+02
+
+             <cdExt>= -6.78543828E+01
+             <cdSca>= -7.25268087E+01
+             <cdAbs>=  4.67242587E+00
+
+calcCs> csExt=  1.92917326E+05 nConv=  0
+         csSca=  1.92210310E+05 nConv=  0
+         csAbs=  7.07015164E+02
+
+calcCs> csExt=  2.33050133E+05 nConv=  0
+         csSca=  2.32466986E+05 nConv=  0
+         csAbs=  5.83147695E+02
+
+calcCs> csExt=  2.14017272E+05 nConv=  0
+         csSca=  2.13326677E+05 nConv=  0
+         csAbs=  6.90595071E+02
+
+calcCs> csExt=  2.11950187E+05 nConv=  0
+         csSca=  2.11350619E+05 nConv=  0
+         csAbs=  5.99567788E+02
+
+
+spectrumFF> ===== Wavelength:   310.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.28194752E+05 nConv=  0
+             <csSca>=  2.27533736E+05 nConv=  0
+             <csAbs>=  6.61015881E+02
+
+             <cdExt>= -8.21192041E+01
+             <cdSca>= -8.57017067E+01
+             <cdAbs>=  3.58250263E+00
+
+calcCs> csExt=  1.83019380E+05 nConv=  0
+         csSca=  1.82418039E+05 nConv=  0
+         csAbs=  6.01341868E+02
+
+calcCs> csExt=  2.20481925E+05 nConv=  0
+         csSca=  2.19966622E+05 nConv=  0
+         csAbs=  5.15302582E+02
+
+calcCs> csExt=  2.02668356E+05 nConv=  0
+         csSca=  2.02066407E+05 nConv=  0
+         csAbs=  6.01949065E+02
+
+calcCs> csExt=  2.00832949E+05 nConv=  6
+         csSca=  2.00318254E+05 nConv=  0
+         csAbs=  5.14695384E+02
+
+
+spectrumFF> ===== Wavelength:   312.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.17191176E+05 nConv=  0
+             <csSca>=  2.16676265E+05 nConv=  0
+             <csAbs>=  5.14910611E+02
+
+             <cdExt>= -6.18594012E+01
+             <cdSca>= -6.47948085E+01
+             <cdAbs>=  2.93540726E+00
+
+calcCs> csExt=  1.76351401E+05 nConv=  0
+         csSca=  1.75863470E+05 nConv=  0
+         csAbs=  4.87931420E+02
+
+calcCs> csExt=  2.10730840E+05 nConv=  0
+         csSca=  2.10286643E+05 nConv=  0
+         csAbs=  4.44197587E+02
+
+calcCs> csExt=  1.94349016E+05 nConv=  0
+         csSca=  1.93846569E+05 nConv=  0
+         csAbs=  5.02447411E+02
+
+calcCs> csExt=  1.92733225E+05 nConv=  6
+         csSca=  1.92303543E+05 nConv=  0
+         csAbs=  4.29681597E+02
+
+
+spectrumFF> ===== Wavelength:   314.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.09516124E+05 nConv=  0
+             <csSca>=  2.09104456E+05 nConv=  0
+             <csAbs>=  4.11667223E+02
+
+             <cdExt>= -3.66227268E+01
+             <cdSca>= -3.91826932E+01
+             <cdAbs>=  2.55996637E+00
+
+calcCs> csExt=  1.74613306E+05 nConv=  0
+         csSca=  1.74214586E+05 nConv=  0
+         csAbs=  3.98719805E+02
+
+calcCs> csExt=  2.06308146E+05 nConv=  0
+         csSca=  2.05918730E+05 nConv=  0
+         csAbs=  3.89416142E+02
+
+calcCs> csExt=  1.91130971E+05 nConv=  0
+         csSca=  1.90707922E+05 nConv=  0
+         csAbs=  4.23048643E+02
+
+calcCs> csExt=  1.89790482E+05 nConv=  0
+         csSca=  1.89425394E+05 nConv=  0
+         csAbs=  3.65087304E+02
+
+
+spectrumFF> ===== Wavelength:   316.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.04603041E+05 nConv=  0
+             <csSca>=  2.04260519E+05 nConv=  0
+             <csAbs>=  3.42521290E+02
+
+             <cdExt>= -1.58453511E+01
+             <cdSca>= -1.81398067E+01
+             <cdAbs>=  2.29445559E+00
+
+calcCs> csExt=  1.76123488E+05 nConv=  0
+         csSca=  1.75787399E+05 nConv=  0
+         csAbs=  3.36088156E+02
+
+calcCs> csExt=  2.04787517E+05 nConv=  0
+         csSca=  2.04438899E+05 nConv=  0
+         csAbs=  3.48617754E+02
+
+calcCs> csExt=  1.90923022E+05 nConv=  0
+         csSca=  1.90557881E+05 nConv=  0
+         csAbs=  3.65141435E+02
+
+calcCs> csExt=  1.89987983E+05 nConv=  0
+         csSca=  1.89668418E+05 nConv=  0
+         csAbs=  3.19564476E+02
+
+
+spectrumFF> ===== Wavelength:   318.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.01223066E+05 nConv=  0
+             <csSca>=  2.00928138E+05 nConv=  0
+             <csAbs>=  2.94927966E+02
+
+             <cdExt>= -1.94494124E+00
+             <cdSca>= -4.00902308E+00
+             <cdAbs>=  2.06408184E+00
+
+calcCs> csExt=  1.78970092E+05 nConv=  0
+         csSca=  1.78677406E+05 nConv=  0
+         csAbs=  2.92686235E+02
+
+calcCs> csExt=  2.04067024E+05 nConv=  0
+         csSca=  2.03750635E+05 nConv=  0
+         csAbs=  3.16388747E+02
+
+calcCs> csExt=  1.91716736E+05 nConv=  0
+         csSca=  1.91394423E+05 nConv=  0
+         csAbs=  3.22312998E+02
+
+calcCs> csExt=  1.91320381E+05 nConv=  0
+         csSca=  1.91033619E+05 nConv=  0
+         csAbs=  2.86761984E+02
+
+
+spectrumFF> ===== Wavelength:   320.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  1.98560600E+05 nConv=  0
+             <csSca>=  1.98300108E+05 nConv=  0
+             <csAbs>=  2.60491785E+02
+
+             <cdExt>=  5.37483222E+00
+             <cdSca>=  3.53268062E+00
+             <cdAbs>=  1.84215160E+00
+
+calcCs> csExt=  1.81935899E+05 nConv=  0
+         csSca=  1.81674267E+05 nConv=  0
+         csAbs=  2.61632179E+02
+
+calcCs> csExt=  2.03095313E+05 nConv=  0
+         csSca=  2.02806009E+05 nConv=  0
+         csAbs=  2.89304341E+02
+
+calcCs> csExt=  1.92401880E+05 nConv=  0
+         csSca=  1.92112696E+05 nConv=  0
+         csAbs=  2.89184747E+02
+
+calcCs> csExt=  1.92629332E+05 nConv=  0
+         csSca=  1.92367580E+05 nConv=  0
+         csAbs=  2.61751773E+02
+
+
+spectrumFF> ===== Wavelength:   322.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  1.96250381E+05 nConv=  0
+             <csSca>=  1.96015979E+05 nConv=  0
+             <csAbs>=  2.34402656E+02
+
+             <cdExt>=  7.98468680E+00
+             <cdSca>=  6.35730112E+00
+             <cdAbs>=  1.62738568E+00
+
+calcCs> csExt=  1.84450450E+05 nConv=  6
+         csSca=  1.84212056E+05 nConv=  0
+         csAbs=  2.38393810E+02
+
+calcCs> csExt=  2.01552175E+05 nConv=  0
+         csSca=  2.01286379E+05 nConv=  0
+         csAbs=  2.65796634E+02
+
+calcCs> csExt=  1.92574446E+05 nConv=  0
+         csSca=  1.92311900E+05 nConv=  0
+         csAbs=  2.62545855E+02
+
+calcCs> csExt=  1.93428179E+05 nConv=  0
+         csSca=  1.93186534E+05 nConv=  0
+         csAbs=  2.41644589E+02
+
+
+spectrumFF> ===== Wavelength:   324.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  1.94227453E+05 nConv=  0
+             <csSca>=  1.94013431E+05 nConv=  0
+             <csAbs>=  2.14022242E+02
+
+             <cdExt>=  8.22199702E+00
+             <cdSca>=  6.79471736E+00
+             <cdAbs>=  1.42727966E+00
+
+calcCs> csExt=  1.86370381E+05 nConv=  6
+         csSca=  1.86150064E+05 nConv=  0
+         csAbs=  2.20317783E+02
+
+calcCs> csExt=  1.99515945E+05 nConv=  0
+         csSca=  1.99270635E+05 nConv=  0
+         csAbs=  2.45309637E+02
+
+calcCs> csExt=  1.92246688E+05 nConv=  0
+         csSca=  1.92005999E+05 nConv=  0
+         csAbs=  2.40689813E+02
+
+calcCs> csExt=  1.93639638E+05 nConv=  0
+         csSca=  1.93414700E+05 nConv=  0
+         csAbs=  2.24937607E+02
+
+
+spectrumFF> ===== Wavelength:   326.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  1.92588663E+05 nConv=  0
+             <csSca>=  1.92390742E+05 nConv=  0
+             <csAbs>=  1.97921314E+02
+
+             <cdExt>=  7.99322252E+00
+             <cdSca>=  6.74510414E+00
+             <cdAbs>=  1.24811838E+00
+
+calcCs> csExt=  1.87784247E+05 nConv=  0
+         csSca=  1.87578324E+05 nConv=  0
+         csAbs=  2.05923602E+02
+
+calcCs> csExt=  1.97237372E+05 nConv=  0
+         csSca=  1.97009675E+05 nConv=  0
+         csAbs=  2.27696274E+02
+
+calcCs> csExt=  1.91621951E+05 nConv=  0
+         csSca=  1.91399231E+05 nConv=  0
+         csAbs=  2.22719501E+02
+
+calcCs> csExt=  1.93399668E+05 nConv=  0
+         csSca=  1.93188768E+05 nConv=  0
+         csAbs=  2.10900374E+02
+
+
+spectrumFF> ===== Wavelength:   328.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  1.91496752E+05 nConv=  0
+             <csSca>=  1.91311416E+05 nConv=  0
+             <csAbs>=  1.85336314E+02
+
+             <cdExt>=  8.36903276E+00
+             <cdSca>=  7.27711622E+00
+             <cdAbs>=  1.09191654E+00
+
+calcCs> csExt=  1.88874884E+05 nConv=  0
+         csSca=  1.88680484E+05 nConv=  0
+         csAbs=  1.94400135E+02
+
+calcCs> csExt=  1.95003401E+05 nConv=  0
+         csSca=  1.94790483E+05 nConv=  0
+         csAbs=  2.12917087E+02
+
+calcCs> csExt=  1.90950316E+05 nConv=  0
+         csSca=  1.90742193E+05 nConv=  0
+         csAbs=  2.08122946E+02
+
+calcCs> csExt=  1.92927968E+05 nConv=  0
+         csSca=  1.92728774E+05 nConv=  0
+         csAbs=  1.99194275E+02
+
+
+spectrumFF> ===== Wavelength:   330.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  1.91126828E+05 nConv=  0
+             <csSca>=  1.90950943E+05 nConv=  0
+             <csAbs>=  1.75885343E+02
+
+             <cdExt>=  9.61007661E+00
+             <cdSca>=  8.65274552E+00
+             <cdAbs>=  9.57331092E-01
+
+calcCs> csExt=  1.89839407E+05 nConv=  6
+         csSca=  1.89654092E+05 nConv=  0
+         csAbs=  1.85314583E+02
+
+calcCs> csExt=  1.93067536E+05 nConv=  0
+         csSca=  1.92866598E+05 nConv=  0
+         csAbs=  2.00937663E+02
+
+calcCs> csExt=  1.90455067E+05 nConv=  0
+         csSca=  1.90258493E+05 nConv=  0
+         csAbs=  1.96574291E+02
+
+calcCs> csExt=  1.92451875E+05 nConv=  0
+         csSca=  1.92262197E+05 nConv=  0
+         csAbs=  1.89677955E+02
+
+
+spectrumFF> ===== Wavelength:   332.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  1.91648663E+05 nConv=  0
+             <csSca>=  1.91479228E+05 nConv=  0
+             <csAbs>=  1.69434822E+02
+
+             <cdExt>=  1.14065880E+01
+             <cdSca>=  1.05651370E+01
+             <cdAbs>=  8.41450991E-01
+
+calcCs> csExt=  1.90855768E+05 nConv=  6
+         csSca=  1.90677298E+05 nConv=  0
+         csAbs=  1.78470121E+02
+
+calcCs> csExt=  1.91628278E+05 nConv=  0
+         csSca=  1.91436548E+05 nConv=  0
+         csAbs=  1.91730327E+02
+
+calcCs> csExt=  1.90311434E+05 nConv=  0
+         csSca=  1.90123563E+05 nConv=  0
+         csAbs=  1.87870407E+02
+
+calcCs> csExt=  1.92172613E+05 nConv=  6
+         csSca=  1.91990283E+05 nConv=  0
+         csAbs=  1.82330041E+02
+
+
+spectrumFF> ===== Wavelength:   334.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  1.93236091E+05 nConv=  0
+             <csSca>=  1.93070034E+05 nConv=  0
+             <csAbs>=  1.66056863E+02
+
+             <cdExt>=  1.31436570E+01
+             <cdSca>=  1.24027035E+01
+             <cdAbs>=  7.40953520E-01
+
+calcCs> csExt=  1.92081160E+05 nConv=  0
+         csSca=  1.91907303E+05 nConv=  0
+         csAbs=  1.73856901E+02
+
+calcCs> csExt=  1.90840189E+05 nConv=  6
+         csSca=  1.90654865E+05 nConv=  0
+         csAbs=  1.85324409E+02
+
+calcCs> csExt=  1.90658008E+05 nConv=  6
+         csSca=  1.90476069E+05 nConv=  0
+         csAbs=  1.81939127E+02
+
+calcCs> csExt=  1.92263341E+05 nConv=  6
+         csSca=  1.92086099E+05 nConv=  0
+         csAbs=  1.77242183E+02
+
+
+spectrumFF> ===== Wavelength:   336.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  1.96095979E+05 nConv=  0
+             <csSca>=  1.95929931E+05 nConv=  0
+             <csAbs>=  1.66047772E+02
+
+             <cdExt>=  1.40995830E+01
+             <cdSca>=  1.34471487E+01
+             <cdAbs>=  6.52434311E-01
+
+calcCs> csExt=  1.93670481E+05 nConv=  0
+         csSca=  1.93498816E+05 nConv=  0
+         csAbs=  1.71664505E+02
+
+calcCs> csExt=  1.90845582E+05 nConv=  0
+         csSca=  1.90663700E+05 nConv=  0
+         csAbs=  1.81881796E+02
+
+calcCs> csExt=  1.91626466E+05 nConv=  0
+         csSca=  1.91447578E+05 nConv=  0
+         csAbs=  1.78887818E+02
+
+calcCs> csExt=  1.92889596E+05 nConv=  0
+         csSca=  1.92714938E+05 nConv=  0
+         csAbs=  1.74658483E+02
+
+
+spectrumFF> ===== Wavelength:   338.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.00512957E+05 nConv=  0
+             <csSca>=  2.00342962E+05 nConv=  0
+             <csAbs>=  1.69995833E+02
+
+             <cdExt>=  1.35658929E+01
+             <cdSca>=  1.29936996E+01
+             <cdAbs>=  5.72193228E-01
+
+calcCs> csExt=  1.95809883E+05 nConv=  0
+         csSca=  1.95637538E+05 nConv=  0
+         csAbs=  1.72345397E+02
+
+calcCs> csExt=  1.91820219E+05 nConv=  0
+         csSca=  1.91638424E+05 nConv=  0
+         csAbs=  1.81795183E+02
+
+calcCs> csExt=  1.93383417E+05 nConv=  0
+         csSca=  1.93204331E+05 nConv=  0
+         csAbs=  1.79085635E+02
+
+calcCs> csExt=  1.94246685E+05 nConv=  0
+         csSca=  1.94071631E+05 nConv=  0
+         csAbs=  1.75054945E+02
+
+
+spectrumFF> ===== Wavelength:   340.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.06908366E+05 nConv=  0
+             <csSca>=  2.06729476E+05 nConv=  0
+             <csAbs>=  1.78889101E+02
+
+             <cdExt>=  1.09273639E+01
+             <cdSca>=  1.04316763E+01
+             <cdAbs>=  4.95687666E-01
+
+calcCs> csExt=  1.98767592E+05 nConv=  0
+         csSca=  1.98590861E+05 nConv=  0
+         csAbs=  1.76731080E+02
+
+calcCs> csExt=  1.94031521E+05 nConv=  0
+         csSca=  1.93845708E+05 nConv=  0
+         csAbs=  1.85813036E+02
+
+calcCs> csExt=  1.96185425E+05 nConv=  0
+         csSca=  1.96002141E+05 nConv=  0
+         csAbs=  1.83283592E+02
+
+calcCs> csExt=  1.96613688E+05 nConv=  0
+         csSca=  1.96434428E+05 nConv=  0
+         csAbs=  1.79260525E+02
+
+
+spectrumFF> ===== Wavelength:   342.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.15900054E+05 nConv=  0
+             <csSca>=  2.15705841E+05 nConv=  0
+             <csAbs>=  1.94213244E+02
+
+             <cdExt>=  5.78604408E+00
+             <cdSca>=  5.36940724E+00
+             <cdAbs>=  4.16636843E-01
+
+calcCs> csExt=  2.02966054E+05 nConv=  0
+         csSca=  2.02779870E+05 nConv=  0
+         csAbs=  1.86184221E+02
+
+calcCs> csExt=  1.97904301E+05 nConv=  0
+         csSca=  1.97709133E+05 nConv=  0
+         csAbs=  1.95167596E+02
+
+calcCs> csExt=  2.00447463E+05 nConv=  0
+         csSca=  2.00254710E+05 nConv=  0
+         csAbs=  1.92752865E+02
+
+calcCs> csExt=  2.00422893E+05 nConv=  0
+         csSca=  2.00234294E+05 nConv=  0
+         csAbs=  1.88598952E+02
+
+
+spectrumFF> ===== Wavelength:   344.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.28281340E+05 nConv=  0
+             <csSca>=  2.28063545E+05 nConv=  0
+             <csAbs>=  2.17795055E+02
+
+             <cdExt>= -1.69883196E+00
+             <cdSca>= -2.02446919E+00
+             <cdAbs>=  3.25637238E-01
+
+calcCs> csExt=  2.09053594E+05 nConv=  0
+         csSca=  2.08850965E+05 nConv=  0
+         csAbs=  2.02628894E+02
+
+calcCs> csExt=  2.04048687E+05 nConv=  0
+         csSca=  2.03837151E+05 nConv=  0
+         csAbs=  2.11535576E+02
+
+calcCs> csExt=  2.06791121E+05 nConv=  0
+         csSca=  2.06581849E+05 nConv=  0
+         csAbs=  2.09272167E+02
+
+calcCs> csExt=  2.06311160E+05 nConv=  0
+         csSca=  2.06106268E+05 nConv=  0
+         csAbs=  2.04892302E+02
+
+
+spectrumFF> ===== Wavelength:   346.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.44590523E+05 nConv=  0
+             <csSca>=  2.44340030E+05 nConv=  0
+             <csAbs>=  2.50492471E+02
+
+             <cdExt>= -9.96543511E+00
+             <cdSca>= -1.01739464E+01
+             <cdAbs>=  2.08511332E-01
+
+calcCs> csExt=  2.17811687E+05 nConv=  0
+         csSca=  2.17583958E+05 nConv=  0
+         csAbs=  2.27729245E+02
+
+calcCs> csExt=  2.13041933E+05 nConv=  0
+         csSca=  2.12805773E+05 nConv=  0
+         csAbs=  2.36160130E+02
+
+calcCs> csExt=  2.15884163E+05 nConv=  0
+         csSca=  2.15649928E+05 nConv=  0
+         csAbs=  2.34235640E+02
+
+calcCs> csExt=  2.14969457E+05 nConv=  0
+         csSca=  2.14739803E+05 nConv=  0
+         csAbs=  2.29653735E+02
+
+
+spectrumFF> ===== Wavelength:   348.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.63432584E+05 nConv=  0
+             <csSca>=  2.63145028E+05 nConv=  0
+             <csAbs>=  2.87555591E+02
+
+             <cdExt>= -1.48459676E+01
+             <cdSca>= -1.48923788E+01
+             <cdAbs>=  4.64112499E-02
+
+calcCs> csExt=  2.29296919E+05 nConv=  0
+         csSca=  2.29037831E+05 nConv=  0
+         csAbs=  2.59088418E+02
+
+calcCs> csExt=  2.24382216E+05 nConv=  0
+         csSca=  2.24115717E+05 nConv=  0
+         csAbs=  2.66498653E+02
+
+calcCs> csExt=  2.27474333E+05 nConv=  0
+         csSca=  2.27209402E+05 nConv=  0
+         csAbs=  2.64931324E+02
+
+calcCs> csExt=  2.26204802E+05 nConv=  0
+         csSca=  2.25944146E+05 nConv=  0
+         csAbs=  2.60655748E+02
+
+
+spectrumFF> ===== Wavelength:   350.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.78462713E+05 nConv=  0
+             <csSca>=  2.78152028E+05 nConv=  0
+             <csAbs>=  3.10684641E+02
+
+             <cdExt>= -1.12651926E+01
+             <cdSca>= -1.10934828E+01
+             <cdAbs>= -1.71709756E-01
+
+calcCs> csExt=  2.40528281E+05 nConv=  0
+         csSca=  2.40245854E+05 nConv=  0
+         csAbs=  2.82426521E+02
+
+calcCs> csExt=  2.34329252E+05 nConv=  0
+         csSca=  2.34039053E+05 nConv=  0
+         csAbs=  2.90198505E+02
+
+calcCs> csExt=  2.38138078E+05 nConv=  0
+         csSca=  2.37850571E+05 nConv=  0
+         csAbs=  2.87506375E+02
+
+calcCs> csExt=  2.36719455E+05 nConv=  0
+         csSca=  2.36434336E+05 nConv=  0
+         csAbs=  2.85118652E+02
+
+
+spectrumFF> ===== Wavelength:   352.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.80516767E+05 nConv=  0
+             <csSca>=  2.80221979E+05 nConv=  0
+             <csAbs>=  2.94787931E+02
+
+             <cdExt>= -2.22047541E+00
+             <cdSca>= -1.82827831E+00
+             <cdAbs>= -3.92197102E-01
+
+calcCs> csExt=  2.45240388E+05 nConv=  0
+         csSca=  2.44964866E+05 nConv=  0
+         csAbs=  2.75521579E+02
+
+calcCs> csExt=  2.36388261E+05 nConv=  0
+         csSca=  2.36100400E+05 nConv=  0
+         csAbs=  2.87860332E+02
+
+calcCs> csExt=  2.41423651E+05 nConv=  0
+         csSca=  2.41142507E+05 nConv=  0
+         csAbs=  2.81143558E+02
+
+calcCs> csExt=  2.40204998E+05 nConv=  0
+         csSca=  2.39922760E+05 nConv=  0
+         csAbs=  2.82238352E+02
+
+
+spectrumFF> ===== Wavelength:   354.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.69919494E+05 nConv=  0
+             <csSca>=  2.69676394E+05 nConv=  0
+             <csAbs>=  2.43099114E+02
+
+             <cdExt>=  2.40262653E+00
+             <cdSca>=  2.88668403E+00
+             <cdAbs>= -4.84057505E-01
+
+calcCs> csExt=  2.41512119E+05 nConv=  0
+         csSca=  2.41273124E+05 nConv=  0
+         csAbs=  2.38995699E+02
+
+calcCs> csExt=  2.28955357E+05 nConv=  0
+         csSca=  2.28699413E+05 nConv=  0
+         csAbs=  2.55944582E+02
+
+calcCs> csExt=  2.35543159E+05 nConv=  0
+         csSca=  2.35297451E+05 nConv=  0
+         csAbs=  2.45708398E+02
+
+calcCs> csExt=  2.34924318E+05 nConv=  0
+         csSca=  2.34675086E+05 nConv=  0
+         csAbs=  2.49231883E+02
+
+
+spectrumFF> ===== Wavelength:   356.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.56521819E+05 nConv=  0
+             <csSca>=  2.56336061E+05 nConv=  0
+             <csAbs>=  1.85757867E+02
+
+             <cdExt>=  2.13502596E+00
+             <cdSca>=  2.57061491E+00
+             <cdAbs>= -4.35588955E-01
+
+calcCs> csExt=  2.34111199E+05 nConv=  0
+         csSca=  2.33915177E+05 nConv=  0
+         csAbs=  1.96022471E+02
+
+calcCs> csExt=  2.17678643E+05 nConv=  0
+         csSca=  2.17465943E+05 nConv=  0
+         csAbs=  2.12700054E+02
+
+calcCs> csExt=  2.25817291E+05 nConv=  0
+         csSca=  2.25614671E+05 nConv=  0
+         csAbs=  2.02619544E+02
+
+calcCs> csExt=  2.25972552E+05 nConv=  0
+         csSca=  2.25766449E+05 nConv=  0
+         csAbs=  2.06102980E+02
+
+
+spectrumFF> ===== Wavelength:   358.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.46645475E+05 nConv=  0
+             <csSca>=  2.46504601E+05 nConv=  0
+             <csAbs>=  1.40873861E+02
+
+             <cdExt>=  6.02524694E-01
+             <cdSca>=  9.50304390E-01
+             <cdAbs>= -3.47779696E-01
+
+calcCs> csExt=  2.27088160E+05 nConv=  0
+         csSca=  2.26927546E+05 nConv=  0
+         csAbs=  1.60614491E+02
+
+calcCs> csExt=  2.07600491E+05 nConv=  0
+         csSca=  2.07426657E+05 nConv=  0
+         csAbs=  1.73834075E+02
+
+calcCs> csExt=  2.16954691E+05 nConv=  0
+         csSca=  2.16788481E+05 nConv=  0
+         csAbs=  1.66209826E+02
+
+calcCs> csExt=  2.17733960E+05 nConv=  0
+         csSca=  2.17565722E+05 nConv=  0
+         csAbs=  1.68238741E+02
+
+
+spectrumFF> ===== Wavelength:   360.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.41040115E+05 nConv=  0
+             <csSca>=  2.40930345E+05 nConv=  0
+             <csAbs>=  1.09769424E+02
+
+             <cdExt>= -1.47636167E+00
+             <cdSca>= -1.19997668E+00
+             <cdAbs>= -2.76384997E-01
+
+calcCs> csExt=  2.21647792E+05 nConv=  0
+         csSca=  2.21513425E+05 nConv=  0
+         csAbs=  1.34367245E+02
+
+calcCs> csExt=  2.00221480E+05 nConv=  0
+         csSca=  2.00077901E+05 nConv=  0
+         csAbs=  1.43578987E+02
+
+calcCs> csExt=  2.10357576E+05 nConv=  0
+         csSca=  2.10218737E+05 nConv=  0
+         csAbs=  1.38839060E+02
+
+calcCs> csExt=  2.11511696E+05 nConv=  0
+         csSca=  2.11372589E+05 nConv=  0
+         csAbs=  1.39107172E+02
+
+
+spectrumFF> ===== Wavelength:   362.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.38555676E+05 nConv=  0
+             <csSca>=  2.38467050E+05 nConv=  0
+             <csAbs>=  8.86261416E+01
+
+             <cdExt>= -3.97698153E+00
+             <cdSca>= -3.74909538E+00
+             <cdAbs>= -2.27886156E-01
+
+calcCs> csExt=  2.17734563E+05 nConv=  0
+         csSca=  2.17619503E+05 nConv=  0
+         csAbs=  1.15059548E+02
+
+calcCs> csExt=  1.95342626E+05 nConv=  0
+         csSca=  1.95221848E+05 nConv=  0
+         csAbs=  1.20778948E+02
+
+calcCs> csExt=  2.05876526E+05 nConv=  0
+         csSca=  2.05757939E+05 nConv=  0
+         csAbs=  1.18587488E+02
+
+calcCs> csExt=  2.07200663E+05 nConv=  0
+         csSca=  2.07083412E+05 nConv=  0
+         csAbs=  1.17251007E+02
+
+
+spectrumFF> ===== Wavelength:   364.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.38001519E+05 nConv=  0
+             <csSca>=  2.37927615E+05 nConv=  0
+             <csAbs>=  7.39038677E+01
+
+             <cdExt>= -6.25581618E+00
+             <cdSca>= -6.06055677E+00
+             <cdAbs>= -1.95259408E-01
+
+calcCs> csExt=  2.15034104E+05 nConv=  0
+         csSca=  2.14933634E+05 nConv=  0
+         csAbs=  1.00469679E+02
+
+calcCs> csExt=  1.92436781E+05 nConv=  0
+         csSca=  1.92333385E+05 nConv=  0
+         csAbs=  1.03395929E+02
+
+calcCs> csExt=  2.03061097E+05 nConv=  0
+         csSca=  2.02957826E+05 nConv=  0
+         csAbs=  1.03270928E+02
+
+calcCs> csExt=  2.04409788E+05 nConv=  0
+         csSca=  2.04309194E+05 nConv=  0
+         csAbs=  1.00594681E+02
+
+
+spectrumFF> ===== Wavelength:   366.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.38526434E+05 nConv=  0
+             <csSca>=  2.38463198E+05 nConv=  0
+             <csAbs>=  6.32355610E+01
+
+             <cdExt>= -7.51042502E+00
+             <cdSca>= -7.33861989E+00
+             <cdAbs>= -1.71805134E-01
+
+calcCs> csExt=  2.13260363E+05 nConv=  0
+         csSca=  2.13171305E+05 nConv=  0
+         csAbs=  8.90579672E+01
+
+calcCs> csExt=  1.91051660E+05 nConv=  0
+         csSca=  1.90961847E+05 nConv=  0
+         csAbs=  8.98128751E+01
+
+calcCs> csExt=  2.01521959E+05 nConv=  0
+         csSca=  2.01430643E+05 nConv=  0
+         csAbs=  9.13156332E+01
+
+calcCs> csExt=  2.02790064E+05 nConv=  0
+         csSca=  2.02702509E+05 nConv=  0
+         csAbs=  8.75552091E+01
+
+
+spectrumFF> ===== Wavelength:   368.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.39576801E+05 nConv=  0
+             <csSca>=  2.39521634E+05 nConv=  0
+             <csAbs>=  5.51672861E+01
+
+             <cdExt>= -7.19208912E+00
+             <cdSca>= -7.03871637E+00
+             <cdAbs>= -1.53372749E-01
+
+calcCs> csExt=  2.12189589E+05 nConv=  0
+         csSca=  2.12109744E+05 nConv=  0
+         csAbs=  7.98449156E+01
+
+calcCs> csExt=  1.90848104E+05 nConv=  0
+         csSca=  1.90769168E+05 nConv=  0
+         csAbs=  7.89362109E+01
+
+calcCs> csExt=  2.00965724E+05 nConv=  0
+         csSca=  2.00884022E+05 nConv=  0
+         csAbs=  8.17026343E+01
+
+calcCs> csExt=  2.02071968E+05 nConv=  0
+         csSca=  2.01994890E+05 nConv=  0
+         csAbs=  7.70784922E+01
+
+
+spectrumFF> ===== Wavelength:   370.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.40800387E+05 nConv=  0
+             <csSca>=  2.40751567E+05 nConv=  0
+             <csAbs>=  4.88198073E+01
+
+             <cdExt>= -5.19920736E+00
+             <cdSca>= -5.06140992E+00
+             <cdAbs>= -1.37797433E-01
+
+calcCs> csExt=  2.11639100E+05 nConv=  0
+         csSca=  2.11566889E+05 nConv=  0
+         csAbs=  7.22102748E+01
+
+calcCs> csExt=  1.91561378E+05 nConv=  0
+         csSca=  1.91491328E+05 nConv=  0
+         csAbs=  7.00498713E+01
+
+calcCs> csExt=  2.01161466E+05 nConv=  0
+         csSca=  2.01087685E+05 nConv=  0
+         csAbs=  7.37809282E+01
+
+calcCs> csExt=  2.02039012E+05 nConv=  0
+         csSca=  2.01970533E+05 nConv=  0
+         csAbs=  6.84792179E+01
+
+
+spectrumFF> ===== Wavelength:   372.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.41971330E+05 nConv=  0
+             <csSca>=  2.41927674E+05 nConv=  0
+             <csAbs>=  4.36555619E+01
+
+             <cdExt>= -1.88483573E+00
+             <cdSca>= -1.76075209E+00
+             <cdAbs>= -1.24083640E-01
+
+calcCs> csExt=  2.11446553E+05 nConv=  0
+         csSca=  2.11380804E+05 nConv=  0
+         csAbs=  6.57487601E+01
+
+calcCs> csExt=  1.92964803E+05 nConv=  0
+         csSca=  1.92902127E+05 nConv=  0
+         csAbs=  6.26759247E+01
+
+calcCs> csExt=  2.01909483E+05 nConv=  0
+         csSca=  2.01842360E+05 nConv=  0
+         csAbs=  6.71229113E+01
+
+calcCs> csExt=  2.02501874E+05 nConv=  0
+         csSca=  2.02440572E+05 nConv=  0
+         csAbs=  6.13017735E+01
+
+
+spectrumFF> ===== Wavelength:   374.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.42941097E+05 nConv=  0
+             <csSca>=  2.42901758E+05 nConv=  0
+             <csAbs>=  3.93381248E+01
+
+             <cdExt>=  2.06429927E+00
+             <cdSca>=  2.17611103E+00
+             <cdAbs>= -1.11811759E-01
+
+calcCs> csExt=  2.11460077E+05 nConv=  0
+         csSca=  2.11399894E+05 nConv=  0
+         csAbs=  6.01825118E+01
+
+calcCs> csExt=  1.94849162E+05 nConv=  0
+         csSca=  1.94792681E+05 nConv=  0
+         csAbs=  5.64811973E+01
+
+calcCs> csExt=  2.03024051E+05 nConv=  0
+         csSca=  2.02962617E+05 nConv=  0
+         csAbs=  6.14339532E+01
+
+calcCs> csExt=  2.03285189E+05 nConv=  0
+         csSca=  2.03229959E+05 nConv=  0
+         csAbs=  5.52297559E+01
+
+
+spectrumFF> ===== Wavelength:   376.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.43609088E+05 nConv=  0
+             <csSca>=  2.43573437E+05 nConv=  0
+             <csAbs>=  3.56505453E+01
+
+             <cdExt>=  5.81823816E+00
+             <cdSca>=  5.91902209E+00
+             <cdAbs>= -1.00783930E-01
+
+calcCs> csExt=  2.11537722E+05 nConv=  0
+         csSca=  2.11482410E+05 nConv=  0
+         csAbs=  5.53113238E+01
+
+calcCs> csExt=  1.97015788E+05 nConv=  0
+         csSca=  1.96964566E+05 nConv=  0
+         csAbs=  5.12214430E+01
+
+calcCs> csExt=  2.04328087E+05 nConv=  0
+         csSca=  2.04271586E+05 nConv=  0
+         csAbs=  5.65001643E+01
+
+calcCs> csExt=  2.04225423E+05 nConv=  0
+         csSca=  2.04175390E+05 nConv=  0
+         csAbs=  5.00326025E+01
+
+
+spectrumFF> ===== Wavelength:   378.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.43906807E+05 nConv=  0
+             <csSca>=  2.43874359E+05 nConv=  0
+             <csAbs>=  3.24482005E+01
+
+             <cdExt>=  8.60682025E+00
+             <cdSca>=  8.69766887E+00
+             <cdAbs>= -9.08486261E-02
+
+calcCs> csExt=  2.11552424E+05 nConv=  0
+         csSca=  2.11501439E+05 nConv=  0
+         csAbs=  5.09851842E+01
+
+calcCs> csExt=  1.99278856E+05 nConv=  0
+         csSca=  1.99232146E+05 nConv=  0
+         csAbs=  4.67096251E+01
+
+calcCs> csExt=  2.05655711E+05 nConv=  0
+         csSca=  2.05603552E+05 nConv=  0
+         csAbs=  5.21594407E+01
+
+calcCs> csExt=  2.05175569E+05 nConv=  0
+         csSca=  2.05130034E+05 nConv=  0
+         csAbs=  4.55353686E+01
+
+
+spectrumFF> ===== Wavelength:   380.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.43790722E+05 nConv=  0
+             <csSca>=  2.43761091E+05 nConv=  0
+             <csAbs>=  2.96313751E+01
+
+             <cdExt>=  9.88883842E+00
+             <cdSca>=  9.97068058E+00
+             <cdAbs>= -8.18421581E-02
+
+calcCs> csExt=  2.11398901E+05 nConv=  0
+         csSca=  2.11351812E+05 nConv=  0
+         csAbs=  4.70891948E+01
+
+calcCs> csExt=  2.01472684E+05 nConv=  0
+         csSca=  2.01429885E+05 nConv=  0
+         csAbs=  4.27982058E+01
+
+calcCs> csExt=  2.06859101E+05 nConv=  0
+         csSca=  2.06810815E+05 nConv=  0
+         csAbs=  4.82857152E+01
+
+calcCs> csExt=  2.06012484E+05 nConv=  0
+         csSca=  2.05970882E+05 nConv=  0
+         csAbs=  4.16016854E+01
+
+
+spectrumFF> ===== Wavelength:   382.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.43239902E+05 nConv=  0
+             <csSca>=  2.43212773E+05 nConv=  0
+             <csAbs>=  2.71290354E+01
+
+             <cdExt>=  9.45587488E+00
+             <cdSca>=  9.52946998E+00
+             <cdAbs>= -7.35951006E-02
+
+calcCs> csExt=  2.10999730E+05 nConv=  0
+         csSca=  2.10956195E+05 nConv=  0
+         csAbs=  4.35350247E+01
+
+calcCs> csExt=  2.03460412E+05 nConv=  0
+         csSca=  2.03421043E+05 nConv=  0
+         csAbs=  3.93690471E+01
+
+calcCs> csExt=  2.07816673E+05 nConv=  6
+         csSca=  2.07771893E+05 nConv=  0
+         csAbs=  4.47802556E+01
+
+calcCs> csExt=  2.06643469E+05 nConv=  6
+         csSca=  2.06605345E+05 nConv=  0
+         csAbs=  3.81238162E+01
+
+
+spectrumFF> ===== Wavelength:   384.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.42255477E+05 nConv=  0
+             <csSca>=  2.42230588E+05 nConv=  0
+             <csAbs>=  2.48889820E+01
+
+             <cdExt>=  7.45532856E+00
+             <cdSca>=  7.52129119E+00
+             <cdAbs>= -6.59626354E-02
+
+calcCs> csExt=  2.10308973E+05 nConv=  0
+         csSca=  2.10268717E+05 nConv=  0
+         csAbs=  4.02556746E+01
+
+calcCs> csExt=  2.05141185E+05 nConv=  0
+         csSca=  2.05104857E+05 nConv=  0
+         csAbs=  3.63272426E+01
+
+calcCs> csExt=  2.08440294E+05 nConv=  0
+         csSca=  2.08398728E+05 nConv=  0
+         csAbs=  4.15664847E+01
+
+calcCs> csExt=  2.07009863E+05 nConv=  0
+         csSca=  2.06974847E+05 nConv=  0
+         csAbs=  3.50164325E+01
+
+
+spectrumFF> ===== Wavelength:   386.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.40860024E+05 nConv=  0
+             <csSca>=  2.40837152E+05 nConv=  0
+             <csAbs>=  2.28717191E+01
+
+             <cdExt>=  4.33346422E+00
+             <cdSca>=  4.39231445E+00
+             <cdAbs>= -5.88502294E-02
+
+calcCs> csExt=  2.09312855E+05 nConv=  0
+         csSca=  2.09275654E+05 nConv=  0
+         csAbs=  3.72018879E+01
+
+calcCs> csExt=  2.06453936E+05 nConv=  0
+         csSca=  2.06420339E+05 nConv=  0
+         csAbs=  3.35969668E+01
+
+calcCs> csExt=  2.08679963E+05 nConv=  0
+         csSca=  2.08641377E+05 nConv=  0
+         csAbs=  3.85864678E+01
+
+calcCs> csExt=  2.07086828E+05 nConv=  0
+         csSca=  2.07054616E+05 nConv=  0
+         csAbs=  3.22123869E+01
+
+
+spectrumFF> ===== Wavelength:   388.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.39096010E+05 nConv=  0
+             <csSca>=  2.39074963E+05 nConv=  0
+             <csAbs>=  2.10465768E+01
+
+             <cdExt>=  7.16085715E-01
+             <cdSca>=  7.68305933E-01
+             <cdAbs>= -5.22202176E-02
+
+calcCs> csExt=  2.08027878E+05 nConv=  0
+         csSca=  2.07993538E+05 nConv=  0
+         csAbs=  3.43393836E+01
+
+calcCs> csExt=  2.07377105E+05 nConv=  0
+         csSca=  2.07345986E+05 nConv=  0
+         csAbs=  3.11184371E+01
+
+calcCs> csExt=  2.08525153E+05 nConv=  0
+         csSca=  2.08489355E+05 nConv=  0
+         csAbs=  3.57981814E+01
+
+calcCs> csExt=  2.06879829E+05 nConv=  0
+         csSca=  2.06850169E+05 nConv=  0
+         csAbs=  2.96596393E+01
+
+
+spectrumFF> ===== Wavelength:   390.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.37023152E+05 nConv=  0
+             <csSca>=  2.37003762E+05 nConv=  0
+             <csAbs>=  1.93892507E+01
+
+             <cdExt>= -2.74082085E+00
+             <cdSca>= -2.69474232E+00
+             <cdAbs>= -4.60785293E-02
+
+calcCs> csExt=  2.06497054E+05 nConv=  6
+         csSca=  2.06465408E+05 nConv=  0
+         csAbs=  3.16464475E+01
+
+calcCs> csExt=  2.07924636E+05 nConv=  0
+         csSca=  2.07895790E+05 nConv=  0
+         csAbs=  2.88455602E+01
+
+calcCs> csExt=  2.08002619E+05 nConv=  0
+         csSca=  2.07969446E+05 nConv=  0
+         csAbs=  3.31731381E+01
+
+calcCs> csExt=  2.06419071E+05 nConv=  0
+         csSca=  2.06391752E+05 nConv=  0
+         csAbs=  2.73188696E+01
+
+
+spectrumFF> ===== Wavelength:   392.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.34714806E+05 nConv=  6
+             <csSca>=  2.34696926E+05 nConv=  6
+             <csAbs>=  1.78802278E+01
+
+             <cdExt>= -5.49070428E+00
+             <cdSca>= -5.45025400E+00
+             <cdAbs>= -4.04502779E-02
+
+calcCs> csExt=  2.04784815E+05 nConv=  0
+         csSca=  2.04755703E+05 nConv=  0
+         csAbs=  2.91115582E+01
+
+calcCs> csExt=  2.08139307E+05 nConv=  0
+         csSca=  2.08112563E+05 nConv=  0
+         csAbs=  2.67439783E+01
+
+calcCs> csExt=  2.07170922E+05 nConv=  0
+         csSca=  2.07140227E+05 nConv=  0
+         csAbs=  3.06941065E+01
+
+calcCs> csExt=  2.05753200E+05 nConv=  0
+         csSca=  2.05728039E+05 nConv=  0
+         csAbs=  2.51614299E+01
+
+
+spectrumFF> ===== Wavelength:   394.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.32253590E+05 nConv=  6
+             <csSca>=  2.32237086E+05 nConv=  6
+             <csAbs>=  1.65037267E+01
+
+             <cdExt>= -7.19123880E+00
+             <cdSca>= -7.15588304E+00
+             <cdAbs>= -3.53557625E-02
+
+calcCs> csExt=  2.02970816E+05 nConv=  0
+         csSca=  2.02944085E+05 nConv=  0
+         csAbs=  2.67308425E+01
+
+calcCs> csExt=  2.08084614E+05 nConv=  0
+         csSca=  2.08059824E+05 nConv=  0
+         csAbs=  2.47892684E+01
+
+calcCs> csExt=  2.06112273E+05 nConv=  0
+         csSca=  2.06083920E+05 nConv=  0
+         csAbs=  2.83527384E+01
+
+calcCs> csExt=  2.04943157E+05 nConv=  0
+         csSca=  2.04919989E+05 nConv=  0
+         csAbs=  2.31673725E+01
+
+
+spectrumFF> ===== Wavelength:   396.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.29726458E+05 nConv=  6
+             <csSca>=  2.29711211E+05 nConv=  6
+             <csAbs>=  1.52469017E+01
+
+             <cdExt>= -7.73585360E+00
+             <cdSca>= -7.70505833E+00
+             <cdAbs>= -3.07952641E-02
+
+calcCs> csExt=  2.01142926E+05 nConv=  0
+         csSca=  2.01118421E+05 nConv=  0
+         csAbs=  2.45053474E+01
+
+calcCs> csExt=  2.07836390E+05 nConv=  0
+         csSca=  2.07813425E+05 nConv=  6
+         csAbs=  2.29651164E+01
+
+calcCs> csExt=  2.04922754E+05 nConv=  0
+         csSca=  2.04896607E+05 nConv=  0
+         csAbs=  2.61470396E+01
+
+calcCs> csExt=  2.04056562E+05 nConv=  0
+         csSca=  2.04035239E+05 nConv=  0
+         csAbs=  2.13234243E+01
+
+
+spectrumFF> ===== Wavelength:   398.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.27219652E+05 nConv=  6
+             <csSca>=  2.27205553E+05 nConv=  6
+             <csAbs>=  1.40991701E+01
+
+             <cdExt>= -7.22554095E+00
+             <cdSca>= -7.19879587E+00
+             <cdAbs>= -2.67450895E-02
+
+calcCs> csExt=  1.99389954E+05 nConv=  0
+         csSca=  1.99367515E+05 nConv=  0
+         csAbs=  2.24383294E+01
+
+calcCs> csExt=  2.07475105E+05 nConv=  0
+         csSca=  2.07453844E+05 nConv=  6
+         csAbs=  2.12614123E+01
+
+calcCs> csExt=  2.03702292E+05 nConv=  0
+         csSca=  2.03678213E+05 nConv=  0
+         csAbs=  2.40787943E+01
+
+calcCs> csExt=  2.03162767E+05 nConv=  0
+         csSca=  2.03143146E+05 nConv=  6
+         csAbs=  1.96209474E+01
+
+
+spectrumFF> ===== Wavelength:   400.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.24814090E+05 nConv=  6
+             <csSca>=  2.24801039E+05 nConv=  6
+             <csAbs>=  1.30516178E+01
+
+             <cdExt>= -5.90202746E+00
+             <cdSca>= -5.87886516E+00
+             <cdAbs>= -2.31622944E-02
+
+calcCs> csExt=  1.97794992E+05 nConv=  0
+         csSca=  1.97774459E+05 nConv=  0
+         csAbs=  2.05328926E+01
+
+calcCs> csExt=  2.07079503E+05 nConv=  0
+         csSca=  2.07059831E+05 nConv=  6
+         csAbs=  1.96723481E+01
+
+calcCs> csExt=  2.02545842E+05 nConv=  0
+         csSca=  2.02523691E+05 nConv=  0
+         csAbs=  2.21511920E+01
+
+calcCs> csExt=  2.02328653E+05 nConv=  0
+         csSca=  2.02310599E+05 nConv=  6
+         csAbs=  1.80540488E+01
+
+
+spectrumFF> ===== Wavelength:   402.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.22581776E+05 nConv=  6
+             <csSca>=  2.22569680E+05 nConv=  6
+             <csAbs>=  1.20964936E+01
+
+             <cdExt>= -4.06974593E+00
+             <cdSca>= -4.04975258E+00
+             <cdAbs>= -1.99933413E-02
+
+calcCs> csExt=  1.96430295E+05 nConv=  0
+         csSca=  1.96411505E+05 nConv=  0
+         csAbs=  1.87902736E+01
+
+calcCs> csExt=  2.06721955E+05 nConv=  0
+         csSca=  2.06703760E+05 nConv=  6
+         csAbs=  1.81946773E+01
+
+calcCs> csExt=  2.01536905E+05 nConv=  0
+         csSca=  2.01516538E+05 nConv=  0
+         csAbs=  2.03669234E+01
+
+calcCs> csExt=  2.01615345E+05 nConv=  0
+         csSca=  2.01598727E+05 nConv=  6
+         csAbs=  1.66180275E+01
+
+
+spectrumFF> ===== Wavelength:   404.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.20583621E+05 nConv=  6
+             <csSca>=  2.20572394E+05 nConv=  6
+             <csAbs>=  1.12268179E+01
+
+             <cdExt>= -2.02914390E+00
+             <cdSca>= -2.01196138E+00
+             <cdAbs>= -1.71825190E-02
+
+calcCs> csExt=  1.95354233E+05 nConv=  0
+         csSca=  1.95337024E+05 nConv=  0
+         csAbs=  1.72089090E+01
+
+calcCs> csExt=  2.06465562E+05 nConv=  0
+         csSca=  2.06448736E+05 nConv=  6
+         csAbs=  1.68262852E+01
+
+calcCs> csExt=  2.00743832E+05 nConv=  0
+         csSca=  2.00725105E+05 nConv=  6
+         csAbs=  1.87269185E+01
+
+calcCs> csExt=  2.01075963E+05 nConv=  0
+         csSca=  2.01060655E+05 nConv=  6
+         csAbs=  1.53082758E+01
+
+
+spectrumFF> ===== Wavelength:   406.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.18868718E+05 nConv=  6
+             <csSca>=  2.18858282E+05 nConv=  6
+             <csAbs>=  1.04361146E+01
+
+             <cdExt>= -3.29961774E-02
+             <cdSca>= -1.83183562E-02
+             <cdAbs>= -1.46778212E-02
+
+calcCs> csExt=  1.94610364E+05 nConv=  0
+         csSca=  1.94594580E+05 nConv=  6
+         csAbs=  1.57842342E+01
+
+calcCs> csExt=  2.06362834E+05 nConv=  0
+         csSca=  2.06347269E+05 nConv=  6
+         csAbs=  1.55651598E+01
+
+calcCs> csExt=  2.00218746E+05 nConv=  0
+         csSca=  2.00201516E+05 nConv=  6
+         csAbs=  1.72297432E+01
+
+calcCs> csExt=  2.00754452E+05 nConv=  0
+         csSca=  2.00740333E+05 nConv=  6
+         csAbs=  1.41196508E+01
+
+
+spectrumFF> ===== Wavelength:   408.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.17474830E+05 nConv=  6
+             <csSca>=  2.17465112E+05 nConv=  6
+             <csAbs>=  9.71825613E+00
+
+             <cdExt>=  1.73319516E+00
+             <cdSca>=  1.74562900E+00
+             <cdAbs>= -1.24338341E-02
+
+calcCs> csExt=  1.94228218E+05 nConv=  0
+         csSca=  1.94213709E+05 nConv=  6
+         csAbs=  1.45090189E+01
+
+calcCs> csExt=  2.06455564E+05 nConv=  0
+         csSca=  2.06441156E+05 nConv=  6
+         csAbs=  1.44087655E+01
+
+calcCs> csExt=  1.99998422E+05 nConv=  0
+         csSca=  1.99982550E+05 nConv=  6
+         csAbs=  1.58715454E+01
+
+calcCs> csExt=  2.00685361E+05 nConv=  0
+         csSca=  2.00672314E+05 nConv=  6
+         csAbs=  1.30462390E+01
+
+
+spectrumFF> ===== Wavelength:   410.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.16429668E+05 nConv=  6
+             <csSca>=  2.16420601E+05 nConv=  6
+             <csAbs>=  9.06739155E+00
+
+             <cdExt>=  3.15221787E+00
+             <cdSca>=  3.16263014E+00
+             <cdAbs>= -1.04122749E-02
+
+calcCs> csExt=  1.94225127E+05 nConv=  0
+         csSca=  1.94211753E+05 nConv=  6
+         csAbs=  1.33740058E+01
+
+calcCs> csExt=  2.06775499E+05 nConv=  0
+         csSca=  2.06762145E+05 nConv=  6
+         csAbs=  1.33537595E+01
+
+calcCs> csExt=  2.00106315E+05 nConv=  0
+         csSca=  2.00091669E+05 nConv=  6
+         csAbs=  1.46463707E+01
+
+calcCs> csExt=  2.00894311E+05 nConv=  0
+         csSca=  2.00882229E+05 nConv=  6
+         csAbs=  1.20813947E+01
+
+
+spectrumFF> ===== Wavelength:   412.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.15752486E+05 nConv=  6
+             <csSca>=  2.15744008E+05 nConv=  6
+             <csAbs>=  8.47792848E+00
+
+             <cdExt>=  4.16519801E+00
+             <cdSca>=  4.17377917E+00
+             <cdAbs>= -8.58115674E-03
+
+calcCs> csExt=  1.94608469E+05 nConv=  0
+         csSca=  1.94596101E+05 nConv=  6
+         csAbs=  1.23686393E+01
+
+calcCs> csExt=  2.07345396E+05 nConv=  0
+         csSca=  2.07333000E+05 nConv=  6
+         csAbs=  1.23959575E+01
+
+calcCs> csExt=  2.00555006E+05 nConv=  0
+         csSca=  2.00541460E+05 nConv=  6
+         csAbs=  1.35466663E+01
+
+calcCs> csExt=  2.01398859E+05 nConv=  0
+         csSca=  2.01387641E+05 nConv=  6
+         csAbs=  1.12179305E+01
+
+
+spectrumFF> ===== Wavelength:   414.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.15455601E+05 nConv=  6
+             <csSca>=  2.15447656E+05 nConv=  6
+             <csAbs>=  7.94453815E+00
+
+             <cdExt>=  4.75737428E+00
+             <cdSca>=  4.76428770E+00
+             <cdAbs>= -6.91342093E-03
+
+calcCs> csExt=  1.95377775E+05 nConv=  0
+         csSca=  1.95366294E+05 nConv=  6
+         csAbs=  1.14817391E+01
+
+calcCs> csExt=  2.08180137E+05 nConv=  0
+         csSca=  2.08168607E+05 nConv=  6
+         csAbs=  1.15304513E+01
+
+calcCs> csExt=  2.01348482E+05 nConv=  0
+         csSca=  2.01335918E+05 nConv=  6
+         csAbs=  1.25638281E+01
+
+calcCs> csExt=  2.02209430E+05 nConv=  0
+         csSca=  2.02198982E+05 nConv=  6
+         csAbs=  1.04483623E+01
+
+
+spectrumFF> ===== Wavelength:   416.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.15545532E+05 nConv=  6
+             <csSca>=  2.15538070E+05 nConv=  6
+             <csAbs>=  7.46216455E+00
+
+             <cdExt>=  4.94413843E+00
+             <cdSca>=  4.94952401E+00
+             <cdAbs>= -5.38558157E-03
+
+calcCs> csExt=  1.96526347E+05 nConv=  0
+         csSca=  1.96515645E+05 nConv=  6
+         csAbs=  1.07020410E+01
+
+calcCs> csExt=  2.09287630E+05 nConv=  0
+         csSca=  2.09276878E+05 nConv=  6
+         csAbs=  1.07517973E+01
+
+calcCs> csExt=  2.02483907E+05 nConv=  0
+         csSca=  2.02472219E+05 nConv=  6
+         csAbs=  1.16886961E+01
+
+calcCs> csExt=  2.03330070E+05 nConv=  0
+         csSca=  2.03320304E+05 nConv=  6
+         csAbs=  9.76514223E+00
+
+
+spectrumFF> ===== Wavelength:   418.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.16023555E+05 nConv=  6
+             <csSca>=  2.16016529E+05 nConv=  6
+             <csAbs>=  7.02602532E+00
+
+             <cdExt>=  4.75974781E+00
+             <cdSca>=  4.76372445E+00
+             <cdAbs>= -3.97663770E-03
+
+calcCs> csExt=  1.98042186E+05 nConv=  0
+         csSca=  1.98032168E+05 nConv=  6
+         csAbs=  1.00185765E+01
+
+calcCs> csExt=  2.10669309E+05 nConv=  0
+         csSca=  2.10659254E+05 nConv=  6
+         csAbs=  1.00542159E+01
+
+calcCs> csExt=  2.03952683E+05 nConv=  0
+         csSca=  2.03941771E+05 nConv=  6
+         csAbs=  1.09119493E+01
+
+calcCs> csExt=  2.04758812E+05 nConv=  0
+         csSca=  2.04749651E+05 nConv=  6
+         csAbs=  9.16084303E+00
+
+
+spectrumFF> ===== Wavelength:   420.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+
+diagnoseTmat> WARNING: Tr(Tmat) not converged to 1.0E-03 for n <= nmax=  6
+
+calcOAprops> <csExt>=  2.16885532E+05 nConv=  6
+             <csSca>=  2.16878901E+05 nConv=  6
+             <csAbs>=  6.63159873E+00
+
+             <cdExt>=  4.24955366E+00
+             <cdSca>=  4.25222101E+00
+             <cdAbs>= -2.66734833E-03
+
+calcCs> csExt=  1.99908131E+05 nConv=  0
+         csSca=  1.99898711E+05 nConv=  6
+         csAbs=  9.42089904E+00
+
+calcCs> csExt=  2.12320092E+05 nConv=  0
+         csSca=  2.12310660E+05 nConv=  6
+         csAbs=  9.43176371E+00
+
+calcCs> csExt=  2.05740700E+05 nConv=  0
+         csSca=  2.05730476E+05 nConv=  6
+         csAbs=  1.02243839E+01
+
+calcCs> csExt=  2.06487523E+05 nConv=  0
+         csSca=  2.06478895E+05 nConv=  6
+         csAbs=  8.62827887E+00
+
+
+spectrumFF> ===== Wavelength:   422.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.18120949E+05 nConv=  6
+             <csSca>=  2.18114675E+05 nConv=  6
+             <csAbs>=  6.27459597E+00
+
+             <cdExt>=  3.46566160E+00
+             <cdSca>=  3.46710146E+00
+             <cdAbs>= -1.43986721E-03
+
+calcCs> csExt=  2.02101201E+05 nConv=  0
+         csSca=  2.02092302E+05 nConv=  6
+         csAbs=  8.89917987E+00
+
+calcCs> csExt=  2.14227681E+05 nConv=  0
+         csSca=  2.14218802E+05 nConv=  6
+         csAbs=  8.87845853E+00
+
+calcCs> csExt=  2.07827770E+05 nConv=  0
+         csSca=  2.07818153E+05 nConv=  6
+         csAbs=  9.61707842E+00
+
+calcCs> csExt=  2.08501112E+05 nConv=  0
+         csSca=  2.08492952E+05 nConv=  6
+         csAbs=  8.16055998E+00
+
+
+spectrumFF> ===== Wavelength:   424.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.19711095E+05 nConv=  6
+             <csSca>=  2.19705144E+05 nConv=  6
+             <csAbs>=  5.95092068E+00
+
+             <cdExt>=  2.46548078E+00
+             <cdSca>=  2.46575849E+00
+             <cdAbs>= -2.77714700E-04
+
+calcCs> csExt=  2.04591168E+05 nConv=  0
+         csSca=  2.04582724E+05 nConv=  6
+         csAbs=  8.44420054E+00
+
+calcCs> csExt=  2.16371139E+05 nConv=  0
+         csSca=  2.16362750E+05 nConv=  6
+         csAbs=  8.38834683E+00
+
+calcCs> csExt=  2.10186233E+05 nConv=  0
+         csSca=  2.10177152E+05 nConv=  6
+         csAbs=  9.08146139E+00
+
+calcCs> csExt=  2.10776073E+05 nConv=  0
+         csSca=  2.10768322E+05 nConv=  6
+         csAbs=  7.75108598E+00
+
+
+spectrumFF> ===== Wavelength:   426.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.21626411E+05 nConv=  6
+             <csSca>=  2.21620754E+05 nConv=  6
+             <csAbs>=  5.65661957E+00
+
+             <cdExt>=  1.31240358E+00
+             <cdSca>=  1.31156966E+00
+             <cdAbs>=  8.33918850E-04
+
+calcCs> csExt=  2.07338467E+05 nConv=  0
+         csSca=  2.07330419E+05 nConv=  6
+         csAbs=  8.04727083E+00
+
+calcCs> csExt=  2.18718708E+05 nConv=  0
+         csSca=  2.18710753E+05 nConv=  6
+         csAbs=  7.95551379E+00
+
+calcCs> csExt=  2.12778817E+05 nConv=  0
+         csSca=  2.12770208E+05 nConv=  6
+         csAbs=  8.60929831E+00
+
+calcCs> csExt=  2.13278357E+05 nConv=  0
+         csSca=  2.13270964E+05 nConv=  6
+         csAbs=  7.39348631E+00
+
+
+spectrumFF> ===== Wavelength:   428.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.23823095E+05 nConv=  6
+             <csSca>=  2.23817708E+05 nConv=  6
+             <csAbs>=  5.38783016E+00
+
+             <cdExt>=  7.76972776E-02
+             <cdSca>=  7.57897583E-02
+             <cdAbs>=  1.90751934E-03
+
+calcCs> csExt=  2.10291625E+05 nConv=  0
+         csSca=  2.10283924E+05 nConv=  6
+         csAbs=  7.70009780E+00
+
+calcCs> csExt=  2.21224927E+05 nConv=  0
+         csSca=  2.21217353E+05 nConv=  6
+         csAbs=  7.57403907E+00
+
+calcCs> csExt=  2.15555863E+05 nConv=  0
+         csSca=  2.15547671E+05 nConv=  6
+         csAbs=  8.19261889E+00
+
+calcCs> csExt=  2.15960688E+05 nConv=  0
+         csSca=  2.15953606E+05 nConv=  6
+         csAbs=  7.08151798E+00
+
+
+spectrumFF> ===== Wavelength:   430.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.26239228E+05 nConv=  6
+             <csSca>=  2.26234088E+05 nConv=  6
+             <csAbs>=  5.14073352E+00
+
+             <cdExt>= -1.15754194E+00
+             <cdSca>= -1.16049417E+00
+             <cdAbs>=  2.95223097E-03
+
+calcCs> csExt=  2.13384533E+05 nConv=  0
+         csSca=  2.13377138E+05 nConv=  6
+         csAbs=  7.39463224E+00
+
+calcCs> csExt=  2.23827241E+05 nConv=  0
+         csSca=  2.23820003E+05 nConv=  6
+         csAbs=  7.23790785E+00
+
+calcCs> csExt=  2.18452201E+05 nConv=  0
+         csSca=  2.18444377E+05 nConv=  6
+         csAbs=  7.82360553E+00
+
+calcCs> csExt=  2.18759573E+05 nConv=  0
+         csSca=  2.18752764E+05 nConv=  6
+         csAbs=  6.80893457E+00
+
+
+spectrumFF> ===== Wavelength:   432.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.28790912E+05 nConv=  6
+             <csSca>=  2.28786001E+05 nConv=  6
+             <csAbs>=  4.91152244E+00
+
+             <cdExt>= -2.30185798E+00
+             <cdSca>= -2.30583046E+00
+             <cdAbs>=  3.97247350E-03
+
+calcCs> csExt=  2.16534081E+05 nConv=  0
+         csSca=  2.16526958E+05 nConv=  6
+         csAbs=  7.12292106E+00
+
+calcCs> csExt=  2.26442578E+05 nConv=  0
+         csSca=  2.26435637E+05 nConv=  6
+         csAbs=  6.94089275E+00
+
+calcCs> csExt=  2.21384151E+05 nConv=  0
+         csSca=  2.21376656E+05 nConv=  6
+         csAbs=  7.49446855E+00
+
+calcCs> csExt=  2.21592509E+05 nConv=  0
+         csSca=  2.21585939E+05 nConv=  6
+         csAbs=  6.56934526E+00
+
+
+spectrumFF> ===== Wavelength:   434.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.31369281E+05 nConv=  6
+             <csSca>=  2.31364585E+05 nConv=  6
+             <csAbs>=  4.69639834E+00
+
+             <cdExt>= -3.25614434E+00
+             <cdSca>= -3.26111065E+00
+             <cdAbs>=  4.96630549E-03
+
+calcCs> csExt=  2.19638911E+05 nConv=  0
+         csSca=  2.19632034E+05 nConv=  6
+         csAbs=  6.87699972E+00
+
+calcCs> csExt=  2.28964722E+05 nConv=  0
+         csSca=  2.28958045E+05 nConv=  6
+         csAbs=  6.67643279E+00
+
+calcCs> csExt=  2.24247454E+05 nConv=  0
+         csSca=  2.24240257E+05 nConv=  6
+         csAbs=  7.19734071E+00
+
+calcCs> csExt=  2.24356179E+05 nConv=  0
+         csSca=  2.24349822E+05 nConv=  6
+         csAbs=  6.35609180E+00
+
+
+spectrumFF> ===== Wavelength:   436.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.33839610E+05 nConv=  6
+             <csSca>=  2.33835118E+05 nConv=  6
+             <csAbs>=  4.49161159E+00
+
+             <cdExt>= -3.92143480E+00
+             <cdSca>= -3.92735860E+00
+             <cdAbs>=  5.92379562E-03
+
+calcCs> csExt=  2.22580267E+05 nConv=  0
+         csSca=  2.22573618E+05 nConv=  6
+         csAbs=  6.64886537E+00
+
+calcCs> csExt=  2.31263787E+05 nConv=  0
+         csSca=  2.31257350E+05 nConv=  6
+         csAbs=  6.43754906E+00
+
+calcCs> csExt=  2.26917267E+05 nConv=  0
+         csSca=  2.26910343E+05 nConv=  6
+         csAbs=  6.92423221E+00
+
+calcCs> csExt=  2.26926787E+05 nConv=  0
+         csSca=  2.26920625E+05 nConv=  6
+         csAbs=  6.16218222E+00
+
+
+spectrumFF> ===== Wavelength:   438.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.36044073E+05 nConv=  6
+             <csSca>=  2.36039779E+05 nConv=  6
+             <csAbs>=  4.29355919E+00
+
+             <cdExt>= -4.21283218E+00
+             <cdSca>= -4.21965809E+00
+             <cdAbs>=  6.82590842E-03
+
+calcCs> csExt=  2.25226032E+05 nConv=  0
+         csSca=  2.25219602E+05 nConv=  6
+         csAbs=  6.43057468E+00
+
+calcCs> csExt=  2.33189559E+05 nConv=  0
+         csSca=  2.33183342E+05 nConv=  6
+         csAbs=  6.21685138E+00
+
+calcCs> csExt=  2.29251652E+05 nConv=  0
+         csSca=  2.29244985E+05 nConv=  6
+         csAbs=  6.66709552E+00
+
+calcCs> csExt=  2.29163939E+05 nConv=  0
+         csSca=  2.29157959E+05 nConv=  6
+         csAbs=  5.98033054E+00
+
+
+spectrumFF> ===== Wavelength:   440.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.37809725E+05 nConv=  6
+             <csSca>=  2.37805626E+05 nConv=  6
+             <csAbs>=  4.09894720E+00
+
+             <cdExt>= -4.07854989E+00
+             <cdSca>= -4.08619451E+00
+             <cdAbs>=  7.64461771E-03
+
+calcCs> csExt=  2.27438870E+05 nConv=  0
+         csSca=  2.27432655E+05 nConv=  6
+         csAbs=  6.21450395E+00
+
+calcCs> csExt=  2.34580522E+05 nConv=  0
+         csSca=  2.34574516E+05 nConv=  6
+         csAbs=  6.00669803E+00
+
+calcCs> csExt=  2.31099989E+05 nConv=  0
+         csSca=  2.31093571E+05 nConv=  6
+         csAbs=  6.41804783E+00
+
+calcCs> csExt=  2.30919403E+05 nConv=  0
+         csSca=  2.30913600E+05 nConv=  6
+         csAbs=  5.80315416E+00
+
+
+spectrumFF> ===== Wavelength:   442.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.38962692E+05 nConv=  6
+             <csSca>=  2.38958787E+05 nConv=  6
+             <csAbs>=  3.90501179E+00
+
+             <cdExt>= -3.51970121E+00
+             <cdSca>= -3.52804621E+00
+             <cdAbs>=  8.34499903E-03
+
+calcCs> csExt=  2.29088757E+05 nConv=  0
+         csSca=  2.29082763E+05 nConv=  6
+         csAbs=  5.99378347E+00
+
+calcCs> csExt=  2.35279812E+05 nConv=  0
+         csSca=  2.35274013E+05 nConv=  6
+         csAbs=  5.79955954E+00
+
+calcCs> csExt=  2.32317119E+05 nConv=  0
+         csSca=  2.32310949E+05 nConv=  6
+         csAbs=  6.16977891E+00
+
+calcCs> csExt=  2.32051450E+05 nConv=  0
+         csSca=  2.32045827E+05 nConv=  6
+         csAbs=  5.62356410E+00
+
+
+spectrumFF> ===== Wavelength:   444.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.39348148E+05 nConv=  6
+             <csSca>=  2.39344438E+05 nConv=  6
+             <csAbs>=  3.70977046E+00
+
+             <cdExt>= -2.60311745E+00
+             <cdSca>= -2.61200718E+00
+             <cdAbs>=  8.88972935E-03
+
+calcCs> csExt=  2.30069044E+05 nConv=  0
+         csSca=  2.30063281E+05 nConv=  6
+         csAbs=  5.76286861E+00
+
+calcCs> csExt=  2.35157524E+05 nConv=  0
+         csSca=  2.35151935E+05 nConv=  6
+         csAbs=  5.58859376E+00
+
+calcCs> csExt=  2.32782583E+05 nConv=  0
+         csSca=  2.32776667E+05 nConv=  6
+         csAbs=  5.91612338E+00
+
+calcCs> csExt=  2.32443985E+05 nConv=  0
+         csSca=  2.32438550E+05 nConv=  6
+         csAbs=  5.43533899E+00
+
+
+spectrumFF> ===== Wavelength:   446.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.38853436E+05 nConv=  6
+             <csSca>=  2.38849924E+05 nConv=  6
+             <csAbs>=  3.51225000E+00
+
+             <cdExt>= -1.45866705E+00
+             <cdSca>= -1.46791268E+00
+             <cdAbs>=  9.24562815E-03
+
+calcCs> csExt=  2.30313595E+05 nConv=  0
+         csSca=  2.30308077E+05 nConv=  6
+         csAbs=  5.51814259E+00
+
+calcCs> csExt=  2.34136043E+05 nConv=  0
+         csSca=  2.34130674E+05 nConv=  6
+         csAbs=  5.36836162E+00
+
+calcCs> csExt=  2.32422126E+05 nConv=  0
+         csSca=  2.32416474E+05 nConv=  6
+         csAbs=  5.65270363E+00
+
+calcCs> csExt=  2.32027511E+05 nConv=  0
+         csSca=  2.32022278E+05 nConv=  6
+         csAbs=  5.23380058E+00
+
+
+spectrumFF> ===== Wavelength:   448.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.37429418E+05 nConv=  6
+             <csSca>=  2.37426105E+05 nConv=  6
+             <csAbs>=  3.31261984E+00
+
+             <cdExt>= -2.56746674E-01
+             <cdSca>= -2.66137517E-01
+             <cdAbs>=  9.39084299E-03
+
+calcCs> csExt=  2.29811141E+05 nConv=  0
+         csSca=  2.29805883E+05 nConv=  6
+         csAbs=  5.25838598E+00
+
+calcCs> csExt=  2.32212178E+05 nConv=  0
+         csSca=  2.32207043E+05 nConv=  6
+         csAbs=  5.13552137E+00
+
+calcCs> csExt=  2.31226393E+05 nConv=  0
+         csSca=  2.31221015E+05 nConv=  6
+         csAbs=  5.37747626E+00
+
+calcCs> csExt=  2.30796927E+05 nConv=  0
+         csSca=  2.30791910E+05 nConv=  6
+         csAbs=  5.01643109E+00
+
+
+spectrumFF> ===== Wavelength:   450.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.35103936E+05 nConv=  6
+             <csSca>=  2.35100824E+05 nConv=  6
+             <csAbs>=  3.11216567E+00
+
+             <cdExt>=  8.29554918E-01
+             <cdSca>=  8.20234398E-01
+             <cdAbs>=  9.32052044E-03
+
+calcCs> csExt=  2.28612562E+05 nConv=  0
+         csSca=  2.28607577E+05 nConv=  6
+         csAbs=  4.98493587E+00
+
+calcCs> csExt=  2.29468661E+05 nConv=  0
+         csSca=  2.29463771E+05 nConv=  6
+         csAbs=  4.88928378E+00
+
+calcCs> csExt=  2.29260833E+05 nConv=  0
+         csSca=  2.29255743E+05 nConv=  6
+         csAbs=  5.09098709E+00
+
+calcCs> csExt=  2.28820389E+05 nConv=  0
+         csSca=  2.28815606E+05 nConv=  6
+         csAbs=  4.78323256E+00
+
+
+spectrumFF> ===== Wavelength:   452.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.31982490E+05 nConv=  6
+             <csSca>=  2.31979577E+05 nConv=  6
+             <csAbs>=  2.91307549E+00
+
+             <cdExt>=  1.66440953E+00
+             <cdSca>=  1.65536058E+00
+             <cdAbs>=  9.04894361E-03
+
+calcCs> csExt=  2.26828079E+05 nConv=  0
+         csSca=  2.26823378E+05 nConv=  6
+         csAbs=  4.70142409E+00
+
+calcCs> csExt=  2.26069599E+05 nConv=  0
+         csSca=  2.26064968E+05 nConv=  6
+         csAbs=  4.63144300E+00
+
+calcCs> csExt=  2.26662444E+05 nConv=  0
+         csSca=  2.26657648E+05 nConv=  6
+         csAbs=  4.79619611E+00
+
+calcCs> csExt=  2.26235234E+05 nConv=  0
+         csSca=  2.26230697E+05 nConv=  6
+         csAbs=  4.53667099E+00
+
+
+spectrumFF> ===== Wavelength:   454.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.28234896E+05 nConv=  6
+             <csSca>=  2.28232178E+05 nConv=  6
+             <csAbs>=  2.71807093E+00
+
+             <cdExt>=  2.17592928E+00
+             <cdSca>=  2.16732197E+00
+             <cdAbs>=  8.60730282E-03
+
+calcCs> csExt=  2.24614242E+05 nConv=  0
+         csSca=  2.24609829E+05 nConv=  6
+         csAbs=  4.41311772E+00
+
+calcCs> csExt=  2.22239624E+05 nConv=  0
+         csSca=  2.22235258E+05 nConv=  6
+         csAbs=  4.36592672E+00
+
+calcCs> csExt=  2.23622958E+05 nConv=  0
+         csSca=  2.23618460E+05 nConv=  6
+         csAbs=  4.49786998E+00
+
+calcCs> csExt=  2.23230909E+05 nConv=  0
+         csSca=  2.23226628E+05 nConv=  6
+         csAbs=  4.28117446E+00
+
+
+spectrumFF> ===== Wavelength:   456.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.24071346E+05 nConv=  6
+             <csSca>=  2.24068816E+05 nConv=  6
+             <csAbs>=  2.52997139E+00
+
+             <cdExt>=  2.36084224E+00
+             <cdSca>=  2.35280432E+00
+             <cdAbs>=  8.03791967E-03
+
+calcCs> csExt=  2.22153881E+05 nConv=  0
+         csSca=  2.22149755E+05 nConv=  6
+         csAbs=  4.12602370E+00
+
+calcCs> csExt=  2.18232319E+05 nConv=  0
+         csSca=  2.18228221E+05 nConv=  6
+         csAbs=  4.09798081E+00
+
+calcCs> csExt=  2.20362835E+05 nConv=  0
+         csSca=  2.20358633E+05 nConv=  6
+         csAbs=  4.20169341E+00
+
+calcCs> csExt=  2.20023365E+05 nConv=  0
+         csSca=  2.20019343E+05 nConv=  6
+         csAbs=  4.02231110E+00
+
+
+spectrumFF> ===== Wavelength:   458.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.19714522E+05 nConv=  6
+             <csSca>=  2.19712171E+05 nConv=  6
+             <csAbs>=  2.35129754E+00
+
+             <cdExt>=  2.26937360E+00
+             <cdSca>=  2.26198663E+00
+             <cdAbs>=  7.38697088E-03
+
+calcCs> csExt=  2.19634249E+05 nConv=  0
+         csSca=  2.19630403E+05 nConv=  6
+         csAbs=  3.84599053E+00
+
+calcCs> csExt=  2.14296963E+05 nConv=  0
+         csSca=  2.14293130E+05 nConv=  6
+         csAbs=  3.83322436E+00
+
+calcCs> csExt=  2.17103261E+05 nConv=  0
+         csSca=  2.17099347E+05 nConv=  6
+         csAbs=  3.91333980E+00
+
+calcCs> csExt=  2.16827951E+05 nConv=  0
+         csSca=  2.16824186E+05 nConv=  6
+         csAbs=  3.76587509E+00
+
+
+spectrumFF> ===== Wavelength:   460.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.15374713E+05 nConv=  6
+             <csSca>=  2.15372529E+05 nConv=  6
+             <csAbs>=  2.18399619E+00
+
+             <cdExt>=  1.98035082E+00
+             <cdSca>=  1.97365292E+00
+             <cdAbs>=  6.69790172E-03
+
+calcCs> csExt=  2.17228407E+05 nConv=  0
+         csSca=  2.17224829E+05 nConv=  6
+         csAbs=  3.57800946E+00
+
+calcCs> csExt=  2.10651925E+05 nConv=  0
+         csSca=  2.10648348E+05 nConv=  6
+         csAbs=  3.57682114E+00
+
+calcCs> csExt=  2.14043004E+05 nConv=  0
+         csSca=  2.14039367E+05 nConv=  6
+         csAbs=  3.63772274E+00
+
+calcCs> csExt=  2.13837328E+05 nConv=  0
+         csSca=  2.13833810E+05 nConv=  6
+         csAbs=  3.51710785E+00
+
+
+spectrumFF> ===== Wavelength:   462.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.11232532E+05 nConv=  6
+             <csSca>=  2.11230502E+05 nConv=  6
+             <csAbs>=  2.02931763E+00
+
+             <cdExt>=  1.57739802E+00
+             <cdSca>=  1.57139106E+00
+             <cdAbs>=  6.00696141E-03
+
+calcCs> csExt=  2.15082938E+05 nConv=  0
+         csSca=  2.15079612E+05 nConv=  6
+         csAbs=  3.32581735E+00
+
+calcCs> csExt=  2.07469246E+05 nConv=  0
+         csSca=  2.07465913E+05 nConv=  6
+         csAbs=  3.33292658E+00
+
+calcCs> csExt=  2.11344124E+05 nConv=  0
+         csSca=  2.11340746E+05 nConv=  6
+         csAbs=  3.37855026E+00
+
+calcCs> csExt=  2.11208060E+05 nConv=  0
+         csSca=  2.11204779E+05 nConv=  6
+         csAbs=  3.28019367E+00
+
+
+spectrumFF> ===== Wavelength:   464.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.07430516E+05 nConv=  6
+             <csSca>=  2.07428628E+05 nConv=  6
+             <csAbs>=  1.88782752E+00
+
+             <cdExt>=  1.13275174E+00
+             <cdSca>=  1.12741052E+00
+             <cdAbs>=  5.34121592E-03
+
+calcCs> csExt=  2.13312586E+05 nConv=  0
+         csSca=  2.13309494E+05 nConv=  6
+         csAbs=  3.09179405E+00
+
+calcCs> csExt=  2.04870489E+05 nConv=  0
+         csSca=  2.04867385E+05 nConv=  6
+         csAbs=  3.10444710E+00
+
+calcCs> csExt=  2.09126940E+05 nConv=  0
+         csSca=  2.09123802E+05 nConv=  6
+         csAbs=  3.13818652E+00
+
+calcCs> csExt=  2.09056135E+05 nConv=  0
+         csSca=  2.09053077E+05 nConv=  6
+         csAbs=  3.05805463E+00
+
+
+spectrumFF> ===== Wavelength:   466.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.04072254E+05 nConv=  6
+             <csSca>=  2.04070495E+05 nConv=  6
+             <csAbs>=  1.75950792E+00
+
+             <cdExt>=  6.99942263E-01
+             <cdSca>=  6.95223671E-01
+             <cdAbs>=  4.71859236E-03
+
+calcCs> csExt=  2.12000512E+05 nConv=  0
+         csSca=  2.11997635E+05 nConv=  6
+         csAbs=  2.87707608E+00
+
+calcCs> csExt=  2.02930963E+05 nConv=  0
+         csSca=  2.02928070E+05 nConv=  6
+         csAbs=  2.89305548E+00
+
+calcCs> csExt=  2.07472178E+05 nConv=  0
+         csSca=  2.07469260E+05 nConv=  6
+         csAbs=  2.91774612E+00
+
+calcCs> csExt=  2.07459297E+05 nConv=  0
+         csSca=  2.07456445E+05 nConv=  6
+         csAbs=  2.85238545E+00
+
+
+spectrumFF> ===== Wavelength:   468.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.01226434E+05 nConv=  6
+             <csSca>=  2.01224790E+05 nConv=  6
+             <csAbs>=  1.64389842E+00
+
+             <cdExt>=  3.13234889E-01
+             <cdSca>=  3.09085718E-01
+             <cdAbs>=  4.14917116E-03
+
+calcCs> csExt=  2.11202051E+05 nConv=  0
+         csSca=  2.11199369E+05 nConv=  6
+         csAbs=  2.68178831E+00
+
+calcCs> csExt=  2.01688446E+05 nConv=  0
+         csSca=  2.01685747E+05 nConv=  6
+         csAbs=  2.69936545E+00
+
+calcCs> csExt=  2.06427258E+05 nConv=  0
+         csSca=  2.06424540E+05 nConv=  6
+         csAbs=  2.71731941E+00
+
+calcCs> csExt=  2.06463240E+05 nConv=  0
+         csSca=  2.06460576E+05 nConv=  6
+         csAbs=  2.66383435E+00
+
+
+spectrumFF> ===== Wavelength:   470.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.98933181E+05 nConv=  6
+             <csSca>=  1.98931641E+05 nConv=  6
+             <csAbs>=  1.54023905E+00
+
+             <cdExt>= -9.21336515E-03
+             <cdSca>= -1.28503563E-02
+             <cdAbs>=  3.63699117E-03
+
+calcCs> csExt=  2.10949942E+05 nConv=  0
+         csSca=  2.10947437E+05 nConv=  6
+         csAbs=  2.50530985E+00
+
+calcCs> csExt=  2.01153088E+05 nConv=  0
+         csSca=  2.01150565E+05 nConv=  6
+         csAbs=  2.52317319E+00
+
+calcCs> csExt=  2.06013972E+05 nConv=  0
+         csSca=  2.06011436E+05 nConv=  6
+         csAbs=  2.53624010E+00
+
+calcCs> csExt=  2.06089059E+05 nConv=  0
+         csSca=  2.06086566E+05 nConv=  6
+         csAbs=  2.49224295E+00
+
+
+spectrumFF> ===== Wavelength:   472.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.97210710E+05 nConv=  6
+             <csSca>=  1.97209262E+05 nConv=  6
+             <csAbs>=  1.44759289E+00
+
+             <cdExt>= -2.60972311E-01
+             <cdSca>= -2.64154167E-01
+             <cdAbs>=  3.18185621E-03
+
+calcCs> csExt=  2.11259512E+05 nConv=  0
+         csSca=  2.11257165E+05 nConv=  6
+         csAbs=  2.34652030E+00
+
+calcCs> csExt=  2.01316301E+05 nConv=  0
+         csSca=  2.01313938E+05 nConv=  6
+         csAbs=  2.36369994E+00
+
+calcCs> csExt=  2.06235664E+05 nConv=  0
+         csSca=  2.06233291E+05 nConv=  6
+         csAbs=  2.37333644E+00
+
+calcCs> csExt=  2.06340149E+05 nConv=  0
+         csSca=  2.06337812E+05 nConv=  6
+         csAbs=  2.33688380E+00
+
+
+spectrumFF> ===== Wavelength:   474.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.96061068E+05 nConv=  6
+             <csSca>=  1.96059703E+05 nConv=  6
+             <csAbs>=  1.36493936E+00
+
+             <cdExt>= -4.43218391E-01
+             <cdSca>= -4.45999265E-01
+             <cdAbs>=  2.78087440E-03
+
+calcCs> csExt=  2.12132897E+05 nConv=  0
+         csSca=  2.12130693E+05 nConv=  6
+         csAbs=  2.20399984E+00
+
+calcCs> csExt=  2.02157569E+05 nConv=  0
+         csSca=  2.02155349E+05 nConv=  6
+         csAbs=  2.21979951E+00
+
+calcCs> csExt=  2.07082876E+05 nConv=  0
+         csSca=  2.07080649E+05 nConv=  6
+         csAbs=  2.22713673E+00
+
+calcCs> csExt=  2.07207590E+05 nConv=  0
+         csSca=  2.07205393E+05 nConv=  6
+         csAbs=  2.19666263E+00
+
+
+spectrumFF> ===== Wavelength:   476.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.95474406E+05 nConv=  6
+             <csSca>=  1.95473115E+05 nConv=  6
+             <csAbs>=  1.29123807E+00
+
+             <cdExt>= -5.61507359E-01
+             <cdSca>= -5.63936994E-01
+             <cdAbs>=  2.42963561E-03
+
+calcCs> csExt=  2.13561882E+05 nConv=  0
+         csSca=  2.13559806E+05 nConv=  6
+         csAbs=  2.07617670E+00
+
+calcCs> csExt=  2.03648856E+05 nConv=  0
+         csSca=  2.03646766E+05 nConv=  6
+         csAbs=  2.09011760E+00
+
+calcCs> csExt=  2.08537071E+05 nConv=  0
+         csSca=  2.08534975E+05 nConv=  6
+         csAbs=  2.09602103E+00
+
+calcCs> csExt=  2.08673667E+05 nConv=  0
+         csSca=  2.08671597E+05 nConv=  6
+         csAbs=  2.07027327E+00
+
+
+spectrumFF> ===== Wavelength:   478.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.95431611E+05 nConv=  6
+             <csSca>=  1.95430385E+05 nConv=  6
+             <csAbs>=  1.22546777E+00
+
+             <cdExt>= -6.23543615E-01
+             <cdSca>= -6.25666660E-01
+             <cdAbs>=  2.12304525E-03
+
+calcCs> csExt=  2.15529218E+05 nConv=  0
+         csSca=  2.15527257E+05 nConv=  6
+         csAbs=  1.96142653E+00
+
+calcCs> csExt=  2.05756745E+05 nConv=  0
+         csSca=  2.05754772E+05 nConv=  6
+         csAbs=  1.97320357E+00
+
+calcCs> csExt=  2.10572439E+05 nConv=  0
+         csSca=  2.10570460E+05 nConv=  6
+         csAbs=  1.97832345E+00
+
+calcCs> csExt=  2.10713524E+05 nConv=  0
+         csSca=  2.10711568E+05 nConv=  6
+         csAbs=  1.95630665E+00
+
+
+spectrumFF> ===== Wavelength:   480.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.95905375E+05 nConv=  6
+             <csSca>=  1.95904209E+05 nConv=  6
+             <csAbs>=  1.16664604E+00
+
+             <cdExt>= -6.37802177E-01
+             <cdSca>= -6.39658049E-01
+             <cdAbs>=  1.85587195E-03
+
+calcCs> csExt=  2.18008453E+05 nConv=  0
+         csSca=  2.18006595E+05 nConv=  6
+         csAbs=  1.85813314E+00
+
+calcCs> csExt=  2.08442561E+05 nConv=  0
+         csSca=  2.08440694E+05 nConv=  6
+         csAbs=  1.86758222E+00
+
+calcCs> csExt=  2.13155921E+05 nConv=  0
+         csSca=  2.13154049E+05 nConv=  6
+         csAbs=  1.87239431E+00
+
+calcCs> csExt=  2.13295093E+05 nConv=  0
+         csSca=  2.13293240E+05 nConv=  6
+         csAbs=  1.85332105E+00
+
+
+spectrumFF> ===== Wavelength:   482.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.96859863E+05 nConv=  6
+             <csSca>=  1.96858749E+05 nConv=  6
+             <csAbs>=  1.11383550E+00
+
+             <cdExt>= -6.12785205E-01
+             <cdSca>= -6.14408285E-01
+             <cdAbs>=  1.62307967E-03
+
+calcCs> csExt=  2.20962402E+05 nConv=  0
+         csSca=  2.20960638E+05 nConv=  6
+         csAbs=  1.76472062E+00
+
+calcCs> csExt=  2.11660818E+05 nConv=  0
+         csSca=  2.11659046E+05 nConv=  6
+         csAbs=  1.77179520E+00
+
+calcCs> csExt=  2.16245693E+05 nConv=  0
+         csSca=  2.16243916E+05 nConv=  6
+         csAbs=  1.77663282E+00
+
+calcCs> csExt=  2.16377527E+05 nConv=  0
+         csSca=  2.16375768E+05 nConv=  6
+         csAbs=  1.75988301E+00
+
+
+spectrumFF> ===== Wavelength:   484.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.98249188E+05 nConv=  6
+             <csSca>=  1.98248122E+05 nConv=  6
+             <csAbs>=  1.06614149E+00
+
+             <cdExt>= -5.56704528E-01
+             <cdSca>= -5.58124538E-01
+             <cdAbs>=  1.42001006E-03
+
+calcCs> csExt=  2.24340413E+05 nConv=  0
+         csSca=  2.24338733E+05 nConv=  6
+         csAbs=  1.67966672E+00
+
+calcCs> csExt=  2.15356261E+05 nConv=  0
+         csSca=  2.15354577E+05 nConv=  6
+         csAbs=  1.68442140E+00
+
+calcCs> csExt=  2.19788330E+05 nConv=  0
+         csSca=  2.19786641E+05 nConv=  6
+         csAbs=  1.68950014E+00
+
+calcCs> csExt=  2.19908344E+05 nConv=  0
+         csSca=  2.19906669E+05 nConv=  6
+         csAbs=  1.67458798E+00
+
+
+spectrumFF> ===== Wavelength:   486.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.00014965E+05 nConv=  6
+             <csSca>=  2.00013942E+05 nConv=  6
+             <csAbs>=  1.02270527E+00
+
+             <cdExt>= -4.77418682E-01
+             <cdSca>= -4.78661150E-01
+             <cdAbs>=  1.24246833E-03
+
+calcCs> csExt=  2.28074674E+05 nConv=  0
+         csSca=  2.28073073E+05 nConv=  6
+         csAbs=  1.60150532E+00
+
+calcCs> csExt=  2.19459827E+05 nConv=  0
+         csSca=  2.19458223E+05 nConv=  6
+         csAbs=  1.60408457E+00
+
+calcCs> csExt=  2.23714942E+05 nConv=  0
+         csSca=  2.23713332E+05 nConv=  6
+         csAbs=  1.60952117E+00
+
+calcCs> csExt=  2.23819560E+05 nConv=  0
+         csSca=  2.23817963E+05 nConv=  6
+         csAbs=  1.59606872E+00
+
+
+spectrumFF> ===== Wavelength:   488.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.02083261E+05 nConv=  6
+             <csSca>=  2.02082278E+05 nConv=  6
+             <csAbs>=  9.82696313E-01
+
+             <cdExt>= -3.82490061E-01
+             <cdSca>= -3.83576807E-01
+             <cdAbs>=  1.08674581E-03
+
+calcCs> csExt=  2.32075948E+05 nConv=  0
+         csSca=  2.32074419E+05 nConv=  6
+         csAbs=  1.52882528E+00
+
+calcCs> csExt=  2.23883899E+05 nConv=  0
+         csSca=  2.23882369E+05 nConv=  6
+         csAbs=  1.52945525E+00
+
+calcCs> csExt=  2.27936656E+05 nConv=  0
+         csSca=  2.27935121E+05 nConv=  6
+         csAbs=  1.53528210E+00
+
+calcCs> csExt=  2.28023190E+05 nConv=  0
+         csSca=  2.28021667E+05 nConv=  6
+         csAbs=  1.52299844E+00
+
+
+spectrumFF> ===== Wavelength:   490.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.04361440E+05 nConv=  6
+             <csSca>=  2.04360495E+05 nConv=  6
+             <csAbs>=  9.45306738E-01
+
+             <cdExt>= -2.79255827E-01
+             <cdSca>= -2.80205439E-01
+             <cdAbs>=  9.49612125E-04
+
+calcCs> csExt=  2.36229311E+05 nConv=  0
+         csSca=  2.36227851E+05 nConv=  6
+         csAbs=  1.46027170E+00
+
+calcCs> csExt=  2.28517394E+05 nConv=  0
+         csSca=  2.28515934E+05 nConv=  6
+         csAbs=  1.45925305E+00
+
+calcCs> csExt=  2.32340029E+05 nConv=  0
+         csSca=  2.32338564E+05 nConv=  6
+         csAbs=  1.46542994E+00
+
+calcCs> csExt=  2.32406676E+05 nConv=  0
+         csSca=  2.32405222E+05 nConv=  6
+         csAbs=  1.45409482E+00
+
+
+spectrumFF> ===== Wavelength:   492.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.06735543E+05 nConv=  6
+             <csSca>=  2.06734634E+05 nConv=  6
+             <csAbs>=  9.09750957E-01
+
+             <cdExt>= -1.74826816E-01
+             <cdSca>= -1.75655106E-01
+             <cdAbs>=  8.28289741E-04
+
+calcCs> csExt=  2.40390787E+05 nConv=  0
+         csSca=  2.40389393E+05 nConv=  6
+         csAbs=  1.39455485E+00
+
+calcCs> csExt=  2.33221506E+05 nConv=  0
+         csSca=  2.33220114E+05 nConv=  6
+         csAbs=  1.39225451E+00
+
+calcCs> csExt=  2.36783221E+05 nConv=  0
+         csSca=  2.36781823E+05 nConv=  6
+         csAbs=  1.39867918E+00
+
+calcCs> csExt=  2.36829072E+05 nConv=  0
+         csSca=  2.36827684E+05 nConv=  6
+         csAbs=  1.38813018E+00
+
+
+spectrumFF> ===== Wavelength:   494.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.09069116E+05 nConv=  6
+             <csSca>=  2.09068241E+05 nConv=  6
+             <csAbs>=  8.75273016E-01
+
+             <cdExt>= -7.59497213E-02
+             <cdSca>= -7.66701457E-02
+             <cdAbs>=  7.20424408E-04
+
+calcCs> csExt=  2.44386057E+05 nConv=  0
+         csSca=  2.44384726E+05 nConv=  6
+         csAbs=  1.33047111E+00
+
+calcCs> csExt=  2.37827212E+05 nConv=  0
+         csSca=  2.37825884E+05 nConv=  6
+         csAbs=  1.32731084E+00
+
+calcCs> csExt=  2.41094104E+05 nConv=  0
+         csSca=  2.41092771E+05 nConv=  6
+         csAbs=  1.33382984E+00
+
+calcCs> csExt=  2.41119164E+05 nConv=  0
+         csSca=  2.41117840E+05 nConv=  6
+         csAbs=  1.32395211E+00
+
+
+spectrumFF> ===== Wavelength:   496.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.11204523E+05 nConv=  6
+             <csSca>=  2.11203682E+05 nConv=  6
+             <csAbs>=  8.41163621E-01
+
+             <cdExt>=  1.13003200E-02
+             <cdSca>=  1.06762605E-02
+             <cdAbs>=  6.24059496E-04
+
+calcCs> csExt=  2.48012687E+05 nConv=  0
+         csSca=  2.48011421E+05 nConv=  6
+         csAbs=  1.26693848E+00
+
+calcCs> csExt=  2.42135935E+05 nConv=  0
+         csSca=  2.42134672E+05 nConv=  6
+         csAbs=  1.26337834E+00
+
+calcCs> csExt=  2.45071718E+05 nConv=  0
+         csSca=  2.45070448E+05 nConv=  6
+         csAbs=  1.26979959E+00
+
+calcCs> csExt=  2.45076905E+05 nConv=  0
+         csSca=  2.45075644E+05 nConv=  6
+         csAbs=  1.26051723E+00
+
+
+spectrumFF> ===== Wavelength:   498.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.12967819E+05 nConv=  6
+             <csSca>=  2.12967012E+05 nConv=  6
+             <csAbs>=  8.06787366E-01
+
+             <cdExt>=  8.19789944E-02
+             <cdSca>=  8.14413848E-02
+             <cdAbs>=  5.37609561E-04
+
+calcCs> csExt=  2.51047285E+05 nConv=  0
+         csSca=  2.51046082E+05 nConv=  6
+         csAbs=  1.20304598E+00
+
+calcCs> csExt=  2.45924862E+05 nConv=  0
+         csSca=  2.45923663E+05 nConv=  6
+         csAbs=  1.19956171E+00
+
+calcCs> csExt=  2.48492515E+05 nConv=  0
+         csSca=  2.48491310E+05 nConv=  6
+         csAbs=  1.20566962E+00
+
+calcCs> csExt=  2.48479631E+05 nConv=  0
+         csSca=  2.48478434E+05 nConv=  6
+         csAbs=  1.19693806E+00
+
+
+spectrumFF> ===== Wavelength:   500.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.14177897E+05 nConv=  6
+             <csSca>=  2.14177125E+05 nConv=  6
+             <csAbs>=  7.71618399E-01
+
+             <cdExt>=  1.32798805E-01
+             <cdSca>=  1.32338967E-01
+             <cdAbs>=  4.59837526E-04
+
+calcCs> csExt=  2.53258499E+05 nConv=  0
+         csSca=  2.53257361E+05 nConv=  6
+         csAbs=  1.13811227E+00
+
+calcCs> csExt=  2.48958037E+05 nConv=  0
+         csSca=  2.48956902E+05 nConv=  6
+         csAbs=  1.13516670E+00
+
+calcCs> csExt=  2.51122449E+05 nConv=  0
+         csSca=  2.51121308E+05 nConv=  6
+         csAbs=  1.14074010E+00
+
+calcCs> csExt=  2.51094087E+05 nConv=  0
+         csSca=  2.51092955E+05 nConv=  6
+         csAbs=  1.13253887E+00
+
+
+spectrumFF> ===== Wavelength:   502.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.14659905E+05 nConv=  6
+             <csSca>=  2.14659170E+05 nConv=  6
+             <csAbs>=  7.35279777E-01
+
+             <cdExt>=  1.62571347E-01
+             <cdSca>=  1.62181522E-01
+             <cdAbs>=  3.89825006E-04
+
+calcCs> csExt=  2.54425722E+05 nConv=  0
+         csSca=  2.54424651E+05 nConv=  6
+         csAbs=  1.07174341E+00
+
+calcCs> csExt=  2.51003485E+05 nConv=  0
+         csSca=  2.51002416E+05 nConv=  6
+         csAbs=  1.06975420E+00
+
+calcCs> csExt=  2.52734912E+05 nConv=  0
+         csSca=  2.52733837E+05 nConv=  6
+         csAbs=  1.07458602E+00
+
+calcCs> csExt=  2.52694296E+05 nConv=  0
+         csSca=  2.52693229E+05 nConv=  6
+         csAbs=  1.06691158E+00
+
+
+spectrumFF> ===== Wavelength:   504.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.14261765E+05 nConv=  6
+             <csSca>=  2.14261067E+05 nConv=  6
+             <csAbs>=  6.97578837E-01
+
+             <cdExt>=  1.72387358E-01
+             <cdSca>=  1.72060425E-01
+             <cdAbs>=  3.26932587E-04
+
+calcCs> csExt=  2.54361680E+05 nConv=  0
+         csSca=  2.54360676E+05 nConv=  6
+         csAbs=  1.00387584E+00
+
+calcCs> csExt=  2.51855075E+05 nConv=  0
+         csSca=  2.51854072E+05 nConv=  6
+         csAbs=  1.00318346E+00
+
+calcCs> csExt=  2.53133003E+05 nConv=  0
+         csSca=  2.53131996E+05 nConv=  6
+         csAbs=  1.00710035E+00
+
+calcCs> csExt=  2.53083752E+05 nConv=  0
+         csSca=  2.53082752E+05 nConv=  6
+         csAbs=  9.99958948E-01
+
+
+spectrumFF> ===== Wavelength:   506.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.12871343E+05 nConv=  6
+             <csSca>=  2.12870685E+05 nConv=  6
+             <csAbs>=  6.58529263E-01
+
+             <cdExt>=  1.65399979E-01
+             <cdSca>=  1.65129237E-01
+             <cdAbs>=  2.70742098E-04
+
+calcCs> csExt=  2.52935371E+05 nConv=  0
+         csSca=  2.52934436E+05 nConv=  6
+         csAbs=  9.34789305E-01
+
+calcCs> csExt=  2.51356059E+05 nConv=  0
+         csSca=  2.51355123E+05 nConv=  6
+         csAbs=  9.35630868E-01
+
+calcCs> csExt=  2.52172794E+05 nConv=  0
+         csSca=  2.52171855E+05 nConv=  6
+         csAbs=  9.38509629E-01
+
+calcCs> csExt=  2.52118636E+05 nConv=  0
+         csSca=  2.52117704E+05 nConv=  6
+         csAbs=  9.31910544E-01
+
+
+spectrumFF> ===== Wavelength:   508.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.10430939E+05 nConv=  6
+             <csSca>=  2.10430321E+05 nConv=  6
+             <csAbs>=  6.18351478E-01
+
+             <cdExt>=  1.46198428E-01
+             <cdSca>=  1.45977443E-01
+             <cdAbs>=  2.20984724E-04
+
+calcCs> csExt=  2.50090643E+05 nConv=  0
+         csSca=  2.50089778E+05 nConv=  6
+         csAbs=  8.65078716E-01
+
+calcCs> csExt=  2.49419778E+05 nConv=  0
+         csSca=  2.49418910E+05 nConv=  6
+         csAbs=  8.67572699E-01
+
+calcCs> csExt=  2.49782977E+05 nConv=  0
+         csSca=  2.49782108E+05 nConv=  6
+         csAbs=  8.69350870E-01
+
+calcCs> csExt=  2.49727444E+05 nConv=  0
+         csSca=  2.49726581E+05 nConv=  6
+         csAbs=  8.63300545E-01
+
+
+spectrumFF> ===== Wavelength:   510.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.06945687E+05 nConv=  6
+             <csSca>=  2.06945110E+05 nConv=  6
+             <csAbs>=  5.77447087E-01
+
+             <cdExt>=  1.19914258E-01
+             <cdSca>=  1.19736797E-01
+             <cdAbs>=  1.77460632E-04
+
+calcCs> csExt=  2.45855867E+05 nConv=  0
+         csSca=  2.45855072E+05 nConv=  6
+         csAbs=  7.95582901E-01
+
+calcCs> csExt=  2.46042760E+05 nConv=  0
+         csSca=  2.46041960E+05 nConv=  6
+         csAbs=  7.99728180E-01
+
+calcCs> csExt=  2.45976234E+05 nConv=  0
+         csSca=  2.45975433E+05 nConv=  6
+         csAbs=  8.00406725E-01
+
+calcCs> csExt=  2.45922393E+05 nConv=  0
+         csSca=  2.45921598E+05 nConv=  6
+         csAbs=  7.94904356E-01
+
+
+spectrumFF> ===== Wavelength:   512.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.02483638E+05 nConv=  6
+             <csSca>=  2.02483102E+05 nConv=  6
+             <csAbs>=  5.36349405E-01
+
+             <cdExt>=  9.13110153E-02
+             <cdSca>=  9.11710539E-02
+             <cdAbs>=  1.39961397E-04
+
+calcCs> csExt=  2.35664805E+05 nConv=  5
+         csSca=  2.40341203E+05 nConv=  6
+         csAbs= -4.67639791E+03
+
+calcCs> csExt=  2.41306706E+05 nConv=  0
+         csSca=  2.41305973E+05 nConv=  6
+         csAbs=  7.32969053E-01
+
+calcCs> csExt=  2.40849189E+05 nConv=  0
+         csSca=  2.40848456E+05 nConv=  6
+         csAbs=  7.32606921E-01
+
+calcCs> csExt=  2.40799448E+05 nConv=  0
+         csSca=  2.40798720E+05 nConv=  6
+         csAbs=  7.27641934E-01
+
+
+spectrumFF> ===== Wavelength:   514.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.97167246E+05 nConv=  6
+             <csSca>=  1.97166751E+05 nConv=  6
+             <csAbs>=  4.95658514E-01
+
+             <cdExt>=  6.41066734E-02
+             <cdSca>=  6.39984612E-02
+             <cdAbs>=  1.08212153E-04
+
+calcCs> csExt=  2.33728707E+05 nConv=  0
+         csSca=  2.33728046E+05 nConv=  6
+         csAbs=  6.61167386E-01
+
+calcCs> csExt=  2.35368562E+05 nConv=  0
+         csSca=  2.35367894E+05 nConv=  6
+         csAbs=  6.68211572E-01
+
+calcCs> csExt=  2.34570628E+05 nConv=  0
+         csSca=  2.34569961E+05 nConv=  6
+         csAbs=  6.66913730E-01
+
+calcCs> csExt=  2.34526641E+05 nConv=  0
+         csSca=  2.34525979E+05 nConv=  6
+         csAbs=  6.62465229E-01
+
+
+spectrumFF> ===== Wavelength:   516.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.91158165E+05 nConv=  6
+             <csSca>=  1.91157709E+05 nConv=  6
+             <csAbs>=  4.55973112E-01
+
+             <cdExt>=  4.06684932E-02
+             <cdSca>=  4.05866559E-02
+             <cdAbs>=  8.18372328E-05
+
+calcCs> csExt=  2.26243069E+05 nConv=  0
+         csSca=  2.26242471E+05 nConv=  6
+         csAbs=  5.98152970E-01
+
+calcCs> csExt=  2.28440895E+05 nConv=  0
+         csSca=  2.28440289E+05 nConv=  6
+         csAbs=  6.06311450E-01
+
+calcCs> csExt=  2.27360641E+05 nConv=  0
+         csSca=  2.27360037E+05 nConv=  6
+         csAbs=  6.04213265E-01
+
+calcCs> csExt=  2.27323324E+05 nConv=  0
+         csSca=  2.27322723E+05 nConv=  6
+         csAbs=  6.00251155E-01
+
+
+spectrumFF> ===== Wavelength:   518.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.84638711E+05 nConv=  6
+             <csSca>=  1.84638293E+05 nConv=  6
+             <csAbs>=  4.17831379E-01
+
+             <cdExt>=  2.20688381E-02
+             <cdSca>=  2.20084768E-02
+             <cdAbs>=  6.03612639E-05
+
+calcCs> csExt=  2.18133337E+05 nConv=  0
+         csSca=  2.18132798E+05 nConv=  6
+         csAbs=  5.38969892E-01
+
+calcCs> csExt=  2.20767037E+05 nConv=  0
+         csSca=  2.20766489E+05 nConv=  6
+         csAbs=  5.47980302E-01
+
+calcCs> csExt=  2.19465377E+05 nConv=  0
+         csSca=  2.19464832E+05 nConv=  6
+         csAbs=  5.45231478E-01
+
+calcCs> csExt=  2.19434997E+05 nConv=  0
+         csSca=  2.19434456E+05 nConv=  6
+         csAbs=  5.41718715E-01
+
+
+spectrumFF> ===== Wavelength:   520.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.77793651E+05 nConv=  6
+             <csSca>=  1.77793270E+05 nConv=  6
+             <csAbs>=  3.81669355E-01
+
+             <cdExt>=  8.37873306E-03
+             <cdSca>=  8.33550286E-03
+             <cdAbs>=  4.32301983E-05
+
+calcCs> csExt=  2.09645165E+05 nConv=  0
+         csSca=  2.09644681E+05 nConv=  6
+         csAbs=  4.84131348E-01
+
+calcCs> csExt=  2.12596107E+05 nConv=  0
+         csSca=  2.12595613E+05 nConv=  6
+         csAbs=  4.93734762E-01
+
+calcCs> csExt=  2.11132475E+05 nConv=  0
+         csSca=  2.11131984E+05 nConv=  6
+         csAbs=  4.90485390E-01
+
+calcCs> csExt=  2.11108798E+05 nConv=  0
+         csSca=  2.11108310E+05 nConv=  6
+         csAbs=  4.87380721E-01
+
+
+spectrumFF> ===== Wavelength:   522.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.70795233E+05 nConv=  6
+             <csSca>=  1.70794885E+05 nConv=  6
+             <csAbs>=  3.47799981E-01
+
+             <cdExt>= -9.55855345E-04
+             <cdSca>= -9.85701885E-04
+             <cdAbs>=  2.98465400E-05
+
+calcCs> csExt=  2.01002551E+05 nConv=  0
+         csSca=  2.01002117E+05 nConv=  6
+         csAbs=  4.33921183E-01
+
+calcCs> csExt=  2.04162093E+05 nConv=  0
+         csSca=  2.04161649E+05 nConv=  6
+         csAbs=  4.43880106E-01
+
+calcCs> csExt=  2.02591098E+05 nConv=  0
+         csSca=  2.02590658E+05 nConv=  6
+         csAbs=  4.40270323E-01
+
+calcCs> csExt=  2.02573545E+05 nConv=  0
+         csSca=  2.02573107E+05 nConv=  6
+         csAbs=  4.37530966E-01
+
+
+spectrumFF> ===== Wavelength:   524.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.63792957E+05 nConv=  6
+             <csSca>=  1.63792640E+05 nConv=  6
+             <csAbs>=  3.16411016E-01
+
+             <cdExt>= -6.77513070E-03
+             <cdSca>= -6.79474028E-03
+             <cdAbs>=  1.96095758E-05
+
+calcCs> csExt=  1.92395677E+05 nConv=  0
+         csSca=  1.92395289E+05 nConv=  6
+         csAbs=  3.88413727E-01
+
+calcCs> csExt=  1.95669320E+05 nConv=  0
+         csSca=  1.95668921E+05 nConv=  6
+         csAbs=  3.98522673E-01
+
+calcCs> csExt=  1.94038602E+05 nConv=  0
+         csSca=  1.94038207E+05 nConv=  6
+         csAbs=  3.94676260E-01
+
+calcCs> csExt=  1.94026395E+05 nConv=  0
+         csSca=  1.94026003E+05 nConv=  6
+         csAbs=  3.92260140E-01
+
+
+spectrumFF> ===== Wavelength:   526.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.56908318E+05 nConv=  6
+             <csSca>=  1.56908031E+05 nConv=  6
+             <csAbs>=  2.87576924E-01
+
+             <cdExt>= -9.96300250E-03
+             <cdSca>= -9.97495097E-03
+             <cdAbs>=  1.19484740E-05
+
+calcCs> csExt=  1.83975461E+05 nConv=  0
+         csSca=  1.83975113E+05 nConv=  6
+         csAbs=  3.47511533E-01
+
+calcCs> csExt=  1.87284749E+05 nConv=  0
+         csSca=  1.87284391E+05 nConv=  6
+         csAbs=  3.57601249E-01
+
+calcCs> csExt=  1.85633963E+05 nConv=  0
+         csSca=  1.85633609E+05 nConv=  6
+         csAbs=  3.53622696E-01
+
+calcCs> csExt=  1.85626247E+05 nConv=  0
+         csSca=  1.85625895E+05 nConv=  6
+         csAbs=  3.51490087E-01
+
+
+spectrumFF> ===== Wavelength:   528.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.50233725E+05 nConv=  6
+             <csSca>=  1.50233464E+05 nConv=  6
+             <csAbs>=  2.61278890E-01
+
+             <cdExt>= -1.13078773E-02
+             <cdSca>= -1.13142253E-02
+             <cdAbs>=  6.34800915E-06
+
+calcCs> csExt=  1.75853501E+05 nConv=  0
+         csSca=  1.75853190E+05 nConv=  6
+         csAbs=  3.10990146E-01
+
+calcCs> csExt=  1.79136111E+05 nConv=  0
+         csSca=  1.79135790E+05 nConv=  6
+         csAbs=  3.20927244E-01
+
+calcCs> csExt=  1.77496843E+05 nConv=  0
+         csSca=  1.77496526E+05 nConv=  6
+         csAbs=  3.16901428E-01
+
+calcCs> csExt=  1.77492769E+05 nConv=  0
+         csSca=  1.77492454E+05 nConv=  6
+         csAbs=  3.15015962E-01
+
+
+spectrumFF> ===== Wavelength:   530.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.43834390E+05 nConv=  6
+             <csSca>=  1.43834153E+05 nConv=  6
+             <csAbs>=  2.37427761E-01
+
+             <cdExt>= -1.14447383E-02
+             <cdSca>= -1.14470981E-02
+             <cdAbs>=  2.35984158E-06
+
+calcCs> csExt=  1.68105663E+05 nConv=  0
+         csSca=  1.68105384E+05 nConv=  6
+         csAbs=  2.78541724E-01
+
+calcCs> csExt=  1.71314251E+05 nConv=  0
+         csSca=  1.71313963E+05 nConv=  6
+         csAbs=  2.88225491E-01
+
+calcCs> csExt=  1.69710565E+05 nConv=  0
+         csSca=  1.69710281E+05 nConv=  6
+         csAbs=  2.84219025E-01
+
+calcCs> csExt=  1.69709349E+05 nConv=  0
+         csSca=  1.69709066E+05 nConv=  6
+         csAbs=  2.82548190E-01
+
+
+spectrumFF> ===== Wavelength:   532.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.37751957E+05 nConv=  6
+             <csSca>=  1.37751741E+05 nConv=  6
+             <csAbs>=  2.15886149E-01
+
+             <cdExt>= -1.08488134E-02
+             <cdSca>= -1.08484213E-02
+             <cdAbs>= -3.92077227E-07
+
+calcCs> csExt=  1.60777596E+05 nConv=  0
+         csSca=  1.60767437E+05 nConv=  5
+         csAbs=  1.01588777E+01
+
+calcCs> csExt=  1.63877941E+05 nConv=  0
+         csSca=  1.63877682E+05 nConv=  6
+         csAbs=  2.59170409E-01
+
+calcCs> csExt=  1.62327295E+05 nConv=  0
+         csSca=  1.62316903E+05 nConv=  5
+         csAbs=  1.03913782E+01
+
+calcCs> csExt=  1.62328242E+05 nConv=  0
+         csSca=  1.62317883E+05 nConv=  5
+         csAbs=  1.03589365E+01
+
+
+spectrumFF> ===== Wavelength:   534.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.32008846E+05 nConv=  6
+             <csSca>=  1.32008649E+05 nConv=  6
+             <csAbs>=  1.96487529E-01
+
+             <cdExt>= -9.85546364E-03
+             <cdSca>= -9.85324960E-03
+             <cdAbs>= -2.21404441E-06
+
+calcCs> csExt=  1.53890885E+05 nConv=  0
+         csSca=  1.53881633E+05 nConv=  5
+         csAbs=  9.25149858E+00
+
+calcCs> csExt=  1.56859749E+05 nConv=  0
+         csSca=  1.56850083E+05 nConv=  5
+         csAbs=  9.66627174E+00
+
+calcCs> csExt=  1.55374056E+05 nConv=  0
+         csSca=  1.55364583E+05 nConv=  5
+         csAbs=  9.47340916E+00
+
+calcCs> csExt=  1.55376577E+05 nConv=  0
+         csSca=  1.55367133E+05 nConv=  5
+         csAbs=  9.44436116E+00
+
+
+spectrumFF> ===== Wavelength:   536.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.26612598E+05 nConv=  6
+             <csSca>=  1.26612419E+05 nConv=  6
+             <csAbs>=  1.79051414E-01
+
+             <cdExt>= -8.68922246E-03
+             <cdSca>= -8.68587202E-03
+             <cdAbs>= -3.35043635E-06
+
+calcCs> csExt=  1.47448944E+05 nConv=  0
+         csSca=  1.47440509E+05 nConv=  5
+         csAbs=  8.43485102E+00
+
+calcCs> csExt=  1.50271942E+05 nConv=  0
+         csSca=  1.50263107E+05 nConv=  5
+         csAbs=  8.83570116E+00
+
+calcCs> csExt=  1.48858640E+05 nConv=  0
+         csSca=  1.48849991E+05 nConv=  5
+         csAbs=  8.64833719E+00
+
+calcCs> csExt=  1.48862247E+05 nConv=  0
+         csSca=  1.48853624E+05 nConv=  5
+         csAbs=  8.62221498E+00
+
+
+spectrumFF> ===== Wavelength:   538.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.21553967E+05 nConv=  5
+             <csSca>=  1.21553804E+05 nConv=  5
+             <csAbs>=  1.63357656E-01
+
+             <cdExt>= -7.49252075E-03
+             <cdSca>= -7.48852984E-03
+             <cdAbs>= -3.99091646E-06
+
+calcCs> csExt=  1.41442188E+05 nConv=  0
+         csSca=  1.41434487E+05 nConv=  5
+         csAbs=  7.70102191E+00
+
+calcCs> csExt=  1.44111845E+05 nConv=  0
+         csSca=  1.44103754E+05 nConv=  5
+         csAbs=  8.09068144E+00
+
+calcCs> csExt=  1.42774867E+05 nConv=  0
+         csSca=  1.42766960E+05 nConv=  5
+         csAbs=  7.90764780E+00
+
+calcCs> csExt=  1.42779166E+05 nConv=  0
+         csSca=  1.42771282E+05 nConv=  5
+         csAbs=  7.88405555E+00
+
+
+spectrumFF> ===== Wavelength:   540.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.16834055E+05 nConv=  5
+             <csSca>=  1.16833905E+05 nConv=  5
+             <csAbs>=  1.49305551E-01
+
+             <cdExt>= -6.34996409E-03
+             <cdSca>= -6.34568271E-03
+             <cdAbs>= -4.28137833E-06
+
+calcCs> csExt=  1.35852282E+05 nConv=  0
+         csSca=  1.35845240E+05 nConv=  5
+         csAbs=  7.04208656E+00
+
+calcCs> csExt=  1.38366351E+05 nConv=  0
+         csSca=  1.38358929E+05 nConv=  5
+         csAbs=  7.42241490E+00
+
+calcCs> csExt=  1.37106977E+05 nConv=  0
+         csSca=  1.37099735E+05 nConv=  5
+         csAbs=  7.24294873E+00
+
+calcCs> csExt=  1.37111656E+05 nConv=  0
+         csSca=  1.37104434E+05 nConv=  5
+         csAbs=  7.22155274E+00
+
+
+spectrumFF> ===== Wavelength:   542.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.12430494E+05 nConv=  5
+             <csSca>=  1.12430358E+05 nConv=  5
+             <csAbs>=  1.36686001E-01
+
+             <cdExt>= -5.30710369E-03
+             <cdSca>= -5.30277349E-03
+             <cdAbs>= -4.33019757E-06
+
+calcCs> csExt=  1.30655467E+05 nConv=  0
+         csSca=  1.30649016E+05 nConv=  5
+         csAbs=  6.45041329E+00
+
+calcCs> csExt=  1.33015544E+05 nConv=  0
+         csSca=  1.33008721E+05 nConv=  5
+         csAbs=  6.82261014E+00
+
+calcCs> csExt=  1.31833097E+05 nConv=  0
+         csSca=  1.31826451E+05 nConv=  5
+         csAbs=  6.64625203E+00
+
+calcCs> csExt=  1.31837914E+05 nConv=  0
+         csSca=  1.31831287E+05 nConv=  5
+         csAbs=  6.62677140E+00
+
+
+spectrumFF> ===== Wavelength:   544.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.08324329E+05 nConv=  5
+             <csSca>=  1.08324203E+05 nConv=  5
+             <csAbs>=  1.25343603E-01
+
+             <cdExt>= -4.38413610E-03
+             <cdSca>= -4.37991711E-03
+             <cdAbs>= -4.21899682E-06
+
+calcCs> csExt=  1.25825059E+05 nConv=  0
+         csSca=  1.25819141E+05 nConv=  5
+         csAbs=  5.91884899E+00
+
+calcCs> csExt=  1.28035461E+05 nConv=  0
+         csSca=  1.28029178E+05 nConv=  5
+         csAbs=  6.28362704E+00
+
+calcCs> csExt=  1.26927874E+05 nConv=  0
+         csSca=  1.26921764E+05 nConv=  5
+         csAbs=  6.11013895E+00
+
+calcCs> csExt=  1.26932647E+05 nConv=  0
+         csSca=  1.26926554E+05 nConv=  5
+         csAbs=  6.09233708E+00
+
+
+spectrumFF> ===== Wavelength:   546.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.04495164E+05 nConv=  5
+             <csSca>=  1.04495049E+05 nConv=  5
+             <csAbs>=  1.15136954E-01
+
+             <cdExt>= -3.58548849E-03
+             <cdSca>= -3.58148201E-03
+             <cdAbs>= -4.00647360E-06
+
+calcCs> csExt=  1.21333250E+05 nConv=  0
+         csSca=  1.21327809E+05 nConv=  5
+         csAbs=  5.44081770E+00
+
+calcCs> csExt=  1.23400145E+05 nConv=  0
+         csSca=  1.23394346E+05 nConv=  5
+         csAbs=  5.79853969E+00
+
+calcCs> csExt=  1.22364401E+05 nConv=  0
+         csSca=  1.22358773E+05 nConv=  5
+         csAbs=  5.62784008E+00
+
+calcCs> csExt=  1.22368994E+05 nConv=  0
+         csSca=  1.22363382E+05 nConv=  5
+         csAbs=  5.61151731E+00
+
+
+spectrumFF> ===== Wavelength:   548.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  1.00922243E+05 nConv=  5
+             <csSca>=  1.00922137E+05 nConv=  5
+             <csAbs>=  1.05938849E-01
+
+             <cdExt>= -2.90631328E-03
+             <cdSca>= -2.90257842E-03
+             <cdAbs>= -3.73486690E-06
+
+calcCs> csExt=  1.17152353E+05 nConv=  0
+         csSca=  1.17147342E+05 nConv=  5
+         csAbs=  5.01035854E+00
+
+calcCs> csExt=  1.19083091E+05 nConv=  0
+         csSca=  1.19077730E+05 nConv=  5
+         csAbs=  5.36114400E+00
+
+calcCs> csExt=  1.18115564E+05 nConv=  0
+         csSca=  1.18110371E+05 nConv=  5
+         csAbs=  5.19325759E+00
+
+calcCs> csExt=  1.18119879E+05 nConv=  0
+         csSca=  1.18114701E+05 nConv=  5
+         csAbs=  5.17824494E+00
+
+
+spectrumFF> ===== Wavelength:   550.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  9.75851795E+04 nConv=  5
+             <csSca>=  9.75850818E+04 nConv=  5
+             <csAbs>=  9.76358046E-02
+
+             <cdExt>= -2.33675886E-03
+             <cdSca>= -2.33332527E-03
+             <cdAbs>= -3.43358829E-06
+
+calcCs> csExt=  1.13255627E+05 nConv=  0
+         csSca=  1.13251005E+05 nConv=  5
+         csAbs=  4.62212345E+00
+
+calcCs> csExt=  1.15058241E+05 nConv=  0
+         csSca=  1.15053275E+05 nConv=  5
+         csAbs=  4.96593054E+00
+
+calcCs> csExt=  1.14154949E+05 nConv=  0
+         csSca=  1.14150148E+05 nConv=  5
+         csAbs=  4.80095007E+00
+
+calcCs> csExt=  1.14158918E+05 nConv=  0
+         csSca=  1.14154131E+05 nConv=  5
+         csAbs=  4.78710392E+00
+
+
+spectrumFF> ===== Wavelength:   552.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  9.44644350E+04 nConv=  5
+             <csSca>=  9.44643449E+04 nConv=  5
+             <csAbs>=  9.01271805E-02
+
+             <cdExt>= -1.86469968E-03
+             <cdSca>= -1.86157633E-03
+             <cdAbs>= -3.12334741E-06
+
+calcCs> csExt=  1.09617790E+05 nConv=  0
+         csSca=  1.09613519E+05 nConv=  5
+         csAbs=  4.27135004E+00
+
+calcCs> csExt=  1.11300626E+05 nConv=  0
+         csSca=  1.11296018E+05 nConv=  5
+         csAbs=  4.60803705E+00
+
+calcCs> csExt=  1.10457419E+05 nConv=  0
+         csSca=  1.10452973E+05 nConv=  5
+         csAbs=  4.44609469E+00
+
+calcCs> csExt=  1.10460998E+05 nConv=  0
+         csSca=  1.10456564E+05 nConv=  5
+         csAbs=  4.43329240E+00
+
+
+spectrumFF> ===== Wavelength:   554.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  9.15416072E+04 nConv=  5
+             <csSca>=  9.15415239E+04 nConv=  5
+             <csAbs>=  8.33241023E-02
+
+             <cdExt>= -1.47742019E-03
+             <cdSca>= -1.47460262E-03
+             <cdAbs>= -2.81757537E-06
+
+calcCs> csExt=  1.06215301E+05 nConv=  0
+         csSca=  1.06211347E+05 nConv=  5
+         csAbs=  3.95382018E+00
+
+calcCs> csExt=  1.07786754E+05 nConv=  0
+         csSca=  1.07782471E+05 nConv=  5
+         csAbs=  4.28319096E+00
+
+calcCs> csExt=  1.06999446E+05 nConv=  0
+         csSca=  1.06995322E+05 nConv=  5
+         csAbs=  4.12443740E+00
+
+calcCs> csExt=  1.07002609E+05 nConv=  0
+         csSca=  1.06998496E+05 nConv=  5
+         csAbs=  4.11257374E+00
+
+
+spectrumFF> ===== Wavelength:   556.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  8.87995823E+04 nConv=  5
+             <csSca>=  8.87995052E+04 nConv=  5
+             <csAbs>=  7.71483027E-02
+
+             <cdExt>= -1.16260603E-03
+             <cdSca>= -1.16008072E-03
+             <cdAbs>= -2.52530823E-06
+
+calcCs> csExt=  1.03026485E+05 nConv=  0
+         csSca=  1.03022819E+05 nConv=  5
+         csAbs=  3.66581177E+00
+
+calcCs> csExt=  1.04494811E+05 nConv=  0
+         csSca=  1.04490823E+05 nConv=  5
+         csAbs=  3.98764857E+00
+
+calcCs> csExt=  1.03759281E+05 nConv=  0
+         csSca=  1.03755449E+05 nConv=  5
+         csAbs=  3.83223809E+00
+
+calcCs> csExt=  1.03762015E+05 nConv=  0
+         csSca=  1.03758194E+05 nConv=  5
+         csAbs=  3.82122224E+00
+
+
+spectrumFF> ===== Wavelength:   558.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  8.62225940E+04 nConv=  5
+             <csSca>=  8.62225225E+04 nConv=  5
+             <csAbs>=  7.15309722E-02
+
+             <cdExt>= -9.08884815E-04
+             <cdSca>= -9.06633631E-04
+             <cdAbs>= -2.25118340E-06
+
+calcCs> csExt=  1.00031553E+05 nConv=  0
+         csSca=  1.00028148E+05 nConv=  5
+         csAbs=  3.40404856E+00
+
+calcCs> csExt=  1.01404743E+05 nConv=  0
+         csSca=  1.01401025E+05 nConv=  5
+         csAbs=  3.71813506E+00
+
+calcCs> csExt=  1.00716996E+05 nConv=  0
+         csSca=  1.00713430E+05 nConv=  5
+         csAbs=  3.56621525E+00
+
+calcCs> csExt=  1.00719300E+05 nConv=  0
+         csSca=  1.00715744E+05 nConv=  5
+         csAbs=  3.55596837E+00
+
+
+spectrumFF> ===== Wavelength:   560.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  8.37962187E+04 nConv=  5
+             <csSca>=  8.37961523E+04 nConv=  5
+             <csAbs>=  6.64116635E-02
+
+             <cdExt>= -7.06081414E-04
+             <cdSca>= -7.04083100E-04
+             <cdAbs>= -1.99831449E-06
+
+calcCs> csExt=  9.72125473E+04 nConv=  0
+         csSca=  9.72093816E+04 nConv=  5
+         csAbs=  3.16565100E+00
+
+calcCs> csExt=  9.84982466E+04 nConv=  0
+         csSca=  9.84947748E+04 nConv=  5
+         csAbs=  3.47178798E+00
+
+calcCs> csExt=  9.78544572E+04 nConv=  0
+         csSca=  9.78511337E+04 nConv=  5
+         csAbs=  3.32349284E+00
+
+calcCs> csExt=  9.78563366E+04 nConv=  0
+         csSca=  9.78530227E+04 nConv=  5
+         csAbs=  3.31394615E+00
+
+
+spectrumFF> ===== Wavelength:   562.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  8.15073290E+04 nConv=  5
+             <csSca>=  8.15072673E+04 nConv=  5
+             <csAbs>=  6.17372828E-02
+
+             <cdExt>= -5.45294345E-04
+             <cdSca>= -5.43526677E-04
+             <cdAbs>= -1.76766796E-06
+
+calcCs> csExt=  9.45532532E+04 nConv=  0
+         csSca=  9.45503051E+04 nConv=  5
+         csAbs=  2.94808997E+00
+
+calcCs> csExt=  9.57587083E+04 nConv=  0
+         csSca=  9.57554622E+04 nConv=  5
+         csAbs=  3.24610531E+00
+
+calcCs> csExt=  9.51552472E+04 nConv=  0
+         csSca=  9.51521456E+04 nConv=  5
+         csAbs=  3.10155109E+00
+
+calcCs> csExt=  9.51567144E+04 nConv=  0
+         csSca=  9.51536218E+04 nConv=  5
+         csAbs=  3.09264419E+00
+
+
+spectrumFF> ===== Wavelength:   564.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  7.93440233E+04 nConv=  5
+             <csSca>=  7.93439658E+04 nConv=  5
+             <csAbs>=  5.74611722E-02
+
+             <cdExt>= -4.18868720E-04
+             <cdSca>= -4.17309540E-04
+             <cdAbs>= -1.55917997E-06
+
+calcCs> csExt=  9.20390750E+04 nConv=  0
+         csSca=  9.20363258E+04 nConv=  5
+         csAbs=  2.74914420E+00
+
+calcCs> csExt=  9.31711092E+04 nConv=  0
+         csSca=  9.31680703E+04 nConv=  5
+         csAbs=  3.03889884E+00
+
+calcCs> csExt=  9.26045565E+04 nConv=  0
+         csSca=  9.26016583E+04 nConv=  5
+         csAbs=  2.89818172E+00
+
+calcCs> csExt=  9.26056277E+04 nConv=  0
+         csSca=  9.26027378E+04 nConv=  5
+         csAbs=  2.88986132E+00
+
+
+spectrumFF> ===== Wavelength:   566.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  7.72955404E+04 nConv=  5
+             <csSca>=  7.72954868E+04 nConv=  5
+             <csAbs>=  5.35422948E-02
+
+             <cdExt>= -3.20309839E-04
+             <cdSca>= -3.18937785E-04
+             <cdAbs>= -1.37205390E-06
+
+calcCs> csExt=  8.96569085E+04 nConv=  0
+         csSca=  8.96543416E+04 nConv=  5
+         csAbs=  2.56686200E+00
+
+calcCs> csExt=  9.07219121E+04 nConv=  0
+         csSca=  9.07190638E+04 nConv=  5
+         csAbs=  2.84825277E+00
+
+calcCs> csExt=  9.01890632E+04 nConv=  0
+         csSca=  9.01863518E+04 nConv=  5
+         csAbs=  2.71144799E+00
+
+calcCs> csExt=  9.01897573E+04 nConv=  0
+         csSca=  9.01870537E+04 nConv=  5
+         csAbs=  2.70366677E+00
+
+
+spectrumFF> ===== Wavelength:   568.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  7.53521692E+04 nConv=  5
+             <csSca>=  7.53521192E+04 nConv=  5
+             <csAbs>=  4.99445121E-02
+
+             <cdExt>= -2.44169031E-04
+             <cdSca>= -2.42963844E-04
+             <cdAbs>= -1.20518693E-06
+
+calcCs> csExt=  8.73950086E+04 nConv=  0
+         csSca=  8.73926091E+04 nConv=  5
+         csAbs=  2.39952703E+00
+
+calcCs> csExt=  8.83989412E+04 nConv=  0
+         csSca=  8.83962687E+04 nConv=  5
+         csAbs=  2.67248740E+00
+
+calcCs> csExt=  8.78968059E+04 nConv=  0
+         csSca=  8.78942663E+04 nConv=  5
+         csAbs=  2.53964933E+00
+
+calcCs> csExt=  8.78971439E+04 nConv=  0
+         csSca=  8.78946116E+04 nConv=  5
+         csAbs=  2.53236510E+00
+
+
+spectrumFF> ===== Wavelength:   570.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  7.35051570E+04 nConv=  5
+             <csSca>=  7.35051104E+04 nConv=  5
+             <csAbs>=  4.66359520E-02
+
+             <cdExt>= -1.85918229E-04
+             <cdSca>= -1.84861352E-04
+             <cdAbs>= -1.05687694E-06
+
+calcCs> csExt=  8.52428601E+04 nConv=  0
+         csSca=  8.52406145E+04 nConv=  5
+         csAbs=  2.24562819E+00
+
+calcCs> csExt=  8.61912611E+04 nConv=  0
+         csSca=  8.61887510E+04 nConv=  5
+         csAbs=  2.51012747E+00
+
+calcCs> csExt=  8.57170586E+04 nConv=  0
+         csSca=  8.57146773E+04 nConv=  5
+         csAbs=  2.38129035E+00
+
+calcCs> csExt=  8.57170626E+04 nConv=  0
+         csSca=  8.57146881E+04 nConv=  5
+         csAbs=  2.37446531E+00
+
+
+spectrumFF> ===== Wavelength:   572.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  7.17466207E+04 nConv=  5
+             <csSca>=  7.17465771E+04 nConv=  5
+             <csAbs>=  4.35884562E-02
+
+             <cdExt>= -1.41826999E-04
+             <cdSca>= -1.40901294E-04
+             <cdAbs>= -9.25704565E-07
+
+calcCs> csExt=  8.31910545E+04 nConv=  0
+         csSca=  8.31889507E+04 nConv=  5
+         csAbs=  2.10383314E+00
+
+calcCs> csExt=  8.40890588E+04 nConv=  0
+         csSca=  8.40866990E+04 nConv=  5
+         csAbs=  2.35987472E+00
+
+calcCs> csExt=  8.36402104E+04 nConv=  0
+         csSca=  8.36379753E+04 nConv=  5
+         csAbs=  2.23505389E+00
+
+calcCs> csExt=  8.36399029E+04 nConv=  0
+         csSca=  8.36376743E+04 nConv=  5
+         csAbs=  2.22865397E+00
+
+
+spectrumFF> ===== Wavelength:   574.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  7.00694620E+04 nConv=  5
+             <csSca>=  7.00694212E+04 nConv=  5
+             <csAbs>=  4.07771021E-02
+
+             <cdExt>= -1.08845475E-04
+             <cdSca>= -1.08035533E-04
+             <cdAbs>= -8.09942680E-07
+
+calcCs> csExt=  8.12311757E+04 nConv=  0
+         csSca=  8.12292028E+04 nConv=  5
+         csAbs=  1.97296526E+00
+
+calcCs> csExt=  8.20835330E+04 nConv=  0
+         csSca=  8.20813124E+04 nConv=  5
+         csAbs=  2.22058415E+00
+
+calcCs> csExt=  8.16576525E+04 nConv=  0
+         csSca=  8.16555527E+04 nConv=  5
+         csAbs=  2.09977749E+00
+
+calcCs> csExt=  8.16570563E+04 nConv=  0
+         csSca=  8.16549625E+04 nConv=  5
+         csAbs=  2.09377192E+00
+
+
+spectrumFF> ===== Wavelength:   576.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  6.84672893E+04 nConv=  5
+             <csSca>=  6.84672511E+04 nConv=  5
+             <csAbs>=  3.81797852E-02
+
+             <cdExt>= -8.44996220E-05
+             <cdSca>= -8.37915691E-05
+             <cdAbs>= -7.08052897E-07
+
+calcCs> csExt=  7.93556946E+04 nConv=  0
+         csSca=  7.93538427E+04 nConv=  5
+         csAbs=  1.85198358E+00
+
+calcCs> csExt=  8.01667900E+04 nConv=  0
+         csSca=  8.01646988E+04 nConv=  5
+         csAbs=  2.09124362E+00
+
+calcCs> csExt=  7.97616736E+04 nConv=  0
+         csSca=  7.97596991E+04 nConv=  5
+         csAbs=  1.97443318E+00
+
+calcCs> csExt=  7.97608111E+04 nConv=  0
+         csSca=  7.97588423E+04 nConv=  5
+         csAbs=  1.96879402E+00
+
+
+spectrumFF> ===== Wavelength:   578.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  6.69343450E+04 nConv=  5
+             <csSca>=  6.69343093E+04 nConv=  5
+             <csAbs>=  3.57768617E-02
+
+             <cdExt>= -6.67965756E-05
+             <cdSca>= -6.61780281E-05
+             <cdAbs>= -6.18547488E-07
+
+calcCs> csExt=  7.75578733E+04 nConv=  0
+         csSca=  7.75561333E+04 nConv=  5
+         csAbs=  1.73996541E+00
+
+calcCs> csExt=  7.83317494E+04 nConv=  0
+         csSca=  7.83297784E+04 nConv=  5
+         csAbs=  1.97095626E+00
+
+calcCs> csExt=  7.79453647E+04 nConv=  0
+         csSca=  7.79435066E+04 nConv=  5
+         csAbs=  1.85810994E+00
+
+calcCs> csExt=  7.79442579E+04 nConv=  0
+         csSca=  7.79424051E+04 nConv=  5
+         csAbs=  1.85281174E+00
+
+
+spectrumFF> ===== Wavelength:   580.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  6.54654397E+04 nConv=  5
+             <csSca>=  6.54654062E+04 nConv=  5
+             <csAbs>=  3.35508362E-02
+
+             <cdExt>= -5.41433243E-05
+             <cdSca>= -5.36031724E-05
+             <cdAbs>= -5.40151862E-07
+
+calcCs> csExt=  7.58316782E+04 nConv=  0
+         csSca=  7.58300421E+04 nConv=  5
+         csAbs=  1.63609122E+00
+
+calcCs> csExt=  7.65720567E+04 nConv=  0
+         csSca=  7.65701978E+04 nConv=  5
+         csAbs=  1.85892538E+00
+
+calcCs> csExt=  7.62025323E+04 nConv=  0
+         csSca=  7.62007823E+04 nConv=  5
+         csAbs=  1.74999855E+00
+
+calcCs> csExt=  7.62012026E+04 nConv=  0
+         csSca=  7.61994576E+04 nConv=  5
+         csAbs=  1.74501805E+00
+
+
+spectrumFF> ===== Wavelength:   582.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  6.40558921E+04 nConv=  5
+             <csSca>=  6.40558606E+04 nConv=  5
+             <csAbs>=  3.14860933E-02
+
+             <cdExt>= -4.52762752E-05
+             <cdSca>= -4.48046386E-05
+             <cdAbs>= -4.71636607E-07
+
+calcCs> csExt=  7.41717027E+04 nConv=  0
+         csSca=  7.41701631E+04 nConv=  5
+         csAbs=  1.53963161E+00
+
+calcCs> csExt=  7.48820061E+04 nConv=  0
+         csSca=  7.48802517E+04 nConv=  5
+         csAbs=  1.75444146E+00
+
+calcCs> csExt=  7.45276206E+04 nConv=  0
+         csSca=  7.45259712E+04 nConv=  5
+         csAbs=  1.64937859E+00
+
+calcCs> csExt=  7.45260883E+04 nConv=  0
+         csSca=  7.45244436E+04 nConv=  5
+         csAbs=  1.64469448E+00
+
+
+spectrumFF> ===== Wavelength:   584.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  6.27014756E+04 nConv=  5
+             <csSca>=  6.27014460E+04 nConv=  5
+             <csAbs>=  2.95686663E-02
+
+             <cdExt>= -3.92015010E-05
+             <cdSca>= -3.87898703E-05
+             <cdAbs>= -4.11630749E-07
+
+calcCs> csExt=  7.25730973E+04 nConv=  0
+         csSca=  7.25716474E+04 nConv=  5
+         csAbs=  1.44993606E+00
+
+calcCs> csExt=  7.32564696E+04 nConv=  0
+         csSca=  7.32548127E+04 nConv=  5
+         csAbs=  1.65687101E+00
+
+calcCs> csExt=  7.29156410E+04 nConv=  0
+         csSca=  7.29140854E+04 nConv=  5
+         csAbs=  1.55560720E+00
+
+calcCs> csExt=  7.29139259E+04 nConv=  0
+         csSca=  7.29123747E+04 nConv=  5
+         csAbs=  1.55119988E+00
+
+
+spectrumFF> ===== Wavelength:   586.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  6.13983697E+04 nConv=  5
+             <csSca>=  6.13983419E+04 nConv=  5
+             <csAbs>=  2.77860345E-02
+
+             <cdExt>= -3.51443461E-05
+             <cdSca>= -3.47850906E-05
+             <cdAbs>= -3.59255496E-07
+
+calcCs> csExt=  7.10315075E+04 nConv=  0
+         csSca=  7.10301411E+04 nConv=  5
+         csAbs=  1.36642314E+00
+
+calcCs> csExt=  7.16908339E+04 nConv=  0
+         csSca=  7.16892683E+04 nConv=  5
+         csAbs=  1.56564699E+00
+
+calcCs> csExt=  7.13621104E+04 nConv=  0
+         csSca=  7.13606423E+04 nConv=  5
+         csAbs=  1.46810935E+00
+
+calcCs> csExt=  7.13602310E+04 nConv=  0
+         csSca=  7.13587671E+04 nConv=  5
+         csAbs=  1.46396078E+00
+
+
+spectrumFF> ===== Wavelength:   588.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  6.01431169E+04 nConv=  5
+             <csSca>=  6.01430908E+04 nConv=  5
+             <csAbs>=  2.61269509E-02
+
+             <cdExt>= -3.25073244E-05
+             <cdSca>= -3.21939230E-05
+             <cdAbs>= -3.13401330E-07
+
+calcCs> csExt=  6.95430188E+04 nConv=  0
+         csSca=  6.95417302E+04 nConv=  5
+         csAbs=  1.28857202E+00
+
+calcCs> csExt=  7.01809449E+04 nConv=  0
+         csSca=  7.01794647E+04 nConv=  5
+         csAbs=  1.48026050E+00
+
+calcCs> csExt=  6.98629948E+04 nConv=  0
+         csSca=  6.98616085E+04 nConv=  5
+         csAbs=  1.38636950E+00
+
+calcCs> csExt=  6.98609689E+04 nConv=  0
+         csSca=  6.98595864E+04 nConv=  5
+         csAbs=  1.38246302E+00
+
+
+spectrumFF> ===== Wavelength:   590.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.89325841E+04 nConv=  5
+             <csSca>=  5.89325595E+04 nConv=  5
+             <csAbs>=  2.45812903E-02
+
+             <cdExt>= -3.08349934E-05
+             <cdSca>= -3.05615737E-05
+             <cdAbs>= -2.73419750E-07
+
+calcCs> csExt=  6.81041077E+04 nConv=  0
+         csSca=  6.81028918E+04 nConv=  5
+         csAbs=  1.21591522E+00
+
+calcCs> csExt=  6.87230568E+04 nConv=  0
+         csSca=  6.87216565E+04 nConv=  5
+         csAbs=  1.40025372E+00
+
+calcCs> csExt=  6.84146602E+04 nConv=  0
+         csSca=  6.84133502E+04 nConv=  5
+         csAbs=  1.30992438E+00
+
+calcCs> csExt=  6.84125043E+04 nConv=  0
+         csSca=  6.84111981E+04 nConv=  5
+         csAbs=  1.30624456E+00
+
+
+spectrumFF> ===== Wavelength:   592.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.77639280E+04 nConv=  5
+             <csSca>=  5.77639048E+04 nConv=  5
+             <csAbs>=  2.31399194E-02
+
+             <cdExt>= -2.97853641E-05
+             <cdSca>= -2.95465689E-05
+             <cdAbs>= -2.38795176E-07
+
+calcCs> csExt=  6.67115981E+04 nConv=  0
+         csSca=  6.67104500E+04 nConv=  5
+         csAbs=  1.14803219E+00
+
+calcCs> csExt=  6.73137879E+04 nConv=  0
+         csSca=  6.73124627E+04 nConv=  5
+         csAbs=  1.32521372E+00
+
+calcCs> csExt=  6.70138280E+04 nConv=  0
+         csSca=  6.70125897E+04 nConv=  5
+         csAbs=  1.23835668E+00
+
+calcCs> csExt=  6.70115580E+04 nConv=  0
+         csSca=  6.70103231E+04 nConv=  5
+         csAbs=  1.23488923E+00
+
+
+spectrumFF> ===== Wavelength:   594.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.66345649E+04 nConv=  5
+             <csSca>=  5.66345431E+04 nConv=  5
+             <csAbs>=  2.17945826E-02
+
+             <cdExt>= -2.91054134E-05
+             <cdSca>= -2.88972160E-05
+             <cdAbs>= -2.08197318E-07
+
+calcCs> csExt=  6.53626228E+04 nConv=  0
+         csSca=  6.53615382E+04 nConv=  5
+         csAbs=  1.08454383E+00
+
+calcCs> csExt=  6.59500812E+04 nConv=  0
+         csSca=  6.59488264E+04 nConv=  5
+         csAbs=  1.25476717E+00
+
+calcCs> csExt=  6.56575367E+04 nConv=  0
+         csSca=  6.56563654E+04 nConv=  5
+         csAbs=  1.17128966E+00
+
+calcCs> csExt=  6.56551672E+04 nConv=  0
+         csSca=  6.56539992E+04 nConv=  5
+         csAbs=  1.16802134E+00
+
+
+spectrumFF> ===== Wavelength:   596.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.55421430E+04 nConv=  5
+             <csSca>=  5.55421225E+04 nConv=  5
+             <csAbs>=  2.05378024E-02
+
+             <cdExt>= -2.86131390E-05
+             <cdSca>= -2.84312302E-05
+             <cdAbs>= -1.81908815E-07
+
+calcCs> csExt=  6.40545895E+04 nConv=  0
+         csSca=  6.40535644E+04 nConv=  5
+         csAbs=  1.02510768E+00
+
+calcCs> csExt=  6.46291686E+04 nConv=  0
+         csSca=  6.46279800E+04 nConv=  5
+         csAbs=  1.18857572E+00
+
+calcCs> csExt=  6.43431066E+04 nConv=  0
+         csSca=  6.43419982E+04 nConv=  5
+         csAbs=  1.10838247E+00
+
+calcCs> csExt=  6.43406515E+04 nConv=  0
+         csSca=  6.43395462E+04 nConv=  5
+         csAbs=  1.10530093E+00
+
+
+spectrumFF> ===== Wavelength:   598.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.44845185E+04 nConv=  5
+             <csSca>=  5.44844991E+04 nConv=  5
+             <csAbs>=  1.93627937E-02
+
+             <cdExt>= -2.81804821E-05
+             <cdSca>= -2.80216766E-05
+             <cdAbs>= -1.58805520E-07
+
+calcCs> csExt=  6.27851505E+04 nConv=  0
+         csSca=  6.27841811E+04 nConv=  5
+         csAbs=  9.69413764E-01
+
+calcCs> csExt=  6.33485403E+04 nConv=  0
+         csSca=  6.33474140E+04 nConv=  5
+         csAbs=  1.12633205E+00
+
+calcCs> csExt=  6.30681094E+04 nConv=  0
+         csSca=  6.30670601E+04 nConv=  5
+         csAbs=  1.04932602E+00
+
+calcCs> csExt=  6.30655814E+04 nConv=  0
+         csSca=  6.30645350E+04 nConv=  5
+         csAbs=  1.04641980E+00
+
+
+spectrumFF> ===== Wavelength:   600.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.34597336E+04 nConv=  5
+             <csSca>=  5.34597153E+04 nConv=  5
+             <csAbs>=  1.82633884E-02
+
+             <cdExt>= -2.77216087E-05
+             <cdSca>= -2.75828974E-05
+             <cdAbs>= -1.38711277E-07
+
+calcCs> csExt=  6.15521759E+04 nConv=  0
+         csSca=  6.15512587E+04 nConv=  5
+         csAbs=  9.17180916E-01
+
+calcCs> csExt=  6.21059166E+04 nConv=  0
+         csSca=  6.21048488E+04 nConv=  5
+         csAbs=  1.06775636E+00
+
+calcCs> csExt=  6.18303407E+04 nConv=  0
+         csSca=  6.18293468E+04 nConv=  5
+         csAbs=  9.93839435E-01
+
+calcCs> csExt=  6.18277518E+04 nConv=  0
+         csSca=  6.18267607E+04 nConv=  5
+         csAbs=  9.91097838E-01
+
+
+spectrumFF> ===== Wavelength:   602.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.24659978E+04 nConv=  5
+             <csSca>=  5.24659806E+04 nConv=  5
+             <csAbs>=  1.72339687E-02
+
+             <cdExt>= -2.71825303E-05
+             <cdSca>= -2.70612740E-05
+             <cdAbs>= -1.21256206E-07
+
+calcCs> csExt=  6.03537301E+04 nConv=  0
+         csSca=  6.03528619E+04 nConv=  5
+         csAbs=  8.68153630E-01
+
+calcCs> csExt=  6.08992235E+04 nConv=  0
+         csSca=  6.08982109E+04 nConv=  5
+         csAbs=  1.01259337E+00
+
+calcCs> csExt=  6.06277961E+04 nConv=  0
+         csSca=  6.06268544E+04 nConv=  5
+         csAbs=  9.41666973E-01
+
+calcCs> csExt=  6.06251574E+04 nConv=  0
+         csSca=  6.06242184E+04 nConv=  5
+         csAbs=  9.39080024E-01
+
+
+spectrumFF> ===== Wavelength:   604.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.15016706E+04 nConv=  5
+             <csSca>=  5.15016544E+04 nConv=  5
+             <csAbs>=  1.62694096E-02
+
+             <cdExt>= -2.65327667E-05
+             <cdSca>= -2.64267209E-05
+             <cdAbs>= -1.06045782E-07
+
+calcCs> csExt=  5.91880504E+04 nConv=  0
+         csSca=  5.91872283E+04 nConv=  5
+         csAbs=  8.22099266E-01
+
+calcCs> csExt=  5.97265709E+04 nConv=  0
+         csSca=  5.97256103E+04 nConv=  5
+         csAbs=  9.60609683E-01
+
+calcCs> csExt=  5.94586497E+04 nConv=  0
+         csSca=  5.94577571E+04 nConv=  5
+         csAbs=  8.92575281E-01
+
+calcCs> csExt=  5.94559716E+04 nConv=  0
+         csSca=  5.94550814E+04 nConv=  5
+         csAbs=  8.90133668E-01
+
+
+spectrumFF> ===== Wavelength:   606.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  5.05652463E+04 nConv=  5
+             <csSca>=  5.05652309E+04 nConv=  5
+             <csAbs>=  1.53650275E-02
+
+             <cdExt>= -2.57593457E-05
+             <cdSca>= -2.56665698E-05
+             <cdAbs>= -9.27758604E-08
+
+calcCs> csExt=  5.80535288E+04 nConv=  0
+         csSca=  5.80527499E+04 nConv=  5
+         csAbs=  7.78805605E-01
+
+calcCs> csExt=  5.85862332E+04 nConv=  0
+         csSca=  5.85853216E+04 nConv=  5
+         csAbs=  9.11591489E-01
+
+calcCs> csExt=  5.83212350E+04 nConv=  0
+         csSca=  5.83203887E+04 nConv=  5
+         csAbs=  8.46351036E-01
+
+calcCs> csExt=  5.83185269E+04 nConv=  0
+         csSca=  5.83176829E+04 nConv=  5
+         csAbs=  8.44046057E-01
+
+
+spectrumFF> ===== Wavelength:   608.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.96553403E+04 nConv=  5
+             <csSca>=  4.96553258E+04 nConv=  5
+             <csAbs>=  1.45165356E-02
+
+             <cdExt>= -2.48617124E-05
+             <cdSca>= -2.47805540E-05
+             <cdAbs>= -8.11583948E-08
+
+calcCs> csExt=  5.69486953E+04 nConv=  0
+         csSca=  5.69479572E+04 nConv=  5
+         csAbs=  7.38078718E-01
+
+calcCs> csExt=  5.74766317E+04 nConv=  0
+         csSca=  5.74757663E+04 nConv=  5
+         csAbs=  8.65342524E-01
+
+calcCs> csExt=  5.72140281E+04 nConv=  0
+         csSca=  5.72132253E+04 nConv=  5
+         csAbs=  8.02798862E-01
+
+calcCs> csExt=  5.72112988E+04 nConv=  0
+         csSca=  5.72104982E+04 nConv=  5
+         csAbs=  8.00622380E-01
+
+
+spectrumFF> ===== Wavelength:   610.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.87706774E+04 nConv=  5
+             <csSca>=  4.87706637E+04 nConv=  5
+             <csAbs>=  1.37200042E-02
+
+             <cdExt>= -2.38477179E-05
+             <cdSca>= -2.37767273E-05
+             <cdAbs>= -7.09906586E-08
+
+calcCs> csExt=  5.58722034E+04 nConv=  0
+         csSca=  5.58715036E+04 nConv=  5
+         csAbs=  6.99741075E-01
+
+calcCs> csExt=  5.63963198E+04 nConv=  0
+         csSca=  5.63954981E+04 nConv=  5
+         csAbs=  8.21682312E-01
+
+calcCs> csExt=  5.61356328E+04 nConv=  0
+         csSca=  5.61348710E+04 nConv=  5
+         csAbs=  7.61739494E-01
+
+calcCs> csExt=  5.61328904E+04 nConv=  0
+         csSca=  5.61321307E+04 nConv=  5
+         csAbs=  7.59683893E-01
+
+
+spectrumFF> ===== Wavelength:   612.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.79100809E+04 nConv=  5
+             <csSca>=  4.79100680E+04 nConv=  5
+             <csAbs>=  1.29718257E-02
+
+             <cdExt>= -2.27309058E-05
+             <cdSca>= -2.26687504E-05
+             <cdAbs>= -6.21554267E-08
+
+calcCs> csExt=  5.48228168E+04 nConv=  0
+         csSca=  5.48221532E+04 nConv=  5
+         csAbs=  6.63629887E-01
+
+calcCs> csExt=  5.53439690E+04 nConv=  0
+         csSca=  5.53431886E+04 nConv=  5
+         csAbs=  7.80444598E-01
+
+calcCs> csExt=  5.50847669E+04 nConv=  0
+         csSca=  5.50840439E+04 nConv=  5
+         csAbs=  7.23008167E-01
+
+calcCs> csExt=  5.50820189E+04 nConv=  0
+         csSca=  5.50812978E+04 nConv=  5
+         csAbs=  7.21066318E-01
+
+
+spectrumFF> ===== Wavelength:   614.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.70724629E+04 nConv=  5
+             <csSca>=  4.70724507E+04 nConv=  5
+             <csAbs>=  1.22686833E-02
+
+             <cdExt>= -2.15280647E-05
+             <cdSca>= -2.14735710E-05
+             <cdAbs>= -5.44937151E-08
+
+calcCs> csExt=  5.37993984E+04 nConv=  0
+         csSca=  5.37987688E+04 nConv=  5
+         csAbs=  6.29595639E-01
+
+calcCs> csExt=  5.43183571E+04 nConv=  0
+         csSca=  5.43176156E+04 nConv=  5
+         csAbs=  7.41475968E-01
+
+calcCs> csExt=  5.40602512E+04 nConv=  0
+         csSca=  5.40595647E+04 nConv=  5
+         csAbs=  6.86453192E-01
+
+calcCs> csExt=  5.40575043E+04 nConv=  0
+         csSca=  5.40568197E+04 nConv=  5
+         csAbs=  6.84618415E-01
+
+
+spectrumFF> ===== Wavelength:   616.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.62568158E+04 nConv=  5
+             <csSca>=  4.62568042E+04 nConv=  5
+             <csAbs>=  1.16075239E-02
+
+             <cdExt>= -2.02575778E-05
+             <cdSca>= -2.02097519E-05
+             <cdAbs>= -4.78258634E-08
+
+calcCs> csExt=  5.28008995E+04 nConv=  0
+         csSca=  5.28003020E+04 nConv=  5
+         csAbs=  5.97500792E-01
+
+calcCs> csExt=  5.33183570E+04 nConv=  0
+         csSca=  5.33176523E+04 nConv=  5
+         csAbs=  7.04634633E-01
+
+calcCs> csExt=  5.30609980E+04 nConv=  0
+         csSca=  5.30603460E+04 nConv=  5
+         csAbs=  6.51934695E-01
+
+calcCs> csExt=  5.30582585E+04 nConv=  0
+         csSca=  5.30576083E+04 nConv=  5
+         csAbs=  6.50200729E-01
+
+
+spectrumFF> ===== Wavelength:   618.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.54622047E+04 nConv=  5
+             <csSca>=  4.54621937E+04 nConv=  5
+             <csAbs>=  1.09855328E-02
+
+             <cdExt>= -1.89381031E-05
+             <cdSca>= -1.88961278E-05
+             <cdAbs>= -4.19752941E-08
+
+calcCs> csExt=  5.18263510E+04 nConv=  0
+         csSca=  5.18257837E+04 nConv=  5
+         csAbs=  5.67218635E-01
+
+calcCs> csExt=  5.23429274E+04 nConv=  0
+         csSca=  5.23422576E+04 nConv=  5
+         csAbs=  6.69789346E-01
+
+calcCs> csExt=  5.20860024E+04 nConv=  0
+         csSca=  5.20853831E+04 nConv=  5
+         csAbs=  6.19323504E-01
+
+calcCs> csExt=  5.20832760E+04 nConv=  0
+         csSca=  5.20826583E+04 nConv=  5
+         csAbs=  6.17684477E-01
+
+
+spectrumFF> ===== Wavelength:   620.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.46877604E+04 nConv=  5
+             <csSca>=  4.46877500E+04 nConv=  5
+             <csAbs>=  1.04001127E-02
+
+             <cdExt>= -1.75877756E-05
+             <cdSca>= -1.75508222E-05
+             <cdAbs>= -3.69534379E-08
+
+calcCs> csExt=  5.08748551E+04 nConv=  0
+         csSca=  5.08743165E+04 nConv=  5
+         csAbs=  5.38632263E-01
+
+calcCs> csExt=  5.13911042E+04 nConv=  0
+         csSca=  5.13904674E+04 nConv=  5
+         csAbs=  6.36818443E-01
+
+calcCs> csExt=  5.11343338E+04 nConv=  0
+         csSca=  5.11337453E+04 nConv=  5
+         csAbs=  5.88500151E-01
+
+calcCs> csExt=  5.11316256E+04 nConv=  0
+         csSca=  5.11310386E+04 nConv=  5
+         csAbs=  5.86950555E-01
+
+
+spectrumFF> ===== Wavelength:   622.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.39326735E+04 nConv=  5
+             <csSca>=  4.39326637E+04 nConv=  5
+             <csAbs>=  9.84886323E-03
+
+             <cdExt>= -1.62236981E-05
+             <cdSca>= -1.61913071E-05
+             <cdAbs>= -3.23909235E-08
+
+calcCs> csExt=  4.99455784E+04 nConv=  0
+         csSca=  4.99450668E+04 nConv=  5
+         csAbs=  5.11633668E-01
+
+calcCs> csExt=  5.04619929E+04 nConv=  0
+         csSca=  5.04613873E+04 nConv=  5
+         csAbs=  6.05608989E-01
+
+calcCs> csExt=  5.02051283E+04 nConv=  0
+         csSca=  5.02045689E+04 nConv=  5
+         csAbs=  5.59353995E-01
+
+calcCs> csExt=  5.02024430E+04 nConv=  0
+         csSca=  5.02018851E+04 nConv=  5
+         csAbs=  5.57888662E-01
+
+
+spectrumFF> ===== Wavelength:   624.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.31961888E+04 nConv=  5
+             <csSca>=  4.31961795E+04 nConv=  5
+             <csAbs>=  9.32956435E-03
+
+             <cdExt>= -1.48614652E-05
+             <cdSca>= -1.48329811E-05
+             <cdAbs>= -2.84841353E-08
+
+calcCs> csExt=  4.90377452E+04 nConv=  0
+         csSca=  4.90372591E+04 nConv=  5
+         csAbs=  4.86122929E-01
+
+calcCs> csExt=  4.95547613E+04 nConv=  0
+         csSca=  4.95541853E+04 nConv=  5
+         csAbs=  5.76056015E-01
+
+calcCs> csExt=  4.92975823E+04 nConv=  0
+         csSca=  4.92970505E+04 nConv=  5
+         csAbs=  5.31782435E-01
+
+calcCs> csExt=  4.92949243E+04 nConv=  0
+         csSca=  4.92943939E+04 nConv=  5
+         csAbs=  5.30396509E-01
+
+
+spectrumFF> ===== Wavelength:   626.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.24776003E+04 nConv=  5
+             <csSca>=  4.24775915E+04 nConv=  5
+             <csAbs>=  8.84015977E-03
+
+             <cdExt>= -1.35150485E-05
+             <cdSca>= -1.34899676E-05
+             <cdAbs>= -2.50809614E-08
+
+calcCs> csExt=  4.81506319E+04 nConv=  0
+         csSca=  4.81501699E+04 nConv=  5
+         csAbs=  4.62007488E-01
+
+calcCs> csExt=  4.86686343E+04 nConv=  0
+         csSca=  4.86680862E+04 nConv=  5
+         csAbs=  5.48061836E-01
+
+calcCs> csExt=  4.84109466E+04 nConv=  0
+         csSca=  4.84104409E+04 nConv=  5
+         csAbs=  5.05690199E-01
+
+calcCs> csExt=  4.84083196E+04 nConv=  0
+         csSca=  4.84078152E+04 nConv=  5
+         csAbs=  5.04379125E-01
+
+
+spectrumFF> ===== Wavelength:   628.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.17762469E+04 nConv=  5
+             <csSca>=  4.17762386E+04 nConv=  5
+             <csAbs>=  8.37874399E-03
+
+             <cdExt>= -1.21964186E-05
+             <cdSca>= -1.21743800E-05
+             <cdAbs>= -2.20386229E-08
+
+calcCs> csExt=  4.72835618E+04 nConv=  0
+         csSca=  4.72831226E+04 nConv=  5
+         csAbs=  4.39201507E-01
+
+calcCs> csExt=  4.78028875E+04 nConv=  0
+         csSca=  4.78023660E+04 nConv=  5
+         csAbs=  5.21535437E-01
+
+calcCs> csExt=  4.75445210E+04 nConv=  0
+         csSca=  4.75440400E+04 nConv=  5
+         csAbs=  4.80988724E-01
+
+calcCs> csExt=  4.75419284E+04 nConv=  0
+         csSca=  4.75414486E+04 nConv=  5
+         csAbs=  4.79748219E-01
+
+
+spectrumFF> ===== Wavelength:   630.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.10915084E+04 nConv=  5
+             <csSca>=  4.10915004E+04 nConv=  5
+             <csAbs>=  7.94354847E-03
+
+             <cdExt>= -1.09158645E-05
+             <cdSca>= -1.08964071E-05
+             <cdAbs>= -1.94574965E-08
+
+calcCs> csExt=  4.64359006E+04 nConv=  0
+         csSca=  4.64354830E+04 nConv=  5
+         csAbs=  4.17625281E-01
+
+calcCs> csExt=  4.69568431E+04 nConv=  0
+         csSca=  4.69563467E+04 nConv=  5
+         csAbs=  4.96391927E-01
+
+calcCs> csExt=  4.66976494E+04 nConv=  0
+         csSca=  4.66971918E+04 nConv=  5
+         csAbs=  4.57595584E-01
+
+calcCs> csExt=  4.66950943E+04 nConv=  0
+         csSca=  4.66946379E+04 nConv=  5
+         csAbs=  4.56421624E-01
+
+
+spectrumFF> ===== Wavelength:   632.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  4.04228017E+04 nConv=  5
+             <csSca>=  4.04227942E+04 nConv=  5
+             <csAbs>=  7.53293059E-03
+
+             <cdExt>= -9.68180632E-06
+             <cdSca>= -9.66458771E-06
+             <cdAbs>= -1.72186108E-08
+
+calcCs> csExt=  4.56070524E+04 nConv=  0
+         csSca=  4.56066552E+04 nConv=  5
+         csAbs=  3.97204721E-01
+
+calcCs> csExt=  4.61298652E+04 nConv=  0
+         csSca=  4.61293926E+04 nConv=  5
+         csAbs=  4.72552046E-01
+
+calcCs> csExt=  4.58697162E+04 nConv=  0
+         csSca=  4.58692807E+04 nConv=  5
+         csAbs=  4.35433981E-01
+
+calcCs> csExt=  4.58672014E+04 nConv=  0
+         csSca=  4.58667671E+04 nConv=  5
+         csAbs=  4.34322786E-01
+
+
+spectrumFF> ===== Wavelength:   634.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.97695782E+04 nConv=  5
+             <csSca>=  3.97695711E+04 nConv=  5
+             <csAbs>=  7.14536352E-03
+
+             <cdExt>= -8.50084262E-06
+             <cdSca>= -8.48568866E-06
+             <cdAbs>= -1.51539555E-08
+
+calcCs> csExt=  4.47964559E+04 nConv=  0
+         csSca=  4.47960781E+04 nConv=  5
+         csAbs=  3.77870886E-01
+
+calcCs> csExt=  4.53213557E+04 nConv=  0
+         csSca=  4.53209058E+04 nConv=  5
+         csAbs=  4.49941712E-01
+
+calcCs> csExt=  4.50601419E+04 nConv=  0
+         csSca=  4.50597274E+04 nConv=  5
+         csAbs=  4.14432292E-01
+
+calcCs> csExt=  4.50576698E+04 nConv=  0
+         csSca=  4.50572564E+04 nConv=  5
+         csAbs=  4.13380306E-01
+
+
+spectrumFF> ===== Wavelength:   636.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.91313203E+04 nConv=  5
+             <csSca>=  3.91313135E+04 nConv=  5
+             <csAbs>=  6.77942710E-03
+
+             <cdExt>= -7.37842116E-06
+             <cdSca>= -7.36507824E-06
+             <cdAbs>= -1.33429135E-08
+
+calcCs> csExt=  4.40035815E+04 nConv=  0
+         csSca=  4.40032219E+04 nConv=  5
+         csAbs=  3.59559557E-01
+
+calcCs> csExt=  4.45307514E+04 nConv=  0
+         csSca=  4.45303229E+04 nConv=  5
+         csAbs=  4.28491627E-01
+
+calcCs> csExt=  4.42683801E+04 nConv=  0
+         csSca=  4.42679856E+04 nConv=  5
+         csAbs=  3.94523653E-01
+
+calcCs> csExt=  4.42659528E+04 nConv=  0
+         csSca=  4.42655593E+04 nConv=  5
+         csAbs=  3.93527531E-01
+
+
+spectrumFF> ===== Wavelength:   638.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.85075390E+04 nConv=  5
+             <csSca>=  3.85075326E+04 nConv=  5
+             <csAbs>=  6.43379839E-03
+
+             <cdExt>= -6.31833589E-06
+             <cdSca>= -6.30655028E-06
+             <cdAbs>= -1.17856103E-08
+
+calcCs> csExt=  4.32279278E+04 nConv=  0
+         csSca=  4.32275856E+04 nConv=  5
+         csAbs=  3.42210857E-01
+
+calcCs> csExt=  4.37575204E+04 nConv=  0
+         csSca=  4.37571122E+04 nConv=  5
+         csAbs=  4.08136903E-01
+
+calcCs> csExt=  4.34939144E+04 nConv=  0
+         csSca=  4.34935387E+04 nConv=  5
+         csAbs=  3.75645580E-01
+
+calcCs> csExt=  4.34915338E+04 nConv=  0
+         csSca=  4.34911591E+04 nConv=  5
+         csAbs=  3.74702180E-01
+
+
+spectrumFF> ===== Wavelength:   640.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.78977716E+04 nConv=  5
+             <csSca>=  3.78977655E+04 nConv=  5
+             <csAbs>=  6.10724486E-03
+
+             <cdExt>= -5.32311940E-06
+             <cdSca>= -5.31260818E-06
+             <cdAbs>= -1.05112164E-08
+
+calcCs> csExt=  4.24690198E+04 nConv=  0
+         csSca=  4.24686941E+04 nConv=  5
+         csAbs=  3.25768907E-01
+
+calcCs> csExt=  4.30011592E+04 nConv=  0
+         csSca=  4.30007704E+04 nConv=  5
+         csAbs=  3.88816739E-01
+
+calcCs> csExt=  4.27362557E+04 nConv=  0
+         csSca=  4.27358979E+04 nConv=  5
+         csAbs=  3.57739642E-01
+
+calcCs> csExt=  4.27339234E+04 nConv=  0
+         csSca=  4.27335666E+04 nConv=  5
+         csAbs=  3.56846003E-01
+
+
+spectrumFF> ===== Wavelength:   642.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.73015797E+04 nConv=  5
+             <csSca>=  3.73015739E+04 nConv=  5
+             <csAbs>=  5.79861731E-03
+
+             <cdExt>= -4.39410082E-06
+             <cdSca>= -4.38484020E-06
+             <cdAbs>= -9.26061957E-09
+
+calcCs> csExt=  4.17264060E+04 nConv=  0
+         csSca=  4.17260958E+04 nConv=  5
+         csAbs=  3.10181511E-01
+
+calcCs> csExt=  4.22611909E+04 nConv=  0
+         csSca=  4.22608204E+04 nConv=  5
+         csAbs=  3.70474111E-01
+
+calcCs> csExt=  4.19949397E+04 nConv=  0
+         csSca=  4.19945990E+04 nConv=  5
+         csAbs=  3.40751141E-01
+
+calcCs> csExt=  4.19926571E+04 nConv=  0
+         csSca=  4.19923172E+04 nConv=  5
+         csAbs=  3.39904481E-01
+
+
+spectrumFF> ===== Wavelength:   644.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.67185470E+04 nConv=  5
+             <csSca>=  3.67185415E+04 nConv=  5
+             <csAbs>=  5.50684320E-03
+
+             <cdExt>= -3.53184011E-06
+             <cdSca>= -3.52361973E-06
+             <cdAbs>= -8.22037969E-09
+
+calcCs> csExt=  4.09996563E+04 nConv=  0
+         csSca=  4.09993609E+04 nConv=  5
+         csAbs=  2.95399874E-01
+
+calcCs> csExt=  4.15371619E+04 nConv=  0
+         csSca=  4.15368088E+04 nConv=  5
+         csAbs=  3.53055505E-01
+
+calcCs> csExt=  3.82975210E+04 nConv=  4
+         csSca=  4.12692003E+04 nConv=  5
+         csAbs= -2.97167932E+03
+
+calcCs> csExt=  3.82953381E+04 nConv=  4
+         csSca=  4.12669694E+04 nConv=  5
+         csAbs= -2.97163135E+03
+
+
+spectrumFF> ===== Wavelength:   646.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.61482776E+04 nConv=  5
+             <csSca>=  3.61482724E+04 nConv=  5
+             <csAbs>=  5.23092083E-03
+
+             <cdExt>= -2.73601140E-06
+             <cdSca>= -2.72868975E-06
+             <cdAbs>= -7.32164638E-09
+
+calcCs> csExt=  4.02883607E+04 nConv=  0
+         csSca=  4.02880793E+04 nConv=  5
+         csAbs=  2.81378342E-01
+
+calcCs> csExt=  4.08286408E+04 nConv=  0
+         csSca=  4.08283043E+04 nConv=  5
+         csAbs=  3.36510662E-01
+
+calcCs> csExt=  4.05595907E+04 nConv=  0
+         csSca=  4.05592814E+04 nConv=  5
+         csAbs=  3.09324707E-01
+
+calcCs> csExt=  4.05574108E+04 nConv=  0
+         csSca=  4.05571022E+04 nConv=  5
+         csAbs=  3.08564297E-01
+
+
+spectrumFF> ===== Wavelength:   648.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.55903949E+04 nConv=  5
+             <csSca>=  3.55903899E+04 nConv=  5
+             <csAbs>=  4.96991442E-03
+
+             <cdExt>= -2.00527202E-06
+             <cdSca>= -1.99889900E-06
+             <cdAbs>= -6.37301541E-09
+
+calcCs> csExt=  3.95921269E+04 nConv=  0
+         csSca=  3.95918588E+04 nConv=  5
+         csAbs=  2.68074169E-01
+
+calcCs> csExt=  4.01352162E+04 nConv=  0
+         csSca=  4.01348954E+04 nConv=  5
+         csAbs=  3.20792350E-01
+
+calcCs> csExt=  3.98647352E+04 nConv=  0
+         csSca=  3.98644404E+04 nConv=  5
+         csAbs=  2.94793680E-01
+
+calcCs> csExt=  3.98626079E+04 nConv=  0
+         csSca=  3.98623138E+04 nConv=  5
+         csAbs=  2.94072839E-01
+
+
+spectrumFF> ===== Wavelength:   650.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.50445395E+04 nConv=  5
+             <csSca>=  3.50445347E+04 nConv=  5
+             <csAbs>=  4.72294887E-03
+
+             <cdExt>= -1.33857355E-06
+             <cdSca>= -1.33278877E-06
+             <cdAbs>= -5.78478448E-09
+
+calcCs> csExt=  3.89105795E+04 nConv=  0
+         csSca=  3.89103240E+04 nConv=  5
+         csAbs=  2.55447304E-01
+
+calcCs> csExt=  3.94564949E+04 nConv=  0
+         csSca=  3.94561890E+04 nConv=  5
+         csAbs=  3.05856154E-01
+
+calcCs> csExt=  3.91845742E+04 nConv=  0
+         csSca=  3.91842932E+04 nConv=  5
+         csAbs=  2.80993458E-01
+
+calcCs> csExt=  3.91825001E+04 nConv=  0
+         csSca=  3.91822198E+04 nConv=  5
+         csAbs=  2.80309999E-01
+
+
+spectrumFF> ===== Wavelength:   652.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.45103683E+04 nConv=  5
+             <csSca>=  3.45103638E+04 nConv=  5
+             <csAbs>=  4.48920564E-03
+
+             <cdExt>= -7.33174565E-07
+             <cdSca>= -7.28152872E-07
+             <cdAbs>= -5.02169361E-09
+
+calcCs> csExt=  3.82433581E+04 nConv=  0
+         csSca=  3.82431146E+04 nConv=  5
+         csAbs=  2.43460189E-01
+
+calcCs> csExt=  3.87921006E+04 nConv=  0
+         csSca=  3.87918089E+04 nConv=  5
+         csAbs=  2.91660284E-01
+
+calcCs> csExt=  3.85187395E+04 nConv=  0
+         csSca=  3.85184716E+04 nConv=  5
+         csAbs=  2.67884304E-01
+
+calcCs> csExt=  3.85167192E+04 nConv=  0
+         csSca=  3.85164519E+04 nConv=  5
+         csAbs=  2.67236168E-01
+
+
+spectrumFF> ===== Wavelength:   654.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.39875533E+04 nConv=  5
+             <csSca>=  3.39875491E+04 nConv=  5
+             <csAbs>=  4.26791813E-03
+
+             <cdExt>= -1.87128303E-07
+             <cdSca>= -1.82617934E-07
+             <cdAbs>= -4.51036901E-09
+
+calcCs> csExt=  3.48786752E+04 nConv=  4
+         csSca=  3.75898843E+04 nConv=  5
+         csAbs= -2.71120917E+03
+
+calcCs> csExt=  3.81416728E+04 nConv=  0
+         csSca=  3.81413946E+04 nConv=  5
+         csAbs=  2.78165397E-01
+
+calcCs> csExt=  3.78668778E+04 nConv=  0
+         csSca=  3.78666224E+04 nConv=  5
+         csAbs=  2.55428869E-01
+
+calcCs> csExt=  3.78649115E+04 nConv=  0
+         csSca=  3.78646566E+04 nConv=  5
+         csAbs=  2.54814116E-01
+
+
+spectrumFF> ===== Wavelength:   656.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.34757807E+04 nConv=  5
+             <csSca>=  3.34757766E+04 nConv=  5
+             <csAbs>=  4.05836898E-03
+
+             <cdExt>=  3.02715091E-07
+             <cdSca>=  3.06603922E-07
+             <cdAbs>= -3.88883043E-09
+
+calcCs> csExt=  3.69505213E+04 nConv=  0
+         csSca=  3.69503000E+04 nConv=  5
+         csAbs=  2.21266417E-01
+
+calcCs> csExt=  3.75048652E+04 nConv=  0
+         csSca=  3.75045999E+04 nConv=  5
+         csAbs=  2.65334438E-01
+
+calcCs> csExt=  3.72286493E+04 nConv=  0
+         csSca=  3.72284057E+04 nConv=  5
+         csAbs=  2.43592026E-01
+
+calcCs> csExt=  3.72267372E+04 nConv=  0
+         csSca=  3.72264942E+04 nConv=  5
+         csAbs=  2.43008828E-01
+
+
+spectrumFF> ===== Wavelength:   658.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.29747494E+04 nConv=  5
+             <csSca>=  3.29747455E+04 nConv=  5
+             <csAbs>=  3.85988539E-03
+
+             <cdExt>=  7.38730514E-07
+             <cdSca>=  7.42270172E-07
+             <cdAbs>= -3.53965796E-09
+
+calcCs> csExt=  3.63242513E+04 nConv=  0
+         csSca=  3.63240403E+04 nConv=  5
+         csAbs=  2.10995598E-01
+
+calcCs> csExt=  3.68813448E+04 nConv=  0
+         csSca=  3.68810917E+04 nConv=  5
+         csAbs=  2.53132482E-01
+
+calcCs> csExt=  3.66037270E+04 nConv=  0
+         csSca=  3.66034946E+04 nConv=  5
+         csAbs=  2.32340723E-01
+
+calcCs> csExt=  3.66018691E+04 nConv=  0
+         csSca=  3.66016374E+04 nConv=  5
+         csAbs=  2.31787357E-01
+
+
+spectrumFF> ===== Wavelength:   660.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.24841707E+04 nConv=  5
+             <csSca>=  3.24841670E+04 nConv=  5
+             <csAbs>=  3.67183704E-03
+
+             <cdExt>=  1.12447464E-06
+             <cdSca>=  1.12760910E-06
+             <cdAbs>= -3.13445722E-09
+
+calcCs> csExt=  3.57109963E+04 nConv=  0
+         csSca=  3.57107951E+04 nConv=  5
+         csAbs=  2.01235917E-01
+
+calcCs> csExt=  3.62707911E+04 nConv=  0
+         csSca=  3.62705495E+04 nConv=  5
+         csAbs=  2.41526606E-01
+
+calcCs> csExt=  3.59917955E+04 nConv=  0
+         csSca=  3.59915738E+04 nConv=  5
+         csAbs=  2.21643840E-01
+
+calcCs> csExt=  3.59899919E+04 nConv=  0
+         csSca=  3.59897708E+04 nConv=  5
+         csAbs=  2.21118683E-01
+
+
+spectrumFF> ===== Wavelength:   662.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.20037671E+04 nConv=  5
+             <csSca>=  3.20037636E+04 nConv=  5
+             <csAbs>=  3.49363240E-03
+
+             <cdExt>=  1.46295192E-06
+             <cdSca>=  1.46568623E-06
+             <cdAbs>= -2.73431152E-09
+
+calcCs> csExt=  3.51104565E+04 nConv=  0
+         csSca=  3.51102646E+04 nConv=  5
+         csAbs=  1.91959901E-01
+
+calcCs> csExt=  3.56728948E+04 nConv=  0
+         csSca=  3.56726643E+04 nConv=  5
+         csAbs=  2.30485751E-01
+
+calcCs> csExt=  3.53925504E+04 nConv=  0
+         csSca=  3.53923389E+04 nConv=  5
+         csAbs=  2.11472065E-01
+
+calcCs> csExt=  3.53908009E+04 nConv=  0
+         csSca=  3.53905899E+04 nConv=  5
+         csAbs=  2.10973587E-01
+
+
+spectrumFF> ===== Wavelength:   664.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.15332718E+04 nConv=  5
+             <csSca>=  3.15332685E+04 nConv=  5
+             <csAbs>=  3.32471645E-03
+
+             <cdExt>=  1.75708469E-06
+             <cdSca>=  1.75956795E-06
+             <cdAbs>= -2.48326017E-09
+
+calcCs> csExt=  3.45223417E+04 nConv=  0
+         csSca=  3.45221586E+04 nConv=  5
+         csAbs=  1.83141698E-01
+
+calcCs> csExt=  3.50873574E+04 nConv=  0
+         csSca=  3.50871374E+04 nConv=  5
+         csAbs=  2.19980612E-01
+
+calcCs> csExt=  3.48056974E+04 nConv=  0
+         csSca=  3.48054956E+04 nConv=  5
+         csAbs=  2.01797776E-01
+
+calcCs> csExt=  3.48040018E+04 nConv=  0
+         csSca=  3.48038005E+04 nConv=  5
+         csAbs=  2.01324534E-01
+
+
+spectrumFF> ===== Wavelength:   666.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.10724281E+04 nConv=  5
+             <csSca>=  3.10724250E+04 nConv=  5
+             <csAbs>=  3.16456832E-03
+
+             <cdExt>=  2.01042185E-06
+             <cdSca>=  2.01258502E-06
+             <cdAbs>= -2.16316656E-09
+
+calcCs> csExt=  3.39463708E+04 nConv=  0
+         csSca=  3.39461960E+04 nConv=  5
+         csAbs=  1.74756968E-01
+
+calcCs> csExt=  3.45138905E+04 nConv=  0
+         csSca=  3.45136805E+04 nConv=  5
+         csAbs=  2.09983521E-01
+
+calcCs> csExt=  3.42309517E+04 nConv=  0
+         csSca=  3.42307591E+04 nConv=  5
+         csAbs=  1.92594928E-01
+
+calcCs> csExt=  3.42293097E+04 nConv=  0
+         csSca=  3.42291175E+04 nConv=  5
+         csAbs=  1.92145561E-01
+
+
+spectrumFF> ===== Wavelength:   668.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.06209885E+04 nConv=  5
+             <csSca>=  3.06209855E+04 nConv=  5
+             <csAbs>=  3.01269846E-03
+
+             <cdExt>=  2.22564495E-06
+             <cdSca>=  2.22763690E-06
+             <cdAbs>= -1.99194594E-09
+
+calcCs> csExt=  3.33822710E+04 nConv=  0
+         csSca=  3.33821042E+04 nConv=  5
+         csAbs=  1.66782789E-01
+
+calcCs> csExt=  3.39522149E+04 nConv=  0
+         csSca=  3.39520144E+04 nConv=  5
+         csAbs=  2.00468351E-01
+
+calcCs> csExt=  3.36680373E+04 nConv=  0
+         csSca=  3.36678535E+04 nConv=  5
+         csAbs=  1.83838958E-01
+
+calcCs> csExt=  3.36664486E+04 nConv=  0
+         csSca=  3.36662651E+04 nConv=  5
+         csAbs=  1.83412182E-01
+
+
+spectrumFF> ===== Wavelength:   670.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  3.01787143E+04 nConv=  5
+             <csSca>=  3.01787114E+04 nConv=  5
+             <csAbs>=  2.86864709E-03
+
+             <cdExt>=  2.40604678E-06
+             <cdSca>=  2.40786878E-06
+             <cdAbs>= -1.82199903E-09
+
+calcCs> csExt=  3.28297775E+04 nConv=  0
+         csSca=  3.28296183E+04 nConv=  5
+         csAbs=  1.59197557E-01
+
+calcCs> csExt=  3.34020600E+04 nConv=  0
+         csSca=  3.34018686E+04 nConv=  5
+         csAbs=  1.91410420E-01
+
+calcCs> csExt=  3.31166868E+04 nConv=  0
+         csSca=  3.31165113E+04 nConv=  5
+         csAbs=  1.75506686E-01
+
+calcCs> csExt=  3.31151508E+04 nConv=  0
+         csSca=  3.31149757E+04 nConv=  5
+         csAbs=  1.75101292E-01
+
+
+spectrumFF> ===== Wavelength:   672.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.97453751E+04 nConv=  5
+             <csSca>=  2.97453724E+04 nConv=  5
+             <csAbs>=  2.73198211E-03
+
+             <cdExt>=  2.55461838E-06
+             <cdSca>=  2.55618533E-06
+             <cdAbs>= -1.56695068E-09
+
+calcCs> csExt=  3.22886330E+04 nConv=  0
+         csSca=  3.22884810E+04 nConv=  5
+         csAbs=  1.51980910E-01
+
+calcCs> csExt=  3.28631637E+04 nConv=  0
+         csSca=  3.28629809E+04 nConv=  5
+         csAbs=  1.82786400E-01
+
+calcCs> csExt=  3.25766402E+04 nConv=  0
+         csSca=  3.25764727E+04 nConv=  5
+         csAbs=  1.67576233E-01
+
+calcCs> csExt=  3.25751564E+04 nConv=  0
+         csSca=  3.25749892E+04 nConv=  5
+         csAbs=  1.67191078E-01
+
+
+spectrumFF> ===== Wavelength:   674.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.93207484E+04 nConv=  5
+             <csSca>=  2.93207458E+04 nConv=  5
+             <csAbs>=  2.60229713E-03
+
+             <cdExt>=  2.67402169E-06
+             <cdSca>=  2.67534091E-06
+             <cdAbs>= -1.31922163E-09
+
+calcCs> csExt=  3.17585872E+04 nConv=  0
+         csSca=  3.17584421E+04 nConv=  5
+         csAbs=  1.45113642E-01
+
+calcCs> csExt=  3.23352712E+04 nConv=  0
+         csSca=  3.23350967E+04 nConv=  5
+         csAbs=  1.74574240E-01
+
+calcCs> csExt=  3.20476453E+04 nConv=  0
+         csSca=  3.20474853E+04 nConv=  5
+         csAbs=  1.60026937E-01
+
+calcCs> csExt=  3.20462132E+04 nConv=  0
+         csSca=  3.20460535E+04 nConv=  5
+         csAbs=  1.59660944E-01
+
+
+spectrumFF> ===== Wavelength:   676.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.89046189E+04 nConv=  5
+             <csSca>=  2.89046165E+04 nConv=  5
+             <csAbs>=  2.47920964E-03
+
+             <cdExt>=  2.76677180E-06
+             <cdSca>=  2.76807988E-06
+             <cdAbs>= -1.30808953E-09
+
+calcCs> csExt=  3.12393966E+04 nConv=  0
+         csSca=  3.12392580E+04 nConv=  5
+         csAbs=  1.38577631E-01
+
+calcCs> csExt=  3.18181355E+04 nConv=  0
+         csSca=  3.18179688E+04 nConv=  5
+         csAbs=  1.66753085E-01
+
+calcCs> csExt=  3.15294566E+04 nConv=  0
+         csSca=  3.15293038E+04 nConv=  5
+         csAbs=  1.52839282E-01
+
+calcCs> csExt=  3.15280755E+04 nConv=  0
+         csSca=  3.15279230E+04 nConv=  5
+         csAbs=  1.52491434E-01
+
+
+spectrumFF> ===== Wavelength:   678.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.84967786E+04 nConv=  5
+             <csSca>=  2.84967763E+04 nConv=  5
+             <csAbs>=  2.36236013E-03
+
+             <cdExt>=  2.83585460E-06
+             <cdSca>=  2.83691252E-06
+             <cdAbs>= -1.05791641E-09
+
+calcCs> csExt=  3.07308237E+04 nConv=  0
+         csSca=  3.07306913E+04 nConv=  5
+         csAbs=  1.32355775E-01
+
+calcCs> csExt=  3.13115162E+04 nConv=  0
+         csSca=  3.13113569E+04 nConv=  5
+         csAbs=  1.59303209E-01
+
+calcCs> csExt=  3.10218353E+04 nConv=  0
+         csSca=  3.10216893E+04 nConv=  5
+         csAbs=  1.45994823E-01
+
+calcCs> csExt=  3.10205046E+04 nConv=  0
+         csSca=  3.10203589E+04 nConv=  5
+         csAbs=  1.45664161E-01
+
+
+spectrumFF> ===== Wavelength:   680.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.80970259E+04 nConv=  5
+             <csSca>=  2.80970236E+04 nConv=  5
+             <csAbs>=  2.25140977E-03
+
+             <cdExt>=  2.88335859E-06
+             <cdSca>=  2.88434158E-06
+             <cdAbs>= -9.82994654E-10
+
+calcCs> csExt=  3.02326374E+04 nConv=  0
+         csSca=  3.02325109E+04 nConv=  5
+         csAbs=  1.26431924E-01
+
+calcCs> csExt=  3.08151793E+04 nConv=  0
+         csSca=  3.08150271E+04 nConv=  5
+         csAbs=  1.52205947E-01
+
+calcCs> csExt=  3.05245489E+04 nConv=  0
+         csSca=  3.05244094E+04 nConv=  5
+         csAbs=  1.39476128E-01
+
+calcCs> csExt=  3.05232678E+04 nConv=  0
+         csSca=  3.05231286E+04 nConv=  5
+         csAbs=  1.39161744E-01
+
+
+spectrumFF> ===== Wavelength:   682.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.77051654E+04 nConv=  5
+             <csSca>=  2.77051633E+04 nConv=  5
+             <csAbs>=  2.14603975E-03
+
+             <cdExt>=  2.91152602E-06
+             <cdSca>=  2.91240131E-06
+             <cdAbs>= -8.75291012E-10
+
+calcCs> csExt=  2.97446120E+04 nConv=  0
+         csSca=  2.97444912E+04 nConv=  5
+         csAbs=  1.20790826E-01
+
+calcCs> csExt=  3.03288974E+04 nConv=  0
+         csSca=  3.03287520E+04 nConv=  5
+         csAbs=  1.45443635E-01
+
+calcCs> csExt=  3.00373708E+04 nConv=  0
+         csSca=  3.00372375E+04 nConv=  5
+         csAbs=  1.33266711E-01
+
+calcCs> csExt=  3.00361386E+04 nConv=  0
+         csSca=  3.00360057E+04 nConv=  5
+         csAbs=  1.32967750E-01
+
+
+spectrumFF> ===== Wavelength:   684.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.73210081E+04 nConv=  5
+             <csSca>=  2.73210060E+04 nConv=  5
+             <csAbs>=  2.04594961E-03
+
+             <cdExt>=  2.92267659E-06
+             <cdSca>=  2.92339579E-06
+             <cdAbs>= -7.19204363E-10
+
+calcCs> csExt=  2.92665275E+04 nConv=  0
+         csSca=  2.92664121E+04 nConv=  5
+         csAbs=  1.15418068E-01
+
+calcCs> csExt=  2.98524487E+04 nConv=  0
+         csSca=  2.98523097E+04 nConv=  5
+         csAbs=  1.38999547E-01
+
+calcCs> csExt=  2.95600801E+04 nConv=  0
+         csSca=  2.95599528E+04 nConv=  5
+         csAbs=  1.27350980E-01
+
+calcCs> csExt=  2.95588961E+04 nConv=  0
+         csSca=  2.95587691E+04 nConv=  5
+         csAbs=  1.27066634E-01
+
+
+spectrumFF> ===== Wavelength:   686.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.69443702E+04 nConv=  5
+             <csSca>=  2.69443682E+04 nConv=  5
+             <csAbs>=  1.95085653E-03
+
+             <cdExt>=  2.91854195E-06
+             <cdSca>=  2.91931387E-06
+             <cdAbs>= -7.71919578E-10
+
+calcCs> csExt=  2.87981692E+04 nConv=  0
+         csSca=  2.87980589E+04 nConv=  5
+         csAbs=  1.10300029E-01
+
+calcCs> csExt=  2.93856172E+04 nConv=  0
+         csSca=  2.93854844E+04 nConv=  5
+         csAbs=  1.32857846E-01
+
+calcCs> csExt=  2.90924615E+04 nConv=  0
+         csSca=  2.90923398E+04 nConv=  5
+         csAbs=  1.21714184E-01
+
+calcCs> csExt=  2.90913249E+04 nConv=  0
+         csSca=  2.90912034E+04 nConv=  5
+         csAbs=  1.21443690E-01
+
+
+spectrumFF> ===== Wavelength:   688.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.65750736E+04 nConv=  5
+             <csSca>=  2.65750718E+04 nConv=  5
+             <csAbs>=  1.86049349E-03
+
+             <cdExt>=  2.90115859E-06
+             <cdSca>=  2.90179792E-06
+             <cdAbs>= -6.39334891E-10
+
+calcCs> csExt=  2.83393270E+04 nConv=  0
+         csSca=  2.83392216E+04 nConv=  5
+         csAbs=  1.05423829E-01
+
+calcCs> csExt=  2.89281923E+04 nConv=  0
+         csSca=  2.89280653E+04 nConv=  5
+         csAbs=  1.27003531E-01
+
+calcCs> csExt=  2.86343047E+04 nConv=  0
+         csSca=  2.86341884E+04 nConv=  5
+         csAbs=  1.16342361E-01
+
+calcCs> csExt=  2.86332146E+04 nConv=  0
+         csSca=  2.86330985E+04 nConv=  5
+         csAbs=  1.16084999E-01
+
+
+spectrumFF> ===== Wavelength:   690.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.62129455E+04 nConv=  5
+             <csSca>=  2.62129437E+04 nConv=  5
+             <csAbs>=  1.77460915E-03
+
+             <cdExt>=  2.87213946E-06
+             <cdSca>=  2.87278722E-06
+             <cdAbs>= -6.47762263E-10
+
+calcCs> csExt=  4.65758540E+04 nConv=  2
+         csSca=  2.78896955E+04 nConv=  5
+         csAbs=  1.86861585E+04
+
+calcCs> csExt=  2.84799684E+04 nConv=  0
+         csSca=  2.84798469E+04 nConv=  5
+         csAbs=  1.21422392E-01
+
+calcCs> csExt=  2.81854045E+04 nConv=  0
+         csSca=  2.81852933E+04 nConv=  5
+         csAbs=  1.11222297E-01
+
+calcCs> csExt=  2.81843601E+04 nConv=  0
+         csSca=  2.81842491E+04 nConv=  5
+         csAbs=  1.10977385E-01
+
+
+spectrumFF> ===== Wavelength:   692.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.58578178E+04 nConv=  5
+             <csSca>=  2.58578161E+04 nConv=  5
+             <csAbs>=  1.69296637E-03
+
+             <cdExt>=  2.83311965E-06
+             <cdSca>=  2.83355547E-06
+             <cdAbs>= -4.35819636E-10
+
+calcCs> csExt=  2.74493764E+04 nConv=  0
+         csSca=  2.74492801E+04 nConv=  5
+         csAbs=  9.63488879E-02
+
+calcCs> csExt=  2.80407450E+04 nConv=  0
+         csSca=  2.80406289E+04 nConv=  5
+         csAbs=  1.16100961E-01
+
+calcCs> csExt=  2.77455605E+04 nConv=  0
+         csSca=  2.77454541E+04 nConv=  5
+         csAbs=  1.06341478E-01
+
+calcCs> csExt=  2.77445609E+04 nConv=  0
+         csSca=  2.77444548E+04 nConv=  5
+         csAbs=  1.06108371E-01
+
+
+spectrumFF> ===== Wavelength:   694.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.55095273E+04 nConv=  5
+             <csSca>=  2.55095256E+04 nConv=  5
+             <csAbs>=  1.61534120E-03
+
+             <cdExt>=  2.78524786E-06
+             <cdSca>=  2.78576395E-06
+             <cdAbs>= -5.16081089E-10
+
+calcCs> csExt=  2.70178718E+04 nConv=  0
+         csSca=  2.70177796E+04 nConv=  5
+         csAbs=  9.21277198E-02
+
+calcCs> csExt=  2.76103263E+04 nConv=  0
+         csSca=  2.76102153E+04 nConv=  5
+         csAbs=  1.11026474E-01
+
+calcCs> csExt=  2.73145768E+04 nConv=  0
+         csSca=  2.73144752E+04 nConv=  5
+         csAbs=  1.01688051E-01
+
+calcCs> csExt=  2.73136212E+04 nConv=  0
+         csSca=  2.73135198E+04 nConv=  5
+         csAbs=  1.01466142E-01
+
+
+spectrumFF> ===== Wavelength:   696.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.51679153E+04 nConv=  5
+             <csSca>=  2.51679137E+04 nConv=  5
+             <csAbs>=  1.54152278E-03
+
+             <cdExt>=  2.73017149E-06
+             <cdSca>=  2.73064457E-06
+             <cdAbs>= -4.73084159E-10
+
+calcCs> csExt=  2.65950908E+04 nConv=  0
+         csSca=  2.65950027E+04 nConv=  5
+         csAbs=  8.81034651E-02
+
+calcCs> csExt=  2.71885212E+04 nConv=  0
+         csSca=  2.71884150E+04 nConv=  5
+         csAbs=  1.06186830E-01
+
+calcCs> csExt=  2.68922623E+04 nConv=  0
+         csSca=  2.68921650E+04 nConv=  5
+         csAbs=  9.72507909E-02
+
+calcCs> csExt=  2.68913497E+04 nConv=  0
+         csSca=  2.68912527E+04 nConv=  5
+         csAbs=  9.70395042E-02
+
+
+spectrumFF> ===== Wavelength:   698.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.48328275E+04 nConv=  5
+             <csSca>=  2.48328260E+04 nConv=  5
+             <csAbs>=  1.47131153E-03
+
+             <cdExt>=  2.66906301E-06
+             <cdSca>=  2.66937235E-06
+             <cdAbs>= -3.09333797E-10
+
+calcCs> csExt=  2.61808462E+04 nConv=  0
+         csSca=  2.61807619E+04 nConv=  5
+         csAbs=  8.42663525E-02
+
+calcCs> csExt=  2.67751430E+04 nConv=  0
+         csSca=  2.67750414E+04 nConv=  5
+         csAbs=  1.01570556E-01
+
+calcCs> csExt=  2.64784298E+04 nConv=  0
+         csSca=  2.64783367E+04 nConv=  5
+         csAbs=  9.30190586E-02
+
+calcCs> csExt=  2.64775594E+04 nConv=  0
+         csSca=  2.64774666E+04 nConv=  5
+         csAbs=  9.28178503E-02
+
+
+spectrumFF> ===== Wavelength:   700.00 (nm) ======================
+
+ lmax
+          96
+ tetrahedron_nm.tmat.h5
+solve> Prestaging...
+solve> Staging and solving/inverting...
+solve> Done!
+
+calcOAprops> <csExt>=  2.45041138E+04 nConv=  5
+             <csSca>=  2.45041124E+04 nConv=  5
+             <csAbs>=  1.40451947E-03
+
+             <cdExt>=  2.60261365E-06
+             <cdSca>=  2.60295397E-06
+             <cdAbs>= -3.40318737E-10
+
+calcCs> csExt=  2.57749547E+04 nConv=  0
+         csSca=  2.57748741E+04 nConv=  5
+         csAbs=  8.06071277E-02
+
+calcCs> csExt=  2.63700091E+04 nConv=  0
+         csSca=  2.63699119E+04 nConv=  5
+         csAbs=  9.71667705E-02
+
+calcCs> csExt=  2.60728964E+04 nConv=  0
+         csSca=  2.60728075E+04 nConv=  5
+         csAbs=  8.89827712E-02
+
+calcCs> csExt=  2.60720674E+04 nConv=  0
+         csSca=  2.60719786E+04 nConv=  5
+         csAbs=  8.87911270E-02
+
+termsProgram> Program run time (CPU & real in s):  1.071E+00  1.127E+00

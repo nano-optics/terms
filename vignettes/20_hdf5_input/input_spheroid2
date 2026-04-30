@@ -1,0 +1,11 @@
+ModeAndScheme 2 3
+MultipoleCutoff 3 3 -3
+Wavelength 450 740 29
+Medium 1.7689
+OutputFormat HDF5 JCMsuite_dimer
+TmatrixFiles 1 
+JCMsuite_nm.tmat.h5
+
+Scatterers 2
+TF1 0 -50 0 40 0 0 0 2
+TF1 0  50 0 40 0 0.7853982 0 2

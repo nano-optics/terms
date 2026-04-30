@@ -1,0 +1,64 @@
+---
+title: "Tetrahedron comparison in TERMS"
+author: "baptiste"
+date: today
+engine: knitr
+---
+
+This example script runs TERMS with an input T-matrix in `.tmat.h5` format calculated with a separate program (Treams). The results are compared with the built-in calculation for 4 spheres in the same geometry. 
+
+The input file for the external T-matrix case is
+
+```{.bash}
+{{< include ../terms/input_tetrahedron_external >}}
+```
+
+Note that only `vacuum_wavelength` in nanometres is supported, and the wavelengths much match exactly. Since the original file stores the information as `frequency`, we must convert this field into `vacuum_wavelength`. The script [convert_units.jl](../utilities/convert_units.jl) provides an example for automating such adjustments.
+
+The simulation is run at the command line with:
+
+```
+terms input_tetrahedron_external > log_1_ext
+```
+
+and produces an output file `tetrahedron_external.h5` storing the simulated results. For comparison, we also run the same simulation with 4 spheres computed internally by TERMS (no external T-matrix input). The simulation file for this second simulation is
+
+```{.bash}
+{{< include ../terms/input_tetrahedron_internal >}}
+```
+
+Below is a plot comparing the results, showing excellent agreement. 
+
+```{r, echo=FALSE, message=FALSE}
+suppressPackageStartupMessages(require(terms))
+theme_set(theme_grey())
+
+## ----read----
+xs1 <- terms::consolidate_xsec('../terms/tetrahedron_internal.h5')
+# xs2 <- terms::consolidate_xsec('internal2.h5')
+xs2 <- terms::consolidate_xsec('../terms/tetrahedron_external.h5')
+
+## ----oa----
+mCOA <- rbind(cbind(xs1$mCOA, tmatrix = 'internal'),
+              cbind(xs2$mCOA, tmatrix = 'external')) 
+mCOA$crosstype <- factor(mCOA$crosstype, levels = c("Ext", "Abs", "Sca"),
+                  labels = c("Extinction", "Absorption", "Scattering")
+)
+mCOAt <- mCOA |> filter(variable == 'total', crosstype == "Extinction")
+
+p1 <- ggplot(mCOA, aes(wavelength, average, alpha=tmatrix,
+                      colour=crosstype)) +
+  # facet_wrap(~crosstype)+
+  geom_line(data=mCOAt |> filter(tmatrix=='external')) +
+  geom_point(data=mCOAt |> filter(tmatrix=='internal')) +
+  scale_alpha_manual(values=c(0.8,1)) +
+  guides(colour='none') +
+  scale_x_continuous(expand=c(0,0))+ 
+  scale_colour_brewer(palette='Set1') +
+  theme()+
+  labs(x = expression("wavelength /nm"), 
+       y = expression("avg. exxtinction cross-sec. /"*nm^2),
+       colour = expression(N), linetype="", pch="",alpha="T-matrix") 
+
+print(p1)
+```

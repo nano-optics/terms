@@ -4624,6 +4624,7 @@ contains
         character(*), parameter :: myName = 'dumpTmat'
         integer :: s, n, m, sp, np, mp, nmax, i, ip, verb, lunit
         real(8) :: tol
+        logical :: first_block
         !---------------------------------------------------
         ! End of variable declarations. Directives start now
         !---------------------------------------------------
@@ -4645,17 +4646,16 @@ contains
         tol = 0
         if (present(tol_)) tol = tol_*maxval(abs(tmat))
         !
-        inquire (file=filename, number=lunit)
-        if (lunit == -1) then
-            lunit = tunit
-            open (lunit, file=filename, status='replace')
+
+        inquire (file=filename, exist=first_block)
+        first_block = .not. first_block
+        lunit = tunit
+        if (first_block) then
+            open (lunit, file=filename, status='replace', position='rewind')
             write (lunit, '(A)') '# s sp n np m mp Tr Ti'
-        elseif (lunit /= tunit) then
-            write (*, '(A,A,A,A)') myname, '> ERROR: File ', trim(filename), &
-                ' connected to wrong unit'
-            STOP
+        else
+            open (lunit, file=filename, status='old', position='append')
         end if
-        !
         write (lunit, '(A,f8.2,A,i9,A,es15.8)') '# lambda= ', lambda, &
             ' nelements= ', size(tmat, 1)**2, ' eps_med= ', eps_med
         !

@@ -66,7 +66,7 @@ If the root of _Tag_ is not "TF?", the 1-body _T_-matrix is computed using Mie t
 
 Specifies the number of external _T_-matrix files (default: _N<sub>files</sub> = 0_). The subsequent _N<sub>files</sub>_ lines are each read as a string and then interpreted as a filename. Wrap the string in quotation marks if it contains the relative path or special characters, e.g. `"../../tmatrix_Au_spheroid_50x20_water.tmat"`. Note that the wavelengths in each file must _exactly_ correspond to the values specified by the [`Wavelength`](#wavelength-l1-l2-n) keyword.
 
-The _T_-matrix file format is as follows:
+The _T_-matrix file format is inferred from the filename extension, which must be either '.txt' or '.h5'. A plain text T-matrix must be formatted as follows:
 
 -  First line is a comment (starts with a `#`) describing the format `# s sp n np m mp Tr Ti`
 -  Second line is also a comment and starts with `# lambda= N1 nelements= N2` where N1 is the wavelength in nanometres, and N2 is the number of _T_-matrix elements to be read below
@@ -102,6 +102,11 @@ An example is show below,
   2   2   4   4   4   4 -3.640885008022631e-16 4.006450678480949e-14
 ... [truncated]
 ```
+
+The alternative `.tmat.h5` format is described at [https://github.com/tfp-photonics/tmatrix_data_format](https://github.com/tfp-photonics/tmatrix_data_format). Due to the intricacies of input/output in Fortran, TERMS imposes further restrictions:
+
+- only `vacuum_wavelength` in nanometres is supported, and the wavelengths much match exactly the input file
+- TERMS does not check the embedding medium, so it also the user’s responsibility to ensure they are identical
 
 ### DielectricFunctions _N<sub>funs</sub>_
 

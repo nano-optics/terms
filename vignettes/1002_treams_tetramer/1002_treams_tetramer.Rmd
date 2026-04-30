@@ -1,0 +1,100 @@
+---
+title: "Comparison between Treams and TERMS"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 3
+    fig_width: 7
+    fig_height: 3
+    fig_caption: true
+    includes:
+      in_header: "../../inst/_x3d_header.html"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Comparison between Treams and TERMS}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r demo, message=FALSE, echo=FALSE, warning=FALSE}
+library(knitr)
+suppressPackageStartupMessages(require(terms))
+library(patchwork)
+options(cli.num_colors = 1)
+theme_set(theme_grey())
+opts_chunk$set(echo = FALSE, warning =FALSE,
+               message=FALSE, comment='', 
+               tidy=FALSE, cache = FALSE)
+do.call(read_chunk, list(path = "_run.R"))
+```
+
+## Objective
+
+This example validates the results obtained with 2 different multiple-scattering codes based on the T-matrix method. It also illustrates how TERMS can import external T-matrices in the standard `.tmat.h5` format. 
+
+The geometry consists of 4 dielectric spheres of varying radii arranged in a tetramer configuration. The cluster is chiral and has no particular symmetry, providing a good test case for a general T-matrix import. The collective T-matrix, collapsed as a single expansion about the origin, was computed using [Treams](https://tfp-photonics.github.io/treams), and is [available in HDF5 format](https://github.com/tfp-photonics/tmatrix_data_format) in the database.  
+
+The optical properties of this cluster of particles can be compared to the direct computation using multiple-scattering for the 4 independent spheres. This is similar to [example 15_quadrimer](15_quadrimer), but here using an independent code for the collective T-matrix.
+
+
+```{r show_cluster, echo=FALSE, results='asis', message=FALSE}
+suppressPackageStartupMessages(require(terms))
+cat('  <style>
+.x3d_scene {
+float:right;
+margin:0em;
+ }
+  </style>')
+
+ge <- get_geometry('input_tetrahedron_internal')
+cl <- cluster_geometry(ge)
+terms::x3d_scene(cl, viewpoint=c(0,0,200), width = "200px", height = "150px") 
+```
+
+## External collective T-matrix
+
+The input file for TERMS is
+
+```{bash input1}
+cat input_tetrahedron_external
+```
+
+Note that only `vacuum_wavelength` in nanometres is supported, and the wavelengths much match exactly. TERMS does not check the embedding medium, so it also the user's responsibility to ensure they are identical.
+
+
+```{r read, cache=FALSE}
+```
+
+and produces an output file `tetrahedron_external.h5` storing the simulated results. 
+
+## Internal calculation with multiple-scattering
+
+In this second simulation, the cluster of particles is described by the 4 spheres, whose T-matrices are computed on-the-fly by TERMS using Mie theory. The simulation uses the following input file:
+
+```{bash input2}
+cat input_tetrahedron_internal
+```
+
+and produces an output file `tetrahedron_internal.h5` storing the simulated results. 
+
+## Comparison
+
+
+```{r plot, fig.height=5}
+```
+
+
+The two simulations show excellent agreement.
+
+Note, however, that there are some challenges in this kind of simulation:
+
+- for the collective T-matrix approach, a sufficient multipolar order should be used to capture the full response of the cluster. This single-origin expansion _cannot_ resolve near-field pattterns within the circumbscribed sphere of the cluster.
+- for the multiple-scatterer approach, note that the particles are relatively far apart (compared to the wavelength), and a relatively large number of multipoles may be required to obtain accurate results. It is also the case that some of the algorithms perform better than others (Stout vs Mackowski). 
+- The absorption cross-section should be zero (and extinction should coincide with scattering), as the scatterers are non-absorbing. However, numerically some of the algorithms return spurious absorption in challenging configurations.
+
+
+-----
+
+```{r cleanup}
+```
+_Last run: `r format(Sys.time(), '%d %B, %Y')`_
